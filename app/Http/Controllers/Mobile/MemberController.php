@@ -1,0 +1,36 @@
+<?php
+
+namespace App\Http\Controllers\Mobile;
+
+use App\Common\Lib\Result;
+use App\Helper\UserHelper;
+use App\Http\Controllers\Controller;
+use App\Services\GameService;
+use App\Services\UserService;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
+
+class MemberController extends Controller
+{
+    private $gameService;
+
+    public function __construct(GameService $gameService)
+    {
+        $this->gameService = $gameService;
+    }
+
+    public function index()
+    {
+        $data = [];
+        $data['user'] = Auth::user();
+        $data['avatar'] = UserHelper::avatar($data['user']['usericon']);
+        return view('mobile.member.index', $data);
+    }
+
+    public function setting()
+    {
+        $data = [];
+        $data['user'] = Auth::user();
+        return view('mobile.member.setting', $data);
+    }
+}

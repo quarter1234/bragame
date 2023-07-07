@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>retrievepassword_icon_email_default</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <radialGradient cx="50%" cy="31.1740451%" fx="50%" fy="31.1740451%" r="70.3596982%" gradientTransform="translate(0.500000,0.311740),scale(1.000000,0.999999),rotate(78.015105),translate(-0.500000,-0.311740)" id="radialGradient-1">
+            <stop stop-color="#2E6FDF" offset="0%"></stop>
+            <stop stop-color="#5E53E2" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="登录_忘记密码" transform="translate(-214.000000, -314.000000)" fill="url(#radialGradient-1)" fill-rule="nonzero">
+            <g id="retrievepassword_icon_email_default" transform="translate(214.000000, 314.000000)">
+                <path d="M12.5024832,0.0119064428 L0.0234980846,7.49931756 L0.0234980846,23.971612 C0.0234980846,24.5229689 0.47045602,24.9699268 1.02181289,24.9699268 L23.9831786,24.9699268 C24.5345354,24.9699268 24.9814934,24.5229689 24.9814934,23.971612 L24.9814933,7.49931756 L12.5024832,0.0119064428 Z M20.9881589,13.8219277 L12.502433,18.4807802 L4.01670706,13.8219277 L4.01670706,11.4925014 L20.9881589,11.4925014 L20.9881338,13.8219277 L20.9881589,13.8219277 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

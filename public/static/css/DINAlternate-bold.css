@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "DIN Alternate Bold";
+  font-weight: bold;
+  src: url(../font/DINAlternate-Bold.eot); 
+  src: local("DIN Alternate Bold"), url(../font/DINAlternate-Bold.woff2) format("woff2"),
+    url(../font/DINAlternate-Bold.woff) format("woff"),
+    url(../font/DINAlternate-Bold.ttf) format("truetype");
+}
+
+.din-alternate-bold {
+  font-family: "DIN Alternate Bold", sans-serif;
+}

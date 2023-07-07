@@ -1,0 +1,169 @@
+﻿@charset "UTF-8";
+
+
+.LoginFrame {
+    position: absolute;
+    right: 0;
+    top: 100px;
+    width: 300px;
+    background: white;
+    padding: 30px;
+    box-shadow: 6px 0 15px rgba(5, 17, 34, 0.3);
+}
+
+.LoginFrame_tit {
+    font-weight: bold;
+    color: #4a4a4a;
+    font-size: 18px;
+    text-align: center;
+    line-height: 18px;
+}
+
+    .LoginFrame_tit span {
+        display: block;
+        font-size: 10px;
+        font-weight: normal;
+        color: #C3C3C3;
+    }
+
+.LoginFrame_tab {
+    padding: 0;
+    width: 300px;
+    margin: 20px 0 25px;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+}
+
+    .LoginFrame_tab li {
+        list-style: none;
+        width: 33.3%;
+        text-align: center;
+        font-size: 13px;
+        color: #666;
+        line-height: 28px;
+        border-bottom: 3px solid #fff;
+        cursor: pointer;
+    }
+
+        .LoginFrame_tab li.active {
+            font-weight: bold;
+            color: #118790;
+            border-bottom: 3px solid #118790;
+            cursor: default;
+        }
+
+    .LoginFrame_tab:after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        width: 300px;
+        height: 4px;
+        background: #ededed; /* Old browsers */
+        background: -moz-linear-gradient(top, #ededed 0%, #ffffff 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #ededed 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #ededed 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+        left: 0;
+    }
+
+.LoginFrame_tab_new {
+    position: absolute;
+    font-size: 13px;
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    padding: 8px 5px 8px 10px;
+    border-radius: 3px;
+    left: -180px;
+    top: 0;
+}
+
+    .LoginFrame_tab_new:after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 12px;
+        width: 0px;
+        height: 0px;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-left: 5px solid rgba(0,0,0,0.65);
+    }
+
+.LoginFrame_input {
+    width: 280px;
+    height: 34px;
+    color: #9e9e9e;
+    margin-bottom: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background: #f2f2f2;
+    outline: none;
+}
+
+    .LoginFrame_input:focus {
+        outline: none;
+    }
+
+.forgot_sub {
+    color: #666;
+    font-size: 12px;
+}
+
+    .forgot_sub a {
+        color: #118799;
+    }
+
+.LoginFrame_btn {
+    width: 100%;
+    height: 40px;
+    background: #118799;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Gotham, "Microsoft JhengHei", "微軟正黑體", "sans-serif";
+    margin: 20px 0 2px;
+    border: none;
+}
+
+    .LoginFrame_btn:hover {
+        background: #1194a5;
+    }
+
+.LoginFrame_error {
+    margin-top: 8px;
+    line-height: 16px;
+    font-size: 12px;
+}
+
+.LoginFrame_ic_error {
+    width: 13px;
+    height: 13px;
+    float: left;
+    margin: 3px 5px 0 0;
+    background: url(../images/LoginFrame_ic_error.svg) no-repeat;
+}
+
+.LoginFrame_error span {
+    display: block;
+    overflow: hidden;
+    color: #f7b63e;
+}
+
+.LoginFrame_VerifyCode .LoginFrame_input {
+    width: 140px;
+    float: left;
+}
+
+.LoginFrame_VerifyCode img {
+    float: right;
+}
+
+.LoginFrame_VerifyCode {
+    overflow: hidden;
+    clear: both;
+}
