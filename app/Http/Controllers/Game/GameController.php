@@ -41,7 +41,7 @@ class GameController extends Controller
     public function getPgUrl()
     {
         if (!Auth::check()) {
-            return Result::error('No Auth!', ResponseCode::AUTH_ERROR);
+            return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
         }
 
         $id = intval(Request::get('id', 0));
