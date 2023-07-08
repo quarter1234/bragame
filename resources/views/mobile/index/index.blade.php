@@ -478,12 +478,12 @@
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
-                if(jqXHR.responseText.code == '400005') {
+                if(jqXHR.responseJSON.code == 400005) {
                       art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
                       $('.tc').show();
-                    } else {
-                      art.dialog({ title: 'Tips:', content: jqXHR.responseText, time: 3 });
-                    }
+                  } else {
+                    art.dialog({ title: 'Tips:', content: jqXHR.responseText, time: 3 });
+                  }
 
               }
           })
