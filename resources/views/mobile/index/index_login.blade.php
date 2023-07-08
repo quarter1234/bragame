@@ -152,14 +152,13 @@
             data : $("#form1").serialize(),
             success : function (data) {
                 if(data.code == 200) {
-				          // alert("恭喜你!注册成功");
 				          window.location.href= "{{url('mobile/index')}}"
                 } else {
                     art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
-              art.dialog({ title: 'Tips:', content: jqXHR.responseText.message, time: 3 });
+              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
 
             }
         })
@@ -178,8 +177,7 @@
             }
           },
           error: function(jqXHR, textStatus, errorThrown) {
-              art.dialog({ title: 'Tips:', content: jqXHR.responseText.message, time: 3 });
-
+              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
           }
         })
 		  return false;
