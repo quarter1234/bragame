@@ -8,5 +8,5 @@ class CommonEnum
 {
     const ENABLE = 1;
     const UNABLE = 0;
-    const DEFAULT_PAGE_NUM = 10;
+    const DEFAULT_PAGE_NUM = 9;
 }

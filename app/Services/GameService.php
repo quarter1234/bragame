@@ -2,10 +2,9 @@
 namespace App\Services;
 
 use App\Repositories\DPgGameRepository;
-use App\Repositories\UserRepository;
 use App\Common\Message\CodeMsg;
 use GuzzleHttp\Client;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class GameService
 {

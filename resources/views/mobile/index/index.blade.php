@@ -203,12 +203,12 @@
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                         <!---->
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item active-side-menu ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-lottery active-side-menu-icon"></div>
+                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-lottery "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">彩票</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-live"></div>
+                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-live active-side-menu-icon"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
@@ -234,7 +234,7 @@
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
                         <!---->
-                        <div _ngcontent-way-c15="" class="lottery-board-ctn tab" id="tab1_content" style="display: block">
+                        <div _ngcontent-way-c15="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
                           <div _ngcontent-way-c15="" class="lottery-btns-ctn">
                             <!---->
                             <!---->
@@ -289,7 +289,7 @@
                           <button _ngcontent-way-c15="" onclick="location.href='{:U('index/lotteryHall')}'"  class="lottery-lobby" tabindex="0"></button>
                         </div>
 
-                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: block;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
                               <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff;">点击加载更多</button>
@@ -466,10 +466,10 @@
 				          window.location.href= data.data.url
                 } else {
                     if(data.code == '400005') {
-                      art.dialog({ title: 'Tips:', content: '请先登录', time: 300});
+                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
                       $('.tc').show();
                     } else {
-                      art.dialog({ title: 'Tips:', content: data.message, time: 300 });
+                      art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                     }
                     
                 }
@@ -485,6 +485,7 @@
               }
           })
         });
+
       });
     </script>
     <script type="text/javascript" src="/static/js/scroll.js"></script> 

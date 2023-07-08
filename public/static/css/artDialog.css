@@ -41,7 +41,7 @@ button.aui_state_highlight:active { background:#000; }
 
 .aui_state_drag .aui_outer, .aui_outer:active { box-shadow:none; }
 .aui_titleBar { position:relative; height:100%; color:#fff }
-.aui_title { height:30px; line-height:30px; padding:0 10px 0 10px; background:#000; }
+.aui_title { height:30px; line-height:30px; padding:0 10px 0 10px; background:#000; display:none;}
 .aui_state_focus .aui_title {    font-weight: 900;text-align: center; color:#fff; font-size:18px;}
 .aui_state_drag .aui_title { /*background: linear-gradient(top, #bdc6cd, #edf5f8); background: -moz-linear-gradient(top, #bdc6cd, #edf5f8); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bdc6cd), to(#edf5f8)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdc6cd', endColorstr='#edf5f8');*/ box-shadow:none; }
 .aui_state_drag .aui_titleBar { box-shadow:none; }
