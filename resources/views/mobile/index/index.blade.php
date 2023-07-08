@@ -478,7 +478,13 @@
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
-                console.log(jqXHR.responseText)
+                if(jqXHR.responseText.code == '400005') {
+                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
+                      $('.tc').show();
+                    } else {
+                      art.dialog({ title: 'Tips:', content: jqXHR.responseText., time: 3 });
+                    }
+
               }
           })
         });
