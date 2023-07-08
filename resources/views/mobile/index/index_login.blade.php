@@ -157,6 +157,10 @@
                 } else {
                     art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                 }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              art.dialog({ title: 'Tips:', content: jqXHR.responseText.message, time: 3 });
+
             }
         })
         return false;
@@ -172,6 +176,10 @@
             } else {
               art.dialog({ title: 'Tips:', content: data.message, time: 3 });
             }
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+              art.dialog({ title: 'Tips:', content: jqXHR.responseText.message, time: 3 });
+
           }
         })
 		  return false;

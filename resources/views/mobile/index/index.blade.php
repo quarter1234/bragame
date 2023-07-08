@@ -469,20 +469,20 @@
 				          window.location.href= data.data.url
                 } else {
                     if(data.code == '400005') {
-                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
+                      art.dialog({ title: 'Tips:', content: '请先登录', time: 300});
                       $('.tc').show();
                     } else {
-                      art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+                      art.dialog({ title: 'Tips:', content: data.message, time: 300 });
                     }
                     
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 if(jqXHR.responseJSON.code == 400005) {
-                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
+                      art.dialog({ title: 'Tips:', content: '请先登录', time: 300});
                       $('.tc').show();
                   } else {
-                    art.dialog({ title: 'Tips:', content: jqXHR.responseText, time: 3 });
+                    art.dialog({ title: 'Tips:', content: jqXHR.responseText, time: 300 });
                   }
 
               }
