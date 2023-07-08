@@ -477,8 +477,8 @@
                     
                 }
               },
-              error: function(data) {
-                console.log(data)
+              error: function(jqXHR, textStatus, errorThrown) {
+                console.log(errorThrown)
               }
           })
         });
