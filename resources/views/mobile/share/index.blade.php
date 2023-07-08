@@ -37,8 +37,8 @@
         .yh{width:20px;height:20px;position:absolute;right:20px;top:20px;}
         .yh img{width:20px;height:20px;}
         .centen{width:100%;height:80px;}
-        .centen_tab{width:96%;height:54px;background:#13202d;margin:0px auto;border-radius:25px; display:flex; justify-content:space-between;}
-        .centen_list{width:33%;text-align:center;align-items:center;font-size:14px; border:1px solid #13202d;border-radius:25px;margin:1px;}
+        .centen_tab{width:96%;height:54px;background:#13202d;margin:0px auto;border-radius:15px; display:flex; justify-content:space-between;}
+        .centen_list{width:33%;text-align:center;align-items:center;font-size:14px; border:1px solid #13202d;border-radius:15px;margin:1px;}
         .centen_list img{width:20px;height:20px;margin:6px 0 -13px 0;}
         .centen_on{background:#324d5d;border:1px solid #3d5767;}
         .centen_show{width:96%;margin:10px auto;display:none; color:#fff;}
@@ -48,10 +48,30 @@
         .xk_t input{border:1px #fff dashed;width:80%;float:left;height:40px; background:#0f212e; outline:none; color:#fff;font-size:16px; padding-left:5px;}
         .xk_t button{width:40px;height:40px;border-radius:5px;background:#007aff;text-align:center;color:#fff;float:right;}
         .xk_t button img{width:15px;height:15px;}
-        .xk_b{width:100%;height:200px; margin-top:15px; background:#071824; border-radius:10px; overflow:hidden;}
+        .xk_b{width:100%;height:150px; margin-top:15px; background:#071824; border-radius:10px; overflow:hidden;}
         .xk_b h2{color:#fff;text-align:center;padding-top:10px;font-weight:500px;font-size:22px;}
         .xk_but{width:100%; margin-top:20px;display:flex; justify-content:center;}
         .xk_but button{color:#fff; margin:0 10px;width:108px;height:40px;line-height:40px;text-align:center;}
+        .times{width:96%;height:32px;background:#13202d;margin:0px auto;border-radius:5px; display:flex; justify-content:space-between; border:1px solid #2c4355; display:flex; justify-content:space-between;}
+        .times_list{width:19%;height:30px; margin:1px; border-radius:5px; text-align:center; line-height:30px;color:#fff;font-size:14px;}
+        .times_on{background:#2c4355;}
+        .times_xk{width:100%;background:linear-gradient(#0f212f,#102744);border-radius:10px; padding:10px 0 20px 0; margin-top:15px;}
+        .times_div{display: none;}
+        .times_fl{width:88%;height:54px;background:#1a2c38;margin:20px auto 0 auto; border-radius:10px; position:relative;}
+        .times_fl span{width:20px;height:10px;border-radius:3px; position:absolute;top:20px;left:20px; display:inline-block;}
+        .times_fl .text{width:200px;top:15px; position:absolute;left:75px; color:#fff; font-size:16px;}
+        .times_fl label{position:absolute; right:20px; top:15px; color:#cec269;}
+        .b1{background:#81ca3f;}
+        .b2{background:#007aff;}
+        .b3{background:#484edf;}
+        .yh_top{width:100%; padding:10px 0; display:flex;justify-content:space-between;}
+        .yh_t_list{width:48%;height:87px;background:#0f212f;border-radius:10px; text-align:center;}
+        .yh_t_list h2{color:#ffe777;margin:10px 0;}
+        .yh_t_list p{margin:0;}
+        .yh_table{width:100%;}
+        .yh_table table{border-collapse:collapse;width:100%;}
+        .yh_table table td{background:#13202d;border:1px solid #2c4355;font-size:14px;text-align:center;line-height:30px;}
+        .yh_table thead td{background:#334d5d;}
     </style>
     {{--底部导航样式开始--}}
     <style>button.jx-app-download-button[_ngcontent-way-c1] {width:100%;height:44px;background-color:#000000aa} div.jx-app-download-container[_ngcontent-way-c1] {width:100%;display:flex;align-items:center} div.jx-app-download-container[_ngcontent-way-c1] > img[_ngcontent-way-c1] {width:32px;height:auto;margin:auto 10px auto 15px} div.jx-app-download-container[_ngcontent-way-c1] > span[_ngcontent-way-c1] {color:#fff;font-size:16px;flex-grow:1;text-align:left} div.jx-app-download-dismiss[_ngcontent-way-c1] {width:44px;height:44px;background-image:url(/mobile/img/close.07a630d9b4dd917a2c57.svg);background-repeat:no-repeat;background-position:center;background-size:20px 20px} div.dialog-header-row[_ngcontent-way-c1] {font-size:24px;font-weight:700;margin-bottom:.5em} .center[_ngcontent-way-c1] {text-align:center} .jx-brand-url-btn[_ngcontent-way-c1] {display:block;margin-left:auto;padding:0;width:23px;height:23px;border-radius:0;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)}</style>
@@ -99,11 +119,11 @@
                       <p>代理</p>
                   </div>
                   <div class="centen_list">
-                      <img src="../../mobile/img/yh.png" />
+                      <img src="../../mobile/img/flzh.png" />
                       <p>用户</p>
                   </div>
             </div>
-            <div class="centen_show"  style="display:block;">
+            <div class="centen_show"  style="display:block;" >
                 <div class="xk">
                     <p>分享的链接</p>
                     <div class="xk_t">
@@ -125,8 +145,134 @@
                     <p></p>
                 </div>
             </div>
-            <div class="centen_show"  >2</div>
-            <div class="centen_show"  >3</div>
+            <div class="centen_show" >
+                  <div class="times">
+                      <div class="times_list times_on">今日</div>
+                      <div class="times_list">昨日</div>
+                      <div class="times_list">一周</div>
+                      <div class="times_list">本月</div>
+                      <div class="times_list">本年</div>
+                  </div>
+                  <div class="times_xk">
+                        <div class="times_div"  style="display:block;">
+                              <div class="times_fl">
+                                    <span class="b1"></span>
+                                    <div class="text">一号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b2"></span>
+                                    <div class="text">二号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b3"></span>
+                                    <div class="text">三号代理</div>
+                                    <label>0</label>
+                              </div>
+                        </div>
+                        <div class="times_div">
+                        <div class="times_fl">
+                                    <span class="b1"></span>
+                                    <div class="text">一号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b2"></span>
+                                    <div class="text">二号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b3"></span>
+                                    <div class="text">三号代理</div>
+                                    <label>0</label>
+                              </div>
+                        </div>
+                        <div class="times_div">
+                        <div class="times_fl">
+                                    <span class="b1"></span>
+                                    <div class="text">一号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b2"></span>
+                                    <div class="text">二号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b3"></span>
+                                    <div class="text">三号代理</div>
+                                    <label>0</label>
+                              </div>
+                        </div>
+                        <div class="times_div">
+                        <div class="times_fl">
+                                    <span class="b1"></span>
+                                    <div class="text">一号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b2"></span>
+                                    <div class="text">二号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b3"></span>
+                                    <div class="text">三号代理</div>
+                                    <label>0</label>
+                              </div>
+                        </div>
+                        <div class="times_div">
+                        <div class="times_fl">
+                                    <span class="b1"></span>
+                                    <div class="text">一号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b2"></span>
+                                    <div class="text">二号代理</div>
+                                    <label>0</label>
+                              </div>
+                              <div class="times_fl">
+                                    <span class="b3"></span>
+                                    <div class="text">三号代理</div>
+                                    <label>0</label>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="centen_show" >
+                <div class="yh_top">
+                      <div class="yh_t_list">
+                          <h2>0</h2>
+                          <p>专属会员</p>
+                      </div>
+                      <div class="yh_t_list">
+                         <h2>0</h2>
+                          <p>专属会员</p>
+                      </div>
+                </div>
+                <div class="yh_table">
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>序号</td>
+                            <td>名字</td>
+                            <td>数量</td>
+                            <td>时间</td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>膝盖中箭</td>
+                            <td>1</td>
+                            <td>2023/07/08</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
@@ -150,6 +296,11 @@
             var index1 =$(this).index()
             console.log(index1)
             $('.centen_show').hide().eq(index1).show()
+          })
+          $('.times_list').click(function(){
+            $(this).addClass('times_on').siblings().removeClass('times_on')
+            var index1 =$(this).index()
+             $('.times_div').hide().eq(index1).show()
           })
         })
     </script>          

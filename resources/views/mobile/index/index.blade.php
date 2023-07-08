@@ -113,7 +113,9 @@
                   <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>
                   <style>
                       .dl{width:80px;height:40px;background:#334c5b;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px;}
+                      .dl:hover{background:#017bff;}
                       .zc{width:80px;height:40px;background:#017bff;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px;}
+                      .zc:hover{background:#334c5b;}
                   </style>
                   @if (Auth::check())
                     <span style="padding-top:10px;font-size:0.9rem;position: absolute;right:20px;top:10px">欢迎您，{{ $user['playername'] }}</span>
@@ -205,7 +207,7 @@
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-lottery "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">彩票</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-live active-side-menu-icon"></div>
@@ -234,61 +236,14 @@
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
                         <!---->
-                        <div _ngcontent-way-c15="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
-                          <div _ngcontent-way-c15="" class="lottery-btns-ctn">
-                            <!---->
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.pk10?code=bjpk10" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">北京</span>
-                              <span _ngcontent-way-c15="" class="sub-title">PK拾</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-26"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.ssc?code=xtxssc" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">腾讯</span>
-                              <span _ngcontent-way-c15="" class="sub-title">分分彩</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-27"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.pk10?code=dfpk10" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">幸运</span>
-                              <span _ngcontent-way-c15="" class="sub-title">飞艇</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-32"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.ssc?code=cqssc" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">重庆</span>
-                              <span _ngcontent-way-c15="" class="sub-title">时时彩</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-1"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.pk10?code=xypk10" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">极速</span>
-                              <span _ngcontent-way-c15="" class="sub-title">PK拾</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-28"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.pk10?code=bjpk10" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">河内</span>
-                              <span _ngcontent-way-c15="" class="sub-title">分分彩</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-43"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.pk10?code=bjpk10" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">河内</span>
-                              <span _ngcontent-way-c15="" class="sub-title">5分彩</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-45"></div>
-                            </a>
-                            <!---->
-                            <a _ngcontent-way-c15="" href="__ROOT__/Game.x5?code=gd11x5" style="text-decoration:none;" class="lottery-btn generic-background-image ng-star-inserted" tabindex="0">
-                              <span _ngcontent-way-c15="" class="title">广东</span>
-                              <span _ngcontent-way-c15="" class="sub-title">十一选五</span>
-                              <div _ngcontent-way-c15="" class="lottery-btn-icon generic-background-image game-6"></div>
-                            </a>
+                        {{-- PP 游戏 --}}
+                        <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
+                          <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab1_content_pps"></div>
+                          <div style="width:100%;text-align:center;margin-top:1rem">
+                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">点击加载更多</button>
                           </div>
-                          <button _ngcontent-way-c15="" onclick="location.href='{:U('index/lotteryHall')}'"  class="lottery-lobby" tabindex="0"></button>
                         </div>
-
+                      {{-- PG 游戏 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: block;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
@@ -387,6 +342,10 @@
                 </ul>
               </div>
             </div>
+            <style>
+                    .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
+                    .other-live-ctn a:active img{transform:scale(0.9);}
+            </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
@@ -403,6 +362,9 @@
         </jx-home-page>
       </jx-main-wrapper>
     </jx-root>
+    <style>
+
+    </style>
     <script type="text/javascript">
     var myclick = function(v) {
         var llis = document.getElementsByTagName("button");
@@ -423,12 +385,9 @@
             divv.style.display = "none";
           }
         }
-      }</script>
-    <script>
-      
+      }
 
-      function loadPgGames()
-      {
+      function loadPgGames() {
           let page = $('#pg_load_more').attr('page');
 
           $.ajax({
@@ -438,14 +397,29 @@
               success : function (data) {
                 $('#pg_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
-                  let itemGame = '<img _ngcontent-avh-c16="" gameid="'+element.id+'" class="other-live generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" />'
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                   $('#tab2_content_pgs').append(itemGame)
                 })
               }
           })
         }
 
-        
+      function loadPpGames() {
+          let page = $('#pp_load_more').attr('page');
+
+          $.ajax({
+              url : "{{url('mobile/getPps')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                $('#pp_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab1_content_pps').append(itemGame)
+                })
+              }
+          })
+        }
 
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
@@ -454,6 +428,7 @@
         })
 
         loadPgGames()
+        loadPpGames()
         $(document).on('click', '.pg_game_go', function() {
           let gameId = $(this).attr('gameid')
           $.ajax({
@@ -471,7 +446,6 @@
                     } else {
                       art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                     }
-                    
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {

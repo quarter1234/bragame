@@ -8,6 +8,6 @@ class DPgGame extends BaseMoel
 
     public function getIconAttribute($value)
     {
-        return 'http://15.228.181.144:82'.$value;
+        return 'http://18.228.17.241:82'.$value;
     }
 }
