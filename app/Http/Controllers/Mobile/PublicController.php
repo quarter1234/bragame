@@ -73,6 +73,9 @@ class PublicController extends Controller
         if (!auth()->attempt($credentials)) {
             return false;
         } 
+        
+        $user = Auth::user();
+        $this->userService->storeLoginLog($user, $params);
 
         return true;
     }
@@ -103,9 +106,6 @@ class PublicController extends Controller
         if(!$this->handleLogin($params)) {
             return Result::error('数据库或密码不正确！');
         }
-
-        $user = Auth::user();
-        $this->userService->storeLoginLog($user, $params);
 
         return Result::success();
     }
