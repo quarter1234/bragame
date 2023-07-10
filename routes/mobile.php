@@ -16,7 +16,7 @@ Route::group([
     Route::post('register', [PublicController::class, 'doRegister']);
     Route::get('login', [PublicController::class, 'login']);
     Route::post('login', [PublicController::class, 'doLogin']);
-    Route::get('index', [IndexController::class, 'index']);
+    Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
     Route::get('getPps', [GameController::class, 'getPps']);
     Route::get('pgUrl', [GameController::class, 'getPgUrl']);

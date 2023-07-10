@@ -23,6 +23,14 @@ class PublicRequest extends BaseRequest
         ];
     }
 
+    public function index()
+    {
+        return [
+            'code' => 'max:8',
+            'showLogin' => 'in:0,1',
+        ];
+    }
+
     // public function getAttributes()
     // {
     //     return [

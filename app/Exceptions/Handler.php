@@ -75,8 +75,17 @@ class Handler extends ExceptionHandler
             foreach ($messages as $message) {
                 $msg .= $message[0] ?? '';
             }
-
-            return Result::error($msg, 4220, 422);
+            if($request->ajax()){
+                return Result::error($msg, 4220, 422);
+            }else{
+                $params = [
+                    'msg'  => $msg,
+                    'wait' => 33,
+                    'url'  => 'javascript:history.back(-1);',
+                ];
+                return response()->view('mobile.errors.error', $params, 500);
+            }
+            
         }
 
         return parent::render($request, $exception);

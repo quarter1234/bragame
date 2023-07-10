@@ -247,7 +247,7 @@
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: block;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff;">点击加载更多</button>
+                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">点击加载更多</button>
                           </div>
                         </div>
 
