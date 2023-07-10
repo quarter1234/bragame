@@ -124,6 +124,9 @@
                   </div>
             </div>
             <div class="centen_show"  style="display:block;" >
+
+                   
+
                 <div class="xk">
                     <p>分享的链接</p>
                     <div class="xk_t">

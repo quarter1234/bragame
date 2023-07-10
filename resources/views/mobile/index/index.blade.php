@@ -342,19 +342,20 @@
                 </ul>
               </div>
             </div>
+            {{--loading组件--}}
+            @include('mobile.common.loading')
+
             <style>
-                    .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
-                    .other-live-ctn a:active img{transform:scale(0.9);}
+              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
+              .other-live-ctn a:active img{transform:scale(0.9);}
             </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
+                
                 @include('mobile.common.footer') 
                 
                 @include('mobile.index.index_login') 
-                  
-                 
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -389,12 +390,13 @@
 
       function loadPgGames() {
           let page = $('#pg_load_more').attr('page');
-
+          showLoading();
           $.ajax({
               url : "{{url('mobile/getPgs')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {
+                hideLoading();
                 $('#pg_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
@@ -406,12 +408,13 @@
 
       function loadPpGames() {
           let page = $('#pp_load_more').attr('page');
-
+          showLoading();
           $.ajax({
               url : "{{url('mobile/getPps')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {
+                hideLoading();
                 $('#pp_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
@@ -430,12 +433,15 @@
         loadPgGames()
         loadPpGames()
         $(document).on('click', '.pg_game_go', function() {
+          showLoading();
+          
           let gameId = $(this).attr('gameid')
           $.ajax({
               url : "{{url('mobile/pgUrl')}}",
               type : 'GET',
               data : {id: parseInt(gameId)},
               success : function (data) {
+                hideLoading();
                 console.log(data)
                 if(data.code == 200) {
 				          window.location.href= data.data.url
@@ -449,6 +455,7 @@
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading();
                 if(jqXHR.responseJSON.code == 400005) {
                       art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
                       $('.tc').show();

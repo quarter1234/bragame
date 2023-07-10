@@ -146,11 +146,13 @@
         }
     }
     function check_login(obj) {
+        showLoading();
         $.ajax({
             url : "{{url('mobile/login')}}",
             type : 'POST',
             data : $("#form1").serialize(),
             success : function (data) {
+                hideLoading()
                 if(data.code == 200) {
 				          window.location.href= "{{url('mobile/index')}}"
                 } else {
@@ -158,6 +160,7 @@
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
+              hideLoading()
               art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
 
             }
@@ -165,11 +168,13 @@
         return false;
     }
     function check_register(obj) {
+      showLoading();
        $.ajax({
           url : "{{url('mobile/register')}}",
           type : 'POST',
           data : $("#form_register").serialize(),
           success : function (data) {
+            hideLoading()
             if(data.code == 200) {
               window.location.href= "{{url('mobile/index')}}"
             } else {
@@ -177,7 +182,8 @@
             }
           },
           error: function(jqXHR, textStatus, errorThrown) {
-              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+            hideLoading()
+            art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
           }
         })
 		  return false;
