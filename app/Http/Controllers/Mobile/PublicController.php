@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Common\Lib\Result;
+use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
@@ -50,7 +51,7 @@ class PublicController extends Controller
         if(!$res) {
             return Result::error('注册失败');
         }
-        // TODO 邀请码逻辑
+        
         if(!$this->handleLogin($params)) {
             return Result::error('数据库或密码不正确！');
         }

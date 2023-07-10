@@ -560,3 +560,21 @@ if (!function_exists('genJsonRes')) {
         return $result;
     }
 }
+
+/**
+ * 随机字符串  对密码的 二进制 进行解析 返回对应的 ASCII  字符串
+ * 长度为目标长度的2倍
+ */
+if (!function_exists('generalRandString')) {
+    function generalRandString(int $length) {
+        return bin2hex(random_bytes($length));
+    }
+}
+
+if (!function_exists('gentRandInt')) {
+    function gentRandInt(int $min, int $max)
+    {
+        return random_int($min, $max);
+    }
+}
+

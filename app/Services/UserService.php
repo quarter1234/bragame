@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Helper\UserHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\UserRepository;
 
@@ -38,6 +39,7 @@ class UserService
         $data['reg_ip'] = $params['ip'];
         $data['login_time'] = time();
         $data['login_ip'] = $params['ip'];
+        $data['code'] = UserHelper::inviteCode();
 
         return $this->userRepo->storeUser($data);
     }
