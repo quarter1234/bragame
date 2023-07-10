@@ -109,4 +109,14 @@ class PublicController extends Controller
 
         return Result::success();
     }
+
+    /**
+     * 登出操作
+     * @return mixed
+     */
+    public function logout()
+    {
+        auth()->logout();
+        return redirect('/mobile/index');
+    }
 }

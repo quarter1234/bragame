@@ -38,4 +38,6 @@ Route::group([
 
     Route::get('activity', [ActivityController::class, 'index']);
     Route::get('activity/info', [ActivityController::class, 'show'])->name('mobile.activity.info');
+    Route::get('logout', [PublicController::class, 'logout']);
+
 });

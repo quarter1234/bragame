@@ -68,9 +68,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-        if($exception instanceof NotFoundHttpException) {
-            return response()->json(['post' => 'nofound'], Response::HTTP_NOT_FOUND);
-        } elseif($exception instanceof ValidatorException) {
+       if($exception instanceof ValidatorException) {
             $messages = $exception->getMessageBag()->toArray();
             $msg = '';
             

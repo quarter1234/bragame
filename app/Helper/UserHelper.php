@@ -17,12 +17,12 @@ class UserHelper
      * 生成用户邀请码
      * @return string
      */
-    public static function inviteCode() :string
+    public static function inviteCode(int $length = 4) :string
     {
         $code = '';
 
         while (true) {
-            $code = strtoupper(generalRandString(4));
+            $code = strtoupper(generalRandString($length));
             $userInfo =self::getUserByCode($code);
 
             if(!$userInfo) {
