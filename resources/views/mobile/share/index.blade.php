@@ -100,7 +100,7 @@
                 <div class="logo"><img src="../../mobile/img/jx-logo.443c8ffbee580d3672f7.png"/></div>
                 <div class="money">
                     <span>R$</span>
-                    <span>{{$user['coin']}}</span>
+                    <span>0</span>
                     <div class="sx"><img src="../../mobile/img/sx.png" /></div>
                     <div class="qb"><img src="../../mobile/img/qb.png" /></div>
                 </div>
@@ -127,132 +127,10 @@
              @include('mobile.share.invite') 
             </div>
             <div class="centen_show" >
-                  <div class="times">
-                      <div class="times_list times_on">今日</div>
-                      <div class="times_list">昨日</div>
-                      <div class="times_list">一周</div>
-                      <div class="times_list">本月</div>
-                      <div class="times_list">本年</div>
-                  </div>
-                  <div class="times_xk">
-                        <div class="times_div"  style="display:block;">
-                              <div class="times_fl">
-                                    <span class="b1"></span>
-                                    <div class="text">一号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b2"></span>
-                                    <div class="text">二号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b3"></span>
-                                    <div class="text">三号代理</div>
-                                    <label>0</label>
-                              </div>
-                        </div>
-                        <div class="times_div">
-                        <div class="times_fl">
-                                    <span class="b1"></span>
-                                    <div class="text">一号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b2"></span>
-                                    <div class="text">二号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b3"></span>
-                                    <div class="text">三号代理</div>
-                                    <label>0</label>
-                              </div>
-                        </div>
-                        <div class="times_div">
-                        <div class="times_fl">
-                                    <span class="b1"></span>
-                                    <div class="text">一号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b2"></span>
-                                    <div class="text">二号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b3"></span>
-                                    <div class="text">三号代理</div>
-                                    <label>0</label>
-                              </div>
-                        </div>
-                        <div class="times_div">
-                        <div class="times_fl">
-                                    <span class="b1"></span>
-                                    <div class="text">一号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b2"></span>
-                                    <div class="text">二号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b3"></span>
-                                    <div class="text">三号代理</div>
-                                    <label>0</label>
-                              </div>
-                        </div>
-                        <div class="times_div">
-                        <div class="times_fl">
-                                    <span class="b1"></span>
-                                    <div class="text">一号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b2"></span>
-                                    <div class="text">二号代理</div>
-                                    <label>0</label>
-                              </div>
-                              <div class="times_fl">
-                                    <span class="b3"></span>
-                                    <div class="text">三号代理</div>
-                                    <label>0</label>
-                              </div>
-                        </div>
-                  </div>
+            @include('mobile.share.agent') 
             </div>
             <div class="centen_show" >
-                <div class="yh_top">
-                      <div class="yh_t_list">
-                          <h2>0</h2>
-                          <p>专属会员</p>
-                      </div>
-                      <div class="yh_t_list">
-                         <h2>0</h2>
-                          <p>专属会员</p>
-                      </div>
-                </div>
-                <div class="yh_table">
-                    <table>
-                        <thead>
-                        <tr>
-                            <td>序号</td>
-                            <td>名字</td>
-                            <td>数量</td>
-                            <td>时间</td>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>膝盖中箭</td>
-                            <td>1</td>
-                            <td>2023/07/08</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+            @include('mobile.share.user') 
             </div>
 
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
