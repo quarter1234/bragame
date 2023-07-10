@@ -117,38 +117,38 @@
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('index/youhui')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon welfare-icon"></span>活动中心
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i>
 						</button>
                     </div>
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
 					<button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>交易记录
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord2')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>充值记录
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord3')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>提现记录
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon finance-detail-icon"></span>资金记录
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Member/betRecord')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>投注记录
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     </div>
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Member/personalInfo')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>个人中心
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Member/agent')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>代理中心
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       <!---->
                       <!---->
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/todayLoss')}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon report-icon"></span>报表中心
-                        <i class="icon iconfont" style="margin-left: auto;">&#xe66f;</i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     </div>
                   </jx-content-view>
                 </jx-safe-area>
