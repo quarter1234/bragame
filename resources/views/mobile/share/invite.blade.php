@@ -6,7 +6,7 @@
     </div>
     <p>邀请码</p>
     <div class="xk_t">
-        <input type="text" value="{{$code}}" />
+        <input type="text" value="{{$user['code']}}" />
         <button><img src="../../mobile/img/fz.png" /></button>
     </div>
 </div>

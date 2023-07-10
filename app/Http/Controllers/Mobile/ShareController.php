@@ -14,7 +14,7 @@ class ShareController extends Controller
         $user = Auth::user();
         $data = [];
         $data['link'] = route('mobile.index', ['code' => $user['code']]);
-        $data['code'] = $user['code'];
+        $data['user'] = $user;
 
         return view('mobile.share.index', $data);
     }

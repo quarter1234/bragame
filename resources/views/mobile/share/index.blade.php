@@ -100,7 +100,7 @@
                 <div class="logo"><img src="../../mobile/img/jx-logo.443c8ffbee580d3672f7.png"/></div>
                 <div class="money">
                     <span>R$</span>
-                    <span>0</span>
+                    <span>{{$user['coin']}}</span>
                     <div class="sx"><img src="../../mobile/img/sx.png" /></div>
                     <div class="qb"><img src="../../mobile/img/qb.png" /></div>
                 </div>
