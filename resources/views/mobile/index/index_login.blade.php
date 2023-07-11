@@ -147,24 +147,24 @@
     }
     function check_login(obj) {
         showLoading();
-        $.ajax({
-            url : "{{url('mobile/login')}}",
-            type : 'POST',
-            data : $("#form1").serialize(),
-            success : function (data) {
-                hideLoading()
-                if(data.code == 200) {
-				          window.location.href= "{{url('mobile/index')}}"
-                } else {
-                    art.dialog({ title: 'Tips:', content: data.message, time: 3 });
-                }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-              hideLoading()
-              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+        // $.ajax({
+        //     url : "{{url('mobile/login')}}",
+        //     type : 'POST',
+        //     data : $("#form1").serialize(),
+        //     success : function (data) {
+        //         hideLoading()
+        //         if(data.code == 200) {
+				//           window.location.href= "{{url('mobile/index')}}"
+        //         } else {
+        //             art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+        //         }
+        //     },
+        //     error: function(jqXHR, textStatus, errorThrown) {
+        //       hideLoading()
+        //       art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
 
-            }
-        })
+        //     }
+        // })
         return false;
     }
     function check_register(obj) {
