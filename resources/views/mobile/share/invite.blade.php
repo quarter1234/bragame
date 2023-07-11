@@ -1,8 +1,8 @@
 <div class="xk">
     <p>分享的链接</p>
     <div class="xk_t">
-        <input type="text" value="{{$link}}" />
-        <button><img src="../../mobile/img/fz.png" /></button>
+        <input type="text" value="{{$link}}" id="demoInput" />
+        <button id="btn"><img src="../../mobile/img/fz.png" /></button>
     </div>
     <p>邀请码</p>
     <div class="xk_t">
@@ -18,3 +18,15 @@
     </div>
     <p></p>
 </div>
+
+<script>
+    const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+	const input = document.querySelector('#demoInput');
+	input.select();
+	if (document.execCommand('copy')) {
+		document.execCommand('copy');
+		console.log(document.execCommand('copy'));
+	}
+})
+</script>

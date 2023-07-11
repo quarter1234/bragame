@@ -28,7 +28,7 @@
         .top{width:100%;height:62px;background:#1a2c38;position:fixed;color:#fff;top:0;left:0;}
         .logo{width:91px;height:34px;float:left;margin:14px;}
         .logo img{width:91px;height:34px;}
-        .money{width:151px;height:32px;background:#102230;border-radius:5px;float:left;margin:15px 0 0 10px;position:relative; line-height:32px;}
+        .money{width:201px;height:32px;background:#102230;border-radius:5px;float:left;margin:15px 0 0 10px;position:relative; line-height:32px;}
         .money span{padding-left:10px;float:left;}
         .sx{width:16px;height:16px;position:absolute;right:45px;top:7px;}
         .sx img{width:16px;height:16px;}
