@@ -344,7 +344,7 @@
             </div>
             {{--loading组件--}}
             @include('mobile.common.loading')
-
+            @include('mobile.index.index_login') 
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -352,10 +352,7 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                
                 @include('mobile.common.footer') 
-                
-                @include('mobile.index.index_login') 
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
