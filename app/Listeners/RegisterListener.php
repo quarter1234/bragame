@@ -2,15 +2,18 @@
 
 namespace App\Listeners;
 
+use App\Common\Enum\GameEnum;
 use App\Events\RegisterEvent;
+use App\Helper\RewardHelper;
 use App\Helper\SystemConfigHelper;
 use App\Helper\UserHelper;
+use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class RegisterListener //implements ShouldQueue
+class RegisterListener implements ShouldQueue
 {
     public function __construct()
     {
@@ -74,11 +77,18 @@ class RegisterListener //implements ShouldQueue
         }
 
         // 代理返利配置
-        print_r($inviteConfig);die();
-
-        print_r($rewards);die();
-
-
-        file_put_contents('D:\www\logs.txt', $register->uid.PHP_EOL, FILE_APPEND);
+        if($inviteConfig['invite']['rtype'] == 2) {
+            // 如果之前没有获取
+            $commissionRepo = app()->make(DCommissionRepository::class);
+            $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
+            if(!$hasCommission) {
+                RewardHelper::addSuperiorRewards(
+                    $register->uid, 
+                    GameEnum::REG, 
+                    $inviteConfig['invite']['coin1'], 
+                    $inviteConfig['invite']['rtype']
+                );
+            }
+        }
     }
 }

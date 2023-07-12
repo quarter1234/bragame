@@ -44,4 +44,10 @@ class UserHelper
 
         return User::where('code', $code)->first();
     }
+
+
+    public static function getUserByUid(int $uid)
+    {
+        return User::where('uid', $uid)->first();
+    }
 }
