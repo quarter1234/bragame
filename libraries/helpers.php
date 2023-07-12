@@ -560,3 +560,9 @@ if (!function_exists('genJsonRes')) {
         return $result;
     }
 }
+if (!function_exists('doubleAdd')) {
+    function doubleAdd($beforecoin, $altercoin){
+        return number_format($beforecoin + $altercoin,2);
+    }
+}
+

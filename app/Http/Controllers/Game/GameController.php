@@ -60,20 +60,46 @@ class GameController extends Controller
     }
 
     public function callBackAuth(){
+        if (!Auth::check()) {
+            return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
+        }
         $uid = intval(Request::get('uid', 0));
+        $user = Auth::user();
         if(empty($uid)){
-            $this->defauRespData['status'] = "SC_WRONG_PARAMETERS";
-            return Result::json($this->defauRespData);
+            return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
+        }
+
+        if(empty($user)){
+            return Result::error('user is empty', ResponseCode::AUTH_ERROR);
+        }
+        $respData = $this->gameService->getUserBalance($uid, $user);
+        return Result::success($respData);
+    }
+
+    public function callBackBet(){
+        $uid = intval(Request::get('uid', 0));
+        $sign = Request::get('sign','');
+        if(empty($uid) || empty($sign)){
+            return Result::error('No uid sign !!', ResponseCode::AUTH_ERROR);
+        }
+        // 1 验签
+        $checkRes = $this->gameService->checkSign($uid, $sign);
+        if(!$checkRes){
+            return Result::error('sign error !!', ResponseCode::AUTH_ERROR);
+        }
+
+        $params = Request::post();
+        if(empty($params)){
+            return Result::error('not post data', ResponseCode::AUTH_ERROR);
         }
 
         $user = Auth::user();
         if(empty($user)){
-            $this->defauRespData['status'] = "SC_USER_NOT_EXISTS";
-            return Result::json($this->defauRespData);
+            if(empty($params)){
+                return Result::error('user is empty', ResponseCode::AUTH_ERROR);
+            }
         }
-
-        $this->defauRespData['data']['balance'] = $user['coin'];
-        $this->defauRespData['data']['username'] = $uid;
-        return Result::json($this->defauRespData);
+        $respData = $this->gameService->pgBetResult($params['uid'], $params, $user);
+        return Result::success($respData);
     }
 }

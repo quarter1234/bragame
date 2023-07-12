@@ -11,6 +11,7 @@
         "laravel/framework": "^8.54",
         "laravel/tinker": "^2.5",
         "overtrue/wechat": "~5.0",
+        "predis/predis": "^2.1",
         "prettus/l5-repository": "^2.7",
         "spatie/laravel-permission": "^5.5",
         "tymon/jwt-auth": "^1.0"

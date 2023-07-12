@@ -18,4 +18,12 @@ class DPgGameRepository extends Repository
         ->orderBy('sort', 'desc')
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
+
+    public function getPgGameByCode($gameCode){
+        return $this->model()::where('game_code', $gameCode)->first();
+    }
+
+    public function insert(array $data){
+        return  $this->model()::insertGetId($data);
+    }
 }
