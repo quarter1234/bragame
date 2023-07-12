@@ -33,7 +33,6 @@ class GameService
      */
     public function getPgGameUrl($gameCode, $user)
     {
-
         $params = [];
         $pre = env('THIRD_GAME_PRE_USER', false);
         if(empty($pre)){
