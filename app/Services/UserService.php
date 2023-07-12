@@ -6,6 +6,7 @@ use App\Helper\UserHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\UserRepository;
 use App\Common\Enum\GameEnum;
+use App\Helper\SystemConfigHelper;
 use Illuminate\Support\Facades\Redis;
 
 class UserService
@@ -105,6 +106,13 @@ class UserService
         return $isAllUseDraw;
     }
 
+    /**
+     * 修改金额
+     * @param $user
+     * @param $altercoin
+     * @param $type
+     * @return array
+     */
     public function alterUserCoin($user, $altercoin, $type){
         $beforecoin = $user->coin;
         $aftercoin = doubleAdd($beforecoin, $altercoin);
@@ -131,5 +139,55 @@ class UserService
 
         $user->save();
         return [$beforecoin, $aftercoin];
+    }
+
+    public function addSuperiorRewards($user, $actType, $coin, $rtype, $gameId, $type){
+        $rtype = $rtype ?? 1; // 注册返利的开关点, 1:充值时候返， 2:立即绑定就返
+        $ispayer = $user->ispayer ?? 0;
+        $invitUid = $user->invit_uid ?? 0;
+
+
+    }
+
+    /**
+     * 游戏中下注返佣
+     * @param $uid
+     * @param $actType
+     * @param $coin
+     * @param $gameId
+     * @param $type
+     */
+    public function gameRebate($user, $actType, $coin, $gameId, $type){
+        $inviteConfig = SystemConfigHelper::getByKey('invite');
+        $rebateGamelist = [];
+        $str = "";
+        if($inviteConfig && $inviteConfig['bet']){
+            if($type == 1){
+                if($inviteConfig['bet']['gameids']){
+                    $str = $inviteConfig['bet']['gameids'] ?? '';
+                }
+            }
+            else if($type == 2){
+                if($inviteConfig['bet']['jlgameids']){
+                    $str = $inviteConfig['bet']['jlgameids'] ?? '';
+                }
+            }
+            else if($type == 3){
+                if($inviteConfig['bet']['pggameids']){
+                    $str = $inviteConfig['bet']['pggameids'] ?? '';
+                }
+            }
+
+            if(!empty($str)){
+                $rebateGamelist = explode(",", $str);
+            }
+        }
+
+        foreach($rebateGamelist as $gid){
+            if($gid == $gameId){
+                $this->addSuperiorRewards($user, $actType, $coin, 2, $gameId, $type);
+                break;
+            }
+        }
     }
 }
