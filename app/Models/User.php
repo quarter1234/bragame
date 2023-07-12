@@ -19,11 +19,11 @@ class User extends Authenticatable
 
     protected $guarded = ['uid'];
     protected $primaryKey = 'uid';
-    // public $timestamps = false;
+    public $timestamps = false;
     protected $dateFormat = 'U';
     
-    const CREATED_AT = 'create_time';
-    const UPDATED_AT = 'update_time';
+    // const CREATED_AT = 'create_time';
+    // const UPDATED_AT = 'update_time';
 
     /**
      * The attributes that are mass assignable.

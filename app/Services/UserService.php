@@ -1,6 +1,8 @@
 <?php
 namespace App\Services;
 
+use App\Common\Enum\CommonEnum;
+use App\Helper\UserHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\UserRepository;
 use App\Common\Enum\GameEnum;
@@ -38,8 +40,11 @@ class UserService
         $data['playername'] = $params['playername'];
         $data['usericon'] = rand(1,11);
         $data['reg_ip'] = $params['ip'];
+        $data['create_time'] = time();
         $data['login_time'] = time();
         $data['login_ip'] = $params['ip'];
+        $data['code'] = UserHelper::inviteCode(CommonEnum::NUM_FOUR);
+        $data['isbindphone'] = CommonEnum::ENABLE;
 
         return $this->userRepo->storeUser($data);
     }

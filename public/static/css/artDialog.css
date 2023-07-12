@@ -29,7 +29,7 @@ button.aui_state_highlight:hover { color:#FFF;}
 button.aui_state_highlight:active { background:#000; }
 /* common end */
 
-.aui_inner { background:#FFF; max-width:580px; max-height:500px; overflow:hidden; word-break:break-all; }
+.aui_inner { background:rgba(0, 0, 0, .4); max-width:580px; max-height:500px; overflow:hidden; word-break:break-all; }
 .aui_inner .aui_title{ color:#fff;  }
 .aui_inner .aui_content{  max-height: 385px; overflow:auto; }
 .aui_outer, .aui_inner { border:none; }
@@ -41,15 +41,15 @@ button.aui_state_highlight:active { background:#000; }
 
 .aui_state_drag .aui_outer, .aui_outer:active { box-shadow:none; }
 .aui_titleBar { position:relative; height:100%; color:#fff }
-.aui_title { height:30px; line-height:30px; padding:0 10px 0 10px; background:#000; }
-.aui_state_focus .aui_title {    font-weight: 900;text-align: center; color:#6b6b6b; font-size:18px; background:#fff;}
+.aui_title { height:30px; line-height:30px; padding:0 10px 0 10px; background:#000; display:none;}
+.aui_state_focus .aui_title {    font-weight: 900;text-align: center; color:#fff; font-size:18px;}
 .aui_state_drag .aui_title { /*background: linear-gradient(top, #bdc6cd, #edf5f8); background: -moz-linear-gradient(top, #bdc6cd, #edf5f8); background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#bdc6cd), to(#edf5f8)); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bdc6cd', endColorstr='#edf5f8');*/ box-shadow:none; }
 .aui_state_drag .aui_titleBar { box-shadow:none; }
 .aui_close {font-size: 0px;}
 .aui_close:hover { background:#333; color:#FFF; }
 .aui_close:active { box-shadow: none; }
 .aui_content { color:#666; }
-.aui_state_focus .aui_content {    color: #6b6b6b;font-weight: 900;font-size: 15px;}
+.aui_state_focus .aui_content {    color: #fff;font-weight: 900;font-size: 15px;}
 .aui_buttons { background-color:#F6F6F6;  }
 .aui_state_noTitle .aui_nw, .aui_state_noTitle .aui_ne, .aui_state_noTitle .aui_sw, .aui_state_noTitle .aui_se { width:3px; height:3px; }
 .aui_state_noTitle .aui_inner { border:1px solid #666; background:#FFF; }

@@ -16,7 +16,7 @@ Route::group([
     Route::post('register', [PublicController::class, 'doRegister']);
     Route::get('login', [PublicController::class, 'login']);
     Route::post('login', [PublicController::class, 'doLogin']);
-    Route::get('index', [IndexController::class, 'index']);
+    Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
@@ -38,4 +38,6 @@ Route::group([
     Route::get('activity/info', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('pgUrl', [GameController::class, 'getPgUrl']);
     Route::get('blanceCallBack', [GameController::class, 'callBackAuth']);
+    Route::get('logout', [PublicController::class, 'logout']);
+
 });

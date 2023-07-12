@@ -13,3 +13,16 @@ https://learnku.com/articles/10885/full-use-of-jwt
 https://laravelacademy.org/post/4317
 https://laravelacademy.org/post/1321
 ```
+
+
+```
+#生成 LoginEvent
+php artisan make:event LoginEvent
+#生成 App\Listeners\XXX.php
+php artisan event:generate
+```
+
+## 执行队列
+```
+ php artisan queue:work redis --queue=default
+ ```

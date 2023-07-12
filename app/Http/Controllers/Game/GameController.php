@@ -34,6 +34,15 @@ class GameController extends Controller
         return Result::success($res);
     }
 
+    public function getPps()
+    {
+        $params = [];
+        $params['platform'] = 'PP';
+        $res = $this->gameService->getPGGames($params);
+
+        return Result::success($res);
+    }
+
     /**
      * 获取游戏地址
      * @return mixed

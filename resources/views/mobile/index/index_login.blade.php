@@ -1,5 +1,5 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;background:#1a2c38;top:-1017%;z-index:999; border-radius:10px 10px 0 0;}
+    .tc{ width:100%;height:600px;position:fixed;background:#1a2c38;bottom:0;z-index:999; border-radius:10px 10px 0 0;}
     .tc_top{height:52px;border-bottom:1px solid #293e4c; padding:0 20px; position:relative}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
@@ -146,32 +146,44 @@
         }
     }
     function check_login(obj) {
+        showLoading();
         $.ajax({
             url : "{{url('mobile/login')}}",
             type : 'POST',
             data : $("#form1").serialize(),
             success : function (data) {
+                hideLoading()
                 if(data.code == 200) {
-				          // alert("恭喜你!注册成功");
 				          window.location.href= "{{url('mobile/index')}}"
                 } else {
                     art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                 }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              hideLoading()
+              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+
             }
         })
         return false;
     }
     function check_register(obj) {
+      showLoading();
        $.ajax({
           url : "{{url('mobile/register')}}",
           type : 'POST',
           data : $("#form_register").serialize(),
           success : function (data) {
+            hideLoading()
             if(data.code == 200) {
               window.location.href= "{{url('mobile/index')}}"
             } else {
               art.dialog({ title: 'Tips:', content: data.message, time: 3 });
             }
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            hideLoading()
+            art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
           }
         })
 		  return false;
@@ -186,7 +198,11 @@
           $('.tc').hide()
         });
 
-
+        var isShowLogin = "{{$showLogin}}";
+        if(isShowLogin == 1) {
+          $('.tc').show(); 
+        }
+        
         $('.tc_top_list').click(function(){
           $(this).addClass('tc_on').siblings().removeClass('tc_on')
           var index =$(this).index()
@@ -240,23 +256,21 @@
         })
         var time = 60;
         $(".yzm_right").click(function (){
-if(time==60){//如果不加入该判断，则会出现在倒计时期间不断的点击发生不断的加快（其实就是你点了多少次就重复多少次该函数）的问题，用setTimeout（）方法不加此判断也是一样的
-var time1=setInterval(function(){
-if(time==0){
-    $(".yzm_right").html("验证码");
-    $(".yzm_right").removeAttr("disabled");
-    time=60;
-    clearInterval(time1);
-  }else{
-    $(".yzm_right").attr("disabled","true");
-    $(".yzm_right").html("("+time+")S");
-    time--;
-  }
-}, 1000);
-}
+          if(time==60){//如果不加入该判断，则会出现在倒计时期间不断的点击发生不断的加快（其实就是你点了多少次就重复多少次该函数）的问题，用setTimeout（）方法不加此判断也是一样的
+          var time1=setInterval(function(){
+          if(time==0){
+              $(".yzm_right").html("验证码");
+              $(".yzm_right").removeAttr("disabled");
+              time=60;
+              clearInterval(time1);
+            }else{
+              $(".yzm_right").attr("disabled","true");
+              $(".yzm_right").html("("+time+")S");
+              time--;
+            }
+          }, 1000);
+          }
 
-})
-
-
+        })
 })
 </script>

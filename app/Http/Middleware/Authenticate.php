@@ -15,6 +15,6 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        return '/mobile/index';
+        return route('mobile.index', ['showLogin' => 1]);
     }
 }

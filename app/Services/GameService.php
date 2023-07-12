@@ -212,7 +212,7 @@ class GameService
     }
 
     public function pgBetResult(int $uid, array $betParams, $user){
-        $platConfig = $this->sconfig->getVal("plat_app_id");
+        $platConfig = $this->sconfig->getConfigByKey("plat_app_id");
         if(!$platConfig || $platConfig->v != $betParams['plat_app']){
             $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
             return $this->defauRespData;
