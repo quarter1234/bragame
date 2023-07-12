@@ -26,7 +26,7 @@ class PublicRequest extends BaseRequest
     public function index()
     {
         return [
-            'code' => 'max:8',
+            'code' => 'max:9',
             'showLogin' => 'in:0,1',
         ];
     }

@@ -198,7 +198,11 @@
           $('.tc').hide()
         });
 
-
+        var isShowLogin = "{{$showLogin}}";
+        if(isShowLogin == 1) {
+          $('.tc').show(); 
+        }
+        
         $('.tc_top_list').click(function(){
           $(this).addClass('tc_on').siblings().removeClass('tc_on')
           var index =$(this).index()
@@ -252,23 +256,21 @@
         })
         var time = 60;
         $(".yzm_right").click(function (){
-if(time==60){//如果不加入该判断，则会出现在倒计时期间不断的点击发生不断的加快（其实就是你点了多少次就重复多少次该函数）的问题，用setTimeout（）方法不加此判断也是一样的
-var time1=setInterval(function(){
-if(time==0){
-    $(".yzm_right").html("验证码");
-    $(".yzm_right").removeAttr("disabled");
-    time=60;
-    clearInterval(time1);
-  }else{
-    $(".yzm_right").attr("disabled","true");
-    $(".yzm_right").html("("+time+")S");
-    time--;
-  }
-}, 1000);
-}
+          if(time==60){//如果不加入该判断，则会出现在倒计时期间不断的点击发生不断的加快（其实就是你点了多少次就重复多少次该函数）的问题，用setTimeout（）方法不加此判断也是一样的
+          var time1=setInterval(function(){
+          if(time==0){
+              $(".yzm_right").html("验证码");
+              $(".yzm_right").removeAttr("disabled");
+              time=60;
+              clearInterval(time1);
+            }else{
+              $(".yzm_right").attr("disabled","true");
+              $(".yzm_right").html("("+time+")S");
+              time--;
+            }
+          }, 1000);
+          }
 
-})
-
-
+        })
 })
 </script>

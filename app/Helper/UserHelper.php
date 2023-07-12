@@ -2,9 +2,7 @@
 
 namespace App\Helper;
 
-use App\Common\Enum\CommonEnum;
 use App\Models\User;
-use App\Repositories\ImageRepository;
 
 class UserHelper 
 {
@@ -40,6 +38,10 @@ class UserHelper
      */
     public static function getUserByCode(string $code)
     {
+        if(!$code) {
+            return false;
+        }
+
         return User::where('code', $code)->first();
     }
 }

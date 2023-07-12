@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
+use App\Events\RegisterEvent;
 use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
@@ -42,15 +44,19 @@ class PublicController extends Controller
         $params = $request->goCheck('doRegister');
         $params['ip'] = Request::getClientIp();
 
-        $hasUser = $this->userService->getUserByPhone($params['phone']);
-        if($hasUser) {
-            return Result::error('这个手机号已经被使用');
-        }
+        // $hasUser = $this->userService->getUserByPhone($params['phone']);
+        // if($hasUser) {
+        //     return Result::error('这个手机号已经被使用');
+        // }
 
-        $res =$this->userService->storeUser($params);
-        if(!$res) {
+        $registerUser =$this->userService->storeUser($params);
+        if(!$registerUser) {
             return Result::error('注册失败');
         }
+
+        $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
+        event(new RegisterEvent($registerUser, $inviteCode));
+        print_r($registerUser);die();
         
         if(!$this->handleLogin($params)) {
             return Result::error('数据库或密码不正确！');
