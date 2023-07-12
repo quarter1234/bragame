@@ -44,10 +44,10 @@ class PublicController extends Controller
         $params = $request->goCheck('doRegister');
         $params['ip'] = Request::getClientIp();
 
-        // $hasUser = $this->userService->getUserByPhone($params['phone']);
-        // if($hasUser) {
-        //     return Result::error('这个手机号已经被使用');
-        // }
+        $hasUser = $this->userService->getUserByPhone($params['phone']);
+        if($hasUser) {
+            return Result::error('这个手机号已经被使用');
+        }
 
         $registerUser =$this->userService->storeUser($params);
         if(!$registerUser) {
@@ -56,8 +56,7 @@ class PublicController extends Controller
 
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
-        print_r($registerUser);die();
-        
+
         if(!$this->handleLogin($params)) {
             return Result::error('数据库或密码不正确！');
         }
