@@ -21,6 +21,6 @@ class SSendCoinRepository extends Repository
         $data['scale'] = 1;
         $data['diamond'] = 0;
         $data['svip'] = $svip;
-        $this->create();
+        $this->create($data);
     }
 }

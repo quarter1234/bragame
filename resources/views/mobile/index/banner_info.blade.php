@@ -76,6 +76,8 @@
 		</h1>
 	</header>
 
+    <img src="{{ $banner['img'] }}" />
+
 	<div style="box-sizing: border-box;padding: 15px;">
         {!! $banner['content'] !!}
     </div>

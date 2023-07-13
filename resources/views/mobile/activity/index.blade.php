@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/css/activity.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/static/css/artDialog.css">
+ 
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
@@ -65,43 +65,27 @@
                     <!---->
                     <!---->
                     <!---->
-					 <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => 2])}}'" tabindex="0">
+
+                    @foreach($activity as $item)
+					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => $item['id']])}}'" tabindex="0">
                       <span _ngcontent-snw-c1="" class="activity-status open"></span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-title">新用户福利-绑卡送16元</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-duration">活动时间：长期有效</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-banner activity-3"></span>
+                      <span _ngcontent-snw-c1="" class="activity-btn-title">{{ $item['title'] }}</span>
+                      <span _ngcontent-snw-c1="" class="activity-btn-duration">Tempo：A eficácia a Longo prazo</span>
+                     
+                      <div><img style="width:100%;height:auto;margin:1rem 0;" src="{{ $item['img'] }}"></div>
                     </button>
-					 <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{:U('Activity/promotion')}'" tabindex="0">
-                      <span _ngcontent-snw-c1="" class="activity-status open"></span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-title">日日生金，JX最新活动上线</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-duration">活动时间：长期有效</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-banner activity-1"></span>
-                    </button>
-					
-                    <!---->
-                    <!--button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{:U('Activity/promotion')}'" tabindex="0">
-                      <span _ngcontent-snw-c1="" class="activity-status open"></span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-title">重磅继续！晋级奖励正式开启</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-duration">活动时间：长期有效</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-banner activity-1"></span>
-                    </button>
-                    <!---->
-                    <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{:U('Activity/everydayPlus')}'" tabindex="0">
-                      <span _ngcontent-snw-c1="" class="activity-status open"></span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-title">重磅继续！JX二级佣金活动正式开启</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-duration">活动时间：长期有效</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-banner activity-2"></span>
-                    </button>
-                    
+                    @endforeach  
                    </jx-content-view>
                 </jx-safe-area>
               </div>
             </div>
+
+            
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                @include('mobile.common.footer') 
+                  @include('mobile.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -114,6 +98,3 @@
   </body>
 
 </html>
-
-
-<a href="{{ route('mobile.activity.info', ['id' => 2])}}">详情连接</a>
