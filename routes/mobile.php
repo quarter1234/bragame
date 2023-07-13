@@ -40,4 +40,6 @@ Route::group([
     Route::get('activity/info', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('logout', [PublicController::class, 'logout']);
 
+    Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
+
 });

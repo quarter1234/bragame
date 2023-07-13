@@ -2,35 +2,32 @@
 
 namespace App\Http\Controllers\Mobile;
 
-use App\Common\Enum\CommonEnum;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
-use Illuminate\Support\Facades\Auth;
+use App\Services\IndexService;
 
 class IndexController extends Controller
 {
-    public function __construct()
-    {
+    private $indexService;
 
+    public function __construct(IndexService $indexService)
+    {
+        $this->indexService = $indexService;
     }
 
     public function index(PublicRequest $request)
     {
         $params = $request->goCheck('index');
-       
-        $data=[];
-        $data['user'] = null;
-        if(Auth::check()) {
-            $data['user'] = Auth::user();
-        }
-
-        $data['showLogin'] = $params['showLogin'] ?? 0;
-        $data['code'] = $params['code'] ?? '';
-
-        if($data['code']) {
-            session([CommonEnum::INVITE_CODE_KEY => $data['code']]);
-        }
+        $data = $this->indexService->getIndexData($params);
 
         return view('mobile.index.index', $data);
+    }
+
+    public function bannerShow(int $id)
+    {
+        $data = [];
+        $data['banner'] = $this->indexService->bannerInfo($id);
+        
+        return view('mobile.index.banner_info', $data);
     }
 }

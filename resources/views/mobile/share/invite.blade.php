@@ -6,8 +6,8 @@
     </div>
     <p>邀请码</p>
     <div class="xk_t">
-        <input type="text" value="{{$user['code']}}" />
-        <button><img src="../../mobile/img/fz.png" /></button>
+        <input type="text" value="{{$user['code']}}" id="demoInput2" />
+        <button id="btn2"><img src="../../mobile/img/fz.png" /></button>
     </div>
 </div>
 <div class="xk_b">
@@ -21,8 +21,17 @@
 
 <script>
     const btn = document.querySelector('#btn');
+    const btn2 = document.querySelector('#btn2');
 btn.addEventListener('click', () => {
 	const input = document.querySelector('#demoInput');
+	input.select();
+	if (document.execCommand('copy')) {
+		document.execCommand('copy');
+		console.log(document.execCommand('copy'));
+	}
+})
+btn2.addEventListener('click', () => {
+	const input = document.querySelector('#demoInput2');
 	input.select();
 	if (document.execCommand('copy')) {
 		document.execCommand('copy');
