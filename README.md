@@ -24,6 +24,7 @@ php artisan event:generate
 
 ## 执行队列
 ```
+/www/server/php/74/bin/php /usr/bin/composer require simplito/elliptic-php
 /www/server/php/74/bin/php artisan queue:work redis --queue=default
  php artisan queue:work redis --queue=default
  ```
