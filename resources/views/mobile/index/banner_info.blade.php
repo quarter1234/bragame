@@ -41,9 +41,9 @@
 			{{ $banner['title'] }}
 		</h1>
 	</header>
-    <div class="banner_top"><img src="{{ $banner['img'] }}" />
+    <div class="banner_top"><img style="width:100%;height:auto;" src="{{ $banner['img'] }}" />
 </div>    
-	<div class="banner_text" style="box-sizing: border-box;padding: 15px;">
+	<div class="banner_text" style="box-sizing: border-box;padding: 15px; color: white;">
 
         {!! $banner['content'] !!}
     </div>
