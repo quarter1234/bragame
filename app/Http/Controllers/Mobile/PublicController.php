@@ -56,7 +56,7 @@ class PublicController extends Controller
 
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
-
+        print_r(3333);die();
         if(!$this->handleLogin($params)) {
             return Result::error('数据库或密码不正确！');
         }

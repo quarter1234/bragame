@@ -29,11 +29,13 @@ class RegisterListener implements ShouldQueue
     {
         $register = $event->registerUser;
         $inviteCode = $event->inviteCode;
+        file_put_contents("/tmp/register.log", json_encode($register).PHP_EOL, FILE_APPEND);
+        
         if(!$inviteCode) {
             return false;
         }
         // 注册者是否已经绑定过邀请码，如果有绑定过则直接退出
-        file_put_contents("/tmp/register.log", json_encode($register).PHP_EOL, FILE_APPEND);
+        
 
         // 邀请者
         $inviteUser = UserHelper::getUserByCode($inviteCode);
