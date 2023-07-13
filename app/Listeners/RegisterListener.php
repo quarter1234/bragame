@@ -29,8 +29,6 @@ class RegisterListener implements ShouldQueue
     {
         $register = $event->registerUser;
         $inviteCode = $event->inviteCode;
-        file_put_contents("/tmp/register.log", json_encode($register).PHP_EOL, FILE_APPEND);
-        
         if(!$inviteCode) {
             return false;
         }
