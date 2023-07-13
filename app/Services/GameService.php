@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Common\Enum\GameEnum;
+use App\Helper\LogHelper;
 use App\Repositories\DPgGameRepository;
 use App\Repositories\SConfigRepository;
 use App\Repositories\DPgGameBetsRepository;
@@ -11,6 +12,7 @@ use App\Common\Message\CodeMsg;
 use GuzzleHttp\Client;
 use App\Facades\User;
 use App\Helper\SystemConfigHelper;
+use App\Helper\RewardHelper;
 use Log;
 
 class GameService
@@ -203,32 +205,12 @@ class GameService
         $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
-    private function _insertCoinLog($uid, $beforecoin, $altercoin, $aftercoin, $alterlog, $gameId, $type, $state, $gamePlat, $relBetId = 0){
-        $now = time();
-        $addData = [
-            'uid' => $uid,
-            'type' => $type,
-            'game_id' => $gameId,
-            'before_coin' => $beforecoin,
-            'coin' => $altercoin,
-            'after_coin' => $aftercoin,
-            'log' => $alterlog,
-            'state' => $state,
-            'updatetime' => $now,
-            'time' => $now,
-            'cache_uniqueid' => 0,
-            'game_plat' => $gamePlat,
-            'rel_bet_id' => $relBetId,
-        ];
-        $this->coinlog->storeCoinLog($addData);
-    }
-
     private function _reduceCoin($user, $upCoin, $gameId, $gamePlat, $relBetId, $msg = false){
         $reduceCoin = -$upCoin;
 //        $alterlog = "pg游戏投注扣除金币:" . $reduceCoin;
         list($beforecoin, $aftercoin) = User::alterUserCoin($user, $reduceCoin, GameEnum::PDEFINE['ALTERCOINTAG']['BET']);
         $inLog = $gameId . " 修改金币:" . $reduceCoin;
-        $this->_insertCoinLog($user->id, $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
+        LogHelper::insertCoinLog($user->id, $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 
@@ -319,7 +301,7 @@ class GameService
                 $aftercoin = $reduceRes['aftercoin'];
                 $effbet = $betAmount - $winLoseAmount;
                 if($effbet > 0){ // 按照有效下注的概念，给上级返利
-                    User::gameRebate($user, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], $effbet, $gameId, $commType);
+                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], $effbet, $gameId, $commType);
                 }
             }
         }

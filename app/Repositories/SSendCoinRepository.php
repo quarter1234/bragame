@@ -23,4 +23,8 @@ class SSendCoinRepository extends Repository
         $data['svip'] = $svip;
         $this->create();
     }
+
+    public function storeSendCoinLog(array $data){
+        return $this->create($data);
+    }
 }

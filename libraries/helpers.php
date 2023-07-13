@@ -584,3 +584,26 @@ if (!function_exists('gentRandInt')) {
     }
 }
 
+if (!function_exists('roundCoin')) {
+    function roundCoin($coin, $num = 2){
+        return round($coin, $num);
+    }
+}
+
+if (!function_exists('genSingleNumStr')) {
+    function genSingleNumStr($length = 8){
+        $chars = "0123456789";
+        $str = "";
+        for ($i = 0; $i < $length; $i++) {
+            $str .= substr($chars, mt_rand(0, strlen($chars) - 1), 1);
+        }
+        return $str;
+    }
+}
+
+if (!function_exists('genSingleOrderId')) {
+    function genSingleOrderId(){
+        return date('YmdHis') . genSingleNumStr();
+    }
+}
+

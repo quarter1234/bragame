@@ -89,6 +89,13 @@ class UserService
         }
     }
 
+    /**
+     * 是否全部使用提现钱包
+     * @param $uid
+     * @param $beforecoin
+     * @param $gamedraw
+     * @return int
+     */
     public function setIsAllUseDraw($uid, $beforecoin, $gamedraw){
         $key = "d_user:is_all_draw:" . $uid;
         $isAllUseDraw = Redis::get($key);
@@ -106,11 +113,22 @@ class UserService
         return $isAllUseDraw;
     }
 
+    public function updateGameDrawInDraw($user, $altercoin){
+        $gameDraw = $user['gamedraw'];
+        if(($gameDraw + $altercoin) < 0){
+            $altercoin = -$gameDraw;
+        }
+
+        // TODO redis缓存
+        $user['gamedraw'] = $user['gamedraw'] + $altercoin;
+        $user->save(); // -- 及时保存
+    }
+
     /**
      * 修改金额
      * @param $user
      * @param $altercoin
-     * @param $type
+     * @param $type 奖励类型
      * @return array
      */
     public function alterUserCoin($user, $altercoin, $type){
@@ -136,58 +154,8 @@ class UserService
         else if($type == GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE']){ // 充值到账
             $user->totalrecharge += $altercoin;
         }
-
-        $user->save();
+        // TODO redis缓存
+        $user->save(); // -- 及时保存
         return [$beforecoin, $aftercoin];
-    }
-
-    public function addSuperiorRewards($user, $actType, $coin, $rtype, $gameId, $type){
-        $rtype = $rtype ?? 1; // 注册返利的开关点, 1:充值时候返， 2:立即绑定就返
-        $ispayer = $user->ispayer ?? 0;
-        $invitUid = $user->invit_uid ?? 0;
-
-
-    }
-
-    /**
-     * 游戏中下注返佣
-     * @param $uid
-     * @param $actType
-     * @param $coin
-     * @param $gameId
-     * @param $type
-     */
-    public function gameRebate($user, $actType, $coin, $gameId, $type){
-        $inviteConfig = SystemConfigHelper::getByKey('invite');
-        $rebateGamelist = [];
-        $str = "";
-        if($inviteConfig && $inviteConfig['bet']){
-            if($type == 1){
-                if($inviteConfig['bet']['gameids']){
-                    $str = $inviteConfig['bet']['gameids'] ?? '';
-                }
-            }
-            else if($type == 2){
-                if($inviteConfig['bet']['jlgameids']){
-                    $str = $inviteConfig['bet']['jlgameids'] ?? '';
-                }
-            }
-            else if($type == 3){
-                if($inviteConfig['bet']['pggameids']){
-                    $str = $inviteConfig['bet']['pggameids'] ?? '';
-                }
-            }
-
-            if(!empty($str)){
-                $rebateGamelist = explode(",", $str);
-            }
-        }
-
-        foreach($rebateGamelist as $gid){
-            if($gid == $gameId){
-                $this->addSuperiorRewards($user, $actType, $coin, 2, $gameId, $type);
-                break;
-            }
-        }
     }
 }
