@@ -44,10 +44,10 @@ class PublicController extends Controller
         $params = $request->goCheck('doRegister');
         $params['ip'] = Request::getClientIp();
 
-        $hasUser = $this->userService->getUserByPhone($params['phone']);
-        if($hasUser) {
-            return Result::error('这个手机号已经被使用');
-        }
+        // $hasUser = $this->userService->getUserByPhone($params['phone']);
+        // if($hasUser) {
+        //     return Result::error('这个手机号已经被使用');
+        // }
 
         $registerUser =$this->userService->storeUser($params);
         if(!$registerUser) {
