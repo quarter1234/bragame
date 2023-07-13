@@ -65,7 +65,7 @@
     </style>
 <body class="bg_fff"style="background: #0c192c;">
 	<header data-am-widget="header"class="am-header am-header-default header nav_bg am-header-fixed">
-    
+
 		<div class="am-header-left am-header-nav">
 			<a href="javascript:history.back(-1);" class="" style="margin-top:15px;margin-left:8px">
 				<img src="..\..\static\images\left_ico.png" style="width:22px;height:22px" />
@@ -80,7 +80,7 @@
     <div><img style="width:100%;height:auto;" src="{{ $activity['img'] }}" /></div>
 
 	<div style="box-sizing: border-box;padding: 15px;color:white">
-        {{$activity['content']}}
+        {!! $activity['content'] !!}
 	</div>
 
 </body>
