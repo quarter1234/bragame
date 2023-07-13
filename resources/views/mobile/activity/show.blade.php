@@ -65,6 +65,7 @@
     </style>
 <body class="bg_fff"style="background: #0c192c;">
 	<header data-am-widget="header"class="am-header am-header-default header nav_bg am-header-fixed">
+
 		<div class="am-header-left am-header-nav">
 			<a href="javascript:history.back(-1);" class="" style="margin-top:15px;margin-left:8px">
 				<img src="..\..\static\images\left_ico.png" style="width:22px;height:22px" />
@@ -75,35 +76,11 @@
 			活动详情
 		</h1>
 	</header>
-	<div style="box-sizing: border-box;padding: 15px;">
-	
-	<div style="    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 25px;">聚星新用户福利</div>
-	<div style="    margin-top: 20px;
-    color: #878e97;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}">活动时间：2017年4月1日 - 不限时</div>
-	<div style="    margin-top: 20px;
-    color: #878e97;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}">
 
-<b>活动说明：</b><br>
-<b>1.本活动仅限聚星新用户！</b><br>
-<b>2.新用户绑卡后系统审核自动派送16元！</b><br>
-<b>3.流水10倍即可提款（160）！</b><br>
-<br><br><br><br>
-<b>最终活动解释权归聚星娱乐平台</b>
+    <div><img style="width:100%;height:auto;" src="{{ $activity['img'] }}" /></div>
 
-
-
-</div>
+	<div style="box-sizing: border-box;padding: 15px;color:white">
+        {!! $activity['content'] !!}
 	</div>
 
 </body>

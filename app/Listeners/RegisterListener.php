@@ -33,6 +33,7 @@ class RegisterListener implements ShouldQueue
             return false;
         }
         // 注册者是否已经绑定过邀请码，如果有绑定过则直接退出
+        
 
         // 邀请者
         $inviteUser = UserHelper::getUserByCode($inviteCode);
@@ -60,7 +61,7 @@ class RegisterListener implements ShouldQueue
         $inviteConfig = SystemConfigHelper::getByKey('invite');
         $rewards = ['type' => 1, 'count' => $inviteConfig['invite']['coin1'] ?? 0];
 
-        $inviteLog =$inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards));
+        $inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards));
 
         $register->invit_uid = $register->uid;
         $register->save();

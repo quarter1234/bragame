@@ -35,9 +35,11 @@ Route::group([
     Route::get('share', [ShareController::class, 'index']);
 
     Route::get('activity', [ActivityController::class, 'index']);
-    Route::get('activity/info', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('pgUrl', [GameController::class, 'getPgUrl']);
     Route::get('blanceCallBack', [GameController::class, 'callBackAuth']);
+    Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('logout', [PublicController::class, 'logout']);
+
+    Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
 
 });
