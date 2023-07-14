@@ -1603,7 +1603,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb {
     width: 34px;
     height: 29px;
-    background: #007aff;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6); 
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -1614,7 +1614,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb img {
     width: 16px;
     height: 16px;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .yh {
@@ -2312,7 +2312,8 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)
+    background-image: url(/mobile/img/bulletin-icon.a996c907273958ac2d65.svg);
+    padding-left:10px;
 }
 
 .more-announcement-icon[_ngcontent-way-c6] {
@@ -2322,7 +2323,8 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(/mobile/img/more-announcement.e9aba3242f773db1453a.png)
+    background-image: url(/mobile/img/more-announcement.e9aba3242f773db1453a.png);
+    padding-right:8px;
 }
 
 div.bulletin-board[_ngcontent-way-c6] {
@@ -3274,3 +3276,6 @@ button.cancel-btn[_ngcontent-way-c22] {
 .banner_text p{
     text-indent:24px;
 }
+
+
+.news-scroll span{padding-top:20px;float:left;}

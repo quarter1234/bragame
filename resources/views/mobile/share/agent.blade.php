@@ -1,94 +1,98 @@
 <div class="times">
-    <div class="times_list times_on">今日</div>
-    <div class="times_list">昨日</div>
-    <div class="times_list">一周</div>
-    <div class="times_list">本月</div>
-    <div class="times_list">本年</div>
+    <div class="times_list times_on">Today</div>
+    <div class="times_list">Yesterday</div>
+    <div class="times_list">Week</div>
+    <div class="times_list">Month</div>
+    <div class="times_list">Year</div>
 </div>
 <div class="times_xk">
-    <div class="times_div"  style="display:block;">
+
+    @foreach($agent as $key => $item)
+    <div class="times_div" @unless($key != 'today') style="display:block;" @endunless>
             <div class="times_fl">
                 <span class="b1"></span>
-                <div class="text">一号代理</div>
-                <label>0</label>
+                <div class="text">Meus dados do agente  </div>
+                <label></label>
+            </div>
+            <div class="times_sh">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Número</td>
+                            <td>Valor do código</td>
+                            <td>Recarga total</td>
+                            <td>Carga inicial</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ $item['oneGradeInviteNum'] + $item['twoGradeInviteNum'] }}</td>
+                        <td>{{ $item['oneTbetcoin'] + $item['twoTbetcoin'] }}</td>
+                        <td>{{ $item['oneRechargeAmount'] + $item['twoRechargeAmount'] }}</td>
+                        <td>{{ $item['oneFirstRecharge'] + $item['twoFirstRecharge'] }}</td>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="times_fl">
                 <span class="b2"></span>
-                <div class="text">二号代理</div>
-                <label>0</label>
+                <div class="text">Agente nível 1</div>
+                <label></label>
+            </div>
+            <div class="times_sh">
+                    <table>
+                    <thead>
+                        <tr>
+                            <td>Número</td>
+                            <td>Valor do código</td>
+                            <td>Recarga total</td>
+                            <td>Carga inicial</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{ $item['oneGradeInviteNum'] }}</td>
+                            <td>{{ $item['oneTbetcoin'] }}</td>
+                            <td>{{ $item['oneRechargeAmount'] }}</td>
+                            <td>{{ $item['oneFirstRecharge'] }}</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
             <div class="times_fl">
                 <span class="b3"></span>
-                <div class="text">三号代理</div>
-                <label>0</label>
+                <div class="text">Agente nível 2</div>
+                <label></label>
             </div>
+            <div class="times_sh">
+                <table>
+                    <thead>
+                        <tr>
+                        <td>Número</td>
+                        <td>Valor do código</td>
+                        <td>Recarga total</td>
+                        <td>Carga inicial</td>
+                        </tr>
+                    </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ $item['twoGradeInviteNum'] }}</td>
+                        <td>{{ $item['twoTbetcoin'] }}</td>
+                        <td>{{ $item['twoRechargeAmount'] }}</td>
+                        <td>{{ $item['twoFirstRecharge'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-    <div class="times_div">
-    <div class="times_fl">
-                <span class="b1"></span>
-                <div class="text">一号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b2"></span>
-                <div class="text">二号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b3"></span>
-                <div class="text">三号代理</div>
-                <label>0</label>
-            </div>
-    </div>
-    <div class="times_div">
-    <div class="times_fl">
-                <span class="b1"></span>
-                <div class="text">一号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b2"></span>
-                <div class="text">二号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b3"></span>
-                <div class="text">三号代理</div>
-                <label>0</label>
-            </div>
-    </div>
-    <div class="times_div">
-    <div class="times_fl">
-                <span class="b1"></span>
-                <div class="text">一号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b2"></span>
-                <div class="text">二号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b3"></span>
-                <div class="text">三号代理</div>
-                <label>0</label>
-            </div>
-    </div>
-    <div class="times_div">
-    <div class="times_fl">
-                <span class="b1"></span>
-                <div class="text">一号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b2"></span>
-                <div class="text">二号代理</div>
-                <label>0</label>
-            </div>
-            <div class="times_fl">
-                <span class="b3"></span>
-                <div class="text">三号代理</div>
-                <label>0</label>
-            </div>
-    </div>
+    @endforeach  
+
 </div>
+
+<script>
+    $(function(){
+        $('.times_fl').click(function(){
+            $(this).next('.times_sh').toggle()
+        })
+    })
+</script>

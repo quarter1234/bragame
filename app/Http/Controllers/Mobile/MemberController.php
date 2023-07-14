@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers\Mobile;
 
-use App\Common\Lib\Result;
 use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Services\GameService;
-use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Request;
 
+/**
+ * 个人中心相关
+ */
 class MemberController extends Controller
 {
     private $gameService;

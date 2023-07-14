@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    <title>游戏大厅</title>
+    <title>{{--游戏大厅--}}Salão de jogos</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <!-- Material Icons -->
@@ -57,10 +57,17 @@
                   <!---->
                   <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>
                   @if (Auth::check())
-                    <span style="padding-top:10px;font-size:0.9rem;position: absolute;right:20px;top:10px">欢迎您，{{ $user['playername'] }}</span>
+                    <span style="font-size:0.9rem;position: absolute;right:10px;">
+                        <div class="money">
+                            <span>R$</span>
+                            <span>9945.00</span>
+                            <div class="sx"><img src="../../mobile/img/sx.png"></div>
+                            <div class="qb"><img src="../../mobile/img/qb.png"></div>
+                        </div>
+                    </span>
                   @else 
-                    <div class="dl show_login">登录</div>
-                    <div class="zc show_login">注册</div>
+                    <div class="dl show_login">Login</div>
+                    <div class="zc show_login">Registo</div>
                   @endif
                   <!---->
                   <!---->
@@ -106,7 +113,7 @@
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
                           <a href="{{ route('mobile.notice.info', ['id' => 2])}}" style="text-align: start;font-size: 14px;font-weight: 400;color: #878e97;line-height: 20px;">
-                            <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">系统公告1</marquee></div>
+                            <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
                           </a>
                           <a _ngcontent-way-c6="" class="more-announcement-icon" href="{{url('mobile/notices')}}"></a>
                       </div>
@@ -114,32 +121,16 @@
                   </jx-bulletin-board>
 
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
-                    <div _ngcontent-way-c7="" class="util-bar-container">
-                      <div _ngcontent-way-c7="" class="daily-gift">
-                        <div _ngcontent-way-c7="" class="daily-gift-title-row">
-                          <div _ngcontent-way-c7="" class="daily-gift-username-title">
-                          
-                          </div>
-                          
-                          <!----></div>
-                        <!---->
-                        <!---->
-                        <div _ngcontent-way-c7="" class="daily-gift-value ng-star-inserted">
-                          <span _ngcontent-way-c7="" class="daily-gift-value-sign">¥</span>
-                          <span _ngcontent-way-c7="" class="din-alternate-bold">{{  isset($user['coin']) ? intval($user['coin']) : 0 }}</span></div>
-                      </div>
-
-                      <div _ngcontent-way-c7="" class="util-bar">
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon deposit"></span>充值</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon transfer"></span>额度</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon withdraw"></span>提款</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon ac"></span>帐户</a>
-                      </div>
-                    </div>
+                  <!--触发声音-->
+                  <audio id="myTune"> 
+                    <source src="https://d186gute5mq2g4.cloudfront.net/audio/btn_click.mp3"> 
+                  </audio>
+                  
+                  <script>
+                    setInterval("myInterval()",5000);
+                      function myInterval() {document.getElementById('myTune').play();}
+                  </script>
+                  <!--触发声音-->
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
@@ -158,23 +149,23 @@
                         <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电子</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--电子--}}Eletrônica</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-sport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">体育</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--体育--}}Esportes</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab5" onclick="myclick(5)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-fishing"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">捕鱼</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--捕鱼--}}Pesca</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab6" onclick="myclick(6)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-boardgame"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">棋牌</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--棋牌--}}Xadrez</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab7" onclick="myclick(7)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-esport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电竞</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--电竞--}}Concorrência elétrica</span></button>
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
@@ -183,14 +174,14 @@
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab1_content_pps"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">点击加载更多</button>
+                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">{{--点击加载更多--}}Clique para carregar mais</button>
                           </div>
                         </div>
                       {{-- PG 游戏 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: block;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">点击加载更多</button>
+                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
                           </div>
                         </div>
 
@@ -245,42 +236,42 @@
               <div class="news-title clearfix" style="box-shadow: 0 2px 2px #0b2640">
                 <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">最新中奖榜</strong>
+                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}A última lista vencedora</strong>
                 </h2>
               </div>
               <div class="rankBg"></div>
               <div class="news-content myScroll" style="height: 290px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
                 <li style="color: #a9bed8;">
-                    Json**a
-                      <b>湖北快三</b>
-                      <em>喜中
-                        <em style="color: #fe4365;">9000.00</em>元</em>
+                    <span>Json**a</span>
+                     
+                      <em>
+                        <em style="color: #fe4365;">R$9000.00</em>元</em>
                   </li>
 
                   <li style="color: #a9bed8;">
-                    8****32
-                      <b>江西快三</b>
-                      <em>喜中
-                        <em style="color: #fe4365;">4560.00</em>元</em>
+                  <span>8****32</span>
+                      
+                      <em>
+                        <em style="color: #fe4365;">R$4560.00</em>元</em>
                   </li>
                   <li style="color: #a9bed8;">
-                    a****5
-                      <b>天津时时彩</b>
-                      <em>喜中
-                        <em style="color: #fe4365;">645.00</em>元</em>
+                  <span>a****5</span>
+                      
+                      <em>
+                        <em style="color: #fe4365;">R$645.00</em>元</em>
                   </li>
                   <li style="color: #a9bed8;">
-                    王**发
-                      <b>重庆时时彩</b>
-                      <em>喜中
-                        <em style="color: #fe4365;">7647.00</em>元</em>
+                    <span>1**34</span>
+                      
+                      <em>
+                        <em style="color: #fe4365;">R$7647.00</em>元</em>
                   </li>
                   <li style="color: #a9bed8;">
-                    胡**喜
-                      <b>江苏快3</b>
-                      <em>喜中
-                        <em style="color: #fe4365;">7647.00</em>元</em>
+                  <span>2**4</span>
+                     
+                      <em>
+                        <em style="color: #fe4365;">R$7647.00</em>元</em>
                   </li>
                 </ul>
               </div>

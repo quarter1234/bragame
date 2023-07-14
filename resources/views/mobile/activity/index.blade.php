@@ -44,7 +44,7 @@
                   <!---->
                   <!---->
                   <!---->
-                  <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">活动中心</div>
+                  <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
                   <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
                     <jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
                       <!---->

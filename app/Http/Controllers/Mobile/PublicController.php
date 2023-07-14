@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Mobile;
 use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Events\RegisterEvent;
-use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
