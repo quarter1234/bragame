@@ -45,4 +45,14 @@ class DUserTreeRepository extends Repository
         $data['ancestor_h'] = intval($tree['ancestor_h']) + 1;
         $this->create($data);
     }
+
+    public function getTree($uid, $heights = [])
+    {
+        return $this->model()::with('descendant:uid,playername,create_time')->where('ancestor_id', $uid)->whereIn('ancestor_h', $heights)->get();
+    }
+
+    public function getTreeCount($uid, $heights = [])
+    {
+        return $this->model()::where('ancestor_id', $uid)->whereIn('ancestor_h', $heights)->count();
+    }
 }

@@ -65,7 +65,7 @@
 .qb img {
     width: 16px;
     height: 16px;
-    margin-top: 5px;
+    margin-top:7px;
 }
 
 .yh {
@@ -225,7 +225,7 @@
     text-align: center;
     line-height: 30px;
     color: #fff;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .times_on {
@@ -245,11 +245,11 @@
 }
 
 .times_fl {
-    width: 88%;
+    width: 98%;
     height: 54px;
     background: #1a2c38;
     margin: 20px auto 0 auto;
-    border-radius: 10px;
+    border-radius: 5px;
     position: relative;
 }
 
@@ -260,14 +260,14 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    display: inline-block;
+    display: none;
 }
 
 .times_fl .text {
     width: 200px;
     top: 15px;
     position: absolute;
-    left: 75px;
+    left:15px;
     color: #fff;
     font-size: 16px;
 }
@@ -787,7 +787,7 @@ div.bulletin-board[_ngcontent-way-c6] {
     line-height: 20px
 }
 
-</style><style>div.util-bar-container[_ngcontent-way-c7] {
+div.util-bar-container[_ngcontent-way-c7] {
     padding: 0 10px 10px;
     display: flex;
     flex-flow: row nowrap;
@@ -1684,4 +1684,28 @@ button.ok-btn[_ngcontent-way-c22] {
 
 button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(to bottom, #9ea3aa, #59585d)
+}
+
+.times_sh{
+    width: 98%;
+    margin:0 auto;
+}
+.times_sh table{
+    width:100%;
+    text-align:center;
+    line-height:30px;
+    border-collapse:collapse;
+    font-size:14px;
+}
+.times_sh td{
+    
+}
+.times_sh thead td{
+    background:#324d5d;
+    color:#fff;
+    font-weight:bold;
+    font-size:12px;
+}
+.times_sh tbody td{
+    background:#3d5767;
 }

@@ -14,4 +14,20 @@ class DCommissionRepository extends Repository
     {
         return $this->model()::where('uid', $uid)->where('type', $type)->first();
     }
+
+    public function getOneTotalBetCoin($uid, $startTeime, $endTime)
+    {
+        return $this->model()::where('parentid', $uid)
+        ->where('create_time', '>=', $startTeime)
+        ->where('create_time', '<=', $endTime)
+        ->sum('betcoin');
+    }
+
+    public function getTwoTotalBetCoin($uid, $startTeime, $endTime)
+    {
+        return $this->model()::where('pparentid', $uid)
+        ->where('create_time', '>=', $startTeime)
+        ->where('create_time', '<=', $endTime)
+        ->sum('betcoin');
+    }
 }

@@ -1614,7 +1614,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb img {
     width: 16px;
     height: 16px;
-    margin-top: 5px;
+    margin-top: 6px;
 }
 
 .yh {
@@ -3276,3 +3276,6 @@ button.cancel-btn[_ngcontent-way-c22] {
 .banner_text p{
     text-indent:24px;
 }
+
+
+.news-scroll span{padding-top:20px;float:left;}

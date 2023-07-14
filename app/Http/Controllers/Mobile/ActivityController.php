@@ -7,7 +7,7 @@ use App\Services\ActivityService;
 use Illuminate\Support\Facades\Request;
 
 /**
- * 活动相关
+ * 活动任务相关
  */
 class ActivityController extends Controller
 {

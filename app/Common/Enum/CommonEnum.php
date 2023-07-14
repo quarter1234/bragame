@@ -13,4 +13,5 @@ class CommonEnum
 
     const INVITE_CODE_KEY = 'invite_code';
     const CACHE_TIME = (86400 * 30);
+    const CACHE_SHORT_TIME = (60 * 20);
 }

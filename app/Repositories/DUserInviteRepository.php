@@ -37,4 +37,12 @@ class DUserInviteRepository extends Repository
 
         return $this->create($data);
     }
+
+    public function inviteByUidByTime($uid = [], $startTime, $endTime)
+    {
+        return $this->model()::whereIn('invit_uid', $uid)
+        ->where('create_time', '>=', $startTime)
+        ->where('create_time', '<=', $endTime)
+        ->pluck('uid')->toArray();
+    }
 }
