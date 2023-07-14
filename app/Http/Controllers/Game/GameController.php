@@ -68,6 +68,10 @@ class GameController extends Controller
         return Result::error('Get Game Url Err');
     }
 
+    /**
+     * 验证获得用户余额
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function callBackAuth(){
         if (!Auth::check()) {
             return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
@@ -85,6 +89,10 @@ class GameController extends Controller
         return Result::success($respData);
     }
 
+    /**
+     *  投注和赢分
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function callBackBet(){
         $uid = intval(Request::get('uid', 0));
         $sign = Request::get('sign','');
@@ -108,7 +116,8 @@ class GameController extends Controller
                 return Result::error('user is empty', ResponseCode::AUTH_ERROR);
             }
         }
-        $respData = $this->gameService->pgBetResult($params['uid'], $params, $user);
+        // 第三方游戏的投注和赢分
+        $respData = $this->gameService->pgBetResult($user, $params);
         return Result::success($respData);
     }
 }

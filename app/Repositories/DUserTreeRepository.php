@@ -45,4 +45,8 @@ class DUserTreeRepository extends Repository
         $data['ancestor_h'] = intval($tree['ancestor_h']) + 1;
         $this->create($data);
     }
+
+    public function getPrentInviteTree($uid, $len){
+        return $this->model()::where("descendant_id", $uid)->where("ancestor_h", $len)->first();
+    }
 }

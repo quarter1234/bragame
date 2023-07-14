@@ -7,7 +7,7 @@ use App\Models\DUserLoginLog;
 use App\Repositories\UserRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
-use Illuminate\Support\Facades\Redis;
+use App\Cache\AllUseGameDrawCache;
 
 class UserService
 {
@@ -89,29 +89,6 @@ class UserService
         }
     }
 
-    /**
-     * 是否全部使用提现钱包
-     * @param $uid
-     * @param $beforecoin
-     * @param $gamedraw
-     * @return int
-     */
-    public function setIsAllUseDraw($uid, $beforecoin, $gamedraw){
-        $key = "d_user:is_all_draw:" . $uid;
-        $isAllUseDraw = Redis::get($key);
-        if (!is_null($isAllUseDraw)) {
-            $isAllUseDraw = intval($isAllUseDraw);
-        }
-        else{
-            if($beforecoin == $gamedraw){
-                $isAllUseDraw = 1;
-            }
-
-            Redis::set($key, $isAllUseDraw);
-        }
-
-        return $isAllUseDraw;
-    }
 
     public function updateGameDrawInDraw($user, $altercoin){
         $gameDraw = $user['gamedraw'];
@@ -141,7 +118,7 @@ class UserService
         $user->coin = $aftercoin;
         $altercoin = abs($altercoin);
         if($type == GameEnum::PDEFINE['ALTERCOINTAG']['BET']){ // 下注
-            $setIsAllUseDraw = $this->setIsAllUseDraw($user->id, $beforecoin);
+            $setIsAllUseDraw = AllUseGameDrawCache::rememberUseDraw($user, $beforecoin);
             if(!$setIsAllUseDraw){
                 $user->totalbet += $altercoin;
                 $user->match_bets += $altercoin;

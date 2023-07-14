@@ -14,4 +14,9 @@ class DCommissionRepository extends Repository
     {
         return $this->model()::where('uid', $uid)->where('type', $type)->first();
     }
+
+    public function storeCommission(array $data){
+        return $this->create($data);
+    }
+
 }
