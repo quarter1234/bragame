@@ -92,22 +92,10 @@
                             <span _ngcontent-mto-c30="" class="heading">登录密码</span>
                             <span _ngcontent-mto-c30="" class="subheading">修改</span>
                             <i class="icon iconfont"><img src="..\..\static\images\right_ico.png" style="width:6px;height:10px;margin-left:10px" /></i></button>
-						 {{--<button _ngcontent-mto-c30="" class="setting-item-btn ng-star-inserted" onclick="location.href='<eq name="userinfo['tradepassword']" value=""><else /></eq>
-						 <span _ngcontent-mto-c30="" class="heading">资金密码</span>
-                            <span _ngcontent-mto-c30="" class="subheading"><?php  if(empty($userinfo['tradepassword'])){?>设置<?php }else{?>修改<?php }?></span>
-                            <i class="icon iconfont"></i></button>--}}
-						  <button _ngcontent-mto-c30="" class="setting-item-btn ng-star-inserted" onclick="location.href='{:U('Member/safephone')}'" tabindex="0">
-                            <span _ngcontent-mto-c30="" class="heading">密保手机</span>
-                            <span _ngcontent-mto-c30="" class="subheading"><eq name="userinfo['tel']" value="">设置<else />修改</eq></span>
-                            <i class="icon iconfont"><img src="..\..\static\images\right_ico.png" style="width:6px;height:10px;margin-left:10px" /></i></button>
-                            {{--<button _ngcontent-mto-c30="" class="setting-item-btn ng-star-inserted" onclick="location.href='<eq name="userinfo['question']" value="">{:U('Member/setProblem')}<else />{:U('Member/updateProblem')}</eq>'" tabindex="0">
-                            <span _ngcontent-mto-c30="" class="heading">密保问题</span>
-                            <span _ngcontent-mto-c30="" class="subheading"><eq name="userinfo['question']" value="">设置<else />修改</eq></span>
-                            <i class="icon iconfont">&#xe66f;</i></button>--}}
-                          <button _ngcontent-mto-c30="" class="setting-item-btn ng-star-inserted" onclick="location.href='{:U('Member/bindmail')}'" tabindex="0">
-                            <span _ngcontent-mto-c30="" class="heading">密保邮箱</span>
-                            <span _ngcontent-mto-c30="" class="subheading"><eq name="userinfo['email']" value="">设置<else />修改</eq></span>
-                            <i class="icon iconfont"><img src="..\..\static\images\right_ico.png" style="width:6px;height:10px;margin-left:10px" /></i></button>
+
+						  
+                            
+                          
                           <button _ngcontent-mto-c30="" class="setting-item-btn ng-star-inserted" onclick="location.href='{:U('Member/bindcard')}'" tabindex="0">
                             <span _ngcontent-mto-c30="" class="heading">银行卡管理</span>
 							<span _ngcontent-mto-c30="" class="subheading"><eq name="bankcard" value="">查看<else />添加</eq></span>
@@ -116,15 +104,9 @@
                         <!---->
                         <!----></div>
                     </div>
-                    <div _ngcontent-mto-c30="" class="setting-container">
-                      <div _ngcontent-mto-c30="" class="setting-header">
-                        <div _ngcontent-mto-c30="" class="setting-header-icon system-icon"></div>系统</div>
-                      <div _ngcontent-mto-c30="" class="setting-content">
-                        <button _ngcontent-mto-c30="" class="setting-item-btn">
-                          <span _ngcontent-mto-c30="" class="heading">系统版本</span>
-                          <span _ngcontent-mto-c30="" class="hint">1.2.0.2366</span></button>
-                      </div>
-                    </div>
+
+
+
                     <div _ngcontent-mto-c30="" class="footer-fixed-container safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
                       <div _ngcontent-mto-c30="" class="footer-wrapper">
                         <button _ngcontent-mto-c30="" onclick="javascript:if(confirm('是否退出？'))location='{{url("mobile/logout")}}'" class="logout-btn mat-elevation-z10">退出账户</button></div>
