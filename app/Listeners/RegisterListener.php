@@ -84,9 +84,9 @@ class RegisterListener implements ShouldQueue
             $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
             if(!$hasCommission) {
                 RewardHelper::addSuperiorRewards(
-                    $register->uid, 
-                    GameEnum::REG, 
-                    $inviteConfig['invite']['coin1'], 
+                    $register->uid,
+                    GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
+                    $inviteConfig['invite']['coin1'],
                     $inviteConfig['invite']['rtype']
                 );
             }

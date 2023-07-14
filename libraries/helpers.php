@@ -561,6 +561,12 @@ if (!function_exists('genJsonRes')) {
     }
 }
 
+if (!function_exists('doubleAdd')) {
+    function doubleAdd($beforecoin, $altercoin){
+        return number_format($beforecoin + $altercoin,2);
+    }
+}
+
 /**
  * 随机字符串  对密码的 二进制 进行解析 返回对应的 ASCII  字符串
  * 长度为目标长度的2倍
@@ -575,6 +581,29 @@ if (!function_exists('gentRandInt')) {
     function gentRandInt(int $min, int $max)
     {
         return random_int($min, $max);
+    }
+}
+
+if (!function_exists('roundCoin')) {
+    function roundCoin($coin, $num = 2){
+        return round($coin, $num);
+    }
+}
+
+if (!function_exists('genSingleNumStr')) {
+    function genSingleNumStr($length = 8){
+        $chars = "0123456789";
+        $str = "";
+        for ($i = 0; $i < $length; $i++) {
+            $str .= substr($chars, mt_rand(0, strlen($chars) - 1), 1);
+        }
+        return $str;
+    }
+}
+
+if (!function_exists('genSingleOrderId')) {
+    function genSingleOrderId(){
+        return date('YmdHis') . genSingleNumStr();
     }
 }
 

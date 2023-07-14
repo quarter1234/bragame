@@ -7,7 +7,7 @@ use App\Repositories\ImageRepository;
 use App\Repositories\SConfigRepository;
 use Illuminate\Support\Facades\Cache;
 
-class SconfigCache 
+class SconfigCache
 {
     const S_CONFIG_KEY = "s_config_keys:%s";
 
@@ -20,9 +20,13 @@ class SconfigCache
     {
         $cacheKey = sprintf(self::S_CONFIG_KEY, $key);
 
-        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () use($key) {
-            $configRepo = app()->make(SConfigRepository::class);
-            return $configRepo->getConfigByKey($key);
-        });
+//        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () use($key) {
+//            $configRepo = app()->make(SConfigRepository::class);
+//            return $configRepo->getConfigByKey($key);
+//        });
+
+        $configRepo = app()->make(SConfigRepository::class);
+        return $configRepo->getConfigByKey($key);
+
     }
 }

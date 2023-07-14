@@ -12,6 +12,10 @@ class SConfigRepository extends Repository
 
     public function getConfigByKey(string $key)
     {
-        return $this->model()::where('k', $key)->first();
+        if($key){
+            return $this->model()::where('k', $key)->first();
+        }
+        
+        return null;
     }
 }
