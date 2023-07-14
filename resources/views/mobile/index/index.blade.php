@@ -57,7 +57,14 @@
                   <!---->
                   <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>
                   @if (Auth::check())
-                    <span style="padding-top:10px;font-size:0.9rem;position: absolute;right:20px;top:10px">欢迎您，{{ $user['playername'] }}</span>
+                    <span style="font-size:0.9rem;position: absolute;right:10px;">
+                        <div class="money">
+                            <span>R$</span>
+                            <span>9945.00</span>
+                            <div class="sx"><img src="../../mobile/img/sx.png"></div>
+                            <div class="qb"><img src="../../mobile/img/qb.png"></div>
+                        </div>
+                    </span>
                   @else 
                     <div class="dl show_login">登录</div>
                     <div class="zc show_login">注册</div>
@@ -114,32 +121,7 @@
                   </jx-bulletin-board>
 
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
-                    <div _ngcontent-way-c7="" class="util-bar-container">
-                      <div _ngcontent-way-c7="" class="daily-gift">
-                        <div _ngcontent-way-c7="" class="daily-gift-title-row">
-                          <div _ngcontent-way-c7="" class="daily-gift-username-title">
-                          
-                          </div>
-                          
-                          <!----></div>
-                        <!---->
-                        <!---->
-                        <div _ngcontent-way-c7="" class="daily-gift-value ng-star-inserted">
-                          <span _ngcontent-way-c7="" class="daily-gift-value-sign">¥</span>
-                          <span _ngcontent-way-c7="" class="din-alternate-bold">{{  isset($user['coin']) ? intval($user['coin']) : 0 }}</span></div>
-                      </div>
-
-                      <div _ngcontent-way-c7="" class="util-bar">
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon deposit"></span>充值</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon transfer"></span>额度</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon withdraw"></span>提款</a>
-                        <a href="javascript:void(0);" class="util-btn" style="padding: 0;width: 50px;height: 50px;color: #7998b1;font-size: 12px;display: inline-flex;flex-flow: column nowrap;justify-content: space-between;align-items: center;text-decoration:none;" tabindex="0">
-                          <span _ngcontent-way-c7="" class="util-btn-icon ac"></span>帐户</a>
-                      </div>
-                    </div>
+                   
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
