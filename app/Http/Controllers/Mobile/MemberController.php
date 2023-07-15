@@ -33,4 +33,19 @@ class MemberController extends Controller
         $data['user'] = Auth::user();
         return view('mobile.member.setting', $data);
     }
+
+    public function customerService()
+    {
+        return view('mobile.member.customer_service');
+    }
+
+    public function vip()
+    {
+        return view('mobile.member.vip');
+    }
+
+    public function email()
+    {
+        return view('mobile.member.email');
+    }
 }

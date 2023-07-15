@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Mobile\ActivityController;
 use App\Http\Controllers\Game\GameController;
+use App\Http\Controllers\Mobile\DisplayController;
 use App\Http\Controllers\Mobile\IndexController;
 use App\Http\Controllers\Mobile\MemberController;
 use App\Http\Controllers\Mobile\NoticeController;
@@ -33,6 +34,11 @@ Route::group([
 
     Route::get('member/index ', [MemberController::class, 'index']);
     Route::get('Member/setting', [MemberController::class, 'setting']);
+    Route::get('member/customerService', [MemberController::class, 'customerService']);
+    Route::get('member/vip', [MemberController::class, 'vip']);
+    Route::get('member/email', [MemberController::class, 'email']);
+    
+    
 
     Route::get('share', [ShareController::class, 'index']);
 
@@ -45,6 +51,7 @@ Route::group([
     Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
 
     Route::get('shop', [ShopController::class, 'index']);
-    
+   
+    Route::get('display', [DisplayController::class, 'display'])->name('mobile.display');
 
 });

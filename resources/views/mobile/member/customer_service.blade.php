@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/share.css">
-    <link rel="stylesheet" href="/mobile/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -39,55 +37,22 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
-            
-          <div class="top">
-                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
-                <div class="money">
-                    <span>R$</span>
-                    <span>{{--$user['coin']--}}</span>
-                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
-                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
-                </div>
+            <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
+              <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
+                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
+                    客服
+                  </div>
+              </jx-header-row>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
+                    <!---->
+                    <!---->
+                    <!---->
 
-                      <div class="shop_top">
-                          <div class="shop_t_text">Saldo Total</div>
-                          <div class="shop_b">9.99</div>
-                          <button onclick="location.href='{{ route("mobile.display", ["act" => 'pay']) }}'" class="shop_button">Adicionar dinheiro</button>
-                      </div>
-                      <div class="shop_list">
-                          <span>Adicionar dinheiro</span>
-                          <p>R$ 9.99</p>
-                          <button  class="shop_list_button"></button>
-                      </div>
-                      <div class="shop_list">
-                          <span>Saldo Retiravel</span>
-                          <p>R$ 9.99</p>
-                          <button class="shop_list_button2"></button>
-                          <div class="shop_wk">Verdifcar agora</div>
-                          <div class="shop_wk2">Verdifcar agora sda dejfskjd ad fasda</div>
-                      </div>
-                      <div class="shop_h"></div>
-                      <div class="shop_jt">
-                       <div class="shop_jt_left">
-                          <h2>Minhas Trabsacones<span>Verdifcar agora sda dejskjd ad fasda iDA</span></h2>
-                       </div>
-                       <div class="shop_right">
-                          <div class="shop_jt_ico"></div>
-                       </div>
-                      </div>
-                      <div class="shop_jt">
-                       <div class="shop_jt_left">
-                          <h2>Minhas Trabsacones</h2>
-                       </div>
-                       <div class="shop_right">
-                          <div class="shop_jt_ico"></div>
-                       </div>
-                      </div>
+
                    </jx-content-view>
                 </jx-safe-area>
               </div>

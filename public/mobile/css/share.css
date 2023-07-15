@@ -54,7 +54,7 @@
 .qb {
     width: 34px;
     height: 29px;
-    background: #007aff;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -74,6 +74,7 @@
     position: absolute;
     right: 15px;
     top: 25px;
+    display:none;
 }
 
 .yh img {
@@ -125,10 +126,11 @@
 }
 
 .xk {
-    width: 100%;
+    width: 99%;
     height: 250px;
-    background: linear-gradient(#121e2e, #013681);
     border-radius: 10px;
+    border:1px dashed #fff;
+    margin:0 auto;
 }
 
 .xk p {
@@ -160,7 +162,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background: #007aff;
+    background: #0a9bc6;
     text-align: center;
     color: #fff;
     float: right;
@@ -229,15 +231,14 @@
 }
 
 .times_on {
-    background: #2c4355;
+    background:#0da0c7;
+    color:#fff;
 }
 
 .times_xk {
     width: 100%;
-    background: linear-gradient(#0f212f, #102744);
     border-radius: 10px;
-    padding: 10px 0 20px 0;
-    margin-top: 15px;
+    padding: 10px 0 80px 0;
 }
 
 .times_div {
@@ -246,11 +247,12 @@
 
 .times_fl {
     width: 98%;
-    height: 54px;
-    background: #1a2c38;
-    margin: 20px auto 0 auto;
-    border-radius: 5px;
+    height: 40px;
+    background: #13202d;
+    margin: 20px auto -3px auto;
+    border-radius: 5px 5px 0 0;
     position: relative;
+    line-height:40px;
 }
 
 .times_fl span {
@@ -265,11 +267,9 @@
 
 .times_fl .text {
     width: 200px;
-    top: 15px;
-    position: absolute;
-    left:15px;
-    color: #fff;
+    color:#fff;
     font-size: 16px;
+    padding-left:10px;
 }
 
 .times_fl label {
@@ -1062,7 +1062,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(/mobile/img/huodong.svg)
+    background-image: url(/mobile/img/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
@@ -1696,6 +1696,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:30px;
     border-collapse:collapse;
     font-size:14px;
+    border-radius:0 0 5px 5px;
+    overflow: hidden;
 }
 .times_sh td{
     
@@ -1705,7 +1707,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     color:#fff;
     font-weight:bold;
     font-size:12px;
+    height:40px;
+    line-height:40px;
 }
 .times_sh tbody td{
-    background:#3d5767;
+    background:#13202d;
+    height:40px;
+    line-height:40px;
 }

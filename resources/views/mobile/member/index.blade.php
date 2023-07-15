@@ -126,8 +126,22 @@
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>投注记录
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     </div>
+
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Member/personalInfo')}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>邮件
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                    </div>
+
+
+                    <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>VIP等级
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                    </div>
+
+                    <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>客服中心
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     </div>

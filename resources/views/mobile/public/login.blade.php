@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title>登录</title>
+    <title>{{--登录--}}Login</title>
 	<meta name="keywords" content="登录" />
 	<meta name="description" content="登录" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -82,7 +82,7 @@ div.login-method-button-group[_ngcontent-inw-c0] div.button-group-container[_ngc
           <form method="post" class="login-form ng-untouched ng-pristine ng-valid" onSubmit="return check_login(this)" id="form1" checkby_ruivalidate url="" action="{{url('Public/login')}}" style="margin-top: 30px;">
           @csrf
           <div _ngcontent-inw-c0="" class="login-method-button-group">
-             <span _ngcontent-inw-c0="" class="title">请选择登录方式</span>
+             <span _ngcontent-inw-c0="" class="title">{{--请选择登录方式--}}Por favor, selecione o método de login</span>
                <div _ngcontent-inw-c0="" class="button-group-container">
                     <button _ngcontent-inw-c0="" class="login-action-btn-group__action-btn selected">账号</button>
                     <button _ngcontent-inw-c0="" class="login-action-btn-group__action-btn" disabled>手机号</button>

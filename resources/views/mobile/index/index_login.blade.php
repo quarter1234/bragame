@@ -47,8 +47,8 @@
   </style>
   <div class="tc" style="display: none;">
       <div class="tc_top">
-              <div class="tc_top_list tc_on">登录</div>
-              <div class="tc_top_list">注册</div>
+              <div class="tc_top_list tc_on">{{--登录--}}Login</div>
+              <div class="tc_top_list">{{--注册--}}</div>
               <div class="close"><img src="..\..\static\images\close.png"></div>      
       </div>
       <div class="list" style="display:block;">

@@ -14,7 +14,7 @@
     <h2>{{$user['coin']}}</h2>
     <div class="xk_but">
     <button style="background-color:#334d5d;">佣金</button>
-    <button style="background-color:#007aff;">提取</button>
+    <button style="background-color:#0a9bc6;">提取</button>
     </div>
     <p></p>
 </div>

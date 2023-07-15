@@ -244,34 +244,29 @@
                 <ul class="news-scroll" style="padding-left: 0px;">
                 <li style="color: #a9bed8;">
                     <span>Json**a</span>
-                     
                       <em>
-                        <em style="color: #fe4365;">R$9000.00</em>元</em>
+                        <em style="color: #fe4365;">R$9000.00</em></em>
                   </li>
 
                   <li style="color: #a9bed8;">
                   <span>8****32</span>
-                      
                       <em>
-                        <em style="color: #fe4365;">R$4560.00</em>元</em>
+                        <em style="color: #fe4365;">R$4560.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>a****5</span>
-                      
                       <em>
-                        <em style="color: #fe4365;">R$645.00</em>元</em>
+                        <em style="color: #fe4365;">R$645.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                     <span>1**34</span>
-                      
                       <em>
-                        <em style="color: #fe4365;">R$7647.00</em>元</em>
+                        <em style="color: #fe4365;">R$7647.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>2**4</span>
-                     
                       <em>
-                        <em style="color: #fe4365;">R$7647.00</em>元</em>
+                        <em style="color: #fe4365;">R$7647.00</em></em>
                   </li>
                 </ul>
               </div>
