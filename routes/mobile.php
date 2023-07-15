@@ -19,7 +19,6 @@ Route::group([
     Route::post('login', [PublicController::class, 'doLogin']);
     Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
-    Route::get('getPps', [GameController::class, 'getPps']);
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
 
@@ -37,14 +36,12 @@ Route::group([
     Route::get('share', [ShareController::class, 'index']);
 
     Route::get('activity', [ActivityController::class, 'index']);
-    Route::get('pgUrl', [GameController::class, 'getPgUrl']);
-    Route::get('blanceCallBack', [GameController::class, 'callBackAuth']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('logout', [PublicController::class, 'logout']);
 
     Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
 
     Route::get('shop', [ShopController::class, 'index']);
-    
+
 
 });
