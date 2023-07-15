@@ -45,6 +45,7 @@ class UserService
         $data['login_time'] = time();
         $data['login_ip'] = $params['ip'];
         $data['code'] = UserHelper::inviteCode(CommonEnum::NUM_FOUR);
+        $data['token'] = UserHelper::token();
         $data['isbindphone'] = CommonEnum::ENABLE;
 
         return $this->userRepo->storeUser($data);

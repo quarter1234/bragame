@@ -125,11 +125,11 @@
                   <audio id="myTune"> 
                     <source src="https://d186gute5mq2g4.cloudfront.net/audio/btn_click.mp3"> 
                   </audio>
-                  
+                  {{--
                   <script>
                     setInterval("myInterval()",5000);
                       function myInterval() {document.getElementById('myTune').play();}
-                  </script>
+                  </script>--}}
                   <!--触发声音-->
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
@@ -370,7 +370,7 @@
                 hideLoading();
                 console.log(data)
                 if(data.code == 200) {
-				          window.location.href= data.data.url
+				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       art.dialog({ title: 'Tips:', content: '请先登录', time: 3});

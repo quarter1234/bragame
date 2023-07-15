@@ -15,7 +15,7 @@ use App\Facades\User;
 use App\Facades\Bets;
 use App\Helper\SystemConfigHelper;
 use App\Helper\RewardHelper;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class GameService
 {
@@ -83,17 +83,26 @@ class GameService
     public function getPgGameUrl($gameCode, $user)
     {
         $params = [];
-        $pre = env('THIRD_GAME_PRE_USER', false);
-        if(empty($pre)){
+        $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        if(!$appIdConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
         }
+        
+        $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+        if(!$appIpConfig){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
+        }
+        
+        $pre = $appIdConfig;
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
         $params['ip_address'] = $user['reg_ip'];
         $params['home_url'] = 'http://www.fc88.top';
         $query = http_build_query($params);
 
-        $url = env('THIRD_GAME_CENTER_ADDR', '') . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
+        $host = $appIpConfig . ':83/';
+        $url = $host . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
+        
         $client = new Client();
         $res = $client->get($url);
         Log::debug("url:" . $url);
@@ -345,7 +354,7 @@ class GameService
                 // $effbet = $betAmount - $winLoseAmount;
                 $effbet = $betAmount;
                 if($effbet > 0){ // 按照下注的概念，给上级返利
-                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                    // RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
                 }
             }
         }
@@ -389,10 +398,10 @@ class GameService
             }
 
             $isAllUseDraw = AllUseGameDrawCache::rememberUseDraw($user, $beforecoin);
-            $canDraw = Bets::checkBets($user, $isAllUseDraw);
+            // $canDraw = Bets::checkBets($user, $isAllUseDraw);
             $effbet = $betAmount;
             if($effbet > 0){ // 按照下注的概念，给上级返利
-                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                // RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
             }
         }
 

@@ -29,7 +29,7 @@
     <a id="return-button" onclick="goBack()">
        <img src="https://wwv.condebet.com/bx_4/public/static/close/bgt.png" alt="返回按钮">
     </a>
-    <iframe id="game-frame" src=""></iframe>
+    <iframe id="game-frame" src="{{$url}}"></iframe>
   </div>
 
   <script>

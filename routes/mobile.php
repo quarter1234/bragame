@@ -32,19 +32,17 @@ Route::group([
     Route::get('notices', [NoticeController::class, 'notices']);
     Route::get('notice/info', [NoticeController::class, 'show'])->name('mobile.notice.info');
 
+    Route::get('pgUrl', [GameController::class, 'getPgUrl']); // 获得游戏登录地址
+
     Route::get('member/index ', [MemberController::class, 'index']);
     Route::get('Member/setting', [MemberController::class, 'setting']);
     Route::get('member/customerService', [MemberController::class, 'customerService']);
     Route::get('member/vip', [MemberController::class, 'vip']);
     Route::get('member/email', [MemberController::class, 'email']);
-    
-    
 
     Route::get('share', [ShareController::class, 'index']);
 
     Route::get('activity', [ActivityController::class, 'index']);
-    Route::get('pgUrl', [GameController::class, 'getPgUrl']);
-    Route::get('blanceCallBack', [GameController::class, 'callBackAuth']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
     Route::get('logout', [PublicController::class, 'logout']);
 
