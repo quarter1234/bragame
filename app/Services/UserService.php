@@ -135,4 +135,8 @@ class UserService
         $user->save(); // -- 及时保存
         return [$beforecoin, $aftercoin];
     }
+
+    public function orderAsynCallback($orderid){
+        return false;
+    }
 }
