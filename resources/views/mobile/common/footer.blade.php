@@ -16,7 +16,7 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Compartilhar</span>
     </button>
 
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom" onclick="location.href='{:U('Index/youhui')}'">
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
     </button>

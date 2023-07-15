@@ -7,6 +7,7 @@ use App\Http\Controllers\Mobile\MemberController;
 use App\Http\Controllers\Mobile\NoticeController;
 use App\Http\Controllers\Mobile\PublicController;
 use App\Http\Controllers\Mobile\ShareController;
+use App\Http\Controllers\Mobile\ShopController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
@@ -42,5 +43,8 @@ Route::group([
     Route::get('logout', [PublicController::class, 'logout']);
 
     Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
+
+    Route::get('shop', [ShopController::class, 'index']);
+    
 
 });
