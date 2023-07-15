@@ -33,39 +33,9 @@
   </div>
 
   <script>
-    // 获取URL参数的函数
-    // function getParameterByName(name, url) {
-    //   if (!url) url = window.location.search;
-    // //   name = name.replace(/[[\]]/g, "\\$&");
-    // //   var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-    // //       results = regex.exec(url);
-    // //   if (!results) return null;
-    // //   if (!results[2]) return '';
-    // //   return decodeURIComponent(results[2].replace(/\+/g, " "));
-    //     console.log('000  '+ url)
-    //     if (url && url.length>1) {
-    //         let i1=url.indexOf("game_link=")
-    //         if(i1!=-1){
-    //             let newurl = url.substring(url.indexOf("=")+1,url.length) 
-    //             return newurl
-    //         }
-    //     }
-    //     return  window.location.href;
-    // }
     function goBack() {
         window.history.back();
     }
-
-    //  window.location.href = Global.apiUrl+ ":82/game.html?game_link="+ d2.url;//'https://www.baidu.com'
-
-    // 获取传递的链接参数
-    // var gameLinkParam = getParameterByName('game_link');
-    // console.log( '222  '+ gameLinkParam)
-    // 将参数赋值给iframe的src属性
-    // if (gameLinkParam) {
-    //   var gameFrame = document.getElementById('game-frame');
-    //   gameFrame.src = gameLinkParam;
-    // }
   </script>
 </body>
 </html>

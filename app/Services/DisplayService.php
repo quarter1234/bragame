@@ -7,18 +7,29 @@ use App\Repositories\SNoticeRepository;
 
 class DisplayService
 {
-    private $noticeRepo;
+    private $payConfig;
 
-    public function __construct(SNoticeRepository $noticeRepo)
+    public function __construct()
     {
-        $this->noticeRepo  = $noticeRepo;
+        $this->payConfig = config('pay');
     }
 
     public function getUrl($user, $params)
     {
+        
         if($params['act'] == 'pay') {
-            // return 
-        } elseif($params['act'] == 'game_url') {
+            return $this->payConfig['payurl'] . '?' . $this->getQuery($user);
+
+        } elseif($params['act'] == 'pay') {
+            return $this->payConfig['kyc'] . '?' . $this->getQuery($user);
+
+        } elseif($params['act'] == 'transaction') {
+            return $this->payConfig['transaction'] . '?' . $this->getQuery($user);
+            
+        } elseif($params['act'] == 'payment') {
+            return $this->payConfig['payment'] . '?' . $this->getQuery($user);
+            
+        }elseif($params['act'] == 'game_url') {
             $url = GameHelper::getPgGameUrl($user, $params['game_code'] ?? '');
             if(!$url) {
                 throw new BadRequestException("Game Code Err!");
@@ -27,7 +38,11 @@ class DisplayService
         }
     }
 
-
+    public function getQuery($user) :string
+    {
+        $query = ['uid' => $user->uid, 'token' => $user->token];
+        return http_build_query($query);
+    }
 
 
 }
