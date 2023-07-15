@@ -60,7 +60,7 @@
                     <span style="font-size:0.9rem;position: absolute;right:10px;">
                         <div class="money">
                             <span>R$</span>
-                            <span>9945.00</span>
+                            <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="../../mobile/img/sx.png"></div>
                             <div class="qb"><img src="../../mobile/img/qb.png"></div>
                         </div>
