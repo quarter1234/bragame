@@ -83,17 +83,24 @@ class GameService
     public function getPgGameUrl($gameCode, $user)
     {
         $params = [];
-        $pre = env('THIRD_GAME_PRE_USER', false);
-        if(empty($pre)){
+        $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        if(!$appIdConfig || empty($appIdConfig['v'])){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
         }
+
+        $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+        if(!$appIpConfig || empty($appIpConfig['v'])){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
+        }
+        $pre = $appIdConfig['v'];
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
         $params['ip_address'] = $user['reg_ip'];
         $params['home_url'] = 'http://www.fc88.top';
         $query = http_build_query($params);
 
-        $url = env('THIRD_GAME_CENTER_ADDR', '') . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
+        $host = $appIpConfig['v'] . ':83/';
+        $url = $host . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
         $client = new Client();
         $res = $client->get($url);
         Log::debug("url:" . $url);

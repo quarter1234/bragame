@@ -77,9 +77,6 @@ class GameController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function callBackAuth(){
-        if (!Auth::check()) {
-            return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
-        }
         $uid = intval(Request::get('uid', 0));
         if(empty($uid)){
             return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
