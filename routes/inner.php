@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Inner\PgBetController;
+use App\Http\Controllers\Game\GameController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
