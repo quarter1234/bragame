@@ -15,7 +15,7 @@ use App\Facades\User;
 use App\Facades\Bets;
 use App\Helper\SystemConfigHelper;
 use App\Helper\RewardHelper;
-use Log;
+use Illuminate\Support\Facades\Log;
 
 class GameService
 {
@@ -84,23 +84,25 @@ class GameService
     {
         $params = [];
         $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$appIdConfig || empty($appIdConfig['v'])){
+        if(!$appIdConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
         }
-
+        
         $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
-        if(!$appIpConfig || empty($appIpConfig['v'])){
+        if(!$appIpConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
         }
-        $pre = $appIdConfig['v'];
+        
+        $pre = $appIdConfig;
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
         $params['ip_address'] = $user['reg_ip'];
         $params['home_url'] = 'http://www.fc88.top';
         $query = http_build_query($params);
 
-        $host = $appIpConfig['v'] . ':83/';
+        $host = $appIpConfig . ':83/';
         $url = $host . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
+        
         $client = new Client();
         $res = $client->get($url);
         Log::debug("url:" . $url);

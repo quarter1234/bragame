@@ -72,8 +72,8 @@
 			</a>
       	</div>
 
-		<h1 class="am-header-title activity_h1">
-			活动详情
+		<h1 class="am-header-title activity_h1" style="font-size:14px !important;">
+			{{--活动详情--}}Detalhes do evento
 		</h1>
 	</header>
 

@@ -3,7 +3,6 @@
 namespace App\Helper;
 
 use App\Cache\SconfigCache;
-use function PHPUnit\Framework\isJson;
 
 class SystemConfigHelper 
 {   
@@ -16,7 +15,7 @@ class SystemConfigHelper
     {
         $configInfo = SconfigCache::getByKey($key);
         $config = $configInfo['v'] ?? '';
-
+        
         if($config && isJson($config)) {
             return json_decode($config, true);
         } elseif($config) {

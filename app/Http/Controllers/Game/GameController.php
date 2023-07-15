@@ -56,20 +56,7 @@ class GameController extends Controller
             return Result::error('not find game');
         }
 
-        $uid = intval(Request::get('uid', 0));
-        if(empty($uid)){
-            return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
-        }
-        $user = UserHelper::getUserByUid($uid);
-        if(empty($user)){
-            return Result::error('user is empty', ResponseCode::AUTH_ERROR);
-        }
-        $res = $this->gameService->getPgGameUrl($gameInfo['game_code'], $user);
-        if(isset($res['code']) && $res['code'] === 0) {
-            return Result::success(['url' => $res['data']['url']]);
-        }
-
-        return Result::error('Get Game Url Err');
+        return Result::success(['code' => $gameInfo['game_code'] ?? '']);
     }
 
     /**

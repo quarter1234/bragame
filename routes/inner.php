@@ -8,7 +8,6 @@ Route::group([
     'prefix' => 'inner','middleware' => ['inner_auth']
 ], function ($router) {
     Route::get('noticeBets', [PgBetController::class, 'noticeBets']);
-    Route::get('pgUrl', [GameController::class, 'getPgUrl']); // 获得游戏登录地址
     Route::get('callBackAuth', [GameController::class, 'callBackAuth']); // 回调获得用户余额
     Route::post('blanceCallBack', [GameController::class, 'callBackBet']); // 注单和结算
 });

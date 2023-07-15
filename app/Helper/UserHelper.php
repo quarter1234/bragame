@@ -31,6 +31,22 @@ class UserHelper
         return $code;
     }
 
+    public static function token(int $length = 8) :string
+    {
+        $token = '';
+
+        while (true) {
+            $token = strtoupper(generalRandString($length));
+            $userInfo =self::getUserByToken($token);
+
+            if(!$userInfo) {
+                break;
+            }
+        }
+
+        return $token;
+    }
+
     /**
      * 根据邀请码获取用户信息
      * @param string $code
@@ -43,6 +59,15 @@ class UserHelper
         }
 
         return User::where('code', $code)->first();
+    }
+
+    public static function getUserByToken(string $token)
+    {
+        if(!$token) {
+            return false;
+        }
+
+        return User::where('token', $token)->first();
     }
 
 
