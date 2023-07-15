@@ -2,24 +2,14 @@
 
 namespace App\Http\Controllers\Game;
 
-use App\Common\Enum\ResponseCode;
 use App\Common\Lib\Result;
-use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Services\GameService;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
 class GameController extends Controller
 {
     private $gameService;
-    private $defauRespData = [
-        "status" => "SC_OK",
-        "data" => [
-            "username" => "",
-            "balance" => 0,
-        ]
-    ];
 
     public function __construct(GameService $gameService)
     {
@@ -57,44 +47,5 @@ class GameController extends Controller
         }
 
         return Result::success(['code' => $gameInfo['game_code'] ?? '']);
-    }
-
-    /**
-     * 验证获得用户余额
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function callBackAuth(){
-        $uid = intval(Request::get('uid', 0));
-        if(empty($uid)){
-            return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
-        }
-        $user = UserHelper::getUserByUid($uid);
-        if(empty($user)){
-            return Result::error('user is empty', ResponseCode::AUTH_ERROR);
-        }
-        $respData = $this->gameService->getUserBalance($uid, $user);
-        return Result::success($respData);
-    }
-
-    /**
-     *  投注和赢分
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function callBackBet(){
-        $uid = intval(Request::post('uid', 0));
-        $params = Request::post();
-        if(empty($params)){
-            return Result::error('not post data', ResponseCode::AUTH_ERROR);
-        }
-
-        $user = UserHelper::getUserByUid($uid);
-        if(empty($user)){
-            if(empty($params)){
-                return Result::error('user is empty', ResponseCode::AUTH_ERROR);
-            }
-        }
-        // 第三方游戏的投注和赢分
-        $respData = $this->gameService->pgBetResult($user, $params);
-        return Result::success($respData);
-    }
+    } 
 }

@@ -23,7 +23,7 @@ class GameService
     private $sconfig;
     private $pgbets;
     private $coinlog;
-    private $defauRespData = [
+    public $defauRespData = [
         "status" => "SC_OK",
         "data" => [
             "username" => "",
