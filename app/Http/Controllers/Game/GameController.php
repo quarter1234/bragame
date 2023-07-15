@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Game;
 
 use App\Common\Enum\ResponseCode;
 use App\Common\Lib\Result;
+use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
@@ -49,17 +50,20 @@ class GameController extends Controller
      */
     public function getPgUrl()
     {
-        if (!Auth::check()) {
-            return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
-        }
-
         $id = intval(Request::get('id', 0));
         $gameInfo = $this->gameService->getDPGGameInfo($id);
         if(!$gameInfo) {
             return Result::error('not find game');
         }
 
-        $user = Auth::user();
+        $uid = intval(Request::get('uid', 0));
+        if(empty($uid)){
+            return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
+        }
+        $user = UserHelper::getUserByUid($uid);
+        if(empty($user)){
+            return Result::error('user is empty', ResponseCode::AUTH_ERROR);
+        }
         $res = $this->gameService->getPgGameUrl($gameInfo['game_code'], $user);
         if(isset($res['code']) && $res['code'] === 0) {
             return Result::success(['url' => $res['data']['url']]);
@@ -77,11 +81,10 @@ class GameController extends Controller
             return Result::error('No Auth!!', ResponseCode::AUTH_ERROR);
         }
         $uid = intval(Request::get('uid', 0));
-        $user = Auth::user();
         if(empty($uid)){
             return Result::error('uid not exist', ResponseCode::AUTH_ERROR);
         }
-
+        $user = UserHelper::getUserByUid($uid);
         if(empty($user)){
             return Result::error('user is empty', ResponseCode::AUTH_ERROR);
         }
@@ -94,23 +97,13 @@ class GameController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function callBackBet(){
-        $uid = intval(Request::get('uid', 0));
-        $sign = Request::get('sign','');
-        if(empty($uid) || empty($sign)){
-            return Result::error('No uid sign !!', ResponseCode::AUTH_ERROR);
-        }
-        // 1 验签
-        $checkRes = $this->gameService->checkSign($uid, $sign);
-        if(!$checkRes){
-            return Result::error('sign error !!', ResponseCode::AUTH_ERROR);
-        }
-
+        $uid = intval(Request::post('uid', 0));
         $params = Request::post();
         if(empty($params)){
             return Result::error('not post data', ResponseCode::AUTH_ERROR);
         }
 
-        $user = Auth::user();
+        $user = UserHelper::getUserByUid($uid);
         if(empty($user)){
             if(empty($params)){
                 return Result::error('user is empty', ResponseCode::AUTH_ERROR);
