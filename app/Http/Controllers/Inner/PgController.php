@@ -56,8 +56,8 @@ class PgController extends Controller
         if(empty($user)){
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
             return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
-        
         }
+
         // 第三方游戏的投注和赢分
         $respData = $this->gameService->pgBetResult($user, $params);
         return Result::json($respData, ResponseCode::AUTH_ERROR);
