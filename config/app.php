@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         App\Providers\SconfigServiceProvider::class,
         App\Providers\UserServiceProvider::class,
+        App\Providers\BetsServiceProvider::class,
     ],
 
     /*
@@ -233,6 +234,7 @@ return [
         'JWTAuth' => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
         'User' => App\Facades\User::class,
+        'Bets' => App\Facades\Bets::class,
     ],
 
 ];

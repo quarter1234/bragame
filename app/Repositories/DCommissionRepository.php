@@ -15,6 +15,10 @@ class DCommissionRepository extends Repository
         return $this->model()::where('uid', $uid)->where('type', $type)->first();
     }
 
+    public function storeCommission(array $data){
+        return $this->create($data);
+    }
+
     public function getOneTotalBetCoin($uid, $startTeime, $endTime)
     {
         return $this->model()::where('parentid', $uid)

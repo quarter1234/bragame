@@ -1,0 +1,12 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class DCenterTaxLog extends Model
+{
+    public $timestamps = false;
+    protected $table = 'd_center_tax_log';
+}

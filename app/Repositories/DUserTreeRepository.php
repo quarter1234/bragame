@@ -46,6 +46,10 @@ class DUserTreeRepository extends Repository
         $this->create($data);
     }
 
+    public function getPrentInviteTree($uid, $len){
+        return $this->model()::where("descendant_id", $uid)->where("ancestor_h", $len)->first();
+    }
+
     public function getTree($uid, $heights = [])
     {
         return $this->model()::with('descendant:uid,playername,create_time')->where('ancestor_id', $uid)->whereIn('ancestor_h', $heights)->get();

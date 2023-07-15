@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Cache\AllUseGameDrawCache;
 use App\Common\Enum\GameEnum;
 use App\Helper\LogHelper;
 use App\Repositories\DPgGameRepository;
@@ -11,6 +12,7 @@ use App\Repositories\UserRepository;
 use App\Common\Message\CodeMsg;
 use GuzzleHttp\Client;
 use App\Facades\User;
+use App\Facades\Bets;
 use App\Helper\SystemConfigHelper;
 use App\Helper\RewardHelper;
 use Log;
@@ -205,6 +207,21 @@ class GameService
         $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
+    private function _betOver($betId, $beforeAmount, $afterAmount, $canDraw){
+        $status = 1;
+        $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    /**
+     * 投注
+     * @param $user
+     * @param $upCoin
+     * @param $gameId
+     * @param $gamePlat
+     * @param $relBetId
+     * @param false $msg
+     * @return array
+     */
     private function _reduceCoin($user, $upCoin, $gameId, $gamePlat, $relBetId, $msg = false){
         $reduceCoin = -$upCoin;
 //        $alterlog = "pg游戏投注扣除金币:" . $reduceCoin;
@@ -214,7 +231,34 @@ class GameService
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 
-    public function pgBetResult(int $uid, array $betParams, $user){
+    /**
+     * 赢分
+     * @param $user
+     * @param $winLoseAmount
+     * @param $gameId
+     * @param $gamePlat
+     * @param $relBetId
+     * @return array
+     */
+    private function _addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId){
+        list($beforecoin, $aftercoin) = User::alterUserCoin($user, $winLoseAmount, GameEnum::PDEFINE['ALTERCOINTAG']['WIN']);
+        $inLog = $gameId . " 修改金币:" . $winLoseAmount;
+        LogHelper::insertCoinLog($user->id, $beforecoin, $winLoseAmount, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['WIN'], 2, $gamePlat, $relBetId);
+        return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
+    }
+
+    private function _addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $platform){
+        LogHelper::addCenterTaxLog($user->id, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $platform);
+    }
+
+    /**
+     * 第三方游戏的投注和赢分
+     * @param $user
+     * @param array $betParams
+     * @return array
+     */
+    public function pgBetResult($user, array $betParams){
+        $uid = $user['id'];
         $platConfig = SystemConfigHelper::getByKey('plat_app_id');
         if(!$platConfig || $platConfig['v'] != $betParams['plat_app']){
             $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
@@ -276,7 +320,6 @@ class GameService
         $beforecoin = $user->coin;
         $aftercoin = $beforecoin;
         $beforeAmount = $beforecoin;
-        $canDraw = 0;
         $gamePlat = 2;
         $commType = 3;
         foreach($this->gamePlatTb as $gk => $gv){
@@ -299,19 +342,67 @@ class GameService
                 $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
                 $beforecoin = $reduceRes['beforecoin'];
                 $aftercoin = $reduceRes['aftercoin'];
-                $effbet = $betAmount - $winLoseAmount;
-                if($effbet > 0){ // 按照有效下注的概念，给上级返利
-                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], $effbet, $gameId, $commType);
+                // $effbet = $betAmount - $winLoseAmount;
+                $effbet = $betAmount;
+                if($effbet > 0){ // 按照下注的概念，给上级返利
+                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
                 }
             }
         }
-        else if($resultType != "END"){
+        else if($resultType != "END"){ // -- 结算
             if($resultType == "WIN"){
                 if($winLoseAmount > 0){
-
+                    $addCoinRes = $this->_addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId);
+                    $beforecoin = $addCoinRes['beforecoin'];
+                    $aftercoin = $addCoinRes['aftercoin'];
                 }
+            }
+            else if($resultType == "BET_WIN"){
+                if($betAmount > 0){
+                    $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+                    $beforecoin = $reduceRes['beforecoin'];
+                    $aftercoin = $reduceRes['aftercoin'];
+                }
+
+                if($winLoseAmount > 0){
+                    $addCoinRes = $this->_addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId);
+                    $beforecoin = $addCoinRes['beforecoin'];
+                    $aftercoin = $addCoinRes['aftercoin'];
+                }
+            }
+            else if($resultType == "BET_LOSE"){
+                if($betAmount > 0){
+                    $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+                    $beforecoin = $reduceRes['beforecoin'];
+                    $aftercoin = $reduceRes['aftercoin'];
+                }
+            }
+
+            if($settledAmount !=0){
+                $this->_addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $currPlatForm);
+            }
+
+            $canDraw = 0;
+            $ispayer = $user['ispayer'] ?? 0;
+            if($ispayer == 0){ // --未充值的会员不得提现
+                $this->_betOver($betId, $beforeAmount, $user['coin'], $canDraw);
+            }
+
+            $isAllUseDraw = AllUseGameDrawCache::rememberUseDraw($user, $beforecoin);
+            $canDraw = Bets::checkBets($user, $isAllUseDraw);
+            $effbet = $betAmount;
+            if($effbet > 0){ // 按照下注的概念，给上级返利
+                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
             }
         }
 
+        if($isEndRound == 1){
+            AllUseGameDrawCache::removeUserDraw($uid);
+        }
+
+        // -- 完成
+        $this->_betOver($betId, $beforeAmount, $aftercoin, $canDraw);
+        $this->defauRespData['data']['balance'] = $aftercoin;
+        return $this->defauRespData;
     }
 }

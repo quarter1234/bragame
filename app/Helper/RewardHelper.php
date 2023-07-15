@@ -4,11 +4,24 @@ namespace App\Helper;
 
 use App\Common\Enum\CommonEnum;
 use App\Common\Enum\GameEnum;
+use App\Repositories\DCommissionRepository;
+use App\Repositories\DUserTreeRepository;
 use App\Repositories\SSendCoinRepository;
 use App\Facades\User;
 
 class RewardHelper
 {
+    /**
+     * 给上级发送奖励
+     * @param $uid
+     * @param $actType
+     * @param int $coin
+     * @param int $rtype
+     * @param int $gameId
+     * @param int $type
+     * @return false
+     * @throws \Illuminate\Contracts\Container\BindingResolutionException
+     */
     public static function addSuperiorRewards($uid, $actType, $coin = 0, $rtype = 1, $gameId = 0, $type = 1)
     {
         $rtype = $rtype ?? 1; // 注册返利的开关点, 1:充值时候返， 2:立即绑定就返
@@ -39,6 +52,7 @@ class RewardHelper
             }
         }
         if($flag){
+            $nowtime = time();
             $parentuid = $playInfo['invit_uid'];
             $config = SystemConfigHelper::getByKey('invite');
             if(!$config) {
@@ -72,37 +86,91 @@ class RewardHelper
                 $rate1 = $config['bet']['rate1'];
                 $rate2 = $config['bet']['rate2'];
             }
-            // coin2 = 0
+            // $coin2 = 0
             $added1 = false;
             if($coin1 >0) { // 上级奖励
-                $parentInfo = UserHelper::getUserByUid($playInfo->invit_uid);
-                if($parentInfo && $parentInfo['stopregrebat'] == 0) { // 是否停止奖励
+                $pInfo = UserHelper::getUserByUid($parentuid);
+                if($pInfo && $pInfo['stopregrebat'] == 0) { // 是否停止奖励
                     $added1 = true;
-                    self::addCoinByRate($playInfo->invit_uid, $coin1, $rate1, $actType);
+                    self::addCoinByRate($parentuid, $coin1, $rate1, $actType);
+                }
+            }
+
+            $ppid = 0;
+            $added2 = false;
+            if($coin2 > 0){ // --上上级奖励
+                $treeRepo = app()->make(DUserTreeRepository::class);
+                $inviteTree = $treeRepo->getPrentInviteTree($uid, 2);
+                if($inviteTree && !empty($inviteTree['ancestor_id'])){
+                    $ppid = $inviteTree['ancestor_id'];
+                    $ppinfo = UserHelper::getUserByUid($ppid);
+                    if($ppinfo && $ppinfo['stopregrebat'] == 0) {
+                        $added2 = true;
+                        self::addCoinByRate($ppid, $coin2, $rate2, $actType);
+                    }
+                }
+            }
+
+            if($coin1 > 0 || $coin2 > 0){
+                $rechargeCoin = 0;
+                if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){ // 如果是充值
+                    $rechargeCoin = $coin;
+                    $coin = 0;
+                }
+
+                $bettimes = 1;
+                if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // 如果是注册
+                    $bettimes = 0;
+                    $coin = 0;
+                }
+
+                $commissionRep = app()->make(DCommissionRepository::class);
+                if($coin1 > 0 && $added1){
+                    $addComm = [
+                        "uid" => $uid,
+                        "betcoin" => $coin,
+                        "rechargecoin" => $rechargeCoin,
+                        "bettimes" => $bettimes,
+                        "parentid" => $parentuid,
+                        "pparentid" => 0,
+                        "coin1" => $coin1,
+                        "coin2" => 0,
+                        "create_time" => $nowtime,
+                        "type" => $actType,
+                        "gameid" => $gameId,
+                        "platt_type" => $type,
+                    ];
+                    $commissionRep->storeCommission($addComm);
+                }
+
+                if($coin2 > 0 && $added2){
+                    $addComm = [
+                        "uid" => $uid,
+                        "betcoin" => $coin,
+                        "rechargecoin" => $rechargeCoin,
+                        "bettimes" => $bettimes,
+                        "parentid" => 0,
+                        "pparentid" => $ppid,
+                        "coin1" => 0,
+                        "coin2" => $coin2,
+                        "create_time" => $nowtime,
+                        "type" => $actType,
+                        "gameid" => $gameId,
+                        "platt_type" => $type,
+                    ];
+                    $commissionRep->storeCommission($addComm);
                 }
             }
         }
-
-        $parentInfo = UserHelper::getUserByUid($playInfo->invit_uid);
-
-        $flag = self::getFlag($actType, $rtype, $invitUid, $isPlayer);
-        if(!$flag) {
-            return false;
-        }
-
-
-
-        $title= 'userreg';
-        $coin1 = 0;
-        $rate1 = '';
-        $coin2 = 0;
-        $rate2 = '';
-
-
-
-
     }
 
+    /**
+     * 奖励金额按照奖励占比分成
+     * @param $parentid
+     * @param $addCoin
+     * @param $rate
+     * @param $actType
+     */
     public static function addCoinByRate($parentid, $addCoin, $rate, $actType)
     {
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
@@ -208,38 +276,12 @@ class RewardHelper
         }
     }
 
-    public static function addCoin()
-    {
-
-    }
-
     public static function decodeRate($str) {
         $rateArr = [1, 0, 0];
         if(!$str) {
             return $rateArr;
         }
         return explode(':', $str);
-    }
-
-    private static function getFlag($actType, $rtype, $invitUid, $isPlayer) :bool
-    {
-        $flag = false;
-        if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']) {
-            if($rtype == CommonEnum::ENABLE) {
-                if($invitUid > 0 && $isPlayer == 1) { // 充值用户
-                    $flag = true;
-                }
-            } else {
-                if($invitUid > 0) {
-                    $flag = true;
-                }
-            }
-        } else {
-            if($invitUid > 0 && $isPlayer == 1) {
-                $flag = true;
-            }
-        }
-        return $flag;
     }
 
 }
