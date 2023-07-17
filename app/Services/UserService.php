@@ -173,7 +173,7 @@ class UserService
         $totalcoin = $order['count']; // --金币
         $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
-        list($beforecoin, $aftercoin) = $this->alterUserCoin($user, $totalcoin, GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE']); // --商城充值
+        list($beforecoin, $aftercoin) = $this->alterUserCoin($user, $totalcoin, $cointype); // --商城充值
         // TODO 添加打码
         return false;
     }
