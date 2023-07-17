@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Common\Enum\CommonEnum;
 use App\Common\Enum\GameEnum;
+use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
 use App\Http\Controllers\Controller;
 use App\Services\EmailService;
@@ -27,7 +28,11 @@ class EmailController extends Controller
 
     public function email()
     {
-        return view('mobile.email.email');
+        $user = Auth::user();
+
+        $data = [];
+        $data['user'] = $user; 
+        return view('mobile.email.email', $data);
     }
 
     public function emailList()
@@ -65,8 +70,11 @@ class EmailController extends Controller
             
         }
 
-        $res = RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail']);
-        print_r($res);die();
-        
+        RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail']);
+        $info->hastake = CommonEnum::ENABLE;
+        $info->hasread = CommonEnum::ENABLE;
+        $info->save();
+
+        return Result::success();
     }
 }
