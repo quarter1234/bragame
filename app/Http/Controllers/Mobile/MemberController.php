@@ -43,9 +43,4 @@ class MemberController extends Controller
     {
         return view('mobile.member.vip');
     }
-
-    public function email()
-    {
-        return view('mobile.member.email');
-    }
 }

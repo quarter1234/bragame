@@ -233,7 +233,7 @@
               </div>
             </div>
             <div class="winning-box" style="margin-bottom: 70px;">
-              <div class="news-title clearfix" style="box-shadow: 0 2px 2px #0b2640">
+              <div class="news-title clearfix">
                 <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
                   <strong style="color: #a9bed8;">{{--最新中奖榜--}}A última lista vencedora</strong>
@@ -245,28 +245,28 @@
                 <li style="color: #a9bed8;">
                     <span>Json**a</span>
                       <em>
-                        <em style="color: #fe4365;">R$9000.00</em></em>
+                        <em style="color: #d7ab49;">R$9000.00</em></em>
                   </li>
 
                   <li style="color: #a9bed8;">
                   <span>8****32</span>
                       <em>
-                        <em style="color: #fe4365;">R$4560.00</em></em>
+                        <em style="color: #d7ab49;">R$4560.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>a****5</span>
                       <em>
-                        <em style="color: #fe4365;">R$645.00</em></em>
+                        <em style="color: #d7ab49;">R$645.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                     <span>1**34</span>
                       <em>
-                        <em style="color: #fe4365;">R$7647.00</em></em>
+                        <em style="color: #d7ab49;">R$7647.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>2**4</span>
                       <em>
-                        <em style="color: #fe4365;">R$7647.00</em></em>
+                        <em style="color: #d7ab49;">R$7647.00</em></em>
                   </li>
                 </ul>
               </div>

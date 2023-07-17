@@ -52,6 +52,6 @@
     }
     
     $(document).ready(function() {
-            loadInvites();  
+        loadInvites();  
     })
 </script>

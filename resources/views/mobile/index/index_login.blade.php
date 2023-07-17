@@ -48,7 +48,7 @@
   <div class="tc" style="display: none;">
       <div class="tc_top">
               <div class="tc_top_list tc_on">{{--登录--}}Login</div>
-              <div class="tc_top_list">{{--注册--}}</div>
+              <div class="tc_top_list">{{--注册--}}Registo</div>
               <div class="close"><img src="..\..\static\images\close.png"></div>      
       </div>
       <div class="list" style="display:block;">
@@ -60,22 +60,22 @@
           <div class="entry">
                   <div class="email"><img src="..\..\static\images\iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
-                  <div class="sr" style="left:100px"><input type="text" id="phone" name="phone" onkeyup="checkContent(this)" placeholder="号码" /></div>
+                  <div class="sr" style="left:100px"><input type="text" id="phone" name="phone" onkeyup="checkContent(this)" placeholder="Número" /></div>
                   <div class="sr_close"><img src="..\..\static\images\close.png"></div>
               </div>
               <div class="pass">
                 <div class="email"><img src="..\..\static\images\pass.png" /></div>
-                <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" placeholder="密码" /></div>
+                <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" placeholder="Senha" /></div>
                 <div class="pass_show"><img src="..\..\static\images\show.png"></div>
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r1"><img src="..\..\static\images\25gf.png" />记住密码</div>
-                        <div class="r_left r2"><img src="..\..\static\images\24gf.png" />记住密码</div>
+                        <div class="r_left r1"><img src="..\..\static\images\25gf.png" />{{--记住密码--}}Lembre-se da senha</div>
+                        <div class="r_left r2"><img src="..\..\static\images\24gf.png" />{{--记住密码--}}Lembre-se da senha</div>
                   </div>
                   <div class="r_right"><a>忘记密码？</a></div>
               </div>
-              <button id="sub" type="submit" disabled="disabled" class="login">登录</button>
+              <button id="sub" type="submit" disabled="disabled" class="login">{{--登录--}}Login</button>
           </form>
           </div>
       </div>
@@ -88,18 +88,18 @@
                 @csrf  
                 <div class="pass">
                 <div class="email"><img src="..\..\static\images\zh.png" /></div>
-                <div class="pass_sr"><input name="playername" id="playernameRegister" placeholder="用户名" type="text"/></div>
+                <div class="pass_sr"><input name="playername" id="playernameRegister" placeholder="Nome do usuário" type="text"/></div>
                 <div class="pass_show"><img src="..\..\static\images\show.png"></div>
               </div>  
               <div class="entry">
                   <div class="email"><img src="..\..\static\images\iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
-                  <div class="sr" style="left:100px"><input id="phoneRegister" name="phone" onkeyup="checkRegisterContent(this)" type="text" placeholder="号码" /></div>
+                  <div class="sr" style="left:100px"><input id="phoneRegister" name="phone" onkeyup="checkRegisterContent(this)" type="text" placeholder="Número" /></div>
                   <div class="sr_close"><img src="..\..\static\images\close.png"></div>
               </div>
               <div class="pass">
                 <div class="email"><img src="..\..\static\images\pass.png" /></div>
-                <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="密码" /></div>
+                <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="Senha" /></div>
                 <div class="pass_show"><img src="..\..\static\images\show.png"></div>
               </div>
               {{--<div class="yzm">
@@ -109,12 +109,12 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="..\..\static\images\25gf.png" />记住密码</div>
-                        <div class="r_left r1"><img src="..\..\static\images\24gf.png" />记住密码</div>
+                        <div class="r_left r2"><img src="..\..\static\images\25gf.png" />{{--记住密码--}}Lembre-se da senha</div>
+                        <div class="r_left r1"><img src="..\..\static\images\24gf.png" />{{--记住密码--}}Lembre-se da senha</div>
                   </div>
-                  <div class="r_right"><a>忘记密码？</a></div>
+                  <div class="r_right"><a>{{--忘记密码？--}}Esqueça a senha?</a></div>
               </div>
-              <button id="subRegister" type="submit" disabled="disabled" class="login">注册</button>
+              <button id="subRegister" type="submit" disabled="disabled" class="login">{{--注册--}}Registo</button>
 
             </form>
           </div>

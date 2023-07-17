@@ -37,67 +37,38 @@
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
+          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           <div class="top">
+                <div class="black">
+                <img src="../../mobile/img/left_ico.png"/>
+                </div>
                 <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
                 <div class="money">
                     <span>R$</span>
-                    <span>{{--$user['coin']--}}</span>
+                    <span>{{ $user['coin'] }}</span>
                     <div class="sx"><img src="../../mobile/img/sx.png" /></div>
                     <div class="qb"><img src="../../mobile/img/qb.png" /></div>
                 </div>
             </div>
             <div class="email_h"></div>
-            <div class="email_list">
-                <img src="../../mobile/img/email_ico.png" />
-                <div class="email_xx1"></div>
-                <div class="email_xx2"></div>
-                <div class="email_wk">
-                    <div class="email_w">jogador gaamd 250 por money</div>
-                    <div class="email_w_bottom">
-                        <div class="email_w_left">
-                        <img src="../../mobile/img/jb.png" />
-                        100 
-                        </div>
-                        <div class="email_w_right">7/17/2023 11:34:00</div>
-                    </div>
-                </div>
-                <div class="email_hd"></div>
+            <div class="email_tit">Receba sua recompensa</div>
+            <div class="email_nr">
+            
+              <span>Remeber: System</span><span>{{ $info['timestamp'] }}</span>
             </div>
-            <div class="email_list">
-                <img src="../../mobile/img/email_ico.png" />
-                <div class="email_xx1"></div>
-                <div class="email_xx2"></div>
-                <div class="email_wk">
-                    <div class="email_w">jogador gaamd 250 por money</div>
-                    <div class="email_w_bottom">
-                        <div class="email_w_left">
-                        <img src="../../mobile/img/jb.png" />
-                        100 
-                        </div>
-                        <div class="email_w_right">7/17/2023 11:34:00</div>
-                    </div>
-                </div>
-            </div>
-            <div class="email_list">
-                <img src="../../mobile/img/email_ico.png" />
-                <div class="email_xx1"></div>
-                <div class="email_xx2"></div>
-                <div class="email_wk">
-                    <div class="email_w">jogador gaamd 250 por money</div>
-                    <div class="email_w_bottom">
-                        <div class="email_w_left">
-                        <img src="../../mobile/img/jb.png" />
-                        100 
-                        </div>
-                        <div class="email_w_right">7/17/2023 11:34:00</div>
-                    </div>
+            <div class="e_b_hs">
+                <span>Correio:</span>
+                <div class="email_w_left">
+                <img src="../../mobile/img/jb.png" />
+                        <label>{{ $info['attach'][1] ?? 0 }}</label> 
                 </div>
             </div>
 
+            {{--loading组件--}}
+            @include('mobile.common.loading')
+
             <div class="e_bottom">
-                <button class="e_b1">Receber Tudo</button>
-                <button class="e_b2">Excluir Tudo</button>
+                <button class="e_b2" id="ReceberBtn" style="width:260px;">Receber </button>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -128,6 +99,30 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
+
+    <script>
+    $(document).ready(function() {
+        $('#ReceberBtn').click(function(){
+          showLoading();
+          $.ajax({
+              url : "{{ route('mobile.email.attach', ['id' => $info['id']]) }}",
+              type : 'GET',
+              data : {},
+              success : function (data) {
+                hideLoading();
+                console.log(data);
+                // 判断 字符串是否为空
+                // if(data == '') {
+                //   return false;
+                // }
+                
+                // $('#email_load_more').attr('page', parseInt(page) + 1);
+                // $('#email_list_pages').append(data)
+              }
+          })
+        })
+    })
+    </script>
   </body>
 
 </html>

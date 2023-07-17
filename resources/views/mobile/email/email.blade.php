@@ -48,33 +48,28 @@
                 </div>
             </div>
             <div class="email_h"></div>
-           <div class="kf">
-              <div class="kf_yq">
-                  <img src="../../mobile/img/kf_ico.png" />
-              </div>
-              <div class="kf_text">
-                  <h2>Atendimento ao clienre em linha</h2>
-                  <p>The engines in the .Game Framework</p>
-              </div>
-              <div class="kf_right">
-                  <div class="shop_jt_ico"></div>
-              </div>
-           </div>
-           <div class="kf">
-              <div class="kf_yq">
-                  <img src="../../mobile/img/dh_ico.png" />
-              </div>
-              <div class="kf_text">
-                  <h2>WhatsAppp(em ingles)</h2>
-                  <p>The engines in the .Game Framework</p>
-              </div>
-              <div class="kf_right">
-                  <div class="shop_jt_ico"></div>
-              </div>
-           </div>
-           <div class="e_bottom">
-                <button class="e_b2" style="width:350px;height:50px;">Relatorio de ldeias e Bugs Jogos </button>
+            <div id="email_list_pages">
+
             </div>
+
+
+
+
+
+
+            <div style="width:100%;text-align:center;margin-top:1rem">
+              <button id="email_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
+          </div>
+
+          {{--loading组件--}}
+          @include('mobile.common.loading')
+          
+          {{--
+            <div class="e_bottom">
+                <button class="e_b1">Receber Tudo</button>
+                <button class="e_b2">Excluir Tudo</button>
+            </div>--}}
+
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -104,6 +99,32 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
+
+    <script>
+    function loadInvites() {
+        let page = $('#email_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/member/emailList')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                // 判断 字符串是否为空
+                if(data == '') {
+                  return false;
+                }
+                
+                $('#email_load_more').attr('page', parseInt(page) + 1);
+                $('#email_list_pages').append(data)
+              }
+          })
+    }
+    
+    $(document).ready(function() {
+        loadInvites();  
+    })
+    </script>
   </body>
 
 </html>
