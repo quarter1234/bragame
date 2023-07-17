@@ -1500,7 +1500,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin: 70px auto;
     border-radius: 4px;
     position: relative;
-    background: #234d6d;
+    background: #132235;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .1);
 }
 
@@ -1519,12 +1519,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height: 25px;
     height: 58px;
     width: 100%;
-    border-bottom: 1px solid #0b2640;
+    border-bottom: 1px solid #a9bed8;
     overflow: hidden;
     padding-left: 10px;
     position: relative;
     font-size: 14px;
     color: #a9bed8;
+    padding-right:10px;
 }
 
 .myScroll>ul>li>b {
@@ -1536,7 +1537,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: inline-block;
     color: #999;
     position: absolute;
-    right: 10px;
+    right:30px;
     top: 15px;
 }
 

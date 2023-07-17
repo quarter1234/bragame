@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use App\Common\Enum\CommonEnum;
 use App\Models\DuserTree;
 
 class DUserTreeRepository extends Repository
@@ -52,7 +53,11 @@ class DUserTreeRepository extends Repository
 
     public function getTree($uid, $heights = [])
     {
-        return $this->model()::with('descendant:uid,playername,create_time')->where('ancestor_id', $uid)->whereIn('ancestor_h', $heights)->get();
+        return $this->model()::with('descendant:uid,playername,create_time')
+        ->where('ancestor_id', $uid)
+        ->whereIn('ancestor_h', $heights)
+        ->orderBy('id', 'desc')
+        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);;
     }
 
     public function getTreeCount($uid, $heights = [])

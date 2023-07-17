@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Lib\Result;
 use App\Http\Controllers\Controller;
 use App\Services\ShareService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 class ShareController extends Controller
 {
@@ -26,6 +28,10 @@ class ShareController extends Controller
 
     public function invites()
     {
-        print_r(1234);die();
+        $user = Auth::user();
+        $page = intval(Request::get('page', 1));
+
+        $res = $this->shareService->getInviteCacheList($user, $page);
+        return Result::success($res);
     }
 }

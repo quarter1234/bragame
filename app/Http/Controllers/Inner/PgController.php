@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Inner;
 
-use App\Common\Enum\ResponseCode;
+use App\Common\Enum\HttpCodeEnum;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Request;
 use App\Common\Lib\Result;
@@ -27,13 +27,13 @@ class PgController extends Controller
         $uid = intval(Request::post('uid', 0));
         if(empty($uid)){
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
-            return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
+            return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
         }
 
         $user = UserHelper::getUserByUid($uid);
         if(empty($user)){
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
-            return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
+            return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
         }
 
         $respData = $this->gameService->getUserBalance($uid, $user);
@@ -51,13 +51,13 @@ class PgController extends Controller
         Log::debug("callBackBet-params:" . json_encode($params));
         if(empty($params)){
             $this->gameService->defauRespData['status'] = 'SC_INVALID_REQUEST';
-            return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
+            return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
         }
 
         $user = UserHelper::getUserByUid($uid);
         if(empty($user)){
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
-            return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
+            return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
         }
         // 第三方游戏的投注和赢分
         $respData = $this->gameService->pgBetResult($user, $params);

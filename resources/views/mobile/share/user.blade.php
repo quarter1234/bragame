@@ -16,33 +16,25 @@
     <table>
         <thead>
         <tr>
-            <td>NO</td>
+      
             <td>prenome</td>
             <td>série</td>
             <td>tempo</td>
         </tr>
         </thead>
-        <tbody>
-        @foreach($invite['list'] as $key => $item)
-        <tr>
-            <td>{{ $key + 1 }}</td>
-            <td>{{ $item['descendant']['playername'] }}</td>
-            <td>{{ $item['ancestor_h'] }}</td>
-            <td>{{ $item['descendant']['create_time'] }}</td>
-        </tr>
-        @endforeach  
+        <tbody id="tab3_content_invites">
         </tbody>
     </table>
     
     <div style="width:100%;text-align:center;margin-top:1rem">
-        <button id="pg_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
+        <button id="invite_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
     </div>
 
 </div>
 
 <script>
     function loadInvites() {
-        let page = $('#pg_load_more').attr('page');
+        let page = $('#invite_load_more').attr('page');
           showLoading();
           $.ajax({
               url : "{{url('mobile/share/invites')}}",
@@ -50,16 +42,16 @@
               data : {page: parseInt(page) + 1},
               success : function (data) {
                 hideLoading();
-                $('#pg_load_more').attr('page', data.data.current_page);
+                $('#invite_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
-                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
-                  $('#tab2_content_pgs').append(itemGame)
+                    let item = '<tr><td>'+element.descendant.playername+'</td><td>'+element.ancestor_h+'</td><td>'+element.descendant.create_time+'</td></tr>';
+                  $('#tab3_content_invites').append(item)
                 })
               }
           })
     }
     
     $(document).ready(function() {
-            loadInvites();  
+        loadInvites();  
     })
 </script>
