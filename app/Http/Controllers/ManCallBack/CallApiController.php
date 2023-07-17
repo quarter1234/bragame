@@ -30,6 +30,7 @@ class CallApiController extends Controller{
         }
 
         $resVal = $this->userService->orderAsynCallback($orderid);
+
         return Result::success();
     }
 }
