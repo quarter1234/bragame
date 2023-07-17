@@ -96,7 +96,8 @@
             </div>
 
             <div class="e_bottom">
-                <button></button>
+                <button class="e_b1">Receber Tudo</button>
+                <button class="e_b2">Excluir Tudo</button>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
