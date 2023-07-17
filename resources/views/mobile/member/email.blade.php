@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -37,12 +38,65 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
-            <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
-              <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                    EMAIL
-                  </div>
-              </jx-header-row>
+          <div class="top">
+                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
+                <div class="money">
+                    <span>R$</span>
+                    <span>{{--$user['coin']--}}</span>
+                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
+                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
+                </div>
+            </div>
+            <div class="email_h"></div>
+            <div class="email_list">
+                <img src="../../mobile/img/email_ico.png" />
+                <div class="email_xx1"></div>
+                <div class="email_xx2"></div>
+                <div class="email_wk">
+                    <div class="email_w">jogador gaamd 250 por money</div>
+                    <div class="email_w_bottom">
+                        <div class="email_w_left">
+                        <img src="../../mobile/img/jb.png" />
+                        100 
+                        </div>
+                        <div class="email_w_right">7/17/2023 11:34:00</div>
+                    </div>
+                </div>
+                <div class="email_hd"></div>
+            </div>
+            <div class="email_list">
+                <img src="../../mobile/img/email_ico.png" />
+                <div class="email_xx1"></div>
+                <div class="email_xx2"></div>
+                <div class="email_wk">
+                    <div class="email_w">jogador gaamd 250 por money</div>
+                    <div class="email_w_bottom">
+                        <div class="email_w_left">
+                        <img src="../../mobile/img/jb.png" />
+                        100 
+                        </div>
+                        <div class="email_w_right">7/17/2023 11:34:00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="email_list">
+                <img src="../../mobile/img/email_ico.png" />
+                <div class="email_xx1"></div>
+                <div class="email_xx2"></div>
+                <div class="email_wk">
+                    <div class="email_w">jogador gaamd 250 por money</div>
+                    <div class="email_w_bottom">
+                        <div class="email_w_left">
+                        <img src="../../mobile/img/jb.png" />
+                        100 
+                        </div>
+                        <div class="email_w_right">7/17/2023 11:34:00</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="e_bottom">
+                <button></button>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
