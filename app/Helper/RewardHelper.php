@@ -180,6 +180,7 @@ class RewardHelper
         $sendArr[0] = roundCoin($rateArr[0] * $addCoin);
         $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
         $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
+
         $rewardsType = 0; // 奖励类型
         $title = '';
         if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // --下级注册
@@ -206,6 +207,8 @@ class RewardHelper
             $title = 'other';
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['OTHER_REWARDS'];
         }
+
+        
         if($sendArr[0] > 0) {
             $svip = $parentInfo['svip'] ?? 0;
             $coin = $sendArr[0];
@@ -225,7 +228,7 @@ class RewardHelper
             }
 
         }
-        else if($sendArr[1] > 0) {
+        if($sendArr[1] > 0) {
             $coin = $sendArr[1];
             // 添加提现钱包和背包金额
             list($beforecoin, $aftercoin) = User::alterUserCoin($parentInfo, $coin, $rewardsType);
