@@ -73,4 +73,16 @@ class BetDrawService{
 
         return $canDraw;
     }
+
+    public function addUserBetMatch($uid, $orderid, $coin, $type){
+        $kflag = 'pay_bet_mul';
+        if($type  == 2){
+            $kflag = 'send_bet_mul';
+        }
+        else if($type == 3){
+            $kflag = 'mail_bet_mul';
+        }
+
+
+    }
 }

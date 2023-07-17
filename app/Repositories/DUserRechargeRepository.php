@@ -28,4 +28,8 @@ class DUserRechargeRepository extends Repository
         ->where('isfirst', '<=', 1)
         ->count('id');
     }
+
+    public function getRechargeByOrderId($orderId){
+        return $this->model()::where('orderid', $orderId)->first();
+    }
 }

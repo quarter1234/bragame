@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class DCenterTaxLog extends BaseMoel
+class SBetConfig extends BaseMoel
 {
     public $timestamps = false;
-    protected $table = 'd_center_tax_log';
+    protected $table = 's_bet_config';
 }

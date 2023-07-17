@@ -563,7 +563,8 @@ if (!function_exists('genJsonRes')) {
 
 if (!function_exists('doubleAdd')) {
     function doubleAdd($beforecoin, $altercoin){
-        return number_format($beforecoin + $altercoin,2);
+        // return number_format($beforecoin + $altercoin,2);
+        return $beforecoin + $altercoin;
     }
 }
 
@@ -643,5 +644,5 @@ function getCurrentAction()
 function isJson($string) {
     json_decode($string);
     return (json_last_error() == JSON_ERROR_NONE);
-}  
+}
 

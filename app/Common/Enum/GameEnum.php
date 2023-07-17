@@ -15,6 +15,7 @@ class GameEnum{
             "AGENT_BET_REWARDS" => 132, // --下级bet奖励
             "MAIL_REWARDS" => 136, // --邮件
             "VIP_BONUS" => 138, // --VIP奖励
+            "SHOP_RECHARGE" => 15, // --商城充值
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",
@@ -35,7 +36,15 @@ class GameEnum{
         "GAME_TYPE" => [
             "SPECIAL" => [
                 "QUEST" => 160000, // --任务奖励
+                "STORE_BUY" => 40000, // --商城购买
             ]
+        ],
+        "RET" => [
+            "SUCCESS" => 200,
+            "ERROR" => [
+                "ORDER_PAID_ORDER_NOT_FOUND" => 1061, // --支付验证订单号错误
+                "PLAYER_NOT_FOUND" =>  405, // -- 找不到玩家
+            ],
         ]
     ];
 }

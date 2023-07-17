@@ -5,6 +5,7 @@ use App\Common\Enum\CommonEnum;
 use App\Helper\UserHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\UserRepository;
+use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
 use App\Cache\AllUseGameDrawCache;
@@ -12,10 +13,12 @@ use App\Cache\AllUseGameDrawCache;
 class UserService
 {
     private $userRepo;
+    private $userRech;
 
-    public function __construct(UserRepository $userRepo)
+    public function __construct(UserRepository $userRepo, DUserRechargeRepository $userRech)
     {
         $this->userRepo  = $userRepo;
+        $this->userRech = $userRech;
     }
 
     /**
@@ -135,5 +138,43 @@ class UserService
         // TODO redis缓存
         $user->save(); // -- 及时保存
         return [$beforecoin, $aftercoin];
+    }
+
+    public function orderAsynCallback($orderid){
+        $order = $this->userRech->getRechargeByOrderId($orderid);
+        if(!$order){
+            return GameEnum::PDEFINE['RET']['ERROR']['ORDER_PAID_ORDER_NOT_FOUND'];
+        }
+
+        if($order['status'] == 2){ // --已经支付成功的订单
+            return GameEnum::PDEFINE['RET']['SUCCESS'];
+        }
+
+        $uid = $order['uid'];
+        $user = UserHelper::getUserByUid($uid);
+        if(!$user){
+            return GameEnum::PDEFINE['RET']['ERROR']['PLAYER_NOT_FOUND'];
+        }
+        $sendcoin = 0;
+        $sendArr = [1, 0, 0];
+        if($order['discoin'] > 0){ // --直接赠送固定额度
+            $sendArr = explode(":", $order['rate']);
+            $sendcoin = $order['discoin'];
+        }
+
+        if($order['disrate'] > 0){ // --按比例赠送
+            $sendcoin = roundCoin($order['disrate'] * $order['count']); // --赠送的金币数
+            $sendArr = explode(":", $order['rate']);
+            foreach($sendArr as $i => $rate){
+                $sendArr[$i] = roundCoin($sendcoin * $rate);
+            }
+        }
+
+        $totalcoin = $order['count']; // --金币
+        $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
+        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
+        list($beforecoin, $aftercoin) = $this->alterUserCoin($user, $totalcoin, $cointype); // --商城充值
+        // TODO 添加打码
+        return false;
     }
 }

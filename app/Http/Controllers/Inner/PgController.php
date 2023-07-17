@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Request;
 use App\Common\Lib\Result;
 use App\Helper\UserHelper;
 use App\Services\GameService;
+use Illuminate\Support\Facades\Log;
 
 class PgController extends Controller
 {
@@ -47,6 +48,7 @@ class PgController extends Controller
         $uid = intval(Request::post('uid', 0));
         $params = Request::post();
 
+        Log::debug("callBackBet-params:" . json_encode($params));
         if(empty($params)){
             $this->gameService->defauRespData['status'] = 'SC_INVALID_REQUEST';
             return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
@@ -57,7 +59,6 @@ class PgController extends Controller
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
             return Result::json($this->gameService->defauRespData, HttpCodeEnum::UNAUTHORIZED);
         }
-
         // 第三方游戏的投注和赢分
         $respData = $this->gameService->pgBetResult($user, $params);
         return Result::json($respData);
