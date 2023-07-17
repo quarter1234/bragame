@@ -6,6 +6,7 @@ use App\Repositories\DCenterTaxLogRepository;
 use App\Repositories\DUserMatchBetsLogRepository;
 use App\Repositories\SSendCoinRepository;
 use App\Repositories\DLogSenddrawRepository;
+use Illuminate\Support\Facades\Log;
 
 class LogHelper{
     public static function insertCoinLog($uid, $beforecoin, $altercoin, $aftercoin, $alterlog, $gameId, $type, $state = 0, $gamePlat = 0, $relBetId = 0){
@@ -80,7 +81,6 @@ class LogHelper{
             "rate_amount" => $rateAmount,
             "platform" => $platform,
         ];
-
         $rep = app()->make(DCenterTaxLogRepository::class);
         $rep->storeCenterTaxLog($addData);
     }

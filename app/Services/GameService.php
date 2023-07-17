@@ -87,12 +87,12 @@ class GameService
         if(!$appIdConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
         }
-        
+
         $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
         if(!$appIpConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
         }
-        
+
         $pre = $appIdConfig;
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
@@ -102,12 +102,10 @@ class GameService
 
         $host = $appIpConfig . ':83/';
         $url = $host . env('THIRD_GAME_LOGIN_URI', '') . '?' . $query;
-        
+
         $client = new Client();
         $res = $client->get($url);
-        Log::debug("url:" . $url);
         $res = $res->getBody()->getContents();
-        Log::debug("res:" . json_encode($res));
         return json_decode($res, true);
     }
 
@@ -236,7 +234,7 @@ class GameService
 //        $alterlog = "pg游戏投注扣除金币:" . $reduceCoin;
         list($beforecoin, $aftercoin) = User::alterUserCoin($user, $reduceCoin, GameEnum::PDEFINE['ALTERCOINTAG']['BET']);
         $inLog = $gameId . " 修改金币:" . $reduceCoin;
-        LogHelper::insertCoinLog($user->id, $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
+        LogHelper::insertCoinLog($user['uid'], $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 
@@ -257,7 +255,7 @@ class GameService
     }
 
     private function _addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $platform){
-        LogHelper::addCenterTaxLog($user->id, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $platform);
+        LogHelper::addCenterTaxLog($user['uid'], $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $platform);
     }
 
     /**
@@ -267,9 +265,9 @@ class GameService
      * @return array
      */
     public function pgBetResult($user, array $betParams){
-        $uid = $user['id'];
+        $uid = $user['uid'];
         $platConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$platConfig || $platConfig['v'] != $betParams['plat_app']){
+        if(!$platConfig || $platConfig != $betParams['plat_app']){
             $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
             return $this->defauRespData;
         }

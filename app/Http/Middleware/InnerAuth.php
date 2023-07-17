@@ -6,6 +6,7 @@ use App\Common\Lib\Result;
 use Closure;
 use Illuminate\Http\Request;
 
+
 class InnerAuth
 {
     /**
