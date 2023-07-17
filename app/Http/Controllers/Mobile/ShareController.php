@@ -23,4 +23,9 @@ class ShareController extends Controller
 
         return view('mobile.share.index', $data);
     }
+
+    public function invites()
+    {
+        print_r(1234);die();
+    }
 }

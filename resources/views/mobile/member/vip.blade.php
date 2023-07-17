@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/css/member.css">
+    <link rel="stylesheet" href="/mobile/css/swiper-bundle.min.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -37,21 +39,76 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
-            <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
-              <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                    VIP
-                  </div>
-              </jx-header-row>
+          <div class="top">
+                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
+                <div class="money">
+                    <span>R$</span>
+                    <span>{{--$user['coin']--}}</span>
+                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
+                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
+                </div>
             </div>
+            <div class="banner">
+            <div class="swiper mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="sw_banner">
+                        <h2>V2<span>Nível atua</span></h2>
+                        <div class="sw_h_bottom">Depósito atual: 0</div>
+                        <p>Recarga cumulativa<span>280/1000</span></p>
+                        <div class="sw_jd">
+                            <div class="sw_jd_n"><div class="sw_jd_b"></div></div>
+                        </div>
+                        <div class="sw_text">
+                            <div>V2</div>
+                            <div>V3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="sw_banner">
+                        <h2>V2<span>Nível atua</span></h2>
+                        <div class="sw_h_bottom">Depósito atual: 0</div>
+                        <p>Recarga cumulativa<span>280/1000</span></p>
+                        <div class="sw_jd">
+                            <div class="sw_jd_n"><div class="sw_jd_b"></div></div>
+                        </div>
+                        <div class="sw_text">
+                            <div>V2</div>
+                            <div>V3</div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+    </div>
+
+            </div>
+            <div class="vip_centen">
+              <h2>Pricilegips VIP</h2>
+              <p>1. voce pode acjkacnado caj coasic avcoia.</p>
+              <p>2. hauoihsdadohjc ajdoajpc a papda pcahspahh.</p>
+              <p>3. voce pode acjkacnado caj coasic avcoia at ac asada asd</p>
+            </div>
+            <div class="vip_bottom">
+                <div class="vip_blist">
+                    <h2>Weekly bonus</h2>
+                    <p>100</p>
+                </div>
+                <div class="vip_blist">
+                    <h2>monthly bonus</h2>
+                    <p>100</p>
+                </div>
+                <div class="vip_blist">
+                    <h2>level up bonus</h2>
+                    <p>100</p>
+                </div>
+            </div>
+            <button class="vip_button">Atualize agora</button>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                    <!---->
-                    <!---->
-                    <!---->
-
+                 
 
                    </jx-content-view>
                 </jx-safe-area>
@@ -74,5 +131,24 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
-
+  <script type="text/javascript" src="/mobile/js/swiper-bundle.min.js"></script>
+  <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        initialSlide: 1,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch:-50,
+          depth: 100,
+          modifier:1,
+          slideShadows : true
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
 </html>

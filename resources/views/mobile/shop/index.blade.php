@@ -68,10 +68,12 @@
                           <span>Saldo Retiravel</span>
                           <p>R$ 9.99</p>
                           <button class="shop_list_button2"></button>
-                          <div class="shop_wk">Verdifcar agora</div>
+                          <div class="shop_wk"><a style="color:white" href="{{ route('mobile.display', ["act" => 'kyc']) }}" >Verdifcar agora</a></div>
                           <div class="shop_wk2">Verdifcar agora sda dejfskjd ad fasda</div>
                       </div>
                       <div class="shop_h"></div>
+
+                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'transaction']) }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Minhas Trabsacones<span>Verdifcar agora sda dejskjd ad fasda iDA</span></h2>
@@ -80,6 +82,9 @@
                           <div class="shop_jt_ico"></div>
                        </div>
                       </div>
+                      </a>
+
+                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Minhas Trabsacones</h2>
@@ -88,6 +93,8 @@
                           <div class="shop_jt_ico"></div>
                        </div>
                       </div>
+                      </a>
+
                    </jx-content-view>
                 </jx-safe-area>
               </div>

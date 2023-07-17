@@ -24,8 +24,6 @@ Route::group([
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
 
-
-
 Route::group([
     'prefix' => 'mobile', 'middleware' => ['auth']
 ], function ($router) {
@@ -41,6 +39,7 @@ Route::group([
     Route::get('member/email', [MemberController::class, 'email']);
 
     Route::get('share', [ShareController::class, 'index']);
+    Route::get('share/invites', [ShareController::class, 'invites']); 
 
     Route::get('activity', [ActivityController::class, 'index']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
@@ -51,5 +50,5 @@ Route::group([
     Route::get('shop', [ShopController::class, 'index']);
    
     Route::get('display', [DisplayController::class, 'display'])->name('mobile.display');
-
+    
 });

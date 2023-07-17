@@ -45,15 +45,15 @@
             <div class="centen_tab">
                   <div class="centen_list centen_on">
                       <img src="../../mobile/img/fx.png" />
-                      <p>分享</p>
+                      <p>Compartilhar{{--分享--}}</p>
                   </div>
                   <div class="centen_list">
                       <img src="../../mobile/img/dl.png" style="width:35px;height:35px;margin:-2px 0 -20px 0;" />
-                      <p>代理</p>
+                      <p>Representação{{--代理--}}</p>
                   </div>
                   <div class="centen_list">
                       <img src="../../mobile/img/flzh.png" />
-                      <p>用户</p>
+                      <p>O usuário {{--代理--}}</p>
                   </div>
             </div>
             <div class="centen_show"  style="display:block;" >
