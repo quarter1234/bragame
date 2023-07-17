@@ -39,34 +39,42 @@ class ShareService
         $data['link'] = route('mobile.index', ['code' => $user['code']]);
         $data['user'] = $user;
         $data['agent'] = $this->getAgentCacheData($user);
-        $data['invite'] = $this->getInviteData($user);
+        $data['invite'] = $this->getInviteCacheTotal($user);
         
         return $data;
     }
 
-    /**
-     * 获取缓存邀请数据
-     *
-     * @param [type] $user
-     * @return void
-     */
-    public function getInviteCacheData($user)
+    
+    public function getInviteCacheList($user, $page)
     {
-        $cacheKey = "share:invite:data:". $user->uid;
-        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
-           return $this->getInviteData($user);
+        $cacheKey = "share:invite:list:". $user->uid. '_' . $page;
+        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user, $page) {
+           return $this->getInviteList($user);
         });
     }
 
-    public function getInviteData($user)
+    public function getInviteCacheTotal($user)
     {
-        $data = [];
-        $data['list'] = $this->treeRepo->getTree($user->uid, [1,2])->toArray();
-        foreach ($data['list'] as &$item) {
+        $cacheKey = "share:invite:total:". $user->uid;
+        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
+           return $this-> getInviteTotal($user);
+        });
+    }
+
+    public function getInviteList($user)
+    {
+        $pages = $this->treeRepo->getTree($user->uid, [1,2])->toArray();
+        foreach ($pages['data'] as &$item) {
             $item['descendant']['playername'] = hideString($item['descendant']['playername'], 2,3);
             $item['descendant']['create_time'] = date('Y-m-d H:i:s', $item['descendant']['create_time']);
         }
+        
+        return $pages;
+    }
 
+    public function getInviteTotal($user)
+    {
+        $data = [];
         $data['one_grade_count'] = $this->treeRepo->getTreeCount($user->uid, [1]);
         $data['two_grade_count'] = $this->treeRepo->getTreeCount($user->uid, [2]);
         return $data;

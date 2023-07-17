@@ -38,13 +38,13 @@
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
+          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             
           <div class="top">
                 <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
                 <div class="money">
                     <span>R$</span>
-                    <span>{{--$user['coin']--}}</span>
+                    <span>{{ $user['coin'] }}</span>
                     <div class="sx"><img src="../../mobile/img/sx.png" /></div>
                     <div class="qb"><img src="../../mobile/img/qb.png" /></div>
                 </div>
@@ -56,17 +56,17 @@
 
                       <div class="shop_top">
                           <div class="shop_t_text">Saldo Total</div>
-                          <div class="shop_b">9.99</div>
+                          <div class="shop_b">{{ $user['coin'] }}</div>
                           <button onclick="location.href='{{ route("mobile.display", ["act" => 'pay']) }}'" class="shop_button">Adicionar dinheiro</button>
                       </div>
                       <div class="shop_list">
                           <span>Adicionar dinheiro</span>
-                          <p>R$ 9.99</p>
+                          <p>R$ {{$user['coin']}}</p>
                           <button  class="shop_list_button"></button>
                       </div>
                       <div class="shop_list">
                           <span>Saldo Retiravel</span>
-                          <p>R$ 9.99</p>
+                          <p>R$ {{$user['gamedraw']}}</p>
                           <button class="shop_list_button2"></button>
                           <div class="shop_wk"><a style="color:white" href="{{ route('mobile.display', ["act" => 'kyc']) }}" >Verdifcar agora</a></div>
                           <div class="shop_wk2">Verdifcar agora sda dejfskjd ad fasda</div>

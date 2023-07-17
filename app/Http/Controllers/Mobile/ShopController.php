@@ -17,6 +17,9 @@ class ShopController extends Controller
 
     public function index()
     {
-        return view('mobile.shop.index');
+        $data = [];
+        $data['user'] = Auth::user();
+        
+        return view('mobile.shop.index', $data);
     }
 }
