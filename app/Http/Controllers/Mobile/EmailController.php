@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Enum\CommonEnum;
+use App\Common\Enum\GameEnum;
+use App\Exceptions\BadRequestException;
 use App\Http\Controllers\Controller;
 use App\Services\EmailService;
 use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use App\Facades\User;
+use App\Helper\RewardHelper;
 
 /**
  * 个人中心相关
@@ -50,10 +55,18 @@ class EmailController extends Controller
         $id = intval(Request::get('id', 0));
         $user = Auth::user();
         $info = $this->emailService->getEmailInfo($id, $user);
+
         if(!$info) {
+            throw new BadRequestException(['msg' => 'Bad Request!']);
+        }
+
+        if($info->hastake != CommonEnum::UNABLE) {
+            throw new BadRequestException(['msg' => 'Você já reclamou o ouro']);
             
         }
 
-        print_r($id);die();
+        $res = RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail']);
+        print_r($res);die();
+        
     }
 }

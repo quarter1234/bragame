@@ -103,13 +103,13 @@
     <script>
     $(document).ready(function() {
         $('#ReceberBtn').click(function(){
-          showLoading();
+          // showLoading();
           $.ajax({
               url : "{{ route('mobile.email.attach', ['id' => $info['id']]) }}",
               type : 'GET',
               data : {},
               success : function (data) {
-                hideLoading();
+                // hideLoading();
                 console.log(data);
                 // 判断 字符串是否为空
                 // if(data == '') {
