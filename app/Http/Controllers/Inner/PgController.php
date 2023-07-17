@@ -23,7 +23,7 @@ class PgController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function callBackAuth(){
-        $uid = intval(Request::get('uid', 0));
+        $uid = intval(Request::post('uid', 0));
         if(empty($uid)){
             $this->gameService->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
             return Result::json($this->gameService->defauRespData, ResponseCode::AUTH_ERROR);
