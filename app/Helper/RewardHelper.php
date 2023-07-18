@@ -265,6 +265,11 @@ class RewardHelper
                     $str = $inviteConfig['bet']['pggameids'] ?? '';
                 }
             }
+            else if($type == 4){
+                if($inviteConfig['bet']['ppgameids']){
+                    $str = $inviteConfig['bet']['ppgameids'] ?? '';
+                }
+            }
 
             if(!empty($str)){
                 $rebateGamelist = explode(",", $str);
