@@ -352,7 +352,7 @@ class GameService
                 // $effbet = $betAmount - $winLoseAmount;
                 $effbet = $betAmount;
                 if($effbet > 0){ // 按照下注的概念，给上级返利
-                    // RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
                 }
             }
         }
@@ -399,7 +399,7 @@ class GameService
             // $canDraw = Bets::checkBets($user, $isAllUseDraw);
             $effbet = $betAmount;
             if($effbet > 0){ // 按照下注的概念，给上级返利
-                // RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
             }
         }
 
