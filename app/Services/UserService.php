@@ -123,7 +123,7 @@ class UserService
         $altercoin = abs($altercoin);
         if($type == GameEnum::PDEFINE['ALTERCOINTAG']['BET']){ // 下注
             $setIsAllUseDraw = AllUseGameDrawCache::rememberUseDraw($user, $beforecoin);
-            if(!$setIsAllUseDraw){
+            if($setIsAllUseDraw == 2){
                 $user->totalbet += $altercoin;
                 $user->match_bets += $altercoin;
             }

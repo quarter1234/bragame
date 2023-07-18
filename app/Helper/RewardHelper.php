@@ -208,12 +208,12 @@ class RewardHelper
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['OTHER_REWARDS'];
         }
 
-        
+
         if($sendArr[0] > 0) {
             $svip = $parentInfo['svip'] ?? 0;
             $coin = $sendArr[0];
             list($beforecoin, $aftercoin) = User::alterUserCoin($parentInfo, $coin, $rewardsType);
-            $alterlog = $title . $coin;
+            $alterlog = $title . ':变化金额:' . $coin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $parentInfo['gamedraw'];
             LogHelper::insertCoinLog($parentid,
                                     $beforecoin,
                                     $coin,
