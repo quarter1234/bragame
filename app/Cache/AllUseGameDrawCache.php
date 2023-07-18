@@ -14,8 +14,13 @@ class AllUseGameDrawCache
     const S_ALL_DRAW = 1;
     const s_NOT_ALL_DRAW = 2;
 
+    private static function _getCacheKey($uid){
+        $cacheKey = sprintf(self::S_CACHE_KEY, $uid);
+        return $cacheKey;
+    }
+
     public static function rememberUseDraw($user, $beforecoin){
-        $cacheKey = sprintf(self::S_CACHE_KEY, $user['id']);
+        $cacheKey = self::_getCacheKey($user['uid']);
         return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () use($user, $beforecoin) {
             if($user){
                 if($beforecoin == $user['gamedraw']){
@@ -26,8 +31,13 @@ class AllUseGameDrawCache
         });
     }
 
+    public static function getIsAllUseDraw($uid){
+        $cacheKey = self::_getCacheKey($uid);
+        return Cache::get($cacheKey, self::s_NOT_ALL_DRAW);
+    }
+
     public static function removeUserDraw($uid){
-        $cacheKey = sprintf(self::S_CACHE_KEY, $uid);
+        $cacheKey = self::_getCacheKey($uid);
         Cache::forget($cacheKey);
     }
 }

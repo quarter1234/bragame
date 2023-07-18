@@ -25,14 +25,14 @@ class BetDrawService{
         $cost = 0;
         $canDraw = 0;
         if($cashCoin > 0){
-            $matchBets = $this->mbRep->getUserMatchBet($user['id']);
+            $matchBets = $this->mbRep->getUserMatchBet($user['uid']);
             if(!$matchBets || $isAllUseDraw == 1){
                 $canDraw = $cashCoin;
             }
             else{
                 $matchBets['amount'] = $matchBets['amount'] ?? 0;
                 $baseBets = roundCoin($matchBets['amount'] * $matchBets['bet_mul']);
-                $cost = $this->mbRep->optCost($user['id'], $matchBets['id']);
+                $cost = $this->mbRep->optCost($user['uid'], $matchBets['id']);
                 $cost = $cost ?? 0;
                 if($userBets >= $baseBets){
                     $canDraw = $cashCoin - $cost; // -- 扣掉成本，剩余的纳入提现钱包
@@ -43,7 +43,7 @@ class BetDrawService{
                     // -- 清除用户的打码量
                     $user['match_bets'] = 0;
                     // -- 把matchBets状态设置为已解除
-                    $this->mbRep->setMatchBetsStatus($user['id'], $userBets, $canDraw);
+                    $this->mbRep->setMatchBetsStatus($matchBets['id'], $userBets, $canDraw);
                 }
                 else{
                     $leftCash = $cashCoin - $cost;
@@ -51,7 +51,7 @@ class BetDrawService{
                         // -- 清除用户的打码量
                         $user['match_bets'] = 0;
                         // -- 把matchBets状态设置为已解除
-                        $this->mbRep->setMatchBetsStatus($user['id'], $userBets, 0);
+                        $this->mbRep->setMatchBetsStatus($matchBets['id'], $userBets, 0);
                     }
                 }
             }
@@ -60,12 +60,14 @@ class BetDrawService{
                 $user['gamedraw'] = roundCoin($user['gamedraw'] + $canDraw);
             }
 
+            // 及时保存
+            $user->save();
             $matchId = 0;
-            if(!$matchBets){
-                $matchId = matchBets['id'];
+            if($matchBets){
+                $matchId = $matchBets['id'];
             }
 
-            LogHelper::addMatchBetsLog($user['id'], $cashCoin, $userBets, $isAllUseDraw, $cost, $canDraw, $matchId);
+            LogHelper::addMatchBetsLog($user['uid'], $cashCoin, $userBets, $isAllUseDraw, $cost, $canDraw, $matchId);
         }
         else if($cashCoin == 0 && $gamedraw > 0){
             // -- 不做任何处理

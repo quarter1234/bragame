@@ -233,7 +233,7 @@ class GameService
         $reduceCoin = -$upCoin;
 //        $alterlog = "pg游戏投注扣除金币:" . $reduceCoin;
         list($beforecoin, $aftercoin) = User::alterUserCoin($user, $reduceCoin, GameEnum::PDEFINE['ALTERCOINTAG']['BET']);
-        $inLog = $gameId . " 修改金币:" . $reduceCoin;
+        $inLog = $gameId . '投注:变化金额:' . $reduceCoin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
         LogHelper::insertCoinLog($user['uid'], $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
@@ -249,8 +249,8 @@ class GameService
      */
     private function _addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId){
         list($beforecoin, $aftercoin) = User::alterUserCoin($user, $winLoseAmount, GameEnum::PDEFINE['ALTERCOINTAG']['WIN']);
-        $inLog = $gameId . " 修改金币:" . $winLoseAmount;
-        LogHelper::insertCoinLog($user->id, $beforecoin, $winLoseAmount, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['WIN'], 2, $gamePlat, $relBetId);
+        $inLog = $gameId . '赢分:变化金额:' . $winLoseAmount . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
+        LogHelper::insertCoinLog($user['uid'], $beforecoin, $winLoseAmount, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['WIN'], 2, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 
@@ -343,6 +343,7 @@ class GameService
             }
         }
 
+        $canDraw = 0;
         $this->_betDoing($relBetId); // 处理中
         if(empty($resultType)){ // 投注
             if($betAmount > 0){
@@ -389,14 +390,13 @@ class GameService
                 $this->_addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $currPlatForm);
             }
 
-            $canDraw = 0;
             $ispayer = $user['ispayer'] ?? 0;
             if($ispayer == 0){ // --未充值的会员不得提现
                 $this->_betOver($betId, $beforeAmount, $user['coin'], $canDraw);
             }
 
-            $isAllUseDraw = AllUseGameDrawCache::rememberUseDraw($user, $beforecoin);
-            // $canDraw = Bets::checkBets($user, $isAllUseDraw);
+            $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
+            $canDraw = Bets::checkBets($user, $isAllUseDraw);
             $effbet = $betAmount;
             if($effbet > 0){ // 按照下注的概念，给上级返利
                 RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
