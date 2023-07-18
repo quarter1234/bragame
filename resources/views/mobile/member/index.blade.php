@@ -70,7 +70,7 @@
                     <jx-avatar _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c6="">
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
-                      <div _ngcontent-xfs-c1="" class="username">欢迎您，{{ $user['playername'] }}</div>
+                      <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} <span>VIP:{{ $user['svip'] }}</span>  ID: {{ $user['uid'] }}</div>
                       <!---->
                       </div>
                   </div>
@@ -79,58 +79,54 @@
                       <!---->
                       <!---->
                       <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">主账户余额</div>
+                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--主账户余额--}}Saldo da conta principal</div>
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold">{{ $user['coin'] }}</div></div>
                       <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">今日投注</div>
+                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日投注--}}Apostas hoje</div>
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold">0</div></div>
 					  <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">今日盈亏</div>
+                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日盈亏--}}Lucro e perda de hoje</div>
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="text-align:center">0</div></div>
                     </div>
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>充值</button>
+                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
                       <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ route("mobile.display", ["act" => "kyc"]) }}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>提现</button>
+                        <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>{{--提现--}}Reembolso</button>
                      </div>
 
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
 					
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord2')}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>充值记录
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/recharges")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--充值记录--}}Registro de recarga
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Account/dealRecord3')}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>提现记录
+					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/draws")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--提现记录--}}Registro de retirada
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{:U('Member/betRecord')}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>投注记录
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/bets")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>{{--投注记录--}}Registro de apostas
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    </div>
+                    
 
-                    <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>邮件
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon yj-icon"></span>{{--邮件--}}Correio
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    </div>
 
-
-                    <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>VIP等级
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon vip-icon"></span>{{--VIP等级--}}Nível VIP
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    </div>
+                    
 
-                    <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
+                    
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon agency-icon"></span>客服中心
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Centro de atendimento ao cliente
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    </div>
+                    
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('是否退出？'))location='{{url("mobile/logout")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>退出账号
+                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--退出账号--}}Saia da conta
                       </button>
                      </div>
 

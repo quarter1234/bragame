@@ -52,4 +52,22 @@ class MemberController extends Controller
 
         return view('mobile.member.vip', $data);
     }
+
+    // 充值记录
+    public function recharges()
+    {
+        return view('mobile.member.recharges');
+    }
+
+    // 提现记录
+    public function draws()
+    {
+        return view('mobile.member.draws');
+    }
+
+    // 投注记录
+    public function bets()
+    {
+        return view('mobile.member.bets');
+    }
 }

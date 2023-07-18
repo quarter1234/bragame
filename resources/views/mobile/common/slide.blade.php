@@ -1,11 +1,17 @@
 <div class="menu_on">
 <img src="../../mobile/img/menu_on.png" />
 </div>
+<div class="kj_kf">
+<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="../../mobile/img/kf_ico.png" />
+</div>
+<div class="down_ico">
+<img src="../../mobile/img/down_ico.png" />
+</div>
 <div class="menu_tc">
     <div class="menu_right">
         <ul>
             <li>
-                <a>
+                <a href="{{url('mobile/member/vip')}}">
                     <span>
                         <img src="../../mobile/img/f-vip.png" />
                     </span>
@@ -13,7 +19,7 @@
                 </a>
             </li>
             <li>
-                <a>
+                <a href="{{url('mobile/member/email')}}">
                 <span>
                         <img src="../../mobile/img/email-fill.png" />
                     </span>
@@ -21,7 +27,7 @@
                 </a>
             </li>
             <li>
-                <a>
+                <a href="{{url('mobile/member/customerService')}}">
                 <span>
                         <img src="../../mobile/img/kf_r_ico.png" />
                     </span>
@@ -38,7 +44,7 @@
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:50%;
+    top:80%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
@@ -100,6 +106,40 @@
    }
    .menu_right a{
     color:#fff;
+   }
+   .kj_kf{
+    width:40px;
+    height:40px;
+    background:rgba(0, 0, 0, 0.8);
+    position:fixed;
+    z-index:99;
+    top:85%;
+    right:10px;
+    margin-top:-30px;
+    border-radius:100%;
+    text-align:center;
+   }
+   .kj_kf img{
+        width:25px;
+        height:25px;
+        margin-top:9px;
+   }
+   .down_ico{
+    width:40px;
+    height:40px;
+    background:rgba(0, 0, 0, 0.8);
+    position:fixed;
+    z-index:99;
+    top:90%;
+    right:10px;
+    margin-top:-30px;
+    border-radius:100%;
+    text-align:center;
+   }
+   .down_ico img{
+        width:20px;
+        height:20px;
+        margin-top:9px;
    }
 </style>
 <script>
