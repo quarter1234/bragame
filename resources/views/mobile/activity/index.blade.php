@@ -36,7 +36,7 @@
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
+          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">

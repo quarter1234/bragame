@@ -55,7 +55,12 @@ Route::group([
     Route::get('setting', [MemberController::class, 'setting']);
     Route::get('customerService', [MemberController::class, 'customerService']);
     Route::get('vip', [MemberController::class, 'vip']);
+    
+    Route::get('recharges', [MemberController::class, 'recharges']);
+    Route::get('draws', [MemberController::class, 'draws']);
+    Route::get('bets', [MemberController::class, 'bets']);
 
+    // 邮件相关
     Route::get('email', [EmailController::class, 'email']);
     Route::get('emailList', [EmailController::class, 'emailList']);
     Route::get('emailInfo', [EmailController::class, 'emailInfo'])->name('mobile.email.info');

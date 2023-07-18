@@ -256,6 +256,15 @@ span.finance-entry-icon.bonus-icon[_ngcontent-xfs-c1] {
 span.finance-entry-icon.report-icon[_ngcontent-xfs-c1] {
     background-image: url(/mobile/img/icon_report.eae6900d1a38a4302975.svg)
 }
+span.finance-entry-icon.yj-icon[_ngcontent-xfs-c1] {
+    background-image: url(/mobile/img/yj_ico.png)
+}
+span.finance-entry-icon.vip-icon[_ngcontent-xfs-c1] {
+    background-image: url(/mobile/img/vip-fill.png)
+}
+span.finance-entry-icon.kf-icon[_ngcontent-xfs-c1] {
+    background-image: url(/mobile/img/kf-ico.png)
+}
 
 .header-view__nav-row-wrapper[_ngcontent-xfs-c3] {
     position: fixed;
@@ -2904,4 +2913,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .black img {
     width:20px;
     height:20px;
+}
+
+.kf a{
+    color:#fff;
 }

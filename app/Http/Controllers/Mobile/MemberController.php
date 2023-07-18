@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
+use App\Repositories\SConfigCustomerRepository;
 use App\Services\GameService;
+use App\Services\MemberService;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -12,11 +14,11 @@ use Illuminate\Support\Facades\Auth;
  */
 class MemberController extends Controller
 {
-    private $gameService;
+    private $memberService;
 
-    public function __construct(GameService $gameService)
+    public function __construct(MemberService $memberService)
     {
-        $this->gameService = $gameService;
+        $this->memberService = $memberService;
     }
 
     public function index()
@@ -34,13 +36,38 @@ class MemberController extends Controller
         return view('mobile.member.setting', $data);
     }
 
-    public function customerService()
+    public function customerService(SConfigCustomerRepository $repo)
     {
-        return view('mobile.member.customer_service');
+        $data = [];
+        $data['user'] = Auth::user();
+        $data['list'] = $repo->getCustomers();
+        
+        return view('mobile.member.customer_service', $data);
     }
 
     public function vip()
     {
-        return view('mobile.member.vip');
+        $user = Auth::user();
+        $data = $this->memberService->getVipInfo($user);
+
+        return view('mobile.member.vip', $data);
+    }
+
+    // 充值记录
+    public function recharges()
+    {
+        return view('mobile.member.recharges');
+    }
+
+    // 提现记录
+    public function draws()
+    {
+        return view('mobile.member.draws');
+    }
+
+    // 投注记录
+    public function bets()
+    {
+        return view('mobile.member.bets');
     }
 }

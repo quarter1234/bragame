@@ -2,7 +2,9 @@
 
 namespace App\Helper;
 
+use App\Cache\SConfigVipCache;
 use App\Models\User;
+use App\Repositories\SConfigVipUpgradeRepository;
 
 class UserHelper 
 {
@@ -74,5 +76,29 @@ class UserHelper
     public static function getUserByUid(int $uid)
     {
         return User::where('uid', $uid)->first();
+    }
+
+    public static function getVipInfo($userInfo) :array
+    {
+        $svip = $userInfo['svip'] ?? 0;
+
+        return self::getNextVipInfoExp($svip);
+    }
+
+    public static function getNextVipInfoExp($svip) :array
+    {
+        $svip = intval($svip);
+
+        $vipList = SConfigVipCache::getVipList();
+
+        if(isset($vipList[$svip + 1]) && $vipList[$svip + 1]) {
+            $exp = $vipList[$svip + 1]['diamond'];
+        }
+
+        if($svip == 20) {
+            $exp = $vipList[$svip]['diamond'];
+        }
+
+        return ['exp' => $exp, 'vipList' => $vipList];
     }
 }
