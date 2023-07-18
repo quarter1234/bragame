@@ -3,8 +3,6 @@
 namespace App\Helper;
 
 use App\Cache\SConfigVipCache;
-use App\Models\User;
-use App\Services\GameService;
 
 class VipHelper 
 {
@@ -16,6 +14,7 @@ class VipHelper
 
         $oldVipLeve = $user->svip ?? 1;
         $currentVipLeve = self::getLevelByExp($user->svipexp);
+
         if($currentVipLeve > $oldVipLeve) {
             $user->svip = ($user->svip + 1);
             $user->save();
@@ -27,6 +26,7 @@ class VipHelper
         if($diamondUsed <= 0) {
             return 1;
         }
+
         $target = 1;
 
         $vipList = SConfigVipCache::getVipList();
