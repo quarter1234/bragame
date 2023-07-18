@@ -1,0 +1,118 @@
+<div class="menu_on">
+<img src="../../mobile/img/menu_on.png" />
+</div>
+<div class="menu_tc">
+    <div class="menu_right">
+        <ul>
+            <li>
+                <a>
+                    <span>
+                        <img src="../../mobile/img/f-vip.png" />
+                    </span>
+                    <label>VIP Grau</label>
+                </a>
+            </li>
+            <li>
+                <a>
+                <span>
+                        <img src="../../mobile/img/email-fill.png" />
+                    </span>
+                    <label>Email</label>
+                </a>
+            </li>
+            <li>
+                <a>
+                <span>
+                        <img src="../../mobile/img/kf_r_ico.png" />
+                    </span>
+                    <label>Atendimento</label>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<style>
+   .menu_on{
+    width:40px;
+    height:40px;
+    background:rgba(0, 0, 0, 0.8);
+    position:fixed;
+    z-index:99;
+    top:50%;
+    right:10px;
+    margin-top:-30px;
+    border-radius:100%;
+    text-align:center;
+   }
+   .menu_on img{
+        width:20px;
+        height:20px;
+        margin-top:9px;
+   }
+   .menu_tc{
+        width:100%;
+        height:100%;
+        position:fixed;
+        z-index:999;
+        top:0;
+        left:0;
+        display:none;
+   }
+   .menu_right{
+        width:200px;
+        height:100%;
+        background:#132235;
+        position:absolute;
+        right:-200px;
+        top:0;
+   }
+   .menu_right ul{
+    width:100%;
+    padding:0;
+   }
+   .menu_right li{
+        width:100%;
+        height:50px;
+        list-style:none;
+        border-top:1px solid #000;
+        border-bottom:1px solid #26446a;
+        position:relative;
+   }
+   .menu_right span{
+        width:40px;
+        height:40px;
+        border-radius:100%;
+        background:rgba(0, 0, 0, 0.8);
+        position:absolute;
+        left:10px;
+        top:5px;
+        text-align:center;
+   }
+   .menu_right img{
+        width:30px;
+        height:30px;
+        margin-top:5px;
+   }
+   .menu_right label{
+    position:absolute;
+    top:15px;
+    left:60px;
+   }
+   .menu_right a{
+    color:#fff;
+   }
+</style>
+<script>
+    $(function(){
+        $('.menu_on').click(function(){
+            $('.menu_on').hide();
+            $('.menu_tc').show()
+            $('.menu_right').delay(300).animate({right:'0'});    
+        })
+        $('.menu_tc').click(function(){
+            $('.menu_on').show();
+            $('.menu_tc').hide()
+            $('.menu_right').delay(300).animate({right:'-200'+'px'});  
+        })
+    })
+</script>

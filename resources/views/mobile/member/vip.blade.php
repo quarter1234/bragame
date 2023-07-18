@@ -38,49 +38,45 @@
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
+          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           <div class="top">
                 <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
                 <div class="money">
                     <span>R$</span>
-                    <span>{{--$user['coin']--}}</span>
+                    <span>{{ $user['coin'] }}</span>
                     <div class="sx"><img src="../../mobile/img/sx.png" /></div>
                     <div class="qb"><img src="../../mobile/img/qb.png" /></div>
                 </div>
             </div>
             <div class="banner">
+
             <div class="swiper mySwiper">
               <div class="swiper-wrapper">
+
+              @foreach($vipList as $key => $item)
+
+                @if($key > 9)
+                    <?php break;?>
+                @endif
+
                 <div class="swiper-slide">
                     <div class="sw_banner">
-                        <h2>V2<span>Nível atua</span></h2>
-                        <div class="sw_h_bottom">Depósito atual: 0</div>
-                        <p>Recarga cumulativa<span>280/1000</span></p>
+                        <h2>V{{ $item['level'] + 1 }}<span>Nível atua</span></h2>
+                        <div class="sw_h_bottom">Depósito atual: {{ $user['diamond'] }}</div>
+                        <p>Recarga cumulativa<span>{{$item['diamond']}}/{{ $vipList[$key + 1]['diamond'] }}</span></p>
                         <div class="sw_jd">
-                            <div class="sw_jd_n"><div class="sw_jd_b"></div></div>
+                            <div class="sw_jd_n"><div @if($key == $user['svip']) style="width: {{ ($user['diamond'] / $exp) * 100 }}%;" @else style="width: 0%;" @endif class="sw_jd_b"></div></div>
                         </div>
                         <div class="sw_text">
-                            <div>V2</div>
-                            <div>V3</div>
+                            <div>V{{ $item['level'] + 1 }}</div>
+                            <div>V{{ $item['level'] + 2 }}</div>
                         </div>
                     </div>
                 </div>
-                <div class="swiper-slide">
-                    <div class="sw_banner">
-                        <h2>V2<span>Nível atua</span></h2>
-                        <div class="sw_h_bottom">Depósito atual: 0</div>
-                        <p>Recarga cumulativa<span>280/1000</span></p>
-                        <div class="sw_jd">
-                            <div class="sw_jd_n"><div class="sw_jd_b"></div></div>
-                        </div>
-                        <div class="sw_text">
-                            <div>V2</div>
-                            <div>V3</div>
-                        </div>
-                    </div>
-                </div>
+              @endforeach  
+
               </div>
-    </div>
+            </div>
 
             </div>
             <div class="vip_centen">
@@ -90,20 +86,24 @@
               <p>3. voce pode acjkacnado caj coasic avcoia at ac asada asd</p>
             </div>
             <div class="vip_bottom">
+
                 <div class="vip_blist">
                     <h2>Weekly bonus</h2>
-                    <p>100</p>
+                    <p class="week_bonus">{{ $vipList[$user['svip']]['weeklybonus_format'] }}</p>
                 </div>
+
                 <div class="vip_blist">
                     <h2>monthly bonus</h2>
-                    <p>100</p>
+                    <p class="month_bonus">{{ $vipList[$user['svip']]['monthlybonus_foramt'] }}</p>
                 </div>
+
                 <div class="vip_blist">
                     <h2>level up bonus</h2>
-                    <p>100</p>
+                    <p class="rewards_bonus">{{ $vipList[$user['svip']]['rewards_format'] }}</p>
                 </div>
+
             </div>
-            <button class="vip_button">Atualize agora</button>
+            <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -133,11 +133,13 @@
   </body>
   <script type="text/javascript" src="/mobile/js/swiper-bundle.min.js"></script>
   <script>
+      var vipList = @json($vipList);
+
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
-        initialSlide: 1,
+        initialSlide: "{{$user['svip']}}",
         slidesPerView: "auto",
         coverflowEffect: {
           rotate: 0,
@@ -149,6 +151,13 @@
         pagination: {
           el: ".swiper-pagination",
         },
+        on: {
+          slideChange: function () {
+            $('.week_bonus').text(vipList[this.activeIndex].weeklybonus_format)
+            $('.month_bonus').text(vipList[this.activeIndex].monthlybonus_foramt)
+            $('.rewards_bonus').text(vipList[this.activeIndex].rewards_format)
+          },
+        }
       });
     </script>
 </html>

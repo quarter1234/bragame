@@ -89,9 +89,9 @@
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="text-align:center">0</div></div>
                     </div>
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{:U('Account/rechargeList')}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>充值</button>
-                      <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{:U('Account/withdrawals')}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ route("mobile.display", ["act" => "kyc"]) }}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>提现</button>
                      </div>
 
