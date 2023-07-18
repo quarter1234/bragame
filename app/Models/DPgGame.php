@@ -8,6 +8,7 @@ class DPgGame extends BaseMoel
 
     public function getIconAttribute($value)
     {
-        return 'http://54.207.90.207:82'.$value;
+        // return 'http://54.207.90.207:82'.$value;
+        return 'https://wwv.condebet.com/bx_4/public'.$value;
     }
 }

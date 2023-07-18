@@ -139,33 +139,33 @@
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                         <!---->
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted">
+                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-lottery "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu">
+                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-live active-side-menu-icon"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
+                      
+                        {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--电子--}}Eletrônica</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电子Eletrônica</span></button>--}}
+                    
+                        {{--<button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-sport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--体育--}}Esportes</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab5" onclick="myclick(5)" class="side-menu-item ng-star-inserted">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">体育Esportes</span></button>--}}
+              
+                        {{--<button _ngcontent-way-c8="" id="tab5" onclick="myclick(5)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-fishing"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--捕鱼--}}Pesca</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab6" onclick="myclick(6)" class="side-menu-item ng-star-inserted">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">捕鱼Pesca</span></button>--}}
+             
+                        {{--<button _ngcontent-way-c8="" id="tab6" onclick="myclick(6)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-boardgame"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--棋牌--}}Xadrez</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab7" onclick="myclick(7)" class="side-menu-item ng-star-inserted">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">棋牌Xadrez</span></button>--}}
+     
+                        {{--<button _ngcontent-way-c8="" id="tab7" onclick="myclick(7)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-esport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">{{--电竞--}}Concorrência elétrica</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电竞Concorrência elétrica</span></button>--}}
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
@@ -185,7 +185,7 @@
                           </div>
                         </div>
 
-                        <div class="tab" id="tab3_content" style="display: none;">
+                        {{--<div class="tab" id="tab3_content" style="display: none;">
 
                             <div _ngcontent-avh-c17="" class="slot-btns-ctn ng-star-inserted">
                               <button _ngcontent-avh-c17="" class="jx-slot generic-background-image" tabindex="0" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bbin','game_type'=>2))}'"></button>
@@ -200,31 +200,31 @@
 							  <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-jdb ng-star-inserted" tabindex="0"onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'jdb','game_type'=>2))}'"></button>
 							  <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-sg ng-star-inserted" tabindex="0"onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'sg','game_type'=>2))}'"></button>
                             </div>
-                        </div>
-						<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab4_content" style="display: none;">
+                        </div>--}}
+						 {{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab4_content" style="display: none;">
 
 						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-888001 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ibc','game_type'=>4))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-agti ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ag','game_type'=>4))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-bbti ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;margin-left:5px" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'newbb','game_type'=>4))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-gj ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'gj','game_type'=>4))}'"></button>
-						</div>
-						<div _ngcontent-avh-c19="" class="fishing-game-board-ctn tab" id="tab5_content" style="display: none;">
+						</div>--}}
+            {{--	<div _ngcontent-avh-c19="" class="fishing-game-board-ctn tab" id="tab5_content" style="display: none;">
 
 						      <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-999013 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ag','game_type'=>6))}'"></button>
 							  <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-999006 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bbin','game_type'=>6))}'"></button>
 							  <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-bgby ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bg','game_type'=>6))}'"></button>
-						</div>
-						<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab6_content" style="display: none;">
+						</div>--}}
+						{{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab6_content" style="display: none;">
 						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-ky ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ky','game_type'=>7))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-mt ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'mt','game_type'=>7))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-rmg ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'rmg','game_type'=>7))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-nw ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'nw','game_type'=>7))}'"></button>
-						</div>
-						<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab7_content" style="display: none;">
+						</div>--}}
+						{{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab7_content" style="display: none;">
 						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-999008 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'avia','game_type'=>5))}'"></button>
 						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-999009 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'newbb','game_type'=>5))}'"></button>
 							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-esb ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'esb','game_type'=>5))}'"></button>
-						</div>
+						</div>--}}
 
                       </div>
                     </div>
@@ -232,7 +232,7 @@
                 </jx-safe-area>
               </div>
             </div>
-            <div class="winning-box" style="margin-bottom: 70px;">
+            <div class="winning-box">
               <div class="news-title clearfix">
                 <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
@@ -270,6 +270,10 @@
                   </li>
                 </ul>
               </div>
+            </div>
+            <div class="index_bottom">
+                  <img src="../../mobile/img/index_b.png" />
+                  <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
             {{--loading组件--}}
             @include('mobile.common.loading')
