@@ -274,6 +274,7 @@
             {{--loading组件--}}
             @include('mobile.common.loading')
             @include('mobile.index.index_login') 
+            @include('mobile.common.slide') 
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}

@@ -111,14 +111,19 @@
               success : function (data) {
                 hideLoading();
                 console.log(data);
-                // 判断 字符串是否为空
-                // if(data == '') {
-                //   return false;
-                // }
-                
-                // $('#email_load_more').attr('page', parseInt(page) + 1);
-                // $('#email_list_pages').append(data)
-              }
+                if(data.code == 200) {
+
+                  art.dialog({ title: 'Tips:', content: 'Triunfo', time: 5});
+
+                  window.location.href= "{{ url('mobile/member/email') }}"
+                } else {
+                  art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+                }
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+                art.dialog({ title: 'Tips:', content: 'error!', time: 3 });
+            }
           })
         })
     })
