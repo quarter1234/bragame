@@ -43,18 +43,6 @@
                   <!---->
                   <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
                     <jx-header-nav-content _ngcontent-xfs-c1="" _nghost-xfs-c4="" class="ng-tns-c1-1">
-                      <div _ngcontent-xfs-c1="" class="profile-header-btn-group ng-tns-c1-1">
-                        <button _ngcontent-xfs-c1="" class="setting-btn" onclick="location.href='{{url("mobile/Member/setting")}}'" tabindex="0"></button>
-                        <!---->
-                        <!---->
-                       
-                      </div>
-					  <div _ngcontent-xfs-c1="" class="profile-header-btn-group ng-tns-c1-1"style="right:0;">
-
-                        <!---->
-                        <!---->
-                        <button _ngcontent-xfs-c1="" class="customer-service-btn ng-tns-c1-1 ng-star-inserted" onclick="location.href='{:GetVar('kefuthree')}'"></button>
-                      </div>
                     </jx-header-nav-content>
                   </div>
                   <!---->
@@ -70,7 +58,14 @@
                     <jx-avatar _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c6="">
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
-                      <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} <span>VIP:{{ $user['svip'] }}</span>  ID: {{ $user['uid'] }}</div>
+                      <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
+                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span></p>
+                        <p class="avatar_sub_title">I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span></p>  
+                        <style>
+                          .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
+                          .avatar_sub_title-span{margin-left:0.6rem;}
+                        </style>
+                      </div>
                       <!---->
                       </div>
                   </div>
@@ -83,7 +78,7 @@
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold">{{ $user['coin'] }}</div></div>
                       <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
                         <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日投注--}}Apostas hoje</div>
-                        <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold">0</div></div>
+                        <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="padding-top:15px;">0</div></div>
 					  <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
                         <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日盈亏--}}Lucro e perda de hoje</div>
                         <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="text-align:center">0</div></div>

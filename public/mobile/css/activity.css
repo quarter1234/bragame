@@ -36,7 +36,7 @@ span.activity-status[_ngcontent-snw-c1] {
 }
 
 span.activity-status.open[_ngcontent-snw-c1] {
-    background-image: url(/mobile/img/activity_on.112eb4162510f8b41ae1.svg)
+    /*background-image: url(/mobile/img/activity_on.112eb4162510f8b41ae1.svg)*/
 }
 
 span.activity-status.close[_ngcontent-snw-c1] {

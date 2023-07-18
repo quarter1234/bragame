@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/static/css/amazeui.min.css">
     <link rel="stylesheet" href="/static/css/common2.css">
     <link rel="stylesheet" href="/static/css/material-icons.css">
-    
+    <link rel="stylesheet" href="/mobile/css/activity.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
@@ -82,6 +82,15 @@
 	<div style="box-sizing: border-box;padding: 15px;color:white">
         {!! $activity['content'] !!}
 	</div>
-
+  <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
+              <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
+                <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
+                  
+                  @include('mobile.common.footer') 
+                  
+                 
+                </jx-tab-bar>
+              </jx-footer-row>
+            </div>
 </body>
 </html>

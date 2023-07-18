@@ -48,7 +48,11 @@ div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.username[_ngcon
     font-size: 18px;
     font-weight: 500
 }
-
+.username p{
+    width:100%;
+    padding:0;
+    margin:0;
+}
 div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.rebate[_ngcontent-xfs-c1] {
     color: #13a2ba;
     font-size: 14px;
