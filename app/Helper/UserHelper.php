@@ -4,7 +4,6 @@ namespace App\Helper;
 
 use App\Cache\SConfigVipCache;
 use App\Models\User;
-use App\Repositories\SConfigVipUpgradeRepository;
 
 class UserHelper 
 {
@@ -33,6 +32,11 @@ class UserHelper
         return $code;
     }
 
+    /**
+     * 生成token
+     * @param integer $length
+     * @return string
+     */
     public static function token(int $length = 8) :string
     {
         $token = '';
@@ -63,6 +67,11 @@ class UserHelper
         return User::where('code', $code)->first();
     }
 
+    /**
+     * 根据token获取用户信息
+     * @param string $token
+     * @return mixed
+     */
     public static function getUserByToken(string $token)
     {
         if(!$token) {

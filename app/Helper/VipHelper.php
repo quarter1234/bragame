@@ -6,6 +6,12 @@ use App\Cache\SConfigVipCache;
 
 class VipHelper 
 {
+    /**
+     * 添加vip经验 ，升级vip
+     * @param integer $uid
+     * @param int $diamond
+     * @return void
+     */
     public static function useVipDiamond(int $uid, $diamond)
     {
         $user = UserHelper::getUserByUid($uid);
