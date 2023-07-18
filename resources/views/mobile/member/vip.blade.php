@@ -62,10 +62,10 @@
                 <div class="swiper-slide">
                     <div class="sw_banner">
                         <h2>V{{ $item['level'] + 1 }}<span>Nível atua</span></h2>
-                        <div class="sw_h_bottom">Depósito atual: {{ $user['diamond'] }}</div>
+                        <div class="sw_h_bottom">Depósito atual: {{ $user['svipexp'] }}</div>
                         <p>Recarga cumulativa<span>{{$item['diamond']}}/{{ $vipList[$key + 1]['diamond'] }}</span></p>
                         <div class="sw_jd">
-                            <div class="sw_jd_n"><div @if($key == $user['svip']) style="width: {{ ($user['diamond'] / $exp) * 100 }}%;" @else style="width: 0%;" @endif class="sw_jd_b"></div></div>
+                            <div class="sw_jd_n"><div @if($key == $user['svip']) style="width: {{ ($user['svipexp'] / $exp) * 100 }}%;" @elseif($key < $user['svip']) style="width: 100%;"  @else style="width: 0%;" @endif class="sw_jd_b"></div></div>
                         </div>
                         <div class="sw_text">
                             <div>V{{ $item['level'] + 1 }}</div>

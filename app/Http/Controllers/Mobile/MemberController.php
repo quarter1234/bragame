@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Helper\UserHelper;
+use App\Helper\VipHelper;
 use App\Http\Controllers\Controller;
 use App\Repositories\SConfigCustomerRepository;
 use App\Services\GameService;
@@ -48,6 +49,7 @@ class MemberController extends Controller
     public function vip()
     {
         $user = Auth::user();
+
         $data = $this->memberService->getVipInfo($user);
 
         return view('mobile.member.vip', $data);
