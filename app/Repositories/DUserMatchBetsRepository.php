@@ -10,10 +10,6 @@ class DUserMatchBetsRepository extends Repository
         return DUserMatchBets::class;
     }
 
-    public function storeCenterTaxLog(array $data){
-        return $this->create($data);
-    }
-
     public function getUserMatchBet($uid){
         if($uid){
            return $this->model()::where("uid", $uid)
@@ -46,5 +42,19 @@ class DUserMatchBetsRepository extends Repository
         ];
         $this->model()::where('id', $id)
                         ->update($upData);
+    }
+
+    public function addMatchBets($uid, $amount, $fromType, $betMul, $orderid){
+        $now = time();
+        $addData = [
+            'uid' => $uid,
+            'amount' => $amount,
+            'from_type' => $fromType,
+            'bet_mul' => $betMul,
+            'orderid' => $orderid,
+            'create_time' => $now,
+        ];
+
+        return $this->create($addData);
     }
 }

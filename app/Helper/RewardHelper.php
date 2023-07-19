@@ -278,7 +278,7 @@ class RewardHelper
 
         foreach($rebateGamelist as $gid){
             if($gid == $gameId){
-                self::addSuperiorRewards($uid, $actType, $coin, 2, $gameId, $type);
+                self::addSuperiorRewards($uid, $actType, $coin, 1, $gameId, $type);
                 break;
             }
         }

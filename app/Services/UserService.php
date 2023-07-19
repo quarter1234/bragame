@@ -2,8 +2,11 @@
 namespace App\Services;
 
 use App\Common\Enum\CommonEnum;
+use App\Facades\Bets;
+use App\Helper\RewardHelper;
 use App\Helper\UserHelper;
 use App\Models\DUserLoginLog;
+use App\Repositories\DCommissionRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
@@ -14,11 +17,15 @@ class UserService
 {
     private $userRepo;
     private $userRech;
+    private $userComm;
 
-    public function __construct(UserRepository $userRepo, DUserRechargeRepository $userRech)
+    public function __construct(UserRepository $userRepo,
+                                DUserRechargeRepository $userRech,
+                                DCommissionRepository $userComm)
     {
         $this->userRepo  = $userRepo;
         $this->userRech = $userRech;
+        $this->userComm = $userComm;
     }
 
     /**
@@ -135,7 +142,7 @@ class UserService
         else if($type == GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE']){ // 充值到账
             $user->totalrecharge += $altercoin;
         }
-        // TODO redis缓存
+
         $user->save(); // -- 及时保存
         return [$beforecoin, $aftercoin];
     }
@@ -174,7 +181,37 @@ class UserService
         $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
         list($beforecoin, $aftercoin) = $this->alterUserCoin($user, $totalcoin, $cointype); // --商城充值
-        // TODO 添加打码
+        Bets::addUserBetMatch($uid, $orderid, $totalcoin, 1);
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']);
+        $isfirst = 1; // --首次充值
+        $rechargeCount = $this->userRech->getUserRechargeNum($uid);
+        if($rechargeCount > 0){
+            $isfirst = 0;
+        }
+        $backcoin = $sendcoin + $totalcoin; // 赠送的金币数 + 订单的金额
+        $nowtime = time();
+        $rechUpData = [
+            'status' => 2,
+            'sendcoin' => $sendcoin,
+            'backcoin' => $backcoin,
+            'pay_time' => $nowtime,
+            'isfirst' => $isfirst,
+        ];
+        $this->userRech->upUserRecharge($orderid, $rechUpData); // 改变订单状态
+        // -- 添加上级奖励
+        RewardHelper::addSuperiorRewards($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], $totalcoin);
+        $inviteConfig = SystemConfigHelper::getByKey('invite');
+        if($inviteConfig
+            && $inviteConfig['invite']
+            && !empty($inviteConfig['invite']['rtype'])
+            && $inviteConfig['invite']['rtype'] == 1){ // --充值的时候返注册奖励
+            $count = $this->userComm->getCommByUserTypeNum($uid, 1);
+            if(empty($count)){ // 未给返佣给上级 给注册奖励
+                RewardHelper::addSuperiorRewards($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['REG']);
+            }
+        }
+
+
         return false;
     }
 }
