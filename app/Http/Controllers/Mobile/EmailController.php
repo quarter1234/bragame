@@ -31,7 +31,7 @@ class EmailController extends Controller
         $user = Auth::user();
 
         $data = [];
-        $data['user'] = $user; 
+        $data['user'] = $user;
         return view('mobile.email.email', $data);
     }
 
@@ -39,7 +39,7 @@ class EmailController extends Controller
     {
         $user = Auth::user();
         $list = $this->emailService->getEmails($user)->toArray();
-       
+
         return view('mobile.email.email_list', $list);
     }
 
@@ -51,7 +51,7 @@ class EmailController extends Controller
         $data = [];
         $data['user'] = $user;
         $data['info'] = $this->emailService->getEmailInfo($id, $user);
-       
+
         return view('mobile.email.email_info', $data);
     }
 
@@ -67,10 +67,10 @@ class EmailController extends Controller
 
         if($info->hastake != CommonEnum::UNABLE) {
             throw new BadRequestException(['msg' => 'Você já reclamou o ouro']);
-            
+
         }
 
-        RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail']);
+        RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['MAILATTACH']);
         $info->hastake = CommonEnum::ENABLE;
         $info->hasread = CommonEnum::ENABLE;
         $info->save();

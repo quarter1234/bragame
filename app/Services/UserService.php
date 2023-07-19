@@ -3,8 +3,10 @@ namespace App\Services;
 
 use App\Common\Enum\CommonEnum;
 use App\Facades\Bets;
+use App\Helper\LogHelper;
 use App\Helper\RewardHelper;
 use App\Helper\UserHelper;
+use App\Helper\VipHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\DCommissionRepository;
 use App\Repositories\UserRepository;
@@ -12,6 +14,7 @@ use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
 use App\Cache\AllUseGameDrawCache;
+use Illuminate\Support\Facades\Log;
 
 class UserService
 {
@@ -178,11 +181,13 @@ class UserService
         }
 
         $totalcoin = $order['count']; // --金币
-        $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
+        $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
-        list($beforecoin, $aftercoin) = $this->alterUserCoin($user, $totalcoin, $cointype); // --商城充值
+        $alterlog = "订单到账";
+        RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
         Bets::addUserBetMatch($uid, $orderid, $totalcoin, 1);
-        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']);
+        // 赠送金额
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND']);
         $isfirst = 1; // --首次充值
         $rechargeCount = $this->userRech->getUserRechargeNum($uid);
         if($rechargeCount > 0){
@@ -211,7 +216,7 @@ class UserService
             }
         }
 
-
-        return false;
+        VipHelper::useVipDiamond($uid, $totalcoin);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 }

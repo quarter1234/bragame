@@ -8,7 +8,6 @@ class GameEnum{
             "DOWN" => 2, // 下分
             "BET" => 3, // 下注
             "WIN" => 4, // 赢钱
-            'SHOP_RECHARGE' => 15, // 商城充值
             // 奖励类型
             "AGENT_REG_REWARDS" => 130, // --下级注册奖励
             "AGENT_BUY_REWARDS" => 131, // --下级购买奖励
@@ -37,6 +36,10 @@ class GameEnum{
             "SPECIAL" => [
                 "QUEST" => 160000, // --任务奖励
                 "STORE_BUY" => 40000, // --商城购买
+                "STORE_SEND" => 41000, // --商城赠送
+                "MAILATTACH" => 150000, // --邮件附件
+                "BOX_AWRAD" => 188010, // -- 宝箱奖励
+                "AGENT_WEEK_AWARD" => 188011, // -- 工资奖励
             ]
         ],
         "RET" => [
