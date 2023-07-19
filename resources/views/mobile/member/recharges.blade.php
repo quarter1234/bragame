@@ -19,7 +19,7 @@
     <script src="/static/js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/static/js/artDialog.js"></script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
-   
+    <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
 
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -96,6 +96,12 @@
     </jx-root>
 
     <script>
+    function copy(orderid) {
+      const btnCopy = new Clipboard();
+      this.copyValue = 'orderid';
+      console.log(orderid)
+    }
+
     function loadRecharges() {
         let page = $('#content_load_more').attr('page');
           showLoading();
@@ -117,7 +123,14 @@
     }
     
     $(document).ready(function() {
-      loadRecharges();  
+      loadRecharges();
+
+      var clipboard = new ClipboardJS('.copy_btn')
+      clipboard.on('success', function (e) {
+        alert('success')
+        // layer.msg('已复制：' + e.text, { icon: 9, time: 1000 })
+      })
+      
     })
     </script>
   </body>

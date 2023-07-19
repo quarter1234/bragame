@@ -1518,9 +1518,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .myScroll>ul>li {
     line-height: 25px;
-    height: 48px;
+    height: 40px;
     width: 100%;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #1e3655;
     overflow: hidden;
     padding-left: 10px;
     position: relative;
@@ -3344,6 +3344,7 @@ button.cancel-btn[_ngcontent-way-c22] {
    line-height:20px;
    text-align:left;
    font-size:12px;
+   padding-top:10px;
 }
 .game_qb_left{
     width:50%;
@@ -3363,6 +3364,16 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .game_list{
     width:95%;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+.game_list a{
+    width: 30%;
+    margin-top: 15px;
+    object-fit: cover;
+    transition: 0.1s;
+    transform: scale(1);
 }
 
 .pp_game{

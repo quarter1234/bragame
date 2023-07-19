@@ -144,14 +144,16 @@
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Gostas</span></button>
+                        <!----> 
+                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button> 
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
+                        
                       
                         {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
@@ -178,46 +180,15 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          <div style="width:100%;text-align:center;margin-top:1rem">
-                              <div class="game_qb_title">
-                                  <div class="game_qb_left">
-                                     <span class="game_ico"></span>Favorito
-                                  </div>
-                                  <div class="game_qb_left" style="text-align:right;">
-                                     <a style="padding-right:20px;">Ver tudo</a>
-                                  </div>
-                              </div>
-                              {{--游戏放这里--}}
-                              <div class="game_list"></div>
-                              {{----}}
-                              <div class="game_qb_title">
-                                  <div class="game_qb_left">
-                                     <span class="pp_game"></span>In-PP
-                                  </div>
-                                  <div class="game_qb_left" style="text-align:right;">
-                                     <a style="padding-right:20px;">Ver tudo</a>
-                                  </div>
-                              </div>
-                              {{--游戏放这里--}}
-                              <div class="game_list"></div>
-                              {{----}}
-                              <div class="game_qb_title">
-                                  <div class="game_qb_left">
-                                     <span class="pg_game"></span>In-PG
-                                  </div>
-                                  <div class="game_qb_left" style="text-align:right;">
-                                     <a style="padding-right:20px;">Ver tudo</a>
-                                  </div>
-                              </div>
-                              {{--游戏放这里--}}
-                              <div class="game_list"></div>
-                          </div>
+                          @include('mobile.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab9_content_pps"></div>
-                          <div style="width:100%;text-align:center;margin-top:1rem">
-                              
+                          <div style="width:100%;text-align:center;">
+                              <div class="game_list"> @foreach($favorRecommend as $item)
+        <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
+    @endforeach</div>
                           </div>
                         </div>
 
@@ -291,7 +262,7 @@
                 </h2>
               </div>
               <div class="rankBg"></div>
-              <div class="news-content myScroll" style="height: 240px; padding: 0px 10px;">
+              <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
                 <li style="color: #a9bed8;">
                     <span>Json**a</span>
@@ -457,7 +428,7 @@
         $('.myScroll').myScroll({
           speed: 40,
           //数值越大，速度越慢
-          rowHeight: 48 //li的高度
+          rowHeight:40 //li的高度
         });
 
         $('.notice-tab li.tab_g').hover(function() {
