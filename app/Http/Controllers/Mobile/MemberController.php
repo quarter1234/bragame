@@ -3,10 +3,8 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Helper\UserHelper;
-use App\Helper\VipHelper;
 use App\Http\Controllers\Controller;
 use App\Repositories\SConfigCustomerRepository;
-use App\Services\GameService;
 use App\Services\MemberService;
 use Illuminate\Support\Facades\Auth;
 
@@ -58,7 +56,18 @@ class MemberController extends Controller
     // 充值记录
     public function recharges()
     {
-        return view('mobile.member.recharges');
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+        return view('mobile.member.recharges', $data);
+    }
+
+    public function rechargeList()
+    {
+        $user = Auth::user();
+        $list = $this->memberService->getRechargeList($user)->toArray();
+
+        return view('mobile.member.rechare_list', $list);
     }
 
     // 提现记录

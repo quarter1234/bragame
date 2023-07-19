@@ -47,8 +47,8 @@
   </style>
   <div class="tc" style="display: none;">
       <div class="tc_top">
-              <div class="tc_top_list tc_on">{{--登录--}}Login</div>
-              <div class="tc_top_list">{{--注册--}}Registo</div>
+              <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
+              <div class="tc_top_list">{{ trans('auth.register') }}</div>
               <div class="close"><img src="..\..\static\images\close.png"></div>      
       </div>
       <div class="list" style="display:block;">
@@ -70,12 +70,12 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r1"><img src="..\..\static\images\25gf.png" />{{--记住密码--}}Lembre-se da senha</div>
-                        <div class="r_left r2"><img src="..\..\static\images\24gf.png" />{{--记住密码--}}Lembre-se da senha</div>
+                        <div class="r_left r1"><img src="..\..\static\images\25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="..\..\static\images\24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
-                  <div class="r_right"><a>忘记密码？</a></div>
+                  <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>
-              <button id="sub" type="submit" disabled="disabled" class="login">{{--登录--}}Login</button>
+              <button id="sub" type="submit" disabled="disabled" class="login">{{ trans('auth.login') }}</button>
           </form>
           </div>
       </div>
@@ -109,12 +109,12 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="..\..\static\images\25gf.png" />{{--记住密码--}}Lembre-se da senha</div>
-                        <div class="r_left r1"><img src="..\..\static\images\24gf.png" />{{--记住密码--}}Lembre-se da senha</div>
+                        <div class="r_left r2"><img src="..\..\static\images\25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="..\..\static\images\24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
-                  <div class="r_right"><a>{{--忘记密码？--}}Esqueça a senha?</a></div>
+                  <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>
-              <button id="subRegister" type="submit" disabled="disabled" class="login">{{--注册--}}Registo</button>
+              <button id="subRegister" type="submit" disabled="disabled" class="login">{{ trans('auth.register') }}</button>
 
             </form>
           </div>

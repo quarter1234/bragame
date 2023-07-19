@@ -57,6 +57,8 @@ Route::group([
     Route::get('vip', [MemberController::class, 'vip']);
     
     Route::get('recharges', [MemberController::class, 'recharges']);
+    Route::get('rechargeList', [MemberController::class, 'rechargeList']);
+
     Route::get('draws', [MemberController::class, 'draws']);
     Route::get('bets', [MemberController::class, 'bets']);
 

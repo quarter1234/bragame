@@ -8,14 +8,12 @@ use App\Repositories\DPgGameRepository;
 use App\Repositories\SConfigRepository;
 use App\Repositories\DPgGameBetsRepository;
 use App\Repositories\CoinLogRepository;
-use App\Repositories\UserRepository;
 use App\Common\Message\CodeMsg;
 use GuzzleHttp\Client;
 use App\Facades\User;
 use App\Facades\Bets;
 use App\Helper\SystemConfigHelper;
 use App\Helper\RewardHelper;
-use Illuminate\Support\Facades\Log;
 
 class GameService
 {

@@ -37,7 +37,7 @@
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="活动中心" _nghost-snw-c3="">
+          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           <div class="top">
                 <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
                 <div class="money">
@@ -58,7 +58,7 @@
 
 
             <div style="width:100%;text-align:center;margin-top:1rem">
-              <button id="email_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
+              <button id="email_load_more" page="0" onclick="loadEmails()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
           </div>
 
           {{--loading组件--}}
@@ -101,7 +101,7 @@
     </jx-root>
 
     <script>
-    function loadInvites() {
+    function loadEmails() {
         let page = $('#email_load_more').attr('page');
           showLoading();
           $.ajax({
@@ -122,7 +122,7 @@
     }
     
     $(document).ready(function() {
-        loadInvites();  
+      loadEmails();  
     })
     </script>
   </body>

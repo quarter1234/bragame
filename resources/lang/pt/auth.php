@@ -11,4 +11,10 @@ return [
 
     'failed' => 'Usuário ou senha incorretos',
     'throttle' => 'Você tentou fazer login muitas vezes. Tente novamente em :seconds segundos.',
+    'phone_used' => 'Este número de telefone já está em uso.',
+    'register_err' => 'Registro falhou',
+    'remember_password' => 'Lembre-se da senha.',
+    'register' => 'Registo',
+    'login' => 'Login',
+    'login_out' => 'Confirme se deseja sair da conta',
 ];

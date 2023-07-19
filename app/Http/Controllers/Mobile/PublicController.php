@@ -45,19 +45,19 @@ class PublicController extends Controller
 
         $hasUser = $this->userService->getUserByPhone($params['phone']);
         if($hasUser) {
-            return Result::error('这个手机号已经被使用');
+            return Result::error(trans('auth.phone_used'));
         }
 
         $registerUser =$this->userService->storeUser($params);
         if(!$registerUser) {
-            return Result::error('注册失败');
+            return Result::error(trans('auth.register_err'));
         }
 
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
        
         if(!$this->handleLogin($params)) {
-            return Result::error('数据库或密码不正确！');
+            return Result::error(trans('auth.failed'));
         }
 
         return Result::success();
@@ -108,7 +108,7 @@ class PublicController extends Controller
         $params['ip'] = Request::getClientIp();
 
         if(!$this->handleLogin($params)) {
-            return Result::error('数据库或密码不正确！');
+            return Result::error(trans('auth.failed'));
         }
 
         return Result::success();

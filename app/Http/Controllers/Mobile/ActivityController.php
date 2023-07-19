@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
 use App\Services\ActivityService;
-use Illuminate\Support\Facades\Request;
 
 /**
  * 活动任务相关

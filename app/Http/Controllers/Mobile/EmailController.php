@@ -8,10 +8,8 @@ use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
 use App\Http\Controllers\Controller;
 use App\Services\EmailService;
-use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
-use App\Facades\User;
 use App\Helper\RewardHelper;
 
 /**
