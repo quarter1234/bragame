@@ -1,10 +1,7 @@
 <?php
 namespace App\Services;
 
-use App\Exceptions\BadRequestException;
 use App\Repositories\DUserMailNewRepository;
-use App\Repositories\TokenRepository;
-use App\Repositories\UserRepository;
 
 class EmailService
 {

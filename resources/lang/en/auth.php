@@ -16,5 +16,10 @@ return [
     'failed' => 'These credentials do not match our records.',
     'password' => 'The provided password is incorrect.',
     'throttle' => 'Too many login attempts. Please try again in :seconds seconds.',
-
+    'phone_used' => 'This phone number has already been used.',
+    'register_err' => 'Registration failed.',
+    'remember_password' => 'Remember password.',
+    'register' => 'Register',
+    'login' => 'Login',
+    'login_out' => 'Confirm if you want to log out of the account.',
 ];

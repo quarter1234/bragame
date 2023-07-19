@@ -5,9 +5,7 @@ namespace App\Http\Controllers\Mobile;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\DisplayRequest;
 use App\Services\DisplayService;
-use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Request;
 
 class DisplayController extends Controller
 {

@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
-use App\Services\ShareService;
 use Illuminate\Support\Facades\Auth;
 
 class ShopController extends Controller
 {
-    private $shareService;
 
-    public function __construct(ShareService $shareService)
+    public function __construct()
     {
-       $this->shareService = $shareService;
+       
     }
 
     public function index()

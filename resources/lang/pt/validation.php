@@ -147,5 +147,6 @@ return [
 
     'attributes' => [
         'email' => 'Caixa de correio',
+        'game_code' => 'Código do jogo',
     ],
 ];

@@ -137,15 +137,23 @@
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
+                      <button _ngcontent-way-c8="" id="tab1" onclick="myclick(8)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
                         <!---->
+                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Gostas</span></button>
+                        <!----> 
+                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button> 
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-lottery "></div>
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-live active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
+                        
                       
                         {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
@@ -169,7 +177,24 @@
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
+                        {{-- 全部游戏 --}}
+                        <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: none">
+                          <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
+                          @include('mobile.index.game_recommend')
+                        </div>
                         <!---->
+                        <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
+                          <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab9_content_pps"></div>
+                          <div style="width:100%;text-align:center;">
+                          {{-- 喜欢的游戏 --}}    
+                          <div class="game_list"> 
+                              @foreach($favorRecommend as $item)
+                                  <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
+                              @endforeach
+                              </div>
+                          </div>
+                        </div>
+
                         {{-- PP 游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab1_content_pps"></div>
@@ -240,33 +265,33 @@
                 </h2>
               </div>
               <div class="rankBg"></div>
-              <div class="news-content myScroll" style="height: 290px; padding: 0px 10px;">
+              <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
                 <li style="color: #a9bed8;">
                     <span>Json**a</span>
                       <em>
-                        <em style="color: #d7ab49;">R$9000.00</em></em>
+                        <em style="color: #999;">R$9000.00</em></em>
                   </li>
 
                   <li style="color: #a9bed8;">
                   <span>8****32</span>
                       <em>
-                        <em style="color: #d7ab49;">R$4560.00</em></em>
+                        <em style="color: #999;">R$4560.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>a****5</span>
                       <em>
-                        <em style="color: #d7ab49;">R$645.00</em></em>
+                        <em style="color: #999;">R$645.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                     <span>1**34</span>
                       <em>
-                        <em style="color: #d7ab49;">R$7647.00</em></em>
+                        <em style="color: #999;">R$7647.00</em></em>
                   </li>
                   <li style="color: #a9bed8;">
                   <span>2**4</span>
                       <em>
-                        <em style="color: #d7ab49;">R$7647.00</em></em>
+                        <em style="color: #999;">R$7647.00</em></em>
                   </li>
                 </ul>
               </div>
@@ -406,7 +431,7 @@
         $('.myScroll').myScroll({
           speed: 40,
           //数值越大，速度越慢
-          rowHeight: 58 //li的高度
+          rowHeight:40 //li的高度
         });
 
         $('.notice-tab li.tab_g').hover(function() {

@@ -19,6 +19,26 @@ class DPgGameRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
+    public function getGameRecommend(array $params)
+    {
+        return $this->model()::where('platform', $params['platform'])
+        ->where('game_status', CommonEnum::ENABLE)
+        ->orderBy('sort', 'desc')
+        ->limit(CommonEnum::RECOMMEND_NUM)
+        ->get();
+    }
+
+    public function getGameFavor($params)
+    {
+        return $this->model()::where('game_status', CommonEnum::ENABLE)
+        ->where('platform', $params['platform'])
+        ->orderBy('id', 'desc')
+        ->limit(CommonEnum::RECOMMEND_NUM)
+        ->get();
+        // whereIn('platform', $params['platform'])
+        // ->
+    }
+
     public function getPgGameByCode($gameCode){
         return $this->model()::where('game_code', $gameCode)->first();
     }

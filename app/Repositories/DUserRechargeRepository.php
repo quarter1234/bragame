@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use App\Common\Enum\CommonEnum;
 use App\Models\DUserRecharge;
 
 class DUserRechargeRepository extends Repository
@@ -44,5 +45,15 @@ class DUserRechargeRepository extends Repository
             $this->model()::where("orderid", $orderId)
                             ->update($data);
         }
+    }
+    
+    public function getRecharges($user, $startTime, $endTime)
+    {
+        return $this->model()::where('uid', $user->uid)
+        ->where('create_time', '>', $startTime)
+        ->where('create_time', '<', $endTime)
+        ->whereIn('status', [1, 2, 3])
+        ->orderBy('id', 'desc')
+        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 }

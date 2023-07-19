@@ -17,7 +17,7 @@ class DUserMailNewRepository extends Repository
         return $this->model()::where('uid', $user->uid)
         ->where('hasread', CommonEnum::UNABLE)
         ->orderBy('id', 'desc')
-        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);;
+        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
     public function getEmailInfo($id, $user)

@@ -2,7 +2,6 @@
 namespace App\Services;
 
 use App\Helper\LogHelper;
-use App\Helper\RewardHelper;
 use App\Repositories\DUserMatchBetsRepository;
 use App\Repositories\SBetConfigRepository;
 

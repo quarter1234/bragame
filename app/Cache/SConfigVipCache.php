@@ -19,9 +19,9 @@ class SConfigVipCache
     {
         $cacheKey = sprintf(self::S_CONFIG_KEY);
 
-       return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
-            $configRepo = app()->make(SConfigVipUpgradeRepository::class);
-            return $configRepo->getConfigs()->toArray();
-       });
+        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
+                $configRepo = app()->make(SConfigVipUpgradeRepository::class);
+                return $configRepo->getConfigs()->toArray();
+        });
     }
 }

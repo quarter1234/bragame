@@ -17,7 +17,6 @@ class IndexController extends Controller
 
     public function index(PublicRequest $request)
     {
-        
         $params = $request->goCheck('index');
         $data = $this->indexService->getIndexData($params);
         

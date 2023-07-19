@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Cache\IndexGameCache;
 use App\Common\Enum\CommonEnum;
 use App\Repositories\SConfigPicRepository;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +34,10 @@ class IndexService
         if($data['code']) {
             session([CommonEnum::INVITE_CODE_KEY => $data['code']]);
         }
-
+        $data['pgRecommend'] = IndexGameCache::getPGRecommend();
+        $data['ppRecommend'] = IndexGameCache::getPPRecommend();
+        $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
+        
         $data['bnners'] = $this->picRepo->getBanners();
 
         return $data;

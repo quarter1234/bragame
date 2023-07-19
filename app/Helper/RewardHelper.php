@@ -258,7 +258,7 @@ class RewardHelper
      * @param $gameId
      * @param $type
      */
-    public function gameRebate($uid, $actType, $coin, $gameId, $type){
+    public static function gameRebate($uid, $actType, $coin, $gameId, $type){
         $inviteConfig = SystemConfigHelper::getByKey('invite');
         $rebateGamelist = [];
         $str = "";

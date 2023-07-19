@@ -120,7 +120,7 @@
                     
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('是否退出？'))location='{{url("mobile/logout")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--退出账号--}}Saia da conta
                       </button>
                      </div>
@@ -143,7 +143,5 @@
         </jx-profile-page>
       </jx-main-wrapper>
     </jx-root>
-
   </body>
-
 </html>

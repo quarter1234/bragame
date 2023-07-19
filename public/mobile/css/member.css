@@ -1922,7 +1922,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
-    min-height: 49px;
+    min-height: 66px;
     color: #5d636e;
     display: flex;
     flex-flow: column nowrap;
@@ -2732,7 +2732,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:1px;
     height:40px;
     margin-top:25px;
-    background:rgba(255, 255, 255, .7);
+    background:#26446a;
     float:left;
 }
 .email_w{
@@ -2775,12 +2775,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:12px;
     text-align:right;
 }
-.email_w_left img{
-    width:20px;
-    height:21px;
-    margin:5px;
-    float:left;
-}
+
 .email_hd{
     width:10px;
     height:10px;
@@ -2921,4 +2916,54 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .kf a{
     color:#fff;
+}
+
+.rechare_list{
+    width:95%;
+    height: 110px;
+    background: #132235;
+    border-radius: 10px;
+    margin: 15px auto 0 auto;
+    position: relative;
+}
+.rechare_list img{
+    width:40px;
+    height:40px;
+    float:left;
+    margin:35px 10px;
+}
+.email_w_left img{
+    width:20px;
+    height:21px;
+    margin:5px;
+    float:left;
+}
+.rechare_zt{
+    width:100%;
+    font-size:12px;
+}
+.rechare_list .email_xx1{
+    height:65px;
+}
+.rechare_list .email_xx2{
+    height:65px;
+}
+.rechare_list .email_w{
+    color:#05b3e6;
+    font-weight:bold;
+    font-size:14px;
+}
+.rechare_button{
+    width:60px;
+    height:20px;
+    border-radius:5px;
+    background:#1e3655;
+    position:absolute;
+    right:10px;
+    top:10px;
+    line-height:20px;
+    font-size:12px;
+    color:#fff;
+    text-align:center;
+    display:block;
 }
