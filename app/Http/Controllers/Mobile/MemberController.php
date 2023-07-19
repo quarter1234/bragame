@@ -77,7 +77,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.draws');
+        return view('mobile.member.draws', $data);
     }
 
     // 投注记录
@@ -86,7 +86,7 @@ class MemberController extends Controller
         $user = Auth::user();
         $data = [];
         $data['user'] = $user;
-        
-        return view('mobile.member.bets');
+
+        return view('mobile.member.bets', $data);
     }
 }
