@@ -73,12 +73,20 @@ class MemberController extends Controller
     // 提现记录
     public function draws()
     {
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+
         return view('mobile.member.draws');
     }
 
     // 投注记录
     public function bets()
     {
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+        
         return view('mobile.member.bets');
     }
 }
