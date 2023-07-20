@@ -59,7 +59,7 @@
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
                       <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
-                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label><a>Cópia</a></a></label></p> 
+                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span> {{-- <label><a>Cópia</a></label> --}}</p> 
                         <style>
                           .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
                           .avatar_sub_title-span{margin-left:0.6rem;margin-right:10px;}
