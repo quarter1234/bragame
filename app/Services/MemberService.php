@@ -2,15 +2,20 @@
 namespace App\Services;
 
 use App\Helper\UserHelper;
+use App\Repositories\DUserDrawRepository;
 use App\Repositories\DUserRechargeRepository;
 
 class MemberService
 {
     private $rechargeRepo;
+    private $drawRepo;
 
-    public function __construct(DUserRechargeRepository $rechargeRepo)
+    public function __construct(
+        DUserRechargeRepository $rechargeRepo, 
+        DUserDrawRepository $drawRepo)
     {
         $this->rechargeRepo = $rechargeRepo;
+        $this->drawRepo = $drawRepo;
     }
 
     public function getVipInfo($user) :array
@@ -32,6 +37,12 @@ class MemberService
     {
         $dateTime = $this->getWhereTime(4);
         return $this->rechargeRepo->getRecharges($user, $dateTime['startTime'], $dateTime['endTime']);
+    }
+
+    public function getDrawList($user)
+    {
+        $dateTime = $this->getWhereTime(4);
+        return $this->drawRepo->getDraws($user, $dateTime['startTime'], $dateTime['endTime']);
     }
 
     private function getWhereTime(int $type)

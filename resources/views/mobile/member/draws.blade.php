@@ -106,7 +106,7 @@
         let page = $('#content_load_more').attr('page');
           showLoading();
           $.ajax({
-              url : "{{url('mobile/member/rechargeList')}}",
+              url : "{{url('mobile/member/drawList')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {
