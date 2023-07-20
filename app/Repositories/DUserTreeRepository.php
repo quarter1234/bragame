@@ -44,7 +44,7 @@ class DUserTreeRepository extends Repository
         $data['descendant_id'] = $register->uid;
         $data['descendant_agent'] = $agent;
         $data['ancestor_h'] = intval($tree['ancestor_h']) + 1;
-        $this->create($data);
+        return $this->create($data);
     }
 
     public function storeTree($invitedUid, $registerUid, $agent = 0, $ancestorH = 0)
