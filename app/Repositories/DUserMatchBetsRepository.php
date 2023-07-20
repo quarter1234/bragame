@@ -26,7 +26,7 @@ class DUserMatchBetsRepository extends Repository
             return $this->model()::where("uid", $uid)
                         ->where("opt_status", 0)
                         ->where('id', '<>', $deductId)
-                        ->first();
+                        ->sum('amount');
         }
 
         return 0;
