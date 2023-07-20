@@ -10,6 +10,7 @@ use App\Helper\UserHelper;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Cache;
 
 class RegisterListener implements ShouldQueue
 {
@@ -78,7 +79,20 @@ class RegisterListener implements ShouldQueue
 
         // 也要把自己算进去
         $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
-       
+        
+        // 删除缓存数据
+        $invitePage1 = "share:invite:list:". $inviteUser->uid. '_' . 1;
+        Cache::forget($invitePage1);
+
+        $invitePage2 = "share:invite:list:". $inviteUser->uid. '_' . 2;
+        Cache::forget($invitePage2);
+        $invitePage3 = "share:invite:list:". $inviteUser->uid. '_' . 3;
+        Cache::forget($invitePage3);
+
+        $totalCacheKey = "share:invite:total:". $inviteUser->uid;
+        Cache::forget($totalCacheKey);
+
+
         // 代理返利配置
         // if($inviteConfig['invite']['rtype'] == 2) {
         //     // 如果之前没有获取

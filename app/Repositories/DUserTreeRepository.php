@@ -67,7 +67,7 @@ class DUserTreeRepository extends Repository
         ->where('ancestor_id', $uid)
         ->whereIn('ancestor_h', $heights)
         ->orderBy('id', 'desc')
-        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);;
+        ->simplePaginate(CommonEnum::DEFAULT_INVITE_NUM);
     }
 
     public function getTreeCount($uid, $heights = [])
