@@ -59,11 +59,10 @@
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
                       <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
-                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span></p>
-                        <p class="avatar_sub_title">I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span></p>  
+                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label><a>Cópia</a></a></label></p> 
                         <style>
                           .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
-                          .avatar_sub_title-span{margin-left:0.6rem;}
+                          .avatar_sub_title-span{margin-left:0.6rem;margin-right:10px;}
                         </style>
                       </div>
                       <!---->
@@ -115,7 +114,7 @@
 
                     
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Centro de atendimento ao cliente
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Contact Us
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 

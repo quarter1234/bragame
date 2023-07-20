@@ -11,12 +11,8 @@
     </div>
 </div>
 <div class="xk_b">
-    <h2>{{$user['coin']}}</h2>
-    <div class="xk_but">
-    <button style="background-color:#334d5d;">comissão{{--佣金--}}</button>
-    <button style="background-color:#0a9bc6;">levantamento{{--提取--}}</button>
+    <p>Clique no botão de link de compartilhamento para obter um link de compartilhamento de jogo para um amigo, e o jogador da conta de registro de amigos obtém o número de agentes de compartilhamento.Jogadores de recarga de amigos podem obter certas recompensas e compartilhar mais recompensas.</p>
     </div>
-    <p></p>
 </div>
 
 <script>
