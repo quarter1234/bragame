@@ -7,11 +7,10 @@ use App\Events\RegisterEvent;
 use App\Helper\RewardHelper;
 use App\Helper\SystemConfigHelper;
 use App\Helper\UserHelper;
-use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Cache;
 
 class RegisterListener implements ShouldQueue
 {
@@ -48,6 +47,7 @@ class RegisterListener implements ShouldQueue
         if($inviteUser->forbidcode == 1) {
             return false;
         }
+
         $treeRepo = app()->make(DUserTreeRepository::class);
         $hasBind = $treeRepo->getUserBind($register->uid, $inviteUser->uid);
         if($hasBind) {
@@ -63,13 +63,13 @@ class RegisterListener implements ShouldQueue
 
         $inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards));
 
-        $register->invit_uid = $register->uid;
+        $register->invit_uid = $inviteUser->uid;
         $register->save();
 
-        $inviteUser->invitednum = intval($inviteUser->invitednum) + 1;
+        $inviteUser->invitednum = $inviteUser->invitednum  + 1;
         $inviteUser->save();
 
-        // 绑定关系表
+        // 绑定之前关系表
         $invitedList = $treeRepo->getInviteTree($inviteUser->uid)->toArray();
         if($invitedList) {
             foreach ($invitedList as $item) {
@@ -77,19 +77,35 @@ class RegisterListener implements ShouldQueue
             }
         }
 
+        // 也要把自己算进去
+        $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+        
+        // 删除缓存数据
+        $invitePage1 = "share:invite:list:". $inviteUser->uid. '_' . 1;
+        Cache::forget($invitePage1);
+
+        $invitePage2 = "share:invite:list:". $inviteUser->uid. '_' . 2;
+        Cache::forget($invitePage2);
+        $invitePage3 = "share:invite:list:". $inviteUser->uid. '_' . 3;
+        Cache::forget($invitePage3);
+
+        $totalCacheKey = "share:invite:total:". $inviteUser->uid;
+        Cache::forget($totalCacheKey);
+
+
         // 代理返利配置
-        if($inviteConfig['invite']['rtype'] == 2) {
-            // 如果之前没有获取
-            $commissionRepo = app()->make(DCommissionRepository::class);
-            $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
-            if(!$hasCommission) {
-                RewardHelper::addSuperiorRewards(
-                    $register->uid,
-                    GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
-                    $inviteConfig['invite']['coin1'],
-                    $inviteConfig['invite']['rtype']
-                );
-            }
-        }
+        // if($inviteConfig['invite']['rtype'] == 2) {
+        //     // 如果之前没有获取
+        //     $commissionRepo = app()->make(DCommissionRepository::class);
+        //     $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
+        //     if(!$hasCommission) {
+        //         RewardHelper::addSuperiorRewards(
+        //             $register->uid,
+        //             GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
+        //             $inviteConfig['invite']['coin1'],
+        //             $inviteConfig['invite']['rtype']
+        //         );
+        //     }
+        // }
     }
 }

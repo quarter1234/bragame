@@ -44,7 +44,17 @@ class DUserTreeRepository extends Repository
         $data['descendant_id'] = $register->uid;
         $data['descendant_agent'] = $agent;
         $data['ancestor_h'] = intval($tree['ancestor_h']) + 1;
-        $this->create($data);
+        return $this->create($data);
+    }
+
+    public function storeTree($invitedUid, $registerUid, $agent = 0, $ancestorH = 0)
+    {
+        $data = [];
+        $data['ancestor_id'] = $invitedUid;
+        $data['descendant_id'] = $registerUid;
+        $data['descendant_agent'] = $agent;
+        $data['ancestor_h'] = $ancestorH;
+        return $this->create($data);
     }
 
     public function getPrentInviteTree($uid, $len){
@@ -57,7 +67,7 @@ class DUserTreeRepository extends Repository
         ->where('ancestor_id', $uid)
         ->whereIn('ancestor_h', $heights)
         ->orderBy('id', 'desc')
-        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);;
+        ->simplePaginate(CommonEnum::DEFAULT_INVITE_NUM);
     }
 
     public function getTreeCount($uid, $heights = [])

@@ -44,7 +44,7 @@
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:70%;
+    top:60%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
@@ -113,7 +113,7 @@
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:78%;
+    top:70%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
@@ -130,7 +130,7 @@
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:86%;
+    top:80%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;

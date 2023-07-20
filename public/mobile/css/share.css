@@ -188,6 +188,11 @@
     text-align:left;
     font-size:12px;
     color:#999;
+    padding-top:10px;
+}
+.xk_b img{
+    width:340px;
+    height:230px;
 }
 .xk_b label{
     width: 60px;

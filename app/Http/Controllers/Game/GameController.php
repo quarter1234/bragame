@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Game;
 use App\Common\Lib\Result;
 use App\Http\Controllers\Controller;
 use App\Services\GameService;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 
 class GameController extends Controller
@@ -44,6 +45,11 @@ class GameController extends Controller
         $gameInfo = $this->gameService->getDPGGameInfo($id);
         if(!$gameInfo) {
             return Result::error('not find game');
+        }
+
+        $user = Auth::user();
+        if($user->coin < $gameInfo->en_coin) {
+            return Result::error("Menos de {$gameInfo['en_coin']} moedas");
         }
 
         return Result::success(['code' => $gameInfo['game_code'] ?? '']);

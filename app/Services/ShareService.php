@@ -53,6 +53,8 @@ class ShareService
         });
     }
 
+    
+
     public function getInviteCacheTotal($user)
     {
         $cacheKey = "share:invite:total:". $user->uid;

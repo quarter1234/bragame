@@ -38,15 +38,9 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
-          <div class="top">
-                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
-                <div class="money">
-                    <span>R$</span>
-                    <span>{{ $user['coin'] }}</span>
-                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
-                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
-                </div>
-            </div>
+          
+          @include('mobile.common.top') 
+
             <div class="email_h"></div>
             <div id="email_list_pages">
 

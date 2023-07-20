@@ -40,15 +40,8 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             
-          <div class="top">
-                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
-                <div class="money">
-                    <span>R$</span>
-                    <span>{{ $user['coin'] }}</span>
-                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
-                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
-                </div>
-            </div>
+          @include('mobile.common.top') 
+
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
