@@ -190,14 +190,14 @@
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab1_content_pps"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">{{--点击加载更多--}}Clique para carregar mais</button>
+                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">{{--点击加载更多--}}Carregue mais</button>
                           </div>
                         </div>
                       {{-- PG 游戏 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
+                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
                           </div>
                         </div>
 

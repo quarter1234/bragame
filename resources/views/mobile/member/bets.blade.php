@@ -48,7 +48,7 @@
             </div>
 
             <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
+                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
             </div>
 
           {{--loading组件--}}
