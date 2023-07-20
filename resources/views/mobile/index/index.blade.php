@@ -59,7 +59,7 @@
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="../../mobile/img/sx.png"></div>
-                            <div class="qb"><img src="../../mobile/img/qb.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="../../mobile/img/qb.png"></div>
                         </div>
                     </span>
                   @else 
