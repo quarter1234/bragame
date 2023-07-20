@@ -20,4 +20,11 @@ class DUserDrawRepository extends Repository
         ->orderBy('id', 'desc')
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
+
+    public function upDraw($id, $data){
+        if($id && $data){
+            $this->model()::where("id", $id)
+                            ->update($data);
+        }
+    }
 }

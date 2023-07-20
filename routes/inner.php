@@ -14,5 +14,6 @@ Route::group([
 Route::group([
     'prefix' => 'inner'
 ], function ($router) {
-    Route::get('processRequestPay', [CallApiController::class, 'processRequestPay']); // 回调获得用户余额
+    Route::get('processRequestPay', [CallApiController::class, 'processRequestPay']); // 支付回调
+    Route::get('processRequestUser', [CallApiController::class, 'processRequestUser']); // 后台回调修改用户信息(包括拒绝提现)
 });

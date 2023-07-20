@@ -30,4 +30,33 @@ class CallApiController extends Controller{
 
         return 'error';
     }
+
+    /**
+     * 用户相关的操作(针对后台调用)
+     * @param Request $request
+     * @return string
+     */
+    public function processRequestUser(Request $request){
+        $mod = $request->get("mod", '');
+        $act = $request->get("act", '');
+        if($mod != 'user'){
+            return 'error';
+        }
+
+        if($act == 'drawverify'){ // 提现审核
+            $uid = $request->get("uid", false);
+            $id = $request->get("id", false);
+            $status = $request->get("status", false);
+            if(!$uid || !$id || !$status){
+                return "has some column empty";
+            }
+
+            $resVal = User::drawverify($uid, $id, $status);
+            if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+                return 'succ';
+            }
+        }
+
+        return 'error';
+    }
 }

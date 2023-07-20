@@ -9,6 +9,7 @@ use App\Helper\UserHelper;
 use App\Helper\VipHelper;
 use App\Models\DUserLoginLog;
 use App\Repositories\DCommissionRepository;
+use App\Repositories\DUserDrawRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
@@ -21,14 +22,17 @@ class UserService
     private $userRepo;
     private $userRech;
     private $userComm;
+    private $userDraw;
 
     public function __construct(UserRepository $userRepo,
                                 DUserRechargeRepository $userRech,
-                                DCommissionRepository $userComm)
+                                DCommissionRepository $userComm,
+                                DUserDrawRepository $userDraw)
     {
         $this->userRepo  = $userRepo;
         $this->userRech = $userRech;
         $this->userComm = $userComm;
+        $this->userDraw = $userDraw;
     }
 
     /**
@@ -218,5 +222,52 @@ class UserService
 
         VipHelper::useVipDiamond($uid, $totalcoin);
         return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /**
+     * 拒绝提现
+     * @param $uid
+     * @param $id
+     */
+    private function _rejectDraw($user, $draw){
+        $addCoin = $draw['coin'];
+        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['DRAW_RETURN'];
+        $title = "拒绝提现:" . $addCoin;
+        RewardHelper::alterCoinLog($user, $addCoin, GameEnum::PDEFINE['ALTERCOINTAG']['DOWNRETURN'], $gameId, $title);
+        $this->updateGameDrawInDraw($user, $addCoin);
+        $this->userDraw->upDraw($draw['id'], ['status' => 3]);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /**
+     * 提现审核通过和拒绝
+     * @param $uid
+     * @param $id
+     * @param $status
+     * @return mixed
+     */
+    public function drawverify($uid, $id, $status){
+        if($uid && $id && $status){
+            $draw = $this->userDraw->find($id);
+            if(!$draw){
+                return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+            }
+
+            $user = UserHelper::getUserByUid($uid);
+            if(!$user){
+                return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+            }
+
+            if($status == 2){ // 审核通过
+                // TODO 通过审核
+            }
+            else{ // --拒绝提现
+                if($draw['status'] != 3){
+                    return $this->_rejectDraw($user, $draw);
+                }
+            }
+        }
+
+        return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
     }
 }
