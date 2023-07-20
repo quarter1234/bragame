@@ -46,11 +46,13 @@
                   <!---->
                   <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
                   <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
-                    <jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
+                  {{--<jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
                       <!---->
                       <!---->
+                      
                       <button _ngcontent-snw-c1="" onclick="location.href='{{ route("mobile.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
-                    </jx-header-nav-content>
+                      
+                    </jx-header-nav-content>--}}
                   </div>
                   <!---->
                   <!---->
