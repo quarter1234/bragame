@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Helper\UserHelper;
+use App\Repositories\DPgGameBetsRepository;
 use App\Repositories\DUserDrawRepository;
 use App\Repositories\DUserRechargeRepository;
 
@@ -9,13 +10,16 @@ class MemberService
 {
     private $rechargeRepo;
     private $drawRepo;
+    private $pgBetsRepo;
 
     public function __construct(
         DUserRechargeRepository $rechargeRepo, 
-        DUserDrawRepository $drawRepo)
+        DUserDrawRepository $drawRepo,
+        DPgGameBetsRepository $pgBetsRepo)
     {
         $this->rechargeRepo = $rechargeRepo;
         $this->drawRepo = $drawRepo;
+        $this->pgBetsRepo = $pgBetsRepo;
     }
 
     public function getVipInfo($user) :array
@@ -43,6 +47,12 @@ class MemberService
     {
         $dateTime = $this->getWhereTime(4);
         return $this->drawRepo->getDraws($user, $dateTime['startTime'], $dateTime['endTime']);
+    }
+
+    public function getPgBetsList($user)
+    {
+        $dateTime = $this->getWhereTime(4);
+        return $this->pgBetsRepo->getPgBets($user, $dateTime['startTime'], $dateTime['endTime']);
     }
 
     private function getWhereTime(int $type)

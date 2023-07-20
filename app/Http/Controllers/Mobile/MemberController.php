@@ -102,8 +102,8 @@ class MemberController extends Controller
     public function betsList()
     {
         $user = Auth::user();
-        $list = $this->memberService->getRechargeList($user)->toArray();
-        
-        return view('mobile.member.draw_list', $list);
+        $list = $this->memberService->getPgBetsList($user)->toArray();
+        // print_r($list);die();
+        return view('mobile.member.bet_list', $list);
     }
 }

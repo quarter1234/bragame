@@ -25,6 +25,4 @@ class DUserRecharge extends BaseMoel
     {
         return date('Y-m-d H:i:s', $this->attributes['create_time']);
     }
-
-    
 }

@@ -21,4 +21,15 @@ class DPgGameBetsRepository extends Repository
                             ->update($data);
         }
     }
+
+    public function getPgBets($user, $startTime, $endTime)
+    {
+        return $this->model()::where('uid', $user->uid)
+        ->where('bet_stamp', '>', $startTime)
+        ->where('bet_stamp', '<', $endTime)
+        ->where('status', CommonEnum::ENABLE)
+        ->orderBy('id', 'desc')
+        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
+    }
+
 }
