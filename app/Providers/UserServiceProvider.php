@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Repositories\DCommissionRepository;
 use App\Repositories\UserRepository;
 use App\Repositories\DUserRechargeRepository;
 use Illuminate\Support\ServiceProvider;
@@ -17,7 +18,9 @@ class UserServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('user',function(){
-            return new UserService(new UserRepository(), new DUserRechargeRepository());
+            return new UserService(new UserRepository(),
+                                new DUserRechargeRepository(),
+                                new DCommissionRepository());
         });
     }
 

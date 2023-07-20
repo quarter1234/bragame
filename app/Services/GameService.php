@@ -230,9 +230,8 @@ class GameService
     private function _reduceCoin($user, $upCoin, $gameId, $gamePlat, $relBetId, $msg = false){
         $reduceCoin = -$upCoin;
 //        $alterlog = "pg游戏投注扣除金币:" . $reduceCoin;
-        list($beforecoin, $aftercoin) = User::alterUserCoin($user, $reduceCoin, GameEnum::PDEFINE['ALTERCOINTAG']['BET']);
-        $inLog = $gameId . '投注:变化金额:' . $reduceCoin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
-        LogHelper::insertCoinLog($user['uid'], $beforecoin, $reduceCoin, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], 2, $gamePlat, $relBetId);
+        $title = $gameId . '投注:变化金额:';
+        list($beforecoin, $aftercoin) = RewardHelper::alterCoinLog($user, $reduceCoin, GameEnum::PDEFINE['ALTERCOINTAG']['BET'], $gameId, $title, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 
@@ -246,9 +245,8 @@ class GameService
      * @return array
      */
     private function _addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId){
-        list($beforecoin, $aftercoin) = User::alterUserCoin($user, $winLoseAmount, GameEnum::PDEFINE['ALTERCOINTAG']['WIN']);
-        $inLog = $gameId . '赢分:变化金额:' . $winLoseAmount . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
-        LogHelper::insertCoinLog($user['uid'], $beforecoin, $winLoseAmount, $aftercoin, $inLog, $gameId, GameEnum::PDEFINE['ALTERCOINTAG']['WIN'], 2, $gamePlat, $relBetId);
+        $title = $gameId . '赢分:变化金额:';
+        list($beforecoin, $aftercoin) = RewardHelper::alterCoinLog($user, $winLoseAmount, GameEnum::PDEFINE['ALTERCOINTAG']['WIN'], $gameId, $title, $gamePlat, $relBetId);
         return ["beforecoin" => $beforecoin, "aftercoin" => $aftercoin];
     }
 

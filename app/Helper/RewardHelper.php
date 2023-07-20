@@ -4,6 +4,7 @@ namespace App\Helper;
 
 use App\Common\Enum\CommonEnum;
 use App\Common\Enum\GameEnum;
+use App\Facades\Bets;
 use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserTreeRepository;
 use App\Repositories\SSendCoinRepository;
@@ -92,7 +93,7 @@ class RewardHelper
                 $pInfo = UserHelper::getUserByUid($parentuid);
                 if($pInfo && $pInfo['stopregrebat'] == 0) { // 是否停止奖励
                     $added1 = true;
-                    self::addCoinByRate($parentuid, $coin1, $rate1, $actType);
+                    self::addCoinByRate($parentuid, $coin1, $rate1, $actType, $gameId);
                 }
             }
 
@@ -106,7 +107,7 @@ class RewardHelper
                     $ppinfo = UserHelper::getUserByUid($ppid);
                     if($ppinfo && $ppinfo['stopregrebat'] == 0) {
                         $added2 = true;
-                        self::addCoinByRate($ppid, $coin2, $rate2, $actType);
+                        self::addCoinByRate($ppid, $coin2, $rate2, $actType, $gameId);
                     }
                 }
             }
@@ -164,6 +165,22 @@ class RewardHelper
         }
     }
 
+    public static function alterCoinLog($user, $coin, $rewardsType, $gameId = 0, $title = '', $gamePlat = 0, $relBetId = 0){
+        list($beforecoin, $aftercoin) = User::alterUserCoin($user, $coin, $rewardsType);
+        $alterlog = $title . ':变化金额:' . $coin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
+        LogHelper::insertCoinLog($user['uid'],
+                            $beforecoin,
+                            $coin,
+                            $aftercoin,
+                            $alterlog,
+                            $gameId,
+                            $rewardsType,
+                            0,
+                            $gamePlat,
+                            $relBetId);
+        return [$beforecoin, $aftercoin];
+    }
+
     /**
      * 奖励金额按照奖励占比分成
      * @param $parentid
@@ -171,24 +188,29 @@ class RewardHelper
      * @param $rate
      * @param $actType
      */
-    public static function addCoinByRate($parentid, $addCoin, $rate, $actType)
+    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0)
     {
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
-        $rateArr = self::decodeRate($rate);
+        if(is_string($rate)){
+            $rateArr = self::decodeRate($rate);
+        }
+        else{
+            $rateArr = $rate;
+        }
         $nowtime = time();
         $sendArr = [0, 0, 0];
         $sendArr[0] = roundCoin($rateArr[0] * $addCoin);
         $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
         $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
-
         $rewardsType = 0; // 奖励类型
         $title = '';
         if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // --下级注册
             $title = 'reg';
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_REG_REWARDS']; // --下级注册奖励
         }
-        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){ // --下级充值
+        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){ // --充值
             $title = 'buy';
+            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'];
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_BUY_REWARDS']; // --下级购买奖励
         }
         else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BET']){ // --下级下注
@@ -212,26 +234,17 @@ class RewardHelper
         if($sendArr[0] > 0) {
             $svip = $parentInfo['svip'] ?? 0;
             $coin = $sendArr[0];
-            list($beforecoin, $aftercoin) = User::alterUserCoin($parentInfo, $coin, $rewardsType);
-            $alterlog = $title . ':变化金额:' . $coin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $parentInfo['gamedraw'];
-            LogHelper::insertCoinLog($parentid,
-                                    $beforecoin,
-                                    $coin,
-                                    $aftercoin,
-                                    $alterlog,
-                                    GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['QUEST'],
-                                    $rewardsType);
-
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title);
             LogHelper::addSendLog($parentid, $coin, $actType, 0, 1, 0, $svip);
             if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']){
-                // TODO 添加打码match  addUserBetMatch
+                Bets::addUserBetMatch($parentid, '', $coin, 3);
             }
 
         }
         if($sendArr[1] > 0) {
             $coin = $sendArr[1];
             // 添加提现钱包和背包金额
-            list($beforecoin, $aftercoin) = User::alterUserCoin($parentInfo, $coin, $rewardsType);
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title);
             User::updateGameDrawInDraw($parentInfo, $coin);
             LogHelper::addSenddrawLog($parentid, $title, $coin, $actType);
         }
@@ -278,7 +291,7 @@ class RewardHelper
 
         foreach($rebateGamelist as $gid){
             if($gid == $gameId){
-                self::addSuperiorRewards($uid, $actType, $coin, 2, $gameId, $type);
+                self::addSuperiorRewards($uid, $actType, $coin, 1, $gameId, $type);
                 break;
             }
         }

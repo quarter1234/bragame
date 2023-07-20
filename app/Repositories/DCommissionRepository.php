@@ -34,4 +34,8 @@ class DCommissionRepository extends Repository
         ->where('create_time', '<=', $endTime)
         ->sum('betcoin');
     }
+
+    public function getCommByUserTypeNum($uid, $type){
+        return $this->model()::where('uid', $uid)->where('type', $type)->count('id');
+    }
 }

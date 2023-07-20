@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Repositories\DUserMatchBetsRepository;
+use App\Repositories\SBetConfigRepository;
 use App\Repositories\UserRepository;
 use Illuminate\Support\ServiceProvider;
 use App\Services\BetDrawService;
@@ -17,7 +18,7 @@ class BetsServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->singleton('bets',function(){
-            return new BetDrawService(new DUserMatchBetsRepository());
+            return new BetDrawService(new DUserMatchBetsRepository(), new SBetConfigRepository());
         });
     }
 

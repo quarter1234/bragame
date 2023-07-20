@@ -34,6 +34,19 @@ class DUserRechargeRepository extends Repository
         return $this->model()::where('orderid', $orderId)->first();
     }
 
+    public function getUserRechargeNum($uid){
+        return $this->model()::where('uid', $uid)
+                            ->where('status', 2)
+                            ->count('id');
+    }
+
+    public function upUserRecharge($orderId, $data){
+        if($orderId && !empty($data)){
+            $this->model()::where("orderid", $orderId)
+                            ->update($data);
+        }
+    }
+    
     public function getRecharges($user, $startTime, $endTime)
     {
         return $this->model()::where('uid', $user->uid)

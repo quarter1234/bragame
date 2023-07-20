@@ -3,11 +3,15 @@ namespace App\Services;
 
 use App\Helper\LogHelper;
 use App\Repositories\DUserMatchBetsRepository;
+use App\Repositories\SBetConfigRepository;
+
 
 class BetDrawService{
     private $mbRep;
-    public function __construct(DUserMatchBetsRepository $mbRep){
+    private $sbtRep;
+    public function __construct(DUserMatchBetsRepository $mbRep, SBetConfigRepository $sbtRep){
         $this->mbRep  = $mbRep;
+        $this->sbtRep = $sbtRep;
     }
 
     /**
@@ -84,6 +88,11 @@ class BetDrawService{
             $kflag = 'mail_bet_mul';
         }
 
-
+        $config = $this->sbtRep->getConfig($kflag);
+        if($config && !empty($config['v'])){
+            $now = time();
+            $betMul = $config['v'];
+            $this->mbRep->addMatchBets($uid, $coin, $type, $betMul, $orderid);
+        }
     }
 }
