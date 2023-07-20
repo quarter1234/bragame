@@ -6,7 +6,7 @@
         <div class="email_xx2"></div>
         <div class="email_wk">
             <div class="email_w">{{ $item['bet_id'] }}</div>
-            <div class="rechare_zt">{{ $item['bet_amount'] }}</div>
+            <div class="rechare_zt">Montante da aposta: {{ $item['bet_amount'] }}</div>
             <div class="email_w_bottom">
                 <div class="email_w_left">
                 <img src="../../mobile/img/jb.png" />
