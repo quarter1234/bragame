@@ -188,7 +188,7 @@ class RewardHelper
      * @param $rate
      * @param $actType
      */
-    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0)
+    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '')
     {
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
         if(is_string($rate)){
@@ -210,8 +210,10 @@ class RewardHelper
         }
         else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){ // --充值
             $title = 'buy';
-            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'];
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_BUY_REWARDS']; // --下级购买奖励
+            if($gameId == GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND']){
+                $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_SEND_REWARDS']; // 商城赠送奖励
+            }
         }
         else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BET']){ // --下级下注
             $title = 'bet';
@@ -230,14 +232,16 @@ class RewardHelper
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['OTHER_REWARDS'];
         }
 
-
         if($sendArr[0] > 0) {
             $svip = $parentInfo['svip'] ?? 0;
             $coin = $sendArr[0];
             self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title);
             LogHelper::addSendLog($parentid, $coin, $actType, 0, 1, 0, $svip);
-            if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']){
+            if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']){ // 站内信
                 Bets::addUserBetMatch($parentid, '', $coin, 3);
+            }
+            else if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_SEND_REWARDS']){ // 商城赠送奖励
+                Bets::addUserBetMatch($parentid, $orderid, $coin, 2);
             }
 
         }
