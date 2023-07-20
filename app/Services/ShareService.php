@@ -47,10 +47,10 @@ class ShareService
     
     public function getInviteCacheList($user, $page)
     {
-        $cacheKey = "share:invite:list:". $user->uid. '_' . $page;
-        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user, $page) {
+        // $cacheKey = "share:invite:list:". $user->uid. '_' . $page;
+        // return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user, $page) {
            return $this->getInviteList($user);
-        });
+        // });
     }
 
     public function getInviteCacheTotal($user)

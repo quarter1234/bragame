@@ -47,6 +47,16 @@ class DUserTreeRepository extends Repository
         $this->create($data);
     }
 
+    public function storeTree($invitedUid, $registerUid, $agent = 0, $ancestorH = 0)
+    {
+        $data = [];
+        $data['ancestor_id'] = $invitedUid;
+        $data['descendant_id'] = $registerUid;
+        $data['descendant_agent'] = $agent;
+        $data['ancestor_h'] = $ancestorH;
+        $this->create($data);
+    }
+
     public function getPrentInviteTree($uid, $len){
         return $this->model()::where("descendant_id", $uid)->where("ancestor_h", $len)->first();
     }

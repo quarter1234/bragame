@@ -75,21 +75,23 @@ class RegisterListener implements ShouldQueue
             foreach ($invitedList as $item) {
                 $treeRepo->storeInviteTree($item, $register);
             }
+        } else {
+            $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
         }
-
+        file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
         // 代理返利配置
-        if($inviteConfig['invite']['rtype'] == 2) {
-            // 如果之前没有获取
-            $commissionRepo = app()->make(DCommissionRepository::class);
-            $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
-            if(!$hasCommission) {
-                RewardHelper::addSuperiorRewards(
-                    $register->uid,
-                    GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
-                    $inviteConfig['invite']['coin1'],
-                    $inviteConfig['invite']['rtype']
-                );
-            }
-        }
+        // if($inviteConfig['invite']['rtype'] == 2) {
+        //     // 如果之前没有获取
+        //     $commissionRepo = app()->make(DCommissionRepository::class);
+        //     $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
+        //     if(!$hasCommission) {
+        //         RewardHelper::addSuperiorRewards(
+        //             $register->uid,
+        //             GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
+        //             $inviteConfig['invite']['coin1'],
+        //             $inviteConfig['invite']['rtype']
+        //         );
+        //     }
+        // }
     }
 }
