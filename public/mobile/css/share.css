@@ -127,7 +127,7 @@
 
 .xk {
     width: 99%;
-    height: 250px;
+    height: 180px;
     border-radius: 10px;
     border:1px dashed #fff;
     margin:0 auto;
@@ -136,7 +136,6 @@
 .xk p {
     width: 85%;
     margin: 10px auto;
-    padding-top: 30px;
     clear: both;
     overflow: hidden;
 }
@@ -175,13 +174,34 @@
 
 .xk_b {
     width: 100%;
-    height: 150px;
     margin-top: 15px;
     background: #071824;
     border-radius: 10px;
     overflow: hidden;
+    text-align:center;
+    padding:10px 0;
 }
-
+.xk_b p{
+    width:95%;
+    margin:0 auto;
+    line-height:20px;
+    text-align:left;
+    font-size:12px;
+    color:#999;
+}
+.xk_b label{
+    width: 60px;
+    height: 20px;
+    border-radius: 5px;
+    background: #1e3655;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
 .xk_b h2 {
     color: #fff;
     text-align: center;
@@ -1058,7 +1078,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/img/datin.svg)
+    background-image: url(/mobile/img/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
@@ -1078,7 +1098,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/img/active_cs.9be7ce116557877dec91.png)
+    background-image: url(/mobile/img/zfj_on_ico.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {

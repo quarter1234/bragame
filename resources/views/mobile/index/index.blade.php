@@ -112,10 +112,10 @@
                         <!---->
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-                          <a href="{{ route('mobile.notice.info', ['id' => 2])}}" style="text-align: start;font-size: 14px;font-weight: 400;color: #878e97;line-height: 20px;">
+                          
                             <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
-                          </a>
-                          <a _ngcontent-way-c6="" class="more-announcement-icon" href="{{url('mobile/notices')}}"></a>
+                          
+                          
                       </div>
                     </button>
                   </jx-bulletin-board>
@@ -137,7 +137,7 @@
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
-                      <button _ngcontent-way-c8="" id="tab1" onclick="myclick(8)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                      <button _ngcontent-way-c8="" id="tab1" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
                         <!---->
@@ -145,7 +145,7 @@
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Gostas</span></button>
                         <!----> 
-                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
+                        <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button> 
                         <!---->
@@ -178,7 +178,7 @@
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
                         {{-- 全部游戏 --}}
-                        <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: none">
+                        <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
                           @include('mobile.index.game_recommend')
                         </div>
@@ -203,7 +203,7 @@
                           </div>
                         </div>
                       {{-- PG 游戏 --}}
-                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: block;">
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
                               <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Clique para carregar mais</button>
