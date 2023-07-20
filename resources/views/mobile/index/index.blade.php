@@ -43,16 +43,13 @@
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
-                <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row">
+                
+              <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                   <!---->
                   <!---->
                   <!---->
                   <div _ngcontent-way-c3="" class="header-icons-ctn ng-star-inserted">
                     <div _ngcontent-way-c3="" class="header-jx-icon header-icon"></div>
-                    {{--<div _ngcontent-way-c3="" class="header-vertical-line"></div>
-
-                       
-                  <div _ngcontent-way-c3="" class="header-laliga-icon header-icon"></div>--}}
                   </div>
                   <!---->
                   <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>
@@ -69,14 +66,8 @@
                     <div class="dl show_login">Login</div>
                     <div class="zc show_login">Registo</div>
                   @endif
-                  <!---->
-                  <!---->
-                  {{--<button _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__suffix msg-centre-btn ng-star-inserted" routerlink="/message-centre/announ" tabindex="0">
-                    <div _ngcontent-way-c3="" class="message-centre"></div>
-                  </button>--}}
-                  <!---->
-                  <!---->
-                  <!----></div>
+                </div>
+
               </jx-header-row>
             </div>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style=" padding-top: 64px;">
@@ -397,8 +388,6 @@
               type : 'GET',
               data : {id: parseInt(gameId)},
               success : function (data) {
-                hideLoading();
-                console.log(data)
                 if(data.code == 200) {
 				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
                 } else {
@@ -409,6 +398,7 @@
                       art.dialog({ title: 'Tips:', content: data.message, time: 3 });
                     }
                 }
+                hideLoading();
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading();

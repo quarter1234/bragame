@@ -29,18 +29,9 @@
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
-            <div class="top">
-                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
-                <div class="money">
-                    <span>R$</span>
-                    <span>{{$user['coin']}}</span>
-                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
-                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
-                </div>
-                <div class="yh">
-                     <img src="../../mobile/img/yh.png" /> 
-                </div>
-            </div>
+
+        @include('mobile.common.top') 
+
             <div class="centen"></div>
             <div class="centen_tab">
                   <div class="centen_list centen_on">
@@ -80,9 +71,6 @@
     </jx-root>
     <script>
         $(function(){
-          $('.sx').click(function(){
-              location.reload(true)
-          })
           $('.centen_list').click(function(){
             $(this).addClass('centen_on').siblings().removeClass('centen_on')
             var index1 =$(this).index()

@@ -92,10 +92,10 @@
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
 					
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/recharges")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--充值记录--}}Registro de recarga
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--充值记录--}}Histórico de recargas
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/draws")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--提现记录--}}Registro de retirada
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--提现记录--}}Registro de saque
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/bets")}}'" tabindex="0">
@@ -114,7 +114,7 @@
 
                     
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Contact Us
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Centro de atendimento ao cliente
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
