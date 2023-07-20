@@ -14,7 +14,9 @@
                 <div class="email_w_right">{{$item['timestamp']}}</div>
             </div>
         </div>
+        @if($item['hasread'] == 0)
         <div class="email_hd"></div>
+        @endif
     </a>
 </div>
 @endforeach  

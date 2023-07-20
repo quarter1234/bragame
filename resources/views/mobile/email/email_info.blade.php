@@ -38,29 +38,26 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
-          <div class="top">
-                <div class="black">
-                <img src="../../mobile/img/left_ico.png"/>
-                </div>
-                <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
-                <div class="money">
-                    <span>R$</span>
-                    <span>{{ $user['coin'] }}</span>
-                    <div class="sx"><img src="../../mobile/img/sx.png" /></div>
-                    <div class="qb"><img src="../../mobile/img/qb.png" /></div>
-                </div>
-            </div>
+
+          @include('mobile.common.top') 
+
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr">
-            
+
+            @if($info['hastake'] == 1) 
+                
+            Já foi recebido
+                
+            @endif
+
               <span>Remeber: System</span><span>{{ $info['timestamp'] }}</span>
             </div>
             <div class="e_b_hs">
                 <span>Correio:</span>
                 <div class="email_w_left">
                 <img src="../../mobile/img/jb.png" />
-                        <label>{{ $info['attach'][1] ?? 0 }}</label> 
+                <label>{{ $info['attach'][1] ?? 0 }}</label> 
                 </div>
             </div>
 
@@ -68,7 +65,11 @@
             @include('mobile.common.loading')
 
             <div class="e_bottom">
+            @if($info['hastake'] == 0) 
                 <button class="e_b2" id="ReceberBtn" style="width:260px;">Receber </button>
+            @else
+                <button class="e_b2" onclick="javascript:void(0);" style="width:260px;background:#333;color:#fff;"  disabled>Receber </button>
+            @endif
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -121,8 +122,9 @@
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
-                hideLoading()
-                art.dialog({ title: 'Tips:', content: 'error!', time: 3 });
+              hideLoading()
+              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+
             }
           })
         })
