@@ -48,6 +48,7 @@ class RegisterListener implements ShouldQueue
         if($inviteUser->forbidcode == 1) {
             return false;
         }
+
         $treeRepo = app()->make(DUserTreeRepository::class);
         $hasBind = $treeRepo->getUserBind($register->uid, $inviteUser->uid);
         if($hasBind) {
@@ -63,10 +64,10 @@ class RegisterListener implements ShouldQueue
 
         $inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards));
 
-        $register->invit_uid = $register->uid;
+        $register->invit_uid = $inviteUser->uid;
         $register->save();
 
-        $inviteUser->invitednum = intval($inviteUser->invitednum) + 1;
+        $inviteUser->invitednum = $inviteUser->invitednum  + 1;
         $inviteUser->save();
 
         // 绑定关系表
@@ -75,9 +76,12 @@ class RegisterListener implements ShouldQueue
             foreach ($invitedList as $item) {
                 $treeRepo->storeInviteTree($item, $register);
             }
+            file_put_contents('/tmp/register.log', 'FORM222 =>'. json_encode($register).PHP_EOL, FILE_APPEND);
         } else {
-            $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+            $res = $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+            file_put_contents('/tmp/register.log', 'FORM111 =>'. json_encode($res).PHP_EOL, FILE_APPEND);
         }
+        
         file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
         // 代理返利配置
         // if($inviteConfig['invite']['rtype'] == 2) {

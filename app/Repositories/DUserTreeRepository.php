@@ -54,7 +54,7 @@ class DUserTreeRepository extends Repository
         $data['descendant_id'] = $registerUid;
         $data['descendant_agent'] = $agent;
         $data['ancestor_h'] = $ancestorH;
-        $this->create($data);
+        return $this->create($data);
     }
 
     public function getPrentInviteTree($uid, $len){
