@@ -52,15 +52,18 @@ Route::group([
     'prefix' => 'mobile/member', 'middleware' => ['auth']
 ], function ($router) {
     Route::get('index ', [MemberController::class, 'index']);
-    Route::get('setting', [MemberController::class, 'setting']);
     Route::get('customerService', [MemberController::class, 'customerService']);
     Route::get('vip', [MemberController::class, 'vip']);
     
+    // 充值记录
     Route::get('recharges', [MemberController::class, 'recharges']);
     Route::get('rechargeList', [MemberController::class, 'rechargeList']);
-
+    // 提现记录
     Route::get('draws', [MemberController::class, 'draws']);
+    Route::get('drawList', [MemberController::class, 'drawsList']);
+    // 投注记录
     Route::get('bets', [MemberController::class, 'bets']);
+    Route::get('betList', [MemberController::class, 'betsList']);
 
     // 邮件相关
     Route::get('email', [EmailController::class, 'email']);

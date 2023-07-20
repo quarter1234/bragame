@@ -1,17 +1,18 @@
 <?php
 namespace App\Models;
 
-class DUserRecharge extends BaseMoel
+class DUserDraw extends BaseMoel
 {
     public $timestamps = false;  
-    protected $table = 'd_user_recharge'; 
+    protected $table = 'd_user_draw'; 
 
     // public function getStatusAttribute($value)
     // {
     //     $statusArr = [
+    //         0 => trans('member.pending'),
     //         1 => trans('member.processing'), 
-    //         2 => trans('member.pay_success'), 
-    //         3 => trans('member.manual_arrival'), 
+    //         2 => trans('member.completed'), 
+    //         3 => trans('member.refuse'), 
     //     ];
     //     return $statusArr[$value];
     // }

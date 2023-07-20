@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
+use App\Models\DUserRecharge;
 use App\Repositories\SConfigCustomerRepository;
 use App\Services\MemberService;
 use Illuminate\Support\Facades\Auth;
@@ -26,13 +27,6 @@ class MemberController extends Controller
         $data['user'] = Auth::user();
         $data['avatar'] = UserHelper::avatar($data['user']['usericon']);
         return view('mobile.member.index', $data);
-    }
-
-    public function setting()
-    {
-        $data = [];
-        $data['user'] = Auth::user();
-        return view('mobile.member.setting', $data);
     }
 
     public function customerService(SConfigCustomerRepository $repo)
@@ -59,9 +53,15 @@ class MemberController extends Controller
         $user = Auth::user();
         $data = [];
         $data['user'] = $user;
+        $res = DUserRecharge::find(1520);
+        // $res->
+        print_r($res);die();
+
+
         return view('mobile.member.recharges', $data);
     }
 
+    // 充值列表
     public function rechargeList()
     {
         $user = Auth::user();
@@ -80,6 +80,15 @@ class MemberController extends Controller
         return view('mobile.member.draws', $data);
     }
 
+    // 提现列表
+    public function drawsList()
+    {
+        $user = Auth::user();
+        $list = $this->memberService->getDrawList($user)->toArray();
+        
+        return view('mobile.member.draw_list', $list);
+    }
+
     // 投注记录
     public function bets()
     {
@@ -88,5 +97,13 @@ class MemberController extends Controller
         $data['user'] = $user;
 
         return view('mobile.member.bets', $data);
+    }
+
+    public function betsList()
+    {
+        $user = Auth::user();
+        $list = $this->memberService->getRechargeList($user)->toArray();
+        
+        return view('mobile.member.draw_list', $list);
     }
 }
