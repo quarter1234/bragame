@@ -187,7 +187,7 @@ class UserService
         RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
         Bets::addUserBetMatch($uid, $orderid, $totalcoin, 1);
         // 赠送金额
-        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND']);
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid);
         $isfirst = 1; // --首次充值
         $rechargeCount = $this->userRech->getUserRechargeNum($uid);
         if($rechargeCount > 0){

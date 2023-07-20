@@ -15,6 +15,7 @@ class GameEnum{
             "MAIL_REWARDS" => 136, // --邮件
             "VIP_BONUS" => 138, // --VIP奖励
             "SHOP_RECHARGE" => 15, // --商城充值
+            "SHOP_SEND_REWARDS" => 148, // --商城赠送奖励
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",
