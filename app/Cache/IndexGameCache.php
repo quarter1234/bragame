@@ -10,7 +10,7 @@ class IndexGameCache
 {
     const PG_RECOMMEND_KEY = "index:game:pg:recommend";
     const PP_RECOMMEND_KEY = "index:game:pp:recommend";
-    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommends";
+    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
 
     public static function getPGRecommend()
     {
@@ -35,7 +35,7 @@ class IndexGameCache
         $cacheKey = sprintf(self::FAVOR_RECOMMEND_KEY);
         return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
                 $pgRepo = app()->make(DPgGameRepository::class);
-                return $pgRepo->getGameFavor(['platform' => 'PP'])->toArray();
+                return $pgRepo->getGameFavor(['platform' => 'PGS'])->toArray();
         });
     }
 }
