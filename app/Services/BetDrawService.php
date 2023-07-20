@@ -4,7 +4,7 @@ namespace App\Services;
 use App\Helper\LogHelper;
 use App\Repositories\DUserMatchBetsRepository;
 use App\Repositories\SBetConfigRepository;
-
+use Illuminate\Support\Facades\Log;
 
 class BetDrawService{
     private $mbRep;
