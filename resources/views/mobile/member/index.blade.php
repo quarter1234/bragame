@@ -69,19 +69,7 @@
                       </div>
                   </div>
                   <jx-content-view _ngcontent-xfs-c1="" _nghost-xfs-c7="" class="ng-tns-c1-1">
-                    <div _ngcontent-xfs-c1="" class="account-summary ng-tns-c1-1">
-                      <!---->
-                      <!---->
-                      <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--主账户余额--}}Saldo da conta principal</div>
-                        <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold">{{ $user['coin'] }}</div></div>
-                      <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日投注--}}Apostas hoje</div>
-                        <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="padding-top:15px;">0</div></div>
-					  <div _ngcontent-xfs-c1="" class="account-field ng-tns-c1-1 ng-trigger ng-trigger-fadeInOut ng-star-inserted" style="text-align:center">
-                        <div _ngcontent-xfs-c1="" class="account-field-title">{{--今日盈亏--}}Lucro e perda de hoje</div>
-                        <div _ngcontent-xfs-c1="" class="account-field-value din-alternate-bold" style="text-align:center">0</div></div>
-                    </div>
+                   
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
@@ -108,7 +96,7 @@
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon vip-icon"></span>{{--VIP等级--}}Nível VIP
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon vip-icon"></span>{{--VIP等级--}}VIP
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
