@@ -7,11 +7,9 @@ use App\Events\RegisterEvent;
 use App\Helper\RewardHelper;
 use App\Helper\SystemConfigHelper;
 use App\Helper\UserHelper;
-use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Queue\InteractsWithQueue;
 
 class RegisterListener implements ShouldQueue
 {
@@ -70,19 +68,17 @@ class RegisterListener implements ShouldQueue
         $inviteUser->invitednum = $inviteUser->invitednum  + 1;
         $inviteUser->save();
 
-        // 绑定关系表
+        // 绑定之前关系表
         $invitedList = $treeRepo->getInviteTree($inviteUser->uid)->toArray();
         if($invitedList) {
             foreach ($invitedList as $item) {
-                $res = $treeRepo->storeTree($item['ancestor_id'], $register->uid, $item['descendant_agent'], $item['ancestor_h'] + 1);
+                $treeRepo->storeInviteTree($item, $register);
             }
-            file_put_contents('/tmp/register.log', 'FORM222 =>'. json_encode($register).PHP_EOL, FILE_APPEND);
-        } else {
-            $res = $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
-            file_put_contents('/tmp/register.log', 'FORM111 =>'. json_encode($res).PHP_EOL, FILE_APPEND);
         }
 
-        file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
+        // 也要把自己算进去
+        $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+       
         // 代理返利配置
         // if($inviteConfig['invite']['rtype'] == 2) {
         //     // 如果之前没有获取
