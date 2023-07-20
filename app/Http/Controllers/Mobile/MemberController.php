@@ -53,9 +53,9 @@ class MemberController extends Controller
         $user = Auth::user();
         $data = [];
         $data['user'] = $user;
-        $res = DUserRecharge::find(1520);
-        // $res->
-        print_r($res);die();
+        // $res = DUserRecharge::find(1520);
+        // // $res->
+        // print_r($res);die();
 
 
         return view('mobile.member.recharges', $data);
