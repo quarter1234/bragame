@@ -102,7 +102,7 @@
 
                     
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Centro de atendimento ao cliente
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Contact Us
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
