@@ -397,7 +397,10 @@
                       showModal(data.message);
                     }
                 }
-                hideLoading();
+                
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading();
