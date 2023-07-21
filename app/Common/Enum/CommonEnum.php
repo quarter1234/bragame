@@ -12,7 +12,7 @@ class CommonEnum
     const DEFAULT_INVITE_NUM = 20;
 
     const NUM_FOUR = 4;
-    const RECOMMEND_NUM = 6;
+    const RECOMMEND_NUM = 9;
 
     const INVITE_CODE_KEY = 'invite_code';
     const CACHE_TIME = (60 * 5);
