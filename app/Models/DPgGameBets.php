@@ -7,7 +7,7 @@ class DPgGameBets extends BaseMoel
     public $timestamps = false;
     protected $table = 'd_pg_game_bets';
 
-    protected $attributes = ['format_platform', 'format_create_time'];
+    // protected $attributes = ['format_platform', 'format_create_time'];
     protected $appends = ['format_platform', 'format_create_time'];
 
     public function getFormatCreateTimeAttribute($value)

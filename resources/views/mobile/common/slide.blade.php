@@ -39,8 +39,8 @@
 </div>
 <style>
    .menu_on{
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
@@ -51,8 +51,8 @@
     text-align:center;
    }
    .menu_on img{
-        width:40px;
-        height:40px;
+        width:20px;
+        height:20px;
         margin-top:9px;
    }
    .menu_tc{
@@ -108,37 +108,37 @@
     color:#fff;
    }
    .kj_kf{
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:70%;
+    top:66%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
     text-align:center;
    }
    .kj_kf img{
-        width:45px;
-        height:45px;
+        width:25px;
+        height:25px;
         margin-top:9px;
    }
    .down_ico{
-    width:60px;
-    height:60px;
+    width:40px;
+    height:40px;
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:80%;
+    top:72%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
     text-align:center;
    }
    .down_ico img{
-        width:40px;
-        height:40px;
+        width:20px;
+        height:20px;
         margin-top:9px;
    }
 </style>

@@ -8,6 +8,7 @@ class GameEnum{
             "DOWN" => 2, // 下分
             "BET" => 3, // 下注
             "WIN" => 4, // 赢钱
+            'DRAW' =>123, // 提现
             // 奖励类型
             "AGENT_REG_REWARDS" => 130, // --下级注册奖励
             "AGENT_BUY_REWARDS" => 131, // --下级购买奖励

@@ -70,8 +70,8 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r1"><img src="..\..\static\images\25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r2"><img src="..\..\static\images\24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="..\..\static\images\25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="..\..\static\images\24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>
@@ -156,13 +156,12 @@
                 if(data.code == 200) {
 				          window.location.href= "{{url('mobile/index')}}"
                 } else {
-                    art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+                  showModal(data.message);
                 }
             },
             error: function(jqXHR, textStatus, errorThrown) {
               hideLoading()
-              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
-
+              showModal(jqXHR.responseJSON.message);
             }
         })
         return false;
@@ -178,12 +177,12 @@
             if(data.code == 200) {
               window.location.href= "{{url('mobile/index')}}"
             } else {
-              art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+              showModal(data.message);
             }
           },
           error: function(jqXHR, textStatus, errorThrown) {
             hideLoading()
-            art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+            showModal(jqXHR.responseJSON.message);
           }
         })
 		  return false;
