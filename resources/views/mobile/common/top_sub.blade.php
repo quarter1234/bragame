@@ -22,9 +22,7 @@ $(function(){
 <style>
     .black{
         float:left;
-        margin-top: 20px;
-        margin-right: 10px;
-        margin-left: 14px;
+        margin:20px 0px 0 5px;
     }
     .black img{
         width:20px;
