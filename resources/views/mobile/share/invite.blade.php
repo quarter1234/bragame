@@ -16,7 +16,6 @@
     <p>2. Onde posso consultar minha comissao?Na interface principal do compartilhamento, clique em “Referir”para visualizar os detalhes da comissao e receber a comissao.</p>    
 </div>
 </div>
-<div style="height:60px"></div>
 <script>
     const btn = document.querySelector('#btn');
     const btn2 = document.querySelector('#btn2');

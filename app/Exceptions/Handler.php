@@ -75,16 +75,17 @@ class Handler extends ExceptionHandler
             foreach ($messages as $message) {
                 $msg .= $message[0] ?? '';
             }
-            if($request->ajax()){
+
+            // if($request->ajax()){
                 return Result::error($msg, 4220, 422);
-            }else{
-                $params = [
-                    'msg'  => $msg,
-                    'wait' => 33,
-                    'url'  => 'javascript:history.back(-1);',
-                ];
-                return response()->view('mobile.errors.error', $params, 500);
-            }
+            // }else{
+            //     $params = [
+            //         'msg'  => $msg,
+            //         'wait' => 33,
+            //         'url'  => 'javascript:history.back(-1);',
+            //     ];
+            //     return response()->view('mobile.errors.error', $params, 500);
+            // }
             
         }
 

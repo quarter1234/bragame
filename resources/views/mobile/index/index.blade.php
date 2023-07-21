@@ -435,6 +435,8 @@
         });
       });
     </script>
+
+    @include('mobile.common.modal') 
   </body>
 
 </html>

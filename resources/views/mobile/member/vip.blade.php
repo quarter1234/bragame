@@ -40,7 +40,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('mobile.common.top') 
+          @include('mobile.common.top_sub') 
 
             <div class="banner">
 

@@ -23,6 +23,7 @@ class InnerAuth
         $authKey = config('inner_auth.key');
 
         $genSign = md5($token .  $authKey);
+        
         if($XSign !=  $genSign) {
             return Result::error('No Auth!');
         }

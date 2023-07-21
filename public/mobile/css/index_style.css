@@ -3392,3 +3392,18 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     margin-right:10px;
 }
+.rm a{
+    width:15%;
+}
+
+#pg_load_more{
+    padding:5px 10px;
+    background:#1e3655;
+    border-radius:5px;
+}
+#pp_load_more{
+    padding:5px 10px;
+    background:#1e3655;
+    border-radius:5px;
+    font-size:14px;
+}
