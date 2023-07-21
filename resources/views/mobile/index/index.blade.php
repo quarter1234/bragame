@@ -348,6 +348,9 @@
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                   $('#tab2_content_pgs').append(itemGame)
                 })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
               }
           })
         }
@@ -366,6 +369,9 @@
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                   $('#tab1_content_pps').append(itemGame)
                 })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
               }
           })
         }
@@ -376,8 +382,13 @@
           $(this).addClass('active-side-menu');
         })
 
+        $('.sx').click(function(){
+            location.reload(true)
+        })
+
         loadPgGames()
         loadPpGames()
+        
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
           
@@ -397,7 +408,10 @@
                       showModal(data.message);
                     }
                 }
-                hideLoading();
+                
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading();

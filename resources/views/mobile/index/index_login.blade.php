@@ -13,7 +13,7 @@
     .list_b,.list_b2{width:100%;height:450px; display:none;}
     .entry{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
     .email{position:absolute;left:10px;top:15px}
-    .email img{width:15%;height:15%;}
+    .email img{width:30px;height:30px;}
     .sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
     .sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
     .sr_close{position:absolute;top:20px;right:20px;width:20px;height:20px;}
