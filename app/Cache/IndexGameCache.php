@@ -8,9 +8,9 @@ use Illuminate\Support\Facades\Cache;
 
 class IndexGameCache
 {
-    const PG_RECOMMEND_KEY = "index:game:pg:recommend";
-    const PP_RECOMMEND_KEY = "index:game:pp:recommend";
-    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
+    const PG_RECOMMEND_KEY = "index:game:pg:recommends";
+    const PP_RECOMMEND_KEY = "index:game:pp:recommends";
+    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommende";
 
     public static function getPGRecommend()
     {
