@@ -18,6 +18,8 @@ class GameEnum{
             "SHOP_RECHARGE" => 15, // --商城充值
             "SHOP_SEND_REWARDS" => 148, // --商城赠送奖励
             "DOWNRETURN" => 137, // --拒绝draw，返回
+            "BOX_AWARD" => 149, // 宝箱奖励
+            "AGENT_AWARD" => 150, // 周工资奖励
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",
@@ -33,6 +35,8 @@ class GameEnum{
                 "QUEST" => 4, // --任务奖励
                 "VIP" => 5, // -- vip升级
                 "Mail" => 7, // --邮件奖励
+                "BOX_AWARD" => 41, // -- 宝箱奖励
+                "WEEK_AWARD" => 42, // -- 工资奖励
             ]
         ],
         "GAME_TYPE" => [
@@ -55,6 +59,7 @@ class GameEnum{
                 "PLAYER_NOT_FOUND" =>  405, // -- 找不到玩家
                 "DRAW_ERR_PARAM_COIN" => 548, // 提现 金币必须大于0
                 "DRAW_ERR_BANKINFO" => 549, // draw 账户信息不存在
+                "FUND_NOT_FOUND" => 946, // --未找到
             ],
         ]
     ];
