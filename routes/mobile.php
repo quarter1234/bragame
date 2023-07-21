@@ -12,6 +12,9 @@ use App\Http\Controllers\Mobile\ShareController;
 use App\Http\Controllers\Mobile\ShopController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('/', [IndexController::class, 'index'])->name('mobile.index');
+
 Route::group([
     'prefix' => 'mobile'
 ], function ($router) {
