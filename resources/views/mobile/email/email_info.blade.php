@@ -17,7 +17,7 @@
         "ROOT": "__ROOT__"
       }</script>
     <script src="/static/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/artDialog.js"></script>
+
     <script type="text/javascript" src="/static/js/way.min.js"></script>
    
 
@@ -40,7 +40,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
 
           @include('mobile.common.top') 
-
+          @include('mobile.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr">
@@ -68,7 +68,7 @@
             @if($info['hastake'] == 0) 
                 <button class="e_b2" id="ReceberBtn" style="width:260px;">Receber </button>
             @else
-                <button class="e_b2" onclick="javascript:void(0);" style="width:260px;background:#333;color:#fff;"  disabled>Receber </button>
+                <button class="e_b2" onclick="javascript:void(0);" style="width:260px;background:#333;color:#fff;" disabled>Receber </button>
             @endif
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
@@ -114,16 +114,19 @@
                 console.log(data);
                 if(data.code == 200) {
 
-                  art.dialog({ title: 'Tips:', content: 'Triunfo', time: 5});
+                  showModal('Triunfo');
+
+                 
 
                   window.location.href= "{{ url('mobile/member/email') }}"
                 } else {
-                  art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+                  showModal(data.message);
+                 
                 }
               },
               error: function(jqXHR, textStatus, errorThrown) {
               hideLoading()
-              art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+              showModal(jqXHR.responseJSON.message);
 
             }
           })

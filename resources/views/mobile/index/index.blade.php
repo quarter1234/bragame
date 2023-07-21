@@ -13,12 +13,10 @@
     <link rel="stylesheet" href="/mobile/css/swipeslider.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/static/css/artDialog.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script src="/static/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/artDialog.js"></script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
     <script type="text/javascript" src="/mobile/js/index.js"></script>
 
@@ -29,7 +27,7 @@
     <meta name="format-detection" content="telephone=no">
 	</head>
   
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #0c192c;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -41,6 +39,7 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
+          @include('mobile.common.modal') 
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
                 
@@ -104,7 +103,7 @@
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
                           
-                            <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
+                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
                           
                           
                       </div>
@@ -392,10 +391,10 @@
 				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
-                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
+                      showModal('Por favor faça login primeiro');
                       $('.tc').show();
                     } else {
-                      art.dialog({ title: 'Tips:', content: data.message, time: 3 });
+                      showModal(data.message);
                     }
                 }
                 hideLoading();
@@ -403,10 +402,10 @@
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading();
                 if(jqXHR.responseJSON.code == 400005) {
-                      art.dialog({ title: 'Tips:', content: '请先登录', time: 3});
+                      showModal('Por favor faça login primeiro');
                       $('.tc').show();
                   } else {
-                    art.dialog({ title: 'Tips:', content: jqXHR.responseJSON.message, time: 3 });
+                    showModal(jqXHR.responseJSON.message);
                   }
 
               }
@@ -436,7 +435,7 @@
       });
     </script>
 
-    @include('mobile.common.modal') 
+    
   </body>
 
 </html>

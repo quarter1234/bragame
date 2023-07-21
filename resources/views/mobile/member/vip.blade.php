@@ -54,7 +54,7 @@
                 @endif
 
                 <div class="swiper-slide">
-                    <div class="sw_banner">
+                    <div class="sw_banner v{{ $item['level'] + 1 }}">
                         <h2>V{{ $item['level'] + 1 }}<span>Nível atua</span></h2>
                         <div class="sw_h_bottom">Depósito atual: {{ $user['svipexp'] }}</div>
                         <p>Recarga cumulativa<span>{{$item['diamond']}}/{{ $vipList[$key + 1]['diamond'] }}</span></p>

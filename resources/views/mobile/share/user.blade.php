@@ -27,7 +27,10 @@
     </table>
     
     <div style="width:100%;text-align:center;margin-top:1rem">
-        <button id="invite_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+        <button id="invite_load_more" page="0" onclick="loadInvites()"  style="color:#fff; font-size:14px;    padding: 5px 10px;
+    background: #1e3655;
+    border-radius: 5px;
+    font-size: 14px;">{{--点击加载更多--}}Carregue mais</button>
     </div>
 
 </div>

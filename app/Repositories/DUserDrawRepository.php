@@ -27,4 +27,23 @@ class DUserDrawRepository extends Repository
                             ->update($data);
         }
     }
+
+    public function storeDraw($user, $params, $bankInfo)
+    {
+        $data = [];
+        $data['uid'] = $user->uid;
+        $data['orderid'] = make_order_no();
+        $data['cat'] = $bankInfo['cat'];
+        $data['bankid'] = $bankInfo['id'];
+        $data['userbankid'] = $bankInfo['id'];
+        $data['account'] = $bankInfo['account'];
+        $data['create_time'] = time();
+        $data['coin'] = $params['coin'];
+        $data['status'] = 0;
+        $data['taxthird'] = 0;
+        $data['tax'] = 0;
+        $data['channelid'] = 0;
+
+        $this->create($data);
+    }
 }

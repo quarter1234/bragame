@@ -55,6 +55,7 @@ div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.username[_ngcon
 }
 .username label{
     font-size:12px;
+    background:#;
 }
 div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.rebate[_ngcontent-xfs-c1] {
     color: #13a2ba;
@@ -2672,25 +2673,63 @@ button.cancel-btn[_ngcontent-way-c22] {
 .sw_banner{
     width:351px;
     height:200px;
-    background:url(../img/banner_1.png) no-repeat;
-    background-size:351px 200px;
     margin:0 auto;
     overflow: hidden;
 }
+.swiper .v1{
+    background:url(../img/banner_1.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v2{
+    background:url(../img/banner_2.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v3{
+    background:url(../img/banner_3.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v4{
+    background:url(../img/banner_4.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v5{
+    background:url(../img/banner_5.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v6{
+    background:url(../img/banner_6.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v7{
+    background:url(../img/banner_7.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v8{
+    background:url(../img/banner_8.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v9{
+    background:url(../img/banner_9.png) no-repeat;
+    background-size:351px 200px;
+}
+.swiper .v10{
+    background:url(../img/banner_10.png) no-repeat;
+    background-size:351px 200px;
+}
 .sw_banner h2{
-    color:#01504b;
+    color:rgba(0, 0, 0, .7);
     text-indent:20px;
     margin-top:30px;
     font-size:32px;
 }
 .sw_banner h2 span{padding-left:10px;font-size:18px;}  
-.sw_h_bottom{width:245px;height:33px;border-radius:15px; background:#01504b;color:#fff;text-align:center;line-height:33px;font-size:14px;margin-left:10px;margin-top:-20px;}
-.sw_banner p{padding-left:20px;color:#01504b;font-weight:bold;}
+.sw_h_bottom{width:245px;height:33px;border-radius:15px; background:rgba(0, 0, 0, .7);color:#fff;text-align:center;line-height:33px;font-size:14px;margin-left:10px;margin-top:-20px;}
+.sw_banner p{padding-left:20px;color:rgba(0, 0, 0, .7);font-weight:bold;}
 .sw_banner span{padding-left:10px;color:#fff;}
 .sw_jd{width:90%;margin:-10px auto 0 auto;}
-.sw_jd_n{width:100%;height:14px;border-radius:20px;background:#01504b; position: relative;}
+.sw_jd_n{width:100%;height:14px;border-radius:20px;background:rgba(0, 0, 0, .7); position: relative;}
 .sw_jd_b{width:28%; position:absolute;top:0;left:0;height:14px;;border-radius:20px;background:#fff;}
-.sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:#01504b;font-size:14px;font-weight:bold;}
+.sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:rgba(0, 0, 0, .7);font-size:14px;font-weight:bold;}
 .vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:#132235;border-radius:10px;color:#fff;text-align:center;}
 .vip_centen h2{color:#9efff9;font-size:18px;line-height:44px;}
 .vip_centen p{line-height:20px;width:96%;font-size:14px;}

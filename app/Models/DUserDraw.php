@@ -6,7 +6,7 @@ class DUserDraw extends BaseMoel
     public $timestamps = false;  
     protected $table = 'd_user_draw'; 
 
-    protected $attributes = ['format_status', 'format_create_time'];
+    // protected $attributes = ['format_status', 'format_create_time'];
     protected $appends = ['format_status', 'format_create_time'];
 
 

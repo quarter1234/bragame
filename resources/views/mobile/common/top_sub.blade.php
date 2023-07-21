@@ -33,4 +33,8 @@ $(function(){
     .logo{
         margin-left:0;
     }
+    .top{
+        z-index:9999;
+        top:0;
+    }
 </style>

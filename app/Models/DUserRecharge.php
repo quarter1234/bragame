@@ -6,7 +6,7 @@ class DUserRecharge extends BaseMoel
     public $timestamps = false;
     protected $table = 'd_user_recharge';
 
-    protected $attributes = ['format_status', 'format_create_time'];
+    // protected $attributes = ['format_status', 'format_create_time'];
     protected $appends = ['format_status', 'format_create_time'];
 
     public function getFormatStatusAttribute($value)

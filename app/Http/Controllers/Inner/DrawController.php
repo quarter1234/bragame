@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Inner;
 
+use App\Common\Lib\Result;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Inner\DrawRequest;
 use App\Services\DrawService;
@@ -18,10 +19,11 @@ class DrawController extends Controller
     public function drawApply(DrawRequest $drawRequest)
     {
         $params = $drawRequest->goCheck('drawApply');
-        // if($params[''])
+
         $this->drawService->drawApply($params);
 
-        print_r($params);die();
+        return Result::success();
+        // exit('succ');
     }
 
 }
