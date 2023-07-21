@@ -36,6 +36,7 @@ class GameEnum{
         ],
         "GAME_TYPE" => [
             "SPECIAL" => [
+                "UP_COIN" => 10000, // --下分
                 "QUEST" => 160000, // --任务奖励
                 "STORE_BUY" => 40000, // --商城购买
                 "STORE_SEND" => 41000, // --商城赠送
@@ -43,6 +44,7 @@ class GameEnum{
                 "BOX_AWRAD" => 188010, // -- 宝箱奖励
                 "AGENT_WEEK_AWARD" => 188011, // -- 工资奖励
                 "DRAW_RETURN" => 188007, // --拒绝提现
+                "DOWN_COIN" => 20000, // --下分
             ]
         ],
         "RET" => [

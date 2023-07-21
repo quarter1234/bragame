@@ -149,6 +149,15 @@ class UserService
         else if($type == GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE']){ // 充值到账
             $user->totalrecharge += $altercoin;
         }
+        else if($type == GameEnum::PDEFINE['ALTERCOINTAG']['DOWN'] || $type == GameEnum::PDEFINE['ALTERCOINTAG']['DOWNRETURN']){ // 后台下分和拒绝提现
+            if($type == GameEnum::PDEFINE['ALTERCOINTAG']['DOWNRETURN']){ // 拒绝提现
+                $user->totaldraw = $user->totaldraw - $altercoin;
+            }
+            else{ // --后台下分
+                $user->totaldraw = $user->totaldraw + $altercoin;
+                $this->upUserGameDraw($user, $beforecoin, -$altercoin);
+            }
+        }
 
         $user->save(); // -- 及时保存
         return [$beforecoin, $aftercoin];
@@ -269,5 +278,31 @@ class UserService
         }
 
         return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+    }
+
+    /**
+     * 后台上下分接口
+     * @param $uid
+     * @param $coin
+     * @return mixed
+     */
+    public function apiAddCoin($uid, $coin){
+        $user = UserHelper::getUserByUid($uid);
+        if(!$user){
+            return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+        }
+
+        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['UP_COIN'];
+        $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['UP'];
+        $title = "上分:";
+        if($coin < 0){
+            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['DOWN_COIN'];
+            $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['DOWN'];
+            $title = "下分:";
+        }
+
+        $title = $title . $coin;
+        RewardHelper::alterCoinLog($user, $coin, $cointype, $gameId, $title);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 }
