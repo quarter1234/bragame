@@ -18,6 +18,9 @@ class CallApiController extends Controller{
         else if($mod == "user"){
             return $this->processRequestUser($request);
         }
+        else if($mod = "award"){ // 宝箱和工资奖励
+            return $this->processRequestAwardGameDraw($request);
+        }
 
         return 'error';
     }
@@ -92,6 +95,35 @@ class CallApiController extends Controller{
         }
 
         $resVal = User::apiAddCoin($uid, $coin);
+        if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+            return 'succ';
+        }
+
+        return 'error';
+    }
+
+    /**
+     * 发送宝箱和工资奖励
+     * @param Request $request
+     * @return string
+     */
+    public function processRequestAwardGameDraw(Request $request){
+        $mod = $request->get("mod", false);
+        $act = $request->get("act", false);
+        $id = $request->get("id", false);
+        if($mod != 'award'){
+            return 'error';
+        }
+
+        if(!$act || ($act != 'box' && $act != 'wage')){
+            return 'error';
+        }
+
+        if(!$id){
+            return 'error';
+        }
+
+        $resVal = User::awardAsynUser($id, $act);
         if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
             return 'succ';
         }

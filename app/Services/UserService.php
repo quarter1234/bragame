@@ -8,6 +8,8 @@ use App\Helper\RewardHelper;
 use App\Helper\UserHelper;
 use App\Helper\VipHelper;
 use App\Models\DUserLoginLog;
+use App\Repositories\AgentAwardRepository;
+use App\Repositories\BoxAwardRepository;
 use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserDrawRepository;
 use App\Repositories\UserRepository;
@@ -23,16 +25,22 @@ class UserService
     private $userRech;
     private $userComm;
     private $userDraw;
+    private $userAgentAward;
+    private $userBoxAward;
 
     public function __construct(UserRepository $userRepo,
                                 DUserRechargeRepository $userRech,
                                 DCommissionRepository $userComm,
-                                DUserDrawRepository $userDraw)
+                                DUserDrawRepository $userDraw,
+                                AgentAwardRepository $userAgentAward,
+                                BoxAwardRepository $userBoxAward)
     {
         $this->userRepo  = $userRepo;
         $this->userRech = $userRech;
         $this->userComm = $userComm;
         $this->userDraw = $userDraw;
+        $this->userAgentAward = $userAgentAward;
+        $this->userBoxAward = $userBoxAward;
     }
 
     /**
@@ -267,8 +275,8 @@ class UserService
                 return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
             }
 
-            if($status == 2){ // 审核通过
-                // TODO 通过审核
+            if($status == 2){ // 审核通过(不做处理)
+               // 不需要做任何处理
             }
             else{ // --拒绝提现
                 if($draw['status'] != 3){
@@ -303,6 +311,66 @@ class UserService
 
         $title = $title . $coin;
         RewardHelper::alterCoinLog($user, $coin, $cointype, $gameId, $title);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /**
+     * 发送宝箱和工资奖励
+     * @param $awradId
+     * @param $act
+     * @return mixed
+     */
+    public function awardAsynUser($awradId, $act){
+        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['BOX_AWRAD'];
+        $categoryType = GameEnum::PDEFINE['TYPE']['SOURCE']['BOX_AWARD'];
+        $rewardType = GameEnum::PDEFINE['ALTERCOINTAG']['BOX_AWARD'];
+        $award = null;
+        $title = '';
+        if($act == "box"){ // -- 宝箱
+            $award = $this->userBoxAward->find($awradId);
+            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['BOX_AWRAD'];
+            $categoryType = GameEnum::PDEFINE['TYPE']['SOURCE']['BOX_AWARD'];
+            $rewardType = GameEnum::PDEFINE['ALTERCOINTAG']['BOX_AWARD'];
+            $title = "宝箱赠送可提:";
+        }
+        else{
+            $award = $this->userAgentAward->find($awradId);
+            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['AGENT_WEEK_AWARD'];
+            $categoryType = GameEnum::PDEFINE['TYPE']['SOURCE']['WEEK_AWARD'];
+            $rewardType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_AWARD'];
+            $title = "工资赠送可提:";
+        }
+
+        if(!$award){
+            return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
+        }
+
+        if($award['check_status'] > 0){
+            return GameEnum::PDEFINE['RET']['SUCCESS'];
+        }
+
+        if($award['award_amount'] <= 0){
+            return GameEnum::PDEFINE['RET']['SUCCESS'];
+        }
+
+        $uid = $award['uid'];
+        $user = UserHelper::getUserByUid($uid);
+        if(!$user){
+            return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+        }
+
+        $title = $title . $award['award_amount'];
+        try{
+            RewardHelper::alterCoinLog($user, $award['award_amount'], $rewardType, $gameId, $title);
+            $this->updateGameDrawInDraw($user, $award['award_amount']);
+            LogHelper::addSenddrawLog($uid, $title, $award['award_amount'], $categoryType);
+            $award['check_status'] = 1;
+            $award->save();
+        }
+        catch (\Exception $e){
+            return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
+        }
+
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 }
