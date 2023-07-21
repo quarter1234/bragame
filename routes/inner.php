@@ -12,8 +12,7 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'inner'
+    'prefix' => 'callapi'
 ], function ($router) {
-    Route::get('processRequestPay', [CallApiController::class, 'processRequestPay']); // 支付回调
-    Route::get('processRequestUser', [CallApiController::class, 'processRequestUser']); // 后台回调修改用户信息(包括拒绝提现)
+    Route::get('/', [CallApiController::class, 'index']);
 });

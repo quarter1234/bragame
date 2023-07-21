@@ -44,6 +44,7 @@ class GameEnum{
                 "BOX_AWRAD" => 188010, // -- 宝箱奖励
                 "AGENT_WEEK_AWARD" => 188011, // -- 工资奖励
                 "DRAW_RETURN" => 188007, // --拒绝提现
+                "DOWN_COIN" => 20000, // --下分
             ]
         ],
         "RET" => [

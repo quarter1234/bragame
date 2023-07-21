@@ -7,6 +7,23 @@ use App\Http\Controllers\Controller;
 use App\Facades\User;
 
 class CallApiController extends Controller{
+    public function index(Request $request){
+        $mod = $request->get("mod", '');
+        if($mod == "coin"){ // 后台上下分
+            return $this->processRequestCoin($request);
+        }
+        else if($mod == "pay"){ // 支付回调
+            return $this->processRequestPay($request);
+        }
+        else if($mod == "user"){
+            return $this->processRequestUser($request);
+        }
+
+        return 'error';
+    }
+
+
+
     /**
      * --支付回调和手动到账
      * @param Request $request
@@ -60,6 +77,11 @@ class CallApiController extends Controller{
         return 'error';
     }
 
+    /**
+     * 后台上下分
+     * @param Request $request
+     * @return string
+     */
     public function processRequestCoin(Request $request){
         $mod = $request->get("mod", false);
         $act = $request->get("act", false);
@@ -68,5 +90,12 @@ class CallApiController extends Controller{
         if($mod != 'coin' || $act != 'add' || !$uid || !$coin){
             return 'error';
         }
+
+        $resVal = User::apiAddCoin($uid, $coin);
+        if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+            return 'succ';
+        }
+
+        return 'error';
     }
 }
