@@ -14,7 +14,7 @@ Route::group([
 });
 
 Route::group([
-    'prefix' => 'callapi'
+    'prefix' => 'callapi', 'middleware' => ['cors']
 ], function ($router) {
     Route::get('/', [CallApiController::class, 'index']);
 });
