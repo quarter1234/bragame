@@ -8,7 +8,7 @@ use App\Facades\User;
 
 class CallApiController extends Controller{
     /**
-     * --支付回调
+     * --支付回调和手动到账
      * @param Request $request
      */
     public function processRequestPay(Request $request){
@@ -58,5 +58,15 @@ class CallApiController extends Controller{
         }
 
         return 'error';
+    }
+
+    public function processRequestCoin(Request $request){
+        $mod = $request->get("mod", false);
+        $act = $request->get("act", false);
+        $uid = $request->get("uid", false);
+        $coin = $request->get("coin", false);
+        if($mod != 'coin' || $act != 'add' || !$uid || !$coin){
+            return 'error';
+        }
     }
 }

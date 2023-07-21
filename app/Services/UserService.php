@@ -270,4 +270,8 @@ class UserService
 
         return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
     }
+
+    public function apiAddCoin($uid, $coin){
+        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['UP_COIN'];
+    }
 }

@@ -36,6 +36,7 @@ class GameEnum{
         ],
         "GAME_TYPE" => [
             "SPECIAL" => [
+                "UP_COIN" => 10000, // --下分
                 "QUEST" => 160000, // --任务奖励
                 "STORE_BUY" => 40000, // --商城购买
                 "STORE_SEND" => 41000, // --商城赠送
