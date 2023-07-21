@@ -382,8 +382,13 @@
           $(this).addClass('active-side-menu');
         })
 
+        $('.sx').click(function(){
+            location.reload(true)
+        })
+
         loadPgGames()
         loadPpGames()
+        
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
           
