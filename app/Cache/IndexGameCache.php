@@ -10,7 +10,7 @@ class IndexGameCache
 {
     const PG_RECOMMEND_KEY = "index:game:pg:recommends";
     const PP_RECOMMEND_KEY = "index:game:pp:recommends";
-    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommende";
+    const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
 
     public static function getPGRecommend()
     {
