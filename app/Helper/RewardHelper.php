@@ -273,17 +273,17 @@ class RewardHelper
                 }
             }
             else if($type == 2){
-                if($inviteConfig['bet']['jlgameids'] && !empty($inviteConfig['bet']['jlgameids'])){
+                if(isset($inviteConfig['bet']['jlgameids']) && !empty($inviteConfig['bet']['jlgameids'])){
                     $str = $inviteConfig['bet']['jlgameids'] ?? '';
                 }
             }
             else if($type == 3){
-                if($inviteConfig['bet']['pggameids'] && !empty($inviteConfig['bet']['pggameids'])){
+                if(isset($inviteConfig['bet']['pggameids']) && !empty($inviteConfig['bet']['pggameids'])){
                     $str = $inviteConfig['bet']['pggameids'] ?? '';
                 }
             }
             else if($type == 4){
-                if($inviteConfig['bet']['ppgameids'] && !empty($inviteConfig['bet']['ppgameids'])){
+                if(isset($inviteConfig['bet']['ppgameids']) && !empty($inviteConfig['bet']['ppgameids'])){
                     $str = $inviteConfig['bet']['ppgameids'] ?? '';
                 }
             }
