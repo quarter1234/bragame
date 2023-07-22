@@ -19,8 +19,6 @@ class ActivityController extends Controller
 
     public function index()
     {
-        throw new \Exception("Error Processing Request", 1);
-        
         $data = [];
         $data['activity'] = $this->activityService->getActivity();
         

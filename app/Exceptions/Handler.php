@@ -46,7 +46,8 @@ class Handler extends ExceptionHandler
     {
         // 默认通道
         // $this->shouldReport($exception) and \ExceptionNotifier::report($exception);
-        $this->shouldReport($exception) and app('exception.notifier')->report($exception);
+        // $this->shouldReport($exception) and app('exception.notifier')->report($exception);
+        \ExceptionNotifier::reportIf($this->shouldReport($exception), $exception);
         parent::report($exception);
     }
 
