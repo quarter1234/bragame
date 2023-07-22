@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mobile;
 use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Events\RegisterEvent;
+use App\Exceptions\BadRequestException;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
@@ -79,6 +80,11 @@ class PublicController extends Controller
         } 
         
         $user = Auth::user();
+        if($user['status'] != CommonEnum::ENABLE) {
+            throw new BadRequestException(['msg' => trans('auth.account_exception')]);
+            
+        }
+
         $this->userService->storeLoginLog($user, $params);
 
         return true;

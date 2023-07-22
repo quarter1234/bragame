@@ -22,4 +22,5 @@ return [
     'register' => 'Register',
     'login' => 'Login',
     'login_out' => 'Confirm if you want to log out of the account.',
+    'account_exception' => 'Account exception',
 ];

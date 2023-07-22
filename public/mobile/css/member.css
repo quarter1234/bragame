@@ -2787,14 +2787,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     white-space: nowrap;
 }
 .email_wk{
-    width:260px;
-    margin-left:20px;
+    width:250px;
+    margin-left:10px;
     margin-top:15px;
     float:left;
 }
 .email_w_bottom{
     width:100%;
-   
 }
 .email_w_left{
     float:left;
