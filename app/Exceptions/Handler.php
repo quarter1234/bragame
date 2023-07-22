@@ -47,7 +47,7 @@ class Handler extends ExceptionHandler
         // 默认通道
     \ExceptionNotifier::reportIf($this->shouldReport($exception), $exception);
     // 指定通道
-    \ExceptionNotifier::onChannel('dingTalk', 'mail')->reportIf($this->shouldReport($exception), $exception);
+    \ExceptionNotifier::onChannel('telegram')->reportIf($this->shouldReport($exception), $exception);
         parent::report($exception);
     }
 
