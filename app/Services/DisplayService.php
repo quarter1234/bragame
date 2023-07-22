@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Cache\UserCache;
 use App\Exceptions\BadRequestException;
 use App\Helper\GameHelper;
 
@@ -40,7 +41,8 @@ class DisplayService
     public function getQuery($user) :string
     {
         // return 'uid=23682&token=9ab66de7d1290b41aaaad32b632a8108';
-        $query = ['uid' => $user->uid, 'token' => $user->token];
+        $token = UserCache::getToken($user);
+        $query = ['uid' => $user->uid, 'token' => $token];
         return http_build_query($query);
     }
 

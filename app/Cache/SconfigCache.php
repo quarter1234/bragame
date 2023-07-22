@@ -18,7 +18,7 @@ class SconfigCache
      */
     public static function getByKey(string $key)
     {
-        $cacheKey = sprintf(self::S_CONFIG_KEY, $key);
+        // $cacheKey = sprintf(self::S_CONFIG_KEY, $key);
 
 //        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () use($key) {
 //            $configRepo = app()->make(SConfigRepository::class);
