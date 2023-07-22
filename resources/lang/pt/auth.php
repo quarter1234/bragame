@@ -17,4 +17,5 @@ return [
     'register' => 'Registo',
     'login' => 'Login',
     'login_out' => 'Confirme se deseja sair da conta',
+    'account_exception' => 'Conta com problemas.',
 ];
