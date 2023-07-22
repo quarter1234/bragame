@@ -43,8 +43,9 @@
 
 
             <div class="email_h"></div>
+          {{--
             <div class="best_top">
-                <div class="best_div">
+              <div class="best_div">
                     Estatísticas
                     <p>1111</p>
                 </div>
@@ -56,7 +57,8 @@
                 Vencer
                     <p>1111</p>
                 </div>
-            </div>
+            </div>--}}
+
             <div id="content_list_pages">
 
             </div>
