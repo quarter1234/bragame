@@ -17,6 +17,7 @@ use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
 use App\Cache\AllUseGameDrawCache;
+use App\Repositories\DUserBindRepository;
 use Illuminate\Support\Facades\Log;
 
 class UserService

@@ -7,6 +7,7 @@ use App\Events\RegisterEvent;
 use App\Helper\RewardHelper;
 use App\Helper\SystemConfigHelper;
 use App\Helper\UserHelper;
+use App\Repositories\DUserBindRepository;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -79,6 +80,7 @@ class RegisterListener implements ShouldQueue
 
         // 也要把自己算进去
         $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+        $this->storeUserBind($register);
         
         // 删除缓存数据
         $invitePage1 = "share:invite:list:". $inviteUser->uid. '_' . 1;
@@ -108,5 +110,18 @@ class RegisterListener implements ShouldQueue
         //         );
         //     }
         // }
+    }
+
+    private function storeUserBind($registerUser)
+    {
+        $bindRepo = app()->make(DUserBindRepository::class);
+
+        $data = [];
+        $data['uid'] = $registerUser['uid'];
+        $data['unionid'] = $registerUser['phone'] ?? '';
+        $data['passwd'] = $registerUser['password'] ?? '';
+        $data['create_time'] = time();
+       
+        $bindRepo->create($data);
     }
 }

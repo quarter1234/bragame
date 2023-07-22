@@ -10,7 +10,7 @@ Route::group([
 ], function ($router) {
     Route::post('callBackAuth', [PgController::class, 'callBackAuth']); // 回调获得用户余额
     Route::post('blanceCallBack', [PgController::class, 'callBackBet']); // 注单和结算
-    Route::get('drawApply', [DrawController::class, 'drawApply']); // 提现申请
+    Route::post('drawApply', [DrawController::class, 'drawApply']); // 提现申请
 });
 
 Route::group([
