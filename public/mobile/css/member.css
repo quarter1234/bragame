@@ -2778,7 +2778,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
 }
 .email_w{
-    width:250px;
+    width:225px;
     font-size:16px;
     text-overflow:ellipsis;
     height:20px;
@@ -3001,7 +3001,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:#1e3655;
     position:absolute;
     right:10px;
-    top:10px;
+    top:15px;
     line-height:20px;
     font-size:12px;
     color:#fff;

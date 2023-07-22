@@ -88,9 +88,6 @@ class PublicController extends Controller
 
         $this->userService->storeLoginLog($user, $params);
 
-        $tokenKey = 't_'.trim($user->token);
-        Cache::put($tokenKey, $user->token, config('session.lifetime'));
-
         return true;
     }
 
