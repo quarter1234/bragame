@@ -268,22 +268,22 @@ class RewardHelper
         $str = "";
         if($inviteConfig && $inviteConfig['bet']){
             if($type == 1){
-                if($inviteConfig['bet']['gameids']){
+                if(isset($inviteConfig['bet']['gameids']) && !empty($inviteConfig['bet']['gameids'])){
                     $str = $inviteConfig['bet']['gameids'] ?? '';
                 }
             }
             else if($type == 2){
-                if($inviteConfig['bet']['jlgameids']){
+                if($inviteConfig['bet']['jlgameids'] && !empty($inviteConfig['bet']['jlgameids'])){
                     $str = $inviteConfig['bet']['jlgameids'] ?? '';
                 }
             }
             else if($type == 3){
-                if($inviteConfig['bet']['pggameids']){
+                if($inviteConfig['bet']['pggameids'] && !empty($inviteConfig['bet']['pggameids'])){
                     $str = $inviteConfig['bet']['pggameids'] ?? '';
                 }
             }
             else if($type == 4){
-                if($inviteConfig['bet']['ppgameids']){
+                if($inviteConfig['bet']['ppgameids'] && !empty($inviteConfig['bet']['ppgameids'])){
                     $str = $inviteConfig['bet']['ppgameids'] ?? '';
                 }
             }
