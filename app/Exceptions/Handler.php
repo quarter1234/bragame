@@ -45,9 +45,8 @@ class Handler extends ExceptionHandler
     public function report(Throwable $exception)
     {
         // 默认通道
-    \ExceptionNotifier::reportIf($this->shouldReport($exception), $exception);
-    // 指定通道
-    \ExceptionNotifier::onChannel('telegram')->reportIf($this->shouldReport($exception), $exception);
+        // $this->shouldReport($exception) and \ExceptionNotifier::report($exception);
+        $this->shouldReport($exception) and app('exception.notifier')->report($exception);
         parent::report($exception);
     }
 
