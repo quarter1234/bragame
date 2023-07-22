@@ -11,6 +11,7 @@ use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Cache;
 
 class PublicController extends Controller
 {
@@ -86,6 +87,9 @@ class PublicController extends Controller
         }
 
         $this->userService->storeLoginLog($user, $params);
+
+        $tokenKey = 't_'.trim($user->token);
+        Cache::put($tokenKey, $user->token, config('session.lifetime'));
 
         return true;
     }
