@@ -3008,3 +3008,49 @@ button.cancel-btn[_ngcontent-way-c22] {
     text-align:center;
     display:block;
 }
+
+.best_top{
+    width:95%;
+    height:200px;
+    border-radius:10px;
+    margin:-120px auto 0 auto;
+    background:#132235;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    overflow: hidden;
+}
+.best_div{
+    width:30%;
+    text-align:center;
+    padding-top:140px;
+    font-size:14px;
+    color:#999;
+}
+.best_div p{
+    color:#fff;
+    font-size:14px;
+}
+
+#content_list_pages .email_wk{
+    width:350px;
+}
+#conten_list_pages .email_w{
+    width:277px !important;
+}
+
+#content_load_more{
+    padding: 5px 10px;
+    background: #1e3655;
+    border-radius: 5px;
+}
+
+.avatar_sub_title label a{
+    width:20px;
+    height:20px;
+    background:url(../img/copy_ico.png) no-repeat;
+    background-size:20px 20px;
+    display: block;
+    float:right;
+    margin-top:5px;
+}
