@@ -1,6 +1,6 @@
 @foreach($data as $item)
 <div class="rechare_list">
-        <div class="email_wk">
+        <div class="email_wk" style="width:350px;">
             <div class="email_w" style="width:277px;">{{ $item['bet_id'] }}</div>
             <div class="rechare_zt">Montante da aposta: {{ $item['bet_amount'] }}</div>
             <div class="email_w_bottom">
