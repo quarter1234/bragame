@@ -22,6 +22,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\EnableCrossRequestMiddleware::class,
+        \App\Http\Middleware\CrossHttp::class
     ];
 
     /**
@@ -68,6 +69,6 @@ class Kernel extends HttpKernel
         'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
         'role_or_permission' => \Spatie\Permission\Middlewares\RoleOrPermissionMiddleware::class,
         'inner_auth' => \App\Http\Middleware\InnerAuth::class,
-
+        'cors' => \App\Http\Middleware\CrossHttp::class,
     ];
 }
