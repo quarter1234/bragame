@@ -20,4 +20,5 @@ return [
     'register' => '注册',
     'login' => '登录',
     'login_out' => '请确认是否退出账号',
+    'account_exception' => '账号异常',
 ];

@@ -2778,7 +2778,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
 }
 .email_w{
-    width:250px;
+    width:225px;
     font-size:16px;
     text-overflow:ellipsis;
     height:20px;
@@ -2787,14 +2787,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     white-space: nowrap;
 }
 .email_wk{
-    width:260px;
-    margin-left:20px;
+    width:250px;
+    margin-left:10px;
     margin-top:15px;
     float:left;
 }
 .email_w_bottom{
     width:100%;
-   
 }
 .email_w_left{
     float:left;
@@ -3002,10 +3001,49 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:#1e3655;
     position:absolute;
     right:10px;
-    top:10px;
+    top:15px;
     line-height:20px;
     font-size:12px;
     color:#fff;
     text-align:center;
     display:block;
+}
+
+.best_top{
+    width:95%;
+    height:200px;
+    border-radius:10px;
+    margin:-120px auto 0 auto;
+    background:#132235;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    overflow: hidden;
+}
+.best_div{
+    width:30%;
+    text-align:center;
+    padding-top:140px;
+    font-size:14px;
+    color:#999;
+}
+.best_div p{
+    color:#fff;
+    font-size:14px;
+}
+
+#content_load_more{
+    padding: 5px 10px;
+    background: #1e3655;
+    border-radius: 5px;
+}
+
+.avatar_sub_title label a{
+    width:20px;
+    height:20px;
+    background:url(../img/copy_ico.png) no-repeat;
+    background-size:20px 20px;
+    display: block;
+    float:right;
+    margin-top:5px;
 }
