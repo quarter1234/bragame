@@ -18,7 +18,7 @@ class UserCache
         $cacheKey = sprintf(self::TOKEN_KEY, $user['token']);
 
         return Cache::remember($cacheKey, config('session.lifetime'), function () use($user){
-            return $user['token'];
+            return $user['uid'];
         });
     }
 }
