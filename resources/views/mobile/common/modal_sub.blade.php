@@ -1,7 +1,7 @@
 <div class="modal_w_two">
-        <div class="modal_w_two">
-               <p>11111</p>
-               <button>111111</button>
+        <div class="modal_w_two modal_sub_content">
+               <p></p>
+               <button class="modal_sub_ok">OK</button>
         </div>
 </div>
 <style>
@@ -33,11 +33,11 @@
     text-align:center;
     font-size:14px;
 }
-.modal_two p{
+.modal_w_two p{
     color:#000;
     padding-top:20px;
 }
-.modal_two button{
+.modal_w_two button{
     width:180px;
     height:30px;
     background:#05b3e6;
@@ -47,10 +47,20 @@
 }
 </style>
 <script>
-    
+    function showModalSub(msg) {
+        $('.modal_sub_content p').text(msg);
+        $('body,html').addClass('notScroll')
+        $('.modal_w_two').show()
+    }
+   
+    function hideModalSub() {
+        $('.modal_w_two').hide()
+        $('.modal_sub_content p').text('');
+    }
+
     $(function(){
        $('body,html').addClass('notScroll')
-       $('.modal button').click(function(){
+       $('.modal_w_two button').click(function(){
         $('body,html').removeClass('notScroll')
         $('.modal_w_two').hide()
        })

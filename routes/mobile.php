@@ -8,6 +8,8 @@ use App\Http\Controllers\Mobile\IndexController;
 use App\Http\Controllers\Mobile\MemberController;
 use App\Http\Controllers\Mobile\NoticeController;
 use App\Http\Controllers\Mobile\PublicController;
+use App\Http\Controllers\Mobile\RechargeController;
+use App\Http\Controllers\Mobile\RedPackageController;
 use App\Http\Controllers\Mobile\ShareController;
 use App\Http\Controllers\Mobile\ShopController;
 use Illuminate\Support\Facades\Route;
@@ -73,4 +75,20 @@ Route::group([
     Route::get('emailList', [EmailController::class, 'emailList']);
     Route::get('emailInfo', [EmailController::class, 'emailInfo'])->name('mobile.email.info');
     Route::get('getAttach', [EmailController::class, 'getAttach'])->name('mobile.email.attach');
+});
+
+// 支付相关
+Route::group([
+    'prefix' => 'mobile/pay', 'middleware' => ['auth']
+], function ($router) {
+    Route::get('recharge ', [RechargeController::class, 'index']);
+    
+});
+
+// 红包相关
+Route::group([
+    'prefix' => 'mobile/redPacket', 'middleware' => ['auth']
+], function ($router) {
+    Route::get('doLottery', [RedPackageController::class, 'doLottery']);
+    
 });

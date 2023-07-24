@@ -49,7 +49,8 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        if ($this->shouldReport($exception)) {
+        
+        if ($this->shouldReport($exception) && config('app.env') != 'local') {
             $this->sendEmail($exception); 
         }
         

@@ -8,6 +8,7 @@ class GameEnum{
             "DOWN" => 2, // 下分
             "BET" => 3, // 下注
             "WIN" => 4, // 赢钱
+            'REDBAG' => 6, // 红包
             'DRAW' =>123, // 提现
             // 奖励类型
             "AGENT_REG_REWARDS" => 130, // --下级注册奖励
@@ -37,6 +38,7 @@ class GameEnum{
                 "Mail" => 7, // --邮件奖励
                 "BOX_AWARD" => 41, // -- 宝箱奖励
                 "WEEK_AWARD" => 42, // -- 工资奖励
+                "RedPacket" => 43, // -- 红包奖励
             ]
         ],
         "GAME_TYPE" => [

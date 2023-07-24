@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     @include('mobile.common.common_title') 
     <base href="/">
-
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
@@ -42,6 +41,7 @@
                   <!---->
                   <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
                   <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
+                
                   </div>
                   <!---->
                   <!---->
@@ -53,11 +53,7 @@
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                    <!---->
-                    <!---->
-                    <!---->
-
-                      
+                
                    </jx-content-view>
                 </jx-safe-area>
               </div>
@@ -67,8 +63,6 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                  @include('mobile.common.footer') 
                   
                  
                 </jx-tab-bar>

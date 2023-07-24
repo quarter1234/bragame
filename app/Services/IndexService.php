@@ -3,16 +3,21 @@ namespace App\Services;
 
 use App\Cache\IndexGameCache;
 use App\Common\Enum\CommonEnum;
+use App\Helper\RedPackageHelper;
+use App\Models\DRedPacket;
+use App\Repositories\DRedPacketUserRepository;
 use App\Repositories\SConfigPicRepository;
 use Illuminate\Support\Facades\Auth;
 
 class IndexService
 {
     private $picRepo;
+    private $userRedPack;
 
-    public function __construct(SConfigPicRepository $picRepo)
+    public function __construct(SConfigPicRepository $picRepo, DRedPacketUserRepository $userRedPack)
     {
         $this->picRepo  = $picRepo;
+        $this->userRedPack = $userRedPack;
     }
 
     /**
@@ -37,7 +42,9 @@ class IndexService
         $data['pgRecommend'] = IndexGameCache::getPGRecommend();
         $data['ppRecommend'] = IndexGameCache::getPPRecommend();
         $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
-        
+
+        $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
+
         $data['bnners'] = $this->picRepo->getBanners();
 
         return $data;

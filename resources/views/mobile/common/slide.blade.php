@@ -7,9 +7,11 @@
 <div class="down_ico">
 <img src="../../mobile/img/down_ico.png" />
 </div>
+@if($showUserRedPakc)
 <div class="hb">
-<img src="../../mobile/img/hb.png" />
+<a href="javascript:void(0);" id="redPacket"><img src="../../mobile/img/hb.png" /></a>
 </div>
+@endif
 <div class="menu_tc">
     <div class="menu_right">
         <ul>
@@ -174,6 +176,27 @@
             $('.menu_on').show();
             $('.menu_tc').hide()
             $('.menu_right').delay(300).animate({right:'-200'+'px'});  
+        })
+        $('#redPacket').click(function(){
+            showLoading()
+            $.ajax({
+              url : "{{url('mobile/redPacket/doLottery')}}",
+              type : 'GET',
+              data : {},
+              success : function (data) {
+                hideLoading();
+                showModalSub('Receba um bônus de '+data.data.coin+' moedas');
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+                hideModalSub()
+                showModal(jqXHR.responseJSON.message);
+              }
+            })
+
+           
+
+            console.log(222)
         })
     })
 </script>
