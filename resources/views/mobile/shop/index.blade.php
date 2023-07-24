@@ -61,7 +61,7 @@
                           <span>Saldo Retiravel</span>
                           <p>R$ {{ $user['gamedraw'] }}</p>
                           <button class="shop_list_button2"></button>
-                          <div class="shop_wk"><a style="color:white" href="{{ route('mobile.display', ["act" => 'kyc']) }}" >Verdifcar agora</a></div>
+                          <div class="shop_wk"><a href="{{ route('mobile.display', ["act" => 'kyc']) }}" >Verdifcar agora</a></div>
                           <div class="shop_wk2">Verdifcar agora sda dejfskjd ad fasda</div>
                       </div>
                       <div class="shop_h"></div>
