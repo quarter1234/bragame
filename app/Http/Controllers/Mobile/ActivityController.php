@@ -27,6 +27,7 @@ class ActivityController extends Controller
 
     public function show(int $id)
     { 
+        throw new \Exception("Error Processing Request", 1);
         $data = [];
         $data['activity'] = $this->activityService->getActivityInfo($id);
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Mobile;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
+use App\Models\User;
 use App\Services\IndexService;
 
 class IndexController extends Controller

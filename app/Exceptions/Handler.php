@@ -9,9 +9,13 @@ use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
 use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Common\Lib\Result;
+use App\Common\Lib\TelegramNotice;
+use Illuminate\Support\Facades\Mail;
+use Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response; 
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
+
 
 class Handler extends ExceptionHandler
 {
@@ -45,6 +49,9 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
+        if ($this->shouldReport($exception)) {
+            $this->sendEmail($exception); 
+        }
         parent::report($exception);
     }
 
@@ -76,18 +83,8 @@ class Handler extends ExceptionHandler
             foreach ($messages as $message) {
                 $msg .= $message[0] ?? '';
             }
-
-            // if($request->ajax()){
-                return Result::error($msg, 4220, 422);
-            // }else{
-            //     $params = [
-            //         'msg'  => $msg,
-            //         'wait' => 33,
-            //         'url'  => 'javascript:history.back(-1);',
-            //     ];
-            //     return response()->view('mobile.errors.error', $params, 500);
-            // }
             
+            return Result::error($msg, 4220, 422);
         }
 
         return parent::render($request, $exception);
@@ -95,9 +92,10 @@ class Handler extends ExceptionHandler
 
     public function sendEmail(Throwable $exception)
     {
+
+        
         $response = [];
 
-        // $error = $this->convertExceptionToResponse($exception);
         $error = $this->convertExceptionToResponse($exception);
         $exception = FlattenException::create($exception);
 
@@ -105,15 +103,16 @@ class Handler extends ExceptionHandler
         $response['status'] = $error->getStatusCode();
         $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
 
-        $response['line'] =  $exception->getLine();
-        $response['file'] =  $exception->getFile();
-        $response['class'] = $exception->getClass();
-        $response['trace'] = $exception->getTrace();
-
+        // $response['line'] =  $exception->getLine();
+        // $response['file'] =  $exception->getFile();
+        // $response['class'] = $exception->getClass();
+        // $response['trace'] = $exception->getTrace();
+        
+        TelegramNotice::sendMessage($response['msg']);
       
-        print_r(json_encode($response));
-        // print_r($error->getMessage());
-        die();
+        // print_r(json_encode($response));
+        // // print_r($error->getMessage());
+        // die();
         // try {
            
         //     $e = FlattenException::createFromThrowable($exception);
@@ -122,7 +121,7 @@ class Handler extends ExceptionHandler
         //     $css = $handler->getStylesheet();
         //     $content = $handler->getBody($e);
            
-        //     // Mail::to('your_email_address_here')->send(new ExceptionOccurred($content,$css));
+        //     Mail::to('1043791113@qq.com')->send(new ExceptionOccurred($content,$css));
         // } catch (Throwable $exception) {
         //     print_r($exception->getMessage);die();
         //     // Log::error($exception);
