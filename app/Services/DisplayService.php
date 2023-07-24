@@ -23,6 +23,9 @@ class DisplayService
         } elseif($params['act'] == 'kyc') {
             return $this->payConfig['kyc'] . '?' . $this->getQuery($user);
 
+        } elseif($params['act'] == 'draw') {
+            return $this->payConfig['draw'] . '?' . $this->getQuery($user);
+
         } elseif($params['act'] == 'transaction') {
             return $this->payConfig['transaction'] . '?' . $this->getQuery($user);
             

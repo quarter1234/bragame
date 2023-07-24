@@ -57,15 +57,28 @@
                           <p>R$ {{$user['coin']}}</p>
                           <button  class="shop_list_button"></button>
                       </div>
+
                       <div class="shop_list">
                           <span>Saldo Retiravel</span>
                           <p>R$ {{ $user['gamedraw'] }}</p>
-                          <button class="shop_list_button2"></button>
-                          <div class="shop_wk"><a href="{{ route('mobile.display', ["act" => 'kyc']) }}" >Verdifcar agora</a></div>
-                          <div class="shop_wk2">Verdifcar agora sda dejfskjd ad fasda</div>
+                         
+
+                          <div class="shop_wk">
+                            @if($user['kyc'] == 0)
+                              <a href="{{ route('mobile.display', ["act" => 'kyc']) }}" >
+                            @else
+                              <a href="{{ route('mobile.display', ["act" => 'draw']) }}" >
+                            @endif
+                              Verdifcar agora
+                            </a>
+
+                          </div>
+                          
+
                       </div>
                       <div class="shop_h"></div>
 
+                      
                       <a style="color:white" href="{{ route('mobile.display', ["act" => 'transaction']) }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
@@ -76,6 +89,7 @@
                        </div>
                       </div>
                       </a>
+
 
                       <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
                       <div class="shop_jt">
