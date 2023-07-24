@@ -86,7 +86,14 @@ class GameService
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
         }
 
-        $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+        $appIpConfig = false;
+        if($user['is_test'] == 0){
+            $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+        }
+        else{
+            $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
+        }
+
         if(!$appIpConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
         }
@@ -152,6 +159,7 @@ class GameService
         $isEndRound= $betParams['is_end_round'] ?? 0;
         $validAmount = $betParams['valid_amount'] ?? 0;
         $settledAmount = $betParams['settled_amount'] ?? 0;
+        $isTest = $betParams['is_test'] ?? 0;
         if(empty($resultType) && $settledAmount == 0){
             $settledAmount = $winLoseAmount - $betAmount;
         }
@@ -188,6 +196,7 @@ class GameService
             "plat_app" => $platApp,
             "bet_time" => $betTime,
             "settled_time" => $settledTime,
+            "is_test" => $isTest,
         ];
 
         $pgBetId = $this->pgbets->insert($addData);
@@ -273,6 +282,7 @@ class GameService
             return $this->defauRespData;
         }
 
+        $betParams['is_test'] = $user['is_test'];
         $betId = $this->_addBetData($uid, $betParams);
         if(empty($betId)){
             $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
@@ -382,7 +392,7 @@ class GameService
                 }
             }
 
-            if($settledAmount !=0){
+            if($settledAmount !=0 && $betParams['is_test'] == 0){
                 $this->_addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winLoseAmount, $settledAmount, $currPlatForm);
             }
 
