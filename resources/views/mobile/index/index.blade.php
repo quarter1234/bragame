@@ -39,7 +39,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
           @include('mobile.common.modal') 
-          @include('mobile.common.modal_sub') 
+         {{-- @include('mobile.common.modal_sub') --}}
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
                 
