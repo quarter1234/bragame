@@ -226,6 +226,9 @@ class RewardHelper
         else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['VIP']){ // -- vip升级
             $title = 'vipbonus';
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['VIP_BONUS']; // --VIP奖励
+        }else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['RedPacket']){ // -- 红包奖励
+            $title = 'RedPacket';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['REDBAG']; // 红包
         }
         else{
             $title = 'other';
