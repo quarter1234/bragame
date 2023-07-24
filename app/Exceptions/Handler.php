@@ -103,12 +103,12 @@ class Handler extends ExceptionHandler
         $response['status'] = $error->getStatusCode();
         $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
 
-        // $response['line'] =  $exception->getLine();
-        // $response['file'] =  $exception->getFile();
-        // $response['class'] = $exception->getClass();
+        $response['line'] =  $exception->getLine();
+        $response['file'] =  $exception->getFile();
+        $response['class'] = $exception->getClass();
         // $response['trace'] = $exception->getTrace();
-        
-        TelegramNotice::sendMessage($response['msg']);
+
+        TelegramNotice::sendMessage(json_encode($response));
       
         // print_r(json_encode($response));
         // // print_r($error->getMessage());
