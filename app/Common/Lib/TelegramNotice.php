@@ -28,8 +28,5 @@ class TelegramNotice
                 'text' => $message
             ],
         ]);
-
-        $body = $response->getBody(); //获取响应体，对象
-        print_r($body->getContents());die();
     }
 }

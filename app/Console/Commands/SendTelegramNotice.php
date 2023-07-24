@@ -38,8 +38,6 @@ class SendTelegramNotice extends Command
      */
     public function handle()
     {
-        TelegramNotice::sendMessage();
-        echo "111";die();
-        return 0;
+        TelegramNotice::sendMessage("test");
     }
 }
