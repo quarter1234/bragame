@@ -7,6 +7,9 @@
 <div class="down_ico">
 <img src="../../mobile/img/down_ico.png" />
 </div>
+<div class="hb">
+<img src="../../mobile/img/hb.png" />
+</div>
 <div class="menu_tc">
     <div class="menu_right">
         <ul>
@@ -140,6 +143,24 @@
         width:20px;
         height:20px;
         margin-top:9px;
+   }
+
+   .hb{
+    width:40px;
+    height:40px;
+    background:rgba(0, 0, 0, 0.8);
+    position:fixed;
+    z-index:99;
+    top:81%;
+    right:10px;
+    margin-top:-30px;
+    border-radius:100%;
+    text-align:center;
+   }
+   .hb img{
+    width:20px;
+        height:20px;
+        margin-top:10px;
    }
 </style>
 <script>

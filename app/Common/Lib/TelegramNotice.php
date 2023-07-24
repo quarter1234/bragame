@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 
 class TelegramNotice
 {
-    public static function sendMessage($message)
+    public static function sendMessage(array $message)
     {
         $token = '6309972833:AAETPJB5H47KVkyfiMXwfee52Y5-LWwwMuU';
         $chatId = '-1001914606862';
@@ -22,11 +22,23 @@ class TelegramNotice
         ]); //初始化客户端
 
        
-        $response = $client->post($baseurl, [
+         $client->post($baseurl, [
             'form_params' => [        //参数组
                 'chat_id' => $chatId,
-                'text' => $message
+                'text' => self::formatContent($message),
+                'parse_mode' => 'Markdown'
             ],
         ]);
+    }
+
+    private static function formatContent(array $messages)
+    {
+        $msgStr = '';
+
+        foreach ($messages as $key => $msg) {
+           $msgStr .= '*' . $key. ' : ' .$msg. '  ';
+        }
+
+        return $msgStr;
     }
 }
