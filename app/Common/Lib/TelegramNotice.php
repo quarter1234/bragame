@@ -25,8 +25,8 @@ class TelegramNotice
          $client->post($baseurl, [
             'form_params' => [        //参数组
                 'chat_id' => $chatId,
-                'text' => self::formatContent($message),
-                'parse_mode' => 'Markdown'
+                'text' => json_encode($message),
+                // 'parse_mode' => 'Markdown'
             ],
         ]);
     }
