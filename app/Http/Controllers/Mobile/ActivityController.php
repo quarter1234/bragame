@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Lib\TelegramNotice;
 use App\Http\Controllers\Controller;
 use App\Services\ActivityService;
 
@@ -27,6 +28,8 @@ class ActivityController extends Controller
 
     public function show(int $id)
     { 
+        TelegramNotice::sendMessage();
+        echo "111";die();
         $data = [];
         $data['activity'] = $this->activityService->getActivityInfo($id);
 

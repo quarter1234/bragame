@@ -11,6 +11,7 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Common\Lib\Result;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpFoundation\Response; 
+use Symfony\Component\ErrorHandler\Exception\FlattenException;
 
 class Handler extends ExceptionHandler
 {
@@ -44,10 +45,6 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        // 默认通道
-        // $this->shouldReport($exception) and \ExceptionNotifier::report($exception);
-        // $this->shouldReport($exception) and app('exception.notifier')->report($exception);
-        \ExceptionNotifier::reportIf($this->shouldReport($exception), $exception);
         parent::report($exception);
     }
 
@@ -94,5 +91,41 @@ class Handler extends ExceptionHandler
         }
 
         return parent::render($request, $exception);
+    }
+
+    public function sendEmail(Throwable $exception)
+    {
+        $response = [];
+
+        // $error = $this->convertExceptionToResponse($exception);
+        $error = $this->convertExceptionToResponse($exception);
+        $exception = FlattenException::create($exception);
+
+
+        $response['status'] = $error->getStatusCode();
+        $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
+
+        $response['line'] =  $exception->getLine();
+        $response['file'] =  $exception->getFile();
+        $response['class'] = $exception->getClass();
+        $response['trace'] = $exception->getTrace();
+
+      
+        print_r(json_encode($response));
+        // print_r($error->getMessage());
+        die();
+        // try {
+           
+        //     $e = FlattenException::createFromThrowable($exception);
+        //     $handler = new HtmlErrorRenderer(true);
+            
+        //     $css = $handler->getStylesheet();
+        //     $content = $handler->getBody($e);
+           
+        //     // Mail::to('your_email_address_here')->send(new ExceptionOccurred($content,$css));
+        // } catch (Throwable $exception) {
+        //     print_r($exception->getMessage);die();
+        //     // Log::error($exception);
+        // }
     }
 }
