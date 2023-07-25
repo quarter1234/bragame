@@ -22,7 +22,7 @@ Route::group([
 ], function ($router) {
     Route::get('register', [PublicController::class, 'register']);
     Route::post('register', [PublicController::class, 'doRegister']);
-    Route::get('login', [PublicController::class, 'login']);
+    Route::get('login', [PublicController::class, 'login'])->name('login');
     Route::post('login', [PublicController::class, 'doLogin']);
     Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
