@@ -207,7 +207,6 @@ class UserService
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
         $alterlog = "订单到账";
         RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
-        Bets::addUserBetMatch($uid, $orderid, $totalcoin, 1);
         // 赠送金额
         RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid);
         $isfirst = 1; // --首次充值
@@ -215,6 +214,14 @@ class UserService
         if($rechargeCount > 0){
             $isfirst = 0;
         }
+
+        if($isfirst){
+            Bets::addUserBetMatch($uid, $orderid, $totalcoin, 1);
+        }
+        else{
+            Bets::addUserBetMatch($uid, $orderid, $totalcoin, 5);
+        }
+
         $backcoin = $sendcoin + $totalcoin; // 赠送的金币数 + 订单的金额
         $nowtime = time();
         $rechUpData = [

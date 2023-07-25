@@ -80,12 +80,15 @@ class BetDrawService{
     }
 
     public function addUserBetMatch($uid, $orderid, $coin, $type){
-        $kflag = 'pay_bet_mul';
+        $kflag = 'pay_bet_mul'; // 首充充值
         if($type  == 2){
             $kflag = 'send_bet_mul';
         }
         else if($type == 3){
             $kflag = 'mail_bet_mul';
+        }
+        else if($type == 5){ // 复充
+            $kflag = 'pay2_bet_mul';
         }
 
         $config = $this->sbtRep->getConfig($kflag);
