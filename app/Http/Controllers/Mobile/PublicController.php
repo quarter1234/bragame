@@ -81,12 +81,7 @@ class PublicController extends Controller
             return false;
         } 
 
-        $isTrue = Auth::logoutOtherDevices($params['password']); 
-        if(!$isTrue) {
-            // 再登录一次
-            auth()->attempt($credentials, true);
-        }
-
+        Auth::logoutOtherDevices($params['password']); 
         $user = Auth::user();
 
         if($user['status'] != CommonEnum::ENABLE) {
