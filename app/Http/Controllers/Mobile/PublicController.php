@@ -75,6 +75,8 @@ class PublicController extends Controller
         $credentials = [];
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
+
+        Auth::logoutOtherDevices($params['password']);
         
         if (!auth()->attempt($credentials, true)) {
             return false;
@@ -87,8 +89,7 @@ class PublicController extends Controller
         }
 
         $this->userService->storeLoginLog($user, $params);
-        Auth::logoutOtherDevices($params['password']);
-
+        
         return true;
     }
 
