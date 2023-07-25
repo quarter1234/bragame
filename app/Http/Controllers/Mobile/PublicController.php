@@ -76,7 +76,7 @@ class PublicController extends Controller
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
         
-        if (!auth()->attempt($credentials)) {
+        if (!auth()->attempt($credentials, true)) {
             return false;
         } 
         
