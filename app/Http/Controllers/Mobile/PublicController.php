@@ -87,9 +87,11 @@ class PublicController extends Controller
         }
 
         $this->userService->storeLoginLog($user, $params);
-
+        Auth::logoutOtherDevices($params['password']);
+        
         return true;
     }
+
 
     /**
      * 登录页面
