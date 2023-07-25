@@ -82,10 +82,9 @@ class PublicController extends Controller
         } 
 
         $isTrue = Auth::logoutOtherDevices($params['password']); 
-        if($isTrue) {
+        if(!$isTrue) {
             // 再登录一次
             auth()->attempt($credentials, true);
-            
         }
 
         $user = Auth::user();
