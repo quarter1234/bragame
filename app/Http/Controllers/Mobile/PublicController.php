@@ -130,6 +130,7 @@ class PublicController extends Controller
     public function logout()
     {
         auth()->logout();
+        Auth::logoutCurrentDevice();
         return redirect('/mobile/index');
     }
 }
