@@ -81,17 +81,19 @@ class GameService
     public function getPgGameUrl($gameCode, $user)
     {
         $params = [];
-        $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$appIdConfig){
-            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
-        }
+        // $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        // if(!$appIdConfig){
+        //     return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
+        // }
 
         $appIpConfig = false;
         if($user['is_test'] == 0){
             $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
         }
         else{
             $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_test_app_id');
         }
 
         if(!$appIpConfig){
