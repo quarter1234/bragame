@@ -25,6 +25,7 @@ class DPgGameBetsRepository extends Repository
     public function getPgBets($user, $startTime, $endTime)
     {
         return $this->model()::where('uid', $user->uid)
+        ->where('settled_amount', '>', 0)
         ->where('bet_stamp', '>', $startTime)
         ->where('bet_stamp', '<', $endTime)
         ->where('status', CommonEnum::ENABLE)
