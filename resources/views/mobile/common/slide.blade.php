@@ -4,10 +4,11 @@
 <div class="kj_kf">
 <img onclick="location.href='{{url("mobile/member/customerService")}}'" src="../../mobile/img/kf_ico.png" />
 </div>
+{{--
 <div class="down_ico">
 <img src="../../mobile/img/down_ico.png" />
 </div>
-
+--}}
 @if($showUserRedPakc)
 <div class="hb">
 <a href="javascript:void(0);" id="redPacket"><img src="../../mobile/img/hb.png" /></a>
