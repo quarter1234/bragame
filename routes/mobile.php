@@ -15,14 +15,14 @@ use App\Http\Controllers\Mobile\ShopController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [IndexController::class, 'index'])->name('mobile.index');
+Route::get('/', [IndexController::class, 'index'])->name('login');
 
 Route::group([
     'prefix' => 'mobile'
 ], function ($router) {
     Route::get('register', [PublicController::class, 'register']);
     Route::post('register', [PublicController::class, 'doRegister']);
-    Route::get('login', [PublicController::class, 'login'])->name('login');
+    Route::get('login', [PublicController::class, 'login']);
     Route::post('login', [PublicController::class, 'doLogin']);
     Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
