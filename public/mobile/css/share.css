@@ -1741,3 +1741,65 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:40px;
     line-height:40px;
 }
+
+.recharge_top{
+    width:95%;
+    margin:0 auto;
+    padding-top:80px;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    font-size:14px;
+}
+.recharge_top span{
+    color:#999;
+}
+.recharge_top label{
+    font-size:16px;
+}
+.recharge_div{
+    width:95%;
+    margin:10px auto;
+    background:#132235;
+    padding:10px 0;
+}
+.recharge_div_t{
+    width:100%;
+    font-size:14px;
+    color:#666;
+    text-indent:14px;
+}
+.recharge_k{
+    width:160px;
+    height:60px;
+    border-radius:5px;
+    overflow: hidden;
+    margin:12px;
+}
+.recharge_k_n{
+    width:100%;
+    height:100%;
+    position: relative;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+}
+.recharge_k_w{
+    width:160px;
+    height:60px;
+    background:url(../img/xz_ico.png) no-repeat;
+    background-repeat:160px 60px;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.recharge_bz{
+    width:55px;
+    height:15px;
+    background:rgba(0, 0, 0, .5);
+    border-radius:3px;
+    top:-2;
+    right:-5;
+    position:absolute;
+    font-size:12px;
+    line-height:15px;
+    text-align:center;
+}

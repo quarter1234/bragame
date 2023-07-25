@@ -49,7 +49,6 @@
 <script>
     function showModalSub(msg) {
         $('.modal_sub_content p').text(msg);
-        $('body,html').addClass('notScroll')
         $('.modal_w_two').show()
     }
    
@@ -59,7 +58,6 @@
     }
 
     $(function(){
-       $('body,html').addClass('notScroll')
        $('.modal_w_two button').click(function(){
         $('body,html').removeClass('notScroll')
         $('.modal_w_two').hide()
