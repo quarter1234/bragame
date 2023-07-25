@@ -15,7 +15,7 @@ use App\Http\Controllers\Mobile\ShopController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [IndexController::class, 'index'])->name('mobile.index');
+Route::get('/', [IndexController::class, 'index'])->name('login');
 
 Route::group([
     'prefix' => 'mobile'

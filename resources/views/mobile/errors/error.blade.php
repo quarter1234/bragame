@@ -2,9 +2,9 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title>错误页面</title>
-	<meta name="keywords" content="错误页面" />
-	<meta name="description" content="错误页面" />
+    <title>error</title>
+	<meta name="keywords" content="error" />
+	<meta name="description" content="error" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
@@ -189,7 +189,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                 <jx-content-view _ngcontent-uwv-c12="" _nghost-uwv-c7="">
                   <!---->
                   <!---->
-                  <div _ngcontent-uwv-c12="" class="bulletin-detail-title">错误信息</div>
+                  <div _ngcontent-uwv-c12="" class="bulletin-detail-title">Error Message</div>
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
                         <div><a style="color:white" href="{{$url}}">{{$msg}}</a></div>
                         <div><span class="second"></span></div>
@@ -214,7 +214,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
         if (time == 0) {
             location.href = "{{$url}}";
         } else {
-            div.innerHTML = '还有' + time + '秒跳转';
+            div.innerHTML = '' + time + '';
             time--;
         }
     }

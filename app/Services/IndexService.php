@@ -44,7 +44,7 @@ class IndexService
         $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
 
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
-
+        
         $data['bnners'] = $this->picRepo->getBanners();
 
         return $data;

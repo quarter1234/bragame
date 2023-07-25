@@ -75,21 +75,25 @@ class PublicController extends Controller
         $credentials = [];
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
+
         
-        if (!auth()->attempt($credentials)) {
+        if (!auth()->attempt($credentials, true)) {
             return false;
         } 
-        
+
+        Auth::logoutOtherDevices($params['password']); 
         $user = Auth::user();
+
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
             
         }
 
         $this->userService->storeLoginLog($user, $params);
-
+        
         return true;
     }
+
 
     /**
      * 登录页面
@@ -128,6 +132,7 @@ class PublicController extends Controller
     public function logout()
     {
         auth()->logout();
+        Auth::logoutCurrentDevice();
         return redirect('/mobile/index');
     }
 }

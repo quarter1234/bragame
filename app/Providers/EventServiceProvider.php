@@ -3,7 +3,9 @@
 namespace App\Providers;
 
 use App\Events\RegisterEvent;
+use App\Events\UserGameEvent;
 use App\Listeners\RegisterListener;
+use App\Listeners\UserGameListener;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -22,6 +24,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         RegisterEvent::class => [
             RegisterListener::class
+        ],
+        UserGameEvent::class => [ // 点击游戏事件
+            UserGameListener::class
         ],
     ];
 

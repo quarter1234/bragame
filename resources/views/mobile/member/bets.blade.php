@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    <title>{:GetVar('webtitle')}</title>
+    <title></title>
     <base href="/">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <!-- Material Icons -->

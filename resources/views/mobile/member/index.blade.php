@@ -13,7 +13,7 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
-
+    <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
 
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -56,12 +56,21 @@
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
                       <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
-                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label><a></a></label></p> 
+                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}"><a></a></label></p> 
                         <style>
                           .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
                           .avatar_sub_title-span{margin-left:0.6rem;margin-right:10px;}
                         </style>
                       </div>
+                      <script>
+                      $(document).ready(function() {
+                        var clipboard = new ClipboardJS('.copy_btn')
+                        clipboard.on('success', function (e) {
+                          alert('success')
+                        })
+                        
+                      })
+                      </script>
                       <!---->
                       </div>
                   </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Game;
 
 use App\Common\Lib\Result;
+use App\Events\UserGameEvent;
 use App\Http\Controllers\Controller;
 use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
@@ -48,6 +49,12 @@ class GameController extends Controller
         }
 
         $user = Auth::user();
+        $params = [];
+        $params['ip'] = Request::getClientIp();
+        $params['game_id'] = $gameInfo['id'];
+        
+        event(new UserGameEvent($user, $params));
+
         if($user->coin < $gameInfo->en_coin) {
             return Result::error("Menos de {$gameInfo['en_coin']} moedas");
         }

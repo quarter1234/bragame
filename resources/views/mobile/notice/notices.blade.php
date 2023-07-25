@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title>{:GetVar('webtitle')}</title>
+    <title></title>
 	<meta name="keywords" content="{:GetVar('keywords')}" />
 	<meta name="description" content="{:GetVar('description')}" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >

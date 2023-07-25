@@ -12,6 +12,7 @@ https://learnku.com/articles/10889/detailed-implementation-of-jwt-extensions
 https://learnku.com/articles/10885/full-use-of-jwt
 https://laravelacademy.org/post/4317
 https://laravelacademy.org/post/1321
+
 ```
 
 

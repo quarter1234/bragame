@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -28,6 +29,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
+        @include('mobile.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -35,18 +37,23 @@
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                  <!---->
-                  <!---->
-                  <!---->
-                  <!---->
-                  <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
-                  <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
-                
-                  </div>
-                  <!---->
-                  <!---->
-                  <!---->
-                  <!----></div>
+                    <div class="recharge_top">
+                        <span>Current account balance</span>
+                        <label>$10.00</label>
+                    </div>
+                </div>
+                <div class="recharge_div">
+                        <div class="recharge_div_t">Terms of payment</div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                </div>
+                                <div class="recharge_bz">
+                                  +20
+                                </div>
+                            </div>
+                        </div>
+                    </div>
               </jx-header-row>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">

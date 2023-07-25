@@ -26,12 +26,12 @@ class UserCache
     public static function setUserPackageCache($user)
     {
         $cacheKey = sprintf(self::USER_PACKAGE_CACHE, $user['uid']);
-        cache::put($cacheKey, true, 86400*30);
+        return cache::put($cacheKey, true, 86400*30);
     }
 
     public static function getUserPackageCache($user)
     {
         $cacheKey = sprintf(self::USER_PACKAGE_CACHE, $user['uid']);
-        cache::get($cacheKey);
+        return cache::get($cacheKey);
     }
 }

@@ -4,15 +4,16 @@
 <div class="kj_kf">
 <img onclick="location.href='{{url("mobile/member/customerService")}}'" src="../../mobile/img/kf_ico.png" />
 </div>
+{{--
 <div class="down_ico">
 <img src="../../mobile/img/down_ico.png" />
 </div>
-{{---
+--}}
 @if($showUserRedPakc)
 <div class="hb">
 <a href="javascript:void(0);" id="redPacket"><img src="../../mobile/img/hb.png" /></a>
 </div>
-@endif--}}
+@endif
 <div class="menu_tc">
     <div class="menu_right">
         <ul>
@@ -154,7 +155,7 @@
     background:rgba(0, 0, 0, 0.8);
     position:fixed;
     z-index:99;
-    top:81%;
+    top:74%;
     right:10px;
     margin-top:-30px;
     border-radius:100%;
@@ -178,9 +179,10 @@
             $('.menu_tc').hide()
             $('.menu_right').delay(300).animate({right:'-200'+'px'});  
         })
-        {{--
+      
         $('#redPacket').click(function(){
             showLoading()
+            $('body,html').addClass('notScroll')
             $.ajax({
               url : "{{url('mobile/redPacket/doLottery')}}",
               type : 'GET',
@@ -188,6 +190,7 @@
               success : function (data) {
                 hideLoading();
                 showModalSub('Receba um bônus de '+data.data.coin+' moedas');
+                // location.reload(true)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading()
@@ -195,10 +198,6 @@
                 showModal(jqXHR.responseJSON.message);
               }
             })
-
-           
-
-            console.log(222)
-        })--}}
+        })
     })
 </script>

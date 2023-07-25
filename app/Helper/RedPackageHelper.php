@@ -14,12 +14,12 @@ class RedPackageHelper
         if(!$user) {
             return false;
         }
-
+        
         // 已经领取过的不显示
         if(UserCache::getUserPackageCache($user)) {
             return false;
         }
-
+        
         $redPackRepo = app()->make(DRedPacketRepository::class);
         $userRedPackRepo = app()->make(DRedPacketUserRepository::class);
 

@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title>公告详情</title>
+    <title></title>
 	<meta name="keywords" content="公告详情" />
 	<meta name="description" content="公告详情" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
