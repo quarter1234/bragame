@@ -16,6 +16,8 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
+   
+
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -42,6 +44,13 @@
                   <!---->
                   <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
                   <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
+                  {{--<jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
+                      <!---->
+                      <!---->
+                      
+                      <button _ngcontent-snw-c1="" onclick="location.href='{{ route("mobile.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
+                      
+                    </jx-header-nav-content>--}}
                   </div>
                   <!---->
                   <!---->
@@ -57,7 +66,15 @@
                     <!---->
                     <!---->
 
-                      
+                    @foreach($activity as $item)
+					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => $item['id']])}}'" tabindex="0">
+                      <span _ngcontent-snw-c1="" class="activity-status open"></span>
+                      <span _ngcontent-snw-c1="" class="activity-btn-title">{{ $item['title'] }}</span>
+                      <span _ngcontent-snw-c1="" class="activity-btn-duration">Tempo：A eficácia a Longo prazo</span>
+                     
+                      <div><img style="width:100%;height:auto;margin:1rem 0;" src="{{ $item['img'] }}"></div>
+                    </button>
+                    @endforeach  
                    </jx-content-view>
                 </jx-safe-area>
               </div>
