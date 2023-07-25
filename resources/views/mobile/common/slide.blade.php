@@ -189,7 +189,7 @@
               success : function (data) {
                 hideLoading();
                 showModalSub('Receba um bônus de '+data.data.coin+' moedas');
-                location.reload(true)
+                // location.reload(true)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading()
@@ -197,10 +197,6 @@
                 showModal(jqXHR.responseJSON.message);
               }
             })
-
-           
-
-            console.log(222)
         })
     })
 </script>
