@@ -74,10 +74,10 @@
 
             </div>
             <div class="vip_centen">
-              <h2>Pricilegips VIP</h2>
-              <p>1. voce pode acjkacnado caj coasic avcoia.</p>
-              <p>2. hauoihsdadohjc ajdoajpc a papda pcahspahh.</p>
-              <p>3. voce pode acjkacnado caj coasic avcoia at ac asada asd</p>
+              <h2>VIP  Privileges</h2>
+              <p>Weekly Bonus: Login every week to claim Weekly bonus.</p>
+              <p>Monthly Bonus: Login every month to claim Monthly bonus.</p>
+              <p>Level Up Bonus: Upgrade to next level to claim Level upbonus.</p>
             </div>
             <div class="vip_bottom">
 

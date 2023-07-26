@@ -72,12 +72,21 @@
 
                       </div>
                       <div class="shop_h"></div>
-
+                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
+                      <div class="shop_jt">
+                       <div class="shop_jt_left">
+                          <h2>Minhas Transações</h2>
+                       </div>
+                       <div class="shop_right">
+                          <div class="shop_jt_ico"></div>
+                       </div>
+                      </div>
+                      </a>
                       
                       <a style="color:white" href="{{ route('mobile.display', ["act" => 'transaction']) }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
-                          <h2>Minhas Trabsacones<span>Verdifcar agora sda dejskjd ad fasda iDA</span></h2>
+                          <h2>Carteira<span>Gerenciar contas bancárias</span></h2>
                        </div>
                        <div class="shop_right">
                           <div class="shop_jt_ico"></div>
@@ -86,16 +95,7 @@
                       </a>
 
 
-                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
-                      <div class="shop_jt">
-                       <div class="shop_jt_left">
-                          <h2>Minhas Trabsacones</h2>
-                       </div>
-                       <div class="shop_right">
-                          <div class="shop_jt_ico"></div>
-                       </div>
-                      </div>
-                      </a>
+                      
 
                    </jx-content-view>
                 </jx-safe-area>

@@ -47,12 +47,77 @@
                         <div class="recharge_k">
                             <div class="recharge_k_n">
                                 <div class="recharge_k_w">
+                                Online payment
                                 </div>
                                 <div class="recharge_bz">
                                   +20
                                 </div>
                             </div>
                         </div>
+                        <div class="recharge_div_t">Top-up amount</div>
+                        <div class="recharge_kn">
+                        <div class="recharge_k recharge_on">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$100
+                                </div>
+                                <div class="recharge_bz">
+                                  +10
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$200
+                                </div>
+                                <div class="recharge_bz">
+                                  +20
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$500
+                                </div>
+                                <div class="recharge_bz">
+                                  +50
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$1000
+                                </div>
+                                <div class="recharge_bz">
+                                  +100
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$10000
+                                </div>
+                                <div class="recharge_bz">
+                                  +1000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recharge_k">
+                            <div class="recharge_k_n">
+                                <div class="recharge_k_w">
+                                R$50000
+                                </div>
+                                <div class="recharge_bz">
+                                  +5000
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        
                     </div>
               </jx-header-row>
             </div>
@@ -79,6 +144,13 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
+   <script>
+   $(function(){
+      $('.recharge_kn .recharge_k').click(function(){
+        $(this).addClass('recharge_on').siblings().removeClass('recharge_on')
+      })
+    })
+   </script>
   </body>
 
 </html>

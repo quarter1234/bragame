@@ -51,7 +51,7 @@
                       <img src="../../mobile/img/dh_ico.png" />
                   </div>
                   <div class="kf_text">
-                      <h2>WhatsAppp(em ingles)</h2>
+                      <h2>WhatsApp suporte</h2>
                       <p>The engines in the .Game Framework</p>
                   </div>
                   <div class="kf_right">
@@ -66,7 +66,7 @@
                     <img src="../../mobile/img/kf_ico.png" />
                 </div>
                 <div class="kf_text">
-                    <h2>Atendimento ao clienre em linha</h2>
+                    <h2>Atendimento ao cliente</h2>
                     <p>The engines in the .Game Framework</p>
                 </div>
                 <div class="kf_right">

@@ -1745,7 +1745,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .recharge_top{
     width:95%;
     margin:0 auto;
-    padding-top:80px;
+    padding-top:70px;
     color:#fff;
     display:flex;
     justify-content:space-between;
@@ -1775,6 +1775,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:5px;
     overflow: hidden;
     margin:12px;
+    text-align:center;
+    line-height:60px;
+    color:#000;
 }
 .recharge_k_n{
     width:100%;
@@ -1802,4 +1805,36 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:12px;
     line-height:15px;
     text-align:center;
+    color:#fff;
+}
+
+.recharge_kn{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+.recharge_kn .recharge_k_n{
+    background:rgba(0, 0, 0, .5);
+    color:#fff;
+}
+.recharge_kn .recharge_bz{
+    background:rgba(255, 255, 255, .5);
+    color:#000;
+}
+.recharge_kn .recharge_k_w{
+    background:none;
+}
+.recharge_on .recharge_k_n{
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    color:#000;
+}
+.recharge_on .recharge_bz{
+    background:rgba(0, 0, 0, .5);
+    color:#fff;
+}
+.recharge_on .recharge_k_w{
+    background:url(../img/xz_ico.png) no-repeat;
 }

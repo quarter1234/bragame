@@ -2732,7 +2732,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:rgba(0, 0, 0, .7);font-size:14px;font-weight:bold;}
 .vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:#132235;border-radius:10px;color:#fff;text-align:center;}
 .vip_centen h2{color:#9efff9;font-size:18px;line-height:44px;}
-.vip_centen p{line-height:20px;width:96%;font-size:14px;}
+.vip_centen p{line-height:20px;width:96%;font-size:12px;}
 .vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
 .vip_blist{width:110px;height:153px;background:url(../img/vip_b.png) no-repeat;background-size:110px 153px;}
 .vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto;}
