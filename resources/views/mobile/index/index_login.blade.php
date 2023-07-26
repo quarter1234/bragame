@@ -72,6 +72,7 @@
                   <div class="remember_left">
                         <div class="r_left r2"><img src="..\..\static\images\25gf.png" />{{ trans('auth.remember_password') }}</div>
                         <div class="r_left r1"><img src="..\..\static\images\24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>
