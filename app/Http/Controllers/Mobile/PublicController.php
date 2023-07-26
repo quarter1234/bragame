@@ -81,8 +81,9 @@ class PublicController extends Controller
             return false;
         } 
 
-        // Auth::logoutOtherDevices($params['password']); 
+        Auth::logoutOtherDevices($params['password']); 
         $user = Auth::user();
+        Auth::loginUsingId($user->uid);
 
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
