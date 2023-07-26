@@ -94,11 +94,10 @@ class ShareService
      */
     public function getAgentCacheData($user)
     {
-//        $cacheKey = "share:agent:total:". $user->uid;
-//        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
-//           return $this->getAgentData($user);
-//        });
-        return $this->getAgentData($user);
+       $cacheKey = "share:agent:total:". $user->uid;
+       return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
+          return $this->getAgentData($user);
+       });
     }
 
     public function getAgentData($user)
@@ -111,11 +110,11 @@ class ShareService
         $month = strtotime(date("Y-m-d",strtotime("-30 day")));
         $year = strtotime(date("Y-m-d",strtotime("-365 day")));
 
-        $data['today'] = $this->oneGradeName($user->uid, $today, $endTime);
-        $data['yesterday'] = $this->oneGradeName($user->uid, $yesterday, $endTime);
-        $data['week'] = $this->oneGradeName($user->uid, $week, $endTime);
-        $data['month'] = $this->oneGradeName($user->uid, $month, $endTime);
-        $data['year'] = $this->oneGradeName($user->uid, $year, $endTime);
+        $data['today'] = $this->dataCommon($user->uid, $today, $endTime);
+        $data['yesterday'] = $this->dataCommon($user->uid, $yesterday, $endTime);
+        $data['week'] = $this->dataCommon($user->uid, $week, $endTime);
+        $data['month'] = $this->dataCommon($user->uid, $month, $endTime);
+        $data['year'] = $this->dataCommon($user->uid, $year, $endTime);
 
         return $data;
     }
@@ -127,7 +126,7 @@ class ShareService
      * @param [type] $endTime
      * @return  array
      */
-    public function oneGradeName($uid, $startTime, $endTime) :array
+    private function dataCommon($uid, $startTime, $endTime) :array
     {
         $data = [];
 
@@ -149,23 +148,31 @@ class ShareService
             $data['twoTbetcoin'] = $this->commissionRepo->getTwoTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单
             $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
-            $data['oneFirstRecharge'] = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
+           
             // $data['oneFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($oneGradeUids, $startTime, $endTime, $uid); // 宝箱数量
             // $data['twoFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($twoGradeUids, $startTime, $endTime); // 首充
+            $data['oneFirstRecharge'] = $this->getFirstRecharge($uid, $startTime, $endTime);
             $data['twoFirstRecharge'] = 0;
-            $config = SystemConfigHelper::getByKey('box_award');
-            if($data['oneFirstRecharge'] > 0
-                && $config
-                && isset($config['box']['is_rate'])
-                && $config['box']['is_rate'] > 0
-                && isset($config['box']['box_num_limit'])
-                && $data['oneFirstRecharge'] > $config['box']['box_num_limit']) {
-                $data['oneFirstRecharge'] = floor($data['oneFirstRecharge'] * $config['box']['box_num_rate']);
-            }
 
         }
 
         return $data;
     }
 
+    private function getFirstRecharge($uid, $startTime, $endTime)
+    {
+        $oneFirstRecharge = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
+        $config = SystemConfigHelper::getByKey('box_award');
+
+        if($oneFirstRecharge > 0
+            && $config
+            && isset($config['box']['is_rate'])
+            && $config['box']['is_rate'] > 0
+            && isset($config['box']['box_num_limit'])
+            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
+        }
+
+        return $oneFirstRecharge;
+    }
 }
