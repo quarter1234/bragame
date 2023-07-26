@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request as ReqeustSession;
 
 class PublicController extends Controller
 {
@@ -127,8 +128,9 @@ class PublicController extends Controller
      * 登出操作
      * @return mixed
      */
-    public function logout()
+    public function logout(ReqeustSession $request)
     {
+        $request->session()->flush();
         Auth::logout();
         // Session::flush();
         return redirect('/mobile/index');
