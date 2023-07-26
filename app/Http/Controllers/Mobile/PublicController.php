@@ -127,10 +127,11 @@ class PublicController extends Controller
      * 登出操作
      * @return mixed
      */
-    public function logout()
+    public function logout(Request $request)
     {
         Auth::logout();
-        Session::flush();
+        $request->session()->flush();
+        // Session::flush();
         return redirect('/mobile/index');
     }
 }
