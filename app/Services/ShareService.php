@@ -94,10 +94,12 @@ class ShareService
      */
     public function getAgentCacheData($user)
     {
-       $cacheKey = "share:agent:total:". $user->uid;
-       return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
-          return $this->getAgentData($user);
-       });
+    //    $cacheKey = "share:agent:total:". $user->uid;
+    //    return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
+    //       return $this->getAgentData($user);
+    //    });
+
+       return $this->getAgentData($user);
     }
 
     public function getAgentData($user)
