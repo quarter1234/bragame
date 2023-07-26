@@ -80,9 +80,9 @@ class PublicController extends Controller
         if (!auth()->attempt($credentials, true)) {
             return false;
         } 
-        
+
         Auth::logoutOtherDevices($params['password']); 
-        Auth::viaRemember();
+        // Auth::viaRemember();
         $user = Auth::user();
 
         if($user['status'] != CommonEnum::ENABLE) {
