@@ -71,9 +71,10 @@ class PublicController extends Controller
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
 
-        if (!auth()->attempt($credentials, true)) {
+        if (!auth()->attempt($credentials)) {
             return false;
         } 
+        
         $user = Auth::user();
         $this->userService->storeLoginLog($user, $params);
         return true;
