@@ -150,9 +150,7 @@ class ShareService
             $data['twoTbetcoin'] = $this->commissionRepo->getTwoTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单
             $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
-           
-            // $data['oneFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($oneGradeUids, $startTime, $endTime, $uid); // 宝箱数量
-            // $data['twoFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($twoGradeUids, $startTime, $endTime); // 首充
+        
             $data['oneFirstRecharge'] = $this->getFirstRecharge($uid, $startTime, $endTime);
             $data['twoFirstRecharge'] = 0;
 
