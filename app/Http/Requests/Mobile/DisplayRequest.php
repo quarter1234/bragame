@@ -10,7 +10,7 @@ class DisplayRequest extends BaseRequest
     {
         return [
             'act' => 'required | string |in:pay,game_url,kyc,transaction,payment,draw',
-            'game_code' => 'string | max:16'
+            'game_code' => 'string | max:64'
             
         ];
     }
