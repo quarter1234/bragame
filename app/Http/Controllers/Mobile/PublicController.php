@@ -58,7 +58,7 @@ class PublicController extends Controller
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
        
-        if(!$this->handleLogin($params)) {
+        if(!$this->handleLogin($params, true)) {
             return Result::error(trans('auth.failed'));
         }
 
@@ -70,7 +70,7 @@ class PublicController extends Controller
      * @param array $params
      * @return bool
      */
-    private function handleLogin($params) :bool
+    private function handleLogin($params, $isRegister = false) :bool
     {
         $credentials = [];
         $credentials['phone'] = $params['phone'];
@@ -81,16 +81,17 @@ class PublicController extends Controller
             return false;
         } 
 
-        Auth::logoutOtherDevices($params['password']); 
+        if(!$isRegister) {
+            Auth::logoutOtherDevices($params['password']); 
+        }
+        
         $user = Auth::user();
-
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
             
         }
 
         $this->userService->storeLoginLog($user, $params);
-        
         return true;
     }
 
