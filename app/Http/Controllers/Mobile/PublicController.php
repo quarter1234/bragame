@@ -63,10 +63,6 @@ class PublicController extends Controller
         Auth::login($user, true);
         $this->userService->storeLoginLog($user, $params);
 
-        if(!$this->doRegisterLogin($params)) {
-            return Result::error(trans('auth.failed'));
-        }
-
         return Result::success();
     }
 
