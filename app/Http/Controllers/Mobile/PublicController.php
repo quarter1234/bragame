@@ -58,7 +58,7 @@ class PublicController extends Controller
 
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
-        
+
         $user = UserHelper::getUserByUid($registerUser->uid);
         Auth::login($user, true);
         $this->userService->storeLoginLog($user, $params);
@@ -81,7 +81,7 @@ class PublicController extends Controller
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
 
-        if (!auth()->attempt($credentials, true)) {
+        if (!auth()->attempt($credentials)) {
             return false;
         } 
 
