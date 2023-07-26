@@ -6,6 +6,7 @@ use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Events\RegisterEvent;
 use App\Exceptions\BadRequestException;
+use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
@@ -57,27 +58,16 @@ class PublicController extends Controller
 
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
-       
+        
+        $user = UserHelper::getUserByUid($registerUser->uid);
+        Auth::login($user, true);
+        $this->userService->storeLoginLog($user, $params);
+
         if(!$this->doRegisterLogin($params)) {
             return Result::error(trans('auth.failed'));
         }
 
         return Result::success();
-    }
-
-    private function doRegisterLogin($params)
-    {
-        $credentials = [];
-        $credentials['phone'] = $params['phone'];
-        $credentials['password'] = $params['password'];
-
-        if (!auth()->attempt($credentials)) {
-            return false;
-        } 
-        
-        $user = Auth::user();
-        $this->userService->storeLoginLog($user, $params);
-        return true;
     }
 
     /**
