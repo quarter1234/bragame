@@ -10,7 +10,7 @@ use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Session;
@@ -127,10 +127,10 @@ class PublicController extends Controller
      * 登出操作
      * @return mixed
      */
-    public function logout(Request $request)
+    public function logout()
     {
-        $request->session()->flush();
         Auth::logout();
+        // Session::flush();
         return redirect('/mobile/index');
     }
 }
