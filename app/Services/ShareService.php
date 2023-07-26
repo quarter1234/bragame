@@ -150,7 +150,7 @@ class ShareService
             $data['twoTbetcoin'] = $this->commissionRepo->getTwoTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单
             $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
-        
+
             $data['oneFirstRecharge'] = $this->getFirstRecharge($uid, $startTime, $endTime);
             $data['twoFirstRecharge'] = 0;
 
@@ -162,16 +162,16 @@ class ShareService
     private function getFirstRecharge($uid, $startTime, $endTime)
     {
         $oneFirstRecharge = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
-        $config = SystemConfigHelper::getByKey('box_award');
-
-        if($oneFirstRecharge > 0
-            && $config
-            && isset($config['box']['is_rate'])
-            && $config['box']['is_rate'] > 0
-            && isset($config['box']['box_num_limit'])
-            && $oneFirstRecharge > $config['box']['box_num_limit']) {
-            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
-        }
+//        $config = SystemConfigHelper::getByKey('box_award');
+//
+//        if($oneFirstRecharge > 0
+//            && $config
+//            && isset($config['box']['is_rate'])
+//            && $config['box']['is_rate'] > 0
+//            && isset($config['box']['box_num_limit'])
+//            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+//            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
+//        }
 
         return $oneFirstRecharge;
     }
