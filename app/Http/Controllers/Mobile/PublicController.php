@@ -83,7 +83,6 @@ class PublicController extends Controller
 
         Auth::logoutOtherDevices($params['password']); 
         $user = Auth::user();
-        Auth::loginUsingId($user->uid, true);
 
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
@@ -130,8 +129,10 @@ class PublicController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
-        Auth::logoutCurrentDevice();
+        Auth::logout();
+        $user = Auth::user();
+        // 解决其他设备 Auth::logoutOtherDevices 问题
+        Auth::login($user); 
         return redirect('/mobile/index');
     }
 }
