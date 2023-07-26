@@ -145,7 +145,7 @@ class ShareService
 
         if($data['oneGradeInviteNum'] > 0) {
             $twoGradeUids =$this->inviteRepo->inviteByUidByTime($oneGradeUids, $startTime, $endTime);
-            $data['twoGradeInviteNum'] = count($oneGradeUids);
+            $data['twoGradeInviteNum'] = count($twoGradeUids);
             $data['oneTbetcoin'] = $this->commissionRepo->getOneTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['twoTbetcoin'] = $this->commissionRepo->getTwoTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单
