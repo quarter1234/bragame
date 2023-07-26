@@ -83,6 +83,7 @@ class RegisterListener implements ShouldQueue
 
         // 也要把自己算进去
         $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
+        $treeRepo->storeTree($register->uid, $register->uid, 0, 0);
         $this->storeUserBind($register);
         
         // 删除缓存数据

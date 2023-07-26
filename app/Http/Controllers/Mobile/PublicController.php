@@ -58,11 +58,25 @@ class PublicController extends Controller
         $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
         event(new RegisterEvent($registerUser, $inviteCode));
        
-        if(!$this->handleLogin($params, true)) {
+        if(!$this->doRegisterLogin($params)) {
             return Result::error(trans('auth.failed'));
         }
 
         return Result::success();
+    }
+
+    private function doRegisterLogin($params)
+    {
+        $credentials = [];
+        $credentials['phone'] = $params['phone'];
+        $credentials['password'] = $params['password'];
+
+        if (!auth()->attempt($credentials, true)) {
+            return false;
+        } 
+        $user = Auth::user();
+        $this->userService->storeLoginLog($user, $params);
+        return true;
     }
 
     /**
@@ -70,25 +84,21 @@ class PublicController extends Controller
      * @param array $params
      * @return bool
      */
-    private function handleLogin($params, $isRegister = false) :bool
+    private function handleLogin($params) :bool
     {
         $credentials = [];
         $credentials['phone'] = $params['phone'];
         $credentials['password'] = $params['password'];
 
-        
         if (!auth()->attempt($credentials, true)) {
             return false;
         } 
 
-        if(!$isRegister) {
-            Auth::logoutOtherDevices($params['password']); 
-        }
-        
+        Auth::logoutOtherDevices($params['password']); 
         $user = Auth::user();
+
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
-            
         }
 
         $this->userService->storeLoginLog($user, $params);
