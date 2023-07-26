@@ -16,18 +16,18 @@ class DUserRechargeRepository extends Repository
         return $this->model()::whereIn('uid', $uids)
         ->where('create_time', '>=', $startTeime)
         ->where('create_time', '<=', $endTime)
-        ->where('status', '<=', 2)
+        ->where('status', '=', 2)
         ->sum('count');
     }
 
     public function getFirstPayNum($uids = [], $startTeime, $endTime)
     {
         return $this->model()::whereIn('uid', $uids)
-        ->where('create_time', '>=', $startTeime)
-        ->where('create_time', '<=', $endTime)
-        ->where('status', '<=', 2)
-        ->where('isfirst', '<=', 1)
-        ->count('id');
+            ->where('create_time', '>=', $startTeime)
+            ->where('create_time', '<=', $endTime)
+            ->where('status', '=', 2)
+            ->where('isfirst', '=', 1)
+            ->count('id');
     }
 
     public function getRechargeByOrderId($orderId){
@@ -46,7 +46,7 @@ class DUserRechargeRepository extends Repository
                             ->update($data);
         }
     }
-    
+
     public function getRecharges($user, $startTime, $endTime)
     {
         return $this->model()::where('uid', $user->uid)

@@ -27,7 +27,7 @@ class RewardHelper
     {
         $rtype = $rtype ?? 1; // 注册返利的开关点, 1:充值时候返， 2:立即绑定就返
         $playInfo = UserHelper::getUserByUid($uid);
-        if(!$playInfo) {
+        if(!$playInfo || $playInfo['is_test'] == 1) {
             return false;
         }
 

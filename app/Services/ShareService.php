@@ -2,6 +2,8 @@
 namespace App\Services;
 
 use App\Common\Enum\CommonEnum;
+use App\Helper\SystemConfigHelper;
+use App\Repositories\BoxAwardRepository;
 use App\Repositories\DCommissionRepository;
 use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserRechargeRepository;
@@ -14,18 +16,21 @@ class ShareService
     private $commissionRepo;
     private $rechargeRepo;
     private $treeRepo;
+    private $boxAwardRepo;
 
     public function __construct(
         DUserInviteRepository $inviteRepo,
         DCommissionRepository $commissionRepo,
         DUserRechargeRepository $rechargeRepo,
-        DUserTreeRepository $treeRepo
+        DUserTreeRepository $treeRepo,
+        BoxAwardRepository $boxAwardRepo
     )
     {
         $this->inviteRepo  = $inviteRepo;
         $this->commissionRepo = $commissionRepo;
         $this->rechargeRepo = $rechargeRepo;
         $this->treeRepo = $treeRepo;
+        $this->boxAwardRepo = $boxAwardRepo;
     }
 
     /**
@@ -40,11 +45,11 @@ class ShareService
         $data['user'] = $user;
         $data['agent'] = $this->getAgentCacheData($user);
         $data['invite'] = $this->getInviteCacheTotal($user);
-        
+
         return $data;
     }
 
-    
+
     public function getInviteCacheList($user, $page)
     {
         $cacheKey = "share:invite:list:". $user->uid. '_' . $page;
@@ -53,7 +58,7 @@ class ShareService
         });
     }
 
-    
+
 
     public function getInviteCacheTotal($user)
     {
@@ -70,7 +75,7 @@ class ShareService
             $item['descendant']['playername'] = hideString($item['descendant']['playername'], 2,3);
             $item['descendant']['create_time'] = date('Y-m-d H:i:s', $item['descendant']['create_time']);
         }
-        
+
         return $pages;
     }
 
@@ -89,10 +94,11 @@ class ShareService
      */
     public function getAgentCacheData($user)
     {
-        $cacheKey = "share:agent:total:". $user->uid;
-        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
-           return $this->getAgentData($user);
-        });
+//        $cacheKey = "share:agent:total:". $user->uid;
+//        return Cache::remember($cacheKey, CommonEnum::CACHE_SHORT_TIME, function () use($user) {
+//           return $this->getAgentData($user);
+//        });
+        return $this->getAgentData($user);
     }
 
     public function getAgentData($user)
@@ -120,11 +126,11 @@ class ShareService
      * @param [type] $startTime
      * @param [type] $endTime
      * @return  array
-     */ 
+     */
     public function oneGradeName($uid, $startTime, $endTime) :array
     {
         $data = [];
-       
+
         $oneGradeUids = $this->inviteRepo->inviteByUidByTime([$uid], $startTime, $endTime);
         $data['oneGradeInviteNum'] = count($oneGradeUids);
 
@@ -141,12 +147,24 @@ class ShareService
             $data['twoGradeInviteNum'] = count($oneGradeUids);
             $data['oneTbetcoin'] = $this->commissionRepo->getOneTotalBetCoin($uid, $startTime, $endTime); // 下注
             $data['twoTbetcoin'] = $this->commissionRepo->getTwoTotalBetCoin($uid, $startTime, $endTime); // 下注
-            $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单 
-            $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单 
-            $data['oneFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($oneGradeUids, $startTime, $endTime); // 首充
-            $data['twoFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($twoGradeUids, $startTime, $endTime); // 首充
+            $data['oneRechargeAmount'] =  $this->rechargeRepo->getRechargeAmount($oneGradeUids, $startTime, $endTime); // 充值订单
+            $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
+            $data['oneFirstRecharge'] = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
+            // $data['oneFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($oneGradeUids, $startTime, $endTime, $uid); // 宝箱数量
+            // $data['twoFirstRecharge'] = $this->rechargeRepo->getFirstPayNum($twoGradeUids, $startTime, $endTime); // 首充
+            $data['twoFirstRecharge'] = 0;
+            $config = SystemConfigHelper::getByKey('box_award');
+            if($data['oneFirstRecharge'] > 0
+                && $config
+                && isset($config['box']['is_rate'])
+                && $config['box']['is_rate'] > 0
+                && isset($config['box']['box_num_limit'])
+                && $data['oneFirstRecharge'] > $config['box']['box_num_limit']) {
+                $data['oneFirstRecharge'] = floor($data['oneFirstRecharge'] * $config['box']['box_num_rate']);
+            }
+
         }
-        
+
         return $data;
     }
 

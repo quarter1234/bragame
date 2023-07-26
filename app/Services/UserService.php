@@ -246,6 +246,8 @@ class UserService
         }
 
         VipHelper::useVipDiamond($uid, $totalcoin);
+        $user['ispayer'] = 1;
+        $user->save();
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 

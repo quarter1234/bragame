@@ -274,11 +274,22 @@ class GameService
      */
     public function pgBetResult($user, array $betParams){
         $uid = $user['uid'];
-        $platConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$platConfig || $platConfig != $betParams['plat_app']){
-            $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
-            return $this->defauRespData;
+
+        if($user['is_test'] == 0){
+            $platConfig = SystemConfigHelper::getByKey('plat_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+                return $this->defauRespData;
+            }
         }
+        else{
+            $platConfig = SystemConfigHelper::getByKey('plat_test_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+                return $this->defauRespData;
+            }
+        }
+
 
         if(!$user){
             $this->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
