@@ -130,7 +130,7 @@ class PublicController extends Controller
     public function logout(Request $request)
     {
         $request->session()->flush();
-        Auth::logout();
+        // Auth::logout();
         return redirect('/mobile/index');
     }
 }
