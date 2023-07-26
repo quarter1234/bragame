@@ -82,6 +82,7 @@ class PublicController extends Controller
         } 
 
         Auth::logoutOtherDevices($params['password']); 
+        Auth::viaRemember();
         $user = Auth::user();
 
         if($user['status'] != CommonEnum::ENABLE) {
@@ -129,10 +130,8 @@ class PublicController extends Controller
      */
     public function logout()
     {
-        $user = Auth::user();
         Auth::logout();
-        // 解决其他设备 Auth::logoutOtherDevices 问题
-        Auth::login($user); 
+
         return redirect('/mobile/index');
     }
 }
