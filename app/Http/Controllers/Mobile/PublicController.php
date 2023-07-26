@@ -129,8 +129,8 @@ class PublicController extends Controller
      */
     public function logout()
     {
-        Auth::logout();
         $user = Auth::user();
+        Auth::logout();
         // 解决其他设备 Auth::logoutOtherDevices 问题
         Auth::login($user); 
         return redirect('/mobile/index');
