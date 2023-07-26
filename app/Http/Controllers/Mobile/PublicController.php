@@ -13,6 +13,7 @@ use App\Services\UserService;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Session;
 
 class PublicController extends Controller
 {
@@ -110,6 +111,7 @@ class PublicController extends Controller
         if (!auth()->attempt($credentials, true)) {
             return false;
         } 
+
         $user = Auth::user();
         if($user['status'] != CommonEnum::ENABLE) {
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
@@ -128,7 +130,7 @@ class PublicController extends Controller
     public function logout()
     {
         Auth::logout();
-
+        Session::flush();
         return redirect('/mobile/index');
     }
 }

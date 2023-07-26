@@ -27,8 +27,5 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies();
 
         //
-        Auth::viaRemember(function () {
-            return null; // 返回 null 表示通过 remember_token 不进行自动登录        
-        });
     }
 }
