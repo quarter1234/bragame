@@ -12,7 +12,7 @@ use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Cache;
+use Illuminate\Http\Request as ReqeustSession;
 
 class PublicController extends Controller
 {
@@ -67,34 +67,6 @@ class PublicController extends Controller
     }
 
     /**
-     * 处理登录
-     * @param array $params
-     * @return bool
-     */
-    private function handleLogin($params) :bool
-    {
-        $credentials = [];
-        $credentials['phone'] = $params['phone'];
-        $credentials['password'] = $params['password'];
-
-        if (!auth()->attempt($credentials, true)) {
-            return false;
-        } 
-
-        Auth::logoutOtherDevices($params['password']); 
-        Auth::viaRemember();
-        $user = Auth::user();
-
-        if($user['status'] != CommonEnum::ENABLE) {
-            throw new BadRequestException(['msg' => trans('auth.account_exception')]);
-        }
-
-        $this->userService->storeLoginLog($user, $params);
-        return true;
-    }
-
-
-    /**
      * 登录页面
      * @return mixed
      */
@@ -125,11 +97,38 @@ class PublicController extends Controller
     }
 
     /**
+     * 处理登录
+     * @param array $params
+     * @return bool
+     */
+    private function handleLogin($params) :bool
+    {
+        $credentials = [];
+        $credentials['phone'] = $params['phone'];
+        $credentials['password'] = $params['password'];
+
+        if (!auth()->attempt($credentials, true)) {
+            return false;
+        } 
+
+        $user = Auth::user();
+        if($user['status'] != CommonEnum::ENABLE) {
+            throw new BadRequestException(['msg' => trans('auth.account_exception')]);
+        }
+
+        Auth::logoutOtherDevices($params['password']); 
+
+        $this->userService->storeLoginLog($user, $params);
+        return true;
+    }
+
+    /**
      * 登出操作
      * @return mixed
      */
-    public function logout()
+    public function logout(ReqeustSession $request)
     {
+        $request->session()->flush();
         Auth::logout();
 
         return redirect('/mobile/index');

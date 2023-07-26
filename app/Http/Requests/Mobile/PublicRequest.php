@@ -20,6 +20,7 @@ class PublicRequest extends BaseRequest
         return [
             'phone' => 'required|numeric',
             'password' => 'required|string|min:6|max:32',
+            'remember_me' => 'required|in:true'
         ];
     }
 

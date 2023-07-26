@@ -133,7 +133,7 @@
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Gostas</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
                         <!----> 
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
