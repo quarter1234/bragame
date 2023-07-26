@@ -32,8 +32,11 @@ class RegisterListener implements ShouldQueue
         if(!$inviteCode) {
             return false;
         }
-        // 注册者是否已经绑定过邀请码，如果有绑定过则直接退出
-        
+
+        // 已经有绑定过的直接退出
+        if(intval($register->invit_uid) > 0) {
+            return false;
+        }
 
         // 邀请者
         $inviteUser = UserHelper::getUserByCode($inviteCode);

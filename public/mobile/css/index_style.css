@@ -3407,7 +3407,3 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:5px;
     font-size:14px;
 }
-
-.news-scroll li:nth-child(1),.news-scroll li:nth-child(3),.news-scroll li:nth-child(5){
-    background:rgba(0, 0, 0, .1);
-}

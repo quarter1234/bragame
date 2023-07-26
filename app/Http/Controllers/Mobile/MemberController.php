@@ -99,7 +99,16 @@ class MemberController extends Controller
     {
         $user = Auth::user();
         $list = $this->memberService->getPgBetsList($user)->toArray();
-        // print_r($list);die();
+    
         return view('mobile.member.bet_list', $list);
+    }
+
+    public function transaction()
+    {
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+
+        return view('mobile.member.transaction', $data);
     }
 }

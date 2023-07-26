@@ -3,6 +3,8 @@
 namespace App\Console\Commands;
 
 use App\Common\Lib\TelegramNotice;
+use App\Events\RegisterEvent;
+use App\Models\User;
 use Illuminate\Console\Command;
 
 class SendTelegramNotice extends Command
@@ -38,6 +40,10 @@ class SendTelegramNotice extends Command
      */
     public function handle()
     {
-        TelegramNotice::sendMessage("test");
+        $inviteCode = 'KJGFP1FK';
+        $register = User::find(57215);
+        event(new RegisterEvent($register, $inviteCode));
+        print_r($inviteCode);die();
+        // TelegramNotice::sendMessage("test");
     }
 }

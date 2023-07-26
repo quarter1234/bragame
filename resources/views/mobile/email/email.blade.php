@@ -2,9 +2,8 @@
   
   <head>
     <meta charset="utf-8">
-    <title></title>
+    @include('mobile.common.common_title') 
     <base href="/">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
@@ -16,8 +15,6 @@
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script src="/static/js/jquery-3.1.1.min.js"></script>
-    <script type="text/javascript" src="/static/js/artDialog.js"></script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
    
 

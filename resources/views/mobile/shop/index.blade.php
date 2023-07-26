@@ -102,6 +102,7 @@
               </div>
             </div>
 
+            <div style="height:200px;"></div>
             
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">

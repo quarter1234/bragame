@@ -66,6 +66,8 @@ Route::group([
     // 提现记录
     Route::get('draws', [MemberController::class, 'draws']);
     Route::get('drawList', [MemberController::class, 'drawsList']);
+
+    Route::get('transaction', [MemberController::class, 'transaction']);
     // 投注记录
     Route::get('bets', [MemberController::class, 'bets']);
     Route::get('betList', [MemberController::class, 'betsList']);
@@ -90,5 +92,4 @@ Route::group([
     'prefix' => 'mobile/redPacket', 'middleware' => ['auth']
 ], function ($router) {
     Route::get('doLottery', [RedPackageController::class, 'doLottery']);
-    
 });

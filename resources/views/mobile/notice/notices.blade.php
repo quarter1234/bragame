@@ -2,19 +2,14 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    <title></title>
-	<meta name="keywords" content="{:GetVar('keywords')}" />
-	<meta name="description" content="{:GetVar('description')}" />
+    @include('mobile.common.common_title') 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
 	<link rel="stylesheet" href="/mobile/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/static/css/styles.41928e9497559161f9b8.css">
 	<link rel="stylesheet" href="/static/css/artDialog.css">
-	<script src="/static/js/jquery-3.1.1.min.js"></script> 
-	<script type="text/javascript" src="/static/js/artDialog.js"></script>
 	<script type="text/javascript" src="/static/js/way.min.js"></script>
 
 
