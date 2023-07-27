@@ -251,13 +251,13 @@
               <div class="news-title clearfix">
                 <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}A última lista vencedora</strong>
+                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
                 </h2>
               </div>
               <div class="rankBg"></div>
               <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
-                
+
                 @foreach($ranks as $item)
                 <li style="color: #f2f2f2;">
                 <span>{{ $item['playername'] }}</span>
