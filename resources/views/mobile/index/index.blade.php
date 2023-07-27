@@ -103,7 +103,7 @@
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
                           
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
+                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}}</marquee></div>
                           
                           
                       </div>
