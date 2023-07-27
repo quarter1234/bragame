@@ -44,8 +44,7 @@ Route::group([
     // 活动
     Route::get('activity', [ActivityController::class, 'index']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
-    // 商城
-    Route::get('shop', [ShopController::class, 'index']);
+    
     // iframe嵌入  公用
     Route::get('display', [DisplayController::class, 'display'])->name('mobile.display');
     // 登出
@@ -60,14 +59,11 @@ Route::group([
     Route::get('customerService', [MemberController::class, 'customerService']);
     Route::get('vip', [MemberController::class, 'vip']);
     
-    // 充值记录
-    Route::get('recharges', [MemberController::class, 'recharges']);
+    // 交易记录
+    Route::get('transaction', [MemberController::class, 'transaction']);
     Route::get('rechargeList', [MemberController::class, 'rechargeList']);
-    // 提现记录
-    Route::get('draws', [MemberController::class, 'draws']);
     Route::get('drawList', [MemberController::class, 'drawsList']);
 
-    Route::get('transaction', [MemberController::class, 'transaction']);
     // 投注记录
     Route::get('bets', [MemberController::class, 'bets']);
     Route::get('betList', [MemberController::class, 'betsList']);
@@ -79,6 +75,17 @@ Route::group([
     Route::get('getAttach', [EmailController::class, 'getAttach'])->name('mobile.email.attach');
 });
 
+// 商城相关
+Route::group([
+    'prefix' => 'mobile/shop', 'middleware' => ['auth']
+], function ($router) {
+    Route::get('', [ShopController::class, 'index']);
+    Route::get('guide', [ShopController::class, 'guide']);
+    Route::get('bind', [ShopController::class, 'bind']);
+    Route::get('draw', [ShopController::class, 'draw']);
+});
+
+
 // 支付相关
 Route::group([
     'prefix' => 'mobile/pay', 'middleware' => ['auth']
@@ -86,6 +93,7 @@ Route::group([
     Route::get('recharge ', [RechargeController::class, 'index']);
     
 });
+
 
 // 红包相关
 Route::group([

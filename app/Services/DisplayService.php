@@ -35,7 +35,7 @@ class DisplayService
         }elseif($params['act'] == 'game_url') {
             $url = GameHelper::getPgGameUrl($user, $params['game_code'] ?? '');
             if(!$url) {
-                throw new BadRequestException("Game Code Err!");
+                throw new BadRequestException(['msg' => 'PG game url err:'. $params['game_code']]);
             }
             return $url;
         }
