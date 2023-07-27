@@ -36,4 +36,23 @@ class UserRepository extends Repository
                 $query->orWhere($orWhere);
              })->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
+
+    public function getRankCoin()
+    {
+        $list = $this->model()::where('status', CommonEnum::ENABLE)
+        ->where('create_time', '>', 1685180041)//5月份开始
+        ->orderBy('coin', 'desc')
+        ->limit(20)
+        ->get();
+
+        $data = [];
+        foreach ($list as $item) {
+            $tmp = [];
+            $tmp['playername'] = hideString($item['playername'], 2,2);
+            $tmp['coin'] = $item['coin'];
+            $data[] = $tmp;
+        }
+
+        return $data;
+    }
 }

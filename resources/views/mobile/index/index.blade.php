@@ -257,32 +257,15 @@
               <div class="rankBg"></div>
               <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
+                
+                @foreach($ranks as $item)
                 <li style="color: #f2f2f2;">
-                    <span>Json**a</span>
-                      <em>
-                        <em style="color: #f2f2f2;">9000.00</em></em>
-                  </li>
+                <span>{{ $item['playername'] }}</span>
+                    <em>
+                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
+                </li>
+                @endforeach
 
-                  <li style="color: #f2f2f2;">
-                  <span>8****32</span>
-                      <em>
-                        <em style="color: #f2f2f2;">4560.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                  <span>a****5</span>
-                      <em>
-                        <em style="color: #f2f2f2;">645.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                    <span>1**34</span>
-                      <em>
-                        <em style="color: #f2f2f2;">7647.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                  <span>2**4</span>
-                      <em>
-                        <em style="color: #f2f2f2;">7647.00</em></em>
-                  </li>
                 </ul>
               </div>
             </div>
