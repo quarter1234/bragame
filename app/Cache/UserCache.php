@@ -2,6 +2,7 @@
 
 namespace App\Cache;
 
+use App\Common\Enum\CommonEnum;
 use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Cache;
 
@@ -41,7 +42,7 @@ class UserCache
     {
         $cacheKey = self::USER_RANK_COIN_CACHE;
 
-        return Cache::remember($cacheKey, config('session.lifetime'), function () {
+        return Cache::remember($cacheKey, 1800, function () {
             $userRepo = app()->make(UserRepository::class);
             return $userRepo->getRankCoin();
         });
