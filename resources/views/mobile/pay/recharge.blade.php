@@ -117,7 +117,20 @@
                             </div>
                         </div>
                         </div>
-                        
+                        <div class="recharge_input">
+                           <span>R$</span>
+                           <input type="text" value="200"/>
+                           <label>Extra+R$20.00</label>
+                        </div>
+                        <div class="recharge_bottom">
+                            <span>Deposit time:</span>
+                            <span>2023/03/22 16:20:00</span>
+                        </div>
+                        <div class="recharge_bottom">
+                            <span>Maximum recharge:</span>
+                            <span>permissive3000000</span>
+                        </div>
+                        <button class="recharge_button">Recharge immediately</button>
                     </div>
               </jx-header-row>
             </div>

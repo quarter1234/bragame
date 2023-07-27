@@ -3047,3 +3047,31 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:right;
     margin-top:5px;
 }
+
+.transaction_t{
+    width:98%;
+    height:30px;
+    line-height:30px;
+    display:flex;
+    justify-content:space-between;
+    background:#132235;
+    border-radius:40px;
+    margin:80px auto 0 auto;
+}
+.transaction_list{
+    width:50%;
+    text-align:center;
+    border-radius:50px;
+    height:100%;
+    font-size:14px;
+}
+.transaction_list_on{
+    background:#05b3e6;
+    color:#fff;
+}
+.transaction_b{
+    width:100%;
+    display:none;
+    color:#fff;
+    height:100%;
+}

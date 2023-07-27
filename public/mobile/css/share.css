@@ -1774,7 +1774,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:12px;
+    margin:10px 12px;
     text-align:center;
     line-height:60px;
     color:#000;
@@ -1837,4 +1837,59 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .recharge_on .recharge_k_w{
     background:url(../img/xz_ico.png) no-repeat;
+}
+
+.recharge_input{
+    width:93%;
+    margin:10px auto;
+    border:1px solid #fff;
+    height:50px;
+    line-height:50px;
+    border-radius:5px;
+    position: relative;
+}
+.recharge_input span{
+    padding-left:10px;
+}
+.recharge_input input{
+    height:48px;
+    background:none;
+    border:none;
+    outline:none;
+    font-size:20px;
+    color:#fff;
+}
+.recharge_input label{
+    position:absolute;
+    right:10px;
+    top:0px;
+    z-index:2;
+    color:#31fff3;
+    font-size:12px;
+}
+.recharge_bottom{
+    width:93%;
+    margin:10px auto;
+    display:flex;
+}
+.recharge_bottom span{
+    width:50%;
+    display: block;
+    font-size:14px;
+    color:#999;
+}
+.recharge_bottom span:nth-child(2){
+    text-align:right;
+}
+.recharge_button{
+    width:93%;
+    height:40px;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    border-radius:5px;
+    color:#000;
+    margin-top:20px;
+    margin-left:12px;
+    margin-bottom:40px;
+    display:inline-block;
+    font-size:14px;
 }
