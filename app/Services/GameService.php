@@ -95,7 +95,6 @@ class GameService
             $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
             $appIdConfig = SystemConfigHelper::getByKey('plat_test_app_id');
         }
-        
 
         if(!$appIpConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
