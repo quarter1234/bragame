@@ -105,7 +105,7 @@ class GameService
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
         $params['ip_address'] = $user['reg_ip'];
-        $params['home_url'] = 'http://www.fc88.top';
+        $params['home_url'] = 'https://www.belawin.com';
         $query = http_build_query($params);
 
         $host = $appIpConfig . ':83/';
