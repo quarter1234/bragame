@@ -38,21 +38,32 @@
           
           
           @include('mobile.common.top_sub') 
-
+          {{-- Tab --}}
          <div class="transaction_t">
             <div class="transaction_list transaction_list_on">Historico de recargas</div>
             <div class="transaction_list">Registro de saque</div>
          </div>
-         <div class="transaction_b" style="display: block;">1</div>
-         <div class="transaction_b">2</div>
-            <div class="email_h"></div>
-            <div id="content_list_pages">
 
+        {{--内容切换 Recharges --}}
+         <div class="transaction_b"  style="display: block;">
+            <div id="content_recharge_list_pages">
             </div>
-
             <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                <button id="content_recharge_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
             </div>
+            <div class="email_h" style="height: 100px;"></div>
+         </div>
+
+          {{--内容切换 Draws--}}
+         <div class="transaction_b">
+            <div id="content_draw_list_pages">
+            </div>
+            <div style="width:100%;text-align:center;margin-top:1rem">
+                <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+            </div>
+            <div class="email_h" style="height: 100px;"></div>
+         </div>
+
 
           {{--loading组件--}}
           @include('mobile.common.loading')      
@@ -61,10 +72,6 @@
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                    <!---->
-                    <!---->
-                    <!---->
-
 
                    </jx-content-view>
                 </jx-safe-area>
@@ -94,8 +101,28 @@
       console.log(orderid)
     }
 
+    function loadDraws() {
+        let page = $('#content_draws_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/member/drawList')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                // 判断 字符串是否为空
+                if(data == '') {
+                  return false;
+                }
+                
+                $('#content_draws_load_more').attr('page', parseInt(page) + 1);
+                $('#content_draw_list_pages').append(data)
+              }
+          })
+    }
+
     function loadRecharges() {
-        let page = $('#content_load_more').attr('page');
+        let page = $('#content_recharge_load_more').attr('page');
           showLoading();
           $.ajax({
               url : "{{url('mobile/member/rechargeList')}}",
@@ -108,20 +135,21 @@
                   return false;
                 }
                 
-                $('#content_load_more').attr('page', parseInt(page) + 1);
-                $('#content_list_pages').append(data)
+                $('#content_recharge_load_more').attr('page', parseInt(page) + 1);
+                $('#content_recharge_list_pages').append(data)
               }
           })
     }
     
     $(document).ready(function() {
       loadRecharges();
+      loadDraws();
 
       var clipboard = new ClipboardJS('.copy_btn')
       clipboard.on('success', function (e) {
         alert('success')
-        // layer.msg('已复制：' + e.text, { icon: 9, time: 1000 })
       })
+
       $('.transaction_list').click(function(){
          $(this).addClass('transaction_list_on').siblings().removeClass('transaction_list_on')
          let index=$(this).index()

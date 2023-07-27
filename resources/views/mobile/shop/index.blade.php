@@ -72,7 +72,7 @@
 
                       </div>
                       <div class="shop_h"></div>
-                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
+                      <a style="color:white" href="{{ url('mobile/member/transaction') }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Minhas Transações</h2>

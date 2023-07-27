@@ -84,14 +84,13 @@
                      </div>
 
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
-					
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/recharges")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--充值记录--}}Histórico de recargas
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-					  <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/draws")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--提现记录--}}Registro de saque
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                       
+                    <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--交易记录--}}Minhas Transações
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+
+                    
+                        
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/bets")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>{{--投注记录--}}Registro de apostas
                         <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
