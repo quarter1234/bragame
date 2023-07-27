@@ -83,7 +83,7 @@
                       </div>
                       </a>
                       
-                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'transaction']) }}" >
+                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Carteira<span>Gerenciar contas bancárias</span></h2>
