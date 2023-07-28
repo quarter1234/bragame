@@ -57,8 +57,8 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="../../mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="../../mobile/img/qb.png"></div>
+                            <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="https://wwv.condebet.com/bx_4/public/mobile/img/qb.png"></div>
                         </div>
                     </span>
                   @else 
@@ -249,7 +249,7 @@
             </div>
             <div class="winning-box">
               <div class="news-title clearfix">
-                <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
+                <img src="https://wwv.condebet.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
                   <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
                 </h2>
@@ -270,7 +270,7 @@
               </div>
             </div>
             <div class="index_bottom">
-                  <img src="../../mobile/img/index_b.png" />
+                  <img src="https://wwv.condebet.com/bx_4/public/mobile/img/index_b.png" />
                   <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
             {{--loading组件--}}
