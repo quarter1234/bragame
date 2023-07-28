@@ -40,6 +40,8 @@ class SendTelegramNotice extends Command
      */
     public function handle()
     {
+        throw new \Exception("Error Processing Request", 1);
+        echo "111";die();
         $inviteCode = 'KJGFP1FK';
         $register = User::find(57215);
         event(new RegisterEvent($register, $inviteCode));
