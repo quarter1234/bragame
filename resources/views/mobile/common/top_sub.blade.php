@@ -1,6 +1,7 @@
 <div class="top">
-    <div class="black"><img src="../../mobile/img/left_ico.png" /></div>
-    <div class="logo"><img src="../../mobile/img/icon_logo.png"/></div>
+    <div class="black"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/left_ico.png" /></div>
+    <div class="logo"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/icon_logo.png"/></div>
+
     <div class="money" style="float:right;margin-right:10px">
         <span>R$</span>
         <span>{{$user['coin']}}</span>

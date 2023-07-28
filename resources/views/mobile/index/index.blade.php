@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style.css?rand=1">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swipeslider.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
