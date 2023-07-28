@@ -189,11 +189,9 @@ class UserService
         }
         $sendcoin = 0;
         $sendArr = [0, 0, 0];
-        Log::debug("orderAsynCallback:" . json_encode($order));
         if($order['discoin'] > 0){ // --直接赠送固定额度
             $sendArr = explode(":", $order['rate']);
             $sendcoin = $order['discoin'];
-            Log::debug("orderAsynCallback:sendArr1" . json_encode($sendArr));
         }
 
         if($order['disrate'] > 0){ // --按比例赠送
@@ -202,7 +200,6 @@ class UserService
             foreach($sendArr as $i => $rate){
                 $sendArr[$i] = roundCoin($sendcoin * $rate);
             }
-            Log::debug("orderAsynCallback:sendArr2" . json_encode($sendArr));
         }
 
         $totalcoin = $order['count']; // --金币
@@ -211,7 +208,7 @@ class UserService
         $alterlog = "订单到账";
         RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
         // 赠送金额
-        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid);
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid, true);
         $isfirst = 1; // --首次充值
         $rechargeCount = $this->userRech->getUserRechargeNum($uid);
         if($rechargeCount > 0){

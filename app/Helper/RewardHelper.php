@@ -188,7 +188,7 @@ class RewardHelper
      * @param $rate
      * @param $actType
      */
-    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '')
+    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '', $optOver = false)
     {
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
         if(is_string($rate)){
@@ -199,9 +199,14 @@ class RewardHelper
         }
         $nowtime = time();
         $sendArr = [0, 0, 0];
-        $sendArr[0] = roundCoin($rateArr[0] * $addCoin);
-        $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
-        $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
+        if($optOver){
+            $sendArr = $rateArr;
+        }
+        else{
+            $sendArr[0] = roundCoin($rateArr[0] * $addCoin);
+            $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
+            $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
+        }
         $rewardsType = 0; // 奖励类型
         $title = '';
         if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // --下级注册
