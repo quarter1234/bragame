@@ -70,7 +70,7 @@ class RegisterListener implements ShouldQueue
         $register->invit_uid = $inviteUser->uid;
         $register->save();
 
-        $inviteUser->invitednum = $inviteUser->invitednum  + 1;
+        $inviteUser->invitednum = intval($inviteUser->invitednum)  + 1;
         $inviteUser->save();
 
         // 绑定之前关系表

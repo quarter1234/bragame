@@ -18,7 +18,10 @@ class DUserTreeRepository extends Repository
      */
     public function getInviteTree(int $inviteUid)
     {
-        return $this->model()::where('descendant_id', $inviteUid)->orderBy('id', 'desc')->get();
+        return $this->model()::where('descendant_id', $inviteUid)
+        ->where('ancestor_h', '>', 0)
+        ->orderBy('id', 'desc')
+        ->get();
     }
 
     /**
@@ -37,18 +40,39 @@ class DUserTreeRepository extends Repository
         })->first();
     }
 
+    public function getInviteInfo($ancestorId, $descendantId, $ancestorH)
+    {
+        return $this->model()::where('ancestor_id', $ancestorId)
+        ->where('descendant_id', $descendantId)
+        ->where('ancestor_h', $ancestorH)
+        ->first();
+    }
+
     public function storeInviteTree($tree, $register, $agent = 0)
     {
+        $ancestorH = intval($tree['ancestor_h']) + 1;
+
+        $haveInfo = $this->getInviteInfo($tree['ancestor_id'], $register->uid, $ancestorH);
+        if($haveInfo) {
+            return false;
+        }
+
         $data = [];
         $data['ancestor_id'] = $tree['ancestor_id'];
         $data['descendant_id'] = $register->uid;
         $data['descendant_agent'] = $agent;
-        $data['ancestor_h'] = intval($tree['ancestor_h']) + 1;
+        $data['ancestor_h'] = $ancestorH;
+
         return $this->create($data);
     }
 
     public function storeTree($invitedUid, $registerUid, $agent = 0, $ancestorH = 0)
     {
+        $haveInfo = $this->getInviteInfo($invitedUid, $registerUid, $ancestorH);
+        if($haveInfo) {
+            return false;
+        }
+
         $data = [];
         $data['ancestor_id'] = $invitedUid;
         $data['descendant_id'] = $registerUid;

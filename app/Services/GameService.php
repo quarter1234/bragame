@@ -95,7 +95,6 @@ class GameService
             $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
             $appIdConfig = SystemConfigHelper::getByKey('plat_test_app_id');
         }
-        
 
         if(!$appIpConfig){
             return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
@@ -105,7 +104,7 @@ class GameService
         $params['user_id'] = $pre . 'x' . $user['uid'];
         $params['game_code'] = $gameCode;
         $params['ip_address'] = $user['reg_ip'];
-        $params['home_url'] = 'http://www.fc88.top';
+        $params['home_url'] = 'https://www.belawin.com';
         $query = http_build_query($params);
 
         $host = $appIpConfig . ':83/';

@@ -103,7 +103,7 @@
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
                           
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1--}}Anúncio do sistema</marquee></div>
+                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}}</marquee></div>
                           
                           
                       </div>
@@ -251,38 +251,21 @@
               <div class="news-title clearfix">
                 <img src="/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}A última lista vencedora</strong>
+                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
                 </h2>
               </div>
               <div class="rankBg"></div>
               <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
                 <ul class="news-scroll" style="padding-left: 0px;">
-                <li style="color: #f2f2f2;">
-                    <span>Json**a</span>
-                      <em>
-                        <em style="color: #f2f2f2;">9000.00</em></em>
-                  </li>
 
-                  <li style="color: #f2f2f2;">
-                  <span>8****32</span>
-                      <em>
-                        <em style="color: #f2f2f2;">4560.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                  <span>a****5</span>
-                      <em>
-                        <em style="color: #f2f2f2;">645.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                    <span>1**34</span>
-                      <em>
-                        <em style="color: #f2f2f2;">7647.00</em></em>
-                  </li>
-                  <li style="color: #f2f2f2;">
-                  <span>2**4</span>
-                      <em>
-                        <em style="color: #f2f2f2;">7647.00</em></em>
-                  </li>
+                @foreach($ranks as $item)
+                <li style="color: #f2f2f2;">
+                <span>{{ $item['playername'] }}</span>
+                    <em>
+                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
+                </li>
+                @endforeach
+
                 </ul>
               </div>
             </div>

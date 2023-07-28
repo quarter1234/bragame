@@ -20,4 +20,25 @@ class ShopController extends Controller
         
         return view('mobile.shop.index', $data);
     }
+
+    public function guide()
+    {
+        $data = [];
+        $data['user'] = Auth::user();
+        return view('mobile.shop.guide', $data);
+    }
+
+    public function bind()
+    {
+        $data = [];
+        $data['user'] = Auth::user();
+        return view('mobile.shop.bind', $data);
+    }
+
+    public function draw()
+    {
+        $data = [];
+        $data['user'] = Auth::user();
+        return view('mobile.shop.draw', $data);
+    }
 }

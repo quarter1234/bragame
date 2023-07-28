@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Cache\IndexGameCache;
+use App\Cache\UserCache;
 use App\Common\Enum\CommonEnum;
 use App\Helper\RedPackageHelper;
 use App\Models\DRedPacket;
@@ -46,6 +47,7 @@ class IndexService
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
         
         $data['bnners'] = $this->picRepo->getBanners();
+        $data['ranks'] = UserCache::getRankCoin();
 
         return $data;
     }
