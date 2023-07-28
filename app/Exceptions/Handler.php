@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
     {
         
         if ($this->shouldReport($exception) && config('app.env') != 'local') {
-            $this->sendEmail($exception); 
+            // $this->sendEmail($exception); 
         }
         
         parent::report($exception);
