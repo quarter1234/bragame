@@ -99,7 +99,7 @@ span.util-btn-icon.deposit[_ngcontent-iif-c7] {background-image:url(deposit.862c
 span.util-btn-icon.transfer[_ngcontent-iif-c7] {background-image:url(transfer.a1c5b153615b288c7824.png)}
 span.util-btn-icon.withdraw[_ngcontent-iif-c7] {background-image:url(withdraw.a41c76f1715915566d01.png)}
 span.util-btn-icon.ac[_ngcontent-iif-c7] {background-image:url(ac.6e82c2d8f893679d58fb.png)}
-div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(cs_img.c95648a5d29ec2d84117.svg)}
+div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://wwv.condebet.com/bx_4/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)}
 div.cs-dialog-title[_ngcontent-iif-c7] {margin-top:22px;color:#333;font-size:24px;font-weight:500}
 </style><style>.home-game-board-ctn[_ngcontent-iif-c8] {display:flex;flex-flow:row nowrap}
 .side-menu-ctn[_ngcontent-iif-c8] {margin-left:10px;display:flex;flex-flow:column nowrap;align-items:center;justify-content:flex-start}
