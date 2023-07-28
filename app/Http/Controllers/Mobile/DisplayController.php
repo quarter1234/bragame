@@ -23,7 +23,7 @@ class DisplayController extends Controller
         $params = $request->goCheck('display');
         
         $data['url'] = $this->displayService->getUrl($user, $params);
-
+        $data['act'] = $params['act'];
         return view('mobile.common.webview', $data);
     }
 }

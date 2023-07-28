@@ -34,7 +34,14 @@
 
   <script>
     function goBack() {
+      let act = "{{ $act }}";
+
+      if(act == 'key') {
+        window.location.href = "{{ url('mobile/shop') }}"
+      } else {
         window.history.back();
+      }
+
     }
   </script>
 </body>
