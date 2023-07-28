@@ -53,7 +53,7 @@
             <div class="e_b_hs">
                 <span>Correio:</span>
                 <div class="email_w_left">
-                <img src="../../mobile/img/jb.png" />
+                <img src="https://wwv.condebet.com/bx_4/public/mobile/img/jb.png" />
                 <label>{{ $info['attach'][1] ?? 0 }}</label> 
                 </div>
             </div>

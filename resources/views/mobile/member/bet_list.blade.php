@@ -5,7 +5,7 @@
             <div class="rechare_zt">Montante da aposta: {{ $item['bet_amount'] }}</div>
             <div class="email_w_bottom">
                 <div class="email_w_left">
-                <img src="../../mobile/img/jb.png" />
+                <img src="https://wwv.condebet.com/bx_4/public/mobile/img/jb.png" />
                {{$item['settled_amount'] ?? 0}}  
                {{-- 金币：{{$item['format_platform'] ?? 0}}  --}} 
                {{-- {{$item['settled_amount']}}  --}} 

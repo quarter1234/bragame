@@ -5,12 +5,12 @@
     @include('mobile.common.common_title') 
     <base href="/">
    <!-- Material Icons -->
-    <link rel="stylesheet" href="/static/css/material-icons.css">
-    <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/share.css">
-    <link rel="stylesheet" href="/mobile/css/shop.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/share.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {

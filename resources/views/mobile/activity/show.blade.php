@@ -5,19 +5,18 @@
     @include('mobile.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="/static/css/amazeui.min.css">
-    <link rel="stylesheet" href="/static/css/common2.css">
-    <link rel="stylesheet" href="/static/css/material-icons.css">
-    <link rel="stylesheet" href="/mobile/css/activity.css">
-    <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/amazeui.min.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/common2.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/static/css/artDialog.css">
-    <link rel="stylesheet" href="/static/css/icon.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/icon.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
    
 
     <meta name="theme-color" content="#0C192C">

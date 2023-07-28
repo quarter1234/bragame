@@ -87,33 +87,33 @@
                       
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--交易记录--}}Minhas Transações
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="https://wwv.condebet.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     
                         
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/bets")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>{{--投注记录--}}Registro de apostas
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="https://wwv.condebet.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon yj-icon"></span>{{--邮件--}}Correio
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="https://wwv.condebet.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon vip-icon"></span>{{--VIP等级--}}VIP
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="https://wwv.condebet.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                     
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Contact Us
-                        <i class="icon iconfont" style="margin-left: auto;"><img src="..\..\static\images\right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style="margin-left: auto;"><img src="https://wwv.condebet.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--退出账号--}}Saia da conta
+                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"> </span>{{--退出账号--}}Saia da conta
                       </button>
                      </div>
 

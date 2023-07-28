@@ -6,17 +6,17 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="/static/css/material-icons.css">
-    <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/static/css/artDialog.css">
-    <link rel="stylesheet" href="/mobile/css/share.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/artDialog.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/share.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
 
-    <script type="text/javascript" src="/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
 
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -34,15 +34,15 @@
             <div class="centen"></div>
             <div class="centen_tab">
                   <div class="centen_list centen_on">
-                      <img src="../../mobile/img/fx.png" />
+                      <img src="https://wwv.condebet.com/bx_4/public/mobile/img/fx.png" />
                       <p>Convidar{{--分享--}}</p>
                   </div>
                   <div class="centen_list">
-                      <img src="../../mobile/img/dl.png" style="width:35px;height:35px;margin:-2px 0 -20px 0;" />
+                      <img src="https://wwv.condebet.com/bx_4/public/mobile/img/dl.png" style="width:35px;height:35px;margin:-2px 0 -20px 0;" />
                       <p>Agente{{--代理--}}</p>
                   </div>
                   <div class="centen_list">
-                      <img src="../../mobile/img/flzh.png" />
+                      <img src="https://wwv.condebet.com/bx_4/public/mobile/img/flzh.png" />
                       <p>Membro {{--成员--}}</p>
                   </div>
             </div>
