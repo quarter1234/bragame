@@ -84,12 +84,12 @@ class PublicController extends Controller
      * @param PublicRequest $request
      * @return mixed
      */
-    public function doLogin(PublicRequest $request)
+    public function doLogin(PublicRequest $request, ReqeustSession $sessionRequest)
     {
         $params = $request->goCheck('doLogin');
         $params['ip'] = Request::getClientIp();
 
-        if(!$this->handleLogin($params)) {
+        if(!$this->handleLogin($params, $sessionRequest)) {
             return Result::error(trans('auth.failed'));
         }
 
@@ -101,7 +101,7 @@ class PublicController extends Controller
      * @param array $params
      * @return bool
      */
-    private function handleLogin($params) :bool
+    private function handleLogin($params, $sessionRequest) :bool
     {
         $credentials = [];
         $credentials['phone'] = $params['phone'];
@@ -113,6 +113,8 @@ class PublicController extends Controller
 
         $user = Auth::user();
         if($user['status'] != CommonEnum::ENABLE) {
+            $sessionRequest->session()->flush();
+            Auth::logout();
             throw new BadRequestException(['msg' => trans('auth.account_exception')]);
         }
 
