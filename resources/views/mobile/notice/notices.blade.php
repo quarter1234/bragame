@@ -81,7 +81,7 @@ div.banner-item-container[_ngcontent-iif-c5] {width:100%;height:100%;display:fle
 img.banner-item[_ngcontent-iif-c5] {flex:0 0 auto;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;pointer-events:none;background-image:linear-gradient(to right,transparent,#000 calc(50% - 50vh / 480 * 1125 / 2),#000 calc(50% + 50vh / 480 * 1125 / 2),transparent)}
 </style><style>button.bulletin-board-btn[_ngcontent-iif-c6] {display:block;margin:0;padding:8px 15px;width:100%;border-radius:0;color:#fff}
 div.bulletin-board-container[_ngcontent-iif-c6] {box-sizing:border-box;height:20px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
-div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(bulletin-icon.a996c907273958ac2d65.svg)}
+div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://wwv.condebet.com/bx_4/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)}
 .more-announcement-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:70px;height:100%;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(more-announcement.e9aba3242f773db1453a.png)}
 div.bulletin-board[_ngcontent-iif-c6] {flex:1 1 auto;margin-left:1em;height:20px;overflow:hidden;text-align:start;font-size:14px;font-weight:400;color:#878e97;line-height:20px}
 </style><style>div.util-bar-container[_ngcontent-iif-c7] {padding:0 10px 10px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
