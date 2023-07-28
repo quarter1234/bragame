@@ -9,9 +9,10 @@ class TelegramNotice
 {
     public static function sendMessage(array $message)
     {
-        $token = '6309972833:AAETPJB5H47KVkyfiMXwfee52Y5-LWwwMuU';
+        $token = '6472966435:AAGKDwGoCx9WgqBNuGVZCznc0ggjeEzWYuQ';
         $chatId = '-1001914606862';
         $baseurl = "https://api.telegram.org/bot{$token}/sendMessage";
+        // https://api.telegram.org/bot6472966435:AAGKDwGoCx9WgqBNuGVZCznc0ggjeEzWYuQ/getUpdates
         
         // ?chat_id=123456789&text=1234
         $client = new Client([
@@ -25,7 +26,7 @@ class TelegramNotice
          $client->post($baseurl, [
             'form_params' => [        //参数组
                 'chat_id' => $chatId,
-                'text' => 'baxi4' . json_encode($message),
+                'text' => json_encode($message),
                 // 'parse_mode' => 'Markdown'
             ],
         ]);

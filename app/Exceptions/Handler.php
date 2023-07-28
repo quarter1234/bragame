@@ -52,7 +52,7 @@ class Handler extends ExceptionHandler
     {
         
         if ($this->shouldReport($exception) && config('app.env') != 'local') {
-            // $this->sendEmail($exception); 
+            $this->sendEmail($exception); 
         }
         
         parent::report($exception);
@@ -107,6 +107,7 @@ class Handler extends ExceptionHandler
         $response['file'] =  $exception->getFile();
         $response['class'] = $exception->getClass();
         $response['line'] =  $exception->getLine();
+        $response['play'] = env('CURRENT_PLAT', 'Laravel');
         $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
         // $response['trace'] = $exception->getTrace();
 
