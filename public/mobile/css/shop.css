@@ -106,3 +106,72 @@
     margin-right:10px;
     text-indent:12px;
 }
+.bind{
+    width:95%;
+    margin:10px auto 0 auto;
+    background:#132235;
+    border-radius:5px;
+    padding:20px 0;
+    overflow: hidden;
+}
+.bind h2{
+    color:#fff;
+    font-size:14px;
+    font-weight:normal;
+    padding-left:20px;
+    margin:10px 0 0 0;
+}
+
+.bind input{
+    background:rgba(0, 0, 0, 0.3);
+    border:none;
+    width:94%;
+    height:40px;
+    font-size:14px;
+    outline: none;
+    margin:10px 0 0 10px;
+    line-height:40px;
+    border-radius:3px;
+    color:#fff;
+    padding-left:10px;
+}
+.bind select{
+    background:rgba(0, 0, 0, 0.3);
+    border:none;
+    width:94%;
+    height:40px;
+    font-size:14px;
+    outline: none;
+    margin:10px 0 0 10px;
+    padding-right:10px;
+    color:#fff;
+    padding-left:10px;
+}
+.bind_bottom{
+    width:94%;
+    padding:10px 0;
+    background:rgba(255, 255, 255, 0.1);
+    margin:10px auto 0 auto;
+}
+.bind_bottom h2{
+    font-size:14px;
+    text-indent:20px;
+    margin:10px 0 0 0;
+}
+.bind_bottom p{
+    font-size:14px;
+    text-indent:20px;
+    margin:10px 0 0 0;
+}
+.bind_buttom{
+    width:94%;
+    height:40px;
+    border-radius:3px;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    line-height:40px;
+    text-align:center;
+    margin:10px 0 0 12px;
+    overflow: hidden;
+    font-size:16px;
+    color:#000;
+}

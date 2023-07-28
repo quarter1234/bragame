@@ -39,8 +39,27 @@
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                 </div>
-               <div class="guide_top">绑定银行卡</div>
-                      
+               <div class="bind">
+                    <h2>Bank account number</h2>
+                    <input type="text" value="111" />
+                    <h2>Reconfirm the bank account number</h2>
+                    <input type="text" value="111" />
+                    <h2>Select bank</h2>
+                    <select>
+                        <option selected="selected">Select bank name</option>
+                        <option>Select bank name</option>
+                        <option>Select bank name</option>
+                    </select>
+                    <h2>Affiliated bank branch</h2>
+                    <input type="text" value="Enter the bank's branch name" />
+               </div>
+               <div class="bind_bottom">
+                    <h2>Pay attention</h2>
+                    <p>1. Xem lai chi tiet truoc khi trinh giay to vinh vien</p>
+                    <p>2. Xem lai chi tiet truoc khi trinh giay to vinh vien</p>
+               </div>
+               
+               <button class="bind_buttom">determine</button>
               </jx-header-row>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
