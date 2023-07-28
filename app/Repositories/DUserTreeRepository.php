@@ -18,7 +18,10 @@ class DUserTreeRepository extends Repository
      */
     public function getInviteTree(int $inviteUid)
     {
-        return $this->model()::where('descendant_id', $inviteUid)->orderBy('id', 'desc')->get();
+        return $this->model()::where('descendant_id', $inviteUid)
+        ->where('ancestor_h', '>', 0)
+        ->orderBy('id', 'desc')
+        ->get();
     }
 
     /**
