@@ -1,6 +1,7 @@
 <?php
 namespace App\Repositories;
 
+use Illuminate\Support\Facades\DB;
 use App\Models\DUserMatchBets;
 
 class DUserMatchBetsRepository extends Repository
@@ -14,7 +15,8 @@ class DUserMatchBetsRepository extends Repository
         if($uid){
            return $this->model()::where("uid", $uid)
                     ->where("opt_status", 0)
-                    ->orderBy('from_type', 'asc')
+                    // ->orderBy('from_type', 'asc')
+                    ->orderByRaw(DB::raw("FIELD(from_type, 2, 3, 5, 1)"))
                     ->first();
         }
 
