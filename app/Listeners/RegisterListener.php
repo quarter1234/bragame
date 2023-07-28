@@ -28,6 +28,10 @@ class RegisterListener implements ShouldQueue
     public function handle(RegisterEvent $event)
     {
         $register = $event->registerUser;
+
+        $treeRepo = app()->make(DUserTreeRepository::class);
+        $treeRepo->storeTree($register->uid, $register->uid, 0, 0);
+
         $inviteCode = $event->inviteCode;
         if(!$inviteCode) {
             return false;
@@ -52,7 +56,7 @@ class RegisterListener implements ShouldQueue
             return false;
         }
 
-        $treeRepo = app()->make(DUserTreeRepository::class);
+       
         $hasBind = $treeRepo->getUserBind($register->uid, $inviteUser->uid);
         if($hasBind) {
             return false;
@@ -83,7 +87,6 @@ class RegisterListener implements ShouldQueue
 
         // 也要把自己算进去
         $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
-        $treeRepo->storeTree($register->uid, $register->uid, 0, 0);
         $this->storeUserBind($register);
         
         // 删除缓存数据
