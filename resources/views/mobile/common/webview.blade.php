@@ -36,7 +36,7 @@
     function goBack() {
       let act = "{{ $act }}";
 
-      if(act == 'key') {
+      if(act == 'kyc') {
         window.location.href = "{{ url('mobile/shop') }}"
       } else {
         window.history.back();
