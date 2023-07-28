@@ -38,6 +38,10 @@
 
       if(act == 'kyc') {
         window.location.href = "{{ url('mobile/shop') }}"
+      } else if(act == 'pay') {
+          window.location.href = "{{ url('mobile/shop') }}"
+      } else if(act == 'payment') {
+          window.location.href = "{{ url('mobile/shop') }}"
       } else {
         window.history.back();
       }
