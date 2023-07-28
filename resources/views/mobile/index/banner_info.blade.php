@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/amazeui.min.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/common2.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style02.css?rand=3">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
