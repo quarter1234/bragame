@@ -58,14 +58,4 @@ class DUserRechargeRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
-    public function getPayUserCount($uid, $startTime, $endTime){
-        return $this->model()::join('d_user','d_user_invite.uid','=','d_user.uid')
-                    ->where("d_user.ispayer", 1)
-                    ->where("d_user_invite.create_time", ">=", $startTime)
-                    ->where("d_user_invite.create_time", "<=", $endTime)
-                    ->where("d_user_invite.invit_uid", $uid)
-                    ->select(DB::raw("COUNT(*) AS counts"))
-                    ->groupBy('d_user_invite.invit_uid')
-                    ->get();
-    }
 }

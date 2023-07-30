@@ -167,7 +167,7 @@ class ShareService
 
     public function getTestFirstRecharge($uid, $startTime, $endTime){
         $oneFirstRecharge = 0;
-        $res = $this->rechargeRepo->getPayUserCount($uid, $startTime, $endTime);
+        $res = $this->inviteRepo->getPayUserCount($uid, $startTime, $endTime);
         $resArr = $res->toArray();
         if(!empty($resArr)){
             $oneFirstRecharge = $resArr[0]['counts'];
