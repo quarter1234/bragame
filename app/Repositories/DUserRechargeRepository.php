@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use App\Common\Enum\CommonEnum;
 use App\Models\DUserRecharge;
+use Illuminate\Support\Facades\DB;
 
 class DUserRechargeRepository extends Repository
 {
@@ -55,5 +56,16 @@ class DUserRechargeRepository extends Repository
         ->whereIn('status', [1, 2, 3])
         ->orderBy('id', 'desc')
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
+    }
+
+    public function getPayUserCount($uid, $startTime, $endTime){
+        return $this->model()::join('d_user','d_user_invite.uid','=','d_user.uid')
+                    ->where("d_user.ispayer", 1)
+                    ->where("d_user_invite.create_time", ">=", $startTime)
+                    ->where("d_user_invite.create_time", "<=", $endTime)
+                    ->where("d_user_invite.invit_uid", $uid)
+                    ->select(DB::raw("COUNT(*) AS counts"))
+                    ->groupBy('d_user_invite.invit_uid')
+                    ->get();
     }
 }
