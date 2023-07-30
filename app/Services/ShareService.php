@@ -161,7 +161,25 @@ class ShareService
 
     private function getFirstRecharge($uid, $startTime, $endTime)
     {
-        $oneFirstRecharge = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
+//        $oneFirstRecharge = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
+//        return $oneFirstRecharge;
+        $oneFirstRecharge = 0;
+        $res = $this->inviteRepo->getPayUserCount($uid, $startTime, $endTime);
+        $resArr = $res->toArray();
+        if(!empty($resArr)){
+            $oneFirstRecharge = $resArr[0]['counts'];
+        }
+
+        $config = SystemConfigHelper::getByKey('box_award');
+        if($oneFirstRecharge > 0
+            && $config
+            && isset($config['box']['is_rate'])
+            && $config['box']['is_rate'] > 0
+            && isset($config['box']['box_num_limit'])
+            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
+        }
+
         return $oneFirstRecharge;
     }
 
