@@ -11,6 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swiper-bundle.min.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -18,7 +19,7 @@
       }</script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/index.js"></script>
-
+    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -72,6 +73,18 @@
             <style>
             @media screen and (min-width: 1200px){
               .swipslider{padding-top:17% !important;}
+              #qh button{
+                width:12% !important;
+              }
+              .index_banner{
+              width:100%;
+              height:250px !important;
+              text-align:center;
+           }
+              .index_banner img{
+              width:96%;
+              height:250px !important;
+           }
             }
            .rm a:hover img{
             filter:brightness(70%);
@@ -85,29 +98,66 @@
            #tab1_content_pps a:hover{
             filter:brightness(70%);
            }
+           .index_banner{
+              width:100%;
+              height:160px;
+              text-align:center;
+           }
+           .index_banner img{
+              width:96%;
+              height:160px;
+           }
             </style>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style=" padding-top: 64px;">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-banner-board _ngcontent-way-c1="" _nghost-way-c5="" class="ng-tns-c5-0 ng-star-inserted">
 
-                    <div id="responsiveness" class="swipslider">
-                      <ul class="sw-slides">
-                      @foreach($bnners as $banner)
-                        <li class="sw-slide">
+                    <div class="index_banner">
+                      <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                        @foreach($bnners as $banner)
+
+                          <div class="swiper-slide">
                           @if ($banner['url'] === 'activity_info')
                             <img onclick="location.href='{{ route("mobile.banner.info", ["id" => $banner["id"]]) }}'" src="{{$banner['img']}}" />
                           @elseif (in_array($banner['url'],['download', 'game_out']))
-                            <img onclick="location.href='{{$banner["title"]}}'" src="{{$banner['img']}}">
+                            <img onclick="location.href='{{$banner["title"]}}'" src="{{$banner['img']}}" />
                           @else
-                            <img src="{{$banner['img']}}">
+                            <img src="{{$banner['img']}}" />
                           @endif
-                        </li>
+                          </div>
                         @endforeach
-                      </ul>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
                     </div>
+                    
                   <script>
-                  $('#responsiveness').swipeslider();
+                  var windowWidth = $(window).width();
+                     if(windowWidth < 640){
+                      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+                      }
+                     if(windowWidth >= 640){
+                      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+                      }
+
+                      
+
                   </script>    
                   </jx-banner-board>
                   <jx-bulletin-board _ngcontent-way-c1="" _nghost-way-c6="" class="ng-tns-c6-1 ng-star-inserted">
