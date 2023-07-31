@@ -9,6 +9,7 @@ use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserRechargeRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class ShareService
 {
@@ -183,24 +184,18 @@ class ShareService
         return $oneFirstRecharge;
     }
 
+    private function getSeconRecharge($uid, $startTime, $endTime){
+        $result = 0;
+        $userList = $this->inviteRepo->getPayUsers($uid, $startTime, $endTime);
+        if(empty($userList) || $userList->isEmpty()){
+            return $result;
+        }
+        Log::debug("getSeconRecharge:" . json_encode($userList->pluck('uid')->all()));
+        $twoList = $this->inviteRepo->getPayUsers($userList->pluck('uid')->all(), $startTime, $endTime);
+        return $twoList->count();
+    }
+
     public function getTestFirstRecharge($uid, $startTime, $endTime){
-        $oneFirstRecharge = 0;
-        $res = $this->inviteRepo->getPayUserCount($uid, $startTime, $endTime);
-        $resArr = $res->toArray();
-        if(!empty($resArr)){
-            $oneFirstRecharge = $resArr[0]['counts'];
-        }
-
-        $config = SystemConfigHelper::getByKey('box_award');
-        if($oneFirstRecharge > 0
-            && $config
-            && isset($config['box']['is_rate'])
-            && $config['box']['is_rate'] > 0
-            && isset($config['box']['box_num_limit'])
-            && $oneFirstRecharge > $config['box']['box_num_limit']) {
-            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
-        }
-
-        return $oneFirstRecharge;
+       return $this->getSeconRecharge($uid, $startTime, $endTime);
     }
 }
