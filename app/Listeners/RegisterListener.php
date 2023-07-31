@@ -13,7 +13,7 @@ use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
 
-class RegisterListener // implements ShouldQueue
+class RegisterListener implements ShouldQueue
 {
     public function __construct()
     {
