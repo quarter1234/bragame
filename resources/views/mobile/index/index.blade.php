@@ -69,6 +69,23 @@
 
               </jx-header-row>
             </div>
+            <style>
+            @media screen and (min-width: 1200px){
+              .swipslider{padding-top:17% !important;}
+            }
+           .rm a:hover img{
+            filter:brightness(70%);
+           }
+           .game_list a:hover img{
+            filter:brightness(70%);
+           }
+           #tab2_content_pgs a:hover{
+            filter:brightness(70%);
+           }
+           #tab1_content_pps a:hover{
+            filter:brightness(70%);
+           }
+            </style>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style=" padding-top: 64px;">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
