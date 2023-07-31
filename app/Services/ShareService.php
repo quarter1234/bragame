@@ -153,8 +153,7 @@ class ShareService
             $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
 
             $data['oneFirstRecharge'] = $this->getFirstRecharge($uid, $startTime, $endTime);
-            $data['twoFirstRecharge'] = 0;
-
+            $data['twoFirstRecharge'] = $this->getSeconRecharge($uid, $startTime, $endTime);
         }
 
         return $data;
@@ -190,7 +189,6 @@ class ShareService
         if(empty($userList) || $userList->isEmpty()){
             return $result;
         }
-        Log::debug("getSeconRecharge:" . json_encode($userList->pluck('uid')->all()));
         $twoList = $this->inviteRepo->getPayUsers($userList->pluck('uid')->all(), $startTime, $endTime);
         return $twoList->count();
     }
