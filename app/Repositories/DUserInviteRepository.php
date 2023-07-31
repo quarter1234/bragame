@@ -57,4 +57,20 @@ class DUserInviteRepository extends Repository
                 ->groupBy('d_user_invite.invit_uid')
                 ->get();
     }
+
+    public function getPayUsers($uids, $startTime, $endTime){
+        $query =  $this->model()::join('d_user','d_user_invite.uid','=','d_user.uid')
+                ->where("d_user.ispayer", 1)
+                ->where("d_user_invite.create_time", ">=", $startTime)
+                ->where("d_user_invite.create_time", "<=", $endTime)
+                ->select("d_user_invite.uid as uid");
+                if(is_array($uids)){
+                    $query->whereIn("d_user_invite.invit_uid", $uids);
+                }
+                else{
+                    $query->where("d_user_invite.invit_uid", $uids);
+                }
+
+                return $query->get();
+    }
 }
