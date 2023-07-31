@@ -111,7 +111,7 @@ class RegisterListener // implements ShouldQueue
         $totalCacheKey = "share:invite:total:". $inviteUser->uid;
         Cache::forget($totalCacheKey);
 
-        file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
+//        file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
 
         // 代理返利配置
         // if($inviteConfig['invite']['rtype'] == 2) {
