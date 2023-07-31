@@ -13,7 +13,7 @@ use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
 
-class RegisterListener implements ShouldQueue
+class RegisterListener // implements ShouldQueue
 {
     public function __construct()
     {
@@ -56,7 +56,7 @@ class RegisterListener implements ShouldQueue
             return false;
         }
 
-       
+
         $hasBind = $treeRepo->getUserBind($register->uid, $inviteUser->uid);
         if($hasBind) {
             return false;
@@ -68,8 +68,18 @@ class RegisterListener implements ShouldQueue
 
         $inviteConfig = SystemConfigHelper::getByKey('invite');
         $rewards = ['type' => 1, 'count' => $inviteConfig['invite']['coin1'] ?? 0];
-
-        $inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards));
+        $isFilter = 1;
+        $isNeedRand = UserHelper::getIsInviteFilter($inviteUser->uid);
+        if($isNeedRand){
+            $config = SystemConfigHelper::getByKey('box_award');
+            if($config && isset($config['box']['box_num_rate'])){
+                $random = intval($config['box']['box_num_rate']);
+                if(hitRandom($random)){
+                    $isFilter = 2;
+                }
+            }
+        }
+        $inviteRepo->storeInvite($register, $inviteUser, $ordNum, json_encode($rewards), $isFilter);
 
         $register->invit_uid = $inviteUser->uid;
         $register->save();
@@ -88,7 +98,7 @@ class RegisterListener implements ShouldQueue
         // 也要把自己算进去
         $treeRepo->storeTree($inviteUser->uid, $register->uid, 0, 1);
         $this->storeUserBind($register);
-        
+
         // 删除缓存数据
         $invitePage1 = "share:invite:list:". $inviteUser->uid. '_' . 1;
         Cache::forget($invitePage1);
@@ -128,7 +138,7 @@ class RegisterListener implements ShouldQueue
         $data['unionid'] = $registerUser['phone'] ?? '';
         $data['passwd'] = $registerUser['password'] ?? '';
         $data['create_time'] = time();
-       
+
         $bindRepo->create($data);
     }
 }

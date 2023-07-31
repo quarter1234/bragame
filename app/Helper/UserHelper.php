@@ -4,8 +4,9 @@ namespace App\Helper;
 
 use App\Cache\SConfigVipCache;
 use App\Models\User;
+use App\Repositories\DUserInviteRepository;
 
-class UserHelper 
+class UserHelper
 {
     public static function avatar($usericon)
     {
@@ -109,5 +110,27 @@ class UserHelper
         }
 
         return ['exp' => $exp, 'vipList' => $vipList];
+    }
+
+    public static function getIsInviteFilter($uid){
+        $oneFirstRecharge = 0;
+        $startTime = strtotime(date('Y-m-d'));
+        $endTime = $startTime + 86400;
+        $userInviteRepo = app()->make(DUserInviteRepository::class);
+        $res = $userInviteRepo->getPayUserCount($uid, $startTime, $endTime);
+        $resArr = $res->toArray();
+        if(!empty($resArr)){
+            $oneFirstRecharge = $resArr[0]['counts'];
+        }
+        $config = SystemConfigHelper::getByKey('box_award');
+        if($config
+            && isset($config['box']['is_rate'])
+            && $config['box']['is_rate'] > 0
+            && isset($config['box']['box_num_limit'])
+            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+            return true; // 被过滤
+        }
+
+        return false;
     }
 }

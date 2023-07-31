@@ -24,7 +24,7 @@ class DUserInviteRepository extends Repository
      * @param string $rewards
      * @return mixed
      */
-    public function storeInvite($register, $inviteUser, int $ordNum, string $rewards)
+    public function storeInvite($register, $inviteUser, int $ordNum, string $rewards, int $isFilter = 1)
     {
         $data = [];
         $data['uid'] = $register->uid;
@@ -35,6 +35,7 @@ class DUserInviteRepository extends Repository
         $data['status'] = 0;
         $data['ord'] = $ordNum;
         $data['rewards'] = $rewards;
+        $data['is_filter'] = $isFilter;
 
         return $this->create($data);
     }
@@ -50,6 +51,7 @@ class DUserInviteRepository extends Repository
     public function getPayUserCount($uid, $startTime, $endTime){
         return $this->model()::join('d_user','d_user_invite.uid','=','d_user.uid')
                 ->where("d_user.ispayer", 1)
+                ->where("d_user_invite.is_filter", 1)
                 ->where("d_user_invite.create_time", ">=", $startTime)
                 ->where("d_user_invite.create_time", "<=", $endTime)
                 ->where("d_user_invite.invit_uid", $uid)
@@ -61,6 +63,7 @@ class DUserInviteRepository extends Repository
     public function getPayUsers($uids, $startTime, $endTime){
         $query =  $this->model()::join('d_user','d_user_invite.uid','=','d_user.uid')
                 ->where("d_user.ispayer", 1)
+                ->where("d_user_invite.is_filter", 1)
                 ->where("d_user_invite.create_time", ">=", $startTime)
                 ->where("d_user_invite.create_time", "<=", $endTime)
                 ->select("d_user_invite.uid as uid");

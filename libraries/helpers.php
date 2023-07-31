@@ -608,6 +608,17 @@ if (!function_exists('genSingleOrderId')) {
     }
 }
 
+if (!function_exists('hitRandom')) {
+    function hitRandom($winNum){
+        $rand = mt_rand(1,100);
+        if($rand <= $winNum){
+            return true;
+        }
+
+        return false;
+    }
+}
+
 /**
  * 获取当前控制器名
  *

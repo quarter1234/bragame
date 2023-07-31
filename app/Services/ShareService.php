@@ -170,15 +170,15 @@ class ShareService
             $oneFirstRecharge = $resArr[0]['counts'];
         }
 
-        $config = SystemConfigHelper::getByKey('box_award');
-        if($oneFirstRecharge > 0
-            && $config
-            && isset($config['box']['is_rate'])
-            && $config['box']['is_rate'] > 0
-            && isset($config['box']['box_num_limit'])
-            && $oneFirstRecharge > $config['box']['box_num_limit']) {
-            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
-        }
+//        $config = SystemConfigHelper::getByKey('box_award');
+//        if($oneFirstRecharge > 0
+//            && $config
+//            && isset($config['box']['is_rate'])
+//            && $config['box']['is_rate'] > 0
+//            && isset($config['box']['box_num_limit'])
+//            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+//            $oneFirstRecharge = floor($oneFirstRecharge * $config['box']['box_num_rate']);
+//        }
 
         return $oneFirstRecharge;
     }
