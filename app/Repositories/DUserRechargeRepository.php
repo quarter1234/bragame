@@ -3,6 +3,7 @@ namespace App\Repositories;
 
 use App\Common\Enum\CommonEnum;
 use App\Models\DUserRecharge;
+use Illuminate\Support\Facades\DB;
 
 class DUserRechargeRepository extends Repository
 {
@@ -56,4 +57,5 @@ class DUserRechargeRepository extends Repository
         ->orderBy('id', 'desc')
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
+
 }

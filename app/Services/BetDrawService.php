@@ -50,7 +50,7 @@ class BetDrawService{
                 }
                 else{
                     $leftCash = $cashCoin - $cost;
-                    if($leftCash <= 0){
+                    if($leftCash <= 0 && $cashCoin <= 1){
                         // -- 清除用户的打码量
                         $user['match_bets'] = 0;
                         // -- 把matchBets状态设置为已解除

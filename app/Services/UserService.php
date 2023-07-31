@@ -188,7 +188,7 @@ class UserService
             return GameEnum::PDEFINE['RET']['ERROR']['PLAYER_NOT_FOUND'];
         }
         $sendcoin = 0;
-        $sendArr = [1, 0, 0];
+        $sendArr = [0, 0, 0];
         if($order['discoin'] > 0){ // --直接赠送固定额度
             $sendArr = explode(":", $order['rate']);
             $sendcoin = $order['discoin'];
@@ -208,7 +208,7 @@ class UserService
         $alterlog = "订单到账";
         RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
         // 赠送金额
-        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid);
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid, true);
         $isfirst = 1; // --首次充值
         $rechargeCount = $this->userRech->getUserRechargeNum($uid);
         if($rechargeCount > 0){
