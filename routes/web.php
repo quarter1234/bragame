@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+// 解决aws elb 健康检查 到session的表里面
+Route::get('/healthcheck', function() {
+    config()->set('session.driver', 'array');
+    return response('Hello World', 200)
+       ->header('Content-Type', 'text/plain');
+});
 
 
