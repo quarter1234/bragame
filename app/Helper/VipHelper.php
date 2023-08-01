@@ -4,7 +4,7 @@ namespace App\Helper;
 
 use App\Cache\SConfigVipCache;
 
-class VipHelper 
+class VipHelper
 {
     /**
      * 添加vip经验 ，升级vip
@@ -18,7 +18,7 @@ class VipHelper
         $user->svipexp = $user->svipexp + $diamond;
         $user->save();
 
-        $oldVipLeve = $user->svip ?? 1;
+        $oldVipLeve = $user->svip ?? 0;
         $currentVipLeve = self::getLevelByExp($user->svipexp);
 
         if($currentVipLeve > $oldVipLeve) {
@@ -30,10 +30,10 @@ class VipHelper
     public static function getLevelByExp(int $diamondUsed)
     {
         if($diamondUsed <= 0) {
-            return 1;
+            return 0;
         }
 
-        $target = 1;
+        $target = 0;
 
         $vipList = SConfigVipCache::getVipList();
         foreach ($vipList as $item) {
@@ -43,6 +43,6 @@ class VipHelper
             }
         }
 
-        return $target <= 1 ? 1 : $target;
+        return $target <= 0 ? 0 : $target;
     }
 }
