@@ -5,6 +5,7 @@ namespace App\Helper;
 use App\Cache\SConfigVipCache;
 use App\Models\User;
 use App\Repositories\DUserInviteRepository;
+use Illuminate\Support\Facades\Log;
 
 class UserHelper
 {
@@ -118,6 +119,23 @@ class UserHelper
         $userInviteRepo = app()->make(DUserInviteRepository::class);
         $list = $userInviteRepo->getPayUserCount($uid, $startTime, $endTime);
         $oneFirstRecharge = $list->count();
+        $config = SystemConfigHelper::getByKey('box_award');
+        if($config
+            && isset($config['box']['is_rate'])
+            && $config['box']['is_rate'] > 0
+            && isset($config['box']['box_num_limit'])
+            && $oneFirstRecharge > $config['box']['box_num_limit']) {
+            return true; // 被过滤
+        }
+
+        return false;
+    }
+
+    public static function getTestIsInviteFilter($uid, $startTime, $endTime){
+        $userInviteRepo = app()->make(DUserInviteRepository::class);
+        $list = $userInviteRepo->getPayUserCount($uid, $startTime, $endTime);
+        $oneFirstRecharge = $list->count();
+        Log::debug("getTestIsInviteFilter-count:" . $oneFirstRecharge);
         $config = SystemConfigHelper::getByKey('box_award');
         if($config
             && isset($config['box']['is_rate'])

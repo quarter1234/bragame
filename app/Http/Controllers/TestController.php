@@ -23,7 +23,7 @@ class TestController extends Controller
         $startTime = strtotime($dayStr);
         $endTime = strtotime($dayStr . ' 23:59:59');
         Log::debug("test-index:", [$startTime, $endTime]);
-        $isNeedRand = UserHelper::getIsInviteFilter($uid);
+        $isNeedRand = UserHelper::getTestIsInviteFilter($uid, $startTime, $endTime);
 //        return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
          // User::testStr();
         dump($isNeedRand);
