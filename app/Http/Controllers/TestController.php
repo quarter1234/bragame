@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Facades\User;
+use App\Helper\UserHelper;
 use App\Services\ShareService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
@@ -22,7 +23,10 @@ class TestController extends Controller
         $startTime = strtotime($dayStr);
         $endTime = strtotime($dayStr . ' 23:59:59');
         Log::debug("test-index:", [$startTime, $endTime]);
-        return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
+        $isNeedRand = UserHelper::getIsInviteFilter($uid);
+//        return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
          // User::testStr();
+        dump($isNeedRand);
+        exit();
     }
 }
