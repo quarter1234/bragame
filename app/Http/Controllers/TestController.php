@@ -18,7 +18,7 @@ class TestController extends Controller
     public function index(Request $request)
     {
         $uid = 40016;
-        $dayStr = '2023-07-30';
+        $dayStr = '2023-07-31';
         $startTime = strtotime($dayStr);
         $endTime = strtotime($dayStr . ' 23:59:59');
         Log::debug("test-index:", [$startTime, $endTime]);
