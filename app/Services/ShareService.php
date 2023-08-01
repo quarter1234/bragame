@@ -163,12 +163,8 @@ class ShareService
     {
 //        $oneFirstRecharge = $this->boxAwardRepo->getBoxAwardManNum($uid, date('Y-m-d', $startTime), date('Y-m-d', $endTime));// 宝箱数量
 //        return $oneFirstRecharge;
-        $oneFirstRecharge = 0;
-        $res = $this->inviteRepo->getPayUserCount($uid, $startTime, $endTime);
-        $resArr = $res->toArray();
-        if(!empty($resArr)){
-            $oneFirstRecharge = $resArr[0]['counts'];
-        }
+        $list = $this->inviteRepo->getPayUserCount($uid, $startTime, $endTime);
+        $oneFirstRecharge = $list->count();
 
 //        $config = SystemConfigHelper::getByKey('box_award');
 //        if($oneFirstRecharge > 0
@@ -194,6 +190,6 @@ class ShareService
     }
 
     public function getTestFirstRecharge($uid, $startTime, $endTime){
-       return $this->getSeconRecharge($uid, $startTime, $endTime);
+        return $this->inviteRepo->getTestPayUserCount($uid, $startTime, $endTime);
     }
 }

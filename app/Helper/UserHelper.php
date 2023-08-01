@@ -113,15 +113,11 @@ class UserHelper
     }
 
     public static function getIsInviteFilter($uid){
-        $oneFirstRecharge = 0;
         $startTime = strtotime(date('Y-m-d'));
         $endTime = $startTime + 86400;
         $userInviteRepo = app()->make(DUserInviteRepository::class);
-        $res = $userInviteRepo->getPayUserCount($uid, $startTime, $endTime);
-        $resArr = $res->toArray();
-        if(!empty($resArr)){
-            $oneFirstRecharge = $resArr[0]['counts'];
-        }
+        $list = $userInviteRepo->getPayUserCount($uid, $startTime, $endTime);
+        $oneFirstRecharge = $list->count();
         $config = SystemConfigHelper::getByKey('box_award');
         if($config
             && isset($config['box']['is_rate'])
