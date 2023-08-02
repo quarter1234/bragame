@@ -19,7 +19,7 @@ class TestController extends Controller
     }
     public function index(Request $request)
     {
-        $uid = 40126;
+        $uid = 40728;
         $dayStr = '2023-08-01';
         $startTime = strtotime($dayStr);
         $endTime = strtotime($dayStr . ' 23:59:59');
