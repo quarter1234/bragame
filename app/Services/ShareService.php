@@ -190,6 +190,6 @@ class ShareService
     }
 
     public function getTestFirstRecharge($uid, $startTime, $endTime){
-        return $this->inviteRepo->getTestPayUserCount($uid, $startTime, $endTime);
+        return $this->getSeconRecharge($uid, $startTime, $endTime);
     }
 }
