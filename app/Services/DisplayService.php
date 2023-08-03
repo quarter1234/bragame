@@ -58,13 +58,8 @@ class DisplayService
             ]);
 
             $body = $response->getBody()->getContents();
-
-            print_r($body);die();
-            // $url = GameHelper::getPgGameUrl($user, $params['game_code'] ?? '');
-            // if(!$url) {
-            //     throw new BadRequestException(['msg' => 'PG game url err:'. $params['game_code']]);
-            // }
-            // return $url;
+            $body = json_decode($body, true);
+            return $body['data']['payurl'] ?? '';
         }
     }
 
