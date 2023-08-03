@@ -29,3 +29,8 @@ php artisan event:generate
 /www/server/php/74/bin/php artisan queue:work redis --queue=default
  php artisan queue:work redis --queue=default
  ```
+
+###  切换www用户
+ ```
+sudo su - www -s /bin/bash
+ ```

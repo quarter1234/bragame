@@ -11,6 +11,10 @@ class DUserRecharge extends BaseMoel
 
     public function getFormatStatusAttribute($value)
     {
+        if (!array_key_exists('status', $this->attributes)) {
+            return '';
+        }
+
         $statusArr = [
             0 => trans('member.pending'), 
             1 => trans('member.processing'), 
@@ -23,6 +27,10 @@ class DUserRecharge extends BaseMoel
 
     public function getFormatCreateTimeAttribute($value)
     {
+        if (!array_key_exists('create_time', $this->attributes)) {
+            return '';
+        }
+        
         return date('Y-m-d H:i:s', $this->attributes['create_time']);
     }
 }

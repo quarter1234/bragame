@@ -4,6 +4,7 @@ namespace App\Helper;
 
 use App\Cache\SConfigVipCache;
 use App\Models\User;
+use App\Repositories\DBankRepository;
 use App\Repositories\DUserInviteRepository;
 use Illuminate\Support\Facades\Log;
 
@@ -111,6 +112,40 @@ class UserHelper
         }
 
         return ['exp' => $exp, 'vipList' => $vipList];
+    }
+
+    /**
+     * 获取用户余额
+     * @param mixed $user
+     * @return array
+     */
+    public static function getUserCoin($user) :array
+    {
+        $dcoin = floatval($user['gamedraw']);
+        $totalcoin = $user['coin'];
+
+        if($dcoin < 0) {
+            $dcoin = 0;
+        }
+
+        if($dcoin > $user['coin']) {
+            $dcoin = $user['coin'];
+        }
+        $bankRepo = app()->make(DBankRepository::class);
+        $bankInfo = $bankRepo->getBankInfo($user->uid);
+        if($bankInfo) {
+            $totalcoin = $totalcoin + intval($bankInfo['coin']);
+        }
+
+        return [
+            'uid' => $user['uid'],
+            'coin'=> floatval($user['coin']), //现金余额
+            'dcoin'=> $dcoin, //可提金额
+            'ecoin' => $user['coin'] - $dcoin, //cash balance
+            'totalcoin' => $totalcoin,
+            'svip' => intval($user['svip']),
+            'ispayer' => intval($user['ispayer']),
+        ];
     }
 
     public static function getIsInviteFilter($uid){

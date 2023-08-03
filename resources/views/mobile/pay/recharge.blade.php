@@ -39,98 +39,70 @@
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                     <div class="recharge_top">
                         <span>Current account balance</span>
-                        <label>$10.00</label>
+                        <label>R${{ $user['totalcoin'] }}</label>
                     </div>
                 </div>
                 <div class="recharge_div">
                         <div class="recharge_div_t">Terms of payment</div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                Online payment
-                                </div>
-                                <div class="recharge_bz">
-                                  +20
-                                </div>
-                            </div>
-                        </div>
+                      <div class="recharge_wk">
+                        @foreach($channels as $channel)
+                          <div class="recharge_k1 re_on">
+                              <div class="recharge_k_n">
+                                  <div class="recharge_k_w">
+                                  {{ $channel['title'] }}
+                                  </div>
+                              </div>
+                          </div>
+
+                          </div>    
+
+
                         <div class="recharge_div_t">Top-up amount</div>
-                        <div class="recharge_kn">
-                        <div class="recharge_k recharge_on">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$100
-                                </div>
-                                <div class="recharge_bz">
-                                  +10
-                                </div>
-                            </div>
+
+                        {{--tab 1--}}
+                        <div class="re_show" style="display:block;">
+                          <div class="recharge_kn">
+                          @foreach($channel['pages'] as $key => $page)
+                              <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
+                                  <div class="recharge_k_n">
+                                      <div class="recharge_k_w">
+                                      R$ {{ $page['pay_view_coin'] }}
+                                      </div>
+                                      <div class="recharge_bz">
+                                        {{ $page['disrate'] }}
+                                      </div>
+                                  </div>
+                              </div>
+                            @endforeach  
+                          </div>
                         </div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$200
-                                </div>
-                                <div class="recharge_bz">
-                                  +20
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$500
-                                </div>
-                                <div class="recharge_bz">
-                                  +50
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$1000
-                                </div>
-                                <div class="recharge_bz">
-                                  +100
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$10000
-                                </div>
-                                <div class="recharge_bz">
-                                  +1000
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recharge_k">
-                            <div class="recharge_k_n">
-                                <div class="recharge_k_w">
-                                R$50000
-                                </div>
-                                <div class="recharge_bz">
-                                  +5000
-                                </div>
-                            </div>
-                        </div>
-                        </div>
+
+                        {{--最外层Foreach--}}
+                        @endforeach  
+
+                        <form method="post" action="{{url('mobile/display')}}">
+                          @csrf
                         <div class="recharge_input">
                            <span>R$</span>
-                           <input type="text" value="200"/>
-                           <label>Extra+R$20.00</label>
+                           <input type="text" name="amount" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
+                           <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
+                           <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
+                           <input type="hidden" name="act" value="post_pay" />
                         </div>
+
                         <div class="recharge_bottom">
                             <span>Deposit time:</span>
-                            <span>2023/03/22 16:20:00</span>
+
+                            <span>{{date('Y/m/d H:i:s')}}</span>
                         </div>
-                        <div class="recharge_bottom">
+
+                        {{--<div class="recharge_bottom">
                             <span>Maximum recharge:</span>
                             <span>permissive3000000</span>
-                        </div>
-                        <button class="recharge_button">Recharge immediately</button>
+                        </div>--}}
+                        
+                        <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
+                        </form>
                     </div>
               </jx-header-row>
             </div>
@@ -160,7 +132,23 @@
    <script>
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
+        let payCoin = $(this).attr('payCoin');
+        let rate = $(this).attr('rate');
+        let id = $(this).attr('itemId');
+        $('#recharge_value').val(payCoin)
+        $('#recharge_rate').text(rate)
+        $("#recharge_id").val(id)
         $(this).addClass('recharge_on').siblings().removeClass('recharge_on')
+      })
+
+      $('.recharge_k1').click(function(){
+        $(this).addClass('re_on').siblings().removeClass('re_on')
+        let index =$(this).index()
+        $('.re_show').hide().eq(index).show()
+      })
+
+      $("#recharge_submit").click(function() {
+
       })
     })
    </script>

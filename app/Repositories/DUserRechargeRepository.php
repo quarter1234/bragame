@@ -58,4 +58,24 @@ class DUserRechargeRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
+    public function getUserRechageByGroups($user, $groupIds)
+    {
+        return $this->model()::select(DB::raw('count(id) as t'), 'groupid','channelid','category')
+        ->where('uid', $user->uid)
+        ->whereIn('groupid', $groupIds)
+        ->where('status', 2)
+        ->groupBy(['groupid','channelid', 'category'])
+        ->get()->toArray();
+    }
+
+    public function getUserRechargeToday($todaytime, $user, $groupIds)
+    {
+        return $this->model()::select(DB::raw('count(id) as t'), 'groupid','channelid','category')
+        ->where('create_time','>', $todaytime)
+        ->where('uid', $user->uid)
+        ->whereIn('groupid', $groupIds)
+        ->where('status', 2)
+        ->groupBy(['groupid','channelid', 'category'])
+        ->get()->toArray();
+    }
 }
