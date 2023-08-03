@@ -56,8 +56,8 @@ class DisplayService
                     'token' => $user['token']
                 ],
             ]);
-            
-            $body = $response->getBody();
+
+            $body = $response->getBody()->getContents();
 
             print_r($body);die();
             // $url = GameHelper::getPgGameUrl($user, $params['game_code'] ?? '');
