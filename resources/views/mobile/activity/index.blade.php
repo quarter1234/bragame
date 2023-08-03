@@ -24,6 +24,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
+    <style>
+            @media screen and (min-width: 1200px){
+                .header-view__content-wrapper__content-container{
+                  display:flex;
+                  justify-content:space-between;
+                }
+                .activity-btn{
+                  width:30% !important;
+                  display:inline-block !important;
+                  margin-right:10px !important;
+                }
+
+            }
+    </style>        
 
   <body style="color: white; background-color: #0c192c;">
     <jx-root ng-version="8.2.12">

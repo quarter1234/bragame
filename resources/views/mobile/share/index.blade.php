@@ -12,6 +12,7 @@
     <!-- Used in supported Android browsers -->
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/artDialog.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/share.css">
+    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/shop.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
@@ -23,6 +24,16 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <style>
+    @media screen and (min-width: 1200px){
+      .centen_tab{
+        width:50% !important;
+      }
+      .centen_show{
+        width:50% !important;
+      }
+    }
+    </style>
 	</head>
     <body style="color: white; background-color: #17252f;">
     <jx-root ng-version="8.2.12">

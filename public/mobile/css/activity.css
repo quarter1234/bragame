@@ -1139,8 +1139,7 @@ div.cs-dialog-title[_ngcontent-snw-c15] {
         transform: rotateX(180deg) rotate(341.5deg);
     }
 }
-
-</style><style>.lottery-board-ctn[_ngcontent-snw-c18] {
+.lottery-board-ctn[_ngcontent-snw-c18] {
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -2653,7 +2652,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     margin-right: 8px
 }
 
-</style><style>div.dialog-wrapper[_ngcontent-way-c22] {
+div.dialog-wrapper[_ngcontent-way-c22] {
     box-sizing: border-box;
     padding: 16px 16px 10px
 }

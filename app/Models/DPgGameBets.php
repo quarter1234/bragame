@@ -13,7 +13,7 @@ class DPgGameBets extends BaseMoel
     public function getFormatCreateTimeAttribute($value)
     {
         return date('Y-m-d H:i:s', $this->attributes['bet_stamp']);
-    }    
+    }
 
     public function getFormatPlatformAttribute($value)
     {
