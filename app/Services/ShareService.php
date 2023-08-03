@@ -153,7 +153,7 @@ class ShareService
             $data['twoRechargeAmount'] = $this->rechargeRepo->getRechargeAmount($twoGradeUids, $startTime, $endTime); // 充值订单
 
             $data['oneFirstRecharge'] = $this->getFirstRecharge($uid, $startTime, $endTime);
-            $data['twoFirstRecharge'] = $this->getSeconRecharge($uid, $startTime, $endTime);
+            $data['twoFirstRecharge'] = $this->getSeconRecharge($oneGradeUids, $startTime, $endTime);
         }
 
         return $data;
@@ -179,17 +179,18 @@ class ShareService
         return $oneFirstRecharge;
     }
 
-    private function getSeconRecharge($uid, $startTime, $endTime){
+    private function getSeconRecharge($uids, $startTime, $endTime){
         $result = 0;
-        $userList = $this->inviteRepo->getPayUsers($uid, $startTime, $endTime);
-        if(empty($userList) || $userList->isEmpty()){
-            return $result;
-        }
-        $twoList = $this->inviteRepo->getPayUsers($userList->pluck('uid')->all(), $startTime, $endTime);
+//        $userList = $this->inviteRepo->getPayUsers($uid, $startTime, $endTime);
+//        if(empty($userList) || $userList->isEmpty()){
+//            return $result;
+//        }
+        $twoList = $this->inviteRepo->getPayUsers($uids, $startTime, $endTime, false);
         return $twoList->count();
     }
 
     public function getTestFirstRecharge($uid, $startTime, $endTime){
-        return $this->getSeconRecharge($uid, $startTime, $endTime);
+        $oneGradeUids = $this->inviteRepo->inviteByUidByTime([$uid], $startTime, $endTime);
+        return $this->getSeconRecharge($oneGradeUids, $startTime, $endTime);
     }
 }
