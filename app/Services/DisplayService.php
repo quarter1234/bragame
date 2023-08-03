@@ -4,6 +4,7 @@ namespace App\Services;
 use App\Cache\UserCache;
 use App\Exceptions\BadRequestException;
 use App\Helper\GameHelper;
+use GuzzleHttp\Client;
 
 class DisplayService
 {
@@ -16,7 +17,6 @@ class DisplayService
 
     public function getUrl($user, $params)
     {
-        
         if($params['act'] == 'pay') {
             return $this->payConfig['payurl'] . '?' . $this->getQuery($user);
 
@@ -38,6 +38,33 @@ class DisplayService
                 throw new BadRequestException(['msg' => 'PG game url err:'. $params['game_code']]);
             }
             return $url;
+        }elseif($params['act'] == 'post_pay') {
+            UserCache::getToken($user);
+
+            $client = new Client([
+                'verify' => false,
+                'timeout' => 30, // Response timeout
+                'connect_timeout' => 30, // Connection timeout
+                'peer' => false
+            ]); //初始化客户端
+
+            $response = $client->post($this->payConfig['post_pay'], [
+                'form_params' => [        //参数组
+                    'amount' => $params['amount'],
+                    'id' => $params['id'],
+                    'uid' => $user->uid,
+                    'token' => $user['token']
+                ],
+            ]);
+            
+            $body = $response->getBody();
+
+            print_r($body);die();
+            // $url = GameHelper::getPgGameUrl($user, $params['game_code'] ?? '');
+            // if(!$url) {
+            //     throw new BadRequestException(['msg' => 'PG game url err:'. $params['game_code']]);
+            // }
+            // return $url;
         }
     }
 

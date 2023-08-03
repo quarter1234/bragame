@@ -80,7 +80,7 @@
                         {{--最外层Foreach--}}
                         @endforeach  
 
-                        <form method="post" action="{{url('mobile/display')}}">
+                        <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
                           @csrf
                         <div class="recharge_input">
                            <span>R$</span>
@@ -106,6 +106,9 @@
                     </div>
               </jx-header-row>
             </div>
+
+            @include('mobile.common.modal') 
+
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -130,6 +133,21 @@
       </jx-main-wrapper>
     </jx-root>
    <script>
+   function check_submit() {
+    let payCoin = $('#recharge_value').val()
+    let id = $("#recharge_id").val()
+    if(payCoin <= 0) {
+      showModal('A escolha de moedas deve ser maior que zero.');
+      return false;
+    }
+
+    if(id <= 0) {
+      showModal('Por favor, selecione o valor de recarga.');
+      return false;
+    }
+
+    return true;
+   }
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
         let payCoin = $(this).attr('payCoin');

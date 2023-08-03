@@ -7,4 +7,5 @@ return [
     'draw' => config('app.url').":84/#/pages/withdraw/index",
     'transaction' => config('app.url').":84/#/pages/transaction/transaction",
     'payment' => config('app.url').":84/#/pages/deposit/managepayment/managepayment",
+    'post_pay' => config('app.url').":83/order/pay",
 ];

@@ -137,23 +137,23 @@
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
                       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+                          slidesPerView: 1,
+                          spaceBetween: 30,
+                          pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                          },
+                        });
                       }
                      if(windowWidth >= 640){
                       var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
+                          slidesPerView: 3,
+                          spaceBetween: 30,
+                          pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                          },
+                        });
                       }
 
                       
@@ -170,7 +170,9 @@
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
                           
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}} O servidor estará em manutenção das 3h às 3h30 da madrugada. Durante esse período de manutenção, não será possível acessar o jogo.</marquee></div>
+                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}} 
+                            O servidor estará em manutenção das 3h às 3h30 da madrugada. Durante esse período de manutenção, não será possível acessar o jogo.
+                          </marquee></div>
                           
                           
                       </div>
