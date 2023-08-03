@@ -1,10 +1,10 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
     @include('mobile.common.common_title')
     <base href="/">
-   
+
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
@@ -26,7 +26,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
 	</head>
-  
+
   <body style="color: white; background-color: #0c192c;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
@@ -39,11 +39,11 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('mobile.common.modal') 
+          @include('mobile.common.modal')
           @include('mobile.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
-                
+
               <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                   <!---->
                   <!---->
@@ -62,7 +62,7 @@
                             <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="https://wwv.condebet.com/bx_4/public/mobile/img/qb.png"></div>
                         </div>
                     </span>
-                  @else 
+                  @else
                     <div class="dl show_login">Login</div>
                     <div class="zc show_login">Registo</div>
                   @endif
@@ -132,7 +132,7 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-                    
+
                   <script>
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
@@ -156,9 +156,9 @@
       });
                       }
 
-                      
 
-                  </script>    
+
+                  </script>
                   </jx-banner-board>
                   <jx-bulletin-board _ngcontent-way-c1="" _nghost-way-c6="" class="ng-tns-c6-1 ng-star-inserted">
                     <!---->
@@ -169,18 +169,18 @@
                         <!---->
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-                          
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}} O servidor estará em manutenção das 3h às 3h30 da madrugada. Durante esse período de manutenção, não será possível acessar o jogo.</marquee></div>
-                          
-                          
+
+                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}} </marquee></div>
+
+
                       </div>
                     </button>
                   </jx-bulletin-board>
 
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
-                  <audio id="myTune"> 
-                    <source src="https://d186gute5mq2g4.cloudfront.net/audio/btn_click.mp3"> 
+                  <audio id="myTune">
+                    <source src="https://d186gute5mq2g4.cloudfront.net/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -201,33 +201,33 @@
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
-                        <!----> 
+                        <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button> 
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        
-                      
+
+
                         {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">电子Eletrônica</span></button>--}}
-                    
+
                         {{--<button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-sport"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">体育Esportes</span></button>--}}
-              
+
                         {{--<button _ngcontent-way-c8="" id="tab5" onclick="myclick(5)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-fishing"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">捕鱼Pesca</span></button>--}}
-             
+
                         {{--<button _ngcontent-way-c8="" id="tab6" onclick="myclick(6)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-boardgame"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">棋牌Xadrez</span></button>--}}
-     
+
                         {{--<button _ngcontent-way-c8="" id="tab7" onclick="myclick(7)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-esport"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">电竞Concorrência elétrica</span></button>--}}
@@ -243,8 +243,8 @@
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab9_content_pps"></div>
                           <div style="width:100%;text-align:center;">
-                          {{-- 喜欢的游戏 --}}    
-                          <div class="game_list"> 
+                          {{-- 喜欢的游戏 --}}
+                          <div class="game_list">
                               @foreach($favorRecommend as $item)
                                   <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
                               @endforeach
@@ -342,8 +342,8 @@
             </div>
             {{--loading组件--}}
             @include('mobile.common.loading')
-            @include('mobile.index.index_login') 
-            @include('mobile.common.slide') 
+            @include('mobile.index.index_login')
+            @include('mobile.common.slide')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -351,7 +351,7 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                @include('mobile.common.footer') 
+                @include('mobile.common.footer')
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -438,10 +438,10 @@
 
         loadPgGames()
         loadPpGames()
-        
+
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
-          
+
           let gameId = $(this).attr('gameid')
           $.ajax({
               url : "{{url('mobile/pgUrl')}}",
@@ -458,7 +458,7 @@
                       showModal(data.message);
                     }
                 }
-                
+
                 setTimeout(function(){
                   hideLoading();
                 }, 2000)
@@ -478,7 +478,7 @@
 
       });
     </script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/scroll.js"></script> 
+    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/scroll.js"></script>
     <script>
     $(function() {
         $('.myScroll').myScroll({
@@ -499,7 +499,7 @@
       });
     </script>
 
-    
+
   </body>
 
 </html>
