@@ -78,10 +78,9 @@ class DUserInviteRepository extends Repository
         return $list->count();
     }
 
-    public function getPayUsers($uids, $startTime, $endTime){
+    public function getPayUsers($uids, $startTime, $endTime, $isFilter = true){
         $query = $this->model()::join('d_user_recharge','d_user_invite.uid','=','d_user_recharge.uid')
                     ->where("d_user_recharge.status", 2)
-                    ->where("d_user_invite.is_filter", 1)
                     ->where("d_user_invite.create_time", ">=", $startTime)
                     ->where("d_user_invite.create_time", "<=", $endTime)
                     ->where("d_user_recharge.create_time", ">=", $startTime)
@@ -94,6 +93,9 @@ class DUserInviteRepository extends Repository
                     else{
                         $query->where("d_user_invite.invit_uid", $uids);
                     }
+        if($isFilter){
+            $query->where("d_user_invite.is_filter", 1);
+        }
 
         return $query->get();
     }
