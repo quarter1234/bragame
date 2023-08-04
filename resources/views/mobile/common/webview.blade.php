@@ -43,7 +43,7 @@
       } else if(act == 'payment') {
           window.location.href = "{{ url('mobile/shop') }}"
       } else if(act == 'post_pay') {
-          window.location.href = "{{ url('mobile/pay/recharge') }}"
+          window.location.href = "{{ url('mobile/shop') }}"
       } else {
         window.history.back();
       }

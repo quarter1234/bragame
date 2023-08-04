@@ -84,7 +84,7 @@
                           @csrf
                         <div class="recharge_input">
                            <span>R$</span>
-                           <input type="text" name="amount" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
+                           <input type="text" name="amount" disabled="disabled" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
                            <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
                            <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
                            <input type="hidden" name="act" value="post_pay" />
@@ -163,10 +163,6 @@
         $(this).addClass('re_on').siblings().removeClass('re_on')
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
-      })
-
-      $("#recharge_submit").click(function() {
-
       })
     })
    </script>
