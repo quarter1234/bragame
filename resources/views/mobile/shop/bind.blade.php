@@ -52,12 +52,12 @@
                       </select>
 
                       <h2>Seu número de conta PIX</h2>
-                      <input name="account" type="text" value="" placeholder="Insira o número do seu cartão" />
+                      <input name="account" type="text" id="account" value="" placeholder="Insira o número do seu cartão" />
                       <h2>Redigite o número da conta PIX</h2>
-                      <input type="text" name="reaccount" value="" placeholder="Confirme seu número de conta do cartão" />
+                      <input type="text" name="reaccount" id="reaccount" value="" placeholder="Confirme seu número de conta do cartão" />
                       
                       <h2>O nome</h2>
-                      <input type="text" name="username" value="" placeholder="O nome" />
+                      <input type="text" name="username" id="username" value="" placeholder="O nome" />
                 </div>
                 
                
@@ -98,6 +98,34 @@
     </jx-root>
    <script>
    function check_bind(obj) {
+    let account = $('#account').val();
+    let reaccount = $('#reaccount').val();
+    let username = $('#username').val();
+
+    if(account === '' || account.trim().length == 0){
+      showModal('Por favor preencha o seu número de conta!');
+      return false;
+    }
+
+    if(reaccount === '' || reaccount.trim().length == 0){
+      showModal('Por favor, insira sua conta novamente!');
+      return false;
+    }
+
+    if(account != reaccount) {
+      showModal('As contas bancárias não correspondem!');
+      return false;
+    }
+
+    if(username === '' || username.trim().length == 0){
+      showModal('Por favor, preencha seu nome!');
+      return false;
+    }
+
+    if(username.trim().length > 132){
+      showModal('O nome é muito longo!');
+      return false;
+    }
         showLoading();
         $.ajax({
             url : "{{url('mobile/shop/doBind')}}",
@@ -117,6 +145,7 @@
               showModal(jqXHR.responseJSON.message);
             }
         })
+
         return false;
     }
 
