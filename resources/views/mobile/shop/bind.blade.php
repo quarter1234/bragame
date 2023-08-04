@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/shop.css">
+    <link rel="stylesheet" href="/mobile/css/shop.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/share.css">
     <!-- Used in supported Android browsers -->
  
@@ -37,31 +37,42 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
+                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row"></div>
+
+                <form method="post" onSubmit="return check_bind(this)" id="form1" action="{{url('mobile/shop/doBind')}}">
+                @csrf
+
+                <div class="bind">
+                      <h2>PIX Os tipos</h2>
+                      <select name="pix_type">
+                          <option value="1" selected="selected">CPF</option>
+                          <option value="2">CNPJ</option>
+                          <option value="3">PHONE</option>
+                          <option value="4">EMAIL</option>
+                      </select>
+
+                      <h2>Seu número de conta PIX</h2>
+                      <input name="account" type="text" value="" placeholder="Insira o número do seu cartão" />
+                      <h2>Redigite o número da conta PIX</h2>
+                      <input type="text" name="reaccount" value="" placeholder="Confirme seu número de conta do cartão" />
+                      
+                      <h2>O nome</h2>
+                      <input type="text" name="username" value="" placeholder="O nome" />
                 </div>
-               <div class="bind">
-                    <h2>Bank account number</h2>
-                    <input type="text" value="111" />
-                    <h2>Reconfirm the bank account number</h2>
-                    <input type="text" value="111" />
-                    <h2>Select bank</h2>
-                    <select>
-                        <option selected="selected">Select bank name</option>
-                        <option>Select bank name</option>
-                        <option>Select bank name</option>
-                    </select>
-                    <h2>Affiliated bank branch</h2>
-                    <input type="text" value="Enter the bank's branch name" />
-               </div>
-               <div class="bind_bottom">
-                    <h2>Pay attention</h2>
-                    <p>1. Xem lai chi tiet truoc khi trinh giay to vinh vien</p>
-                    <p>2. Xem lai chi tiet truoc khi trinh giay to vinh vien</p>
-               </div>
+                
                
-               <button class="bind_buttom">determine</button>
+
+                <div class="bind_bottom">
+                      <h2>Importante e importante</h2>
+                      <p>Verifique os seus dados antes de enviar permanentemente um documento</p>
+                </div>
+               
+               <button type="submit" class="bind_buttom">determine</button>
+               </form>
               </jx-header-row>
             </div>
+            @include('mobile.common.loading')
+            @include('mobile.common.modal')
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -86,7 +97,29 @@
       </jx-main-wrapper>
     </jx-root>
    <script>
-  
+   function check_bind(obj) {
+        showLoading();
+        $.ajax({
+            url : "{{url('mobile/shop/doBind')}}",
+            type : 'POST',
+            data : $("#form1").serialize(),
+            success : function (data) {
+              console.log(data);
+                hideLoading()
+                if(data.code == 200) {
+				          window.location.href= "{{url('mobile/shop/guide')}}"
+                } else {
+                  showModal(data.message);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              hideLoading()
+              showModal(jqXHR.responseJSON.message);
+            }
+        })
+        return false;
+    }
+
    </script>
   </body>
 

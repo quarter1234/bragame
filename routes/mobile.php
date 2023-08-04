@@ -82,6 +82,7 @@ Route::group([
     Route::get('', [ShopController::class, 'index']);
     Route::get('guide', [ShopController::class, 'guide']);
     Route::get('bind', [ShopController::class, 'bind']);
+    Route::post('doBind', [ShopController::class, 'doBind']);
     Route::get('draw', [ShopController::class, 'draw']);
 });
 

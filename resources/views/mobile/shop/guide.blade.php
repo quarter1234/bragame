@@ -47,17 +47,18 @@
                         <p>Quick cash transfer to yourbank account</p>
                     </div>
                     <div class="guide_right">
-                        <button>Verify Now</button>
+                        <button onclick="location.href='{{url("mobile/shop/bind")}}' ">Verify Now</button>
                     </div>
                </div>
+
+               @foreach($banks as $item)
                <div class="guide_yh">
-                        <div class="gui_left">12315465132123</div>
+                        <div class="gui_left">{{$item['format_account']}}</div>
+                       
                         <div class="gui_right"></div>
-                    </div>
-                    <div class="guide_yh">
-                        <div class="gui_left">12315465132123</div>
-                        <div class="gui_right"></div>
-                    </div>
+               </div>
+               @endforeach  
+
                 <div class="gui_bottom">
                     <h2>KYC Guidelines</h2>
                     <p>1. Once the ID card has been verifed, it cannot bechanged.</p>
