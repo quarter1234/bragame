@@ -25,6 +25,7 @@ class TestController extends Controller
 //        $endTime = strtotime($dayStr . ' 23:59:59');
 //        Log::debug("test-index:", [$startTime, $endTime]);
         VipHelper::useVipDiamond($uid, 25);
+        return "succ";
         // $isNeedRand = UserHelper::getTestIsInviteFilter($uid, $startTime, $endTime);
         // return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
          // User::testStr();
