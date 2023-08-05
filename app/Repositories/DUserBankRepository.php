@@ -24,4 +24,9 @@ class DUserBankRepository extends Repository
     {
         return $this->model()::where('uid', $uid)->where('status', 2)->get()->toArray();
     }
+
+    public function getBankInfoByUid(int $uid)
+    {
+        return $this->model()::where('uid', $uid)->where('status', 2)->first();
+    }
 }

@@ -58,7 +58,9 @@ Route::group([
     Route::get('index ', [MemberController::class, 'index']);
     Route::get('customerService', [MemberController::class, 'customerService']);
     Route::get('vip', [MemberController::class, 'vip']);
-    
+
+    Route::get('resetPassword', [MemberController::class, 'resetPassword']);
+
     // 交易记录
     Route::get('transaction', [MemberController::class, 'transaction']);
     Route::get('rechargeList', [MemberController::class, 'rechargeList']);

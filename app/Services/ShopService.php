@@ -60,6 +60,11 @@ class ShopService
         return $this->bankRepo->getBanksByUid($uid);
     }
 
+    public function getBankInfoByUid(int $uid)
+    {
+        return $this->bankRepo->getBankInfoByUid($uid);
+    }
+
     public function storeUserBank($params, $user)
     {
         $data = [

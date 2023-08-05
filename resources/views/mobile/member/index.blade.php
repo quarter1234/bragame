@@ -77,10 +77,17 @@
                   <jx-content-view _ngcontent-xfs-c1="" _nghost-xfs-c7="" class="ng-tns-c1-1">
                    
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
-                      <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ route("mobile.display", ["act" => "kyc"]) }}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>{{--提现--}}Reembolso</button>
+                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
+                      <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
+                        
+                        @if(!$bankInfo)
+                              <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
+                          @else
+                            <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ route("mobile.display", ["act" => "draw"]) }}'" tabindex="0">
+                          @endif
+                      
+                        
+                      <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>{{--提现--}}Reembolso</button>
                      </div>
 
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">

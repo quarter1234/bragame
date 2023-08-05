@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DUserRecharge;
 use App\Repositories\SConfigCustomerRepository;
 use App\Services\MemberService;
+use App\Services\ShopService;
 use Illuminate\Support\Facades\Auth;
 
 /**
@@ -21,11 +22,15 @@ class MemberController extends Controller
         $this->memberService = $memberService;
     }
 
-    public function index()
+    public function index(ShopService $shopService)
     {
         $data = [];
-        $data['user'] = Auth::user();
+        $user = Auth::user();
+        
+        $data['user'] =$user;
         $data['avatar'] = UserHelper::avatar($data['user']['usericon']);
+        $data['bankInfo'] = $shopService->getBankInfoByUid($user->uid);
+
         return view('mobile.member.index', $data);
     }
 
@@ -110,5 +115,14 @@ class MemberController extends Controller
         $data['user'] = $user;
 
         return view('mobile.member.transaction', $data);
+    }
+
+    public function resetPassword()
+    {
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+
+        return view('mobile.member.reset_password', $data);
     }
 }
