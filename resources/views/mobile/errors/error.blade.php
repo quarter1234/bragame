@@ -158,6 +158,20 @@ button.create-agent-link-btn[_ngcontent-uwv-c2] > div[_ngcontent-uwv-c2] {width:
 div.bulletin-detail-title[_ngcontent-uwv-c12] {font-size:18px;font-weight:500;color:#fff;line-height:25px}
 div.bulletin-detail-time[_ngcontent-uwv-c12] {margin-top:5px;font-size:12px;font-weight:400;color:#999;line-height:17px}
 div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;font-weight:400;color:#fff;line-height:21px}
+
+.bg{
+  width:299px;
+  height:198px;
+  background:url(../mobile/img/error.png) no-repeat;
+  margin:60px auto;
+}
+.bgtext{
+  text-align:center;
+  width:200px;
+  font-size:18px;
+  color:#fff;
+  margin:0 auto;
+}
 </style></head>
 <body style="color: white; background-color: #0c192c;">
   <jx-root ng-version="8.2.12">
@@ -193,7 +207,10 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
                         <div><a style="color:white" href="http://www.baxigame.cn/mobile/pay/recharge">{{$msg}}</a></div>
                         <div><span class="second"></span></div>
-				  </div>
+				          </div>
+
+                  <div class="bg"></div>
+                  <div class="bgtext">erro de página por favor retorne</div>
                 </jx-content-view>
               </jx-safe-area>
             </div>
