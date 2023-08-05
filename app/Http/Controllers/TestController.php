@@ -19,14 +19,14 @@ class TestController extends Controller
     }
     public function index(Request $request)
     {
-        $uid = 40728;
-        $dayStr = '2023-08-01';
-        $startTime = strtotime($dayStr);
-        $endTime = strtotime($dayStr . ' 23:59:59');
+        $uid = 40001;
+//        $dayStr = '2023-08-01';
+//        $startTime = strtotime($dayStr);
+//        $endTime = strtotime($dayStr . ' 23:59:59');
 //        Log::debug("test-index:", [$startTime, $endTime]);
-//        VipHelper::useVipDiamond($uid, 35);
+        VipHelper::useVipDiamond($uid, 25);
         // $isNeedRand = UserHelper::getTestIsInviteFilter($uid, $startTime, $endTime);
-        return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
+        // return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
          // User::testStr();
     }
 }
