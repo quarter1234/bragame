@@ -20,8 +20,11 @@ class ShopController extends Controller
     public function index()
     {
         $data = [];
-        $data['user'] = Auth::user();
-        
+        $user = Auth::user();
+
+        $data['user'] = $user;
+        $data['bankInfo'] = $this->shopService->getBankInfoByUid($user->uid);
+
         return view('mobile.shop.index', $data);
     }
 
@@ -73,6 +76,8 @@ class ShopController extends Controller
     {
         $data = [];
         $data['user'] = Auth::user();
+        $data['banks'] = $this->shopService->getBanksByUid($data['user']->uid);
+
         return view('mobile.shop.draw', $data);
     }
 }

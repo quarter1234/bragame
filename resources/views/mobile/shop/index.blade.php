@@ -45,7 +45,7 @@
                       <div class="shop_top">
                           <div class="shop_t_text">Saldo Total</div>
                           <div class="shop_b">{{ $user['coin'] }}</div>
-                          <button onclick="location.href='{{ route("mobile.display", ["act" => 'pay']) }}'" class="shop_button">Adicionar dinheiro</button>
+                          <button onclick="location.href='{{ url("mobile/pay/recharge") }}'" class="shop_button">Adicionar dinheiro</button>
                       </div>
                       <div class="shop_list">
                           <span>Adicionar dinheiro</span>
@@ -59,8 +59,8 @@
                          
 
                           <div class="shop_wk">
-                            @if($user['kyc'] == 0)
-                              <a href="{{ route('mobile.display', ["act" => 'kyc']) }}" >
+                            @if(!$bankInfo)
+                              <a href="{{ url('mobile/shop/guide') }}" >
                             @else
                               <a href="{{ route('mobile.display', ["act" => 'draw']) }}" >
                             @endif
