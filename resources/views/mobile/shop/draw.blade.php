@@ -42,50 +42,46 @@
 
                     <div class="draw_top">
                         <div class="draw_top_l">disponivel para retirada</div>
-                        <div class="draw_top_r">$R0.11</div>
+                        <div class="draw_top_r">$R{{ $user['dcoin'] }}</div>
                     </div>
+
                     <div class="draw_c">
-                        <div class="draw_img"><img src="../mobile/img/yh_ico.png" /></div>
-                        <div class="draw_text">
-                            <h2>Nova conta bancaria</h2>
-                            <p>Adicione uma nova conta bancaria.</p>
-                        </div>
-                        <div class="draw_arrow">
-                        <img src="../mobile/img/right_ico.png" />
-                        </div>
+                      <a href="{{url('mobile/shop/bind')}}">
+                          <div class="draw_img"><img src="../mobile/img/yh_ico.png" /></div>
+                          <div class="draw_text">
+                              <h2>Nova conta bancaria</h2>
+                              <p>Adicione uma nova conta bancaria.</p>
+                          </div>
+                          <div class="draw_arrow">
+                            <img src="../mobile/img/right_ico.png" />
+                          </div>
+                      </a>
                     </div>
-                    <div class="draw_bottom braw_on">
-                    <a>
+
+
+                    @foreach($banks as $key => $item)
+                    <div class="draw_bottom @if($key == 0) braw_on @endif">
+                      <a>
                         <div class="draw_b_left">
                             <img src="../mobile/img/active_brand.26b0bef9602b57eac72e.png" />
                         </div>
                         <div class="draw_text">
                             <p>VERIFIED</p>
-                            <h2>28*******1225</h2>
+                            <h2>{{$item['format_account']}}</h2>
                         </div>
                         <div class="draw_xz"></div>
                         </a>
                     </div>
-                    <div class="draw_bottom">
-                        <a>
-                        <div class="draw_b_left">
-                            <img src="../mobile/img/active_brand.26b0bef9602b57eac72e.png" />
-                        </div>
-                        <div class="draw_text">
-                            <p>VERIFIED</p>
-                            <h2>28*******1225</h2>
-                        </div>
-                        <div class="draw_xz"></div>
-                        </a>
-                    </div>
+                    @endforeach  
+
                 <div class="braw_d">
                     <p>montante</p>
                     <div class="braw_d_sr">
                         <span>R$</span>
-                        <input placeholder="Por favor, insira o valor" />
+                        <input value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
                     </div>
-                    <p>Valor minimo de retirada :R$ </p>
-                    <p>&maior.:R$ Permitido cada vez</p>
+                    <p>Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
+                    <p>&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
                 <button class="braw_b">Retirar agora</button>
                 <script>

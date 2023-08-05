@@ -39,8 +39,9 @@ class DisplayService
             }
             return $url;
         }elseif($params['act'] == 'post_pay') {
-            UserCache::getToken($user);
 
+            lock('pay:recharge:user_'.$user->uid, 5);
+            UserCache::getToken($user);
             $client = new Client([
                 'verify' => false,
                 'timeout' => 30, // Response timeout

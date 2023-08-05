@@ -20,6 +20,20 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <style>
+    @media screen and (min-width: 1200px){
+      div.profile-detail[_ngcontent-xfs-c1]>jx-avatar[_ngcontent-xfs-c1]{
+       margin-left:38%;
+      }
+      [_nghost-xfs-c7]{
+        width:38%;
+        margin:0 auto;
+      }
+      .shop_jt{
+        width:38%;
+      }
+    }
+    </style>
     </head>
   
    

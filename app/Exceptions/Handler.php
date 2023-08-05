@@ -88,6 +88,9 @@ class Handler extends ExceptionHandler
             }
             
             return Result::error($msg, 4220, 422);
+        } 
+        elseif($exception instanceof OutputException) {
+            return response()->view('mobile.errors.error', ['msg' => $exception->getMessage()]);
         }
 
         return parent::render($request, $exception);
@@ -95,13 +98,9 @@ class Handler extends ExceptionHandler
 
     public function sendEmail(Throwable $exception)
     {
-
-        
         $response = [];
-
         $error = $this->convertExceptionToResponse($exception);
         $exception = FlattenException::create($exception);
-
 
         $response['status'] = $error->getStatusCode();
         $response['file'] =  $exception->getFile();
@@ -112,22 +111,5 @@ class Handler extends ExceptionHandler
         // $response['trace'] = $exception->getTrace();
 
         TelegramNotice::sendMessage($response);
-      
-        // print_r(json_encode($response));
-        // // print_r($error->getMessage());
-        // die();
-        // try {
-           
-        //     $e = FlattenException::createFromThrowable($exception);
-        //     $handler = new HtmlErrorRenderer(true);
-            
-        //     $css = $handler->getStylesheet();
-        //     $content = $handler->getBody($e);
-           
-        //     Mail::to('1043791113@qq.com')->send(new ExceptionOccurred($content,$css));
-        // } catch (Throwable $exception) {
-        //     print_r($exception->getMessage);die();
-        //     // Log::error($exception);
-        // }
     }
 }

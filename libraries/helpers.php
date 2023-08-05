@@ -44,7 +44,7 @@ function lock($key, $ttl)
 {
     $lock = Cache::add($key, 1, $ttl);
     if (!$lock) {
-        throw new OutputException('请求太频繁');
+        throw new OutputException('Pedido muito frequente');
     }
 }
 

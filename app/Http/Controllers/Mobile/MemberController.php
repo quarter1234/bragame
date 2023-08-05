@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Lib\Result;
+use App\Exceptions\BadRequestException;
 use App\Helper\UserHelper;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Mobile\MemberRequest;
 use App\Models\DUserRecharge;
 use App\Repositories\SConfigCustomerRepository;
 use App\Services\MemberService;
@@ -124,5 +127,26 @@ class MemberController extends Controller
         $data['user'] = $user;
 
         return view('mobile.member.reset_password', $data);
+    }
+
+    public function doChangePassword(MemberRequest $memberRequest)
+    {
+        $params = $memberRequest->goCheck('doChangePassword');
+        $user = Auth::user();
+
+        $credentials = [];
+        $credentials['phone'] = $user['phone'];
+        $credentials['password'] = $params['oldPassword'];
+
+        if (!auth()->attempt($credentials)) {
+            throw new BadRequestException(['msg' => 'A senha antiga foi inserida incorretamente.']);
+        } 
+
+        $userInfo = UserHelper::getUserByUid($user->uid);
+        $userInfo->password = bcrypt(trim($params['newPassword']));
+        $userInfo->save();
+
+        Auth::login($userInfo, true);
+        return Result::success();
     }
 }

@@ -22,6 +22,19 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <style>
+    @media screen and (min-width: 1200px){
+      .shop_button{
+       width:38%;
+      }
+      .shop_list{
+        width:38%;
+      }
+      .shop_jt{
+        width:38%;
+      }
+    }
+    </style>
     </head>
 
   <body style="color: white; background-color: #0c192c;">

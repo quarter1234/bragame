@@ -191,7 +191,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                   <!---->
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-title">Error Message</div>
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
-                        <div><a style="color:white" href="{{$url}}">{{$msg}}</a></div>
+                        <div><a style="color:white" href="http://www.baxigame.cn/mobile/pay/recharge">{{$msg}}</a></div>
                         <div><span class="second"></span></div>
 				  </div>
                 </jx-content-view>
@@ -206,13 +206,13 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 
   <script>
     var div = document.querySelector('span.second');
-    var time = "{{$wait}}";
+    var time = "5000";
     change();
     setInterval(change, 1000);
 
     function change() {
         if (time == 0) {
-            location.href = "{{$url}}";
+            location.href = "http://www.baxigame.cn/mobile/pay/recharge";
         } else {
             div.innerHTML = '' + time + '';
             time--;

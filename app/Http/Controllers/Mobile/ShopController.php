@@ -72,12 +72,17 @@ class ShopController extends Controller
         return Result::success();
     }
 
+    /**
+     * 提现设置
+     * @return mixed
+     */
     public function draw()
     {
         $data = [];
-        $data['user'] = Auth::user();
-        $data['banks'] = $this->shopService->getBanksByUid($data['user']->uid);
-
+        $user = Auth::user();
+        $data['user'] = $this->shopService->getDrawData($user);
+        $data['banks'] = $this->shopService->getBanksByUid($user->uid);
+       
         return view('mobile.shop.draw', $data);
     }
 }

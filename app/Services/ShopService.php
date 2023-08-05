@@ -4,15 +4,19 @@ namespace App\Services;
 use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
+use App\Helper\UserHelper;
 use App\Repositories\DUserBankRepository;
+use App\Repositories\SPayCfgDrawcomRepository;
 
 class ShopService
 {
     private $bankRepo;
+    private $drawComRepo;
 
-    public function __construct(DUserBankRepository $bankRepo)
+    public function __construct(DUserBankRepository $bankRepo, SPayCfgDrawcomRepository $drawComRepo)
     {
         $this->bankRepo  = $bankRepo;
+        $this->drawComRepo = $drawComRepo;
     }
 
     public function checkDoBind($params)
@@ -48,6 +52,52 @@ class ShopService
                 }
                 break;
         }  
+    }
+
+    /**
+     * 提现页面数据
+     * @param mixed $user
+     * @return array
+     */
+    public function getDrawData($user) :array
+    {
+        $data = [];
+        $userCoins = UserHelper::getUserCoin($user);
+        $data['uid']   = $userCoins['uid'];
+        $data['dcoin'] = $userCoins['dcoin'];
+        $data['coin'] = $userCoins['coin'];
+
+        $svip = $userCoins['svip'];
+        if($svip <= 0) {
+            $svip = 0;
+        }
+
+        $chans = $this->drawComRepo->getDataBySvip($svip);
+
+        $mincoin = 0;
+        $maxcoin = 0;
+        foreach($chans as $row) {
+            if($mincoin == 0) {
+                $mincoin = $row['mincoin'];
+            } else {
+                if($row['mincoin'] <= $mincoin) {
+                    $mincoin = intval($row['mincoin']);
+                }
+            }
+
+            if($maxcoin == 0) {
+                $maxcoin = $row['maxcoin'];
+            } else {
+                if($row['maxcoin'] > $maxcoin) {
+                    $maxcoin = intval($row['maxcoin']);
+                }
+            }
+        }
+
+        $data['mincoin'] = $mincoin; //最低
+        $data['maxcoin'] = $maxcoin; //最高
+
+        return $data;
     }
 
     public function getBankInfoByAccount($account)

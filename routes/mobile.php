@@ -60,6 +60,7 @@ Route::group([
     Route::get('vip', [MemberController::class, 'vip']);
 
     Route::get('resetPassword', [MemberController::class, 'resetPassword']);
+    Route::post('doChangePassword', [MemberController::class, 'doChangePassword']);
 
     // 交易记录
     Route::get('transaction', [MemberController::class, 'transaction']);
