@@ -22,7 +22,7 @@ class VipHelper
         $currentVipLeve = self::getLevelByExp($user->svipexp);
 
         if($currentVipLeve > $oldVipLeve) {
-            $user->svip = ($user->svip + 1);
+            $user->svip = $currentVipLeve;
             $user->save();
         }
     }
@@ -37,9 +37,8 @@ class VipHelper
 
         $vipList = SConfigVipCache::getVipList();
         foreach ($vipList as $item) {
-            if($diamondUsed <= $item['diamond']) {
-                $target = ($item['id'] -1);
-                break;
+            if($diamondUsed >= $item['diamond']){
+                $target = $item['level'];
             }
         }
 
