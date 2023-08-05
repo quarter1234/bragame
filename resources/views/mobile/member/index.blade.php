@@ -78,7 +78,7 @@
                    
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
-                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
+                      <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
                         
                         @if(!$bankInfo)
                               <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
