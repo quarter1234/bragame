@@ -131,6 +131,11 @@
           return false;
         }
 
+        if(parseInt(bank_id) <= 0) {
+          showModal('Por favor, crie uma nova conta bancária.');
+          return false;
+        }
+
         $('#drawSubmit').attr('disabled', 'disabled')
 
         showLoading();
@@ -152,7 +157,7 @@
             error: function(jqXHR, textStatus, errorThrown) {
               hideLoading()
               $('#drawSubmit').attr('disabled', false)
-              
+
               showModal(jqXHR.responseJSON.message);
             }
         })
