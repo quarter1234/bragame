@@ -210,6 +210,7 @@
     width:20px;
     height:20px;
     margin-left:20px;
+    float: left;
 }
 .draw_img img{
     width:20px;
@@ -219,6 +220,7 @@
     margin-left:20px;
     width:250px;
     font-size:12px;
+    float: left;
 }
 .draw_text h2{
     margin:0;
@@ -239,6 +241,7 @@
 .draw_arrow img{
     width:20px;
     height:20px;
+    
 }
 .draw_bottom a{
     width:100%;
@@ -338,7 +341,11 @@
     left:20px;
 }
 
-
+.draw_c a{
+    width:100%;
+    margin:0;
+    padding:0;
+}
 @media screen and (min-width: 1200px){
     .guide_top{
         text-indent: 26%;
@@ -349,4 +356,31 @@
     .gui_bottom{
         width:49%;
     }
+    .draw_top{
+        width:50%;
+        margin:0 auto;
+    }
+    .draw_c{
+        width:50%;
+        margin:0 auto;
+    }
+    .braw_d{
+        width:50%;
+        margin:0 auto;
+    }
+    .braw_b{
+        width:50%;
+        margin-left:25%;
+    }
+    .bind{
+        width:50%;
+    }
+    .bind_bottom{
+        width:50%;
+    }
+    .bind_buttom{
+        width:50%;
+        margin-left:25%;
+    }
   }
+
