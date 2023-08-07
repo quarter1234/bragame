@@ -15,4 +15,12 @@ class ShopRequest extends BaseRequest
             'username' => 'required|string|min:2|max:132',
         ];
     }
+
+    public function doDraw()
+    {
+        return [
+            'amount' => 'required |integer|min:1',
+            'bankid' => 'required|integer|min:1',
+        ];
+    }
 }

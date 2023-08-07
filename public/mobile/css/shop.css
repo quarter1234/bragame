@@ -337,3 +337,16 @@
     top:222px;
     left:20px;
 }
+
+
+@media screen and (min-width: 1200px){
+    .guide_top{
+        text-indent: 26%;
+    }
+    .guide_centen{
+      width:49%;
+    }
+    .gui_bottom{
+        width:49%;
+    }
+  }

@@ -46,4 +46,43 @@ class DUserDrawRepository extends Repository
 
         $this->create($data);
     }
+
+    public function getUserAllCoin(int $uid)
+    {
+        return $this->model()::where('uid', $uid)->sum('coin');
+    }
+
+    public function getWaitDealCount(int $uid)
+    {
+        return $this->model()::where('uid', $uid)
+        ->where('status',  CommonEnum::UNABLE)
+        ->count('id');
+    }
+
+    public function getTodayTimes(int $uid, $isToday = true)
+    {
+        $model = $this->model()::where('uid', $uid);
+
+        if($isToday) {
+            $model = $model->where('create_time', '>=', strtotime(date('Y-m-d')));
+        }
+
+        return $model->count('id');
+    }
+
+    public function getTodayAllCoin(int $uid, $isToday = true)
+    {
+        $model = $this->model()::where('uid', $uid);
+
+        if($isToday) {
+            $model = $model->where('create_time', '>=', strtotime(date('Y-m-d')));
+        }
+
+        return $model->sum('coin');
+    }
+
+    public function getLastInfo(int $uid)
+    {
+        return $this->model()::where('uid', $uid)->orderBy('id', 'desc')->first();
+    }
 }

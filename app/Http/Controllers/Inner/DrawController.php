@@ -23,7 +23,6 @@ class DrawController extends Controller
         $this->drawService->drawApply($params);
 
         return Result::success();
-        // exit('succ');
     }
 
 }

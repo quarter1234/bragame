@@ -6,17 +6,23 @@ use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
 use App\Helper\UserHelper;
 use App\Repositories\DUserBankRepository;
+use App\Repositories\DUserDrawRepository;
 use App\Repositories\SPayCfgDrawcomRepository;
+use App\Repositories\SPayCfgDrawlimitRepository;
 
 class ShopService
 {
     private $bankRepo;
     private $drawComRepo;
+    private $drawRepo;
 
-    public function __construct(DUserBankRepository $bankRepo, SPayCfgDrawcomRepository $drawComRepo)
+    public function __construct(DUserBankRepository $bankRepo, 
+        SPayCfgDrawcomRepository $drawComRepo,
+        DUserDrawRepository $drawRepo)
     {
         $this->bankRepo  = $bankRepo;
         $this->drawComRepo = $drawComRepo;
+        $this->drawRepo = $drawRepo;
     }
 
     public function checkDoBind($params)
@@ -113,6 +119,94 @@ class ShopService
     public function getBankInfoByUid(int $uid)
     {
         return $this->bankRepo->getBankInfoByUid($uid);
+    }
+
+    public function getUserBankInfo(int $bankId, int $uid)
+    {
+        return $this->bankRepo->getUserBankInfo($bankId, $uid);
+    }
+
+    public function getUserAllCoin(int $uid)
+    {
+        return $this->drawRepo->getUserAllCoin($uid);
+    }
+
+    public function getWaitDealCount(int $uid) 
+    {
+        return $this->drawRepo->getWaitDealCount($uid);
+    }
+
+    public function getChansBySvip($svip)
+    {
+        return $this->drawComRepo->getDataBySvip($svip);
+    }
+
+    //获取提现限制
+    public function getLimitInfo(int $uid) {
+        $mincoin = 0;
+        $maxcoin = 10000;
+        $times = -1;
+        $daycoin = -1;
+        $totaltimes =  -1;
+        $totalcoin = -1;
+        $interval = 0;
+        
+        $userinfo = UserHelper::getUserByUid($uid);
+        $limitRepo = app()->make(SPayCfgDrawlimitRepository::class);
+        $datalist = $limitRepo->getDataBySvip(false, $userinfo['svip']);
+        
+        if(!empty($datalist)) {
+            foreach($datalist as $row) {
+            //    if($mincoin == 0) {
+            //        $mincoin = $row['mincoin'];
+            //    }
+            //    if($row['mincoin'] < $mincoin) {
+            //        $mincoin = intval($row['mincoin']);
+            //    }
+            //    if($row['maxcoin'] > $maxcoin) {
+            //        $maxcoin = intval($row['maxcoin']);
+            //    }
+                if($row['times'] > $times) {
+                    $times = intval($row['times']);
+                }
+                if($row['interval'] > $interval) {
+                    $interval = intval($row['interval']);
+                }
+                if($row['daycoin'] > $daycoin) {
+                    $daycoin = $row['daycoin'];
+                }
+                if($row['totaltimes'] > $totaltimes) {
+                    $totaltimes = $row['totaltimes'];
+                }
+                if($row['totalcoin'] > $totalcoin) {
+                    $totalcoin = $row['totalcoin'];
+                }
+            }
+        }
+        return [
+            'mincoin' => $mincoin,
+            'maxcoin' => $maxcoin,
+            'times' => $times,
+            'interval' => $interval,
+            'daycoin' => $daycoin, //当天最大金额
+            'totaltimes' => $totaltimes, //总提现次数
+            'totalcoin' => $totalcoin, //总提现金额
+        ];
+    }
+
+    public function getTodayDrawTimes(int $uid, $isToday = true)
+    {
+        return $this->drawRepo->getTodayTimes($uid, $isToday);
+    }
+
+    public function getTodayDrawCoin(int $uid, $isToday = true)
+    {
+        return $this->drawRepo->getTodayAllCoin($uid, $isToday);
+    }
+
+    public function getLastDrawInfo(int $uid)
+    {
+        return $this->drawRepo->getLastInfo($uid);
     }
 
     public function storeUserBank($params, $user)

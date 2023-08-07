@@ -37,9 +37,10 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                </div>
-
+                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row"></div>
+                
+                <form method="post" onSubmit="return check_draw(this)" id="form1" action="{{url('mobile/shop/doDraw')}}">
+                    @csrf
                     <div class="draw_top">
                         <div class="draw_top_l">disponivel para retirada</div>
                         <div class="draw_top_r">$R{{ $user['dcoin'] }}</div>
@@ -60,7 +61,7 @@
 
 
                     @foreach($banks as $key => $item)
-                    <div class="draw_bottom @if($key == 0) braw_on @endif">
+                    <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
                             <img src="../mobile/img/active_brand.26b0bef9602b57eac72e.png" />
@@ -78,21 +79,19 @@
                     <p>montante</p>
                     <div class="braw_d_sr">
                         <span>R$</span>
-                        <input value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
+                        <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
+                        <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
                     </div>
                     <p>Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
                     <p>&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
-                <button class="braw_b">Retirar agora</button>
-                <script>
-                    $(function(){
-                        $('.draw_bottom').click(function(){
-                          $(this).addClass('braw_on').siblings().removeClass('braw_on')
-                        })
-                    })
-                </script>    
+
+                <button  class="braw_b">Retirar agora</button>
+              </form>
               </jx-header-row>
             </div>
+            @include('mobile.common.loading')
+            @include('mobile.common.modal')
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -112,13 +111,57 @@
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
+
           </jx-header-view>
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
-   <script>
-  
-   </script>
+    <script>
+      function check_draw(obj) {
+        
+        let amount = $('#postAmount').val();
+        let bank_id = $('#bankId').val();
+        
+        if(amount === '' || amount.trim().length == 0){
+          showModal('Por favor, insira o valor do saque.');
+          return false;
+        }
+
+        if(amount.trim().length > 132){
+          showModal('Por favor, insira um valor de saque correto.');
+          return false;
+        }
+        showLoading();
+        $.ajax({
+            url : "{{url('mobile/shop/doDraw')}}",
+            type : 'POST',
+            data : $("#form1").serialize(),
+            success : function (data) {
+                hideLoading()
+                if(data.code == 200) {
+                  showModal('Triunfo');
+                  window.location.href= "{{url('mobile/shop')}}"
+                } else {
+                  showModal(data.message);
+                }
+            },
+            error: function(jqXHR, textStatus, errorThrown) {
+              hideLoading()
+              showModal(jqXHR.responseJSON.message);
+            }
+        })
+
+        return false;
+      }
+
+      $(function(){
+          $('.draw_bottom').click(function(){
+            let bankId = $(this).attr('id')
+            $('#bankId').val(bankId);
+            $(this).addClass('braw_on').siblings().removeClass('braw_on')
+          })
+      })
+  </script>
   </body>
 
 </html>
