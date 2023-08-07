@@ -96,7 +96,7 @@
                       </div>
                       </a>
                       
-                      <a style="color:white" href="{{ route('mobile.display', ["act" => 'payment']) }}" >
+                      <a style="color:white" href="{{ url('mobile/shop/guide') }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Carteira<span>Gerenciar contas bancárias</span></h2>
