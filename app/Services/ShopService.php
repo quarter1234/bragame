@@ -1,6 +1,7 @@
 <?php
 namespace App\Services;
 
+use App\Cache\SconfigCache;
 use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
@@ -224,5 +225,57 @@ class ShopService
         ];
 
         return $this->bankRepo->create($data);
+    }
+
+    public function checkIsPlayer($user, $dcoin)
+    {
+        if($user['is_test'] == CommonEnum::ENABLE) { // 测试用户不能提现
+            return Result::error('Usuários de teste não podem sacar.');
+        }
+
+        if(intval($user['ispayer']) == 0) { //未充值用户不能超过系统最高金额
+            $cfg = SconfigCache::getByKey('newuser_no_pay_drawlimit');
+            $maxcoin = intval($cfg['v']);
+            $haddrawcoin = $this->getUserAllCoin($user->uid);
+            
+            if($maxcoin > 0 && ($dcoin + $haddrawcoin) > $maxcoin) {
+                return Result::error("Withdrawal amount must be less than the maximum withdrawable amount{$maxcoin}.");
+            }
+
+            $doingcnt =  $this->getWaitDealCount($user->uid);
+            if($doingcnt >= 1) {
+                return Result::error('You have a withdrawal order under review, please wait patiently.');
+            }
+        }
+    }
+
+    public function checkLimit($user, $dcoin)
+    {
+        $limit = $this->getLimitInfo($user['uid']);
+
+        $todaytimes = $this->getTodayDrawTimes($user['uid']); //today max times
+        if($limit['times'] >0 && $todaytimes + 1 > $limit['times']) {
+            return Result::error("Today's withdrawal times has reached the limit({$limit['times']})");
+        }
+
+        $todaycoin = $this->getTodayDrawCoin($user['uid']);
+        if($limit['daycoin'] >0 && $todaycoin + $dcoin >= $limit['daycoin']) {
+            return Result::error("Today's withdrawal amount has reached the limit({$limit['daycoin']})");
+        }
+
+        $alltimes = $this->getTodayDrawTimes($user['uid'], false); //total max times
+        if($limit['totaltimes'] >0 && $alltimes + 1 > $limit['totaltimes']) {
+            return Result::error("Withdrawal times has reached the limit times({$limit['totaltimes']})");
+        }
+
+        $allcoin = $this->getTodayDrawCoin($user['uid'], false);
+        if($limit['totalcoin'] >0 && $allcoin + $dcoin >= $limit['totalcoin']) {
+            return Result::error("Withdrawal Amount has reached the limit coin({$limit['totalcoin']})");
+        }
+
+        $lastDrawInfo = $this->getLastDrawInfo($user['uid']);
+        if($lastDrawInfo && $limit['interval'] > 0 && $lastDrawInfo['create_time'] > (time() - $limit['interval']*60)) { // 间隔时间
+            return Result::error('Withdrawals too frequently.');
+        }
     }
 }

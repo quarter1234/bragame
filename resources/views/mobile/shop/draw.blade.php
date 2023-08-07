@@ -86,7 +86,7 @@
                     <p>&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
 
-                <button  class="braw_b">Retirar agora</button>
+                <button id="drawSubmit"  class="braw_b">Retirar agora</button>
               </form>
               </jx-header-row>
             </div>
@@ -118,7 +118,6 @@
     </jx-root>
     <script>
       function check_draw(obj) {
-        
         let amount = $('#postAmount').val();
         let bank_id = $('#bankId').val();
         
@@ -131,6 +130,9 @@
           showModal('Por favor, insira um valor de saque correto.');
           return false;
         }
+
+        $('#drawSubmit').attr('disabled', 'disabled')
+
         showLoading();
         $.ajax({
             url : "{{url('mobile/shop/doDraw')}}",
@@ -138,6 +140,8 @@
             data : $("#form1").serialize(),
             success : function (data) {
                 hideLoading()
+                $('#drawSubmit').attr('disabled', false)
+
                 if(data.code == 200) {
                   showModal('Triunfo');
                   window.location.href= "{{url('mobile/shop')}}"
@@ -147,6 +151,8 @@
             },
             error: function(jqXHR, textStatus, errorThrown) {
               hideLoading()
+              $('#drawSubmit').attr('disabled', false)
+              
               showModal(jqXHR.responseJSON.message);
             }
         })
