@@ -75,7 +75,7 @@
                             @if(!$bankInfo)
                               <a href="{{ url('mobile/shop/guide') }}" >
                             @else
-                              <a href="{{ route('mobile.display', ["act" => 'draw']) }}" >
+                              <a href="{{ url('mobile/shop/draw') }}" >
                             @endif
                               Verdifcar agora
                             </a>

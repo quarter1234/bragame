@@ -71,19 +71,47 @@
               </jx-header-row>
             </div>
             <style>
+            .index_banner{
+              width:100%;
+              height:160px;
+              text-align:center;
+           }
+           .index_banner img{
+              width:96%;
+              height:160px;
+           }
             @media screen and (min-width: 1200px){
               .swipslider{padding-top:17% !important;}
               #qh button{
                 width:12% !important;
               }
               .index_banner{
-              width:100%;
-              height:250px !important;
+              width:50%;
+              height:160px !important;
               text-align:center;
+              margin:0 auto;
            }
               .index_banner img{
               width:96%;
-              height:250px !important;
+              height:160px !important;
+           }
+           .div.bulletin-board-container[_ngcontent-way-c6]{
+            width:50% !important;
+            margin:0 auto;
+           }
+           .bulletin-board-container{
+            width:50% !important;
+            margin:0 auto;
+           }
+           .home-game-board-ctn[_ngcontent-way-c8]{
+            width:50% !important;
+            margin:0 auto;
+           }
+           .winning-box{
+            width:50%;
+           }
+           .index_bottom{
+            width:50%;
            }
             }
            .rm a:hover img{
@@ -98,15 +126,7 @@
            #tab1_content_pps a:hover{
             filter:brightness(70%);
            }
-           .index_banner{
-              width:100%;
-              height:160px;
-              text-align:center;
-           }
-           .index_banner img{
-              width:96%;
-              height:160px;
-           }
+          
             </style>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style=" padding-top: 64px;">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">

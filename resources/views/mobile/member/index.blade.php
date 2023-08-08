@@ -97,7 +97,7 @@
                         @if(!$bankInfo)
                               <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
                           @else
-                            <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ route("mobile.display", ["act" => "draw"]) }}'" tabindex="0">
+                            <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/draw") }}'" tabindex="0">
                           @endif
                       <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>{{--提现--}}Reembolso</button>
 
