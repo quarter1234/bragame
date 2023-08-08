@@ -35,6 +35,10 @@
                   display:inline-block !important;
                   margin-right:10px !important;
                 }
+                .header-view__content-wrapper__content-container{
+                  width:60%;
+                  margin:0 auto;
+                }
 
             }
     </style>        

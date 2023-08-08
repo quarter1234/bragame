@@ -86,7 +86,7 @@
                 width:12% !important;
               }
               .index_banner{
-              width:60%;
+              width:65%;
               height:160px !important;
               text-align:center;
               margin:0 auto;
@@ -96,22 +96,30 @@
               height:160px !important;
            }
            .div.bulletin-board-container[_ngcontent-way-c6]{
-            width:60% !important;
+            width:65% !important;
             margin:0 auto;
            }
            .bulletin-board-container{
-            width:60% !important;
+            width:65% !important;
             margin:0 auto;
            }
            .home-game-board-ctn[_ngcontent-way-c8]{
-            width:60% !important;
+            width:65% !important;
             margin:0 auto;
            }
            .winning-box{
-            width:60%;
+            width:65%;
            }
            .index_bottom{
-            width:60%;
+            width:65%;
+           }
+           .game_list a{
+            width:10%;
+            margin-right:10px;
+            margin-left:0;
+           }
+           .game_list{
+            width:100%;
            }
             }
            .rm a:hover img{
