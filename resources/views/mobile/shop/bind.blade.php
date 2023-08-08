@@ -67,7 +67,7 @@
                       <p>Verifique os seus dados antes de enviar permanentemente um documento</p>
                 </div>
                
-               <button type="submit" class="bind_buttom">determine</button>
+               <button type="submit" id="bindSubmit" class="bind_buttom">determine</button>
                </form>
               </jx-header-row>
             </div>
@@ -126,27 +126,30 @@
       showModal('O nome é muito longo!');
       return false;
     }
-        showLoading();
-        $.ajax({
-            url : "{{url('mobile/shop/doBind')}}",
-            type : 'POST',
-            data : $("#form1").serialize(),
-            success : function (data) {
-              console.log(data);
-                hideLoading()
-                if(data.code == 200) {
-				          window.location.href= "{{url('mobile/shop/guide')}}"
-                } else {
-                  showModal(data.message);
-                }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-              hideLoading()
-              showModal(jqXHR.responseJSON.message);
-            }
-        })
 
-        return false;
+    showLoading();
+    $('#bindSubmit').attr('disabled', 'disabled')
+    $.ajax({
+        url : "{{url('mobile/shop/doBind')}}",
+        type : 'POST',
+        data : $("#form1").serialize(),
+        success : function (data) {
+          $('#bindSubmit').attr('disabled', false)
+            hideLoading()
+            if(data.code == 200) {
+              window.location.href= "{{url('mobile/shop/guide')}}"
+            } else {
+              showModal(data.message);
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          $('#bindSubmit').attr('disabled', false)
+          hideLoading()
+          showModal(jqXHR.responseJSON.message);
+        }
+      })
+
+      return false;
     }
 
    </script>

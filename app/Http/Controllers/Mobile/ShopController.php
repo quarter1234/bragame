@@ -63,6 +63,12 @@ class ShopController extends Controller
         $params = $shopRequest->goCheck('doBind');
         $user = Auth::user();
 
+        // redis 锁
+        $lock = Cache::add('shop:doBind:user_id_'. $user->uid. ':' . $params['account'], 1, 5);
+        if (!$lock) {
+            return Result::error('Pedido muito frequente.');
+        }
+
         $this->shopService->checkDoBind($params);
         $bankInfo = $this->shopService->getBankInfoByAccount($params['account']);
 
