@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Mobile;
 use App\Common\Lib\Result;
 use App\Exceptions\BadRequestException;
 use App\Helper\UserHelper;
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\MemberRequest;
 use App\Models\DUserRecharge;
@@ -34,7 +35,7 @@ class MemberController extends Controller
         $data['avatar'] = UserHelper::avatar($data['user']['usericon']);
         $data['bankInfo'] = $shopService->getBankInfoByUid($user->uid);
 
-        return view('mobile.member.index', $data);
+        return view(ViewHelper::getTemplate('member.index'), $data);
     }
 
     public function customerService(SConfigCustomerRepository $repo)
@@ -43,7 +44,7 @@ class MemberController extends Controller
         $data['user'] = Auth::user();
         $data['list'] = $repo->getCustomers();
         
-        return view('mobile.member.customer_service', $data);
+        return view(ViewHelper::getTemplate('member.customer_service'), $data);
     }
 
     public function vip()
@@ -52,7 +53,7 @@ class MemberController extends Controller
 
         $data = $this->memberService->getVipInfo($user);
 
-        return view('mobile.member.vip', $data);
+        return view(ViewHelper::getTemplate('member.vip'), $data);
     }
 
     // 充值记录
@@ -62,7 +63,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.recharges', $data);
+        return view(ViewHelper::getTemplate('member.recharges'), $data);
     }
 
     // 充值列表
@@ -71,7 +72,7 @@ class MemberController extends Controller
         $user = Auth::user();
         $list = $this->memberService->getRechargeList($user)->toArray();
 
-        return view('mobile.member.rechare_list', $list);
+        return view(ViewHelper::getTemplate('member.rechare_list'), $list);
     }
 
     // 提现记录
@@ -81,7 +82,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.draws', $data);
+        return view(ViewHelper::getTemplate('member.draws'), $data);
     }
 
     // 提现列表
@@ -90,7 +91,7 @@ class MemberController extends Controller
         $user = Auth::user();
         $list = $this->memberService->getDrawList($user)->toArray();
         
-        return view('mobile.member.draw_list', $list);
+        return view(ViewHelper::getTemplate('member.draw_list'), $list);
     }
 
     // 投注记录
@@ -100,7 +101,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.bets', $data);
+        return view(ViewHelper::getTemplate('member.bets'), $data);
     }
 
     public function betsList()
@@ -108,7 +109,7 @@ class MemberController extends Controller
         $user = Auth::user();
         $list = $this->memberService->getPgBetsList($user)->toArray();
     
-        return view('mobile.member.bet_list', $list);
+        return view(ViewHelper::getTemplate('member.bet_list'), $list);
     }
 
     public function transaction()
@@ -117,7 +118,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.transaction', $data);
+        return view(ViewHelper::getTemplate('member.transaction'), $data);
     }
 
     public function resetPassword()
@@ -126,7 +127,7 @@ class MemberController extends Controller
         $data = [];
         $data['user'] = $user;
 
-        return view('mobile.member.reset_password', $data);
+        return view(ViewHelper::getTemplate('member.reset_password'), $data);
     }
 
     public function doChangePassword(MemberRequest $memberRequest)

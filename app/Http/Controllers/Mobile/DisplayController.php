@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\DisplayRequest;
 use App\Services\DisplayService;
@@ -25,6 +26,6 @@ class DisplayController extends Controller
         $data['url'] = $this->displayService->getUrl($user, $params);
         $data['act'] = $params['act'];
         
-        return view('mobile.common.webview', $data);
+        return view(ViewHelper::getTemplate('common.webview'), $data);
     }
 }

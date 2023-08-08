@@ -7,6 +7,7 @@ use App\Common\Lib\Result;
 use App\Events\RegisterEvent;
 use App\Exceptions\BadRequestException;
 use App\Helper\UserHelper;
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\UserService;
@@ -33,7 +34,7 @@ class PublicController extends Controller
             return redirect('/mobile/index');
         }
 
-        return view('mobile.public.register');
+        return view(ViewHelper::getTemplate('public.register'));
     }
 
     /**
@@ -76,7 +77,7 @@ class PublicController extends Controller
             return redirect('/mobile/index');
         }
 
-        return view('mobile.public.login');
+        return view(ViewHelper::getTemplate('public.login'));
     }
 
     /**

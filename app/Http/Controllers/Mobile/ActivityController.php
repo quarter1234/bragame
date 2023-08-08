@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Services\ActivityService;
 
@@ -22,7 +23,7 @@ class ActivityController extends Controller
         $data = [];
         $data['activity'] = $this->activityService->getActivity();
         
-        return view('mobile.activity.index', $data);
+        return view(ViewHelper::getTemplate('activity.index'), $data);
     }
 
     public function show(int $id)
@@ -30,6 +31,6 @@ class ActivityController extends Controller
         $data = [];
         $data['activity'] = $this->activityService->getActivityInfo($id);
 
-        return view('mobile.activity.show', $data);
+        return view(ViewHelper::getTemplate('activity.show'), $data);
     }
 }

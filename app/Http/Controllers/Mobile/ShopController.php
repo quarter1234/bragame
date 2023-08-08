@@ -6,6 +6,7 @@ use App\Cache\SconfigCache;
 use App\Common\Enum\CommonEnum;
 use App\Common\Lib\Result;
 use App\Helper\UserHelper;
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\ShopRequest;
 use App\Services\DrawService;
@@ -30,7 +31,7 @@ class ShopController extends Controller
         $data['user'] = $user;
         $data['bankInfo'] = $this->shopService->getBankInfoByUid($user->uid);
 
-        return view('mobile.shop.index', $data);
+        return view(ViewHelper::getTemplate('shop.index'), $data);
     }
 
     public function guide()
@@ -39,7 +40,7 @@ class ShopController extends Controller
         $data['user'] = Auth::user();
         $data['banks'] = $this->shopService->getBanksByUid($data['user']->uid);
     
-        return view('mobile.shop.guide', $data);
+        return view(ViewHelper::getTemplate('shop.guide'), $data);
     }
 
     /**
@@ -50,7 +51,7 @@ class ShopController extends Controller
     {
         $data = [];
         $data['user'] = Auth::user();
-        return view('mobile.shop.bind', $data);
+        return view(ViewHelper::getTemplate('shop.bind'), $data);
     }
 
     /**
@@ -94,7 +95,7 @@ class ShopController extends Controller
         $data['user'] = $this->shopService->getDrawData($user);
         $data['banks'] = $this->shopService->getBanksByUid($user->uid);
        
-        return view('mobile.shop.draw', $data);
+        return view(ViewHelper::getTemplate('shop.draw'), $data);
     }
 
     /**

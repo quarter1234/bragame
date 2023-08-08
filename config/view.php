@@ -1,7 +1,8 @@
 <?php
 
 return [
-
+    'template' => env('DEFAULT_TEMPLATE', 'mobile'),
+    
     /*
     |--------------------------------------------------------------------------
     | View Storage Paths

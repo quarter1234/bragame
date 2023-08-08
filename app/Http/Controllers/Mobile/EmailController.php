@@ -11,6 +11,7 @@ use App\Services\EmailService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use App\Helper\RewardHelper;
+use App\Helper\ViewHelper;
 
 /**
  * 个人中心相关
@@ -30,7 +31,7 @@ class EmailController extends Controller
 
         $data = [];
         $data['user'] = $user;
-        return view('mobile.email.email', $data);
+        return view(ViewHelper::getTemplate('email.email'), $data);
     }
 
     public function emailList()
@@ -38,7 +39,7 @@ class EmailController extends Controller
         $user = Auth::user();
         $list = $this->emailService->getEmails($user)->toArray();
 
-        return view('mobile.email.email_list', $list);
+        return view(ViewHelper::getTemplate('email.email_list'), $list);
     }
 
     public function emailInfo()
@@ -50,7 +51,7 @@ class EmailController extends Controller
         $data['user'] = $user;
         $data['info'] = $this->emailService->getEmailInfo($id, $user);
 
-        return view('mobile.email.email_info', $data);
+        return view(ViewHelper::getTemplate('email.email_info'), $data);
     }
 
     public function getAttach()

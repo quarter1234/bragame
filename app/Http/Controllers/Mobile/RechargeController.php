@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Helper\UserHelper;
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Services\RechargeService;
 use App\Services\UserService;
@@ -30,6 +31,6 @@ class RechargeController extends Controller
         
         $data['channels'] = $this->rechargeService->getChannels(0,  $data['user']['svip'], 0, $coin, $user);
         
-        return view('mobile.pay.recharge', $data);
+        return view(ViewHelper::getTemplate('pay.recharge'), $data);
     }
 }

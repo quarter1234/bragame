@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Mobile;
 
 use App\Common\Lib\Result;
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Services\ShareService;
 use Illuminate\Support\Facades\Auth;
@@ -23,7 +24,7 @@ class ShareController extends Controller
 
         $data = $this->shareService->getShareData($user);
 
-        return view('mobile.share.index', $data);
+        return view(ViewHelper::getTemplate('share.index'), $data);
     }
 
     public function invites()

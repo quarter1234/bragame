@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Request;
@@ -18,11 +19,11 @@ class NoticeController extends Controller
     public function show()
     {
         $id = intval(Request::get('id', 0));
-        return view('mobile.notice.show');
+        return view(ViewHelper::getTemplate('notice.show'));
     }
 
     public function notices()
     {
-        return view('mobile.notice.notices');
+        return view(ViewHelper::getTemplate('notice.notices'));
     }
 }

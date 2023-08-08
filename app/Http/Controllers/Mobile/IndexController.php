@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
-use App\Models\User;
 use App\Services\IndexService;
 
 class IndexController extends Controller
@@ -20,8 +20,8 @@ class IndexController extends Controller
     {
         $params = $request->goCheck('index');
         $data = $this->indexService->getIndexData($params);
-        
-        return view('mobile.index.index', $data);
+
+        return view(ViewHelper::getTemplate('index.index'), $data);
     }
 
     public function bannerShow(int $id)
@@ -29,6 +29,6 @@ class IndexController extends Controller
         $data = [];
         $data['banner'] = $this->indexService->bannerInfo($id);
         
-        return view('mobile.index.banner_info', $data);
+        return view(ViewHelper::getTemplate('index.banner_info'), $data);
     }
 }
