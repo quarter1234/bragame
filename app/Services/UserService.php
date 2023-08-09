@@ -54,6 +54,11 @@ class UserService
         return $this->userRepo->getUserByPhone($phone);
     }
 
+    public function getRegIpNum(string $ip) :int
+    {
+        return $this->userRepo->getRegIpNum($ip);
+    }
+
     /**
      * 创建用户
      * @param array $params

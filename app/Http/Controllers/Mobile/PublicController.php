@@ -14,6 +14,7 @@ use App\Services\UserService;
 use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request as ReqeustSession;
+use Illuminate\Support\Facades\Redis;
 
 class PublicController extends Controller
 {
@@ -46,6 +47,13 @@ class PublicController extends Controller
     {
         $params = $request->goCheck('doRegister');
         $params['ip'] = Request::getClientIp();
+
+        $maxRegIpNum = Redis::get('same_ip_reg_maxnum');
+        $regIpTotal = $this->userService->getRegIpNum($params['ip']);
+        // 注册IP限制
+        if(intval($maxRegIpNum) > 0 && $regIpTotal > intval($maxRegIpNum)) {
+            return Result::error('Limite máximo de contas registradas.');
+        }
 
         $hasUser = $this->userService->getUserByPhone($params['phone']);
         if($hasUser) {
