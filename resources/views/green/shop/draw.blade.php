@@ -82,8 +82,8 @@
                         <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
                         <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
                     </div>
-                    <p>Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
-                    <p>&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
+                    <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
+                    <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
 
                 <button id="drawSubmit"  class="braw_b">Retirar agora</button>
@@ -120,6 +120,18 @@
       function check_draw(obj) {
         let amount = $('#postAmount').val();
         let bank_id = $('#bankId').val();
+        let minValue = $('#postMinValue').attr('min')
+        let maxValue = $('#postMaxValue').attr('max')
+        
+        if(parseInt(amount) < parseInt(minValue)) {
+          showModal('Valor minimo de retirada :R$ ' + "{{ $user['mincoin'] }}");
+          return false;
+        }
+
+        if(parseInt(amount) > parseInt(maxValue)) {
+          showModal("Acima do valor máximo:R$ " + "{{ $user['maxcoin'] }}");
+          return false;
+        }
         
         if(amount === '' || amount.trim().length == 0){
           showModal('Por favor, insira o valor do saque.');

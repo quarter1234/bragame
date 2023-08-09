@@ -115,6 +115,15 @@ class ShopController extends Controller
             return Result::error('Pedido muito frequente.');
         }
 
+        $userDrawLimit = $this->shopService->getDrawData($user);
+        if(intval($params['amount']) < intval($userDrawLimit['mincoin'])) {
+            return Result::error("Valor minimo de retirada :R$ {$userDrawLimit['mincoin']}");
+        }
+
+        if(intval($params['amount']) > intval($userDrawLimit['maxcoin'])) {
+            return Result::error("Acima do valor máximo:R$ {$userDrawLimit['maxcoin']}");
+        }
+
         if($err = $this->shopService->checkIsPlayer($user, $dcoin)) {
              return $err;
         }
@@ -128,7 +137,7 @@ class ShopController extends Controller
         if(empty($chans)) {
             return Result::error('No channel Data.');
         }
-
+        
         if($err = $this->shopService->checkLimit($user, $dcoin)) {
             return $err;
         }
