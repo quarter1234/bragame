@@ -4,7 +4,9 @@ namespace App\Services;
 use App\Cache\AllUseGameDrawCache;
 use App\Common\Enum\GameEnum;
 use App\Helper\LogHelper;
+use App\Repositories\DJlGameBetsRepository;
 use App\Repositories\DPgGameRepository;
+use App\Repositories\DJlGameRepository;
 use App\Repositories\SConfigRepository;
 use App\Repositories\DPgGameBetsRepository;
 use App\Repositories\CoinLogRepository;
@@ -18,9 +20,11 @@ use App\Helper\RewardHelper;
 class GameService
 {
     private $pgRepo;
+    private $jlRepo;
     private $sconfig;
     private $pgbets;
     private $coinlog;
+    private $jlbets;
     public $defauRespData = [
         "status" => "SC_OK",
         "data" => [
@@ -29,12 +33,30 @@ class GameService
         ]
     ];
 
+    public $jiliRespData = [
+        "errorCode" => 0,
+        "message" => "success",
+        "username" => 0,
+        "balance" => 0,
+    ];
+
+    public $jiliErrorCode = [
+        "SUCCESS" => 0,
+        "Al_ACCEPT" => 1,
+        "NOT_ENOUGH" => 2,
+        "INV_PARAM" => 3,
+        "TOKEN_EXP" => 4,
+        "OTHER_ERROR" => 5,
+    ];
+
     private $gamePlatTb = [
+        "Jl" => 1,
         "PGS" => 2,
         "PP" => 3,
     ];
 
     private $commissTb = [
+        "Jl" => 2,
         "PGS" => 3,
         "PP" => 4,
     ];
@@ -42,12 +64,17 @@ class GameService
     public function __construct(DPgGameRepository $pgRepo,
                                 SConfigRepository $sconfig,
                                 DPgGameBetsRepository $pgbets,
-                                CoinLogRepository $coinlog)
+                                CoinLogRepository $coinlog,
+                                DJlGameRepository $jlRepo,
+                                DJlGameBetsRepository $jlbets
+                                )
     {
         $this->pgRepo  = $pgRepo;
         $this->sconfig = $sconfig;
         $this->pgbets = $pgbets;
         $this->coinlog = $coinlog;
+        $this->jlRepo = $jlRepo;
+        $this->jlbets = $jlbets;
     }
 
     public function getPGGames(array $params)
@@ -68,8 +95,20 @@ class GameService
         return $this->pgRepo->getPgGameByCode($gameCode);
     }
 
+    public function getJiliGameByCode($gameCode){
+        if(empty($gameCode)){
+            return null;
+        }
+
+        return $this->jlRepo->getJlGameByCode($gameCode);
+    }
+
     public function getPGGameBet(int $id){
         return $this->pgbets->find($id);
+    }
+
+    public function getJlGameBet(int $id){
+        return $this->jlbets->find($id);
     }
 
     /**
@@ -116,6 +155,188 @@ class GameService
         return json_decode($res, true);
     }
 
+    public function getJiliGameUrl($gameCode, $user){
+        $params = [];
+        if($user['is_test'] == 0){
+            $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        }
+        else{
+            $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_test_app_id');
+        }
+
+        if(!$appIpConfig){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
+        }
+
+        $pre = $appIdConfig;
+        $params['user_id'] = $pre . 'x' . $user['uid'];
+        $params['game_id'] = $gameCode;
+        $query = http_build_query($params);
+        $host = $appIpConfig . ':83/';
+        $url = $host . env('JILI_GAME_LOGIN_URI', '') . '?' . $query;
+        $client = new Client();
+        $res = $client->get($url);
+        $res = $res->getBody()->getContents();
+        return json_decode($res, true);
+    }
+
+    public function jiliBetResult($user, array $betParams){
+        if($user['is_test'] == 0){
+            $platConfig = SystemConfigHelper::getByKey('plat_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->jiliRespData['errorCode'] = $this->jiliErrorCode['INV_PARAM'];
+                $this->jiliRespData['message'] = "param is error!";
+                return $this->jiliRespData;
+            }
+        }
+        else{
+            $platConfig = SystemConfigHelper::getByKey('plat_test_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->jiliRespData['errorCode'] = $this->jiliErrorCode['INV_PARAM'];
+                $this->jiliRespData['message'] = "param is error!";
+                return $this->jiliRespData;
+            }
+        }
+
+        if(!$user){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "user is not exist";
+            return $this->jiliRespData;
+        }
+
+        $betParams['is_test'] = $user['is_test'];
+        list($game, $betId)  = $this->_addJiliBetData($user['uid'], $betParams);
+        if(empty($betId)){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "betid is not exist";
+            return $this->jiliRespData;
+        }
+
+        if(!$game){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "game is not exist";
+            return $this->jiliRespData;
+        }
+
+        $betTb = $this->getJlGameBet($betId);
+        if(!$betTb){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "bet is not exist";
+            return $this->jiliRespData;
+        }
+
+        $relBetId = $betTb->id;
+        $betStatus = $betTb->status ?? 0;
+        $betType = $betTb->type ?? 0;
+        $platApp = $betTb->plat_app ?? "";
+        $settledAmount = $betTb->settled_amount ?? 0;
+        $winloseAmount = $betTb->winlose_amount ?? 0;
+        $gameName = $game->game_name ?? "";
+        $gameId = $game->id ?? 0;
+        $currPlatForm = $game->platform;
+        $betAmount = $betTb->bet_amount ?? 0;
+        if($betStatus > 0){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "bet is do!";
+            return $this->jiliRespData;
+        }
+
+        if($user->isbindphone <= 0){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "phone no bind!";
+            return $this->jiliRespData;
+        }
+
+        if($user->coin < $betAmount){
+            $this->jiliRespData['errorCode'] = $this->jiliErrorCode['OTHER_ERROR'];
+            $this->jiliRespData['message'] = "coin is not enough";
+            return $this->jiliRespData;
+        }
+
+        $uid = $user['uid'];
+        $this->jiliRespData['username'] = $uid;
+        $beforecoin = $user->coin;
+        $aftercoin = $beforecoin;
+        $beforeAmount = $beforecoin;
+        $gamePlat = 2;
+        $commType = 3;
+        foreach($this->gamePlatTb as $gk => $gv){
+            if($gk == $currPlatForm){
+                $gamePlat = $gv;
+                break;
+            }
+        }
+
+        foreach($this->commissTb as $ck => $cv){
+            if($ck == $currPlatForm){
+                $commType = $cv;
+                break;
+            }
+        }
+
+        $this->_jlBetDoing($relBetId); // 处理中
+        if($betType == 0 || $betType == 1){  // -- 投注
+            if($betAmount > 0){
+                $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+                $beforecoin = $reduceRes['beforecoin'];
+                $aftercoin = $reduceRes['aftercoin'];
+                // $effbet = $betAmount - $winLoseAmount;
+                $effbet = $betAmount;
+                if($effbet > 0){ // 按照下注的概念，给上级返利
+                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                }
+            }
+        }
+
+        if($betType == 0 || $betType == 2){ // -- 结算
+            if($betType == 2 && $betAmount > 0){
+                $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+                $beforecoin = $reduceRes['beforecoin'];
+                $aftercoin = $reduceRes['aftercoin'];
+                // $effbet = $betAmount - $winLoseAmount;
+                $effbet = $betAmount;
+                if($effbet > 0){ // 按照下注的概念，给上级返利
+                    RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+                }
+            }
+
+            if($winloseAmount > 0){
+                $addCoinRes = $this->_addCoin($user, $winloseAmount, $gameId, $gamePlat, $relBetId);
+                $beforecoin = $addCoinRes['beforecoin'];
+                $aftercoin = $addCoinRes['aftercoin'];
+            }
+        }
+
+        if($betType == 0 || $betType == 2){
+            if($settledAmount != 0 && $betParams['is_test'] == 0){
+                // $this->_addTaxLog($user, $gameName, $gameId, $relBetId, $platApp, $betAmount, $winloseAmount, $settledAmount, $currPlatForm);
+            }
+        }
+
+        $canDraw = 0;
+        $ispayer = $user['ispayer'] ?? 0;
+        if($betType == 0 || $betType == 2){ // -- 结算
+            if($ispayer == 0){ // --未充值的会员不得提现
+                $this->_jlBetOver($betId, $beforeAmount, $user['coin'], $canDraw);
+            }
+            $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
+            $canDraw = Bets::checkBets($user, $isAllUseDraw);
+            $effbet = $betAmount;
+            if($effbet > 0){ // 按照下注的概念，给上级返利
+                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+            }
+
+            AllUseGameDrawCache::removeUserDraw($uid);
+        }
+
+        // -- 完成
+        $this->_jlBetOver($betId, $beforeAmount, $aftercoin, $canDraw);
+        $this->jiliRespData['balance'] = $aftercoin;
+        return $this->jiliRespData;
+    }
+
     public function checkSign($uid, $sign){
         $key = env('THIRD_GAME_SIGN_KEY', false);
         if(!$key){
@@ -133,6 +354,27 @@ class GameService
         $this->defauRespData['data']['balance'] = $user['coin'];
         $this->defauRespData['data']['username'] = $uid;
         return $this->defauRespData;
+    }
+
+    public function getUserJiliBalance($uid, $user){
+        $this->jiliRespData['balance'] = $user['coin'];
+        $this->jiliRespData['username'] = $uid;
+        return $this->jiliRespData;
+    }
+
+    private function _addJiliBetData(int $uid, array $betParams): array{
+        $game = $this->getJiliGameByCode($betParams['game'] ?? 0);
+        if(!$game){
+            return [false, false];
+        }
+        $gameType = $game->game_type ?? 0;
+        $gameName = $game->game_name ?? '';
+        $gameId = $game->id ?? 0;
+        $betParams['game_type'] = $gameType;
+        $betParams['game_name'] = $gameName;
+        $betParams['game_id'] = $gameId;
+        $jlBetId = $this->jlbets->insert($betParams);
+        return [$game, $jlBetId];
     }
 
     private function _addBetData(int $uid, array $betParams){
@@ -215,6 +457,16 @@ class GameService
         $this->pgbets->storePgGameBet($betId, $upData);
     }
 
+    private function _upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw){
+        $upData = [
+            "status" => $status,
+            "before_amount" => $beforeAmount,
+            "after_amount" => $afterAmount,
+            "can_draw" => $canDraw,
+        ];
+        $this->jlbets->storeJlGameBet($betId, $upData);
+    }
+
     private function _betDoing($betId){
         $status = 4;  // 处理中
         $beforeAmount = 0;
@@ -223,9 +475,22 @@ class GameService
         $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
+    private function _jlBetDoing($betId){
+        $status = 4;  // 处理中
+        $beforeAmount = 0;
+        $afterAmount = 0;
+        $canDraw = 0;
+        $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
     private function _betOver($betId, $beforeAmount, $afterAmount, $canDraw){
         $status = 1;
         $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    private function _jlBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
+        $status = 1;
+        $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
     /**

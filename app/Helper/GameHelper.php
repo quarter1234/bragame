@@ -5,7 +5,7 @@ namespace App\Helper;
 use App\Models\User;
 use App\Services\GameService;
 
-class GameHelper 
+class GameHelper
 {
     /**
      * 获取PG游戏地址
@@ -20,7 +20,19 @@ class GameHelper
 
         if(isset($res['code']) && $res['code'] === 0) {
             return $res['data']['url'];
-        } 
+        }
+
+        return false;
+    }
+
+    public static function getJiliGameUrl($user, $gameCode)
+    {
+        $gameService = app()->make(GameService::class);
+        $res = $gameService->getJiliGameUrl($gameCode, $user);
+
+        if(isset($res['code']) && $res['code'] === 0) {
+            return $res['data']['url'];
+        }
 
         return false;
     }
