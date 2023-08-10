@@ -27,6 +27,8 @@ Route::group([
     Route::get('index', [IndexController::class, 'index'])->name('mobile.index');
     Route::get('getPgs', [GameController::class, 'getPgs']);
     Route::get('getPps', [GameController::class, 'getPps']);
+    Route::get('getJls', [GameController::class, 'getJls']);
+    
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
 

@@ -241,29 +241,11 @@
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
 
-                        {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电子Eletrônica</span></button>--}}
-
-                        {{--<button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-sport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">体育Esportes</span></button>--}}
-
-                        {{--<button _ngcontent-way-c8="" id="tab5" onclick="myclick(5)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-fishing"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">捕鱼Pesca</span></button>--}}
-
-                        {{--<button _ngcontent-way-c8="" id="tab6" onclick="myclick(6)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-boardgame"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">棋牌Xadrez</span></button>--}}
-
-                        {{--<button _ngcontent-way-c8="" id="tab7" onclick="myclick(7)" class="side-menu-item ng-star-inserted">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-esport"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">电竞Concorrência elétrica</span></button>--}}
+                      
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
@@ -295,56 +277,18 @@
                       {{-- PG 游戏 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
-                          <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
-                          </div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
                         </div>
 
                         {{-- JILI 游戏 --}}
-                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
-                           
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab3_content" style="display: none;">
+                            <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab3_content_jls"></div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="jl_load_more" page="0" onclick="loadJlGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
                         </div>
-
-                        {{--<div class="tab" id="tab3_content" style="display: none;">
-
-                            <div _ngcontent-avh-c17="" class="slot-btns-ctn ng-star-inserted">
-                              <button _ngcontent-avh-c17="" class="jx-slot generic-background-image" tabindex="0" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bbin','game_type'=>2))}'"></button>
-                            </div>
-
-                            <div _ngcontent-avh-c17="" class="game-btn-holder ng-star-inserted">
-                              <!---->
-                              <!---->
-                              <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-999010 ng-star-inserted" tabindex="0" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'pt','game_type'=>2))}'"></button>
-                              <!---->
-                              <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-999011 ng-star-inserted" tabindex="0"onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'pp','game_type'=>2))}'"></button>
-							  <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-jdb ng-star-inserted" tabindex="0"onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'jdb','game_type'=>2))}'"></button>
-							  <button _ngcontent-avh-c17="" class="game-btn generic-background-image game-sg ng-star-inserted" tabindex="0"onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'sg','game_type'=>2))}'"></button>
-                            </div>
-                        </div>--}}
-						 {{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab4_content" style="display: none;">
-
-						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-888001 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ibc','game_type'=>4))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-agti ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ag','game_type'=>4))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-bbti ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;margin-left:5px" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'newbb','game_type'=>4))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-gj ng-star-inserted" style="padding-bottom: calc(((100% / 2 - 5px) * 108 / 152));width: calc(50% - 5px);border-radius: 10px;margin-bottom: 10px;" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'gj','game_type'=>4))}'"></button>
-						</div>--}}
-            {{--	<div _ngcontent-avh-c19="" class="fishing-game-board-ctn tab" id="tab5_content" style="display: none;">
-
-						      <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-999013 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ag','game_type'=>6))}'"></button>
-							  <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-999006 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bbin','game_type'=>6))}'"></button>
-							  <button _ngcontent-avh-c19="" class="fishing generic-background-image fishing-game-bgby ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'bg','game_type'=>6))}'"></button>
-						</div>--}}
-						{{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab6_content" style="display: none;">
-						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-ky ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'ky','game_type'=>7))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-mt ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'mt','game_type'=>7))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-rmg ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'rmg','game_type'=>7))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-nw ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'nw','game_type'=>7))}'"></button>
-						</div>--}}
-						{{--<div _ngcontent-avh-c18="" class="other-btns-ctn tab" id="tab7_content" style="display: none;">
-						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-999008 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'avia','game_type'=>5))}'"></button>
-						      <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-999009 ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'newbb','game_type'=>5))}'"></button>
-							  <button _ngcontent-avh-c18="" class="game-btn generic-background-image game-esb ng-star-inserted" onclick="location.href='{:U('Zhenren/login',array('plat_type'=>'esb','game_type'=>5))}'"></button>
-						</div>--}}
 
                       </div>
                     </div>
@@ -464,6 +408,27 @@
           })
         }
 
+        function loadJlGames() {
+          let page = $('#jl_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getJls')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#jl_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab3_content_jls').append(itemGame)
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -476,6 +441,7 @@
 
         loadPgGames()
         loadPpGames()
+        loadJlGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();

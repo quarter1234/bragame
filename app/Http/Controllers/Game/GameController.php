@@ -36,6 +36,15 @@ class GameController extends Controller
         return Result::success($res);
     }
 
+    public function getJls()
+    {
+        $params = [];
+        $params['platform'] = 'JL';
+        $res = $this->gameService->getPGGames($params);
+
+        return Result::success($res);
+    }
+
     /**
      * 获取游戏地址
      * @return mixed
