@@ -223,13 +223,13 @@
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
                     <!---->
-                    <div _ngcontent-way-c8="" class="home-game-board-ctn">
+                    <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
-                      <button _ngcontent-way-c8="" id="tab1" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
+                      <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                        <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
                         <!---->
@@ -241,7 +241,7 @@
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
 
@@ -346,15 +346,9 @@
     </style>
     <script type="text/javascript">
     var myclick = function(v) {
-        var llis = document.getElementsByTagName("button");
-        for (var i = 0; i < llis.length; i++) {
-          var lli = llis[i];
-          if (lli == document.getElementById("tab" + v)) {
-            lli.style.backgroundColor = "side-menu-item ng-star-inserted active-side-menu";
-          } else {
-            lli.style.backgroundColor = "side-menu-item ng-star-inserted";
-          }
-        }
+        $('#tab' +v).addClass("side-menu-item ng-star-inserted active-side-menu").siblings().removeClass("active-side-menu");
+        
+
         var divs = document.getElementsByClassName("tab");
         for (var i = 0; i < divs.length; i++) {
           var divv = divs[i];

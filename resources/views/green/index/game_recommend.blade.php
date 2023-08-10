@@ -4,7 +4,7 @@
             <span class="game_ico"></span>Popular
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a>Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(9)">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 喜欢的--}}
@@ -19,7 +19,7 @@
             <span class="pp_game"></span>In-PG
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a>Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(2)">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 PG--}}
@@ -34,7 +34,7 @@
             <span class="pg_game"></span>In-PP
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a>Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(1)">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里--}}
