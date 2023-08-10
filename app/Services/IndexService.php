@@ -8,17 +8,23 @@ use App\Helper\RedPackageHelper;
 use App\Models\DRedPacket;
 use App\Repositories\DRedPacketUserRepository;
 use App\Repositories\SConfigPicRepository;
+use App\Repositories\SNoticeIndexRepository;
 use Illuminate\Support\Facades\Auth;
 
 class IndexService
 {
     private $picRepo;
     private $userRedPack;
+    private $noticeRepo;
 
-    public function __construct(SConfigPicRepository $picRepo, DRedPacketUserRepository $userRedPack)
+    public function __construct(
+        SConfigPicRepository $picRepo, 
+        DRedPacketUserRepository $userRedPack,
+        SNoticeIndexRepository $noticeRepo)
     {
         $this->picRepo  = $picRepo;
         $this->userRedPack = $userRedPack;
+        $this->noticeRepo = $noticeRepo;
     }
 
     /**
@@ -48,6 +54,7 @@ class IndexService
         
         $data['bnners'] = $this->picRepo->getBanners();
         $data['ranks'] = UserCache::getRankCoin();
+        $data['notice'] = $this->noticeRepo->getNoticeIndex(time());
 
         return $data;
     }

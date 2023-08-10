@@ -22,6 +22,10 @@ class UserRepository extends Repository
         return $this->model()::where('phone', $phone)->first();
     }
 
+    public function getRegIpNum($ip)
+    {
+        return $this->model()::where('reg_ip', $ip)->count('uid');
+    }
 
     public function getUsers(array $params)
     {
