@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/green/css/activity.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -43,7 +43,7 @@
             }
     </style>        
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">

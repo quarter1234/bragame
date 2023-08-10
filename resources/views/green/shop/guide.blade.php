@@ -8,29 +8,29 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/shop.css">
-    <link rel="stylesheet" href="/mobile/css/share.css">
+
+    <link rel="stylesheet" href="/mobile/green/css/shop.css">
+    <link rel="stylesheet" href="/mobile/green/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('mobile.common.top_sub')
+        @include('green.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -39,7 +39,7 @@
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                 </div>
-               <div class="guide_top">Verify Account</div>
+               <div class="guide_top" style="margin:70px auto 0 auto;">Verify Account</div>
                <div class="guide_centen">
                     <div class="guide_ico"></div>
                     <div class="guide_text">

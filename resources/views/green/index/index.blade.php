@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/mobile/green/css/index.css">
@@ -21,14 +20,14 @@
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#033016">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
-  <body style="color: white; background-color: #0c192c;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #04431f;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -60,7 +59,7 @@
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="https://wwv.condebet.com/bx_4/public/mobile/img/qb.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="/mobile/green/images/qb.png"></div>
                         </div>
                     </span>
                   @else
@@ -137,7 +136,7 @@
            }
           
             </style>
-            <div _ngcontent-way-c3="" class="header-view__content-wrapper" style=" padding-top: 64px;">
+            <div _ngcontent-way-c3="" class="header-view__content-wrapper" style="margin-top:84px;">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-banner-board _ngcontent-way-c1="" _nghost-way-c5="" class="ng-tns-c5-0 ng-star-inserted">
@@ -242,7 +241,9 @@
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
-
+                        <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
 
                         {{--<button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-slot"></div>
@@ -297,6 +298,11 @@
                           <div style="width:100%;text-align:center;margin-top:1rem">
                               <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
                           </div>
+                        </div>
+
+                        {{-- JILI 游戏 --}}
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
+                           
                         </div>
 
                         {{--<div class="tab" id="tab3_content" style="display: none;">

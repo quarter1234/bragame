@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/amazeui.min.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/common2.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/green/css/activity.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
@@ -47,7 +47,7 @@
     <style>
     .header {height: 0.5rem;}
     .nav_bg {
-    background: #0c192c;
+    background:rgba(255,255,255,.1);
     display: block;
 }
 .am-header-fixed {
@@ -59,7 +59,7 @@
     z-index: 1010;
 }
     </style>
-<body class="bg_fff"style="background: #0c192c;">
+<body class="bg_fff"style="background: #04431f;">
 	<header data-am-widget="header"class="am-header am-header-default header nav_bg am-header-fixed">
 
 		<div class="am-header-left am-header-nav">
@@ -82,7 +82,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('green.common.footer') 
                   
                  
                 </jx-tab-bar>

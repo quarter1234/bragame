@@ -1,10 +1,10 @@
-<div style="width:100%;text-align:center;">
+<div style="text-align:center;">
     <div class="game_qb_title">
         <div class="game_qb_left">
             <span class="game_ico"></span>Popular
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a style="padding-right:20px;">Ver tudo</a>
+            <a>Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 喜欢的--}}
@@ -19,7 +19,7 @@
             <span class="pp_game"></span>In-PG
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a style="padding-right:20px;">Ver tudo</a>
+            <a>Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 PG--}}
@@ -34,7 +34,7 @@
             <span class="pg_game"></span>In-PP
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a style="padding-right:20px;">Ver tudo</a>
+            <a>Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里--}}

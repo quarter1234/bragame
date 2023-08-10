@@ -1,8 +1,8 @@
 <div class="menu_on">
-<img src="https://wwv.condebet.com/bx_4/public/mobile/img/menu_on.png" />
+<img src="/mobile/green/images/menu_on.png" />
 </div>
 <div class="kj_kf">
-<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="https://wwv.condebet.com/bx_4/public/mobile/img/kf_ico.png" />
+<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/green/images/kf_ico.png" />
 </div>
 {{--
 <div class="down_ico">
@@ -20,7 +20,7 @@
             <li>
                 <a href="{{url('mobile/member/vip')}}">
                     <span>
-                        <img src="https://wwv.condebet.com/bx_4/public/mobile/img/f-vip.png" />
+                        <img src="/mobile/green/images/f-vip.png" />
                     </span>
                     <label>VIP Grau</label>
                 </a>
@@ -28,7 +28,7 @@
             <li>
                 <a href="{{url('mobile/member/email')}}">
                 <span>
-                        <img src="https://wwv.condebet.com/bx_4/public/mobile/img/email-fill.png" />
+                        <img src="/mobile/green/images/email-fill.png" />
                     </span>
                     <label>Email</label>
                 </a>
@@ -36,7 +36,7 @@
             <li>
                 <a href="{{url('mobile/member/customerService')}}">
                 <span>
-                        <img src="https://wwv.condebet.com/bx_4/public/mobile/img/kf_r_ico.png" />
+                        <img src="/mobile/green/images/kf_r_ico.png" />
                     </span>
                     <label>Atendimento</label>
                 </a>
@@ -74,7 +74,7 @@
    .menu_right{
         width:200px;
         height:100%;
-        background:#132235;
+        background:#021e05;
         position:absolute;
         right:-200px;
         top:0;
@@ -88,7 +88,7 @@
         height:50px;
         list-style:none;
         border-top:1px solid #000;
-        border-bottom:1px solid #26446a;
+        border-bottom:1px solid rgba(255, 255, 255, 0.1);
         position:relative;
    }
    .menu_right span{
