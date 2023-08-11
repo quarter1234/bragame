@@ -13,13 +13,13 @@ use App\Common\Lib\TelegramNotice;
 use Illuminate\Support\Facades\Mail;
 use Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\HttpFoundation\Response; 
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\ErrorHandler\Exception\FlattenException;
 
 
 class Handler extends ExceptionHandler
 {
-    
+
     /**
      * A list of the exception types that are not reported.
      *
@@ -41,7 +41,7 @@ class Handler extends ExceptionHandler
         'current_password',
         'password',
         'password_confirmation',
-       
+
     ];
 
     /**
@@ -50,6 +50,11 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
+
+        if ($this->shouldReport($exception) && config('app.env') != 'local') {
+            $this->sendEmail($exception);
+        }
+
         parent::report($exception);
     }
 
@@ -74,20 +79,37 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Throwable $exception)
     {
-       if($exception instanceof ValidatorException) {
+        if($exception instanceof ValidatorException) {
             $messages = $exception->getMessageBag()->toArray();
             $msg = '';
-            
+
             foreach ($messages as $message) {
                 $msg .= $message[0] ?? '';
             }
-            
+
             return Result::error($msg, 4220, 422);
-        } 
+        }
         elseif($exception instanceof OutputException) {
             return response()->view('mobile.errors.error', ['msg' => $exception->getMessage()]);
         }
 
         return parent::render($request, $exception);
+    }
+
+    public function sendEmail(Throwable $exception)
+    {
+        $response = [];
+        $error = $this->convertExceptionToResponse($exception);
+        $exception = FlattenException::create($exception);
+
+        $response['status'] = $error->getStatusCode();
+        $response['file'] =  $exception->getFile();
+        $response['class'] = $exception->getClass();
+        $response['line'] =  $exception->getLine();
+        $response['play'] = env('CURRENT_PLAT', 'Laravel');
+        $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
+        // $response['trace'] = $exception->getTrace();
+
+        TelegramNotice::sendMessage($response);
     }
 }
