@@ -110,7 +110,7 @@
 .bind{
     width:95%;
     margin:10px auto 0 auto;
-    background:#021e05;
+    background:#046031;
     border-radius:5px;
     padding:20px 0;
     overflow: hidden;
@@ -318,6 +318,9 @@
     line-height:30px;
     border-radius:5px;
     margin-left:20px;
+}
+.d1{
+    margin-top:70px;
 }
 .d1 input{
     padding-left:40px;
