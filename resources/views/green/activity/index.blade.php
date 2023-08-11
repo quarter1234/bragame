@@ -31,9 +31,8 @@
                   justify-content:space-between;
                 }
                 .activity-btn{
-                  width:30% !important;
-                  display:inline-block !important;
-                  margin-right:10px !important;
+                  width:900px !important;
+                  margin:10px auto 0 auto !important;
                 }
                 .header-view__content-wrapper__content-container{
                   width:60%;
