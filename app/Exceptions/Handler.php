@@ -50,11 +50,6 @@ class Handler extends ExceptionHandler
      */
     public function report(Throwable $exception)
     {
-        
-        if ($this->shouldReport($exception) && config('app.env') != 'local') {
-            $this->sendEmail($exception); 
-        }
-        
         parent::report($exception);
     }
 
@@ -94,22 +89,5 @@ class Handler extends ExceptionHandler
         }
 
         return parent::render($request, $exception);
-    }
-
-    public function sendEmail(Throwable $exception)
-    {
-        $response = [];
-        $error = $this->convertExceptionToResponse($exception);
-        $exception = FlattenException::create($exception);
-
-        $response['status'] = $error->getStatusCode();
-        $response['file'] =  $exception->getFile();
-        $response['class'] = $exception->getClass();
-        $response['line'] =  $exception->getLine();
-        $response['play'] = env('CURRENT_PLAT', 'Laravel');
-        $response['msg'] = empty($exception->getMessage()) ? 'something error' : $exception->getMessage();
-        // $response['trace'] = $exception->getTrace();
-
-        TelegramNotice::sendMessage($response);
     }
 }
