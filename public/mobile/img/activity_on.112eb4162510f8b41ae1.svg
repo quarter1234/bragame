@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="49px" height="49px" viewBox="0 0 49 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Rectangle 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.6419271%" y1="0%" x2="22.3776042%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#13A2BA" offset="0%"></stop>
+            <stop stop-color="#087C95" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_活动" transform="translate(-311.000000, -131.000000)">
+            <g id="Group" transform="translate(15.000000, 131.000000)">
+                <g id="Rectangle-4">
+                    <g transform="translate(289.000000, -43.000000)">
+                        <rect fill="url(#linearGradient-1)" fill-rule="evenodd" transform="translate(50.558135, 50.558135) rotate(45.000000) translate(-50.558135, -50.558135) " x="4.05813485" y="25.5581349" width="93" height="50"></rect>
+                        <text id="进行中" transform="translate(39.677670, 59.677670) rotate(45.000000) translate(-39.677670, -59.677670) " font-family="PingFangSC-Regular, PingFang SC" font-size="11" font-weight="normal" letter-spacing="0.1326471" fill="#FFFFFF">
+                            <tspan x="22.6776695" y="63.6776695">进行中</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

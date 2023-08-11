@@ -1,0 +1,82 @@
+﻿@charset "UTF-8";
+
+.content {
+    position: relative;
+    overflow: auto;
+    width: 585px;
+    height: 222px;
+    background: url(http://static.cf-optin.com/Content/2015/images/page_bg2.png);
+    padding: 15px 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.findfont {
+    line-height: 20px;
+    color: #9e9e9e;
+    height: 36px;
+    margin: 0 22px;
+    clear: both;
+}
+.phone01 {
+    width: 23px;
+    height: 29px;
+    background: url(http://static.cf-optin.com/Content/2015/images/mobile-icon.png) no-repeat;
+    margin-top: -5px;
+    float: left;
+    background-size: 70%;
+    display: inline-block;
+}
+.verify_box{
+  margin: 42px auto 0;
+  width: 358px;
+  color: #666666;
+  font-size: 12px;
+}
+.verify_sub{
+  float: right;
+  color: #9D9D9E;
+}
+.verify_sub span{ 
+  color: #F7B63E;
+  font-weight: bold;
+}
+.verification_code{ margin-top: 10px; }
+.verification_code input{
+   width: 50px;
+    text-align: center;
+    line-height: 42px;
+    font-size: 14px;
+    border: 1px solid #DDDDDD;
+    border-radius: 3px;
+    margin-right: 3px;
+    height: 42px;
+}
+.verification_code input:focus{ outline: none; }
+.verification_code input.error{ border: 1px solid #f00; }
+.verification_code_error{
+  color: #c33;
+  margin-top: 10px;
+}
+.verification_code_error .n-icon {
+    background: url(http://static.cf-optin.com/Content/2015/validator/images/validator_default.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin: 1px 3px -4px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

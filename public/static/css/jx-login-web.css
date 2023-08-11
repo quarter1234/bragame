@@ -1,0 +1,248 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+
+html, body { width:100%; height: 100%; font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Gotham, "Microsoft JhengHei", "微軟正黑體", "sans-serif"; }
+
+.ClearBoth { clear:both; }
+
+header { width:100%; height: 100px; border-bottom: 1px solid rgba(100%,100%,100%,0.2); }
+	.h_container { position: relative; width:1200px; height: 100px; margin: 0 auto;  }
+	.h_container a { color: white; text-decoration: none; font-size: 14px; }
+	.h_container a:hover {  color: yellow;} 
+
+		.jx-logo { position: absolute; left: 0; top: 17px; display: block; width: 195px; height: 65px; background: url(/static/img/login-img.png) -76px -448px no-repeat; }
+		.jx-logo a { display:block; width: 200px; height: 60px; /*border: 1px solid red;*/ }
+		.btn_keeplink a { position: absolute; right: 0; top:20px; width: 100px; height: 30px; background: rgba(255, 255, 255, 0.3); text-align: center; line-height: 30px; border-radius:15px; }
+		.btn_contact a { position: absolute; right: 120px; top: 20px; width: 100px; height: 30px; line-height: 30px; }
+		.icon_contact { display:block; width: 26px; height: 18px; margin: 5px 3px 0 8px;; background: url(/static/img/login-img.png) -76px -405px no-repeat; float: left; }
+
+
+	
+
+
+.jx_login { min-width:1200px; height:auto; background: url(/static/img/bg_jx_login.jpg) center top no-repeat; }
+.NavBg { background: url(/static/img/bg_nav.jpg) center top no-repeat; }
+	#Container { width:1200px; min-height: 800px; margin: 0 auto; position: relative; }
+		
+		/* Left part */
+		.login_MainTitle { position: absolute; left: 0; top: 100px; display: block; width: 345px; height: 170px; background: url(/static/img/login-img.png) -632px -566px no-repeat; }
+		
+			.MainDownload { position: absolute; left:0; top: 310px; width: 295px; height: 345px; /*border: 1px solid red;*/ }
+			.MainDownload li { display: inline-block; color: white; background: rgba(100%,100%,100%,0.1); }
+			.MainDownload li:first-child { background: none;}
+			.MainDownload li a { display:block; color: white; text-decoration: none; }
+			
+				.yellow_cube { display: inline-block; width: 4px; height: 14px; background: url(/static/img/login-img.png) -175px -73px no-repeat; margin-right: 5px; }
+				.text_DownTitle { font-weight:bold; font-size: 14px; margin-bottom: 10px; vertical-align:top; margin-top: -3px; display: inline-block; }
+				.FastDownload a, .GuestDownload a{ display: block; width: 240px; height: 85px; }
+				.FastDownload a p, .GuestDownload a p { text-align: center; width:150px; height: 55px; padding-top: 25px; line-height: 20px; float: right;  font-weight: bold; overflow: hidden; }
+				.FastDownload a:hover, .GuestDownload a:hover,.jx-QRCode a:hover { color: yellow; } 
+				.dice_blue, .dice_green { width:85px; height: 55px; font-size: 16px; margin-top: 15px; border-right:1px solid rgba(100%,100%,100%,0.2); float: left; }
+				.dice_blue { background: url(/static/img/login-img.png) -60px -146px no-repeat; }
+				.dice_green { background: url(/static/img/login-img.png) -60px -209px no-repeat;}
+				.t_12pxAlpha { font-size: 12px; color:rgba(100%,100%,100%,0.6); font-weight:normal; }
+				.QR_L { float: left; width: 85px; height: auto; text-align: center;}
+				.jx-QRCode a{ display: block; width: 200px; height:105px; padding: 20px; }
+					.QR_pic {float: left;  width: 85px; height: 85px; display: inline-block; background: url(/static/img/login-img.png) -76px -280px no-repeat; }
+					.icon_app {float: left;  width:18px; height:18px; display: inline-block; background: url(/static/img/login-img.png) -76px -376px no-repeat; margin-left: 5px; margin-top: 5px; }
+					.t_scan {float: left;  color:#00d1a0; font-size: 12px; width: auto; height: 18px; display: inline-block; line-height:20px; margin-left: 2px; margin-top: 5px;}
+				.jx-QRCode a p{ text-align: center; width:115px; height: 55px; padding-top: 25px; line-height: 20px; float: right; font-weight: bold; }
+				.jx-QRCode a:hover { color:white; }
+
+
+		/* Login Frame */
+		/*.LoginFrame	{ position: absolute; right: 0; top: 100px; width:300px; height: 270px; background: white; padding: 30px; box-shadow: 6px 0 15px rgba(5, 17, 34, 0.3); overflow: hidden; }*/
+			.Text_Login { width: 70px; height: 30px; background: url(/static/img/login-img.png) -197px -280px no-repeat; display: block; margin-bottom: 30px }
+			.LoginFrame input { outline: none; }
+			.LoginFrame .inputFrame { width: 280px; height:30px; color:#9e9e9e; margin-bottom: 10px; border: 1px solid #e5e5e5; border-radius: 3px; padding:5px 10px; background:#f2f2f2; }
+			.stay_sign_in { width: 100%; height: 20px; font-size: 12px; vertical-align: middle; }
+				.t_forget { width: 50%; vertical-align: middle; display: inline-block; }
+                .GetBack { display: inline-block; text-align: right; color: #118799;}
+				.GetBack a{  color: #118799; text-decoration: none; }
+				.GetBack a:hover { color: #0070c9; }
+			.LoginFrame .errpassword { background: #fce9eb; border: 1px solid #f3b5ba; color:#e12b38; }
+			.login_errtext { width: 100%; text-align: center; color: #dd2b37; font-size:12px; margin: 5px 0; }
+			.icon_alert { width: 15px; height: 15px; background: #dd2b37; border-radius: 50%; display: inline-block; color: white; text-align: center; line-height: 16px; margin: 0 5px; }
+
+				.BtnLogin { width:100%; height: 40px; background: #118799; border: none; border-radius: 3px; color: white; font-weight: bold; font-size: 16px; font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Gotham, "Microsoft JhengHei", "微軟正黑體", "sans-serif"; margin-top: 20px; }
+				.BtnLogin:hover { background: #1194a5; }
+				.BtnLogin:active { background: #0c7b94; }
+
+				.BtnGuest { position: absolute; left:30px; top: 226px; }
+				.BtnGuest a { display: block; width:50px; height: 24px; background: url(/static/img/login-img.png) -437px -423px no-repeat; text-indent: -9999px; }
+				.BtnGuest a:hover { background: url(/static/img/login-img.png) -437px -459px no-repeat; }
+				.BtnGuest a:active {  background: url(/static/img/login-img.png) -437px -495px no-repeat; }
+
+				.BtnContact { position: absolute; left:90px; top: 226px; }
+				.BtnContact a { display: block; width:84px; height: 24px; background: url(/static/img/login-img.png) -497px -423px no-repeat; text-indent: -9999px; }
+				.BtnContact a:hover { background: url(/static/img/login-img.png) -497px -459px no-repeat; }
+				.BtnContact a:active { background: url(/static/img/login-img.png) -497px -495px no-repeat; }
+					
+
+		/* nav papge style */
+
+
+
+
+		/* FancyLoginBox Frame */
+		.FancyLoginBox	{ position: relative; width:560px; height: 320px; background: white; background: url(/static/img/login-img.png) -76px -775px no-repeat;  overflow: hidden; /*border: 1px solid red;*/ }
+		.FancyLoginFrame { position: absolute; right: 0; top: 0; width: 230px; height: 260px; padding: 30px; /*border: 1px solid red;*/ }
+			.FancyLoginFrame .Text_Login { width: 70px; height: 30px; background: url(/static/img/login-img.png) -197px -280px no-repeat; display: block; margin-bottom: 30px }
+			.FancyLoginFrame input { outline: none; }
+			.FancyLoginFrame .inputFrame { width: 200px; height:30px; color:#9e9e9e; margin-bottom: 10px; border: 1px solid #e5e5e5; border-radius: 3px; padding:1px 10px; background:#f2f2f2; }
+			.FancyLoginFrame .stay_sign_in { width: 100%; height: 20px; font-size: 12px; vertical-align: middle; }
+			.FancyLoginFrame .t_forget { width: 49%; vertical-align: middle; display: inline-block; }
+			.FancyLoginFrame .GetBack { width: 45%; vertical-align: middle; display: inline-block; text-align: right; }
+			.FancyLoginFrame .GetBack a{  color: #118799; text-decoration: none; }
+			.FancyLoginFrame .GetBack a:hover { color: #0070c9; }
+			.FancyLoginFrame .errpassword { background: #fce9eb; border: 1px solid #f3b5ba; color:#e12b38; }
+			.FancyLoginFrame .login_errtext { width: 100%; text-align: center; color: #dd2b37; font-size:12px; margin: 5px 0; }
+			.icon_alert { width: 15px; height: 15px; background: #dd2b37; border-radius: 50%; display: inline-block; color: white; text-align: center; line-height: 16px; margin: 0 5px; }
+
+				.BtnLogin { width:100%; height: 40px; background: #118799; border: none; border-radius: 3px; color: white; font-weight: bold; font-size: 16px; font-family: "Helvetica Neue", Helvetica, Arial, Verdana, Gotham, "Microsoft JhengHei", "微軟正黑體", "sans-serif"; margin-top: 10px; }
+				.BtnLogin:hover { background: #1194a5; }
+				.BtnLogin:active { background: #0c7b94; }
+				.BtnClose { position: absolute; right:0; top: 0; z-index: 999; }
+				.BtnClose a{ display: block; width: 24px; height: 24px; text-indent: -9999px; background: url(/static/img/login-img.png) -663px -497px no-repeat; }
+				.BtnClose a:hover { background: url(/static/img/login-img.png) -694px -497px no-repeat; }
+				.BtnClose a:active {  background: url(/static/img/login-img.png) -725px -497px no-repeat; }
+				
+
+
+
+		/* fancybox */
+
+		.fancybox-slide--iframe .fancybox-content {	width: 560px; height: 320px; max-width: 80%; max-height: 80%; margin: 0; }	
+
+
+
+
+
+		/* Left Part */
+		.suggestion_frame { position: absolute; left: 0; top: 55px; display: block; width: 240px; height: 300px; color: white; }
+			.sug { width: 240px; height: 237px; background:rgba(255, 255, 255,0.1); padding-top: 25px;}
+			.icon_pcping { width: 68px; height: 55px; margin: 0 auto; display: block; background: url(/static/img/login-img.png) -76px -72px no-repeat; margin-bottom: 28px }
+			.hr_line { width: 128px; height: 1px; background: rgba(255,255,255, 0.25 ); margin: 0 auto; margin-top: 10px; margin-bottom: 10px; }
+			.RouteNum { width: 200px;height: 50px; margin: 0 auto; display: block; text-align: center; line-height: 27px; font-size: 24px; }
+			.ping_status {display: block; font-size: 12px; color: aquamarine; }
+			.btn_enter { display: block; width: 180px; height: 36px; margin: 0 auto; margin-top: 30px;}
+			.btn_enter a { display: block; width: 180px; height: 36px; color: white; text-decoration: none; font-size: 14px; line-height: 36px; background: url(/static/img/login-img.png) -437px -294px no-repeat; text-align: center; text-shadow: 1px 1px 1px #333; }
+			.btn_enter a:hover { background: url(/static/img/login-img.png) -437px -333px no-repeat; }
+			.btn_enter a:active { background: url(/static/img/login-img.png) -437px -372px no-repeat; text-shadow: -1px -1px 1px #333;}
+		.Nav_MainDownload { position: absolute; left: 0; top:385px; }
+
+
+		
+		/* Right Part */
+		.NavRightframe { position: absolute; right: 0; top: 55px; width:905px; height: 680px;  }
+			.AllRouteTop { border-bottom:1px solid rgba(255, 255,255, 0.15); color:white; font-size: 14px; padding-bottom: 8px; }
+			
+			
+
+	.AllRouteFrame { color: white; padding-left: 10px; padding-top: 10px; margin-bottom: 25px; }
+	.AllRouteFrame li { /*border: 1px solid red;*/ display: block; height: 55px; margin-bottom: 15px; }
+		.Zone { max-width: 900px; overflow: hidden; }
+			.text_zone { font-size: 12px; display:inline-block; overflow: hidden; max-width: 50px; min-width:50px; height: 45px; border: 1px solid rgba( 255, 255, 255,0.1 ); border-top: none; border-bottom: none; line-height: 24px; vertical-align: middle; padding-top: 10px; margin-right: 10px; letter-spacing: 2px; text-align: center;
+				-webkit-writing-mode: vertical-lr;
+						writing-mode: vertical-lr; }
+			.TZ { min-width: 10px; margin: 0 auto; display: block; text-align: center;  }
+
+			
+			.RoutePort { width: 190px; height: 36px; display: inline-block;  margin-top: 8px; margin-right: 10px; }
+			.RoutePort a { width: 190px; height: 36px; color: white; text-decoration: none; display: inline-block; border: 1px solid rgba(255, 255, 255,0.1); border-radius: 5px; line-height: 37px; font-size: 14px; }
+			.RoutePort a:hover { color: black; background: white;  display: inline-block;}
+			
+			.green_bulb { display: inline-block; text-indent: -9999px; width: 10px; height: 10px; border-radius: 50%; margin: 12px 10px ; float: left;
+			background: #71db6c; /* Old browsers */
+			background: -moz-linear-gradient(45deg, #71db6c 1%, #36af6f 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(45deg, #71db6c 1%,#36af6f 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(45deg, #71db6c 1%,#36af6f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71db6c', endColorstr='#36af6f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			}
+
+			.red_bulb { display: inline-block; text-indent: -9999px; width: 10px; height: 10px; border-radius: 50%; margin: 12px 10px ; float: left;
+			background: #e06353; /* Old browsers */
+			background: -moz-linear-gradient(45deg, #e06353 1%, #d52b4f 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(45deg, #e06353 1%,#d52b4f 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(45deg, #e06353 1%,#d52b4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e06353', endColorstr='#d52b4f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			}
+
+
+
+
+			.Ping_ms { float:right; color: #4dba6f; margin-right:10px; }	
+			.CleanMaginR { margin-right: 0px; }
+
+
+	.linksFrame { color: white; padding-left: 10px; padding-top: 20px; height: 300px; }
+	.linksFrame li { display: block; width: 204px; height: 64px; float: left; margin-right: 25px; margin-bottom: 25px;/* border: 1px solid red; */}
+	.linksFrame li:nth-child(4n+0) { margin-right: 0px; /*border-right: 2px solid red;*/ }
+	.linksFrame li:hover { box-shadow:0 0 10px 5px #fff; }
+		.linksFrame li a { display: block; width: 204px; height: 64px; }
+		
+		.link_baidu { display: block; width: 204px; height: 64px; background: url(/static/img/links_01.jpg) center no-repeat; }
+		.link_news163 { display: block; width: 204px; height: 64px; background: url(/static/img/links_02.jpg) center no-repeat; }
+		.link_toutiao { display: block; width: 204px; height: 64px; background: url(/static/img/links_03.jpg) center no-repeat; }
+		.link_hupu { display: block; width: 204px; height: 64px; background: url(/static/img/links_04.jpg) center no-repeat; }
+		.link_sina { display: block; width: 204px; height: 64px; background: url(/static/img/links_05.jpg) center no-repeat; }
+		.link_taobo { display: block; width: 204px; height: 64px; background: url(/static/img/links_06.jpg) center no-repeat; }
+		.link_alipay { display: block; width: 204px; height: 64px; background: url(/static/img/links_07.jpg) center no-repeat; }
+		.link_wechat { display: block; width: 204px; height: 64px; background: url(/static/img/links_08.jpg) center no-repeat; }
+		.link_tenpay { display: block; width: 204px; height: 64px; background: url(/static/img/links_09.jpg) center no-repeat; }
+		.link_hao360 { display: block; width: 204px; height: 64px; background: url(/static/img/links_10.jpg) center no-repeat; }
+	
+
+		
+					
+
+	#MainFt{ width: 100%; min-height:180px; }
+		.FtFrame { width: 1170px; height: 150px; margin: 0 auto; padding: 15px; }
+		.FtFrame li { float: left; font-size: 12px; color: #707070; height: 20px; }
+		.FtFrame li:first-child { margin-right: 170px; margin-left: 20px; display: inline-block; }
+		.FtFrame li:last-child { margin-left: 30px;}
+		.FtFrame li a { text-decoration: none; margin: 0 15px; color: #707070; }
+		.FtFrame li a:hover { color: #0070c9; }
+			.logo_ffield { width:23px; height: 23px; display:block; margin-top: -5px; background: url(/static/img/login-img.png) -200px -72px no-repeat; }
+			.text_ffield { width:100px; height: 23px; display: block; margin-top: -18px; margin-left: 30px;  }
+					
+
+		/* defoult style*/
+			.color_crimson { color:crimson; }
+			.color_glass { color: #4dba6f; }
+			.color_gray { color: gray; }
+			.color_darkorange { color: darkorange; }
+			.color_red { color: red; }
+
+			.T12px { font-size: 12px; }
+			.Float_R{ float:right; }
+
+.guide_btn {
+    float: right;
+    margin-top: 33px;
+}
+
+    .guide_btn a {
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        margin-left: 22px;
+    }
+
+        .guide_btn a:hover {
+            color: yellow;
+        }
+
+    .guide_btn span {
+        height: 26px;
+    }
+
+    .guide_btn p {
+        line-height: 26px;
+        margin: 0 0 0 8px;
+    }
+
+    .guide_btn a, .guide_btn span, .guide_btn p {
+        float: left;
+    }
