@@ -3230,10 +3230,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:80px;height:40px;background:#334c5b;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px;}
-.dl:hover{background:#017bff;}
-.zc{width:80px;height:40px;background:#017bff;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px;}
-.zc:hover{background:#334c5b;}
+.dl{width:80px;height:40px;background:#dccf6a;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#9865c3;}
+.dl:hover{background:#01470f;color:#fff;}
+.zc{width:80px;height:40px;background:#dccf6a;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#549fb8;}
+.zc:hover{background:#01470f;color:#fff;}
 
 .swipslider{
    padding-top:43% !important;

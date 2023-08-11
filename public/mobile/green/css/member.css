@@ -145,11 +145,12 @@ button.finance-btn[_ngcontent-xfs-c1]:not(:first-child) {
 }
 
 button.finance-btn.deposit-btn[_ngcontent-xfs-c1] {
-    background-image: linear-gradient(179deg, #13a2ba, #087c95)
+    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
+    color:#864635;
 }
 
 button.finance-btn.withdraw-btn[_ngcontent-xfs-c1] {
-    background-image: linear-gradient(124deg, #efdaaf, #dbb579)
+    background-image: linear-gradient(to bottom, #6560dc, #7b70e8)
 }
 
 button.finance-btn.transaction-btn[_ngcontent-xfs-c1] {
@@ -202,12 +203,19 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
-    border-radius: 5px;
+    border-radius:10px;
     background-color: transparent;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    align-items: center
+    align-items: center;
+    background:rgba(0, 0, 0, .2);
+    margin-bottom:10px;
+    position: relative;
+   
+}
+.finance-entry-btn-group__btn:hover{
+    background:rgba(0, 0, 0, .5);
 }
 
 .finance-entry-btn-group__btn[_ngcontent-xfs-c1]>mat-icon[_ngcontent-xfs-c1] {
@@ -1921,7 +1929,8 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    align-items: stretch
+    align-items: stretch;
+    background: #0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -2691,43 +2700,43 @@ button.cancel-btn[_ngcontent-way-c22] {
     overflow: hidden;
 }
 .swiper .v1{
-    background:url(../img/banner_1.png) no-repeat;
+    background:url(/mobile/green/images/banner_1.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v2{
-    background:url(../img/banner_2.png) no-repeat;
+    background:url(/mobile/green/images/banner_2.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v3{
-    background:url(../img/banner_3.png) no-repeat;
+    background:url(/mobile/green/images/banner_3.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v4{
-    background:url(../img/banner_4.png) no-repeat;
+    background:url(/mobile/green/images/banner_4.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v5{
-    background:url(../img/banner_5.png) no-repeat;
+    background:url(/mobile/green/images/banner_5.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v6{
-    background:url(../img/banner_6.png) no-repeat;
+    background:url(/mobile/green/images/banner_6.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v7{
-    background:url(../img/banner_7.png) no-repeat;
+    background:url(/mobile/green/images/banner_7.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v8{
-    background:url(../img/banner_8.png) no-repeat;
+    background:url(/mobile/green/images/banner_8.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v9{
-    background:url(../img/banner_9.png) no-repeat;
+    background:url(/mobile/green/images/banner_9.png) no-repeat;
     background-size:351px 200px;
 }
 .swiper .v10{
-    background:url(../img/banner_10.png) no-repeat;
+    background:url(/mobile/green/images/banner_10.png) no-repeat;
     background-size:351px 200px;
 }
 .sw_banner h2{
@@ -2744,17 +2753,18 @@ button.cancel-btn[_ngcontent-way-c22] {
 .sw_jd_n{width:100%;height:14px;border-radius:20px;background:rgba(0, 0, 0, .7); position: relative;}
 .sw_jd_b{width:28%; position:absolute;top:0;left:0;height:14px;;border-radius:20px;background:#fff;}
 .sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:rgba(0, 0, 0, .7);font-size:14px;font-weight:bold;}
-.vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:#132235;border-radius:10px;color:#fff;text-align:center;}
-.vip_centen h2{color:#9efff9;font-size:18px;line-height:44px;}
+.vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:rgba(0, 0, 0, .2);border-radius:10px;color:#fff;text-align:center;}
+.vip_centen h2{color:#fcde50;font-size:18px;line-height:44px;}
 .vip_centen p{line-height:20px;width:96%;font-size:12px;}
 .vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
-.vip_blist{width:110px;height:153px;background:url(../img/vip_b.png) no-repeat;background-size:110px 153px;}
+.vip_blist{width:110px;height:153px;background:url(/mobile/green/images/vip_b.png) no-repeat;background-size:110px 153px;}
 .vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto;}
 .vip_blist p{color:#fff391;margin:5px auto 0 auto;width:70%;padding-top:80px;font-size:14px;text-align:center;}
 .vip_button{
     width: 70%;
     margin: 20px auto 0 auto;
-    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
+    color: #864635;
     height: 48px;
     border-radius: 5px;
     display: block;
@@ -2763,7 +2773,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_list{
     width:95%;
     height:90px;
-    background:#132235;
+    background:#046031;
     border-radius:10px;
     margin:15px auto 0 auto;
     position: relative;
@@ -2788,7 +2798,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:1px;
     height:40px;
     margin-top:25px;
-    background:#26446a;
+    background:rgba(255, 255, 255, .1);
     float:left;
 }
 .email_w{
@@ -2826,7 +2836,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:30px;
     line-height:30px;
     margin-top:10px;
-    color:#a2cce8;
+    color:#c1bd98;
     font-size:12px;
     text-align:right;
 }
@@ -2859,14 +2869,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
 }
 .e_b2{
-    background: linear-gradient(to bottom, #31fff3, #05b3e6);
-    color:#333;
+    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
+    color:#864635;
     width:140px;
     height:40px;
     border-radius:8px;
     text-align:center;
     line-height:40px;
-    color:#333;
     margin:0 10px;
     font-size:15px;
 }
@@ -2910,7 +2919,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 90%;
     height: 70px;
     margin: 15px auto 0 auto;
-    background: #132235;
+    background: #046031;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -2955,7 +2964,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .shop_jt_ico {
     width: 15px;
     height: 15px;
-    background: url(../img/right_ico.png) no-repeat;
+    background: url(/mobile/green/images/right_ico.png) no-repeat;
     background-size: 15px 15px;
 }
 .black{
@@ -2976,7 +2985,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rechare_list{
     width:95%;
     height: 110px;
-    background: #132235;
+    background: #021e05;
     border-radius: 10px;
     margin: 15px auto 0 auto;
     position: relative;
@@ -3004,7 +3013,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:65px;
 }
 .rechare_list .email_w{
-    color:#05b3e6;
+    color:#ffc600;
     font-weight:bold;
     font-size:14px;
 }
@@ -3012,7 +3021,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:60px;
     height:20px;
     border-radius:5px;
-    background:#1e3655;
+    background:rgba(255, 255, 255, .1);
     position:absolute;
     right:10px;
     top:15px;
@@ -3055,7 +3064,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .avatar_sub_title label a{
     width:20px;
     height:20px;
-    background:url(../img/copy_ico.png) no-repeat;
+    background:url(/mobile/green/images/copy_ico.png) no-repeat;
     background-size:20px 20px;
     display: block;
     float:right;
@@ -3088,4 +3097,40 @@ button.cancel-btn[_ngcontent-way-c22] {
     display:none;
     color:#fff;
     height:100%;
+}
+
+.jy_ico{
+    width:30px;
+    height:30px;
+    background:url(/mobile/green/images/jyts.png);
+    background-size:30px 30px;
+    margin-right:10px;
+}
+.tzjl_ico{
+    width:25px;
+    height:25px;
+    background:url(/mobile/green/images/tzjl.png);
+    background-size:25px 25px;
+    margin-right:15px;
+}
+.em_ico{
+    width:30px;
+    height:30px;
+    background:url(/mobile/green/images/email-fill.png);
+    background-size:30px 30px;
+    margin-right:10px;
+}
+.vip_ico{
+    width:30px;
+    height:30px;
+    background:url(/mobile/green/images/f-vip2.png);
+    background-size:30px 30px;
+    margin-right:10px;
+}
+.kf_ico{
+    width:30px;
+    height:30px;
+    background:url(/mobile/green/images/kf_r_ico.png);
+    background-size:30px 30px;
+    margin-right:10px;
 }

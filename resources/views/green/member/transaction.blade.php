@@ -66,7 +66,7 @@
 
 
           {{--loading组件--}}
-          @include('mobile.common.loading')      
+          @include('green.common.loading')      
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -83,7 +83,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('green.common.footer') 
                   
                  
                 </jx-tab-bar>

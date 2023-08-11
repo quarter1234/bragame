@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/member.css">
+    <link rel="stylesheet" href="/mobile/green/css/activity.css">
+    <link rel="stylesheet" href="/mobile/green/css/member.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swiper-bundle.min.css">
     <!-- Used in supported Android browsers -->
  
@@ -19,14 +19,14 @@
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
    
 
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">

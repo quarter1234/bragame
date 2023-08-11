@@ -8,29 +8,28 @@
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/shop.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/share.css">
+    <link rel="stylesheet" href="/mobile/green/css/shop.css">
+    <link rel="stylesheet" href="/mobile/green/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('mobile.common.top_sub')
+        @include('green.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -42,7 +41,7 @@
                 <form method="post" onSubmit="return check_bind(this)" id="form1" action="{{url('mobile/shop/doBind')}}">
                 @csrf
 
-                <div class="bind">
+                <div class="bind" style="margin:70px auto 20px auto;">
                       <h2>PIX Os tipos</h2>
                       <select name="pix_type">
                           <option value="1" selected="selected">CPF</option>

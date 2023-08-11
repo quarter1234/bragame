@@ -169,14 +169,16 @@
     width:94%;
     height:40px;
     border-radius:3px;
-    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+
     line-height:40px;
     text-align:center;
     margin-top:10px;
     margin-left:3%;
     overflow: hidden;
     font-size:16px;
-    color:#000;
+
+    background: linear-gradient(to bottom, #e2d238, #f2bc51);
+    color:#963410;
 }
 
 .draw_top{

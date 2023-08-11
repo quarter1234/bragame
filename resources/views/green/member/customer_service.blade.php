@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/member.css">
+    <link rel="stylesheet" href="/mobile/green/css/activity.css">
+    <link rel="stylesheet" href="/mobile/green/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,14 @@
     <script type="text/javascript" src="/static/js/way.min.js"></script>
    
 
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -45,7 +45,7 @@
                 <div class="kf">
                 <a href="{{ $item['url'] }}">
                   <div class="kf_yq">
-                      <img src="../../mobile/img/dh_ico.png" />
+                      <img src="/mobile/green/images/dh_ico.png" />
                   </div>
                   <div class="kf_text">
                       <h2>WhatsApp suporte</h2>
@@ -60,7 +60,7 @@
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
-                    <img src="../../mobile/img/kf_ico.png" />
+                    <img src="/mobile/green/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
                     <h2>Atendimento ao cliente</h2>

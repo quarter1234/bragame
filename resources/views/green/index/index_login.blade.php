@@ -1,24 +1,24 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;background:#1a2c38;bottom:0;z-index:999; border-radius:10px 10px 0 0;}
-    .tc_top{height:52px;border-bottom:1px solid #293e4c; padding:0 20px; position:relative}
+    .tc{ width:100%;height:600px;position:fixed;background:linear-gradient(to bottom,#01470f,#137c51);bottom:0;z-index:999; border-radius:10px 10px 0 0;}
+    .tc_top{height:52px;border-bottom:1px solid #dccf6a; padding:0 20px; position:relative}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
     .tc_top_list{width:102px;height:40px;text-align:center;line-height:40px;border-radius:10px 10px 0 0; float:left; margin-top:12px; margin-left:10rpx; color:#b1bad3;}
-    .tc_on{background:#2485f8;color:#fff;font-weight:bold;}
+    .tc_on{background:#dccf6a;color:#912a0d;font-weight:bold;}
     .list{width:95%;margin:20px auto;color: #fff;display:none;}
     .list_top,.list_top2{width:270px;height:60px;background:#12202e; border-radius:10px;overflow:hidden;}
     .list_top_l,.list_top_l2{width:127px;height:48px;margin:6px 0 0 5px;border-radius:10px;line-height:48px; text-align:center;float:left;}
     .list_top_l_on{background:#304655;}
     .list_top_l_on2{background:#304655;}
     .list_b,.list_b2{width:100%;height:450px; display:none;}
-    .entry{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
+    .entry{width:100%;height:60px;margin-top:15px; background:rgba(0, 0, 0, 0.5);border-radius:10px; position:relative;}
     .email{position:absolute;left:10px;top:15px}
     .email img{width:30px;height:30px;}
     .sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
     .sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
     .sr_close{position:absolute;top:20px;right:20px;width:20px;height:20px;}
     .sr_close img{width:20px;height:20px;}
-    .pass{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
+    .pass{width:100%;height:60px;margin-top:15px; background:rgba(0, 0, 0, 0.5);border-radius:10px; position:relative;}
     .pass img{width:25px;height:25px;margin-left:2px; margin-top:2px;}
     .pass_sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
     .pass_sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
@@ -33,15 +33,17 @@
     .r2,.r4,.r6{display:none;}
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
-    .login{width:100%;height:50px;background:#007aff;line-height:50px; margin-top:15px;color:#fff; border-radius:5px;font-size:14px;}
-    .login2{width:100%;height:50px;background:#324a5a;line-height:50px; margin-top:15px;color:#fff; border-radius:5px;font-size:14px;}
+    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:linear-gradient(to bottom,#f1bc51,#fde836);
+    color:#912a0d;}
+    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:linear-gradient(to bottom,#f1bc51,#fde836);
+    color:#912a0d;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}
     .yzm{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
     .yzm_left{width:30px;height:30px;position:absolute;top:15px;left:10px;}
     .yzm_left img{width:30px;height:30px;}
     .yzm_sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
-    .yzm_sr input{idth:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff; }
+    .yzm_sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff; }
     .yzm_right{width:80px;height:40px;position:absolute;text-align:center;background:#344e5e;color:#fff;right:10px;top:10px;border-radius:10px;line-height:40px;}
 
   </style>
@@ -70,8 +72,8 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="https://wwv.condebet.com/bx_4/public/static/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="https://wwv.condebet.com/bx_4/public/static/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/green/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/green/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                         <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
@@ -110,8 +112,8 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="https://wwv.condebet.com/bx_4/public/static/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="https://wwv.condebet.com/bx_4/public/static/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/green/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/green/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>
