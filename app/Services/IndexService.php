@@ -49,6 +49,7 @@ class IndexService
         $data['pgRecommend'] = IndexGameCache::getPGRecommend();
         $data['ppRecommend'] = IndexGameCache::getPPRecommend();
         $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
+        $data['getTadaRecommend'] = IndexGameCache::getTadaRecommend();
 
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
         

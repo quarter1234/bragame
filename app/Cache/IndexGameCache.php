@@ -10,6 +10,7 @@ class IndexGameCache
 {
     const PG_RECOMMEND_KEY = "index:game:pg:recommends";
     const PP_RECOMMEND_KEY = "index:game:pp:recommends";
+    const TADA_RECOMMEND_KEY = "index:game:tada:recommends";
     const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
     const USER_LOGIN_CACHE = 'user:login:uid_%s';
     const USER_GAME_CLICK_CACHE = 'user:game:click:game_s%:uid_%s';
@@ -29,6 +30,15 @@ class IndexGameCache
         return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
                 $pgRepo = app()->make(DPgGameRepository::class);
                 return $pgRepo->getGameRecommend(['platform' => 'PP'])->toArray();
+        });
+    }
+
+    public static function getTadaRecommend()
+    {
+        $cacheKey = sprintf(self::TADA_RECOMMEND_KEY);
+        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
+                $pgRepo = app()->make(DPgGameRepository::class);
+                return $pgRepo->getGameRecommend(['platform' => 'JL'])->toArray();
         });
     }
 

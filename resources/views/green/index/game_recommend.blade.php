@@ -43,4 +43,20 @@
         <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
     @endforeach   
     </div>
+
+    {{----}}
+    <div class="game_qb_title">
+        <div class="game_qb_left">
+            <span class="pg_game"></span>In-Tada
+        </div>
+        <div class="game_qb_left" style="text-align:right;">
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(3)">Ver tudo</a>
+        </div>
+    </div>
+    {{--游戏放这里--}}
+    <div class="game_list">
+    @foreach($getTadaRecommend as $item)
+        <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
+    @endforeach   
+    </div>
 </div>
