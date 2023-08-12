@@ -320,6 +320,8 @@ class GameService
         if($betType == 0 || $betType == 2){ // -- 结算
             if($ispayer == 0){ // --未充值的会员不得提现
                 $this->_jlBetOver($betId, $beforeAmount, $user['coin'], $canDraw);
+                $this->jiliRespData['balance'] = $aftercoin;
+                return $this->jiliRespData;
             }
             $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
             $canDraw = Bets::checkBets($user, $isAllUseDraw);
