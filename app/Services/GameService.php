@@ -677,6 +677,8 @@ class GameService
             $ispayer = $user['ispayer'] ?? 0;
             if($ispayer == 0){ // --未充值的会员不得提现
                 $this->_betOver($betId, $beforeAmount, $user['coin'], $canDraw);
+                $this->defauRespData['data']['balance'] = $aftercoin;
+                return $this->defauRespData;
             }
 
             $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
