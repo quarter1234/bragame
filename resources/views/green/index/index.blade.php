@@ -322,10 +322,13 @@
                   <img src="https://wwv.condebet.com/bx_4/public/mobile/img/index_b.png" />
                   <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
+
+            
             {{--loading组件--}}
             @include('green.common.loading')
             @include('green.index.index_login')
             @include('green.common.slide')
+            @include('green.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}

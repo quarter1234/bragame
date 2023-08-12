@@ -13,6 +13,11 @@ class SConfigPicRepository extends Repository
 
     public function getBanners()
     {
-        return $this->model()::where('status', CommonEnum::ENABLE)->orderBy('ord', 'asc')->get();
+        return $this->model()::where('status', CommonEnum::ENABLE)->where('url', '<>', 'index_notice')->orderBy('ord', 'asc')->get();
+    }
+
+    public function getIndexNotice()
+    {
+        return $this->model()::where('status', CommonEnum::ENABLE)->where('url', 'index_notice')->orderBy('ord', 'asc')->first();
     }
 }
