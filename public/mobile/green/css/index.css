@@ -3407,16 +3407,22 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 #pg_load_more{
     padding:5px 10px;
-    background:#1e3655;
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
 }
 #pp_load_more{
     padding:5px 10px;
-    background:#1e3655;
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
     font-size:14px;
 }
 
+#jl_load_more{
+    padding:5px 10px;
+    background:rgba(255, 255, 255, .1);
+    border-radius:5px;
+    font-size:14px;
+}
 
 
 .gg_db{
@@ -3492,6 +3498,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:490px;
     overflow-y:auto;
     margin:10px auto;
+    text-align:center;
 }
 .gg_centen::-webkit-scrollbar-thumb{
     background-color:rgba(0,0,0,.05);

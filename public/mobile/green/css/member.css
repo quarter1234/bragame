@@ -3134,3 +3134,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:30px 30px;
     margin-right:10px;
 }
+
+@media screen and (min-width: 1200px) {
+    .transaction_t{
+        width:50%;
+    }
+    .transaction_b{
+        width:50%;
+    }
+    .email_list{
+        width:50%;
+    }
+}
