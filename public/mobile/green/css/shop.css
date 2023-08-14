@@ -205,7 +205,7 @@
 .draw_c{
     width:100%;
     padding:10px 0;
-    background:#132235;
+    background:rgba(0, 0, 0, .2);
     display:flex;
     position:relative;
 }
@@ -313,8 +313,8 @@
 .braw_b{
     width:89%;
     height:30px;
-    background:linear-gradient(to bottom, #31fff3, #05b3e6);
-    color: #000;
+    background:linear-gradient(to bottom,#f1bc51,#fde836);
+    color:#912a0d;
     line-height:30px;
     border-radius:5px;
     margin-left:20px;
@@ -364,9 +364,13 @@
     }
     .draw_top{
         width:50%;
-        margin:0 auto;
+        margin:70px auto 0 auto;
     }
     .draw_c{
+        width:50%;
+        margin:0 auto;
+    }
+    .draw_bottom{
         width:50%;
         margin:0 auto;
     }

@@ -16,14 +16,14 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #0c192c;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
