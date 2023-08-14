@@ -12,8 +12,8 @@
 </div>
 <div class="xk_b">
     <img src="https://wwv.condebet.com/bx_4/public/mobile/img/share_bottom.png" />
-    <p>1. Onde estd o link do meu convite?Na interface principal do compartilhamento, copie seu link deindicacao e compartilhe, os membros cadastrados dessa forma setornarao seus agentes diretos, e os membros de nivel inferior queeles convidarem sero considerados membros de sua equipe, eassim por diante, eles poderao se desenvolver infinitamente</p>
-    <p>2. Onde posso consultar minha comissao?Na interface principal do compartilhamento, clique em “Referir”para visualizar os detalhes da comissao e receber a comissao.</p>    
+    <p>1. Onde estd o link do meu convite? Na interface principal do compartilhamento, copie seu link deindicacao e compartilhe, os membros cadastrados dessa forma setornarao seus agentes diretos, e os membros de nivel inferior queeles convidarem sero considerados membros de sua equipe, eassim por diante, eles poderao se desenvolver infinitamente</p>
+    <p>2. Onde posso consultar minha comissao? Na interface principal do compartilhamento, clique em “Referir”para visualizar os detalhes da comissao e receber a comissao.</p>    
 </div>
 </div>
 <script>

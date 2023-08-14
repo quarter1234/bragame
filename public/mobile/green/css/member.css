@@ -2889,7 +2889,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_nr{
     width:90%;
     margin:10px auto;
-    background:#132235;
+    background:#046031;
     padding:10px;
     border-radius:10px;
     font-size:16px;
@@ -3138,11 +3138,14 @@ button.cancel-btn[_ngcontent-way-c22] {
 @media screen and (min-width: 1200px) {
     .transaction_t{
         width:50%;
+        margin:0 auto;
     }
     .transaction_b{
         width:50%;
+        margin:0 auto;
     }
     .email_list{
         width:50%;
+        margin:0 auto;
     }
 }

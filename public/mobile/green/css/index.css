@@ -3553,4 +3553,10 @@ button.cancel-btn[_ngcontent-way-c22] {
         border:3px solid #96a554;
         border-radius:10px;
     }
+    .sr{
+        width:90% !important;
+    }
+    .pass_sr{
+        width:90% !important;
+    }
 }
