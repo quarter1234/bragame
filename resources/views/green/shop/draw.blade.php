@@ -47,7 +47,7 @@
 
                     <div class="draw_c">
                       <a href="{{url('mobile/shop/bind')}}">
-                          <div class="draw_img"><img src="../mobile/img/yh_ico.png" /></div>
+                          <div class="draw_img"><img src="/mobile/green/images/yh_ico.png" /></div>
                           <div class="draw_text">
                               <h2>Nova conta bancaria</h2>
                               <p>Adicione uma nova conta bancaria.</p>
@@ -63,7 +63,7 @@
                     <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
-                            <img src="../mobile/img/active_brand.26b0bef9602b57eac72e.png" />
+                            <img src="/mobile/green/images/active_brand.26b0bef9602b57eac72e.png" />
                         </div>
                         <div class="draw_text">
                             <p>VERIFIED</p>

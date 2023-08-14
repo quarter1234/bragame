@@ -184,6 +184,7 @@
 .draw_top{
     width:100%;
     height:40px;
+    margin-top:70px;
 }
 .draw_top_l{
     width:50%;
@@ -197,7 +198,7 @@
     text-align:right;
     padding-right:20px;
     float:right;
-    color:#05b3e6;
+    color:#963410;
     line-height:40px;
     font-weight:700;
 }
@@ -298,7 +299,7 @@
 .braw_d_sr{
     margin-left:20px;
     padding-top:10px;
-    color:#05b3e6;
+    color:#963410;
     font-size:14px;
 }
 .braw_d_sr input {
