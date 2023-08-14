@@ -12,6 +12,8 @@ class UserCache
     const USER_PACKAGE_CACHE = 'user:package:uid_%s';
     const USER_RANK_COIN_CACHE = 'index:user:rank_cache';
 
+    const USER_INDEX_NOTICE_CACHE = 'user:index_notice:uid_%s';
+
     /**
      * 获取配置缓存
      * @param string $key
@@ -24,6 +26,18 @@ class UserCache
         return Cache::remember($cacheKey, config('session.lifetime'), function () use($user){
             return $user['uid'];
         });
+    }
+
+    public static function setIndexNoticeCache($user)
+    {
+        $cacheKey = sprintf(self::USER_INDEX_NOTICE_CACHE, $user['uid']);
+        return cache::put($cacheKey, true, 86400);
+    }
+
+    public static function getIndexNoticeCache($user)
+    {
+        $cacheKey = sprintf(self::USER_INDEX_NOTICE_CACHE, $user['uid']);
+        return cache::get($cacheKey);
     }
 
     public static function setUserPackageCache($user)

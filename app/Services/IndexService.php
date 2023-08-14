@@ -54,11 +54,27 @@ class IndexService
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
         
         $data['bnners'] = $this->picRepo->getBanners();
-        $data['indexNotice'] = $this->picRepo->getIndexNotice();
+        $data['indexNotice'] = $this->getIndexNotice($data['user']);
         $data['ranks'] = UserCache::getRankCoin();
         $data['notice'] = $this->noticeRepo->getNoticeIndex(time());
         
         return $data;
+    }
+
+    public function getIndexNotice($user)
+    {
+        if(!$user) {
+            return false;
+        }
+        
+        $hadShow = UserCache::getIndexNoticeCache($user);
+        if($hadShow) {
+            return false;
+        }
+
+        UserCache::setIndexNoticeCache($user);
+        
+        return $this->picRepo->getIndexNotice();
     }
 
     public function bannerInfo(int $id)
