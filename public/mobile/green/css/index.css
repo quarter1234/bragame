@@ -2071,11 +2071,12 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-jx-icon[_ngcontent-way-c3] {
-    background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/icon_logo01.png);
-    height:22px;
-    width: 91px;
+   /* background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/icon_logo01.png);*/
+   background-image: url(/mobile/green/images/logo11.png);
+    height:30px;
+    width:132px;
     margin-right: 10px;
-    background-size:91px 22px;
+    background-size:132px 30px;
 }
 
 .header-vertical-line[_ngcontent-way-c3] {
@@ -3417,38 +3418,6 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-@media screen and (min-width: 1200px) {
-    .rm {
-        display:flex;
-        justify-content: left;
-    }
-    .rm a{
-        width:10%;
-        margin-left:10px;
-    }
-    .game_list{
-        display:flex;
-        justify-content: left;
-    }
-    .game_list a{
-        width:10%;
-        margin-left:10px;
-    }
-    #qh button{
-        width:20% !important;
-    }
-    .other-live-ctn{
-        display:flex;
-        justify-content: left;
-    }
-    .other-live-ctn a{
-        width:9% !important;
-        margin-left:10px;
-    }
-    .swipslider{
-        padding-top:17% !important;
-    }
-}
 
 .gg_db{
     width:100%;
@@ -3459,7 +3428,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     left:0;
     background:rgba(0, 0, 0, .5);
     overflow: hidden;
-    display:none;
+    display:block;
 }
 
 .gg_tc{
@@ -3524,7 +3493,57 @@ button.cancel-btn[_ngcontent-way-c22] {
     overflow-y:auto;
     margin:10px auto;
 }
+.gg_centen::-webkit-scrollbar-thumb{
+    background-color:rgba(0,0,0,.05);
+    border-radius:10px;
+    -webkit-box-shadow:inset1px1px0rgba(0,0,0,.1);
+    }
 .gg_centen img{
     width:360px;
     height:526px;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .rm {
+        display:flex;
+        justify-content: left;
+    }
+    .rm a{
+        width:10%;
+        margin-left:10px;
+    }
+    .game_list{
+        display:flex;
+        justify-content: left;
+    }
+    .game_list a{
+        width:10%;
+        margin-left:10px;
+    }
+    #qh button{
+        width:20% !important;
+    }
+    .other-live-ctn{
+        display:flex;
+        justify-content: left;
+    }
+    .other-live-ctn a{
+        width:9% !important;
+        margin-left:10px;
+    }
+    .swipslider{
+        padding-top:17% !important;
+    }
+    .gg_tc{
+        width:400px;
+        height:600px;
+        background:linear-gradient(to bottom, #014811, #127c50);
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin:-300px 0 0 -200px;
+        border:3px solid #96a554;
+        border-radius:10px;
+    }
 }

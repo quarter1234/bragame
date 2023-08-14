@@ -9,18 +9,19 @@
 }
 
 .logo {
-    width: 91px;
-    height: 22px;
+    height:30px;
+    width:132px;
     float: left;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
 }
 
 .logo img {
-    width: 91px;
-    height: 22px;
+    height:30px;
+    width:132px;
 }
+
 
 .money {
     width: 201px;
