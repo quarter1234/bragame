@@ -1,4 +1,4 @@
-@if($indexNotice && $indexNotice['status'] == 1)
+@if(Auth::check() && $indexNotice && $indexNotice['status'] == 1)
 <div class="gg_db">
                     <div class="gg_tc">
                         <div class="gg_tc_title">
