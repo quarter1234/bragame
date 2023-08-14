@@ -20,6 +20,7 @@ class DPgGameBets extends BaseMoel
         $platArr = [
             'PGS' => 'PG',
             'PP' => 'PP',
+            'JL' => 'JL',
         ];
 
         return $platArr[$this->attributes['platform']];
