@@ -3148,4 +3148,13 @@ button.cancel-btn[_ngcontent-way-c22] {
         width:50%;
         margin:0 auto;
     }
+    .vip_bottom{
+        width:50%;
+    }
+    .vip_centen{
+        width:50%;
+    }
+    .vip_button{
+        width:50%;
+    }
 }
