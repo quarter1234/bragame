@@ -3057,7 +3057,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 #content_load_more{
     padding: 5px 10px;
-    background: #1e3655;
+    background:rgba(255, 255, 255, .2);
     border-radius: 5px;
 }
 
@@ -3142,7 +3142,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .transaction_b{
         width:50%;
-        margin:0 auto;
+        margin:70px auto 0 auto;
     }
     .email_list{
         width:50%;
