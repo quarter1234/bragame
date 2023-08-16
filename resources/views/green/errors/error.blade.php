@@ -205,12 +205,12 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                   <!---->
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-title">Error Message</div>
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
-                        <div><a style="color:white" href="http://www.baxigame.cn/mobile/pay/recharge">{{$msg}}</a></div>
+                        <div><a style="color:white" href="{{ url('mobile/index') }}">{{$msg}}</a></div>
                         <div><span class="second"></span></div>
 				          </div>
 
                   <div class="bg"></div>
-                  <div class="bgtext">erro de página por favor retorne</div>
+                  <div class="bgtext">{{$msg}}</div>
                 </jx-content-view>
               </jx-safe-area>
             </div>
@@ -229,7 +229,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 
     function change() {
         if (time == 0) {
-            location.href = "http://www.baxigame.cn/mobile/pay/recharge";
+            location.href = "{{ url('mobile/index') }}";
         } else {
             div.innerHTML = '' + time + '';
             time--;
