@@ -24,19 +24,24 @@ class DisplayController extends Controller
         $params = $request->goCheck('display');
         $data['act'] = $params['act'];
         $data['url'] = '';
-        $data['msg'] = 'Request address not found';
-        $resData = $this->displayService->getUrl($user, $params);
         $templateStr = ViewHelper::getTemplate('common.webview');
-        if(!empty($resData)){
-            if($resData['code'] == 0){
-                $data['url'] = $resData['data']['payurl'] ?? '';
-                $data['msg'] = 'success';
+        $resData = $this->displayService->getUrl($user, $params);
+        if($params['act'] == 'post_pay'){
+            $data['msg'] = 'Request address not found';
+            if(!empty($resData)){
+                if($resData['code'] == 0){
+                    $data['url'] = $resData['data']['payurl'] ?? '';
+                    $data['msg'] = 'success';
+                }
+                else{
+                    $data['msg'] = $resData['msg'] ?? '';
+                    $templateStr = ViewHelper::getTemplate('errors.error');
+                }
+            
             }
-            else{
-                $data['msg'] = $resData['msg'] ?? '';
-                $templateStr = ViewHelper::getTemplate('errors.error');
-            }
-        
+        }
+        else{
+            $data['url'] = $resData;
         }
         
         return view($templateStr, $data);
