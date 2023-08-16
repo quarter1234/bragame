@@ -60,7 +60,8 @@ class DisplayService
 
             $body = $response->getBody()->getContents();
             $body = json_decode($body, true);
-            return $body['data']['payurl'] ?? '';
+            // return $body['data']['payurl'] ?? '';
+            return $body;
         }
     }
 
