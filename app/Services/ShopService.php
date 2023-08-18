@@ -224,6 +224,8 @@ class ShopService
             'pix_type' => $params['pix_type'],
         ];
 
+        $user->kyc = 1;
+        $user->save();
         return $this->bankRepo->create($data);
     }
 
