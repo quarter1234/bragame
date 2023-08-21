@@ -1,0 +1,23 @@
+<div class="top">
+    <div class="logo"><img src="/mobile/green/images/logo11.png"/></div>
+    <div class="money" style="float:right;margin-right:10px">
+        <span>R$</span>
+        <span>{{$user['coin']}}</span>
+        <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png" /></div>
+        <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="/mobile/purple/images/qb.png" /></div>
+    </div>
+
+</div>
+<script>
+$(function(){
+    $('.sx').click(function(){
+        location.reload(true)
+    })
+})
+</script>
+<style>
+    .top{
+        z-index:9999;
+        top:0;
+    }
+</style>
