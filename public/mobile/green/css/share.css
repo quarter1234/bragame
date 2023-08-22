@@ -1723,6 +1723,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin:10px auto;
     background:#021e05;
     padding:10px 0;
+    height:500px;
+    overflow-y:auto;
 }
 .recharge_div_t{
     width:100%;
@@ -1760,7 +1762,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
-    padding:0 12px
+    padding:0 12px;
 }
 
 .recharge_kn .recharge_k_n{
