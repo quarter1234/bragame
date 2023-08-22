@@ -105,14 +105,12 @@ div.app-background[_ngcontent-snw-c2] {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: rgba(12, 25, 44, 1)
+    
 }
 
 @supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {
     .header-view__nav-row-wrapper[_ngcontent-snw-c3] {
-        background-color: rgba(255, 255, 255, .1);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
+       
     }
 }
 
