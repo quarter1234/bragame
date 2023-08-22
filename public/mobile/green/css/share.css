@@ -6,12 +6,12 @@
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
     height:30px;
     width:132px;
-    float: left;
     margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
@@ -28,7 +28,6 @@
     height: 32px;
     background:rgba(0, 0, 0, .5);
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;
@@ -1762,6 +1761,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
+    padding:0 12px
 }
 
 .recharge_kn .recharge_k_n{
@@ -1860,7 +1860,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:10px 12px;
+    margin:10px 0px;
     text-align:center;
     line-height:60px;
     color:#000;
