@@ -59,7 +59,7 @@
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="/mobile/purple/images/qb.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/purple/images/qb.png"></div>
                         </div>
                     </span>
                   @else
