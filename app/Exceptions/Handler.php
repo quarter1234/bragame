@@ -102,6 +102,7 @@ class Handler extends ExceptionHandler
         $error = $this->convertExceptionToResponse($exception);
         $exception = FlattenException::create($exception);
 
+        $response['ip'] = env('LOCAL_OUTER_IP', '127.0.0.1');
         $response['status'] = $error->getStatusCode();
         $response['file'] =  $exception->getFile();
         $response['class'] = $exception->getClass();
