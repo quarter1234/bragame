@@ -12,7 +12,7 @@ class UserHelper
 {
     public static function avatar($usericon)
     {
-        return ' https://wwv.condebet.com/bx_4/public/static/head/head_'.$usericon.'.png';
+        return ' https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/head/head_'.$usericon.'.png';
     }
 
     /**

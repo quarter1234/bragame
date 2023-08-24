@@ -5,19 +5,19 @@
     @include('mobile.common.common_title') 
     <base href="/">
    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/share.css">
-    <link rel="stylesheet" href="/mobile/green/css/shop.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/blue/css/share.css">
+    <link rel="stylesheet" href="/mobile/blue/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
 
-    <meta name="theme-color" content="#0C192C">
+    <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -37,7 +37,7 @@
     </style>
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #1e366b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -48,7 +48,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             
-          @include('green.common.top') 
+          @include('blue.common.top') 
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -121,7 +121,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('blue.common.footer') 
                   
                  
                 </jx-tab-bar>

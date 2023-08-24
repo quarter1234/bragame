@@ -6,12 +6,12 @@
 </div>
 {{--
 <div class="down_ico">
-<img src="https://wwv.condebet.com/bx_4/public/mobile/img/down_ico.png" />
+<img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/down_ico.png" />
 </div>
 --}}
 @if($showUserRedPakc)
 <div class="hb">
-<a href="javascript:void(0);" id="redPacket"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/hb.png" /></a>
+<a href="javascript:void(0);" id="redPacket"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/hb.png" /></a>
 </div>
 @endif
 <div class="menu_tc">

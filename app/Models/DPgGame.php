@@ -8,6 +8,6 @@ class DPgGame extends BaseMoel
 
     public function getIconAttribute($value)
     {
-        return 'https://wwv.condebet.com/bx_4/public'.$value;
+        return 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public'.$value;
     }
 }

@@ -6,20 +6,20 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swipeslider.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/mobile/purple/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/index.js"></script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#14092b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -58,7 +58,7 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png"></div>
+                            <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
                             <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/purple/images/qb.png"></div>
                         </div>
                     </span>
@@ -319,7 +319,7 @@
               </div>
             </div>
             <div class="index_bottom">
-                  <img src="https://wwv.condebet.com/bx_4/public/mobile/img/index_b.png" />
+                  <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
                   <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
 
@@ -479,7 +479,7 @@
 
       });
     </script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/scroll.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
     <script>
     $(function() {
         $('.myScroll').myScroll({

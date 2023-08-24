@@ -1,10 +1,10 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;background:linear-gradient(to bottom,#01470f,#137c51);bottom:0;z-index:999; border-radius:10px 10px 0 0;}
+    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#1b3e6f;}
     .tc_top{height:52px;border-bottom:1px solid #dccf6a; padding:0 20px; position:relative}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
     .tc_top_list{width:102px;height:40px;text-align:center;line-height:40px;border-radius:10px 10px 0 0; float:left; margin-top:12px; margin-left:10rpx; color:#b1bad3;}
-    .tc_on{background:#dccf6a;color:#912a0d;font-weight:bold;}
+    .tc_on{background:#469bf2;color:#fff;font-weight:bold;}
     .list{width:95%;margin:20px auto;color: #fff;display:none;}
     .list_top,.list_top2{width:270px;height:60px;background:#12202e; border-radius:10px;overflow:hidden;}
     .list_top_l,.list_top_l2{width:127px;height:48px;margin:6px 0 0 5px;border-radius:10px;line-height:48px; text-align:center;float:left;}
@@ -33,10 +33,10 @@
     .r2,.r4,.r6{display:none;}
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
-    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:linear-gradient(to bottom,#f1bc51,#fde836);
-    color:#912a0d;}
-    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:linear-gradient(to bottom,#f1bc51,#fde836);
-    color:#912a0d;}
+    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:#3262a4;
+    color:#fff;}
+    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:#3262a4;
+    color:#fff;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}
     .yzm{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
@@ -51,7 +51,7 @@
       <div class="tc_top">
               <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
               <div class="tc_top_list">{{ trans('auth.register') }}</div>
-              <div class="close"><img src="https://wwv.condebet.com/bx_4/public/static/images/close.png"></div>      
+              <div class="close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>      
       </div>
       <div class="list" style="display:block;">
           
@@ -60,20 +60,20 @@
           <form method="post" class="login-form ng-untouched ng-pristine ng-valid" onSubmit="return check_login(this)" id="form1" checkby_ruivalidate url="" action="{{url('Public/login')}}" style="margin-top: 30px;">
           @csrf
           <div class="entry">
-                  <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/iphone.png" /></div>
+                  <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
                   <div class="sr" style="left:100px"><input type="text" id="phone" name="phone" onkeyup="checkContent(this)" placeholder="Número" /></div>
-                  <div class="sr_close"><img src="https://wwv.condebet.com/bx_4/public/static/images/close.png"></div>
+                  <div class="sr_close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>
               </div>
               <div class="pass">
-                <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/pass.png" /></div>
+                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/pass.png" /></div>
                 <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" placeholder="Senha" /></div>
-                <div class="pass_show"><img src="https://wwv.condebet.com/bx_4/public/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/green/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/green/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/blue/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/blue/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                         <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
@@ -90,30 +90,30 @@
             <form method="post" action="{{url('Public/register')}}"  class="ruivalidate_form_class" onSubmit="return check_register(this)" id="form_register">
                 @csrf  
                 <div class="pass">
-                <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/zh.png" /></div>
+                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/zh.png" /></div>
                 <div class="pass_sr"><input name="playername" id="playernameRegister" placeholder="Nome do usuário" type="text"/></div>
-                <div class="pass_show"><img src="https://wwv.condebet.com/bx_4/public/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
               </div>  
               <div class="entry">
-                  <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/iphone.png" /></div>
+                  <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
                   <div class="sr" style="left:100px"><input id="phoneRegister" name="phone" onkeyup="checkRegisterContent(this)" type="text" placeholder="Número" /></div>
-                  <div class="sr_close"><img src="https://wwv.condebet.com/bx_4/public/static/images/close.png"></div>
+                  <div class="sr_close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>
               </div>
               <div class="pass">
-                <div class="email"><img src="https://wwv.condebet.com/bx_4/public/static/images/pass.png" /></div>
+                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/pass.png" /></div>
                 <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="Senha" /></div>
-                <div class="pass_show"><img src="https://wwv.condebet.com/bx_4/public/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
               </div>
               {{--<div class="yzm">
-                  <div class="yzm_left"><img src="https://wwv.condebet.com/bx_4/public/static/images/yzm.png" /></div>
+                  <div class="yzm_left"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/yzm.png" /></div>
                   <div class="yzm_sr"><input type="text" placeholder="验证码" /></div>
                   <div class="yzm_right">验证码</div>
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/green/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/green/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/blue/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/blue/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>

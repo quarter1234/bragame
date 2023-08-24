@@ -6,28 +6,28 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swipeslider.css">
-    <link rel="stylesheet" href="https://wwv.condebet.com/bx_4/public/mobile/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/mobile/green/css/index.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/mobile/blue/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/index.js"></script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
-    <meta name="theme-color" content="#033016">
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
-  <body style="color: white; background-color: #04431f;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #1e366b;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -39,8 +39,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('green.common.modal')
-          @include('green.common.modal_sub')
+          @include('blue.common.modal')
+          @include('blue.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -58,8 +58,8 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://wwv.condebet.com/bx_4/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/green/images/qb.png"></div>
+                            <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png"></div>
                         </div>
                     </span>
                   @else
@@ -211,7 +211,7 @@
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://d186gute5mq2g4.cloudfront.net/audio/btn_click.mp3">
+                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/baxi_4/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -298,7 +298,7 @@
             </div>
             <div class="winning-box">
               <div class="news-title clearfix">
-                <img src="https://wwv.condebet.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
+                <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
                   <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
                 </h2>
@@ -319,16 +319,16 @@
               </div>
             </div>
             <div class="index_bottom">
-                  <img src="https://wwv.condebet.com/bx_4/public/mobile/img/index_b.png" />
+                  <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
                   <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
 
             
             {{--loading组件--}}
-            @include('green.common.loading')
-            @include('green.index.index_login')
-            @include('green.common.slide')
-            @include('green.index.notice')
+            @include('blue.common.loading')
+            @include('blue.index.index_login')
+            @include('blue.common.slide')
+            @include('blue.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -479,7 +479,7 @@
 
       });
     </script>
-    <script type="text/javascript" src="https://wwv.condebet.com/bx_4/public/static/js/scroll.js"></script>
+    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
     <script>
     $(function() {
         $('.myScroll').myScroll({

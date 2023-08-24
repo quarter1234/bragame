@@ -6,12 +6,13 @@
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
     height:30px;
     width:132px;
-    float: left;
+
     margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
@@ -28,7 +29,6 @@
     height: 32px;
     background:rgba(0, 0, 0, .5);
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;
@@ -55,7 +55,7 @@
 .qb {
     width: 34px;
     height: 29px;
-    background:#fcde50;
+    background:#489ef6;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -91,7 +91,7 @@
 .centen_tab {
     width: 96%;
     height: 54px;
-    background: #021e05;
+    background:rgba(0, 0, 0, .5);
     margin: 0px auto;
     border-radius: 15px;
     display: flex;
@@ -106,31 +106,30 @@
     border: 1px solid #13202d;
     border-radius: 15px;
     margin: 1px;
-    color:#6a847b;
+    color:#fff;
 }
 .centen_list p{
     margin:0;
     padding:0;
 }
 .centen_on {
-    background:linear-gradient(to bottom,#f1bc51,#fde836);
-    border: 1px solid #3d5767;
-    color:#912a0d;
+    background:#469bf2;
+    color:#fff;
 }
 
-.fx{ width:20px;height:20px;background:url(/mobile/green/images/fx.png) no-repeat;background-size:20px 20px; display:inline-block;margin-top:5px;}
-.dl{width:35px;height:35px;background:url(/mobile/green/images/dl.png) no-repeat;background-size:35px 35px;display:inline-block;margin-top:-4px;}
-.flzh{width:20px;height:20px;background:url(/mobile/green/images/flzh.png) no-repeat;background-size:20px 20px;display:inline-block;margin-top:5px;}
+.fx{ width:20px;height:20px;background:url(/mobile/blue/images/fx.png) no-repeat;background-size:20px 20px; display:inline-block;margin-top:5px;}
+.dl{width:35px;height:35px;background:url(/mobile/blue/images/dl.png) no-repeat;background-size:35px 35px;display:inline-block;margin-top:-4px;}
+.flzh{width:20px;height:20px;background:url(/mobile/blue/images/flzh.png) no-repeat;background-size:20px 20px;display:inline-block;margin-top:5px;}
 .centen_on .fx{
-    background:url(/mobile/green/images/fx_on.png) no-repeat;
+    background:url(/mobile/blue/images/fx_on.png) no-repeat;
     background-size:20px 20px;
 }
 .centen_on .dl{
-    background:url(/mobile/green/images/dl_on.png) no-repeat;
+    background:url(/mobile/blue/images/dl_on.png) no-repeat;
     background-size:35px 35px;
 }
 .centen_on .flzh{
-    background:url(/mobile/green/images/flzh_on.png) no-repeat;
+    background:url(/mobile/blue/images/flzh_on.png) no-repeat;
     background-size:20px 20px;
 }
 .centen_show {
@@ -146,7 +145,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin:0 auto;
-    background:#021e05;
+    background:rgba(0, 0, 0, .2);
 }
 
 .xk p {
@@ -177,7 +176,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background:linear-gradient(to bottom,#705cd6,#876de0);
+    background:#3262a4;
     text-align: center;
     color: #fff;
     float: right;
@@ -191,7 +190,7 @@
 .xk_b {
     width: 100%;
     margin-top: 15px;
-    background: #021e05;
+    background:rgba(0, 0, 0, .5);
     border-radius: 10px;
     overflow: hidden;
     text-align:center;
@@ -406,7 +405,7 @@ div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
 div.jx-app-download-dismiss[_ngcontent-way-c1] {
     width: 44px;
     height: 44px;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px
@@ -432,7 +431,7 @@ div.dialog-header-row[_ngcontent-way-c1] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
 }
 
 div.app-background[_ngcontent-way-c2] {
@@ -448,7 +447,7 @@ div.app-background[_ngcontent-way-c2] {
     user-select: none;
     touch-action: none;
     pointer-events: none;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/pi-xiu.a23ab2aff01478fd81ad.svg);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/pi-xiu.a23ab2aff01478fd81ad.svg);
     background-position: center 20%;
     background-repeat: no-repeat;
     background-size: contain
@@ -577,7 +576,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-jx-icon[_ngcontent-way-c3] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/jx-logo.443c8ffbee580d3672f7.png);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/jx-logo.443c8ffbee580d3672f7.png);
     height: 100%;
     width: 91px;
     margin-right: 10px
@@ -588,7 +587,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-laliga-icon[_ngcontent-way-c3] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
     height: 100%;
     width: 128px;
     margin-left: 10px
@@ -671,20 +670,20 @@ div.app-background[_ngcontent-way-c2] {
 div.message-centre[_ngcontent-way-c3] {
     width: 24px;
     height: 16px;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
 }
 
 div.message-centre.unread[_ngcontent-way-c3] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
 }
 
 button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     width: 28px;
     height: 28px;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -803,7 +802,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)
 }
 
 .more-announcement-icon[_ngcontent-way-c6] {
@@ -813,7 +812,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
 }
 
 div.bulletin-board[_ngcontent-way-c6] {
@@ -859,7 +858,7 @@ div.util-bar-container[_ngcontent-way-c7] {
 }
 
 .daily-gift-logo[_ngcontent-way-c7] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -915,19 +914,19 @@ span.util-btn-icon[_ngcontent-way-c7] {
 }
 
 span.util-btn-icon.deposit[_ngcontent-way-c7] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
 }
 
 span.util-btn-icon.transfer[_ngcontent-way-c7] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/transfer.a1c5b153615b288c7824.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/transfer.a1c5b153615b288c7824.png)
 }
 
 span.util-btn-icon.withdraw[_ngcontent-way-c7] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/withdraw.a41c76f1715915566d01.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/withdraw.a41c76f1715915566d01.png)
 }
 
 span.util-btn-icon.ac[_ngcontent-way-c7] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
 }
 
 div.cs-dialog-icon[_ngcontent-way-c7] {
@@ -937,7 +936,7 @@ div.cs-dialog-icon[_ngcontent-way-c7] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
 }
 
 div.cs-dialog-title[_ngcontent-way-c7] {
@@ -983,7 +982,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 .active-side-menu[_ngcontent-way-c8] {
     color: #fff;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/bg_active.4290af043bcec3617ad5.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bg_active.4290af043bcec3617ad5.png)
 }
 
 .side-menu-item__icon[_ngcontent-way-c8] {
@@ -1009,13 +1008,12 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #c1bd98;
+    color: #3262a4;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1023,7 +1021,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #f1cd46 
+    color: #469bf2  
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1038,43 +1036,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/blue/images/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/blue/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/zfj_ico.png)
+   background-image: url(/mobile/blue/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/sk.png)
+   background-image: url(/mobile/blue/images/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/blue/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/blue/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/blue/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/zfj_on_ico.png)
+   background-image: url(/mobile/blue/images/zfj_on_ico.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/blue/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/blue/images/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -1477,7 +1475,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
 }
 
 .title[_ngcontent-way-c15] {
@@ -1516,42 +1514,42 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
     border-radius: 10px;
     width: 100%;
     padding-bottom: calc((100% * 144 / 314))
 }
 
 .game-1[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/1.94732245082a337d973a.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/1.94732245082a337d973a.png)
 }
 
 .game-6[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/6.f45183d305b4055e0491.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/6.f45183d305b4055e0491.png)
 }
 
 .game-26[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/26.b99820baf827d5c86613.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/26.b99820baf827d5c86613.png)
 }
 
 .game-27[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
 }
 
 .game-28[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/28.5004283522d159495603.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/28.5004283522d159495603.png)
 }
 
 .game-32[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/32.552f1aa9ef799e732bce.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/32.552f1aa9ef799e732bce.png)
 }
 
 .game-43[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
 }
 
 .game-45[_ngcontent-way-c15] {
-   background-image: url(https://wwv.condebet.com/bx_4/public/mobile/img/45.36dd88e459f576fea52e.png)
+   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/45.36dd88e459f576fea52e.png)
 }
 
 .mat-dialog-container {
@@ -1722,8 +1720,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 .recharge_div{
     width:95%;
     margin:10px auto;
-    background:#021e05;
     padding:10px 0;
+    background:rgba(0, 0, 0, .2);
+    height:500px;
+    overflow-y:auto;
 }
 .recharge_div_t{
     width:100%;
@@ -1757,11 +1757,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .recharge_kn{
-    width:100%;
     display:flex;
     justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
+    padding:0 12px;
 }
 
 .recharge_kn .recharge_k_n{
@@ -1844,12 +1844,13 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .recharge_wk{
-    width: 100%;
+    width:100%;
 	overflow-x: auto;
 	overflow-y: hidden;
 	white-space: nowrap;
     display:flex;
     height:80px;
+
 }
 
 .recharge_k{
@@ -1860,10 +1861,10 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:10px 12px;
     text-align:center;
     line-height:60px;
     color:#000;
+    margin-top:12px;
 }
 .recharge_k1{
     display: flex;
