@@ -2604,12 +2604,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
     height:30px;
     width:132px;
-    float: left;
     margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
@@ -2625,7 +2625,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 32px;
     background:rgba(0, 0, 0, .5);
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;

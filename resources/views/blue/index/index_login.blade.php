@@ -1,6 +1,6 @@
 <style>
     .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#1b3e6f;}
-    .tc_top{height:52px;border-bottom:1px solid #dccf6a; padding:0 20px; position:relative}
+    .tc_top{height:52px;border-bottom:1px solid #489ef6; padding:0 20px; position:relative}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
     .tc_top_list{width:102px;height:40px;text-align:center;line-height:40px;border-radius:10px 10px 0 0; float:left; margin-top:12px; margin-left:10rpx; color:#b1bad3;}
