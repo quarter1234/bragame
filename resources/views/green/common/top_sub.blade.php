@@ -16,7 +16,8 @@ $(function(){
         location.reload(true)
     })
     $('.black').click(function(){
-        window.history.go(-1);
+        // window.history.go(-1);
+        window.location.href= "{{url('mobile/index')}}"
     })
 })
 </script>
