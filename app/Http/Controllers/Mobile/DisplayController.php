@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\DisplayRequest;
 use App\Services\DisplayService;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 
 class DisplayController extends Controller
 {
@@ -26,6 +27,7 @@ class DisplayController extends Controller
         $data['url'] = '';
         $templateStr = ViewHelper::getTemplate('common.webview');
         $resData = $this->displayService->getUrl($user, $params);
+        Log::debug("display-getUrl:" . json_encode($resData));
         if($params['act'] == 'post_pay'){
             $data['msg'] = 'Request address not found';
             if(!empty($resData)){
