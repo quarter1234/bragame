@@ -5,7 +5,6 @@ use App\Cache\UserCache;
 use App\Exceptions\BadRequestException;
 use App\Helper\GameHelper;
 use GuzzleHttp\Client;
-use Illuminate\Support\Facades\Log;
 
 class DisplayService
 {
@@ -50,12 +49,6 @@ class DisplayService
                 'peer' => false
             ]); //初始化客户端
 
-            Log::debug("getUrl-post:" . json_encode([        //参数组
-                'amount' => $params['amount'],
-                'id' => $params['id'],
-                'uid' => $user->uid,
-                'token' => $user['token']
-            ]));
             $response = $client->post($this->payConfig['post_pay'], [
                 'form_params' => [        //参数组
                     'amount' => $params['amount'],
