@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/member.css">
+    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
+    <link rel="stylesheet" href="/mobile/blue/css/member.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
     <!-- Used in supported Android browsers -->
  
@@ -19,14 +19,14 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
    
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #1e366b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -37,7 +37,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('green.common.top_sub') 
+          @include('blue.common.top_sub') 
 
             <div class="banner">
 
@@ -111,7 +111,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('blue.common.footer') 
                   
                  
                 </jx-tab-bar>

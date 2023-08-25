@@ -2072,7 +2072,7 @@ div.app-background[_ngcontent-way-c2] {
 
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
-   background-image: url(/mobile/green/images/logo11.png);
+   background-image: url(/mobile/blue/images/logo11.png);
     height:30px;
     width:132px;
     margin-right: 10px;
@@ -3444,12 +3444,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 .gg_tc{
     width:94%;
     height:600px;
-    background:linear-gradient(to bottom, #014811, #127c50);
+    background:linear-gradient(to bottom, #489ef6, #3262a4);
     position:absolute;
     left:50%;
     top:50%;
     margin:-300px 0 0 -48%;
-    border:3px solid #96a554;
     border-radius:10px;
 }
 .gg_tc_title{
@@ -3464,7 +3463,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .gg_tc_title label{
     width:24px;
     height:24px;
-    background:url(/mobile/green/images/gg_gb_ico.png) no-repeat;
+    background:url(/mobile/blue/images/gg_gb_ico.png) no-repeat;
     background-size:24px 24px;
     display:inline-block;
     float:right;

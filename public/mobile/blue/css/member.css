@@ -2603,12 +2603,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
     height:30px;
     width:132px;
-    float: left;
     margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
@@ -2624,7 +2624,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 32px;
     background:rgba(0, 0, 0, .5);
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;
@@ -2651,7 +2650,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb {
     width: 34px;
     height: 29px;
-    background:#fcde50;
+    background:#489ef6;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2762,8 +2761,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .vip_button{
     width: 70%;
     margin: 20px auto 0 auto;
-    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
-    color: #864635;
+    background-image: linear-gradient(to top, #3262a4, #489ef6);
+    color: #fff;
     height: 48px;
     border-radius: 5px;
     display: block;
@@ -2772,7 +2771,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_list{
     width:95%;
     height:90px;
-    background:#046031;
+    background:rgba(0, 0, 0, .2);
     border-radius:10px;
     margin:15px auto 0 auto;
     position: relative;
@@ -2808,6 +2807,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:20px;
     overflow: hidden;
     white-space: nowrap;
+    color:#489ef6;
 }
 .email_wk{
     width:250px;
@@ -2868,8 +2868,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
 }
 .e_b2{
-    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
-    color:#864635;
+    background-image: linear-gradient(to bottom, #489ef6, #3262a4);
+    color:#fff;
     width:140px;
     height:40px;
     border-radius:8px;
@@ -2918,7 +2918,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 90%;
     height: 70px;
     margin: 15px auto 0 auto;
-    background: #046031;
+    background:rgba(0, 0, 0, .2);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -2984,7 +2984,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rechare_list{
     width:95%;
     height: 110px;
-    background: #021e05;
+    background:rgba(0, 0, 0, .4);
     border-radius: 10px;
     margin: 15px auto 0 auto;
     position: relative;
@@ -3012,7 +3012,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:65px;
 }
 .rechare_list .email_w{
-    color:#ffc600;
+    color:#489ef6;
     font-weight:bold;
     font-size:14px;
 }
@@ -3076,7 +3076,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:30px;
     display:flex;
     justify-content:space-between;
-    background:#021e05;
+    background:rgba(0, 0, 0, .4);
     border-radius:40px;
     margin:80px auto 0 auto;
 }
@@ -3088,8 +3088,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
 }
 .transaction_list_on{
-    background:linear-gradient(to bottom,#f1bc51,#fde836);
-    color:#912a0d;
+    background: linear-gradient(to bottom, #489ef6,#3262a4);
+    color:#fff;
 }
 .transaction_b{
     width:100%;

@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('green.common.common_title') 
+    @include('blue.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/member.css">
+    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
+    <link rel="stylesheet" href="/mobile/blue/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,14 @@
     <script type="text/javascript" src="/static/js/way.min.js"></script>
    
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #1e366b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('green.common.top_sub') 
+          @include('blue.common.top_sub') 
 
             <div class="email_h"></div>
 
@@ -45,7 +45,7 @@
                 <div class="kf">
                 <a href="{{ $item['url'] }}">
                   <div class="kf_yq">
-                      <img src="/mobile/green/images/dh_ico.png" />
+                      <img src="/mobile/blue/images/dh_ico.png" />
                   </div>
                   <div class="kf_text">
                       <h2>WhatsApp suporte</h2>
@@ -60,7 +60,7 @@
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
-                    <img src="/mobile/green/images/kf_ico.png" />
+                    <img src="/mobile/blue/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
                     <h2>Atendimento ao cliente</h2>
@@ -93,7 +93,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green.common.footer') 
+                  @include('blue.common.footer') 
                   
                  
                 </jx-tab-bar>

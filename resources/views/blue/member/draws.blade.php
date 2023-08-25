@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/member.css">
+    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
+    <link rel="stylesheet" href="/mobile/blue/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('mobile.common.top_sub') 
+          @include('blue.common.top_sub') 
 
 
             <div class="email_h"></div>
@@ -49,7 +49,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('mobile.common.loading')
+          @include('blue.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -76,7 +76,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('blue.common.footer') 
                   
                  
                 </jx-tab-bar>

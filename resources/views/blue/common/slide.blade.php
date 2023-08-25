@@ -1,8 +1,8 @@
 <div class="menu_on">
-<img src="/mobile/green/images/menu_on.png" />
+<img src="/mobile/blue/images/menu_on.png" />
 </div>
 <div class="kj_kf">
-<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/green/images/kf_ico.png" />
+<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/blue/images/kf_ico.png" />
 </div>
 {{--
 <div class="down_ico">
@@ -20,7 +20,7 @@
             <li>
                 <a href="{{url('mobile/member/vip')}}">
                     <span>
-                        <img src="/mobile/green/images/f-vip.png" />
+                        <img src="/mobile/blue/images/f-vip.png" />
                     </span>
                     <label>VIP Grau</label>
                 </a>
@@ -28,7 +28,7 @@
             <li>
                 <a href="{{url('mobile/member/email')}}">
                 <span>
-                        <img src="/mobile/green/images/email-fill.png" />
+                        <img src="/mobile/blue/images/email-fill.png" />
                     </span>
                     <label>Email</label>
                 </a>
@@ -36,7 +36,7 @@
             <li>
                 <a href="{{url('mobile/member/customerService')}}">
                 <span>
-                        <img src="/mobile/green/images/kf_r_ico.png" />
+                        <img src="/mobile/blue/images/kf_r_ico.png" />
                     </span>
                     <label>Atendimento</label>
                 </a>
@@ -74,7 +74,7 @@
    .menu_right{
         width:200px;
         height:100%;
-        background:#233b5d;
+        background:#244d85;
         position:absolute;
         right:-200px;
         top:0;
