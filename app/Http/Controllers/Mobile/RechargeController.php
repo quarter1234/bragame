@@ -33,4 +33,8 @@ class RechargeController extends Controller
         
         return view(ViewHelper::getTemplate('pay.recharge'), $data);
     }
+
+    public function pageback(){
+        return view(ViewHelper::getTemplate('pay.pageback'));
+    }
 }

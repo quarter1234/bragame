@@ -1020,7 +1020,9 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #b7adf1 
+    color: #b7adf1;
+    background: linear-gradient(to bottom, #1b0f31, #2a184d);
+    border-radius: 0; 
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1719,8 +1721,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 .recharge_div{
     width:95%;
     margin:10px auto;
-    background:rgba(0, 0, 0, .2);
+    background:rgba(255, 255, 255, .1);
     padding:10px 0;
+    height:500px;
+    overflow-y:auto;
 }
 .recharge_div_t{
     width:100%;
@@ -1754,14 +1758,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .recharge_kn{
-    width:100%;
     display:flex;
     justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
-    overflow-y:auto;
     padding:0 10px;
-    height:200px;
 }
 
 .recharge_kn .recharge_k_n{
@@ -1776,15 +1777,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:none;
 }
 .recharge_on .recharge_k_n{
-    background: linear-gradient(to bottom, #e2d238, #f2bc51);
-    color:#963410;
+    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
+    color:#fff;
 }
 .recharge_on .recharge_bz{
-    background:rgba(0, 0, 0, .5);
+    background:#17b234;
     color:#fff;
 }
 .recharge_on .recharge_k_w{
-    background:url(/mobile/green/images/xz_ico.png) no-repeat;
+    background:url(/mobile/purple/images/xz_ico.png) no-repeat;
 }
 
 .recharge_input{
@@ -1900,7 +1901,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:100%;
     position: relative;
     background:rgba(0, 0, 0, .5);
-    color:#963410;
+    color:#fff;
 }
 .recharge_k1 .recharge_k_w{
     background:none;
@@ -1909,17 +1910,37 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:100%;
     height:100%;
     position: relative;
-    background: linear-gradient(to bottom, #e2d238, #f2bc51);
+    /*background: radial-gradient(#9c16d4, #2b22b1);*/
+    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
 }
 .re_on .recharge_k_w{
-    background: url(/mobile/green/images/xz_ico.png) no-repeat;
+    background: url(/mobile/purple/images/xz_ico.png) no-repeat;
     background-repeat: 160px 60px;
 }
 .re_show{
     width:100%;
     display:none;
 }
-
+.fk_ico{
+    width:50px;
+    height:50px;
+    margin:50px auto;
+}
+.fk_ico img{
+    width:50px;
+    height:50px;
+}
+.fk_text_1{
+    width:95%;
+    margin:0 auto;
+    text-align:center;
+}
+.fk_text_1 h2{
+    font-size:18px;
+}
+.fk_text_1 p{
+    font-size:14px;
+}
 @media screen and (min-width: 1200px){
     .recharge_top{
       width:49%;

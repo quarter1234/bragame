@@ -97,8 +97,8 @@ Route::group([
 Route::group([
     'prefix' => 'mobile/pay', 'middleware' => ['auth']
 ], function ($router) {
-    Route::get('recharge ', [RechargeController::class, 'index']);
-    
+    Route::get('recharge', [RechargeController::class, 'index']);
+    Route::get('pageback', [RechargeController::class, 'pageback']);
 });
 
 
