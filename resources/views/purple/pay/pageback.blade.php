@@ -23,8 +23,8 @@
   <body style="color: white; background-color: #14092b;">
       <div class="fk_ico"><img src='/mobile/green/images/dg_yq.png'></div>
       <div class="fk_text_1">
-        <h2>Pagamento efetuado com sucesso！</h2>
-        <p>Seu pagamento foi processado com sucesso。</p>
+        <h2>O pagamento foi aceito！</h2>
+        <p>Por favor, seja paciente。</p>
       </div>
    <script>
    $(function(){
