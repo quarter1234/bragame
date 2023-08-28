@@ -46,9 +46,11 @@
                       <h2>PIX Os tipos</h2>
                       <select name="pix_type">
                           <option value="1" selected="selected">CPF</option>
-                          <option value="2">CNPJ</option>
-                          <option value="3">PHONE</option>
-                          <option value="4">EMAIL</option>
+                          @if($drawcom && $drawcom['title'] != 'paythere')
+                            <option value="2">CNPJ</option>
+                            <option value="3">PHONE</option>
+                            <option value="4">EMAIL</option>
+                          @endif
                       </select>
 
                       <h2>Seu número de conta PIX</h2>
