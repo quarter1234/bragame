@@ -23,4 +23,9 @@ class SPayCfgDrawcomRepository extends Repository
         
         return $model->orderBy('id','desc')->get();
     }
+
+    public function getEnFirstData()
+    {
+        return $this->model()::where('status', CommonEnum::ENABLE)->first();
+    }
 }

@@ -142,6 +142,11 @@ class ShopService
         return $this->drawComRepo->getDataBySvip($svip);
     }
 
+    public function getFirDrawcom()
+    {
+        return $this->drawComRepo->getEnFirstData();
+    }
+
     //获取提现限制
     public function getLimitInfo(int $uid) {
         $mincoin = 0;

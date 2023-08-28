@@ -51,6 +51,7 @@ class ShopController extends Controller
     {
         $data = [];
         $data['user'] = Auth::user();
+        $data['drawcom'] = $this->shopService->getFirDrawcom();
         return view(ViewHelper::getTemplate('shop.bind'), $data);
     }
 
