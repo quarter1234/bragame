@@ -1,7 +1,7 @@
 @foreach($data as $item)
 <div class="email_list">
     <a href="{{ route('mobile.email.info', ['id' => $item['id']]) }}">
-        <img src="/mobile/green/images/email_ico.png" />
+        <img src="/mobile/purple/images/email_ico.png" />
         <div class="email_xx1"></div>
         <div class="email_xx2"></div>
         <div class="email_wk">

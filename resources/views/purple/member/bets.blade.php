@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/member.css">
+    <link rel="stylesheet" href="/mobile/purple/css/activity.css">
+    <link rel="stylesheet" href="/mobile/purple/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,14 @@
     <script type="text/javascript" src="/static/js/way.min.js"></script>
     <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#14092b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #14092b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">

@@ -17,7 +17,7 @@
 .shop_right{width:50px;height:100%;position:absolute;right:0;background:rgba(0, 0, 0, 0.5); display:flex;align-items:center;text-align:center; justify-content:center;}
 .shop_jt_ico{width:25px;height:25px;background:url(/mobile/purple/images/right_ico.png) no-repeat;background-size:25px 25px;}
 .shop_wk a{
-    color:#963410;
+    color:#14092b;
     text-decoration:none;
 }
 
@@ -30,7 +30,7 @@
 .guide_centen{
     width:95%;
     margin:10px auto;
-    background:#021e05;
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
     display:flex;
     justify-content:space-between;
@@ -38,7 +38,7 @@
 .guide_ico{
     width:20px;
     height:20px;
-    background:url(/mobile/green/images/yh_ico.png) no-repeat;
+    background:url(/mobile/purple/images/yh_ico.png) no-repeat;
     background-size:20px 20px;
     margin:12px;
 }
@@ -64,7 +64,7 @@
 .guide_right button{
     width:100%;
     height:30px;
-    background: linear-gradient(to bottom, #e2d238, #f2bc51);
+    background: linear-gradient(to bottom, #fefcfb, #eab9b0);
     color:#963410;
     font-size:12px;
 }
@@ -90,7 +90,7 @@
 .gui_bottom{
     width:95%;
     margin:10px auto 0 auto;
-    background:#021e05;
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
     padding:20px 0;
     overflow: hidden;
@@ -106,11 +106,13 @@
     margin-bottom:10px;
     margin-right:10px;
     text-indent:12px;
+    line-height:20px;
+    padding-left:10px;
 }
 .bind{
     width:95%;
     margin:10px auto 0 auto;
-    background:#046031;
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
     padding:20px 0;
     overflow: hidden;
@@ -177,8 +179,8 @@
     overflow: hidden;
     font-size:16px;
 
-    background: linear-gradient(to bottom, #e2d238, #f2bc51);
-    color:#963410;
+    background: linear-gradient(to bottom, #fefcfb, #eab9b0);
+    color:#14092b;
 }
 
 .draw_top{

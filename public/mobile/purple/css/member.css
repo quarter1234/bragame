@@ -55,7 +55,6 @@ div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.username[_ngcon
 }
 .username label{
     font-size:12px;
-    background:#;
 }
 div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.rebate[_ngcontent-xfs-c1] {
     color: #13a2ba;
@@ -150,7 +149,7 @@ button.finance-btn.deposit-btn[_ngcontent-xfs-c1] {
 }
 
 button.finance-btn.withdraw-btn[_ngcontent-xfs-c1] {
-    background-image: linear-gradient(to bottom, #6560dc, #7b70e8)
+    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
 }
 
 button.finance-btn.transaction-btn[_ngcontent-xfs-c1] {
@@ -1930,13 +1929,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background: #0c5b2c;
+    background: #1b0f31;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #c1bd98;
+    color: #424062;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1944,7 +1943,9 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #f1cd46 
+    color: #b7adf1 !important;
+    background: linear-gradient(to bottom, #1b0f31, #2a184d);
+    border-radius: 0;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1959,43 +1960,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/purple/images/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/purple/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/zfj_ico.png)
+   background-image: url(/mobile/purple/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/sk.png)
+   background-image: url(/mobile/purple/images/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/purple/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/purple/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/purple/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/purple/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/purple/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/purple/images/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -2604,12 +2605,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
     height:30px;
     width:132px;
-    float: left;
     margin-top: 15px;
     margin-right: 10px;
     margin-left: 14px;
@@ -2625,7 +2626,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 32px;
     background:rgba(0, 0, 0, .5);
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;
@@ -2763,8 +2763,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .vip_button{
     width: 70%;
     margin: 20px auto 0 auto;
-    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
-    color: #864635;
+    background: linear-gradient(to bottom, #fefcfb, #eab9b0);
+    color: #14092b;
     height: 48px;
     border-radius: 5px;
     display: block;
@@ -2773,7 +2773,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_list{
     width:95%;
     height:90px;
-    background:#046031;
+    background:rgba(0, 0, 0, .2);
     border-radius:10px;
     margin:15px auto 0 auto;
     position: relative;
@@ -2985,7 +2985,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rechare_list{
     width:95%;
     height: 110px;
-    background: #021e05;
+    background:rgba(0, 0, 0, .2);
     border-radius: 10px;
     margin: 15px auto 0 auto;
     position: relative;
@@ -3077,7 +3077,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:30px;
     display:flex;
     justify-content:space-between;
-    background:#021e05;
+    background:rgba(0, 0, 0, .2);
     border-radius:40px;
     margin:80px auto 0 auto;
 }

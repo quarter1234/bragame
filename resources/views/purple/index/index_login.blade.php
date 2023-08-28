@@ -1,5 +1,5 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;background:linear-gradient(to bottom,#01470f,#137c51);bottom:0;z-index:999; border-radius:10px 10px 0 0;}
+    .tc{ width:100%;height:600px;position:fixed;background:linear-gradient(to bottom,#1b0f31,#2a184d);bottom:0;z-index:999; border-radius:10px 10px 0 0;}
     .tc_top{height:52px;border-bottom:1px solid #dccf6a; padding:0 20px; position:relative}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}

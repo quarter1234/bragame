@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green/css/member.css">
+    <link rel="stylesheet" href="/mobile/purple/css/activity.css">
+    <link rel="stylesheet" href="/mobile/purple/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,14 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/clipboard.min.js"></script>
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#14092b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #14092b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -37,7 +37,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
           
-          @include('green.common.top_sub') 
+          @include('purple.common.top_sub') 
           {{-- Tab --}}
          <div class="transaction_t">
             <div class="transaction_list transaction_list_on">Historico de recargas</div>
@@ -66,7 +66,7 @@
 
 
           {{--loading组件--}}
-          @include('green.common.loading')      
+          @include('purple.common.loading')      
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -83,7 +83,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green.common.footer') 
+                  @include('purple.common.footer') 
                   
                  
                 </jx-tab-bar>

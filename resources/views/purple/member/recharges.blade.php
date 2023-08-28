@@ -37,7 +37,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
           
-          @include('mobile.common.top_sub') 
+          @include('purple.common.top_sub') 
 
 
             <div class="email_h"></div>
@@ -50,7 +50,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('mobile.common.loading')
+          @include('purple.common.loading')
           
           {{--
             <div class="e_bottom">
