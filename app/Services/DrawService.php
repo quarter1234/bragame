@@ -46,10 +46,13 @@ class DrawService
             throw new BadRequestException(['msg' => 'Not found bank info']); 
         }
 
-        RewardHelper::alterCoinLog($user, $handleCoin, GameEnum::PDEFINE['ALTERCOINTAG']['DRAW']);
+        $drawModel = $this->drawRepo->storeDraw($user,$params, $bankInfo);
+        $drawId = $drawModel ? $drawModel['id'] : 0;
+        $title = "发起提现";
+        RewardHelper::alterCoinLog($user, $handleCoin, GameEnum::PDEFINE['ALTERCOINTAG']['DRAW'], 0, $title, 0, $drawId);
         User::updateGameDrawInDraw($user, $handleCoin);
 
-        return $this->drawRepo->storeDraw($user,$params, $bankInfo);
+        return $drawModel;
     }
 
     
