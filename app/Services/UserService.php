@@ -265,7 +265,7 @@ class UserService
         $addCoin = $draw['coin'];
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['DRAW_RETURN'];
         $title = "拒绝提现:" . $addCoin;
-        RewardHelper::alterCoinLog($user, $addCoin, GameEnum::PDEFINE['ALTERCOINTAG']['DOWNRETURN'], $gameId, $title);
+        RewardHelper::alterCoinLog($user, $addCoin, GameEnum::PDEFINE['ALTERCOINTAG']['DOWNRETURN'], $gameId, $title, 0, $draw['id']);
         $this->updateGameDrawInDraw($user, $addCoin);
         $this->userDraw->upDraw($draw['id'], ['status' => 3]);
         return GameEnum::PDEFINE['RET']['SUCCESS'];
