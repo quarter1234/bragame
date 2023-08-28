@@ -69,9 +69,17 @@ class EmailController extends Controller
 
         }
 
-        RewardHelper::addCoinByRate($user->uid, $info->attach[1] ?? 0, $info->rate, GameEnum::PDEFINE['TYPE']['SOURCE']['Mail'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['MAILATTACH']);
+        RewardHelper::addCoinByRate($user->uid, 
+                                    $info->attach[1] ?? 0, 
+                                    $info->rate, 
+                                    GameEnum::PDEFINE['TYPE']['SOURCE']['Mail'], 
+                                    GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['MAILATTACH'], 
+                                    '', 
+                                    false, 
+                                    $info['id']);
         $info->hastake = CommonEnum::ENABLE;
         $info->hasread = CommonEnum::ENABLE;
+        $info->draw_time = time();
         $info->save();
 
         return Result::success();

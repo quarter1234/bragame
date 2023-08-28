@@ -211,9 +211,9 @@ class UserService
         $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_RECHARGE'];
         $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_BUY'];
         $alterlog = "订单到账";
-        RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog);
+        RewardHelper::alterCoinLog($user, $totalcoin, $rewardsType, $gameId, $alterlog, 0, $order['id']);
         // 赠送金额
-        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid, true);
+        RewardHelper::addCoinByRate($uid, $sendcoin, $sendArr, GameEnum::PDEFINE['TYPE']['SOURCE']['BUY'], GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND'], $orderid, true, $order['id']);
         $isfirst = 1; // --首次充值
         $rechargeCount = $this->userRech->getUserRechargeNum($uid);
         if($rechargeCount > 0){

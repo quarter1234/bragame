@@ -188,7 +188,7 @@ class RewardHelper
      * @param $rate
      * @param $actType
      */
-    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '', $optOver = false)
+    public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '', $optOver = false, $relBetId = 0)
     {
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
         if(is_string($rate)){
@@ -243,7 +243,7 @@ class RewardHelper
         if($sendArr[0] > 0) {
             $svip = $parentInfo['svip'] ?? 0;
             $coin = $sendArr[0];
-            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title);
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title, 0, $relBetId);
             LogHelper::addSendLog($parentid, $coin, $actType, 0, 1, 0, $svip);
             if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']){ // 站内信
                 Bets::addUserBetMatch($parentid, '', $coin, 3);
@@ -256,7 +256,7 @@ class RewardHelper
         if($sendArr[1] > 0) {
             $coin = $sendArr[1];
             // 添加提现钱包和背包金额
-            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title);
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title, 0, $relBetId);
             User::updateGameDrawInDraw($parentInfo, $coin);
             LogHelper::addSenddrawLog($parentid, $title, $coin, $actType);
         }
