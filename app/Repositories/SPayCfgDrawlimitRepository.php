@@ -28,6 +28,6 @@ class SPayCfgDrawlimitRepository extends Repository
                 $query->orWhereIn('superuid', $superArr);
             }
 
-        })->orderBy('id','desc')->get();
+        })->orderBy('id','asc')->get();
     }
 }

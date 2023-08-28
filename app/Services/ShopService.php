@@ -187,6 +187,8 @@ class ShopService
                 if($row['totalcoin'] > $totalcoin) {
                     $totalcoin = $row['totalcoin'];
                 }
+
+                break;
             }
         }
         return [
