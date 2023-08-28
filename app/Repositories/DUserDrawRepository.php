@@ -44,7 +44,7 @@ class DUserDrawRepository extends Repository
         $data['tax'] = 0;
         $data['channelid'] = 0;
 
-        $this->create($data);
+        return $this->create($data);
     }
 
     public function getUserAllCoin(int $uid)
