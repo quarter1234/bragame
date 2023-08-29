@@ -2595,20 +2595,20 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
-    width: 91px;
-    height: 22px;
-    float: left;
-    margin-top: 20px;
+    width: 132px;
+    height: 30px;
+    margin-top:15px;
     margin-right: 10px;
     margin-left: 14px;
 }
 
 .logo img {
-    width: 91px;
-    height: 22px;
+    width: 132px;
+    height: 30px;
 }
 
 .money {
@@ -2616,7 +2616,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 32px;
     background: #102230;
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;

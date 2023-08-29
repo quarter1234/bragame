@@ -6,20 +6,20 @@
     color: #fff;
     top: 0;
     left: 0;
+    display:flex;
 }
 
 .logo {
-    width: 91px;
-    height: 22px;
-    float: left;
-    margin-top: 20px;
+    width:132x;
+    height: 30px;
+    margin-top:15px;
     margin-right: 10px;
     margin-left: 14px;
 }
 
 .logo img {
-    width: 91px;
-    height: 22px;
+    width:132x;
+    height: 30px;
 }
 
 .money {
@@ -27,7 +27,6 @@
     height: 32px;
     background: #102230;
     border-radius: 5px;
-    float: left;
     margin: 15px 0 0 10px;
     position: relative;
     line-height: 32px;
@@ -1795,11 +1794,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .recharge_kn{
-    width:100%;
     display:flex;
     justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
+    padding:0 12px;
 }
 
 .recharge_kn .recharge_k_n{
@@ -1897,7 +1896,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:10px 12px;
+    margin:10px 0px;
     text-align:center;
     line-height:60px;
     color:#000;

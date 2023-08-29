@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/index_style03.css?rand=3">
+    <link rel="stylesheet" href="/mobile/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
      <!-- 分离好的样式结束 -->
