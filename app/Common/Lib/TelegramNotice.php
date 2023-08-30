@@ -13,21 +13,24 @@ class TelegramNotice
         $chatId = '-870857264';
         $baseurl = "https://api.telegram.org/bot{$token}/sendMessage";
 
-        $client = new Client([
-            'verify' => false,
-            'timeout' => 30, // Response timeout
-            'connect_timeout' => 30, // Connection timeout
-            'peer' => false
-        ]); //初始化客户端
-
-
-         $client->post($baseurl, [
-            'form_params' => [        //参数组
-                'chat_id' => $chatId,
-                'text' => json_encode($message),
-                // 'parse_mode' => 'Markdown'
-            ],
-        ]);
+        $isStop = env("IS_STOP_TELEGRAM", false);
+        if(!$isStop){
+            $client = new Client([
+                'verify' => false,
+                'timeout' => 30, // Response timeout
+                'connect_timeout' => 30, // Connection timeout
+                'peer' => false
+            ]); //初始化客户端
+    
+    
+             $client->post($baseurl, [
+                'form_params' => [        //参数组
+                    'chat_id' => $chatId,
+                    'text' => json_encode($message),
+                    // 'parse_mode' => 'Markdown'
+                ],
+            ]);
+        }
     }
 
     private static function formatContent(array $messages)
