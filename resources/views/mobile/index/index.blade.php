@@ -59,7 +59,8 @@
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/qb.png"></div>
+                            // <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/qb.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/qb.png"></div>
                         </div>
                     </span>
                   @else
