@@ -2712,3 +2712,26 @@ button.ok-btn[_ngcontent-way-c22] {
 button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(to bottom, #9ea3aa, #59585d)
 }
+
+
+@media screen and (min-width: 1200px) {
+
+    .gg_tp{
+        width:50%;
+        margin:60px auto;
+        position:relative;
+        display: block;
+        padding-top:200px;
+    }
+    .gg_tp img{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        max-width:100%;
+    }
+    .gg_wz_text{
+        width:50%;
+        margin:10px auto;
+    }
+}

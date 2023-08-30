@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/amazeui.min.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/common2.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="/mobile/css/activity.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
@@ -72,10 +72,10 @@
 			{{--活动详情--}}Detalhes do evento
 		</h1>
 	</header>
+ 
+    <div class='gg_tp'><img style="width:100%;height:auto" src="{{ $activity['img'] }}" /></div>
 
-    <div><img style="width:100%;height:auto;" src="{{ $activity['img'] }}" /></div>
-
-	<div style="box-sizing: border-box;padding: 15px;color:white">
+	<div class='gg_wz_text' style="box-sizing: border-box;padding: 15px;color:white">
         {!! $activity['content'] !!}
 	</div>
   <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
