@@ -48,7 +48,7 @@
                         @foreach($channels as $channel)
                           <div class="recharge_k1 re_on">
                               <div class="recharge_k_n">
-                                  <div class="recharge_k_w">
+                                  <div class="recharge_k_w" style="width:160px;">
                                   {{ $channel['title'] }}
                                   </div>
                               </div>

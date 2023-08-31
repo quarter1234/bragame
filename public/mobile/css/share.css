@@ -1773,7 +1773,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 
 .recharge_k_w{
-    width:160px;
+    width:105px;
     height:60px;
     background:url(../img/xz_ico.png) no-repeat;
     background-repeat:160px 60px;
@@ -1894,7 +1894,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:160px;
+    width:105px;
     height:60px;
     border-radius:5px;
     overflow: hidden;
@@ -1951,7 +1951,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .re_on .recharge_k_w{
     background: url(../img/xz_ico.png) no-repeat;
-    background-repeat: 160px 60px;
+    background-position:center right;
 }
 .re_show{
     width:100%;
