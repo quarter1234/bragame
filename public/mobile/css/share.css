@@ -1761,6 +1761,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin:10px auto;
     background:#132235;
     padding:10px 0;
+    height:500px;
+    overflow-y:auto;
 }
 .recharge_div_t{
     width:100%;
