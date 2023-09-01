@@ -38,6 +38,11 @@ class GameService
         "message" => "success",
         "username" => 0,
         "balance" => 0,
+        "currency" => "BRL",
+    ];
+
+    public static $jiliToCurrData = [
+        "America/Sao_Paulo" => "BRL",
     ];
 
     public $jiliErrorCode = [
@@ -75,6 +80,8 @@ class GameService
         $this->coinlog = $coinlog;
         $this->jlRepo = $jlRepo;
         $this->jlbets = $jlbets;
+
+        $this->jiliRespData['currency'] = self::$jiliToCurrData[config('app.timezone')] ?? "BRL";
     }
 
     public function getPGGames(array $params)
