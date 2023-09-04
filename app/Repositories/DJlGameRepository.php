@@ -18,4 +18,11 @@ class DJlGameRepository extends Repository
     public function getJlGameByCode($gameCode){
         return $this->model()::where('game_code', $gameCode)->first();
     }
+
+    public function getGames()
+    {
+        return $this->model()::where('game_status', CommonEnum::ENABLE)
+                    ->orderBy('sort', 'desc')
+                    ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
+    }
 }

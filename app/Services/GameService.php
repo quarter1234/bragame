@@ -89,6 +89,10 @@ class GameService
         return $this->pgRepo->getGames($params);
     }
 
+    public function getTadaGames(){
+        return $this->jlRepo->getGames();
+    }
+
     public function getDPGGameInfo(int $id)
     {
         return $this->pgRepo->find($id);
@@ -326,17 +330,12 @@ class GameService
         $ispayer = $user['ispayer'] ?? 0;
         if($betType == 0 || $betType == 2){ // -- 结算
             if($ispayer == 0){ // --未充值的会员不得提现
-                $this->_jlBetOver($betId, $beforeAmount, $user['coin'], $canDraw);
+                $this->_jlBetOver($betId, $beforeAmount, $aftercoin, $canDraw);
                 $this->jiliRespData['balance'] = $aftercoin;
                 return $this->jiliRespData;
             }
             $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
             $canDraw = Bets::checkBets($user, $isAllUseDraw);
-            $effbet = $betAmount;
-            if($effbet > 0){ // 按照下注的概念，给上级返利
-                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
-            }
-
             AllUseGameDrawCache::removeUserDraw($uid);
         }
 
@@ -372,17 +371,41 @@ class GameService
     }
 
     private function _addJiliBetData(int $uid, array $betParams): array{
-        $game = $this->getJiliGameByCode($betParams['game'] ?? 0);
+        $game = $this->getJiliGameByCode($betParams['game_code'] ?? 0);
         if(!$game){
             return [false, false];
         }
         $gameType = $game->game_type ?? 0;
         $gameName = $game->game_name ?? '';
         $gameId = $game->id ?? 0;
-        $betParams['game_type'] = $gameType;
-        $betParams['game_name'] = $gameName;
-        $betParams['game_id'] = $gameId;
-        $jlBetId = $this->jlbets->insert($betParams);
+        $now = time();
+        $nowStr = Date('Y-m-d H:i:s');
+        $addData = [
+            'bet_type' => isset($betParams['bet_type']) ? $betParams['bet_type'] : 1,
+            'uid' => $uid,
+            'player_id' => isset($betParams['player_id']) ? $betParams['player_id'] : '',
+            'currency' => isset($betParams['currency']) ? $betParams['currency'] : 'BRL',
+            'game_type' => $gameType,
+            'platform' => isset($betParams['platform']) ? $betParams['platform'] : '',
+            'game_code' => isset($betParams['game_code']) ? $betParams['game_code'] : 0,
+            'game_id' => $gameId,
+            'bet_amount' => isset($betParams['bet_amount']) ? $betParams['bet_amount'] : 0,
+            'winlose_amount' => isset($betParams['winlose_amount']) ? $betParams['winlose_amount'] : 0,
+            'valid_amount' => isset($betParams['valid_amount']) ? $betParams['valid_amount'] : 0,
+            'settled_amount' => isset($betParams['settled_amount']) ? $betParams['settled_amount'] : 0,
+            'game_order_id' => isset($betParams['game_order_id']) ? $betParams['game_order_id'] : '',
+            'session_id' => isset($betParams['session_id']) ? $betParams['session_id'] : '',
+            'type' => isset($betParams['type']) ? $betParams['type'] : 0,
+            'session_total_bet' => isset($betParams['session_total_bet']) ? $betParams['session_total_bet'] : 0,
+            'turnover' => isset($betParams['turnover']) ? $betParams['turnover'] : 0,
+            'preserve' => isset($betParams['preserve']) ? $betParams['preserve'] : 0,
+            'bet_time' => isset($betParams['bet_time']) ? $betParams['bet_time'] : $nowStr,
+            'bet_stamp' => isset($betParams['bet_stamp']) ? $betParams['bet_stamp'] : $now,
+            'plat_app' => isset($betParams['plat_app']) ? $betParams['plat_app'] : '',
+            'is_test' => isset($betParams['is_test']) ? $betParams['is_test'] : 0,
+        ];
+
+        $jlBetId = $this->jlbets->insert($addData);
         return [$game, $jlBetId];
     }
 

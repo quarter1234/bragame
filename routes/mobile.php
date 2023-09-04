@@ -28,6 +28,7 @@ Route::group([
     Route::get('getPgs', [GameController::class, 'getPgs']);
     Route::get('getPps', [GameController::class, 'getPps']);
     Route::get('getJls', [GameController::class, 'getJls']);
+    Route::get('getTadas', [GameController::class, 'getTadas']);
     
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });

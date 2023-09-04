@@ -45,6 +45,12 @@ class GameController extends Controller
         return Result::success($res);
     }
 
+    public function getTadas()
+    {
+        $res = $this->gameService->getTadaGames();
+        return Result::success($res);
+    }
+
     /**
      * 获取游戏地址
      * @return mixed

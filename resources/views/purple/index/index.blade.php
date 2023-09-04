@@ -290,6 +290,14 @@
                             </div>
                         </div>
 
+                        {{-- Tada 棋牌 --}}
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab4_content" style="display: none;">
+                            <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
+                        </div>
+
                       </div>
                     </div>
                   </jx-home-game-board>
@@ -418,6 +426,27 @@
                 data.data.data.forEach(element => {
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                   $('#tab3_content_jls').append(itemGame)
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
+        function loadTadaGames(){
+          let page = $('#tada_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getTadas')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#tada_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab4_content_jls').append(itemGame)
                 })
               },
               error: function(jqXHR, textStatus, errorThrown) {
