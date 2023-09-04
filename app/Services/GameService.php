@@ -100,7 +100,7 @@ class GameService
 
     public function getTadaGameInfo(int $id)
     {
-        return $this->jlRepo->find($id)
+        return $this->jlRepo->find($id);
     }
 
     public function getDPGameByCode($gameCode){
