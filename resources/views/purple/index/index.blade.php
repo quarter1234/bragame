@@ -245,7 +245,9 @@
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
 
-                      
+                        <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada1</span></button> 
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
