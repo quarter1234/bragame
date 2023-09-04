@@ -38,6 +38,7 @@ Route::group([
 ], function ($router) {
     Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
     Route::get('pgUrl', [GameController::class, 'getPgUrl']); // 获得游戏登录地址
+    Route::get('tadaUrl', [GameController::class, 'tadaUrl']);
     // 通知
     Route::get('notices', [NoticeController::class, 'notices']);
     Route::get('notice/info', [NoticeController::class, 'show'])->name('mobile.notice.info');

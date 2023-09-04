@@ -447,7 +447,7 @@
                 hideLoading();
                 $('#tada_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
-                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image tada_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                   $('#tab4_content_jls').append(itemGame)
                 })
               },
@@ -483,6 +483,43 @@
               success : function (data) {
                 if(data.code == 200) {
 				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
+                } else {
+                    if(data.code == '400005') {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                    } else {
+                      showModal(data.message);
+                    }
+                }
+
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading();
+                if(jqXHR.responseJSON.code == 400005) {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                  } else {
+                    showModal(jqXHR.responseJSON.message);
+                  }
+
+              }
+          })
+        });
+
+        $(document).on('click', '.tada_game_go', function() {
+          showLoading();
+
+          let gameId = $(this).attr('gameid')
+          $.ajax({
+              url : "{{url('mobile/tadaUrl')}}",
+              type : 'GET',
+              data : {id: parseInt(gameId)},
+              success : function (data) {
+                if(data.code == 200) {
+				          window.location.href= "{{ route('mobile.display', ['act' => 'tada_game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       showModal('Por favor faça login primeiro');

@@ -17,4 +17,8 @@ class CommonEnum
     const INVITE_CODE_KEY = 'invite_code';
     const CACHE_TIME = (60 * 5);
     const CACHE_SHORT_TIME = (60 * 5);
+
+    const GAME_PLAT_SELF = 0;
+    const GAME_PLAT_TADA = 1;
+    const GAME_PLAT_PG = 2;
 }

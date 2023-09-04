@@ -98,6 +98,11 @@ class GameService
         return $this->pgRepo->find($id);
     }
 
+    public function getTadaGameInfo(int $id)
+    {
+        return $this->jlRepo->find($id)
+    }
+
     public function getDPGameByCode($gameCode){
         if(empty($gameCode)){
             return null;

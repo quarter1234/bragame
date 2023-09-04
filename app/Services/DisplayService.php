@@ -38,7 +38,15 @@ class DisplayService
                 throw new BadRequestException(['msg' => 'PG game url err:'. $params['game_code']]);
             }
             return $url;
-        }elseif($params['act'] == 'post_pay') {
+        }
+        elseif($params['act'] == 'tada_game_url') {
+            $url = GameHelper::getJiliGameUrl($user, $params['game_code'] ?? '');
+            if(!$url) {
+                throw new BadRequestException(['msg' => 'tada game url err:'. $params['game_code']]);
+            }
+            return $url;
+        }
+        elseif($params['act'] == 'post_pay') {
 
             lock('pay:recharge:user_'.$user->uid, 5);
             UserCache::getToken($user);

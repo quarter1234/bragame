@@ -35,7 +35,7 @@ class UserGameListener implements ShouldQueue
 
     private function handleGameClick($user, $params)
     {
-        $haveCache = IndexGameCache::getUserGameClickCache($user['uid'], $params['game_id']);
+        $haveCache = IndexGameCache::getUserGameClickCache($user['uid'], $params['game_id'], $params['game_plat']);
         if($haveCache) {
             return false;
         }
@@ -43,7 +43,7 @@ class UserGameListener implements ShouldQueue
         $userGameLogRepo = app()->make(DPgGameUserLogRepository::class);
         $userGameLogRepo->store($user, $params);
 
-        IndexGameCache::setUserGameClickCache($user['uid'], $params['game_id']);
+        IndexGameCache::setUserGameClickCache($user['uid'], $params['game_id'], $params['game_plat']);
     }
 
     private function handleLogin($user, $params)

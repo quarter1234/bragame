@@ -18,6 +18,7 @@ class DPgGameUserLogRepository extends Repository
         $data['coin'] = $user['coin'];
         $data['ip'] = $params['ip'];
         $data['create_time'] = time();
+        $data['game_plat'] = $params['game_plat'] ?? 0;
         
         $this->create($data);
     }

@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
-
+use App\Common\Enum\CommonEnum;
 class GameController extends Controller
 {
     private $gameService;
@@ -67,6 +67,7 @@ class GameController extends Controller
         $params = [];
         $params['ip'] = Request::getClientIp();
         $params['game_id'] = $gameInfo['id'];
+        $params['game_plat'] = CommonEnum::GAME_PLAT_PG;
         
         event(new UserGameEvent($user, $params));
 
@@ -76,4 +77,26 @@ class GameController extends Controller
 
         return Result::success(['code' => $gameInfo['game_code'] ?? '']);
     } 
+
+    public function tadaUrl()
+    {
+        $id = intval(Request::get('id', 0));
+        $gameInfo = $this->gameService->getTadaGameInfo($id);
+        if(!$gameInfo) {
+            return Result::error('not find game');
+        }
+
+        $user = Auth::user();
+        $params = [];
+        $params['ip'] = Request::getClientIp();
+        $params['game_id'] = $gameInfo['id'];
+        $params['game_plat'] = CommonEnum::GAME_PLAT_TADA;
+        
+        event(new UserGameEvent($user, $params));
+        if($user->coin < $gameInfo->en_coin) {
+            return Result::error("Menos de {$gameInfo['en_coin']} moedas");
+        }
+
+        return Result::success(['code' => $gameInfo['game_code'] ?? '']);
+    }
 }

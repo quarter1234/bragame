@@ -13,7 +13,7 @@ class IndexGameCache
     const TADA_RECOMMEND_KEY = "index:game:tada:recommends";
     const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
     const USER_LOGIN_CACHE = 'user:login:uid_%s';
-    const USER_GAME_CLICK_CACHE = 'user:game:click:game_s%:uid_%s';
+    const USER_GAME_CLICK_CACHE = 'user:game:click:game_s%:uid_%s:game_plat_%s';
 
     public static function getPGRecommend()
     {
@@ -64,16 +64,16 @@ class IndexGameCache
         return cache::get($cacheKey);
     }
 
-    public static function setUserGameClickCache($userId, $gameId)
+    public static function setUserGameClickCache($userId, $gameId, $gamePlat)
     {
-        $cacheKey = sprintf(self::USER_GAME_CLICK_CACHE, $gameId, $userId);
+        $cacheKey = sprintf(self::USER_GAME_CLICK_CACHE, $gameId, $userId, $gamePlat);
         // $ttl = (strtotime(date('Y-m-d'))+86400)-time();
         cache::put($cacheKey, true, 120);
     }
 
-    public static function getUserGameClickCache($userId, $gameId)
+    public static function getUserGameClickCache($userId, $gameId, $gamePlat)
     {
-        $cacheKey = sprintf(self::USER_GAME_CLICK_CACHE, $gameId, $userId);
+        $cacheKey = sprintf(self::USER_GAME_CLICK_CACHE, $gameId, $userId, $gamePlat);
         return cache::get($cacheKey);
     }
 }
