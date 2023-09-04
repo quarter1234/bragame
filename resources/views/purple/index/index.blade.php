@@ -468,6 +468,7 @@
         loadPgGames()
         loadPpGames()
         loadJlGames()
+        loadTadaGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
