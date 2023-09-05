@@ -170,13 +170,9 @@
                         <div class="xh_game_centen">
                         <div class="swiper mySwiper1">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
-        <div class="swiper-slide"><a><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/pggame/20230607/bf8f8547500f6d0b5bf244fc1abca7c2.png" /></a></div>
+        @foreach($favorRecommend as $item)
+          <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="pg_game_go" src="{{ $item['icon'] }}" /></a></div>
+        @endforeach 
       </div>
     </div>
                         </div>
