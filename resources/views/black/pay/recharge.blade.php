@@ -16,14 +16,14 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
-    <meta name="theme-color" content="#1e366b">
+    <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #1e366b;">
+  <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">

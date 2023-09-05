@@ -144,8 +144,8 @@ button.finance-btn[_ngcontent-xfs-c1]:not(:first-child) {
 }
 
 button.finance-btn.deposit-btn[_ngcontent-xfs-c1] {
-    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
-    color:#864635;
+    background: radial-gradient(#ef962f, #b56100);
+    color:#fff;
 }
 
 button.finance-btn.withdraw-btn[_ngcontent-xfs-c1] {
@@ -1929,13 +1929,12 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background: #1b0f31;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #424062;
+    color: #cecece;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1943,9 +1942,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #b7adf1 !important;
-    background: linear-gradient(to bottom, #1b0f31, #2a184d);
-    border-radius: 0;
+    color: #ef962f  !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1960,43 +1957,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/black/images/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/zfj_ico.png)
+   background-image: url(/mobile/black/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/sk.png)
+   background-image: url(/mobile/black/images/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/purple/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -3089,8 +3086,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
 }
 .transaction_list_on{
-    background:linear-gradient(to bottom,#f1bc51,#fde836);
-    color:#912a0d;
+    background: radial-gradient(#ef962f, #b56100);
+    color:#fff;
 }
 .transaction_b{
     width:100%;

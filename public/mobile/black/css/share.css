@@ -1731,7 +1731,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 
 .recharge_k_w{
-    width:160px;
+    width:110px;
     height:60px;
     background:url(../img/xz_ico.png) no-repeat;
     background-repeat:160px 60px;
@@ -1773,15 +1773,16 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:none;
 }
 .recharge_on .recharge_k_n{
-    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
+    background: radial-gradient(#ef962f, #b56100);
     color:#fff;
 }
 .recharge_on .recharge_bz{
-    background:#17b234;
+    background:rgba(0, 0, 0, .1);
     color:#fff;
 }
 .recharge_on .recharge_k_w{
-    background:url(/mobile/purple/images/xz_ico.png) no-repeat;
+    background:url(/mobile/black/images/xz_ico.png) no-repeat;
+    background-position:center right;
 }
 
 .recharge_input{
@@ -1853,7 +1854,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:160px;
+    width:110px;
     height:60px;
     border-radius:5px;
     overflow: hidden;
@@ -1866,7 +1867,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:160px;
+    width:110px;
     height:60px;
     border-radius:5px;
     overflow: hidden;
@@ -1906,12 +1907,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:100%;
     height:100%;
     position: relative;
-    /*background: radial-gradient(#9c16d4, #2b22b1);*/
-    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
+    background: radial-gradient(#ef962f, #b56100);
 }
 .re_on .recharge_k_w{
-    background: url(/mobile/purple/images/xz_ico.png) no-repeat;
+    background: url(/mobile/black/images/xz_ico.png) no-repeat;
     background-repeat: 160px 60px;
+    background-position:center right;
 }
 .re_show{
     width:100%;

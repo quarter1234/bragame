@@ -38,7 +38,7 @@
 .guide_ico{
     width:20px;
     height:20px;
-    background:url(/mobile/purple/images/yh_ico.png) no-repeat;
+    background:url(/mobile/black/images/yh_ico.png) no-repeat;
     background-size:20px 20px;
     margin:12px;
 }
@@ -64,8 +64,8 @@
 .guide_right button{
     width:100%;
     height:30px;
-    background: linear-gradient(to bottom, #fefcfb, #eab9b0);
-    color:#963410;
+    background: radial-gradient(#ef962f, #b56100);
+    color:#fff;
     font-size:12px;
 }
 .guide_yh{

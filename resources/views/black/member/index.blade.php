@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/mobile/blue/css/member.css">
+    <link rel="stylesheet" href="/mobile/black/css/member.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/clipboard.min.js"></script>
 
-    <meta name="theme-color" content="#1e366b">
+    <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -48,7 +48,7 @@
   
    
 
-  <body style="color: white; background-color: #1e366b;">
+  <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-xfs-c0="" class="ng-star-inserted">
@@ -147,7 +147,7 @@
                     
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                    <button _ngcontent-xfs-c1="" style="background:#469bf2;color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
+                    <button _ngcontent-xfs-c1="" style="background: linear-gradient(-135deg, #9c16d4, #2b22b1);color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
                           {{--修改密码--}}alterar a senha
                       </button>
 
@@ -166,7 +166,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                  
-                @include('blue.common.footer') 
+                @include('black.common.footer') 
                   
                  
                 </jx-tab-bar>
