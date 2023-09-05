@@ -392,6 +392,7 @@ class GameService
             'currency' => isset($betParams['currency']) ? $betParams['currency'] : 'BRL',
             'game_type' => $gameType,
             'platform' => isset($betParams['platform']) ? $betParams['platform'] : '',
+            'game_name' => $gameName,
             'game_code' => isset($betParams['game_code']) ? $betParams['game_code'] : 0,
             'game_id' => $gameId,
             'bet_amount' => isset($betParams['bet_amount']) ? $betParams['bet_amount'] : 0,
