@@ -331,7 +331,7 @@
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab4_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
                             <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="jl_load_more" page="0" onclick="loadJlGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
 
@@ -527,6 +527,27 @@
           })
         }
 
+        function loadTadaGames(){
+          let page = $('#tada_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getTadas')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#tada_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image tada_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab4_content_jls').append(itemGame)
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -540,6 +561,7 @@
         loadPgGames()
         loadPpGames()
         loadJlGames()
+        loadTadaGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
@@ -552,6 +574,43 @@
               success : function (data) {
                 if(data.code == 200) {
 				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
+                } else {
+                    if(data.code == '400005') {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                    } else {
+                      showModal(data.message);
+                    }
+                }
+
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading();
+                if(jqXHR.responseJSON.code == 400005) {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                  } else {
+                    showModal(jqXHR.responseJSON.message);
+                  }
+
+              }
+          })
+        });
+
+        $(document).on('click', '.tada_game_go', function() {
+          showLoading();
+
+          let gameId = $(this).attr('gameid')
+          $.ajax({
+              url : "{{url('mobile/tadaUrl')}}",
+              type : 'GET',
+              data : {id: parseInt(gameId)},
+              success : function (data) {
+                if(data.code == 200) {
+				          window.location.href= "{{ route('mobile.display', ['act' => 'tada_game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       showModal('Por favor faça login primeiro');
