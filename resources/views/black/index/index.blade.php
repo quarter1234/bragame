@@ -169,12 +169,12 @@
                         </div>
                         <div class="xh_game_centen">
                         <div class="swiper mySwiper1">
-      <div class="swiper-wrapper">
-        @foreach($favorRecommend as $item)
-          <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="pg_game_go" src="{{ $item['icon'] }}" /></a></div>
-        @endforeach 
-      </div>
-    </div>
+                  <div class="swiper-wrapper">
+                    @foreach($favorRecommend as $item)
+                      <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="pg_game_go" src="{{ $item['icon'] }}" /></a></div>
+                    @endforeach 
+                  </div>
+            </div>
                         </div>
                     </div>
                     <div style="width:100%; height:10px;"></div> 
