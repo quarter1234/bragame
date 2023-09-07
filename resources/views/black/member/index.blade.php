@@ -32,6 +32,9 @@
       .shop_jt{
         width:38%;
       }
+      .pc_nav{
+        margin-top:0 !important;
+      }
     }
     [_nghost-xfs-c4] {
     flex: 1 1 auto;
@@ -147,7 +150,7 @@
                     
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                    <button _ngcontent-xfs-c1="" style="background: linear-gradient(-135deg, #9c16d4, #2b22b1);color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
+                    <button _ngcontent-xfs-c1="" style="background:#111e33;color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
                           {{--修改密码--}}alterar a senha
                       </button>
 

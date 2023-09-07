@@ -149,7 +149,7 @@ button.finance-btn.deposit-btn[_ngcontent-xfs-c1] {
 }
 
 button.finance-btn.withdraw-btn[_ngcontent-xfs-c1] {
-    background: linear-gradient(-135deg, #9c16d4, #2b22b1);
+    background: #111e33
 }
 
 button.finance-btn.transaction-btn[_ngcontent-xfs-c1] {
@@ -2886,7 +2886,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_nr{
     width:90%;
     margin:10px auto;
-    background:#046031;
+    background:#111e33;
     padding:10px;
     border-radius:10px;
     font-size:16px;
@@ -3143,7 +3143,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .email_list{
         width:50%;
-        margin:0 auto;
+        margin:10px auto;
     }
     .vip_bottom{
         width:50%;
@@ -3153,5 +3153,16 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .vip_button{
         width:50%;
+    }
+    .email_tit{
+        width:65%;
+        margin:0 auto;
+    }
+    .email_nr{
+        width:65%;
+    }
+    .e_b_hs{
+        width:65%;
+        margin:0 auto;
     }
 }

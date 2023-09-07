@@ -1,10 +1,10 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#1b3e6f;}
-    .tc_top{height:52px;border-bottom:1px solid #489ef6; padding:0 20px; position:relative}
+    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#111e33;}
+    .tc_top{height:40px;width:204px; background:rgba(0, 0, 0, 0.5); margin:20px auto; border-radius:5px;}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
-    .tc_top_list{width:102px;height:40px;text-align:center;line-height:40px;border-radius:10px 10px 0 0; float:left; margin-top:12px; margin-left:10rpx; color:#b1bad3;}
-    .tc_on{background:#469bf2;color:#fff;font-weight:bold;}
+    .tc_top_list{width:102px;height:40px;text-align:center;line-height:40px;border-radius:5px; float:left;color:#666;}
+    .tc_on{background:rgba(255, 255, 255, 0.1);color:#fff;font-weight:bold;}
     .list{width:95%;margin:20px auto;color: #fff;display:none;}
     .list_top,.list_top2{width:270px;height:60px;background:#12202e; border-radius:10px;overflow:hidden;}
     .list_top_l,.list_top_l2{width:127px;height:48px;margin:6px 0 0 5px;border-radius:10px;line-height:48px; text-align:center;float:left;}
@@ -15,13 +15,13 @@
     .email{position:absolute;left:10px;top:15px}
     .email img{width:30px;height:30px;}
     .sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
-    .sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
+    .sr input{height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
     .sr_close{position:absolute;top:20px;right:20px;width:20px;height:20px;}
     .sr_close img{width:20px;height:20px;}
     .pass{width:100%;height:60px;margin-top:15px; background:rgba(0, 0, 0, 0.5);border-radius:10px; position:relative;}
     .pass img{width:25px;height:25px;margin-left:2px; margin-top:2px;}
     .pass_sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
-    .pass_sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
+    .pass_sr input{height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
     .pass_show{position:absolute;top:20px;right:23px;width:20px;height:20px;}
     .pass_show img{margin:0;}
     .remember{width:100%;margin-top:15px;}
@@ -33,10 +33,10 @@
     .r2,.r4,.r6{display:none;}
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
-    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:#3262a4;
-    color:#fff;}
-    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;background:#3262a4;
-    color:#fff;}
+    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
+    color: #fff;}
+    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
+    color: #fff;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}
     .yzm{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
@@ -46,12 +46,17 @@
     .yzm_sr input{width:100%;height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff; }
     .yzm_right{width:80px;height:40px;position:absolute;text-align:center;background:#344e5e;color:#fff;right:10px;top:10px;border-radius:10px;line-height:40px;}
 
+    @media screen and (min-width: 1200px){
+      .tc{ width:40%;height:410px;position:fixed;top:50%;z-index:999; border-radius:10px 10px 0 0; background:#111e33;margin-top:-205px;left:50%;margin-left:-20%;}
+
+    }
+
   </style>
   <div class="tc" style="display: none;">
+  <div class="close"><img src="/mobile/black/images/gb_black.png"></div>      
       <div class="tc_top">
               <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
               <div class="tc_top_list">{{ trans('auth.register') }}</div>
-              <div class="close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>      
       </div>
       <div class="list" style="display:block;">
           
@@ -72,8 +77,8 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/blue/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/blue/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/black/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/black/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                         <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
@@ -112,8 +117,8 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/blue/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/blue/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/black/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/black/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>

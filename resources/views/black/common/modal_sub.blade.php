@@ -1,5 +1,6 @@
 <div class="modal_w_two">
         <div class="modal_w_two modal_sub_content">
+        <div class="kl"></div> 
                <p></p>
                <button class="modal_sub_ok">OK</button>
         </div>
@@ -20,16 +21,23 @@
 .notScroll_two {
     overflow: hidden;
 }
+.kl{
+        width:100px;
+        height:100px;
+        background:url(/mobile/black/images/hs_ico.png) no-repeat;
+        background-size:100px 100px;
+        margin:10px auto;
+    }
 .modal_w_two{
     width:260px;
     padding:10px 0;
-    height:120px;
+    height:220px;
     background:#fff;
     border-radius:10px;
     position:absolute;
     left:50%;
     top:50%;
-    margin:-50px 0 0 -130px;
+    margin:-110px 0 0 -130px;
     text-align:center;
     font-size:14px;
 }

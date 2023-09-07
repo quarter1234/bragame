@@ -94,6 +94,7 @@
                    </jx-content-view>
                 </jx-safe-area>
               </div>
+            
             </div>
 
             
@@ -101,7 +102,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                @include('black.common.footer') 
                   
                  
                 </jx-tab-bar>

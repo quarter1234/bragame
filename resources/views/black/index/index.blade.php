@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('green.common.common_title')
+    @include('black.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -39,8 +39,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('blue.common.modal')
-          @include('blue.common.modal_sub')
+          @include('black.common.modal')
+          @include('black.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -114,7 +114,7 @@
             width:65%;
            }
            .game_list a{
-            width:10%;
+            width:15%;
             margin-right:10px;
             margin-left:0;
            }
@@ -616,9 +616,9 @@
                     }
                 }
 
-                setTimeout(function(){
+             setTimeout(function(){
                   hideLoading();
-                }, 2000)
+                },2000)
               },
               error: function(jqXHR, textStatus, errorThrown) {
                 hideLoading();

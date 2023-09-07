@@ -3228,9 +3228,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:80px;height:40px;background:#dccf6a;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#9865c3;}
+.dl{width:100px;height:40px;background: linear-gradient(to bottom,#ef962f,#b56100);border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
 .dl:hover{background:#01470f;color:#fff;}
-.zc{width:80px;height:40px;background:#dccf6a;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#549fb8;}
+.zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
 .zc:hover{background:#01470f;color:#fff;}
 
 .swipslider{
