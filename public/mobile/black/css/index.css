@@ -1532,7 +1532,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .top {
     width: 100%;
     height: 62px;
-    background: #1a2c38;
+    background: #111e33;
     position: fixed;
     color: #fff;
     top: 0;
@@ -3321,7 +3321,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-image: url(/mobile/black/images/game_pg.png)
 }
 .active-side-menu .game_pg{
-    background-image: url(/mobile/black/images/game_pg_on.png)
+    background-image: url(/mobile/black/images/game_pg.png)
 }
 
 .game_ji{

@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('black.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">

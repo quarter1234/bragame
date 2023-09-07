@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
-    <link rel="stylesheet" href="/mobile/blue/css/member.css">
+    <link rel="stylesheet" href="/mobile/black/css/activity.css">
+    <link rel="stylesheet" href="/mobile/black/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,14 @@
     <script type="text/javascript" src="/static/js/way.min.js"></script>
    
 
-    <meta name="theme-color" content="#1e366b">
+    <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #1e366b;">
+  <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('blue.common.top_sub') 
+          @include('black.common.top_sub') 
 
             <div class="email_h"></div>
 
@@ -45,7 +45,7 @@
                 <div class="kf">
                 <a href="{{ $item['url'] }}">
                   <div class="kf_yq">
-                      <img src="/mobile/blue/images/dh_ico.png" />
+                      <img src="/mobile/black/images/dh_ico.png" />
                   </div>
                   <div class="kf_text">
                       <h2>WhatsApp suporte</h2>
@@ -60,7 +60,7 @@
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
-                    <img src="/mobile/blue/images/kf_ico.png" />
+                    <img src="/mobile/black/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
                     <h2>Atendimento ao cliente</h2>

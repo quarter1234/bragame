@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('green.common.common_title') 
+    @include('black.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('green.common.top_sub')  
+          @include('black.common.top_sub')  
 
 
             <div class="email_h"></div>

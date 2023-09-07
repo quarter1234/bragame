@@ -2597,7 +2597,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .top {
     width: 100%;
     height: 62px;
-    background:rgba(255, 255,255, .1);
+    background:#111e33;
     position: fixed;
     color: #fff;
     top: 0;
@@ -2649,7 +2649,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb {
     width: 34px;
     height: 29px;
-    background:#fcde50;
+    background:#ffb31a;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2760,8 +2760,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .vip_button{
     width: 70%;
     margin: 20px auto 0 auto;
-    background: linear-gradient(to bottom, #fefcfb, #eab9b0);
-    color: #14092b;
+    background: linear-gradient(to bottom,#ef962f,#b56100);
+    color: #fff;
     height: 48px;
     border-radius: 5px;
     display: block;
@@ -2866,8 +2866,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
 }
 .e_b2{
-    background-image: linear-gradient(to bottom, #d3b16c, #ded854);
-    color:#864635;
+    background: linear-gradient(to bottom,#ef962f,#b56100);
+    color:#fff;
     width:140px;
     height:40px;
     border-radius:8px;
@@ -2916,7 +2916,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 90%;
     height: 70px;
     margin: 15px auto 0 auto;
-    background: #046031;
+    background:#111e33;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
