@@ -267,18 +267,20 @@
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
+                          <!---->
+                        <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_qp_ico"></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button> 
+                          <!---->
+                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
-                        <!---->
-                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button>
-                          <!---->
-                        <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_qp_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button>    
+                       
+                             
                      
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
