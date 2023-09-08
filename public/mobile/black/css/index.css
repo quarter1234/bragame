@@ -3773,6 +3773,9 @@ button.cancel-btn[_ngcontent-way-c22] {
         border:3px solid #96a554;
         border-radius:10px;
     }
+    .game_qb_title{
+        font-size:16px;
+    }
     .sr{
         width:90% !important;
     }
