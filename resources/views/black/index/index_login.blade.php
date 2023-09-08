@@ -16,6 +16,9 @@
     .email img{width:30px;height:30px;}
     .sr{width:200px;height:30px;position:absolute;top:15px;left:50px;}
     .sr input{height:30px;background:none; border:none; outline:none;font-size:18px;color:#fff;}
+    input:-internal-autofill-selected{
+      background:#080f19 !important;
+    }
     .sr_close{position:absolute;top:20px;right:20px;width:20px;height:20px;}
     .sr_close img{width:20px;height:20px;}
     .pass{width:100%;height:60px;margin-top:15px; background:rgba(0, 0, 0, 0.5);border-radius:10px; position:relative;}

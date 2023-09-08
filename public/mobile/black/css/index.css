@@ -3229,9 +3229,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 
 .dl{width:100px;height:40px;background: linear-gradient(to bottom,#ef962f,#b56100);border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:#01470f;color:#fff;}
+.dl:hover{background:#ef962f;color:#fff;}
 .zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
-.zc:hover{background:#01470f;color:#fff;}
+.zc:hover{background:#ef962f;color:#fff;}
 
 .swipslider{
    padding-top:43% !important;
@@ -3542,20 +3542,35 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .xh_game_centen img{
     width:90% !important;
+    border-radius:10px;
 }
-
+.generic-background-image{
+    border-radius:10px;
+}
 .menu_body{
     width:100%;
     height:100%;
     position:fixed;
-    background:#000;
+    background:rgba(0, 0, 0, .9);
     color:#fff;
-    display:none;
     z-index:9999;
     top:0;
-    left:0;
+    left:-100%;
 }
 
+/*/deep/ input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 0px transparent inset !important;
+  }
+  input:-internal-autofill-previewed,
+  input:-internal-autofill-selected {
+    -webkit-text-fill-color: #FFFFFF !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+   /deep/ input:-internal-autofill-selected {
+      transition: background-color 5000s ease-in-out 0s !important;
+      background-color: transparent !important;
+  }
+*/
 @keyframes mymover{
     50%{
         transform:rotate(180deg);
@@ -3568,8 +3583,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:20px 20px;
     transform: rotate(0deg);
     transition: all .3s;
-            float:right;
-            margin:20px;
+    float:right;
+    margin:20px;
 
 }
 .black_gb:hover{
@@ -3579,7 +3594,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .black_nav{
     width:90%;
     padding:10px 0;
-    background:rgba(255, 255, 255, .1);
+    background:rgba(17, 30, 51, .8);
     border-radius:0 10px 10px 0;
     overflow: hidden;
     margin-top:80px;
@@ -3770,6 +3785,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .xh_game_centen img{
         width:90% !important;
+        border-radius:10px;
     }
     .tab-bar[_ngcontent-way-c10]{
         display:none;

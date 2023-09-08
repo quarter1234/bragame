@@ -406,9 +406,9 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                 <div _ngcontent-way-c10="" class="tab-bar safe-area-fix-bottom safe-area-fix-left safe-area-fix-right" jxsafeareafixbottom="" jxsafeareafixleft="" jxsafeareafixright="">
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="myFunction()" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}O menu</span>
+                <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/share")}}'">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--cs"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Partilhar</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/activity")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
@@ -416,9 +416,11 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
     </button>
 
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/share")}}'">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--cs"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Partilhar</span>
+
+
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="myFunction()" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}O menu</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
@@ -638,11 +640,11 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
     <script>
     function myFunction() {
-        $('.menu_body').show()
+        $('.menu_body').animate({left:"0"},300)
     }
     $(function(){
       $('.black_gb').click(function(){
-        $('.menu_body').hide()
+        $('.menu_body').animate({left:"-100%"},300)
       })
       $('.black_nav li').click(function(){
         $(this).addClass('black_on').siblings().removeClass('black_on')

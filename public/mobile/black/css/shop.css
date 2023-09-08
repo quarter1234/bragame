@@ -1,10 +1,10 @@
 .shop_top{width:100%;padding-top:10px;}
 .shop_t_text{text-align:center;color:#fff;font-size:18px;}
-.shop_b{width:100%;height:32px;background:url(/mobile/purple/images/shop_top.png) no-repeat center; margin-top:10px; text-align:center;line-height:32px; color:#fff;}
+.shop_b{width:100%;height:32px;background:url(/mobile/black/images/shop_top.png) no-repeat center; margin-top:10px; text-align:center;line-height:32px; color:#fff;}
 .shop_button{width:70%;margin:20px auto 0 auto; background:linear-gradient(to bottom,#ef962f,#b56100);height:48px;border-radius:5px; display: block; color:#fff;}
-.shop_list{width:98%;height:100px;margin:15px auto 0 auto;background:rgba(0, 0, 0, .2); border-radius:10px;overflow: hidden; position: relative;}
-.shop_list span{width:180px;height:32px;margin-top:10px; font-size:12px;display:block;line-height:32px; padding-left:10px;background: linear-gradient(to right, #200e44, #100722); }
-.shop_list p{padding-left:10px;font-size:14px;color:#23c05f;}
+.shop_list{width:98%;height:100px;margin:15px auto 0 auto;background:rgba(255, 255, 255, .1); border-radius:10px;overflow: hidden; position: relative;}
+.shop_list span{width:180px;height:32px;margin-top:10px; font-size:12px;display:block;line-height:32px; padding-left:10px;}
+.shop_list p{padding-left:10px;font-size:14px;color:#ef962f;}
 .shop_list_button{width:25px;height:25px;position:absolute; right:10px;top:10px;background:url(/mobile/black/images/xx1.png) no-repeat;background-size:25px 25px;}
 .shop_list_button2{width:25px;height:25px;position:absolute; right:10px;top:10px;background:url(../img/gth.png) no-repeat;background-size:25px 25px;}
 .shop_wk{width:180px;height:30px;background:linear-gradient(to bottom,#ef962f,#b56100);text-align:center;line-height:30px;color:#fff; position:absolute;right:20px;top:40px; border-radius:10px;}

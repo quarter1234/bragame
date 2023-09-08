@@ -90,9 +90,9 @@
 .centen_tab {
     width: 96%;
     height: 54px;
-    background: #6d6d6d;
+    background:#162335;
     margin: 0px auto;
-    border-radius: 15px;
+    border-radius:10px;
     display: flex;
     justify-content: space-between;
 }
@@ -102,7 +102,7 @@
     text-align: center;
     align-items: center;
     font-size: 14px;
-    border-radius: 15px;
+    border-radius:10px;
     margin: 1px;
     color:#fff;
 }
@@ -143,7 +143,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin:0 auto;
-    background:rgba(0, 0, 0, .3);
+    background:rgba(255, 255, 255, .1);
 }
 
 .xk p {
@@ -159,7 +159,7 @@
 }
 
 .xk_t input {
-    border: 1px #fff dashed;
+    border: 1px #fff solid;
     width: 80%;
     float: left;
     height: 40px;
@@ -188,7 +188,7 @@
 .xk_b {
     width: 100%;
     margin-top: 15px;
-    background: rgba(0, 0, 0, .3);
+    background: rgba(255, 255, 255, .1);
     border-radius: 10px;
     overflow: hidden;
     text-align:center;
