@@ -1,6 +1,6 @@
 <?php
 namespace App\Models;
-
+use App\Common\Enum\CommonEnum;
 class DJlGame extends BaseMoel
 {
     public $timestamps = false;
@@ -8,7 +8,8 @@ class DJlGame extends BaseMoel
 
     public function getIconAttribute($value)
     {
-        return 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public'.$value;
+        $pre = CommonEnum::S3_PATH_ARR[config('view.template')];
+        return $pre.$value;
         // return config('app.url').':82' .  $value;
     }
 }
