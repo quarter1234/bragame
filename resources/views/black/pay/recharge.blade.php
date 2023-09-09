@@ -164,7 +164,7 @@
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
         let payCoin = $('.re_show').eq(index).find('.recharge_kn .recharge_k, .recharge_on').get(0).attr('payCoin')
-        console.log(payCoin)
+        console.log($('.re_show').eq(index).find('.recharge_kn .recharge_k, .recharge_on').get(0))
         let rate = $('.re_show').eq(index).find('.recharge_kn .recharge_k, .recharge_on').get(0).attr('rate')
         let id = $('.re_show').eq(index).find('.recharge_kn .recharge_k, .recharge_on').get(0).attr('itemId')
         $('#recharge_value').val(payCoin)
