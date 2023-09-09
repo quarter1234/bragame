@@ -58,7 +58,13 @@ class ShopService
                     throw new BadRequestException(['msg' => 'please input standard mail']);
                 }
                 break;
-        }  
+        }
+        
+        if(isset($params['id_card'])){
+            if(strlen($params['id_card']) > 14){
+                throw new BadRequestException(['msg' => 'cpf or cnpj Within 14 digits']);
+            }
+        }
     }
 
     /**
@@ -245,6 +251,7 @@ class ShopService
             'status' => 2,
             'phone' => $user->phone,
             'pix_type' => $params['pix_type'],
+            'cardid' => isset($params['id_card']) ? $params['id_card'] : '',
         ];
 
         $user->kyc = 1;
