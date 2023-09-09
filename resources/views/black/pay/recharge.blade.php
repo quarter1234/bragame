@@ -45,37 +45,16 @@
                 <div class="recharge_div">
                       <div class="recharge_div_t">Terms of payment</div>
                       <div class="recharge_wk">
-                        @foreach($channels as $k => $channel)
-                          <div class="recharge_k1 @if($k == 0) re_on @endif">
-                              <div class="recharge_k_n">
-                                  <div class="recharge_k_w">
-                                  {{ $channel['title'] }}
-                                  </div>
-                              </div>
-                          </div>  
-
-                          {{--<div class="recharge_div_t">Top-up amount</div>--}}
-
-                          {{--tab 1--}}
-                          <div class="re_show" @if($k == 0) style="display:block" @else style="display:none" @endif>
-                            <div class="recharge_kn">
-                            @foreach($channel['pages'] as $key => $page)
-                                <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
-                                    <div class="recharge_k_n">
-                                        <div class="recharge_k_w">
-                                        R$ {{ $page['pay_view_coin'] }}
-                                        </div>
-                                        <div class="recharge_bz">
-                                          {{ $page['disrate'] }}
-                                        </div>
+                          @foreach($channels as $k => $channel)
+                            <div class="recharge_k1 @if($k == 0) re_on @endif">
+                                <div class="recharge_k_n">
+                                    <div class="recharge_k_w">
+                                    {{ $channel['title'] }}
                                     </div>
                                 </div>
-                              @endforeach  
-                            </div>
-                          </div>
-
-                        {{--最外层Foreach--}}
-                        @endforeach  
+                            </div>  
+                          {{--最外层Foreach--}}
+                          @endforeach  
 
                                   <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
                                     @csrf
@@ -101,6 +80,29 @@
                                     <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
                                     </form>
                       </div>
+
+                      <div class="recharge_div_t">Top-up amount</div>
+                      @foreach($channels as $k => $channel)
+                          {{--tab 1--}}
+                          <div class="re_show" @if($k == 0) style="display:block;" @else style="display:none;" @endif>
+                            <div class="recharge_kn">
+                            @foreach($channel['pages'] as $key => $page)
+                                <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
+                                    <div class="recharge_k_n">
+                                        <div class="recharge_k_w">
+                                        R$ {{ $page['pay_view_coin'] }}
+                                        </div>
+                                        <div class="recharge_bz">
+                                          {{ $page['disrate'] }}
+                                        </div>
+                                    </div>
+                                </div>
+                              @endforeach  
+                            </div>
+                          </div>
+
+                        {{--最外层Foreach--}}
+                      @endforeach  
                 </div>
               </jx-header-row>
             </div>
