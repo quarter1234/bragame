@@ -46,16 +46,13 @@
                         <div class="recharge_div_t">Terms of payment</div>
                       <div class="recharge_wk">
                         @foreach($channels as $channel)
-                            <div class="recharge_k1 re_on">
-                                <div class="recharge_k_n">
-                                    <div class="recharge_k_w">
-                                    {{ $channel['title'] }}
-                                    </div>
-                                </div>
-                            </div>
-
-                            </div>    
-
+                          <div class="recharge_k1 re_on">
+                              <div class="recharge_k_n">
+                                  <div class="recharge_k_w">
+                                  {{ $channel['title'] }}
+                                  </div>
+                              </div>
+                          </div>  
 
                           <div class="recharge_div_t">Top-up amount</div>
 
@@ -103,7 +100,7 @@
                         
                         <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
                         </form>
-                    </div>
+                      </div>
               </jx-header-row>
             </div>
 
