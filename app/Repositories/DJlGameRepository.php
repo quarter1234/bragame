@@ -29,7 +29,7 @@ class DJlGameRepository extends Repository
     public function getGameFavor()
     {
         return $this->model()::where('game_status', CommonEnum::ENABLE)
-        ->orderBy('id', 'desc')
+        ->orderBy('id', 'asc')
         ->limit(6)
         ->get();
     }
