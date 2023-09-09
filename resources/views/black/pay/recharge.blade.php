@@ -163,7 +163,7 @@
         $(this).addClass('re_on').siblings().removeClass('re_on')
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
-        let selCoin = $('.recharge_kn .recharge_k .recharge_on').attr('payCoin')
+        let payCoin = $('.recharge_kn .recharge_k .recharge_on').attr('payCoin')
         let rate = $('.recharge_kn .recharge_k .recharge_on').attr('rate')
         let id = $('.recharge_kn .recharge_k .recharge_on').attr('itemId')
         $('#recharge_value').val(payCoin)
