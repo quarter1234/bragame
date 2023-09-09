@@ -1,5 +1,5 @@
 <div class="top">
-    <div class="logo"><img src="/mobile/black/images/logo11.png"/></div>
+    {{--<div class="logo"><img src="/mobile/black/images/logo11.png"/></div>--}}
     <div class="money" style="float:right;margin-right:10px">
         <span>R$</span>
         <span>{{$user['coin']}}</span>
@@ -7,6 +7,7 @@
         <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/black/images/qb.png" /></div>
     </div>
 
+    
 </div>
 <script>
 $(function(){
