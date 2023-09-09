@@ -45,8 +45,8 @@
                 <div class="recharge_div">
                       <div class="recharge_div_t">Terms of payment</div>
                       <div class="recharge_wk">
-                        @foreach($channels as $channel)
-                          <div class="recharge_k1 re_on">
+                        @foreach($channels as $k => $channel)
+                          <div class="recharge_k1 @if($k == 0) re_on @endif">
                               <div class="recharge_k_n">
                                   <div class="recharge_k_w">
                                   {{ $channel['title'] }}
@@ -54,10 +54,10 @@
                               </div>
                           </div>  
 
-                          <div class="recharge_div_t">Top-up amount</div>
+                          {{--<div class="recharge_div_t">Top-up amount</div>--}}
 
                           {{--tab 1--}}
-                          <div class="re_show" style="display:block;">
+                          <div class="re_show" style="@if($k == 0) display:block @else display:none @endif">
                             <div class="recharge_kn">
                             @foreach($channel['pages'] as $key => $page)
                                 <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
