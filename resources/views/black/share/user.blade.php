@@ -1,11 +1,11 @@
 <div class="yh_top">
         <div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>
-            <p>Convite nível 1{{--一级邀请--}}</p>
+            <p>nível 1{{--一级邀请--}}</p>
         </div>
         <div class="yh_t_list">
             <h2>{{ $invite['two_grade_count'] }}</h2>
-            <p>Convite nível 2{{--二级邀请--}}</p>
+            <p>nível 2{{--二级邀请--}}</p>
         </div>
 </div>
 

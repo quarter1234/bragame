@@ -54,7 +54,7 @@
                       <input type="password" name="newPassword" id="newPassword" value="" placeholder="Nova Senha" />
 
                   </div>
-                  <button type="submit" class="bind_buttom">Confirme as alterações</button>
+                  <button type="submit" class="bind_buttom" style="margin-left:3%">Confirme as alterações</button>
                </form>
 
               </jx-header-row>

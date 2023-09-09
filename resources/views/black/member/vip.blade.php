@@ -72,9 +72,8 @@
             </div>
             <div class="vip_centen">
               <h2>VIP  Privileges</h2>
-              <p>Weekly Bonus: Login every week to claim Weekly bonus.</p>
-              <p>Monthly Bonus: Login every month to claim Monthly bonus.</p>
-              <p>Level Up Bonus: Upgrade to next level to claim Level upbonus.</p>
+              <p>Upgrade VIP pode aumentar o número de saques</p>
+              <p>A atualização VIP pode aumentar o valor da retirada</p>
             </div>
             <div class="vip_bottom">
 

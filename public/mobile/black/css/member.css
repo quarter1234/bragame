@@ -3134,6 +3134,42 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-right:10px;
 }
 
+.m_cz{
+    width: 30px;
+    height: 30px;
+    background: url(/mobile/black/images/m_cz.png);
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+.m_tx{
+    width: 30px;
+    height: 30px;
+    background: url(/mobile/black/images/m_tx.png);
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+.m_xg{
+    width: 25px;
+    height: 25px;
+    background: url(/mobile/black/images/m_xg.png);
+    background-size: 25px 25px;
+    margin-right: 15px;
+}
+.m_tc{
+    width: 25px;
+    height: 25px;
+    background: url(/mobile/black/images/m_tc.png);
+    background-size: 25px 25px;
+    margin-right: 15px;
+}
+
+.m_vip{
+    width:20px;
+    height:20px;
+    background: url(/mobile/black/images/VIP.png);
+    background-size: 20px 20px;
+    display:inline-block;
+}
 @media screen and (min-width: 1200px) {
     .kf{
         width:65%;

@@ -66,7 +66,7 @@
                                 <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
                                     <div class="recharge_k_n">
                                         <div class="recharge_k_w">
-                                        R$ {{ $page['pay_view_coin'] }}
+                                       <label>R$</label> {{ $page['pay_view_coin'] }}
                                         </div>
                                         <div class="recharge_bz">
                                           {{ $page['disrate'] }}

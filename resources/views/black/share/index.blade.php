@@ -49,22 +49,22 @@
                       <p>Convidar{{--分享--}}</p>
                   </div>
                   <div class="centen_list">
-                      <div class="dl"></div>
+                      <div class="flzh"></div>
                       <p style="margin-top:-5px;">Agente{{--代理--}}</p>
                   </div>
-                  <div class="centen_list">
+                  {{--<div class="centen_list">
                       <div class="flzh"></div>
-                      <p>Membro {{--成员--}}</p>
-                  </div>
+                      <p>Membro 成员</p>
+                  </div>--}}
             </div>
             <div class="centen_show"  style="display:block;" >
-             @include('blue.share.invite') 
+             @include('black.share.invite') 
             </div>
             <div class="centen_show" >
-            @include('blue.share.agent') 
+            @include('black.share.agent') 
             </div>
             <div class="centen_show" >
-            @include('blue.share.user') 
+            @include('black.share.user') 
             </div>
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">

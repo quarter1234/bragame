@@ -171,11 +171,10 @@
     width:94%;
     height:40px;
     border-radius:3px;
-
     line-height:40px;
     text-align:center;
     margin-top:10px;
-    margin-left:3%;
+    margin-left:28%;
     overflow: hidden;
     font-size:16px;
 
@@ -393,7 +392,7 @@
     }
     .bind_buttom{
         width:50%;
-        margin-left:25%;
+        margin-left:28%;
     }
     .guide_yh{
         width:50%;

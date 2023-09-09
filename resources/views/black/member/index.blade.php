@@ -83,7 +83,7 @@
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
                       <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
-                        <p class="avatar_sub_title">VIP :  <span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}"><a></a></label></p> 
+                        <p class="avatar_sub_title"><label class="m_vip"></label>：<span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}"><a></a></label></p> 
                         <style>
                           .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
                           .avatar_sub_title-span{margin-left:0.6rem;margin-right:10px;}
@@ -103,21 +103,33 @@
                   </div>
                   <jx-content-view _ngcontent-xfs-c1="" _nghost-xfs-c7="" class="ng-tns-c1-1">
                    
-                    <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
+                    {{--<div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
-                      {{--充值--}}Recarregar</button>
+                      Recarregar</button>
                         
                         @if(!$bankInfo)
                               <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
                           @else
                             <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/draw") }}'" tabindex="0">
                           @endif
-                      {{--提现--}}Reembolso</button>
+                     Reembolso</button>
 
-                     </div>
+                     </div>--}}
 
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
-                      
+                    <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
+                        <span class="m_cz"></span>
+                        {{--交易记录--}}Recarregar
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button> 
+                        @if(!$bankInfo)
+                          <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">  
+                        @else
+                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/draw") }}'" tabindex="0">
+                        @endif
+                        <span class="m_tx"></span>
+                        {{--交易记录--}}Reembolso
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>     
+
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span class="jy_ico"></span>
                         {{--交易记录--}}Minhas Transações
@@ -148,17 +160,26 @@
                        {{--客服中心--}}Contact Us
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
-
-                    <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                    <button _ngcontent-xfs-c1="" style="background:#111e33;color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
-                          {{--修改密码--}}alterar a senha
-                      </button>
-
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
-                        {{--<span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"> </span>--}}
+                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
+                      <span class="m_xg"></span>
+                       {{--客服中心--}}alterar a senha
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>                      
                         
-                        {{--退出账号--}}Saia da conta
-                      </button>
+                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
+                      <span class="m_tc"></span>
+                       {{--客服中心--}}Saia da conta
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+
+                        {{--<div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
+                    <button _ngcontent-xfs-c1="" style="background:#111e33;color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
+                          修改密码
+                      </button>--}}
+
+                      {{--<button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
+                        <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"> </span>
+                        
+                        退出账号Saia da conta
+                      </button>--}}
                      </div>
 
                   </jx-content-view>
