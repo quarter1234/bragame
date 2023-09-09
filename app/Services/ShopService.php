@@ -147,6 +147,21 @@ class ShopService
         return $this->drawComRepo->getEnFirstData();
     }
 
+    public function isNeedCardId()
+    {
+        $needPlat = [
+            'cashpay',
+        ];
+        $collection = $this->drawComRepo->getAllData();
+        foreach($collection as $item){
+            if(in_array($item->title, $needPlat)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     //获取提现限制
     public function getLimitInfo(int $uid) {
         $mincoin = 0;

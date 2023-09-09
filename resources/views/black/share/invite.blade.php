@@ -15,7 +15,7 @@
     <p>1. Link de convite Copie seu link de recomendação na interface de compartilhamento principal e compartilhe-o, para que os membros registrados se tornem seus agentes diretos e os membros de nível inferior que eles convidarem sejam considerados membros de sua equipe</p>
     <p>2. Recomende que mais jogadores interajam juntos, convide jogadores maiores de 18 anos.</p>    
 </div>
-</div>
+
 <div class="yh_top">
         <div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>

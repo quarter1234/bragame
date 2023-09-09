@@ -52,6 +52,7 @@ class ShopController extends Controller
         $data = [];
         $data['user'] = Auth::user();
         $data['drawcom'] = $this->shopService->getFirDrawcom();
+        $data['is_need_cardid'] = $this->shopService->isNeedCardId();
         return view(ViewHelper::getTemplate('shop.bind'), $data);
     }
 

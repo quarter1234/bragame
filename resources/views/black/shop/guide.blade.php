@@ -59,13 +59,13 @@
                </div>
                @endforeach  
 
-                <div class="gui_bottom">
+                {{--<div class="gui_bottom">
                     <h2>KYC Guidelines</h2>
                     <p>1. Once the ID card has been verifed, it cannot bechanged.</p>
                     <p>2. a person or entity that maintains an account orhas a business relationship with the reportingentity</p>
                     <p>3. Benefciaries of transactions conducted byprofessional intermediaries such as stockbrokers.CharteredAccountants, or solicitors, as permittedunder the law.</p>
                     <p>4. any person or entity connected with a fnancialtransaction that can pose signifcant reputationalor otherrisks to the bank, for example, a wiretransfer or issue of a high-value demand draft asa singletransaction.</p>
-                </div>        
+                </div> --}}       
               </jx-header-row>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">

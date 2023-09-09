@@ -63,9 +63,9 @@
             <div class="centen_show" >
             @include('black.share.agent') 
             </div>
-            <div class="centen_show" >
+            {{--<div class="centen_show" >
             @include('black.share.user') 
-            </div>
+            </div>--}}
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
@@ -89,8 +89,8 @@
           })
           $('.times_list').click(function(){
             $(this).addClass('times_on').siblings().removeClass('times_on')
-            var index1 =$(this).index()
-             $('.times_div').hide().eq(index1).show()
+            var index2 =$(this).index()
+             $('.times_div').hide().eq(index2).show()
           })
         })
     </script>          

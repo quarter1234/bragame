@@ -8,28 +8,28 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green/css/share.css">
-    <link rel="stylesheet" href="/mobile/green/css/shop.css">
+    <link rel="stylesheet" href="/mobile/black/css/share.css">
+    <link rel="stylesheet" href="/mobile/black/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('green.common.top_sub')
+        @include('black.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>

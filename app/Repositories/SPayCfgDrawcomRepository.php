@@ -13,6 +13,12 @@ class SPayCfgDrawcomRepository extends Repository
         return SPayCfgDrawcom::class;
     }
 
+    public function getAllData()
+    {
+        $model = $this->model()::where('status', CommonEnum::ENABLE);
+        return $model->get();
+    }
+
     public function getDataBySvip($svip) 
     {
         $model = $this->model()::where('status', CommonEnum::ENABLE);

@@ -6,7 +6,6 @@
     color: #fff;
     top: 0;
     left: 0;
-    display:flex;
 }
 
 .logo {
@@ -1739,6 +1738,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     position:absolute;
     top:0;
     left:0;
+    font-size:18px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.recharge_k_w label{
+    font-size:12px;
+    font-weight:normal;
 }
 .recharge_bz{
     width:55px;

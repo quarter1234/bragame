@@ -57,6 +57,8 @@
                       
                       <h2>O nome</h2>
                       <input type="text" name="username" id="username" value="" placeholder="O nome" />
+
+                      
                 </div>
                 
                
