@@ -3,6 +3,7 @@
 namespace App\Cache;
 
 use App\Common\Enum\CommonEnum;
+use App\Repositories\DJlGameRepository;
 use App\Repositories\DPgGameRepository;
 use Illuminate\Support\Facades\Cache;
 
@@ -12,6 +13,7 @@ class IndexGameCache
     const PP_RECOMMEND_KEY = "index:game:pp:recommends";
     const TADA_RECOMMEND_KEY = "index:game:tada:recommends";
     const FAVOR_RECOMMEND_KEY = "index:game:favor:recommendes";
+    const FAVOR_RECOMMEND_TADA_KEY = "index:game:tada:favor:recommendes";
     const USER_LOGIN_CACHE = 'user:login:uid_%s';
     const USER_GAME_CLICK_CACHE = 'user:game:click:game_s%:uid_%s:game_plat_%s';
 
@@ -48,6 +50,15 @@ class IndexGameCache
         return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
                 $pgRepo = app()->make(DPgGameRepository::class);
                 return $pgRepo->getGameFavor(['platform' => 'PGS'])->toArray();
+        });
+    }
+
+    public static function getFavorRecommendTada()
+    {
+        $cacheKey = sprintf(self::FAVOR_RECOMMEND_TADA_KEY);
+        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () {
+            $JLRepo = app()->make(DJlGameRepository::class);
+            return $JLRepo->getGameFavor()->toArray();
         });
     }
 

@@ -59,7 +59,8 @@
                       <input type="text" name="username" id="username" value="" placeholder="O nome" />
 
                       @if ($is_need_cardid)
-                        
+                        <h2>CPF para particulares, CNPJ para empresas</h2>
+                        <input type="text" name="id_card" id="id_card" value="" placeholder="CPF OR CNPJ" />
                       @endif
                 </div>
                 
@@ -105,6 +106,10 @@
     let reaccount = $('#reaccount').val();
     let username = $('#username').val();
 
+    @if ($is_need_cardid)
+      let cardid = $('#id_card').val();
+    @endif
+
     if(account === '' || account.trim().length == 0){
       showModal('Por favor preencha o seu número de conta!');
       return false;
@@ -129,6 +134,13 @@
       showModal('O nome é muito longo!');
       return false;
     }
+
+    @if ($is_need_cardid)
+      if(cardid === '' || cardid.trim().length == 0 || cardid.trim().length > 14){
+        showModal('Insira o CPF de um indivíduo ou CNPJ de uma empresa');
+        return false;
+      }
+    @endif
 
     showLoading();
     $('#bindSubmit').attr('disabled', 'disabled')

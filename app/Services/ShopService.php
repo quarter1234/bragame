@@ -146,6 +146,7 @@ class ShopService
     {
         return $this->drawComRepo->getEnFirstData();
     }
+    
 
     public function isNeedCardId()
     {

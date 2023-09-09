@@ -25,4 +25,12 @@ class DJlGameRepository extends Repository
                     ->orderBy('sort', 'desc')
                     ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
+
+    public function getGameFavor()
+    {
+        return $this->model()::where('game_status', CommonEnum::ENABLE)
+        ->orderBy('id', 'desc')
+        ->limit(6)
+        ->get();
+    }
 }

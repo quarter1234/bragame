@@ -43,6 +43,7 @@ class ShopController extends Controller
         return view(ViewHelper::getTemplate('shop.guide'), $data);
     }
 
+    
     /**
      * 绑定界面
      * @return mixed

@@ -7,7 +7,6 @@ use App\Models\SPayCfgDrawcom;
 
 class SPayCfgDrawcomRepository extends Repository
 {
-    //
     public function model()
     {
         return SPayCfgDrawcom::class;
