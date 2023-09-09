@@ -43,7 +43,7 @@
                     </div>
                 </div>
                 <div class="recharge_div">
-                        <div class="recharge_div_t">Terms of payment</div>
+                      <div class="recharge_div_t">Terms of payment</div>
                       <div class="recharge_wk">
                         @foreach($channels as $channel)
                           <div class="recharge_k1 re_on">
@@ -77,30 +77,31 @@
                         {{--最外层Foreach--}}
                         @endforeach  
 
-                        <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
-                          @csrf
-                        <div class="recharge_input">
-                           <span>R$</span>
-                           <input type="text" name="amount" readonly="readonly" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
-                           <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
-                           <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
-                           <input type="hidden" name="act" value="post_pay" />
-                        </div>
+                                  <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
+                                    @csrf
+                                    <div class="recharge_input">
+                                      <span>R$</span>
+                                      <input type="text" name="amount" readonly="readonly" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
+                                      <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
+                                      <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
+                                      <input type="hidden" name="act" value="post_pay" />
+                                    </div>
 
-                        <div class="recharge_bottom">
-                            <span>Deposit time:</span>
+                                    <div class="recharge_bottom">
+                                        <span>Deposit time:</span>
 
-                            <span>{{date('Y/m/d H:i:s')}}</span>
-                        </div>
+                                        <span>{{date('Y/m/d H:i:s')}}</span>
+                                    </div>
 
-                        {{--<div class="recharge_bottom">
-                            <span>Maximum recharge:</span>
-                            <span>permissive3000000</span>
-                        </div>--}}
-                        
-                        <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
-                        </form>
+                                    {{--<div class="recharge_bottom">
+                                        <span>Maximum recharge:</span>
+                                        <span>permissive3000000</span>
+                                    </div>--}}
+                                  
+                                    <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
+                                    </form>
                       </div>
+                </div>
               </jx-header-row>
             </div>
 
