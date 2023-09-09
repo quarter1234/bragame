@@ -93,7 +93,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('blue.common.footer') 
+                  @include('black.common.footer') 
                   
                  
                 </jx-tab-bar>

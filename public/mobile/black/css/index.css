@@ -3228,8 +3228,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:100px;height:40px;background: linear-gradient(to bottom,#ef962f,#b56100);border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:#ef962f;color:#fff;}
+.dl{width:100px;height:40px;background: #fd3657;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
+.dl:hover{background:#fd3657;color:#fff;}
 .zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
 .zc:hover{background:#ef962f;color:#fff;}
 
@@ -3765,7 +3765,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     .gg_tc{
         width:400px;
         height:600px;
-        background:linear-gradient(to bottom, #014811, #127c50);
+        background:#0a0e2b;
         position:absolute;
         left:50%;
         top:50%;

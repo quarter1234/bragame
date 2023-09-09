@@ -126,7 +126,7 @@
         height:100%;
         position:absolute;
         left:0;
-        top:-940px;  
+        top:-700px;  
         display:block;
     }
     .pc_nav{

@@ -1755,7 +1755,6 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .recharge_kn{
     display:flex;
-    justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
     padding:0 10px;
@@ -1858,7 +1857,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:10px 0px;
+    margin:10px 14px 10px 0;
     text-align:center;
     line-height:60px;
     color:#000;

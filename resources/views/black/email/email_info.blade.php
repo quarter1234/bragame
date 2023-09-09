@@ -58,7 +58,7 @@
             </div>
 
             {{--loading组件--}}
-            @include('mobile.common.loading')
+            @include('black.common.loading')
 
             <div class="e_bottom">
             @if($info['hastake'] == 0) 

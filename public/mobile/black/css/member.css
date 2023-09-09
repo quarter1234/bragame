@@ -2777,6 +2777,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .email_list a{
     color:#fff;
+    width:100%;
+    display: block;
 }
 .email_list img{
     width:40px;
@@ -3133,6 +3135,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 @media screen and (min-width: 1200px) {
+    .kf{
+        width:65%;
+    }
     .transaction_t{
         width:50%;
         margin:70px auto 0 auto;
