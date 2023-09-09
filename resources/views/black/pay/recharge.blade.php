@@ -57,7 +57,7 @@
                           {{--<div class="recharge_div_t">Top-up amount</div>--}}
 
                           {{--tab 1--}}
-                          <div class="re_show" style="@if($k == 0) display:block @else display:none @endif">
+                          <div class="re_show" @if($k == 0) style="display:block" @else style="display:block" @endif>
                             <div class="recharge_kn">
                             @foreach($channel['pages'] as $key => $page)
                                 <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}">
