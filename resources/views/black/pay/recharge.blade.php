@@ -81,27 +81,27 @@
                       @endforeach  
 
                       <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
-                                      @csrf
-                                      <div class="recharge_input">
-                                        <span>R$</span>
-                                        <input type="text" name="amount" readonly="readonly" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
-                                        <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
-                                        <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
-                                        <input type="hidden" name="act" value="post_pay" />
-                                      </div>
+                          @csrf
+                          <div class="recharge_input">
+                            <span>R$</span>
+                            <input type="text" name="amount" readonly="readonly" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
+                            <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
+                            <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
+                            <input type="hidden" name="act" value="post_pay" />
+                          </div>
 
-                                      <div class="recharge_bottom">
-                                          <span>Deposit time:</span>
+                          <div class="recharge_bottom">
+                              <span>Deposit time:</span>
 
-                                          <span>{{date('Y/m/d H:i:s')}}</span>
-                                      </div>
+                              <span>{{date('Y/m/d H:i:s')}}</span>
+                          </div>
 
-                                      {{--<div class="recharge_bottom">
-                                          <span>Maximum recharge:</span>
-                                          <span>permissive3000000</span>
-                                      </div>--}}
-                                    
-                                      <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
+                          {{--<div class="recharge_bottom">
+                              <span>Maximum recharge:</span>
+                              <span>permissive3000000</span>
+                          </div>--}}
+                        
+                          <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
                       </form>
                 </div>
               </jx-header-row>
@@ -163,6 +163,12 @@
         $(this).addClass('re_on').siblings().removeClass('re_on')
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
+        let selCoin = $('.recharge_kn .recharge_k .recharge_on').attr('payCoin')
+        let rate = $('.recharge_kn .recharge_k .recharge_on').attr('rate')
+        let id = $('.recharge_kn .recharge_k .recharge_on').attr('itemId')
+        $('#recharge_value').val(payCoin)
+        $('#recharge_rate').text(rate)
+        $("#recharge_id").val(id)
       })
     })
    </script>
