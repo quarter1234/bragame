@@ -36,12 +36,6 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                    <div class="recharge_top">
-                        <span>Current account balance</span>
-                        <label>R${{ $user['totalcoin'] }}</label>
-                    </div>
-                </div>
                 <div class="recharge_div">
                       <div class="recharge_div_t">Terms of payment</div>
                       <div class="recharge_wk">
