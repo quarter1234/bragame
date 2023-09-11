@@ -240,4 +240,6 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 
 </body>
 
+
+
 </html>
