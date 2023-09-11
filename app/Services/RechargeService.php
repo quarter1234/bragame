@@ -63,6 +63,7 @@ class RechargeService
             $groupItem = [
                 'id' => $row['id'],
                 'title'   => $row['title'],
+                'alias_name' => $row['alias_name'],
                 'icon'    => $row['icon'],//Config::get('pay.img_url') . $row['icon'],
                 'subtype' => isset($dicts[$row['subject']]) ? self::DICTS[$row['subject']] : '',
                 'mincoin' => 0, //最小

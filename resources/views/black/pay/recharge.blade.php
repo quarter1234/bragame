@@ -48,7 +48,7 @@
                             <div class="recharge_k1 @if($k == 0) re_on @endif">
                                 <div class="recharge_k_n">
                                     <div class="recharge_k_w">
-                                    {{ $channel['title'] }}
+                                    {{ $channel['alias_name'] }}
                                     </div>
                                 </div>
                             </div>  
