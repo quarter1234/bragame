@@ -65,7 +65,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('green.common.loading')
+          @include('black.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -92,7 +92,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green.common.footer') 
+                  @include('black.common.footer') 
                   
                  
                 </jx-tab-bar>
