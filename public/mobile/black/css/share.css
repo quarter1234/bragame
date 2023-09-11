@@ -1727,6 +1727,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
     color:#fff;
     text-indent:14px;
+    text-align:left;
 }
 
 
@@ -1950,5 +1951,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .recharge_div{
       width:49%;
+      text-align:center;
+    }
+    .recharge_button{
+        margin-left:0;
     }
   }
