@@ -34,7 +34,7 @@
                           <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
                           <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
                           <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
+                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
                           <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
                           <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
