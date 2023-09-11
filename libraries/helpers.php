@@ -474,15 +474,15 @@ function null_format($fields = [], &$data, $defaultValue = [])
     }
 }
 
-function make_order_no(): string
+function make_order_no($prex = ''): string
 {
-    return
-        intval(date('Y')) - 2000 .
-        date('m') .
-        date('d') .
-        substr((string)time(), -5) .
-        substr((string)microtime(), 4, 4) .
-        sprintf('%03d', rand(0, 99));
+    $hstr =  (intval(date('Y')) - 2000) . date('m') . date('d');
+    if($prex){
+        $hstr = $hstr . $prex;
+    }
+
+    $estr = substr((string)time(), -5) . substr((string)microtime(), 4, 4) . sprintf('%03d', rand(0, 99));
+    return $hstr . $estr;
 }
 
 function minusChange($number)
