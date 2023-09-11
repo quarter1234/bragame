@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
-    <link rel="stylesheet" href="/mobile/blue/css/member.css">
+    <link rel="stylesheet" href="/mobile/black/css/activity.css">
+    <link rel="stylesheet" href="/mobile/black/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -50,7 +50,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('blue.common.loading')
+          @include('black.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -77,7 +77,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('blue.common.footer') 
+                  @include('black.common.footer') 
                   
                  
                 </jx-tab-bar>

@@ -362,8 +362,9 @@
               </div>
             </div>
             <div class="index_bottom">
-                  <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
-                  <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
+                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
+? 2022 brcrown.com All rights reserved.</p>
             </div>
             <div class="menu_body">
                    <div class="black_logo">

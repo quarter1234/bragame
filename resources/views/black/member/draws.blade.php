@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/blue/css/activity.css">
-    <link rel="stylesheet" href="/mobile/blue/css/member.css">
+    <link rel="stylesheet" href="/mobile/black/css/activity.css">
+    <link rel="stylesheet" href="/mobile/black/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {

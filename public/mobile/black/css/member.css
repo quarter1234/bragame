@@ -2824,6 +2824,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:300px;
     top:25px;
 }
+.xg_zt{
+    padding-top:20px;
+}
+.xg_bottom{
+    padding:0;
+}
 .email_w_left{
     float:left;
     width:50%;
@@ -3026,6 +3032,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     position:absolute;
     right:10px;
     top:10px;
+    text-align:right;
 }
 .rechare_button{
     width:60px;

@@ -1,13 +1,13 @@
 @foreach($data as $item)
 <div class="rechare_list">
     
-        <img src="../../mobile/blue/images/dd_ico.png" />
+        <img src="../../mobile/black/images/dd_ico.png" />
         <div class="email_xx1"></div>
         <div class="email_xx2"></div>
         <div class="email_wk">
             <div class="email_w">{{ $item['orderid'] }}</div>
-            <div class="rechare_zt">{{ $item['format_status'] }}</div>
-            <div class="email_w_bottom">
+            <div class="rechare_zt xg_zt">{{ $item['format_status'] }}</div>
+            <div class="email_w_bottom xg_bottom">
                 <div class="email_w_left">
                 <img src="../../mobile/img/jb.png" />
                {{$item['real_amount'] ?? 0}}  
