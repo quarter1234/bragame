@@ -97,25 +97,32 @@ class RechargeService
                         'banktype' => 0,
                         'mincoin' => $val['mincoin'],
                         'maxcoin' => $val['maxcoin'],
-                        // 每次优惠比例 * 100
+                        // 每次优惠比例 * 100 用于展示
                         'disrate' => number_format($val['disrate']*100, 2),
                         'discoin' => 0, // 每次优惠固定金额
                         'rate' => $val['disrate'],
+                        'sendcoin' => 0, // 赠送金额
                         'is_first_pay' => 0,
                     ];
                     
                     if(isset($val['discoin']) && $val['discoin'] > 0) { // 每次优惠固定金额
                         $item['discoin'] = $val['discoin'];
                         $item['disrate'] = 0;
+                        $item['sendcoin'] = $val['discoin'];
                         if($coin > 0) {
                             $item['rate'] = number_format($item['discoin']/$coin, 2);
                         }
+                    }
+                    else if(isset($val['disrate']) && $val['disrate'] > 0){ // 每次优惠比例金额
+                        $item['discoin'] = 0;
+                        $item['sendcoin'] = roundCoin($val['disrate'] * $val['pay_view_coin']);
                     }
 
                     $orderKey = $row['id'].'_'.$val['id'].'_1';
                     if(!isset($ordersToday[$orderKey])) { // 判断今天是否有充值过
                         if($val['fd_dcoin'] > 0) { // 当天首充优惠金额
                             $item['discoin'] = $val['fd_dcoin'];
+                            $item['sendcoin'] = $val['fd_dcoin'];
                             $item['disrate'] = 0;
                             if($coin > 0) {
                                 $item['rate'] = number_format($item['discoin']/$coin, 2);
@@ -124,6 +131,7 @@ class RechargeService
                         if($val['fd_drate'] > 0) { // 当天首充优惠比例
                             $item['disrate'] = number_format($val['fd_drate']*100, 2);
                             $item['rate'] = $val['fd_drate'];
+                            $item['sendcoin'] = roundCoin($val['fd_drate'] * $val['pay_view_coin']);
                             $item['discoin'] = 0;
                         }
                     }
@@ -132,6 +140,7 @@ class RechargeService
                     if(!isset($totalOrder[$orderKey])) { // 判断是否有充值过
                         if($val['f_dcoin'] > 0) { // 首次充值优惠金额
                             $item['discoin'] = $val['f_dcoin'];
+                            $item['sendcoin'] = $val['f_dcoin'];
                             $item['disrate'] = 0;
                             if($coin > 0) {
                                 $item['rate'] = number_format($item['discoin']/$coin, 2);
@@ -143,6 +152,7 @@ class RechargeService
                             $item['disrate'] = number_format($val['f_drate']*100, 2);
                             $item['rate'] = $val['f_drate'];
                             $item['discoin'] = 0;
+                            $item['sendcoin'] = roundCoin($val['f_drate'] * $val['pay_view_coin']);
                             $item['is_first_pay'] = 1;
                         }
                     }
