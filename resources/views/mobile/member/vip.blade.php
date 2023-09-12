@@ -76,31 +76,30 @@
               <p>Monthly Bonus: Login every month to claim Monthly bonus.</p>
               <p>Level Up Bonus: Upgrade to next level to claim Level upbonus.</p>
             </div>
-            <div class="vip_bottom">
-
-                <div class="vip_blist">
-                    <h2>Weekly bonus</h2>
-                    <p class="week_bonus">{{ $vipList[$user['svip']]['weeklybonus_format'] }}</p>
-                </div>
-
-                <div class="vip_blist">
-                    <h2>monthly bonus</h2>
-                    <p class="month_bonus">{{ $vipList[$user['svip']]['monthlybonus_foramt'] }}</p>
-                </div>
-
-                <div class="vip_blist">
-                    <h2>level up bonus</h2>
-                    <p class="rewards_bonus">{{ $vipList[$user['svip']]['rewards_format'] }}</p>
-                </div>
-
-            </div>
-            <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
                  
+                  <div class="vip_bottom">
 
+                  <div class="vip_blist">
+                  <h2>Weekly bonus</h2>
+                  <p class="week_bonus">{{ $vipList[$user['svip']]['weeklybonus_format'] }}</p>
+                   </div>
+
+                  <div class="vip_blist">
+                  <h2>monthly bonus</h2>
+                   <p class="month_bonus">{{ $vipList[$user['svip']]['monthlybonus_foramt'] }}</p>
+                 </div>
+
+                   <div class="vip_blist">
+                <h2>level up bonus</h2>
+                  <p class="rewards_bonus">{{ $vipList[$user['svip']]['rewards_format'] }}</p>
+                   </div>
+
+                  </div>
+                   <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
                    </jx-content-view>
                 </jx-safe-area>
               </div>

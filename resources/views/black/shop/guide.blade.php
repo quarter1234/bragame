@@ -39,18 +39,17 @@
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
                 </div>
-               <div class="guide_top" style="margin:70px auto 0 auto;">Verify Account</div>
+               <div class="guide_top" style="margin:70px auto 0 auto;">Verificar Conta</div>
                <div class="guide_centen">
                     <div class="guide_ico"></div>
                     <div class="guide_text">
-                        <h2>Bank account</h2>
-                        <p>Quick cash transfer to yourbank account</p>
-                    </div>
+                        <h2>informações bancárias</h2>
+                        <p>Transferência de dinheiro para sua conta bancária</p>
+                    </div> 
+               </div>
                     <div class="guide_right">
                         <button onclick="location.href='{{url("mobile/shop/bind")}}' ">Verify Now</button>
                     </div>
-               </div>
-
                @foreach($banks as $item)
                <div class="guide_yh">
                         <div class="gui_left">{{$item['format_account']}}</div>

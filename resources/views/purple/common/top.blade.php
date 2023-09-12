@@ -1,5 +1,5 @@
 <div class="top">
-    <div class="logo"><img src="/mobile/green/images/logo11.png"/></div>
+    <!-- <div class="logo"><img src="/mobile/green/images/logo11.png"/></div> -->
     <div class="money" style="float:right;margin-right:10px">
         <span>R$</span>
         <span>{{$user['coin']}}</span>
