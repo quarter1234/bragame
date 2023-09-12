@@ -16,7 +16,6 @@
         </div>
         @if($item['hasread'] == 0)
         <div class="email_hd"></div>
-        @endif
     </a>@endif
 </div>
 @endforeach  
