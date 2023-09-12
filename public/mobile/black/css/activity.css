@@ -20,11 +20,6 @@ button.activity-btn[_ngcontent-snw-c1] {
     border-radius: 10px;
     background-color:rgba(0, 0, 0, .3)
 }
-
-button.activity-btn[_ngcontent-snw-c1]:not(:first-child) {
-    margin-top: 10px
-}
-
 span.activity-status[_ngcontent-snw-c1] {
     position: absolute;
     right: 0;
@@ -34,7 +29,6 @@ span.activity-status[_ngcontent-snw-c1] {
     background-repeat: no-repeat;
     background-size: contain
 }
-
 span.activity-status.open[_ngcontent-snw-c1] {
     /*background-image: url(/mobile/img/activity_on.112eb4162510f8b41ae1.svg)*/
 }
@@ -243,7 +237,7 @@ div.app-background[_ngcontent-snw-c2] {
 }
 
 .header-view__nav-row-wrapper__container__nav-row__title[_ngcontent-snw-c3]:first-child {
-    padding-left: 15px
+    padding-left: 13%
 }
 
 .header-view__nav-row-wrapper__container__nav-row__content[_ngcontent-snw-c3] {
@@ -2602,6 +2596,27 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     height: 100%;
     min-height: inherit;
     max-height: inherit
+}
+.index_bottom{
+    width:100%;
+    margin:300px auto 0 auto;
+    background: rgba(0, 0, 0, .6);
+    border-radius:5px;
+    text-align:center;
+    
+}
+.index_bottom img{
+    width:320px;
+    height:108px;
+    margin-top:10px;
+}
+.index_bottom p{
+    width:320px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:left;
+    font-size:12px;
+    color:#999;
 }
 
 @media (-ms-high-contrast:active) {

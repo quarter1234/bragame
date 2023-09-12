@@ -39,7 +39,7 @@
           @include('black.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
-            <div class="email_nr">
+            <div class="email_nr" style="height:450px;">
 
             @if($info['hastake'] == 1) 
                 
@@ -47,7 +47,7 @@
                 
             @endif
 
-              <span>Remeber: System</span><span>{{ $info['timestamp'] }}</span>
+              <span style=" margin-top: 400px;">Remeber: System</span><span>{{ $info['timestamp'] }}</span>
             </div>
             <div class="e_b_hs">
                 <span>Correio:</span>
