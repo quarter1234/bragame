@@ -357,8 +357,109 @@ margin:20px auto;
     margin:0;
     padding:0;
 }
+<<<<<<< HEAD
+
+.shopindex{
+    width:98%;
+    margin:0px auto;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+.shop_index_list{
+    width:49%;
+    height:100px;
+    background:#111e33;
+    border-radius:10px;
+    margin-top:10px;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+}
+.shop_index_list a{
+    color:#fff;
+}
+.shop_index_left{
+    width:50px;
+    height:50px;
+    background:rgba(0, 0, 0, .5);
+    border-radius:100%;
+    margin:0 15px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+}
+.shop_text{
+    color:#fff;
+    font-size:14px;
+    text-align:center;
+}
+.shop_text h2{
+    font-size:12px;
+    margin:0;
+    padding:0;
+}
+.shop_text p{
+    font-size:14px;
+    margin:0;
+    padding:0;
+}
+.s1{
+    width:30px;
+    height:30px;
+    background:url(/mobile/black/images/qb_s.png);
+    background-size:30px 30px;
+    display:inline-block;
+    margin:0 auto;
+}
+.s2{
+    width:30px;
+    height:30px;
+    background:url(/mobile/black/images/s_tx.png);
+    background-size:30px 30px;
+    display:inline-block;
+    margin:0 auto;
+}
+.s3{
+    width:30px;
+    height:30px;
+    background:url(/mobile/black/images/s_jy.png);
+    background-size:30px 30px;
+    display:inline-block;
+    margin:0 auto;
+}
+.s4{
+    width:30px;
+    height:30px;
+    background:url(/mobile/black/images/s_zh.png);
+    background-size:30px 30px;
+    display:inline-block;
+    margin:0 auto;
+}
+
+.index_bottom{
+    width:100%;
+    margin:-50px auto 100px auto;
+    background: rgba(0, 0, 0, .3);
+    border-radius:5px;
+    text-align:center;
+}
+.index_bottom img{
+    width:320px;
+    height:103px;
+    margin-top:10px;
+}
+.index_bottom p{
+    width:320px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:left;
+    font-size:12px;
+    color:#999;
+=======
 #guide_right button{
     margin-left: 20px;
+>>>>>>> 05e635fb0b711897c41df4ec6106048b737c8fa6
 }
 @media screen and (min-width: 1200px){
     .guide_top{
@@ -402,6 +503,12 @@ margin:20px auto;
     }
     .guide_yh{
         width:50%;
+    }
+    .shopindex{
+        width:65%;
+    }
+    .index_bottom{
+        width:65%;
     }
   }
 
