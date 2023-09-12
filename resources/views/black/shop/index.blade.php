@@ -108,7 +108,7 @@
                       </a>
 --}}
 <div class="shopindex">
-           <div class="shop_index_list">
+           <div class="shop_index_list" onclick="location.href='{{ url("mobile/pay/recharge") }}'">
                 <div class="shop_index_left">
                     <span class="s1"></span>
                 </div>
