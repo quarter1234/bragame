@@ -357,7 +357,6 @@ margin:20px auto;
     margin:0;
     padding:0;
 }
-<<<<<<< HEAD
 
 .shopindex{
     width:98%;
@@ -456,10 +455,6 @@ margin:20px auto;
     text-align:left;
     font-size:12px;
     color:#999;
-=======
-#guide_right button{
-    margin-left: 20px;
->>>>>>> 05e635fb0b711897c41df4ec6106048b737c8fa6
 }
 @media screen and (min-width: 1200px){
     .guide_top{
