@@ -83,7 +83,7 @@
                           @csrf
                           <div class="recharge_input">
                             <span>R$</span>
-                            <input type="text" name="amount" readonly="readonly" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}"/>
+                            <input type="number" name="amount" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}" onchange="changeVal(this)"/>
                             <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
                             <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
                             <input type="hidden" name="act" value="post_pay" />
@@ -145,8 +145,16 @@
       return false;
     }
 
+    // TODO 判断输入的金额是不是整数
+
     return true;
    }
+
+   function changeVal(obj){
+    let payCoin = $(obj).val()
+    console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
+   }
+
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
         let payCoin = $(this).attr('payCoin');
