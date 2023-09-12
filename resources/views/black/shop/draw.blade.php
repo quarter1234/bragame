@@ -72,7 +72,7 @@
                     <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
-                            <img src="/mobile/black/images/active_brand.26b0bef9602b57eac72e.png" />
+                            <img src="/mobile/black/images/t_yhk.png" />
                         </div>
                         <div class="draw_text">
                             <p>verificar</p>
