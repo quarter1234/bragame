@@ -156,8 +156,15 @@
     return true;
    }
 
+   function clearStatus(){
+        $(".re_show[style='display:block;'] .recharge_kn .recharge_k").removeClass('recharge_on')
+        $('#recharge_rate').text('')
+        $("#recharge_id").val(0)
+   }
+
    function changeVal(obj){
     let payCoin = $(obj).val()
+    clearStatus()
     $(".re_show[style='display:block;'] .recharge_kn .recharge_k").each(function(){
         let currCoin = $(this).attr("paycoin")
         if(payCoin >= currCoin){
@@ -188,13 +195,15 @@
         $(this).addClass('re_on').siblings().removeClass('re_on')
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
-        let payCoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('payCoin')
-        let sendcoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('sendcoin')
-        let id = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('itemId')
+        setSelOptView($('.re_show').eq(index).find('.recharge_k.recharge_on'))
+
+        // let payCoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('payCoin')
+        // let sendcoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('sendcoin')
+        // let id = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('itemId')
       
-        $('#recharge_value').val(payCoin)
-        $('#recharge_rate').text(sendcoin)
-        $("#recharge_id").val(id)
+        // $('#recharge_value').val(payCoin)
+        // $('#recharge_rate').text(sendcoin)
+        // $("#recharge_id").val(id)
       })
     })
    </script>
