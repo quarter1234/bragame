@@ -54,7 +54,7 @@
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-
+                {{--
                       <div class="shop_top">
                           <div class="shop_t_text">Saldo Total</div>
                           <div class="shop_b">{{ $user['coin'] }}</div>
@@ -106,8 +106,48 @@
                        </div>
                       </div>
                       </a>
-
-
+--}}
+<div class="shopindex">
+           <div class="shop_index_list">
+                <div class="shop_index_left">
+                    <span class="s1"></span>
+                </div>
+                <div class="shop_text">
+                    <h2>Total</h2>
+                    <p>R$ {{$user['coin']}}</p>
+                </div>    
+           </div>
+           <div class="shop_index_list">
+                  <div class="shop_index_left">
+                    <span class="s2"></span>
+                </div>
+                <div class="shop_text">
+                    <h2>Retiravel</h2>
+                    <p>R$ {{ $user['gamedraw'] }}</p>
+                </div> 
+           </div>
+           <div class="shop_index_list">
+           <div class="shop_index_left">
+                    <span class="s3"></span>
+                </div>
+                <div class="shop_text">
+                    <h2>Transações</h2>
+                    
+                </div> 
+           </div>
+           <div class="shop_index_list">
+           <div class="shop_index_left">
+                    <span class="s4"></span>
+                </div>
+                <div class="shop_text"><h2>Carteira</h2></div> 
+           </div>       
+</div>
+<div style="width:100%;height:60px"></div>
+<div class="index_bottom">
+                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
+? 2022 brcrown.com All rights reserved.</p>
+            </div>
                       
 
                    </jx-content-view>
