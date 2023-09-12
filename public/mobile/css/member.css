@@ -2743,6 +2743,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 48px;
     border-radius: 5px;
     display: block;
+    justify-content: space-evenly;
 }
 .email_h{height:60px;width:100%;display: block;}
 .email_list{
@@ -2752,6 +2753,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:10px;
     margin:15px auto 0 auto;
     position: relative;
+    justify-content: space-evenly;
 }
 .email_list a{
     color:#fff;

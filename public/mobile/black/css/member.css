@@ -2750,11 +2750,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 .sw_jd_b{width:28%; position:absolute;top:0;left:0;height:14px;;border-radius:20px;background:#fff;}
 .sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:rgba(0, 0, 0, .7);font-size:14px;font-weight:bold;}
 .vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:rgba(0, 0, 0, .2);border-radius:10px;color:#fff;text-align:center;}
-.vip_centen h2{color:#fcde50;font-size:18px;line-height:44px;}
-.vip_centen p{line-height:20px;width:96%;font-size:12px;}
-.vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
+.vip_centen h2{color:#fcde50;font-size:18px;line-height:37px;}
+.vip_centen p{line-height:20px;width:96%;font-size:5px;}
+.vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content: space-around; margin-top: 32px;}
 .vip_blist{width:110px;height:153px;background:url(/mobile/green/images/vip_b.png) no-repeat;background-size:110px 153px;}
-.vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto;}
+.vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto; opacity: 0;}
 .vip_blist p{color:#fff391;margin:5px auto 0 auto;width:70%;padding-top:80px;font-size:14px;text-align:center;}
 .vip_button{
     width: 70%;

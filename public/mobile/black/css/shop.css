@@ -36,37 +36,41 @@
     justify-content:space-between;
 }
 .guide_ico{
-    width:20px;
-    height:20px;
-    background:url(/mobile/black/images/yh_ico.png) no-repeat;
-    background-size:20px 20px;
+    width:40px;
+    height:100px;
+    background:url(/mobile/black/images/zf_xt.png) no-repeat;
+    background-size:40px 40px;
     margin:12px;
+    margin-left: 30px;
+    margin-top: 40px;
 }
 .guide_text{
-    width:200px;
-    margin-top:12px;
+    width:248px;
+    margin-top:20px;
 }
 .guide_centen h2{
-    margin:0;
-    font-size:14px;
+    margin: 20px;
+    font-size:18px;
 }
 .guide_centen p{
-    font-size:12px;
+    font-size:16px;
     color:#999;
     margin:10px 0;
 }
 .guide_right{
-    width:80px;
+    width:220px;
+    height: 40px;
     margin:12px;
     font-size:12px;
-    padding-top:5px;
+margin:20px auto;
 }
 .guide_right button{
     width:100%;
-    height:30px;
+    height:42px;
     background: radial-gradient(#ef962f, #b56100);
     color:#fff;
-    font-size:12px;
+    font-size:24px;
+    margin: 0;
 }
 .guide_yh{
     width:95%;
@@ -348,12 +352,12 @@
     top:222px;
     left:20px;
 }
-
 .draw_c a{
     width:100%;
     margin:0;
     padding:0;
 }
+<<<<<<< HEAD
 
 .shopindex{
     width:98%;
@@ -452,6 +456,10 @@
     text-align:left;
     font-size:12px;
     color:#999;
+=======
+#guide_right button{
+    margin-left: 20px;
+>>>>>>> 05e635fb0b711897c41df4ec6106048b737c8fa6
 }
 @media screen and (min-width: 1200px){
     .guide_top{

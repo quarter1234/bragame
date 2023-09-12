@@ -1,6 +1,6 @@
 <div class="top">
     <div class="black"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/left_ico.png" /></div>
-    <div class="logo"><img src="/mobile/blue/images/logo11.png"/></div>
+    {{--<div class="logo"><img src="/mobile/black/images/logo11.png"/></div>--}}
 
     <div class="money" style="float:right;margin-right:10px">
         <span>R$</span>
