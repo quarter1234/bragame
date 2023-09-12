@@ -59,7 +59,7 @@
                       <div class="recharge_div_t">Top-up amount</div>
                       @foreach($channels as $k => $channel)
                           {{--tab 1--}}
-                          <div class="re_show"  mincoin="{{ $channel['mincoin'] }}" maxcoin="{{ $channel['maxcoin'] }}"  @if($k == 0) style="display:block;" @else style="display:none;" @endif>
+                          <div   mincoin="{{ $channel['mincoin'] }}" maxcoin="{{ $channel['maxcoin'] }}"  @if($k == 0) class="re_show re_curr" style="display:block;" @else class="re_show" style="display:none;" @endif>
                             <div class="recharge_kn">
                             @foreach($channel['pages'] as $key => $page)
                                 <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}" sendcoin="{{ $page['sendcoin'] }}" >
@@ -147,7 +147,7 @@
 
     // TODO 判断输入的金额是不是整数
 
-    let mincoin = $(".re_show[style='display:block;']").attr('mincoin')
+    let mincoin = $(".re_show.re_curr").attr('mincoin')
     if(!(payCoin >= mincoin)){
       showModal('A quantidade mínima é' + mincoin);
       return false;
@@ -157,7 +157,7 @@
    }
 
    function clearStatus(){
-        $(".re_show[style='display:block;'] .recharge_kn .recharge_k").removeClass('recharge_on')
+        $(".re_show.re_curr .recharge_kn .recharge_k").removeClass('recharge_on')
         $('#recharge_rate').text('')
         $("#recharge_id").val(0)
    }
@@ -166,7 +166,7 @@
     let payCoin = $(obj).val()
     clearStatus()
     let selObj = null
-    $(".re_show[style='display:block;'] .recharge_kn .recharge_k").each(function(){
+    $(".re_show.re_curr .recharge_kn .recharge_k").each(function(){
         let currCoin = parseInt($(this).attr("paycoin"))
         console.log(currCoin)
         console.log(payCoin)
@@ -178,9 +178,6 @@
     if(selObj){
          setSelOptView(selObj)
     }
-   
-    // console.log($(".re_show[style='display:block;']"))
-    // console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
    }
 
    function setInputVal(obj){
@@ -205,7 +202,7 @@
       $('.recharge_k1').click(function(){
         $(this).addClass('re_on').siblings().removeClass('re_on')
         let index =$(this).index()
-        $('.re_show').hide().eq(index).show()
+        $('.re_show').hide().eq(index).show().addClass('re_curr').siblings().removeClass('re_curr')
         setSelOptView($('.re_show').eq(index).find('.recharge_k.recharge_on'))
         setInputVal($('.re_show').eq(index).find('.recharge_k.recharge_on'))
 
