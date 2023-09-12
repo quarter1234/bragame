@@ -1847,7 +1847,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:110px;
+    width:102px !important;
     height:60px;
     border-radius:5px;
     overflow: hidden;

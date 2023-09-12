@@ -64,42 +64,33 @@
                         </div>
                     </div>
                 </div>
-              @endforeach  
-
+              @endforeach
               </div>
             </div>
-
             </div>
             <div class="vip_centen">
-              <h2>VIP  Privileges</h2>
-              <p>Upgrade VIP pode aumentar o número de saques</p>
-              <p>A atualização VIP pode aumentar o valor da retirada</p>
+              <h2>VIP Privileges" em português é "Privilégios VIP</h2>
+              <p>Upgrade VIP pode aumentar o número de saques" em português é "O upgrade VIP pode aumentar o número de saques</p>
+              <p>A atualização VIP pode aumentar o valor da retirada" em português é "A atualização VIP pode aumentar o valor do saque</p>
             </div>
             <div class="vip_bottom">
-
                 <div class="vip_blist">
                     <h2>Weekly bonus</h2>
                     <p class="week_bonus">{{ $vipList[$user['svip']]['weeklybonus_format'] }}</p>
                 </div>
-
                 <div class="vip_blist">
                     <h2>monthly bonus</h2>
                     <p class="month_bonus">{{ $vipList[$user['svip']]['monthlybonus_foramt'] }}</p>
                 </div>
-
                 <div class="vip_blist">
                     <h2>level up bonus</h2>
                     <p class="rewards_bonus">{{ $vipList[$user['svip']]['rewards_format'] }}</p>
                 </div>
-
             </div>
-            <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                 
-
                    </jx-content-view>
                 </jx-safe-area>
               </div>
@@ -109,10 +100,7 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                  @include('black.common.footer') 
-                  
-                 
+                  @include('black.common.footer')
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -124,7 +112,6 @@
   <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
   <script>
       var vipList = @json($vipList);
-
       var swiper = new Swiper(".mySwiper", {
         effect: "coverflow",
         grabCursor: true,
