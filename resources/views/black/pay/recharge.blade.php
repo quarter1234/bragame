@@ -165,22 +165,32 @@
    function changeVal(obj){
     let payCoin = $(obj).val()
     clearStatus()
+    let selObj = null
     $(".re_show[style='display:block;'] .recharge_kn .recharge_k").each(function(){
-        let currCoin = $(this).attr("paycoin")
+        let currCoin = parseInt($(this).attr("paycoin"))
+        console.log(currCoin)
+        console.log(payCoin)
         if(payCoin >= currCoin){
-          setSelOptView(this)
+            selObj = this
         }
     })
+    
+    if(selObj){
+         setSelOptView(selObj)
+    }
    
     // console.log($(".re_show[style='display:block;']"))
     // console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
    }
 
+   function setInputVal(obj){
+      let payCoin = $(obj).attr('payCoin');
+      $('#recharge_value').val(payCoin)
+   }
+
    function setSelOptView(obj){
-        let payCoin = $(obj).attr('payCoin');
         let sendcoin = $(obj).attr('sendcoin');
         let id = $(obj).attr('itemId');
-        $('#recharge_value').val(payCoin)
         $('#recharge_rate').text(sendcoin)
         $("#recharge_id").val(id)
         $(obj).addClass('recharge_on').siblings().removeClass('recharge_on')
@@ -189,6 +199,7 @@
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
           setSelOptView(this)
+          setInputVal(this)
       })
 
       $('.recharge_k1').click(function(){
@@ -196,6 +207,7 @@
         let index =$(this).index()
         $('.re_show').hide().eq(index).show()
         setSelOptView($('.re_show').eq(index).find('.recharge_k.recharge_on'))
+        setInputVal($('.re_show').eq(index).find('.recharge_k.recharge_on'))
 
         // let payCoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('payCoin')
         // let sendcoin = $('.re_show').eq(index).find('.recharge_k.recharge_on').attr('sendcoin')
