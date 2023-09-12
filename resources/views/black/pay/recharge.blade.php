@@ -59,7 +59,7 @@
                       <div class="recharge_div_t">Top-up amount</div>
                       @foreach($channels as $k => $channel)
                           {{--tab 1--}}
-                          <div class="re_show" @if($k == 0) style="display:block;" @else style="display:none;" @endif>
+                          <div class="re_show"  mincoin="{{ $channel['mincoin'] }}" maxcoin="{{ $channel['maxcoin'] }}"  @if($k == 0) style="display:block;" @else style="display:none;" @endif>
                             <div class="recharge_kn">
                             @foreach($channel['pages'] as $key => $page)
                                 <div class="recharge_k  @if($key == 0) recharge_on @endif" itemId="{{ $page['id'] }}" payCoin = "{{ $page['pay_view_coin'] }}" rate="{{ $page['discoin'] }}" sendcoin="{{ $page['sendcoin'] }}" >
@@ -152,6 +152,7 @@
 
    function changeVal(obj){
     let payCoin = $(obj).val()
+    console.log($(".re_show[style='display:block;']"))
     console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
    }
 
