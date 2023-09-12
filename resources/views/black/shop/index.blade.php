@@ -108,7 +108,7 @@
                       </a>
 --}}
 <div class="shopindex">
-           <div class="shop_index_list">
+           <div class="shop_index_list" onclick="location.href='{{ url("mobile/pay/recharge") }}'">
                 <div class="shop_index_left">
                     <span class="s1"></span>
                 </div>
@@ -117,7 +117,7 @@
                     <p>R$ {{$user['coin']}}</p>
                 </div>    
            </div>
-           <div class="shop_index_list">
+           <div class="shop_index_list" onclick="location.href=@if(!$bankInfo) '{{ url("mobile/shop/guide") }}' @else '{{ url("mobile/shop/draw") }}' @endif">
                   <div class="shop_index_left">
                     <span class="s2"></span>
                 </div>
@@ -126,7 +126,7 @@
                     <p>R$ {{ $user['gamedraw'] }}</p>
                 </div> 
            </div>
-           <div class="shop_index_list">
+           <div class="shop_index_list" onclick="location.href='{{ url('mobile/member/transaction') }}'">
            <div class="shop_index_left">
                     <span class="s3"></span>
                 </div>
@@ -135,7 +135,7 @@
                     
                 </div> 
            </div>
-           <div class="shop_index_list">
+           <div class="shop_index_list" onclick="location.href='{{ url('mobile/shop/guide') }}'">
            <div class="shop_index_left">
                     <span class="s4"></span>
                 </div>
