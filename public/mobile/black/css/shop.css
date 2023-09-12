@@ -253,17 +253,20 @@ margin:20px auto;
     
 }
 .draw_bottom a{
-    width:100%;
     display:flex;
     position:relative;
-    background:rgba(0, 0, 0, 0.1);
+    background:#111e33;
     padding:10px 0;
     margin-top:10px;
+    border-radius:10px;
+    margin-bottom:15px;
+    width:49%;
+    align-items:center;
 }
 
 .draw_b_left{
-    width:20px;
-    height:20px;
+    width:30px;
+    height:30px;
     margin-left:20px;
 }
 .draw_b_left img{
@@ -292,7 +295,6 @@ margin:20px auto;
     right:20px;
 }
 .braw_d{
-    margin-top:50px;
     width:100%;
     font-size:14px;
 }
@@ -319,10 +321,10 @@ margin:20px auto;
 .braw_b{
     width:89%;
     height:30px;
-    background:linear-gradient(to bottom,#f1bc51,#fde836);
-    color:#912a0d;
+    background:#fb3353;
+    color:#fff;
     line-height:30px;
-    border-radius:5px;
+    border-radius:20px;
     margin-left:20px;
 }
 .d1{
@@ -456,6 +458,12 @@ margin:20px auto;
     font-size:12px;
     color:#999;
 }
+.draw_bottom{
+    width:96%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between;
+}
 @media screen and (min-width: 1200px){
     .guide_top{
         text-indent: 26%;
@@ -494,7 +502,7 @@ margin:20px auto;
     }
     .bind_buttom{
         width:50%;
-        margin-left:28%;
+        margin-left:25%;
     }
     .guide_yh{
         width:50%;
@@ -504,6 +512,9 @@ margin:20px auto;
     }
     .index_bottom{
         width:65%;
+    }
+    .draw_bottom{
+        width:50%;
     }
   }
 
