@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="recharge_div">
-                      <div class="recharge_div_t">Terms of payment</div>
+                      <div class="recharge_div_t">Pagamento da equipe do projeto</div>
                       <div class="recharge_wk">
                           @foreach($channels as $k => $channel)
                             <div class="recharge_k1 @if($k == 0) re_on @endif">
@@ -56,7 +56,7 @@
                           @endforeach  
                       </div>
 
-                      <div class="recharge_div_t">Top-up amount</div>
+                      <div class="recharge_div_t">Montante da recarga</div>
                       @foreach($channels as $k => $channel)
                           {{--tab 1--}}
                           <div   mincoin="{{ $channel['mincoin'] }}" maxcoin="{{ $channel['maxcoin'] }}"  @if($k == 0) class="re_show re_curr" style="display:block;" @else class="re_show" style="display:none;" @endif>
@@ -90,7 +90,7 @@
                           </div>
 
                           <div class="recharge_bottom">
-                              <span>Deposit time:</span>
+                              <span>Tempo de recarga:</span>
 
                               <span>{{date('Y/m/d H:i:s')}}</span>
                           </div>
@@ -100,7 +100,7 @@
                               <span>permissive3000000</span>
                           </div>--}}
                         
-                          <button id="recharge_submit" class="recharge_button">Recharge immediately</button>
+                          <button id="recharge_submit" class="recharge_button">Carregar agora mesmo</button>
                       </form>
                 </div>
               </jx-header-row>
@@ -147,7 +147,7 @@
 
     // TODO 判断输入的金额是不是整数
 
-    let mincoin = $(".re_show.re_curr").attr('mincoin')
+    let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
     if(!(payCoin >= mincoin)){
       showModal('A quantidade mínima é' + mincoin);
       return false;
