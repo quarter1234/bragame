@@ -40,8 +40,8 @@
           @include('black.common.top_sub') 
           {{-- Tab --}}
          <div class="transaction_t">
-            <div class="transaction_list transaction_list_on">Historico de recargas</div>
-            <div class="transaction_list">Registro de saque</div>
+            <div class="transaction_list transaction_list_on" >Historico de recargas</div>
+            <div class="transaction_list"  >Registro de saque</div>
          </div>
 
         {{--内容切换 Recharges --}}
@@ -58,8 +58,8 @@
          <div class="transaction_b">
             <div id="content_draw_list_pages">
             </div>
-            <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+            <div style="width:100px;text-align:center;margin-top:1rem; background-color: #ef962f; height: 30px; margin: 0 auto; border-radius: 10px;">
+                <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px; line-height: 30px; ">{{--点击加载更多--}}Carregue mais</button>
             </div>
             <div class="email_h" style="height: 100px;"></div>
          </div>
