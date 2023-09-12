@@ -83,7 +83,7 @@
                           @csrf
                           <div class="recharge_input">
                             <span>R$</span>
-                            <input type="number" name="amount" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}" onchange="changeVal(this)"/>
+                            <input type="number" name="amount" id="recharge_value" value="{{ $channels[0]['pages'][0]['pay_view_coin'] ?? 0}}" oninput="changeVal(this)"/>
                             <label>Extra+R$<span name="rate" id="recharge_rate">{{$channels[0]['pages'][0]['discoin'] ?? 0}}</span></label>
                             <input type="hidden" name="id" id="recharge_id" value="{{$channels[0]['pages'][0]['id'] ?? 0}}" />
                             <input type="hidden" name="act" value="post_pay" />
@@ -147,24 +147,41 @@
 
     // TODO 判断输入的金额是不是整数
 
+    let mincoin = $(".re_show[style='display:block;']").attr('mincoin')
+    if(!(payCoin >= mincoin)){
+      showModal('A quantidade mínima é' + mincoin);
+      return false;
+    }
+
     return true;
    }
 
    function changeVal(obj){
     let payCoin = $(obj).val()
-    console.log($(".re_show[style='display:block;']"))
-    console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
+    $(".re_show[style='display:block;'] .recharge_kn .recharge_k").each(function(){
+        let currCoin = $(this).attr("paycoin")
+        if(payCoin >= currCoin){
+          setSelOptView(this)
+        }
+    })
+   
+    // console.log($(".re_show[style='display:block;']"))
+    // console.log($(".re_show[style='display:block;'] .recharge_kn .recharge_k"))
+   }
+
+   function setSelOptView(obj){
+        let payCoin = $(obj).attr('payCoin');
+        let sendcoin = $(obj).attr('sendcoin');
+        let id = $(obj).attr('itemId');
+        $('#recharge_value').val(payCoin)
+        $('#recharge_rate').text(sendcoin)
+        $("#recharge_id").val(id)
+        $(obj).addClass('recharge_on').siblings().removeClass('recharge_on')
    }
 
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
-        let payCoin = $(this).attr('payCoin');
-        let sendcoin = $(this).attr('sendcoin');
-        let id = $(this).attr('itemId');
-        $('#recharge_value').val(payCoin)
-        $('#recharge_rate').text(sendcoin)
-        $("#recharge_id").val(id)
-        $(this).addClass('recharge_on').siblings().removeClass('recharge_on')
+          setSelOptView(this)
       })
 
       $('.recharge_k1').click(function(){
