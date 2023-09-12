@@ -323,7 +323,7 @@
 .yh_t_list {
     width: 48%;
     height: 87px;
-    background:rgba(0, 0, 0, .5);
+    background:#111e33;
     border-radius: 10px;
     text-align: center;
 }
@@ -332,9 +332,14 @@
     color: #ffe777;
     margin: 10px 0;
 }
-
-.yh_t_list p {
+.yh_t_list p{
+    margin:0;
+    padding:0;
+}
+.yh_t_list img {
     margin: 0;
+    width:25px;
+    height:25px;
 }
 
 .yh_table {

@@ -17,14 +17,15 @@
 </div>
 
 <div class="yh_top">
-        <div class="yh_t_list">
+<div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>
-            <p>nível 1{{--一级邀请--}}</p>
+            <p><img src="/mobile/black/images/d_l1.png" />{{--一级邀请--}}</p>
         </div>
         <div class="yh_t_list">
             <h2>{{ $invite['two_grade_count'] }}</h2>
-            <p>nível 2{{--二级邀请--}}</p>
+            <p><img src="/mobile/black/images/d_l2.png" />{{--二级邀请--}}</p>
         </div>
+       
 </div>
 
 {{--loading组件--}}

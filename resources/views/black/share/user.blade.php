@@ -1,5 +1,5 @@
 <div class="yh_top">
-        <div class="yh_t_list">
+<div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>
             <p>nível 1{{--一级邀请--}}</p>
         </div>
