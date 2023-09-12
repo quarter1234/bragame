@@ -2971,6 +2971,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     justify-content:center;
     align-items:center;
     display:flex;
+    
 }
 .shop_jt_ico {
     width: 15px;
@@ -3017,7 +3018,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:100%;
     font-size:12px;
     color:#ffb31a;
-    font-size:14px;
+    font-size:13px;
 }
 .rechare_list .email_xx1{
     height:65px;
