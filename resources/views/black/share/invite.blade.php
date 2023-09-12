@@ -61,14 +61,14 @@ btn.addEventListener('click', () => {
 		console.log(document.execCommand('copy'));
 	}
 })
-btn2.addEventListener('click', () => {
-	const input = document.querySelector('#demoInput2');
-	input.select();
-	if (document.execCommand('copy')) {
-		document.execCommand('copy');
-		console.log(document.execCommand('copy'));
-	}
-})
+// btn2.addEventListener('click', () => {
+// 	const input = document.querySelector('#demoInput2');
+// 	input.select();
+// 	if (document.execCommand('copy')) {
+// 		document.execCommand('copy');
+// 		console.log(document.execCommand('copy'));
+// 	}
+// })
 function loadInvites() {
         let page = $('#invite_load_more').attr('page');
           showLoading();
