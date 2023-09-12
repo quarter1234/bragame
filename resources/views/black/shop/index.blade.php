@@ -122,6 +122,11 @@
                     <span class="s2"></span>
                 </div>
                 <div class="shop_text">
+                    @if(!$bankInfo)
+                        <a href="{{ url('mobile/shop/guide') }}" >
+                    @else
+                        <a href="{{ url('mobile/shop/draw') }}" >
+                    @endif
                     <h2>Retiravel</h2>
                     <p>R$ {{ $user['gamedraw'] }}</p>
                 </div> 
