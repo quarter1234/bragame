@@ -147,7 +147,7 @@
 
     // TODO 判断输入的金额是不是整数
 
-    let mincoin = $(".re_show.re_curr").attr('mincoin')
+    let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
     if(!(payCoin >= mincoin)){
       showModal('A quantidade mínima é' + mincoin);
       return false;
