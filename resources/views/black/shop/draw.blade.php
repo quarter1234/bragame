@@ -41,15 +41,24 @@
                 <form method="post" onSubmit="return check_draw(this)" id="form1" action="{{url('mobile/shop/doDraw')}}">
                     @csrf
                     <div class="draw_top">
-                        <div class="draw_top_l">disponivel para retirada</div>
+                        <div class="draw_top_l">disponível para retirada</div>
                         <div class="draw_top_r">$R{{ $user['dcoin'] }}</div>
                     </div>
-
+                    <div class="braw_d">
+                    <p>montante</p>
+                    <div class="braw_d_sr">
+                        <span>R$</span>
+                        <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
+                        <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
+                    </div>
+                    <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
+                    <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
+                </div>
                     <div class="draw_c">
                       <a href="{{url('mobile/shop/bind')}}">
-                          <div class="draw_img"><img src="/mobile/green/images/yh_ico.png" /></div>
+                          <div class="draw_img"><img src="/mobile/black/images/yh_ico.png" /></div>
                           <div class="draw_text">
-                              <h2>Nova conta bancaria</h2>
+                              <h2>Nova conta bancária</h2>
                               <p>Adicione uma nova conta bancaria.</p>
                           </div>
                           <div class="draw_arrow">
@@ -63,10 +72,10 @@
                     <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
-                            <img src="/mobile/green/images/active_brand.26b0bef9602b57eac72e.png" />
+                            <img src="/mobile/black/images/active_brand.26b0bef9602b57eac72e.png" />
                         </div>
                         <div class="draw_text">
-                            <p>VERIFIED</p>
+                            <p>verificar</p>
                             <h2>{{$item['format_account']}}</h2>
                         </div>
                         <div class="draw_xz"></div>
@@ -74,16 +83,7 @@
                     </div>
                     @endforeach  
 
-                <div class="braw_d">
-                    <p>montante</p>
-                    <div class="braw_d_sr">
-                        <span>R$</span>
-                        <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
-                        <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
-                    </div>
-                    <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
-                    <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
-                </div>
+                
 
                 <button id="drawSubmit"  class="braw_b">Retirar agora</button>
               </form>
