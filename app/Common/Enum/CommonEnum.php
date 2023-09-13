@@ -25,5 +25,6 @@ class CommonEnum
     const S3_PATH_ARR = [
         "mobile" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public',
         "black" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
+        "pink" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
     ];
 }
