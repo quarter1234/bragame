@@ -120,6 +120,8 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
+                  
+                 
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -135,24 +137,29 @@
       showModal('A escolha de moedas deve ser maior que zero.');
       return false;
     }
+
     if(id <= 0) {
       showModal('Por favor, selecione o valor de recarga.');
       return false;
     }
 
     // TODO 判断输入的金额是不是整数
+
     let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
     if(!(payCoin >= mincoin)){
       showModal('A quantidade mínima é' + mincoin);
       return false;
     }
+
     return true;
    }
+
    function clearStatus(){
         $(".re_show.re_curr .recharge_kn .recharge_k").removeClass('recharge_on')
         $('#recharge_rate').text('')
         $("#recharge_id").val(0)
    }
+
    function changeVal(obj){
     let payCoin = $(obj).val()
     clearStatus()
@@ -165,14 +172,17 @@
             selObj = this
         }
     })
+    
     if(selObj){
          setSelOptView(selObj)
     }
    }
+
    function setInputVal(obj){
       let payCoin = $(obj).attr('payCoin');
       $('#recharge_value').val(payCoin)
    }
+
    function setSelOptView(obj){
         let sendcoin = $(obj).attr('sendcoin');
         let id = $(obj).attr('itemId');
@@ -180,6 +190,7 @@
         $("#recharge_id").val(id)
         $(obj).addClass('recharge_on').siblings().removeClass('recharge_on')
    }
+
    $(function(){
       $('.recharge_kn .recharge_k').click(function(){
           setSelOptView(this)
