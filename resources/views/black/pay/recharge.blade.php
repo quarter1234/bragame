@@ -41,7 +41,6 @@
                        
                     </div>
                 </div>
-                <div class="recharge_div">
                       <div class="recharge_div_t">Pagamento da equipe do projeto</div>
                       <div class="recharge_wk">
                           @foreach($channels as $k => $channel)
@@ -102,7 +101,6 @@
                         
                           <button id="recharge_submit" class="recharge_button">Carregar agora mesmo</button>
                       </form>
-                </div>
               </jx-header-row>
             </div>
 
