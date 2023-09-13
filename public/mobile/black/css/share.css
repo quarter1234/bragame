@@ -1718,13 +1718,13 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 
 .recharge_k_w{
-    width:110px;
-    height:60px;
+    width:106px;
+    height:59px;
     background:url(../img/xz_ico.png) no-repeat;
     background-repeat:160px 60px;
     position:absolute;
     top:0;
-    left:0;
+    left:-5px;
     font-size:18px;
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
@@ -1847,7 +1847,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:102px !important;
+    width:98px !important;
     height:60px;
     border-radius:5px;
     overflow: hidden;
