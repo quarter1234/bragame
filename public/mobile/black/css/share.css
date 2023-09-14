@@ -1672,9 +1672,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:0 0 5px 5px;
     overflow: hidden;
 }
-.times_sh td{
-    
-}
+
 .times_sh thead td{
     background:rgba(255, 255, 255, .1);
     color:#fff;
@@ -1721,6 +1719,18 @@ button.cancel-btn[_ngcontent-way-c22] {
     text-align:left;
 }
 
+.recharge_k_i{
+    top:0;
+    left:2px;
+    font-size:15px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../images/dg.png) no-repeat;
+    background-position: center right;
+    background-size: 12px 12px;
+    width: 106px;
+    height: 99px;
+}
 
 .recharge_k_w{
     width:106px;
@@ -1729,8 +1739,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-repeat:160px 60px;
     position:absolute;
     top:0;
-    left:-5px;
-    font-size:18px;
+    left:-9px;
+    font-size:20px;
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -1776,12 +1786,24 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .recharge_on .recharge_bz{
     background: linear-gradient(to right, #29d279, #a5e376);
-    color:#fff;
+    color:#fa3605;
+    font-size: 1px;
 }
 .recharge_on .recharge_k_w{
-    background:url(/mobile/black/images/xz_ico.png) no-repeat;
+    background:url(../images/dg.png) no-repeat;
     background-position:center right;
+    background-size: 12px 12px;
+    width: 100px;
+    height: 88px;
 }
+.recharge_on .recharge_k_i{
+    background:url(../images/dg.png) no-repeat;
+    background-position:center right;
+    background-size: 20px 20px;
+    width: 100px;
+    height: 88px;
+}
+
 
 .recharge_input{
     width:93%;
