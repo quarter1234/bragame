@@ -27,7 +27,7 @@
     <meta name="format-detection" content="telephone=no">
 	</head>
 
-  <body style="color: white; background-color: #1e366b;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #000;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -99,7 +99,7 @@
             width:65% !important;
             margin:0 auto;
            }
-           .bulletin-board-container{
+           div.bulletin-board-container{
             width:65% !important;
             margin:0 auto;
            }
@@ -189,22 +189,11 @@
                   </script>
                   </jx-banner-board>
                   <jx-bulletin-board _ngcontent-way-c1="" _nghost-way-c6="" class="ng-tns-c6-1 ng-star-inserted">
-                    <!---->
+                    
                     <button _ngcontent-way-c6="" class="bulletin-board-btn" tabindex="0">
-                      <!---->
-                      <div _ngcontent-way-c6="" class="bulletin-board-container">
-                        <div _ngcontent-way-c6="" class="bulletin-icon"></div>
-                        <!---->
-                        <!--系统通知公告-->
-                        <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}}
-                         
-                          </marquee>
-                        </div>
-
-
-                      </div>
+                          <div class="zf_sousuo">
+                          
+                          </div>
                     </button>
                   </jx-bulletin-board>
 
@@ -222,24 +211,27 @@
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
+                      <div class="sousuo">
+                          
+                      </div>
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">Original</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">jackpots</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">slots</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Llve</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
@@ -297,26 +289,7 @@
               </div>
             </div>
             <div class="winning-box">
-              <div class="news-title clearfix">
-                <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
-                <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
-                </h2>
-              </div>
               <div class="rankBg"></div>
-              <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
-                <ul class="news-scroll" style="padding-left: 0px;">
-
-                @foreach($ranks as $item)
-                <li style="color: #f2f2f2;">
-                <span>{{ $item['playername'] }}</span>
-                    <em>
-                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
-                </li>
-                @endforeach
-
-                </ul>
-              </div>
             </div>
             <div class="index_bottom">
                   <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />

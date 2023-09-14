@@ -132,13 +132,18 @@ div.app-background[_ngcontent-way-c2] {
     justify-content: center;
     align-items: center
 }
-
+.sousuo{
+    width: 60%;
+    height: 50px;
+    border: 1px solid #fff;
+    margin-left: 220px;
+    margin-bottom: 5px;
+}
 .header-view__nav-row-wrapper__container__nav-row__prefix__icon[_ngcontent-way-c3] {
     width: 1em;
     height: 1em;
     font-size: 44px
 }
-
 .header-icons-ctn[_ngcontent-way-c3] {
     height: 34px;
     width: 100%;
@@ -146,7 +151,6 @@ div.app-background[_ngcontent-way-c2] {
     display: flex;
     flex-flow: row nowrap
 }
-
 .header-icon[_ngcontent-way-c3] {
     background-repeat: no-repeat;
     background-size: cover;
@@ -2283,7 +2287,7 @@ button.bulletin-board-btn[_ngcontent-way-c6] {
     color: #fff
 }
 
-div.bulletin-board-container[_ngcontent-way-c6] {
+.bulletin-board-container[_ngcontent-way-c6] {
     box-sizing: border-box;
     padding:10px 0;
     display: flex;
@@ -3300,37 +3304,30 @@ button.cancel-btn[_ngcontent-way-c22] {
 /**/
 
 .side-menu-icon-qb[_ngcontent-way-c8] {
-   
+   color: ;
 }
 .qb_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/qb_yx.png)
-}
-.active-side-menu .qb_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/yx_on.png)
+    background-image: url(../images/zff.png)
 }
 .xh_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/xh_ico.png)
+    background-image: url(../images/ax.png)
 }
 .active-side-menu .xh_ico{
     background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/xh_on.png)
 }
 
 .game_pp{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pp_on.png)
+    background-image: url(../images/zff.png)
 }
-.active-side-menu .game_pp{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pp.png)
-}
+
 
 .game_pg{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pg.png)
-}
-.active-side-menu .game_pg{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pg_on.png)
+    background-image: url(../images/zff.png)
 }
 
+
 .game_ji{
-    background-image: url(/mobile/green/images/game_ji_on.png)
+    background-image: url(../images/zff.png)
 }
 .active-side-menu .game_ji{
     background-image: url(/mobile/green/images/game_ji.png)
@@ -3338,11 +3335,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .game_qb_title{
     width:100%;
-   height:20px;
+   height:30px;
    line-height:20px;
    text-align:left;
    font-size:12px;
-   padding-top:5px;
+   padding-top:3px;
   background:rgba(0, 0, 0, .2);
   /*background:linear-gradient(to bottom, #e2d238, #f2bc51);*/
    padding-bottom:5px;
@@ -3354,27 +3351,27 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     padding-left:10px;
     color:#fff;
+    margin-top: 5px;
 }
 .game_qb_left a{
     color:#fff;
     background:#489ef6;
-    border-radius:20px;
+    border-radius:5px;
     display:inline-block;
     float:right;
     margin-top:-2px;
     margin-right:5px;
     font-size:12px;
-    padding:2px 8px;
+    padding:6px 8px;
 }
 .game_ico{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/xh_h_ico.png) no-repeat;
+    background:url(../images/ax.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
 }
-
 .game_list{
     width:95%;
     display: flex;
@@ -3392,7 +3389,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pp_game{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/game_pp_on.png) no-repeat;
+    background:url(../images/zff.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
@@ -3400,7 +3397,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pg_game{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/game_pg.png) no-repeat;
+    background:url(../images/hz.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
@@ -3512,6 +3509,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:360px;
     height:526px;
 }
+
 
 
 @media screen and (min-width: 1200px) {
