@@ -1583,7 +1583,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 34px;
     height: 29px;
    /*background: linear-gradient(-135deg, #9c16d4, #2b22b1);*/
-   background:#ffb31a;
+   background:#FF3354;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2561,12 +2561,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background:#081926;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #cecece;
+    color: #fff9;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -2607,7 +2608,9 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/syfl.png)
+    background-image: url(/mobile/pink/images/syfl.png);
+    width:32px;
+    
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
@@ -2634,9 +2637,10 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     font-size: 10px;
     font-weight: 400;
     line-height: 14px;
+    transform:scale(.83);
 }
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color:#ef962f !important;
+    color:#fff !important;
 }
 [_nghost-way-c14] {
     box-sizing: border-box;
