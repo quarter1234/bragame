@@ -211,9 +211,14 @@
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
-                      <div class="sousuo">
-                          
-                      </div>
+                    <div style="width:100%;text-align: center;">
+                    <div class="sousuo"> 
+                         <img src="../../../../public/mobile/blue/images/sousuo.png" alt="" class="ioop">
+                        <input type="text" placeholder="original" class="ss"> 
+                         <button type="submit">搜索</button> 
+                     </div>
+                    </div>
+                     
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">

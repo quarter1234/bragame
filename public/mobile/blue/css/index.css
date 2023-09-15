@@ -132,12 +132,32 @@ div.app-background[_ngcontent-way-c2] {
     justify-content: center;
     align-items: center
 }
-.sousuo{
-    width: 60%;
-    height: 50px;
-    border: 1px solid #fff;
-    margin-left: 220px;
-    margin-bottom: 5px;
+.sousuo {
+    width: 95%; /* 搜索框宽度占满父元素 */
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    display:inline-block;
+    margin-bottom:10px;
+    height: 42px;
+    
+}
+.ss{
+    background-color: #000;
+    width: 350px;
+    border: 0px solid black;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    line-height: 40px;
+}
+
+/* 移动端样式 */
+@media screen and (min-width: 1200px){
+    .sousuo {
+        font-size: 16px; /* 调整字体大小，使其在小屏幕上更可读 */
+        margin-left: -720px;
+        width: 25%; 
+    }
 }
 .header-view__nav-row-wrapper__container__nav-row__prefix__icon[_ngcontent-way-c3] {
     width: 1em;
@@ -529,12 +549,17 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .side-menu-ctn[_ngcontent-way-c8] {
-    margin-left: 10px;
+    margin-left: 29px;
     display: flex;
     /*flex-flow:column nowrap;align-items:center;*/
     justify-content: flex-start;
     overflow-x: auto;
 }
+
+.side-menu-ctn[_ngcontent-way-c8]::-webkit-scrollbar{
+    display: none;
+}
+
 
 .side-menu-item[_ngcontent-way-c8] {
     display: flex;
@@ -3560,4 +3585,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     .pass_sr{
         width:90% !important;
     }
+}
+@media (max-width:1200px){
+     .sousuo-div{
+        margin-left: 200px;
+     }
 }
