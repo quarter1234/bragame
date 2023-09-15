@@ -190,22 +190,7 @@
                   </jx-banner-board>
                   <jx-bulletin-board _ngcontent-way-c1="" _nghost-way-c6="" class="ng-tns-c6-1 ng-star-inserted">
                     <!---->
-                    <button _ngcontent-way-c6="" class="bulletin-board-btn" tabindex="0">
-                      <!---->
-                      <div _ngcontent-way-c6="" class="bulletin-board-container">
-                        <div _ngcontent-way-c6="" class="bulletin-icon"></div>
-                        <!---->
-                        <!--系统通知公告-->
-                        <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">{{--系统公告1 Anúncio do sistema--}}
-                         
-                          </marquee>
-                        </div>
-
-
-                      </div>
-                    </button>
+                    <div style="width:100%;height:20px"></div>
                   </jx-bulletin-board>
 
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">

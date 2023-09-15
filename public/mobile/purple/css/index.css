@@ -2454,6 +2454,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     /*flex-flow:column nowrap;align-items:center;*/
     justify-content: flex-start;
     overflow-x: auto;
+    background:rgba(0, 0, 0, .5);
 }
 
 .side-menu-item[_ngcontent-way-c8] {
