@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title')
+    @include('green.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,7 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/mobile/black/css/index.css">
+    <link rel="stylesheet" href="/mobile/red/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -20,14 +20,14 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
-    <meta name="theme-color" content="#0a0e2b">
+    <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
-  <body style="color: white; background-color: #0a0e2b;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #000;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -39,8 +39,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('black.common.modal')
-          @include('black.common.modal_sub')
+          @include('blue.common.modal')
+          @include('blue.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -99,7 +99,7 @@
             width:65% !important;
             margin:0 auto;
            }
-           .bulletin-board-container{
+           div.bulletin-board-container{
             width:65% !important;
             margin:0 auto;
            }
@@ -114,7 +114,7 @@
             width:65%;
            }
            .game_list a{
-            width:15%;
+            width:10%;
             margin-right:10px;
             margin-left:0;
            }
@@ -133,7 +133,6 @@
            }
            #tab1_content_pps a:hover{
             filter:brightness(70%);
-            
            }
           
             </style>
@@ -141,7 +140,7 @@
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-banner-board _ngcontent-way-c1="" _nghost-way-c5="" class="ng-tns-c5-0 ng-star-inserted">
-                   
+
                     <div class="index_banner">
                       <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -162,23 +161,6 @@
                       </div>
                     </div>
 
-                    <div class="xh_game">
-                        <div class="xh_game_top">
-                            <label></label>
-                            <span>juego</span>
-                        </div>
-                        <div class="xh_game_centen">
-                          <div class="swiper mySwiper1">
-                            <div class="swiper-wrapper">
-                              @foreach($tadaRecommend as $item)
-                                <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
-                              @endforeach 
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div style="width:100%; height:10px;"></div> 
-                    
                   <script>
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
@@ -189,14 +171,7 @@
                             el: ".swiper-pagination",
                             clickable: true,
                           },
-                          autoplay:true
                         });
-                       var swiper1 =new Swiper('.mySwiper1',{
-                        slidesPerView:3,
-                        autoplay:{
-                          delay: 5000,
-                        }
-                       }) 
                       }
                      if(windowWidth >= 640){
                       var swiper = new Swiper(".mySwiper", {
@@ -207,12 +182,6 @@
                             clickable: true,
                           },
                         });
-                        var swiper1 =new Swiper('.mySwiper1',{
-                        slidesPerView:8,
-                        autoplay:{
-                          delay: 5000,
-                        }
-                       }) 
                       }
 
 
@@ -220,29 +189,18 @@
                   </script>
                   </jx-banner-board>
                   <jx-bulletin-board _ngcontent-way-c1="" _nghost-way-c6="" class="ng-tns-c6-1 ng-star-inserted">
-                    <!---->
-                    {{--<button _ngcontent-way-c6="" class="bulletin-board-btn" tabindex="0">
-                      <!---->
-                      <div _ngcontent-way-c6="" class="bulletin-board-container">
-                        <div _ngcontent-way-c6="" class="bulletin-icon"></div>
-                        <!---->
-                        <!--系统通知公告-->
-                        <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-
-                          <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">
-                         
-                          </marquee>
-                        </div>
-
-
-                      </div>
-                    </button>--}}
+                    
+                    <button _ngcontent-way-c6="" class="bulletin-board-btn" tabindex="0">
+                          <div class="zf_sousuo">
+                          
+                          </div>
+                    </button>
                   </jx-bulletin-board>
 
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/audio/btn_click.mp3">
+                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/baxi_4/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -253,42 +211,45 @@
                     <button _ngcontent-way-c7="" jxnewwindowbtn="" style="display: none;"></button>
                     <!----></jx-util-bar>
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
+                    <div style="width:100%;text-align: center;">
+                    <div class="sousuo"> 
+                         <img src="../../../../public/mobile/blue/images/sousuo.png" alt="" class="ioop">
+                        <input type="text" placeholder="original" class="ss"> 
+                         <button type="submit">搜索</button> 
+                     </div>
+                    </div>
+                     
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">Original</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">jackpots</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
-                          <!---->
-                        <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_qp_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button> 
-                          <!---->
-                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">slots</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
-                       
-                             
-                     
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Llve</span></button>
+                        <!---->
+                        <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
+
+                      
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('black.index.game_recommend')
+                          @include('green.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -325,13 +286,6 @@
                                 <button id="jl_load_more" page="0" onclick="loadJlGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
-                        {{-- Tada棋牌添加 --}}
-                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab4_content" style="display: none;">
-                            <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
-                            <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
-                            </div>
-                        </div>
 
                       </div>
                     </div>
@@ -343,45 +297,16 @@
               <div class="rankBg"></div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
-                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
-? 2022 brcrown.com All rights reserved.</p>
+                  <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
+                  <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
-            <div class="menu_body">
-                   <div class="black_logo">
-                      
-                   </div> 
-                   <div class="black_gb"></div> 
-                   <div class="black_nav">
-                      <ul>
-                          <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
-                      </ul>
-                   </div>
-            </div>
-            
-            <div class="pc_tab">
-                   <div class="pc_nav">
-                      <ul>
-                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
-                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
-                      </ul>
-                   </div>
-            </div>
+
             
             {{--loading组件--}}
-            @include('black.common.loading')
-            @include('black.index.index_login')
-            @include('black.index.notice')
+            @include('blue.common.loading')
+            @include('blue.index.index_login')
+            @include('blue.common.slide')
+            @include('blue.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -389,37 +314,7 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                <div _ngcontent-way-c10="" class="tab-bar safe-area-fix-bottom safe-area-fix-left safe-area-fix-right" jxsafeareafixbottom="" jxsafeareafixleft="" jxsafeareafixright="">
-                <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/share")}}'">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--cs"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Partilhar</span>
-    </button>
-
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/activity")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--activity"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
-    </button>
-
-
-
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="myFunction()" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}O menu</span>
-    </button>
-
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
-    </button>
-
-    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-right @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\MemberController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/member/index")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--my"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--我的--}}Meu</span>
-    </button>
-</div>
-
-
-
+                @include('green.common.footer')
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -509,27 +404,6 @@
           })
         }
 
-        function loadTadaGames(){
-          let page = $('#tada_load_more').attr('page');
-          showLoading();
-          $.ajax({
-              url : "{{url('mobile/getTadas')}}",
-              type : 'GET',
-              data : {page: parseInt(page) + 1},
-              success : function (data) {
-                hideLoading();
-                $('#tada_load_more').attr('page', data.data.current_page);
-                data.data.data.forEach(element => {
-                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image tada_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
-                  $('#tab4_content_jls').append(itemGame)
-                })
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                hideLoading()
-              }
-          })
-        }
-
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -543,7 +417,6 @@
         loadPgGames()
         loadPpGames()
         loadJlGames()
-        loadTadaGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
@@ -582,64 +455,27 @@
           })
         });
 
-        $(document).on('click', '.tada_game_go', function() {
-          showLoading();
-
-          let gameId = $(this).attr('gameid')
-          $.ajax({
-              url : "{{url('mobile/tadaUrl')}}",
-              type : 'GET',
-              data : {id: parseInt(gameId)},
-              success : function (data) {
-                if(data.code == 200) {
-				          window.location.href= "{{ route('mobile.display', ['act' => 'tada_game_url']) }}" +'&game_code=' +data.data.code
-                } else {
-                    if(data.code == '400005') {
-                      showModal('Por favor faça login primeiro');
-                      $('.tc').show();
-                    } else {
-                      showModal(data.message);
-                    }
-                }
-
-             setTimeout(function(){
-                  hideLoading();
-                },2000)
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                hideLoading();
-                if(jqXHR.responseJSON.code == 400005) {
-                      showModal('Por favor faça login primeiro');
-                      $('.tc').show();
-                  } else {
-                    showModal(jqXHR.responseJSON.message);
-                  }
-
-              }
-          })
-        });
-
       });
     </script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
     <script>
-    function myFunction() {
-        $('.menu_body').animate({left:"0"},300)
-    }
-    $(function(){
-      $('.black_gb').click(function(){
-        $('.menu_body').animate({left:"-100%"},300)
-      })
-      $('.black_nav li').click(function(){
-        $(this).addClass('black_on').siblings().removeClass('black_on')
-      })
-      $('.pc_nav li').hover(function(){
-        $(this).addClass('pc_on').siblings().removeClass('pc_on')
-      })
-      $('.pc_nav li').mouseout(function(){
-        $(this).removeClass('pc_on')
-      })
-    })
+    $(function() {
+        $('.myScroll').myScroll({
+          speed: 40,
+          //数值越大，速度越慢
+          rowHeight:40 //li的高度
+        });
+
+        $('.notice-tab li.tab_g').hover(function() {
+          //获取当前的索引
+          //去掉全部的on class
+          $('.notice-tab li').removeClass('on');
+          $(this).addClass('on');
+          var index = $('.notice-tab li').index(this);
+          $('.notice-main .draw-contents').hide();
+          $('.notice-main').find('.draw-contents').eq(index).show();
+        });
+      });
     </script>
 
 
