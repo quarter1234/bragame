@@ -46,7 +46,7 @@
                           @foreach($channels as $k => $channel)
                             <div class="recharge_k1 @if($k == 0) re_on @endif">
                                 <div class="recharge_k_n">
-                                    <div class="recharge_k_w">
+                                    <div class="recharge_k_i">
                                     {{ $channel['alias_name'] }}
                                     </div>
                                 </div>

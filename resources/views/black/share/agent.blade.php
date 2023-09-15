@@ -9,81 +9,108 @@
 
     @foreach($agent as $key => $item)
     <div class="times_div" @unless($key != 'today') style="display:block;" @endunless>
-            <div class="times_fl">
-                <span class="b1"></span>
-                <div class="text">Meus dados do agente  </div>
-                <label></label>
+
+            <div class="dl_conten">
+                <div class="dl_title">
+                    <span><img src="/mobile/black/images/dl1.png" /></span>Meus dados do agente 
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/sz_ico.png" />
+                        Número
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneGradeInviteNum'] + $item['twoGradeInviteNum'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/dm_ico.png" />
+                        Valor do código
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneTbetcoin'] + $item['twoTbetcoin'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/cq_ico.png" />
+                        Recarga total
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneRechargeAmount'] + $item['twoRechargeAmount'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/cs_ico.png" />
+                        Carga inicial
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneFirstRecharge'] + $item['twoFirstRecharge'] }}</p></div>
+                </div>
             </div>
-            <div class="times_sh">
-                <table>
-                    <thead>
-                        <tr>
-                            <td>Número</td>
-                            <td>Valor do código</td>
-                            <td>Recarga total</td>
-                            <td>Carga inicial</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <td>{{ $item['oneGradeInviteNum'] + $item['twoGradeInviteNum'] }}</td>
-                        <td>{{ $item['oneTbetcoin'] + $item['twoTbetcoin'] }}</td>
-                        <td>{{ $item['oneRechargeAmount'] + $item['twoRechargeAmount'] }}</td>
-                        <td>{{ $item['oneFirstRecharge'] + $item['twoFirstRecharge'] }}</td>
-                    </tr>
-                    </tbody>
-                </table>
+
+            <div class="dl_conten">
+                <div class="dl_title">
+                    <span><img src="/mobile/black/images/dl1.png" /></span>Agente nível 1 
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/sz_ico.png" />
+                        Número
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneGradeInviteNum'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/dm_ico.png" />
+                        Valor do código
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneTbetcoin'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                    <img src="/mobile/black/images/cq_ico.png" />
+                        Recarga total
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneRechargeAmount'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                    <img src="/mobile/black/images/cs_ico.png" />
+                        Carga inicial
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneFirstRecharge'] }}</p></div>
+                </div>
             </div>
-            <div class="times_fl">
-                <span class="b2"></span>
-                <div class="text">Agente nível 1</div>
-                <label></label>
+
+            <div class="dl_conten">
+                <div class="dl_title">
+                    <span><img src="/mobile/black/images/dl1.png" /></span>Agente nível 2
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/sz_ico.png" />
+                        Número
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoGradeInviteNum'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                        <img src="/mobile/black/images/dm_ico.png" />
+                        Valor do código
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoTbetcoin'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                    <img src="/mobile/black/images/cq_ico.png" />
+                        Recarga total
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoRechargeAmount'] }}</p></div>
+                </div>
+                <div class="dl_conten_list">
+                    <div class="dl_list_coentn">
+                    <img src="/mobile/black/images/cs_ico.png" />
+                        Carga inicial
+                    </div>
+                    <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoFirstRecharge'] }}</p></div>
+                </div>
             </div>
-            <div class="times_sh">
-                    <table>
-                    <thead>
-                        <tr>
-                            <td>Número</td>
-                            <td>Valor do código</td>
-                            <td>Recarga total</td>
-                            <td>Carga inicial</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>{{ $item['oneGradeInviteNum'] }}</td>
-                            <td>{{ $item['oneTbetcoin'] }}</td>
-                            <td>{{ $item['oneRechargeAmount'] }}</td>
-                            <td>{{ $item['oneFirstRecharge'] }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="times_fl">
-                <span class="b3"></span>
-                <div class="text">Agente nível 2</div>
-                <label></label>
-            </div>
-            <div class="times_sh">
-                <table>
-                    <thead>
-                        <tr>
-                        <td>Número</td>
-                        <td>Valor do código</td>
-                        <td>Recarga total</td>
-                        <td>Carga inicial</td>
-                        </tr>
-                    </thead>
-                <tbody>
-                    <tr>
-                        <td>{{ $item['twoGradeInviteNum'] }}</td>
-                        <td>{{ $item['twoTbetcoin'] }}</td>
-                        <td>{{ $item['twoRechargeAmount'] }}</td>
-                        <td>{{ $item['twoFirstRecharge'] }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
     @endforeach  
 

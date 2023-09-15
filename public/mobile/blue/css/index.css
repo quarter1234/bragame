@@ -132,13 +132,38 @@ div.app-background[_ngcontent-way-c2] {
     justify-content: center;
     align-items: center
 }
+.sousuo {
+    width: 95%; /* 搜索框宽度占满父元素 */
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    display:inline-block;
+    margin-bottom:10px;
+    height: 42px;
+    
+}
+.ss{
+    background-color: #000;
+    width: 350px;
+    border: 0px solid black;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    line-height: 40px;
+}
 
+/* 移动端样式 */
+@media screen and (min-width: 1200px){
+    .sousuo {
+        font-size: 16px; /* 调整字体大小，使其在小屏幕上更可读 */
+        margin-left: -720px;
+        width: 25%; 
+    }
+}
 .header-view__nav-row-wrapper__container__nav-row__prefix__icon[_ngcontent-way-c3] {
     width: 1em;
     height: 1em;
     font-size: 44px
 }
-
 .header-icons-ctn[_ngcontent-way-c3] {
     height: 34px;
     width: 100%;
@@ -146,7 +171,6 @@ div.app-background[_ngcontent-way-c2] {
     display: flex;
     flex-flow: row nowrap
 }
-
 .header-icon[_ngcontent-way-c3] {
     background-repeat: no-repeat;
     background-size: cover;
@@ -525,12 +549,17 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .side-menu-ctn[_ngcontent-way-c8] {
-    margin-left: 10px;
+    margin-left: 29px;
     display: flex;
     /*flex-flow:column nowrap;align-items:center;*/
     justify-content: flex-start;
     overflow-x: auto;
 }
+
+.side-menu-ctn[_ngcontent-way-c8]::-webkit-scrollbar{
+    display: none;
+}
+
 
 .side-menu-item[_ngcontent-way-c8] {
     display: flex;
@@ -2283,7 +2312,7 @@ button.bulletin-board-btn[_ngcontent-way-c6] {
     color: #fff
 }
 
-div.bulletin-board-container[_ngcontent-way-c6] {
+.bulletin-board-container[_ngcontent-way-c6] {
     box-sizing: border-box;
     padding:10px 0;
     display: flex;
@@ -3300,37 +3329,30 @@ button.cancel-btn[_ngcontent-way-c22] {
 /**/
 
 .side-menu-icon-qb[_ngcontent-way-c8] {
-   
+   color: ;
 }
 .qb_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/qb_yx.png)
-}
-.active-side-menu .qb_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/yx_on.png)
+    background-image: url(../images/zff.png)
 }
 .xh_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/xh_ico.png)
+    background-image: url(../images/ax.png)
 }
 .active-side-menu .xh_ico{
     background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/xh_on.png)
 }
 
 .game_pp{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pp_on.png)
+    background-image: url(../images/zff.png)
 }
-.active-side-menu .game_pp{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pp.png)
-}
+
 
 .game_pg{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pg.png)
-}
-.active-side-menu .game_pg{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/game_pg_on.png)
+    background-image: url(../images/zff.png)
 }
 
+
 .game_ji{
-    background-image: url(/mobile/green/images/game_ji_on.png)
+    background-image: url(../images/zff.png)
 }
 .active-side-menu .game_ji{
     background-image: url(/mobile/green/images/game_ji.png)
@@ -3338,11 +3360,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .game_qb_title{
     width:100%;
-   height:20px;
+   height:30px;
    line-height:20px;
    text-align:left;
    font-size:12px;
-   padding-top:5px;
+   padding-top:3px;
   background:rgba(0, 0, 0, .2);
   /*background:linear-gradient(to bottom, #e2d238, #f2bc51);*/
    padding-bottom:5px;
@@ -3354,27 +3376,27 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     padding-left:10px;
     color:#fff;
+    margin-top: 5px;
 }
 .game_qb_left a{
     color:#fff;
     background:#489ef6;
-    border-radius:20px;
+    border-radius:5px;
     display:inline-block;
     float:right;
     margin-top:-2px;
     margin-right:5px;
     font-size:12px;
-    padding:2px 8px;
+    padding:6px 8px;
 }
 .game_ico{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/xh_h_ico.png) no-repeat;
+    background:url(../images/ax.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
 }
-
 .game_list{
     width:95%;
     display: flex;
@@ -3392,7 +3414,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pp_game{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/game_pp_on.png) no-repeat;
+    background:url(../images/zff.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
@@ -3400,7 +3422,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pg_game{
     width:20px;
     height:20px;
-    background:url(/mobile/blue/images/game_pg.png) no-repeat;
+    background:url(../images/hz.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
@@ -3514,6 +3536,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
+
 @media screen and (min-width: 1200px) {
     .rm {
         display:flex;
@@ -3562,4 +3585,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     .pass_sr{
         width:90% !important;
     }
+}
+@media (max-width:1200px){
+     .sousuo-div{
+        margin-left: 200px;
+     }
 }
