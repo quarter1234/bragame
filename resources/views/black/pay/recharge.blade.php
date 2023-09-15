@@ -140,7 +140,12 @@
       return false;
     }
 
-    // TODO 判断输入的金额是不是整数
+    let regPos = /^[0-9]*[1-9][0-9]*$/; //正整数
+    if(!regPos.test(val)){
+      showModal('Valor inteiro positivo.');
+      return false;
+    }
+
     let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
     if(!(payCoin >= mincoin)){
       showModal('A quantidade mínima é' + mincoin);
