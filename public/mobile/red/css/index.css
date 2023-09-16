@@ -3354,7 +3354,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     padding-left:10px;
     color:#fff;
-    
 }
 .game_qb_left a{
     color:#fff;
@@ -3408,7 +3407,6 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rm a{
     width:15%;
 }
-
 #pg_load_more{
     padding:5px 10px;
     background:rgba(255, 255, 255, .1);
@@ -3420,15 +3418,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:5px;
     font-size:14px;
 }
-
 #jl_load_more{
     padding:5px 10px;
     background:rgba(255, 255, 255, .1);
     border-radius:5px;
     font-size:14px;
 }
-
-
 .gg_db{
     width:100%;
     height:100%;
@@ -3440,7 +3435,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     overflow: hidden;
     display:block;
 }
-
 .gg_tc{
     width:94%;
     height:600px;
