@@ -3324,8 +3324,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:12px;
     color:#999;
 }
-
-
+.ioop{
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+}
 /**/
 
 .side-menu-icon-qb[_ngcontent-way-c8] {

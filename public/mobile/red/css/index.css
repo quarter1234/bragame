@@ -132,38 +132,13 @@ div.app-background[_ngcontent-way-c2] {
     justify-content: center;
     align-items: center
 }
-.sousuo {
-    width: 95%; /* 搜索框宽度占满父元素 */
-    border: 1px solid white; /* 白色边框 */
-    border-radius: 5px; /* 圆角边框 */
-    display:inline-block;
-    margin-bottom:10px;
-    height: 42px;
-    
-}
-.ss{
-    background-color: #000;
-    width: 350px;
-    border: 0px solid black;
-    outline: none;
-    color: #fff;
-    font-size: 17px;
-    line-height: 40px;
-}
 
-/* 移动端样式 */
-@media screen and (min-width: 1200px){
-    .sousuo {
-        font-size: 16px; /* 调整字体大小，使其在小屏幕上更可读 */
-        margin-left: -720px;
-        width: 25%; 
-    }
-}
 .header-view__nav-row-wrapper__container__nav-row__prefix__icon[_ngcontent-way-c3] {
     width: 1em;
     height: 1em;
     font-size: 44px
 }
+
 .header-icons-ctn[_ngcontent-way-c3] {
     height: 34px;
     width: 100%;
@@ -171,6 +146,7 @@ div.app-background[_ngcontent-way-c2] {
     display: flex;
     flex-flow: row nowrap
 }
+
 .header-icon[_ngcontent-way-c3] {
     background-repeat: no-repeat;
     background-size: cover;
@@ -182,7 +158,6 @@ div.app-background[_ngcontent-way-c2] {
     height: 22px;
     background: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png) no-repeat;
     background-size: 91px 22px;
-    margin-top: 6px;
 }
 
 .header-vertical-line[_ngcontent-way-c3] {
@@ -549,17 +524,12 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .side-menu-ctn[_ngcontent-way-c8] {
-    margin-left: 29px;
+    margin-left: 10px;
     display: flex;
     /*flex-flow:column nowrap;align-items:center;*/
     justify-content: flex-start;
     overflow-x: auto;
 }
-
-.side-menu-ctn[_ngcontent-way-c8]::-webkit-scrollbar{
-    display: none;
-}
-
 
 .side-menu-item[_ngcontent-way-c8] {
     display: flex;
@@ -579,11 +549,6 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 .side-menu-item__tag[_ngcontent-way-c8] {
     white-space: nowrap
-}
-
-.active-side-menu[_ngcontent-way-c8] {
-    color: #fff;
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bg_active.4290af043bcec3617ad5.png)
 }
 .side-menu-item__icon[_ngcontent-way-c8] {
     background-size: cover;
@@ -1513,7 +1478,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin: 10px auto 70px auto;
     border-radius: 4px;
     position: relative;
-    background: rgba(255, 255, 255, .1);
+    background: rgba(0, 0, 0, .3);
     box-shadow: 1px 1px 3px rgba(0, 0, 0, .1);
 }
 
@@ -1566,7 +1531,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .top {
     width: 100%;
     height: 62px;
-    background: #1a2c38;
+    background: #111e33;
     position: fixed;
     color: #fff;
     top: 0;
@@ -1617,8 +1582,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb {
     width: 34px;
     height: 29px;
-   /* background: linear-gradient(to top, #25b234, #68bf2c); */
-   background:#489ef6;
+   /*background: linear-gradient(-135deg, #9c16d4, #2b22b1);*/
+   background:#ffb31a;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2101,7 +2066,7 @@ div.app-background[_ngcontent-way-c2] {
 
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
-   background-image: url(/mobile/blue/images/logo11.png);
+   background-image: url(/mobile/black/images/logo11.png);
     height:30px;
     width:132px;
     margin-right: 10px;
@@ -2309,17 +2274,18 @@ button.bulletin-board-btn[_ngcontent-way-c6] {
     padding: 8px 10px;
     width: 100%;
     border-radius: 0;
-    color: #fff
+    color: #fff;
+    
 }
 
-.bulletin-board-container[_ngcontent-way-c6] {
+div.bulletin-board-container[_ngcontent-way-c6] {
     box-sizing: border-box;
-    padding:10px 0;
+    height: 30px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    background:rgba(0, 0, 0, .2);
+    background:rgba(255, 255, 255, .1);
     border-radius:5px;
 }
 
@@ -2331,7 +2297,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-repeat: no-repeat;
     background-position: center center;
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg);*/
-   background-image:url(/mobile/blue/images/gg.png);
+   background-image:url(/mobile/purple/images/gg.png);
     padding-left:10px;
 }
 
@@ -2500,21 +2466,20 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     margin: 0 0 5px;
     padding: 10px;
     font-size: 12px;
-    color: #7998b1;
+    color: #fff;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 .side-menu-item__tag[_ngcontent-way-c8] {
-    white-space: nowrap
+    white-space: nowrap;
 }
 
 .active-side-menu[_ngcontent-way-c8] {
     color: #fff;
-    /*background-image: url(/mobile/green/images/bg_active.4290af043bcec3617ad5.png)*/
-    border:1px solid #fff;
-    background:rgba(0, 0, 0, .1);
+    border-radius:10px;
+    background:rgba(255, 255, 255, .2);
 }
 
 .side-menu-item__icon[_ngcontent-way-c8] {
@@ -2596,13 +2561,12 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #3262a4;
+    color: #cecece;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -2627,23 +2591,23 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(/mobile/blue/images/activity.8a6a35ba2ac648314ace.png)
+    background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/blue/images/zfj_ico.png)
+    background-image: url(/mobile/black/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(/mobile/blue/images/sk.png)
+    background-image: url(/mobile/black/images/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(/mobile/blue/images/my.87c43b85171cb8232892.png)
+    background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(/mobile/blue/images/active_home.485e6c98acecf897b8ba.png)
+    background-image: url(/mobile/black/images/syfl.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
@@ -2672,7 +2636,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     line-height: 14px;
 }
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color:#469bf2 !important;
+    color:#ef962f !important;
 }
 [_nghost-way-c14] {
     box-sizing: border-box;
@@ -2758,6 +2722,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     transition: none;
     animation: none
 }
+
 
 @keyframes mat-progress-spinner-linear-rotate {
     0% {
@@ -3262,10 +3227,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:80px;height:40px;background:#469bf2;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:#173865;color:#fff;}
-.zc{width:80px;height:40px;background:#3262a4;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#fff;}
-.zc:hover{background:#173865;color:#fff;}
+.dl{width:100px;height:40px;background: #fd3657;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
+.dl:hover{background:#fd3657;color:#fff;}
+.zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
+.zc:hover{background:#ef962f;color:#fff;}
 
 .swipslider{
    padding-top:43% !important;
@@ -3307,13 +3272,13 @@ button.cancel-btn[_ngcontent-way-c22] {
 .index_bottom{
     width:95%;
     margin:-50px auto 100px auto;
-    background:rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, .3);
     border-radius:5px;
     text-align:center;
 }
 .index_bottom img{
     width:320px;
-    height:46px;
+    height:103px;
     margin-top:10px;
 }
 .index_bottom p{
@@ -3329,43 +3294,56 @@ button.cancel-btn[_ngcontent-way-c22] {
 /**/
 
 .side-menu-icon-qb[_ngcontent-way-c8] {
-   color: ;
+   
 }
 .qb_ico{
-    background-image: url(../images/zff.png)
+    background-image: url(/mobile/black/images/dn1.png)
+}
+.active-side-menu .qb_ico{
+    background-image: url(/mobile/black/images/dn1.png)
 }
 .xh_ico{
-    background-image: url(../images/ax.png)
+    background-image: url(/mobile/black/images/xh_ico1.png)
 }
 .active-side-menu .xh_ico{
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/xh_on.png)
+    background-image: url(/mobile/black/images/xh_ico1.png)
 }
 
 .game_pp{
-    background-image: url(../images/zff.png)
+    background-image: url(/mobile/black/images/game_pp_on.png)
 }
-
+.active-side-menu .game_pp{
+    background-image: url(/mobile/black/images/game_pp.png)
+}
 
 .game_pg{
-    background-image: url(../images/zff.png)
+    background-image: url(/mobile/black/images/game_pg.png)
 }
-
+.active-side-menu .game_pg{
+    background-image: url(/mobile/black/images/game_pg.png)
+}
 
 .game_ji{
-    background-image: url(../images/zff.png)
+    background-image: url(/mobile/black/images/game_ji_on.png)
 }
 .active-side-menu .game_ji{
-    background-image: url(/mobile/green/images/game_ji.png)
+    background-image: url(/mobile/black/images/game_ji.png)
 }
 
+.game_qp_ico{
+    background-image: url(/mobile/black/images/qp_ico.png)
+}
+.active-side-menu .game_qp_ico{
+    background-image: url(/mobile/black/images/qp_ico.png)
+}
 .game_qb_title{
     width:100%;
-   height:30px;
+   height:20px;
    line-height:20px;
    text-align:left;
    font-size:12px;
-   padding-top:3px;
-  background:rgba(0, 0, 0, .2);
+   padding-top:5px;
+  /* background:rgba(0, 0, 0, .2);*/
   /*background:linear-gradient(to bottom, #e2d238, #f2bc51);*/
    padding-bottom:5px;
    margin-top:10px;
@@ -3376,27 +3354,27 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     padding-left:10px;
     color:#fff;
-    margin-top: 5px;
+    
 }
 .game_qb_left a{
     color:#fff;
-    background:#489ef6;
-    border-radius:5px;
+    background:rgba(11, 236, 234, .1);
     display:inline-block;
     float:right;
     margin-top:-2px;
     margin-right:5px;
     font-size:12px;
-    padding:6px 8px;
+    padding:2px 8px;
 }
 .game_ico{
     width:20px;
     height:20px;
-    background:url(../images/ax.png) no-repeat;
+    background:url(/mobile/purple/images/xh_h_ico.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
 }
+
 .game_list{
     width:95%;
     display: flex;
@@ -3414,15 +3392,15 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pp_game{
     width:20px;
     height:20px;
-    background:url(../images/zff.png) no-repeat;
+    background:url(/mobile/purple/images/game_pp_on.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
 }
-.pg_game{
+.pg_game_ji{
     width:20px;
     height:20px;
-    background:url(../images/hz.png) no-repeat;
+    background:url(/mobile/purple/images/game_ji.png) no-repeat;
     background-size:20px 20px;
     float:left;
     margin-right:10px;
@@ -3466,11 +3444,12 @@ button.cancel-btn[_ngcontent-way-c22] {
 .gg_tc{
     width:94%;
     height:600px;
-    background:linear-gradient(to bottom, #489ef6, #3262a4);
+    background:#0a0e2b;
     position:absolute;
     left:50%;
     top:50%;
     margin:-300px 0 0 -48%;
+    border:3px solid #96a554;
     border-radius:10px;
 }
 .gg_tc_title{
@@ -3485,7 +3464,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .gg_tc_title label{
     width:24px;
     height:24px;
-    background:url(/mobile/blue/images/gg_gb_ico.png) no-repeat;
+    background:url(/mobile/green/images/gg_gb_ico.png) no-repeat;
     background-size:24px 24px;
     display:inline-block;
     float:right;
@@ -3513,7 +3492,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin:0;
     padding:0;
     font-size:12px;
-    color:#fff;
+    color:#999;
     float:left;
     width:50%;
     text-align:right;
@@ -3535,7 +3514,221 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:526px;
 }
 
+.xh_game{
+    width:95%;
+    margin:20px auto 0 auto;  
+}
+.xh_game_top{
+    width:100%;
+    height:30px;
+    display:flex;
+    align-items:center;
+}
+.xh_game_top label{
+    width:16px;
+    height:16px;
+    display:inline-block;
+    background:url(/mobile/black/images/rank.png) no-repeat;
+    background-size:16px 16px;
+}
+.xh_game_top span{
+    padding-left:5px;
+}
+.xh_game_centen{
+    width:100%;
+    height:157px;
+}
 
+.xh_game_centen img{
+    width:90% !important;
+    border-radius:10px;
+}
+.generic-background-image{
+    border-radius:10px;
+}
+.menu_body{
+    width:100%;
+    height:100%;
+    position:fixed;
+    background:rgba(0, 0, 0, .9);
+    color:#fff;
+    z-index:9999;
+    top:0;
+    left:-100%;
+}
+
+/*/deep/ input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 0px transparent inset !important;
+  }
+  input:-internal-autofill-previewed,
+  input:-internal-autofill-selected {
+    -webkit-text-fill-color: #FFFFFF !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+  }
+   /deep/ input:-internal-autofill-selected {
+      transition: background-color 5000s ease-in-out 0s !important;
+      background-color: transparent !important;
+  }
+*/
+@keyframes mymover{
+    50%{
+        transform:rotate(180deg);
+    }
+}
+.black_gb{
+    width:20px;
+    height:20px;
+    background:url(/mobile/black/images/gb_black.png);
+    background-size:20px 20px;
+    transform: rotate(0deg);
+    transition: all .3s;
+    float:right;
+    margin:20px;
+
+}
+.black_gb:hover{
+    transform: rotate(180deg);
+}
+
+.black_nav{
+    width:90%;
+    padding:10px 0;
+    background:rgba(17, 30, 51, .8);
+    border-radius:0 10px 10px 0;
+    overflow: hidden;
+    margin-top:80px;
+    display: block;
+}
+.black_nav ul{
+    margin:0;
+    padding:0;
+}
+.black_nav li{
+    height:40px;
+    display:flex;
+    align-items:center;
+    line-height:40px;
+    font-size:14px;
+    color:#cecece;
+}
+.black_nav li:hover{
+    background:rgba(0, 0, 0, .1);
+}
+.black_nav li label{
+    width:24px;
+    height:24px;
+    display:inline-block;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.n1{
+    background:url(/mobile/black/images/home.93b20d6e835f71c043b8.png);
+    background-size:24px 24px;
+}
+.n2{
+    background:url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png);
+    background-size:24px 24px;
+}
+.n3{
+    background:url(/mobile/black/images/zfj_ico.png);
+    background-size:24px 24px;
+}
+.n4{
+    background:url(/mobile/black/images/sk.png);
+    background-size:24px 24px;
+}
+.n5{
+    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background-size:24px 24px;
+}
+.pc_nav.n5{
+    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background-size:24px 24px;
+}
+.n6{
+    background:url(/mobile/black/images/f-vip1.png);
+    background-size:24px 24px;
+}
+.n7{
+    background:url(/mobile/black/images/email-fill1.png);
+    background-size:24px 24px;
+}
+.n8{
+    background:url(/mobile/black/images/kf_r_ico1.png);
+    background-size:24px 24px;
+}
+
+.black_nav li.black_on{
+    color:#ef962f;
+}
+.black_on .n1{
+    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background-size:24px 24px;
+}
+.black_on .n2{
+    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background-size:24px 24px;
+}
+.black_on .n3{
+    background:url(/mobile/black/images/zfj_on_ico.png);
+    background-size:24px 24px;
+}
+.black_on .n4{
+    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
+    background-size:24px 24px;
+}
+.black_on .n5{
+    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
+    background-size:24px 24px;
+}
+.black_logo{
+    width:132px;
+    height:30px;
+    float:left;
+    background:url(/mobile/black/images/logo11.png);
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.pc_nav li.pc_on{
+    color:#ef962f;
+}
+.pc_on .n1{
+    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background-size:24px 24px;
+}
+.pc_on .n2{
+    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background-size:24px 24px;
+}
+.pc_on .n3{
+    background:url(/mobile/black/images/zfj_on_ico.png);
+    background-size:24px 24px;
+}
+.pc_on .n4{
+    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
+    background-size:24px 24px;
+}
+.pc_on .n5{
+    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
+    background-size:24px 24px;
+}
+.pc_on .n6{
+    background:url(/mobile/black/images/f-vip.png);
+    background-size:24px 24px;
+}
+.pc_on .n7{
+    background:url(/mobile/black/images/email-fill.png);
+    background-size:24px 24px;
+}
+.pc_on .n8{
+    background:url(/mobile/black/images/kf_r_ico.png);
+    background-size:24px 24px;
+}
+.pc_tab{
+    display:none;
+}
 
 @media screen and (min-width: 1200px) {
     .rm {
@@ -3571,7 +3764,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     .gg_tc{
         width:400px;
         height:600px;
-        background:linear-gradient(to bottom, #014811, #127c50);
+        background:#0a0e2b;
         position:absolute;
         left:50%;
         top:50%;
@@ -3579,15 +3772,96 @@ button.cancel-btn[_ngcontent-way-c22] {
         border:3px solid #96a554;
         border-radius:10px;
     }
+    .game_qb_title{
+        font-size:16px;
+    }
     .sr{
         width:90% !important;
     }
     .pass_sr{
         width:90% !important;
     }
+    .xh_game{
+        width:62%;
+        margin:20px auto 0 auto;  
+    }
+    .xh_game_centen{
+        height:176px;
+    }
+    .xh_game_centen img{
+        width:90% !important;
+        border-radius:10px;
+    }
+    .tab-bar[_ngcontent-way-c10]{
+        display:none;
+    }
+
+    .pc_tab{
+        width:180px;
+        height:100%;
+        position:fixed;
+        left:0;
+        top:0;
+        z-index:99;
+        background:rgba(0, 0, 0, .2);
+        display:block;
+    }
+    .pc_nav{
+        margin-top:70px;
+    }
+    .pc_nav ul{
+        margin:0;
+        padding:0;
+    }
+    .pc_nav li{
+        height:40px;
+        display:flex;
+        align-items:center;
+        line-height:40px;
+        font-size:14px;
+        color:#cecece;
+    }
+    .pc_nav li label{
+        width:24px;
+        height:24px;
+        display:inline-block;
+        margin-left:10px;
+        margin-right:10px;
+    }
 }
-@media (max-width:1200px){
-     .sousuo-div{
-        margin-left: 200px;
-     }
+.sousuo {
+    width: 95%; /* 搜索框宽度占满父元素 */
+    border: 1px solid white; /* 白色边框 */
+    border-radius: 5px; /* 圆角边框 */
+    display:inline-block;
+    margin-bottom:10px;
+    height: 42px;
+    margin-top: 35px;
+    
+}
+.ss{
+    background-color: #000;
+    width: 320px;
+    border: 0px solid black;
+    outline: none;
+    color: #fff;
+    font-size: 17px;
+    margin-left: 5px;
+    height: 40px;
+}
+.side-menu-ctn[_ngcontent-way-c8]::-webkit-scrollbar{
+    display: none;
+}
+/* 移动端样式 */
+@media screen and (min-width: 1200px){
+    .sousuo {
+        font-size: 16px; /* 调整字体大小，使其在小屏幕上更可读 */
+        margin-left: -720px;
+        width: 25%; 
+    }
+}
+.ioop{
+    width: 17px;
+    height: 17px;
+    margin-top: 10px;
 }
