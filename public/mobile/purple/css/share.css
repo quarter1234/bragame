@@ -106,6 +106,7 @@
     border-radius: 15px;
     margin: 1px;
     color:#fff;
+    line-height:52px;
 }
 .centen_list p{
     margin:0;
@@ -140,11 +141,12 @@
 
 .xk {
     width: 99%;
-    height: 180px;
+    height: 140px;
     border-radius: 10px;
     overflow: hidden;
     margin:0 auto;
     background:rgba(0, 0, 0, .3);
+    position:relative;
 }
 
 .xk p {
@@ -155,19 +157,30 @@
 }
 
 .xk_t {
-    width: 85%;
-    margin: 0 auto;
+    width: 60%;
+    margin-left:120px;
+    margin-top:40px;
+}
+
+.xk_lab{
+    width:80px;
+    height:80px;
+    position:absolute;
+    background:url(/mobile/purple/images/icon_horn-01dbf562.png);
+    top:50px;
+    left:10px;
+    background-size:80px 80px;
 }
 
 .xk_t input {
     border: 1px #fff dashed;
-    width: 80%;
+    width: 75%;
     float: left;
     height: 40px;
     background:rgba(0, 0, 0, .5);
     outline: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 12px;
     padding-left: 5px;
 }
 
@@ -1946,5 +1959,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .recharge_div{
       width:49%;
+    }
+    .xk_t input{
+        width:85%;
     }
   }
