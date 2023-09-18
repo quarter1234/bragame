@@ -3578,7 +3578,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     .gg_tc{
         width:400px;
         height:600px;
-        background:linear-gradient(to bottom, #014811, #127c50);
+        background:#14092b;
         position:absolute;
         left:50%;
         top:50%;
@@ -3592,4 +3592,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     .pass_sr{
         width:90% !important;
     }
+}
+
+.rf_ico{
+    width:32px;
+    height:32px;
+    background:url(/mobile/purple/images/rf_ico.png) no-repeat;
+    background-size:32px 32px;
 }
