@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/artDialog.css">
-    <link rel="stylesheet" href="/mobile/black/css/share.css">
-    <link rel="stylesheet" href="/mobile/black/css/shop.css">
+    <link rel="stylesheet" href="/mobile/red/css/share.css">
+    <link rel="stylesheet" href="/mobile/red/css/shop.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>

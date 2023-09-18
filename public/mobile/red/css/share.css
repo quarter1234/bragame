@@ -1,28 +1,12 @@
 .top {
     width: 100%;
     height: 62px;
-    background: #1b3060;
+    background:#111e33;
     position: fixed;
     color: #fff;
     top: 0;
     left: 0;
-    display:flex;
 }
-
-.logo {
-    height:30px;
-    width:132px;
-
-    margin-top: 15px;
-    margin-right: 10px;
-    margin-left: 14px;
-}
-
-.logo img {
-    height:30px;
-    width:132px;
-}
-
 
 .money {
     width: 201px;
@@ -55,7 +39,7 @@
 .qb {
     width: 34px;
     height: 29px;
-    background:#489ef6;
+    background:#fff;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -91,20 +75,19 @@
 .centen_tab {
     width: 96%;
     height: 54px;
-    background:rgba(0, 0, 0, .5);
+    background:#162335;
     margin: 0px auto;
-    border-radius: 15px;
+    border-radius:10px;
     display: flex;
     justify-content: space-between;
 }
 
 .centen_list {
-    width: 33%;
+    width:50%;
     text-align: center;
     align-items: center;
     font-size: 14px;
-    border: 1px solid #13202d;
-    border-radius: 15px;
+    border-radius:10px;
     margin: 1px;
     color:#fff;
 }
@@ -113,23 +96,23 @@
     padding:0;
 }
 .centen_on {
-    background:#469bf2;
-    color:#fff;
+    background:#1ac0f3e0;
+    color:black;
 }
 
-.fx{ width:20px;height:20px;background:url(/mobile/blue/images/fx.png) no-repeat;background-size:20px 20px; display:inline-block;margin-top:5px;}
-.dl{width:35px;height:35px;background:url(/mobile/blue/images/dl.png) no-repeat;background-size:35px 35px;display:inline-block;margin-top:-4px;}
-.flzh{width:20px;height:20px;background:url(/mobile/blue/images/flzh.png) no-repeat;background-size:20px 20px;display:inline-block;margin-top:5px;}
+.fx{ width:20px;height:20px;background:url(/mobile/purple/images/fx.png) no-repeat;background-size:20px 20px; display:inline-block;margin-top:5px;}
+.dl{width:35px;height:35px;background:url(/mobile/purple/images/dl.png) no-repeat;background-size:35px 35px;display:inline-block;margin-top:-4px;}
+.flzh{width:20px;height:20px;background:url(/mobile/purple/images/flzh.png) no-repeat;background-size:20px 20px;display:inline-block;margin-top:5px;}
 .centen_on .fx{
-    background:url(/mobile/blue/images/fx_on.png) no-repeat;
+    background:url(/mobile/purple/images/fx_on.png) no-repeat;
     background-size:20px 20px;
 }
 .centen_on .dl{
-    background:url(/mobile/blue/images/dl_on.png) no-repeat;
+    background:url(/mobile/purple/images/dl_on.png) no-repeat;
     background-size:35px 35px;
 }
 .centen_on .flzh{
-    background:url(/mobile/blue/images/flzh_on.png) no-repeat;
+    background:url(/mobile/purple/images/flzh_on.png) no-repeat;
     background-size:20px 20px;
 }
 .centen_show {
@@ -141,11 +124,11 @@
 
 .xk {
     width: 99%;
-    height: 180px;
+    height: 100px;
     border-radius: 10px;
     overflow: hidden;
     margin:0 auto;
-    background:rgba(0, 0, 0, .2);
+    background:rgba(255, 255, 255, .1);
 }
 
 .xk p {
@@ -161,7 +144,7 @@
 }
 
 .xk_t input {
-    border: 1px #fff dashed;
+    border: 1px #fff solid;
     width: 80%;
     float: left;
     height: 40px;
@@ -176,7 +159,7 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background:#3262a4;
+    background:#1ac0f3e0;
     text-align: center;
     color: #fff;
     float: right;
@@ -190,7 +173,7 @@
 .xk_b {
     width: 100%;
     margin-top: 15px;
-    background:rgba(0, 0, 0, .5);
+    background: rgba(255, 255, 255, .1);
     border-radius: 10px;
     overflow: hidden;
     text-align:center;
@@ -207,7 +190,7 @@
 }
 .xk_b img{
     width:340px;
-    height:230px;
+    height:281px;
 }
 .xk_b label{
     width: 60px;
@@ -270,7 +253,7 @@
 }
 
 .times_on {
-    background:linear-gradient(to bottom,#24b033,#68bf2c);
+    background:linear-gradient(to bottom,#ef962f,#b56100);
     color:#fff;
 }
 
@@ -340,7 +323,7 @@
 .yh_t_list {
     width: 48%;
     height: 87px;
-    background:rgba(0, 0, 0, .5);
+    background:#111e33;
     border-radius: 10px;
     text-align: center;
 }
@@ -349,15 +332,20 @@
     color: #ffe777;
     margin: 10px 0;
 }
-
-.yh_t_list p {
+.yh_t_list p{
+    margin:0;
+    padding:0;
+}
+.yh_t_list img {
     margin: 0;
+    width:25px;
+    height:25px;
 }
 
 .yh_table {
     width: 100%;
     overflow-y:auto;
-    height:500px;
+    height:350px;
   
 }
 
@@ -367,9 +355,8 @@
 }
 
 .yh_table table td {
-    background:rgba(255, 255, 255, .2);
-
-    font-size: 14px;
+    background:rgba(255, 255, 255, .1);
+    font-size: 12px;
     text-align: center;
     line-height: 30px;
 }
@@ -1013,7 +1000,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #3262a4;
+    color: #cecece;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1021,7 +1008,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #469bf2  
+    color: #ef962f ;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1036,43 +1023,40 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(../images/shoub.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(../images/fl.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/zfj_ico.png)
+   background-image: url(../images/fasong.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/sk.png)
+   background-image: url(../images/pianbao.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(../images/shoub.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(../images/fl.png)
 }
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/zfj_on_ico.png)
-}
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(../images/pianbao.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -1685,9 +1669,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:0 0 5px 5px;
     overflow: hidden;
 }
-.times_sh td{
-    
-}
+
 .times_sh thead td{
     background:rgba(255, 255, 255, .1);
     color:#fff;
@@ -1720,27 +1702,48 @@ button.cancel-btn[_ngcontent-way-c22] {
 .recharge_div{
     width:95%;
     margin:10px auto;
+    background:rgba(255, 255, 255, .1);
     padding:10px 0;
-    background:rgba(0, 0, 0, .2);
     height:500px;
     overflow-y:auto;
+    border-radius:10px;
 }
 .recharge_div_t{
     width:100%;
     font-size:14px;
     color:#fff;
     text-indent:14px;
+    text-align:left;
 }
 
+.recharge_k_i{
+    top:0;
+    left:2px;
+    font-size:15px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../images/dg.png) no-repeat;
+    background-position: center right;
+    background-size: 12px 12px;
+    width: 106px;
+    height: 99px;
+}
 
 .recharge_k_w{
-    width:160px;
-    height:60px;
+    width:106px;
+    height:59px;
     background:url(../img/xz_ico.png) no-repeat;
     background-repeat:160px 60px;
     position:absolute;
     top:0;
-    left:0;
+    left:-9px;
+    font-size:20px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.recharge_k_w label{
+    font-size:12px;
+    font-weight:normal;
 }
 .recharge_bz{
     width:55px;
@@ -1758,10 +1761,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .recharge_kn{
     display:flex;
-    justify-content:space-between;
     flex-direction:row;
     flex-wrap: wrap;
-    padding:0 12px;
+    padding:0 10px;
 }
 
 .recharge_kn .recharge_k_n{
@@ -1776,16 +1778,29 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:none;
 }
 .recharge_on .recharge_k_n{
-    background-image: radial-gradient(#489ef6, #3262a4);
+    background:#ff3757;
     color:#fff;
 }
 .recharge_on .recharge_bz{
-    background:rgba(0, 0, 0, .5);
-    color:#fff;
+    background: linear-gradient(to right, #29d279, #a5e376);
+    color:#fa3605;
+    font-size: 1px;
 }
 .recharge_on .recharge_k_w{
-    background:url(/mobile/blue/images/xz_ico.png) no-repeat;
+    background:url(../images/dg.png) no-repeat;
+    background-position:center right;
+    background-size: 12px 12px;
+    width: 102px;
+    height: 100px;
 }
+.recharge_on .recharge_k_i{
+    background:url(../images/dg.png) no-repeat;
+    background-position:center right;
+    background-size: 20px 20px;
+    width: 100px;
+    height: 88px;
+}
+
 
 .recharge_input{
     width:93%;
@@ -1832,45 +1847,44 @@ button.cancel-btn[_ngcontent-way-c22] {
 .recharge_button{
     width:93%;
     height:40px;
-    border-radius:5px;
+    border-radius:20px;
 
     margin-top:20px;
     margin-left:12px;
     margin-bottom:40px;
     display:inline-block;
     font-size:14px;
-    background:#3262a4;
+    background: #ff3757;
     color:#fff;
 }
 
 .recharge_wk{
-    width:100%;
+    width: 100%;
 	overflow-x: auto;
 	overflow-y: hidden;
 	white-space: nowrap;
     display:flex;
     height:80px;
-
 }
 
 .recharge_k{
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:160px;
+    width:98px !important;
     height:60px;
     border-radius:5px;
     overflow: hidden;
+    margin:10px 14px 10px 0;
     text-align:center;
     line-height:60px;
     color:#000;
-    margin-top:12px;
 }
 .recharge_k1{
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:160px;
+    width:110px;
     height:60px;
     border-radius:5px;
     overflow: hidden;
@@ -1910,11 +1924,12 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:100%;
     height:100%;
     position: relative;
-    background-image: radial-gradient(#489ef6, #3262a4);
+    background:#ff3757;
 }
 .re_on .recharge_k_w{
-    background: url(/mobile/blue/images/xz_ico.png) no-repeat;
+    background: url(/mobile/black/images/xz_ico.png) no-repeat;
     background-repeat: 160px 60px;
+    background-position:center right;
 }
 .re_show{
     width:100%;
@@ -1940,11 +1955,74 @@ button.cancel-btn[_ngcontent-way-c22] {
 .fk_text_1 p{
     font-size:14px;
 }
+.dl_title{
+    width:100%;
+    font-size:14px;
+    text-indent:10px;
+    display:flex;
+    align-items:center;
+}
+.dl_title span{
+    width:30px;
+    height:30px;
+    background:rgba(0, 0, 0, .5);
+    border-radius:30px;
+    margin-left:10px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+}
+.dl_title span img{
+    width:20px;
+    height:20px;
+    margin-left:5px;
+}
+.dl_conten{
+    background:#111e33;
+    width:98%;
+    margin:10px auto;
+    padding:10px 0;
+    border-radius:10px;
+}
+.dl_conten_list{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:4px solid rgba(0, 0, 0, .5);
+}
+.dl_conten_list:nth-child(5){
+    border:none;
+}
+.dl_list_coentn{
+    width:50%;
+    display:flex;
+    align-items:center;
+    font-size:12px;
+}
+.dl_list_coentn img{
+    width:20px;
+    height:20px;
+    margin:0 17px;
+}
+.dl_wz_right p{
+    width:100%;
+    text-align:right;
+    font-size:16px;
+    color:#ffb31a;
+    padding:0;
+    margin:0;
+    margin-right:10px;
+}
 @media screen and (min-width: 1200px){
     .recharge_top{
       width:49%;
     }
     .recharge_div{
       width:49%;
+      text-align:center;
+    }
+    .recharge_button{
+        margin-left:0;
     }
   }
