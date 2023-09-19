@@ -1497,7 +1497,6 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     margin: 0 0 20px;
     display: block
 }
-
 .mat-dialog-actions {
     padding: 8px 0;
     display: flex;
@@ -1610,6 +1609,26 @@ button.cancel-btn[_ngcontent-way-c22] {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+}
+.index_bottom{
+    width:100%;
+    margin:300px auto 0 auto;
+    background: rgba(0, 0, 0, .6);
+    border-radius:5px;
+    text-align:center;
+}
+.index_bottom img{
+    width:320px;
+    height:108px;
+    margin-top:10px;
+}
+.index_bottom p{
+    width:320px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:left;
+    font-size:12px;
+    color:#999;
 }
 
 .dropdown-content a {

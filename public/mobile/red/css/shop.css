@@ -368,14 +368,17 @@ margin:20px auto;
     flex-wrap:wrap;
 }
 .shop_index_list{
-    width:49%;
-    height:100px;
-    background:#111e33;
-    border-radius:10px;
-    margin-top:10px;
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
+    width: 49%;
+    height: 100px;
+    background: #111e33;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .shop_index_list a{
     color:#fff;
@@ -408,7 +411,7 @@ margin:20px auto;
 .s1{
     width:30px;
     height:30px;
-    background:url(/mobile/black/images/qb_s.png);
+    background:url(/mobile/red/images/pianb.png);
     background-size:30px 30px;
     display:inline-block;
     margin:0 auto;
@@ -416,7 +419,7 @@ margin:20px auto;
 .s2{
     width:30px;
     height:30px;
-    background:url(/mobile/black/images/s_tx.png);
+    background:url(/mobile/red/images/tx.png);
     background-size:30px 30px;
     display:inline-block;
     margin:0 auto;
@@ -424,7 +427,7 @@ margin:20px auto;
 .s3{
     width:30px;
     height:30px;
-    background:url(/mobile/black/images/s_jy.png);
+    background:url(/mobile/red/images/jyjl.png);
     background-size:30px 30px;
     display:inline-block;
     margin:0 auto;
@@ -432,7 +435,7 @@ margin:20px auto;
 .s4{
     width:30px;
     height:30px;
-    background:url(/mobile/black/images/s_zh.png);
+    background:url(/mobile/red/images/grzx2.png);
     background-size:30px 30px;
     display:inline-block;
     margin:0 auto;
