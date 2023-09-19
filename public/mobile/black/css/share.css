@@ -17,12 +17,10 @@
     position: relative;
     line-height: 32px;
 }
-
 .money span {
     padding-left: 10px;
     float: left;
 }
-
 .sx {
     width: 16px;
     height: 16px;
@@ -30,16 +28,14 @@
     right: 45px;
     top: 7px;
 }
-
 .sx img {
     width: 16px;
     height: 16px;
 }
-
 .qb {
     width: 34px;
     height: 29px;
-    background:#ffb31a;
+    background:#fff;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -52,7 +48,6 @@
     height: 16px;
     margin-top:7px;
 }
-
 .yh {
     width: 15px;
     height: 15px;
