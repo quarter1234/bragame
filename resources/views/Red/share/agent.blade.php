@@ -1,9 +1,20 @@
-<div class="times">
-    <div class="times_list times_on">Today</div>
-    <div class="times_list">Yesterday</div>
-    <div class="times_list">Week</div>
-    <div class="times_list">Month</div>
-    <div class="times_list">Year</div>
+<div class="dropdown" id="times">
+    <button class="dropbtn">Select Time Range</button>
+    <div class="dropdown-content">
+        <a href="#" onclick="selectTime('Today')">Today</a>
+        <a href="#" onclick="selectTime('Yesterday')">Yesterday</a>
+        <a href="#" onclick="selectTime('Week')">Week</a>
+        <a href="#" onclick="selectTime('Month')">Month</a>
+        <a href="#" onclick="selectTime('Year')">Year</a>
+    </div>
+ 
+<script>
+     function selectTime(value) {
+        document.getElementById("times").querySelector(".dropbtn").innerText = value;
+        document.getElementById("times").querySelector(".dropdown-content").style.display = "none";
+    }
+</script>
+
 </div>
 <div class="times_xk">
 
