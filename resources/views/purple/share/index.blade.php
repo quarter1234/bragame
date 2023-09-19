@@ -45,33 +45,33 @@
             <div class="centen"></div>
             <div class="centen_tab">
                   <div class="centen_list centen_on">
-                      <div class="fx"></div>
+                     
                       <p>Convidar{{--分享--}}</p>
                   </div>
                   <div class="centen_list">
-                      <div class="dl"></div>
-                      <p style="margin-top:-5px;">Agente{{--代理--}}</p>
+                      
+                      <p>Agente{{--代理--}}</p>
                   </div>
                   <div class="centen_list">
-                      <div class="flzh"></div>
+                      
                       <p>Membro {{--成员--}}</p>
                   </div>
             </div>
             <div class="centen_show"  style="display:block;" >
-             @include('green.share.invite') 
+             @include('purple.share.invite') 
             </div>
             <div class="centen_show" >
-            @include('green.share.agent') 
+            @include('purple.share.agent') 
             </div>
             <div class="centen_show" >
-            @include('green.share.user') 
+            @include('purple.share.user') 
             </div>
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                @include('green.common.footer') 
+                @include('purple.common.footer') 
                   
                  
                 </jx-tab-bar>
