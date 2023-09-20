@@ -1,9 +1,8 @@
 <div class="top">
     <!-- <div class="logo"><img src="/mobile/green/images/logo11.png"/></div> -->
     <div class="money" style="float:right;margin-right:10px">
-        <span>R$</span>
+        <span class="rf_ico"></span>
         <span>{{$user['coin']}}</span>
-        <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png" /></div>
         <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/purple/images/qb.png" /></div>
     </div>
 
@@ -20,4 +19,11 @@ $(function(){
         z-index:9999;
         top:0;
     }
+    
+  .rf_ico{
+    width:32px;
+    height:32px;
+    background:url(/mobile/purple/images/rf_ico.png) no-repeat;
+    background-size:32px 32px;
+}
 </style>
