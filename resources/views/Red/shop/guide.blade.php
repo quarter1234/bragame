@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
 
-    <link rel="stylesheet" href="/mobile/black/css/shop.css">
-    <link rel="stylesheet" href="/mobile/black/css/share.css">
+    <link rel="stylesheet" href="/mobile/red/css/shop.css">
+    <link rel="stylesheet" href="/mobile/red/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/black/css/activity.css">
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/red/css/activity.css">
+    <link rel="stylesheet" href="/mobile/red/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -58,7 +58,7 @@
          <div class="transaction_b">
             <div id="content_draw_list_pages">
             </div>
-            <div style="width:100px;text-align:center;margin-top:1rem; background-color: #ef962f; height: 30px; margin: 0 auto; border-radius: 10px;">
+            <div style="width:100px;text-align:center;margin-top:1rem; background-color: rgb(66,141,223); height: 30px; margin: 0 auto; border-radius: 10px;">
                 <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px; line-height: 30px; ">{{--点击加载更多--}}Carregue mais</button>
             </div>
             <div class="email_h" style="height: 100px;"></div>
@@ -93,14 +93,12 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
-
     <script>
     function copy(orderid) {
       const btnCopy = new Clipboard();
       this.copyValue = 'orderid';
       console.log(orderid)
     }
-
     function loadDraws() {
         let page = $('#content_draws_load_more').attr('page');
           showLoading();

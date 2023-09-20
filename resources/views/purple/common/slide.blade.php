@@ -1,9 +1,4 @@
-<div class="menu_on">
-<img src="/mobile/green/images/menu_on.png" />
-</div>
-<div class="kj_kf">
-<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/green/images/kf_ico.png" />
-</div>
+
 {{--
 <div class="down_ico">
 <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/down_ico.png" />

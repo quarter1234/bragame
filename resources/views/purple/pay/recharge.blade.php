@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/red/css/activity.css">
-    <link rel="stylesheet" href="/mobile/red/css/share.css">
-
+    <link rel="stylesheet" href="/mobile/purple/css/activity.css">
     <link rel="stylesheet" href="/mobile/purple/css/share.css">
+
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -31,7 +30,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('black.common.top_sub')
+        @include('purple.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
