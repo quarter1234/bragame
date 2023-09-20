@@ -19,11 +19,11 @@
 <div class="yh_top">
 <div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>
-            <p><img src="/moblie/black/images/grzx.png" />{{--一级邀请--}}</p>
+            <p><img src="/mobile/red/images/grzx.png" />{{--一级邀请--}}</p>
         </div>
         <div class="yh_t_list">
             <h2>{{ $invite['two_grade_count'] }}</h2>
-            <p><img src="/mobile/black/images/grzx.png" />{{--二级邀请--}}</p>
+            <p><img src="/mobile/red/images/yqhy.png" />{{--二级邀请--}}</p>
         </div>
        
 </div>
@@ -35,7 +35,6 @@
     <table>
         <thead>
         <tr>
-      
             <td>prenome</td>
             <td>série</td>
             <td>tempo</td>

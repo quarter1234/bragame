@@ -7,7 +7,6 @@
     top: 0;
     left: 0;
 }
-
 .money {
     width: 201px;
     height: 32px;
@@ -229,77 +228,7 @@
     text-align: center;
 }
 
-.times {
-    width: 96%;
-    height: 32px;
-    background:rgba(0, 0, 0, .5);
-    margin: 0px auto;
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    display: flex;
-    justify-content: space-between;
-}
 
-.times_list {
-    width: 19%;
-    height: 30px;
-    margin: 1px;
-    border-radius: 5px;
-    text-align: center;
-    line-height: 30px;
-    color: #fff;
-    font-size: 12px;
-}
-
-.times_on {
-    background:linear-gradient(to bottom,#ef962f,#b56100);
-    color:#fff;
-}
-
-.times_xk {
-    width: 100%;
-    border-radius: 10px;
-    padding: 10px 0 80px 0;
-}
-
-.times_div {
-    display: none;
-}
-
-.times_fl {
-    width: 98%;
-    height: 40px;
-    background:rgba(0, 0, 0, .5);
-    margin: 20px auto 0 auto;
-    border-radius: 5px 5px 0 0;
-    position: relative;
-    line-height:40px;
-}
-
-.times_fl span {
-    width: 20px;
-    height: 10px;
-    border-radius: 3px;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    display: none;
-}
-
-.times_fl .text {
-    width: 200px;
-    color:#fff;
-    font-size: 16px;
-    padding-left:10px;
-}
-
-.times_fl label {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    color: #cec269;
-}
 
 .b1 {
     background: #81ca3f;
@@ -1656,32 +1585,53 @@ button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(to bottom, #9ea3aa, #59585d)
 }
 
-.times_sh{
-    width: 98%;
-    margin:0 auto;
-}
-.times_sh table{
-    width:100%;
-    text-align:center;
-    line-height:30px;
-    border-collapse:collapse;
-    font-size:14px;
-    border-radius:0 0 5px 5px;
-    overflow: hidden;
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.times_sh thead td{
-    background:rgba(255, 255, 255, .1);
-    color:#fff;
-    font-weight:bold;
-    font-size:12px;
-    height:40px;
-    line-height:40px;
+.dropbtn{
+    background-color: rgb(17,30,51);
+    color: white;
+    border: 1px solid rgb(17,30,51);
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 190%;
 }
-.times_sh tbody td{
-    background:rgba(0, 0, 0, .2);
-    height:40px;
-    line-height:40px;
+.dropbtn:active{
+    background-color: rgb(17,30,51);
+    color: white;
+    width: 470%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 21px 31px;
+    text-decoration: none;
+    display: block;
+    background-color: rgb(17,30,51);
+    color: white;
+    width: 190%;
+}
+.dropbtn-content a:active{
+    background-color: rgb(17,30,51);
+    color: white;
+    width: 190%;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 .recharge_top{
@@ -1981,7 +1931,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:#111e33;
     width:98%;
     margin:10px auto;
-    padding:10px 0;
+    padding:0;
     border-radius:10px;
 }
 .dl_conten_list{
@@ -1989,7 +1939,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display:flex;
     justify-content:space-between;
     padding:10px 0;
-    border-bottom:4px solid rgba(0, 0, 0, .5);
+    border-bottom:0px solid rgba(0, 0, 0, .5);
 }
 .dl_conten_list:nth-child(5){
     border:none;

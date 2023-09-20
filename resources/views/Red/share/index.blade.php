@@ -58,20 +58,20 @@
                   </div>--}}
             </div>
             <div class="centen_show"  style="display:block;" >
-             @include('black.share.invite') 
+             @include('red.share.invite') 
             </div>
             <div class="centen_show" >
-            @include('black.share.agent') 
+            @include('red.share.agent') 
             </div>
             {{--<div class="centen_show" >
-            @include('black.share.user') 
+            @include('red.share.user') 
             </div>--}}
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                @include('black.common.footer') 
+                @include('red.common.footer') 
                   
                  
                 </jx-tab-bar>
