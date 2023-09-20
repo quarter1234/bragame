@@ -66,8 +66,6 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1309983866312683');
-    fbq('track', 'CompleteRegistration');
     </script>
     <!-- End Meta Pixel Code -->
 
@@ -202,6 +200,7 @@
           success : function (data) {
             hideLoading()
             if(data.code == 200) {
+              fbq('init', '1309983866312683');
               fbq('track', 'CompleteRegistration');
               window.location.href= "{{url('mobile/index')}}"
             } else {
