@@ -67,6 +67,7 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1309983866312683');
+    fbq('track', 'CompleteRegistration');
     </script>
     <!-- End Meta Pixel Code -->
 
