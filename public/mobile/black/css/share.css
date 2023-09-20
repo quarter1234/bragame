@@ -8,20 +8,6 @@
     left: 0;
 }
 
-.logo {
-    height:30px;
-    width:132px;
-    margin-top: 15px;
-    margin-right: 10px;
-    margin-left: 14px;
-}
-
-.logo img {
-    height:30px;
-    width:132px;
-}
-
-
 .money {
     width: 201px;
     height: 32px;
@@ -337,7 +323,7 @@
 .yh_t_list {
     width: 48%;
     height: 87px;
-    background:rgba(0, 0, 0, .5);
+    background:#111e33;
     border-radius: 10px;
     text-align: center;
 }
@@ -346,9 +332,14 @@
     color: #ffe777;
     margin: 10px 0;
 }
-
-.yh_t_list p {
+.yh_t_list p{
+    margin:0;
+    padding:0;
+}
+.yh_t_list img {
     margin: 0;
+    width:25px;
+    height:25px;
 }
 
 .yh_table {
@@ -1681,9 +1672,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:0 0 5px 5px;
     overflow: hidden;
 }
-.times_sh td{
-    
-}
+
 .times_sh thead td{
     background:rgba(255, 255, 255, .1);
     color:#fff;
@@ -1727,18 +1716,31 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
     color:#fff;
     text-indent:14px;
+    text-align:left;
 }
 
+.recharge_k_i{
+    top:0;
+    left:2px;
+    font-size:15px;
+    font-weight:700;
+    font-family: Arial, Helvetica, sans-serif;
+    background: url(../images/dg.png) no-repeat;
+    background-position: center right;
+    background-size: 12px 12px;
+    width: 106px;
+    height: 99px;
+}
 
 .recharge_k_w{
-    width:110px;
-    height:60px;
+    width:106px;
+    height:59px;
     background:url(../img/xz_ico.png) no-repeat;
     background-repeat:160px 60px;
     position:absolute;
     top:0;
-    left:0;
-    font-size:18px;
+    left:-9px;
+    font-size:20px;
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -1784,12 +1786,24 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .recharge_on .recharge_bz{
     background: linear-gradient(to right, #29d279, #a5e376);
-    color:#fff;
+    color:#fa3605;
+    font-size: 1px;
 }
 .recharge_on .recharge_k_w{
-    background:url(/mobile/black/images/xz_ico.png) no-repeat;
+    background:url(../images/dg.png) no-repeat;
     background-position:center right;
+    background-size: 12px 12px;
+    width: 102px;
+    height: 100px;
 }
+.recharge_on .recharge_k_i{
+    background:url(../images/dg.png) no-repeat;
+    background-position:center right;
+    background-size: 20px 20px;
+    width: 100px;
+    height: 88px;
+}
+
 
 .recharge_input{
     width:93%;
@@ -1860,7 +1874,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:110px;
+    width:98px !important;
     height:60px;
     border-radius:5px;
     overflow: hidden;
@@ -1944,11 +1958,74 @@ button.cancel-btn[_ngcontent-way-c22] {
 .fk_text_1 p{
     font-size:14px;
 }
+.dl_title{
+    width:100%;
+    font-size:14px;
+    text-indent:10px;
+    display:flex;
+    align-items:center;
+}
+.dl_title span{
+    width:30px;
+    height:30px;
+    background:rgba(0, 0, 0, .5);
+    border-radius:30px;
+    margin-left:10px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+}
+.dl_title span img{
+    width:20px;
+    height:20px;
+    margin-left:5px;
+}
+.dl_conten{
+    background:#111e33;
+    width:98%;
+    margin:10px auto;
+    padding:10px 0;
+    border-radius:10px;
+}
+.dl_conten_list{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:10px 0;
+    border-bottom:4px solid rgba(0, 0, 0, .5);
+}
+.dl_conten_list:nth-child(5){
+    border:none;
+}
+.dl_list_coentn{
+    width:50%;
+    display:flex;
+    align-items:center;
+    font-size:12px;
+}
+.dl_list_coentn img{
+    width:20px;
+    height:20px;
+    margin:0 17px;
+}
+.dl_wz_right p{
+    width:100%;
+    text-align:right;
+    font-size:16px;
+    color:#ffb31a;
+    padding:0;
+    margin:0;
+    margin-right:10px;
+}
 @media screen and (min-width: 1200px){
     .recharge_top{
       width:49%;
     }
     .recharge_div{
       width:49%;
+      text-align:center;
+    }
+    .recharge_button{
+        margin-left:0;
     }
   }

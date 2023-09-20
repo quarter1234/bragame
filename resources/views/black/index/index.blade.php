@@ -242,7 +242,7 @@
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/baxi_4/public/audio/btn_click.mp3">
+                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -340,30 +340,12 @@
               </div>
             </div>
             <div class="winning-box">
-              <div class="news-title clearfix">
-                <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
-                <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
-                </h2>
-              </div>
               <div class="rankBg"></div>
-              <div class="news-content myScroll" style="height: 220px; padding: 0px 10px;">
-                <ul class="news-scroll" style="padding-left: 0px;">
-
-                @foreach($ranks as $item)
-                <li style="color: #f2f2f2;">
-                <span>{{ $item['playername'] }}</span>
-                    <em>
-                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
-                </li>
-                @endforeach
-
-                </ul>
-              </div>
             </div>
             <div class="index_bottom">
-                  <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
-                  <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
+                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
+? 2022 brcrown.com All rights reserved.</p>
             </div>
             <div class="menu_body">
                    <div class="black_logo">

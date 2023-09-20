@@ -32,7 +32,7 @@ class DUserDrawRepository extends Repository
     {
         $data = [];
         $data['uid'] = $user->uid;
-        $data['orderid'] = make_order_no();
+        $data['orderid'] = make_order_no($user->uid);
         $data['cat'] = $bankInfo['cat'];
         $data['bankid'] = $bankInfo['id'];
         $data['userbankid'] = $bankInfo['id'];

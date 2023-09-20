@@ -150,7 +150,13 @@ class ShopController extends Controller
             return Result::error('Please select the correct withdrawal method.');
         }
 
-        $this->handleApplyDraw($user, $dcoin, $params['bankid']);
+        try{
+            $this->handleApplyDraw($user, $dcoin, $params['bankid']);
+        }
+        catch (\Exception $e){
+            return Result::error('Please submit it again or contact the administrator.');
+        }
+        
         return Result::success();
     }
 

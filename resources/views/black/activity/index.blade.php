@@ -59,7 +59,7 @@
                   <!---->
                   <!---->
                   <!---->
-                  <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}Centro de atividades</div>
+                  <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}</div>
                   <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
                   {{--<jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
                       <!---->
@@ -108,6 +108,11 @@
                  
                 </jx-tab-bar>
               </jx-footer-row>
+            </div>
+            <div class="index_bottom">
+                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
+? 2022 brcrown.com All rights reserved.</p>
             </div>
           </jx-header-view>
         </jx-activity-page>

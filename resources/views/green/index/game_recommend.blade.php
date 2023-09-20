@@ -1,7 +1,7 @@
 <div style="text-align:center;">
     <div class="game_qb_title">
         <div class="game_qb_left">
-            <span class="game_ico"></span>Popular
+            <span class="game_ico"></span>Original
         </div>
         <div class="game_qb_left" style="text-align:right;">
             <a href="#navigations" style="text-decoration:none" onclick="myclick(9)">Ver tudo</a>
@@ -16,7 +16,7 @@
     {{----}}
     <div class="game_qb_title">
         <div class="game_qb_left">
-            <span class="pp_game"></span>In-PG
+            <span class="pp_game"></span>Jackpost
         </div>
         <div class="game_qb_left" style="text-align:right;">
             <a href="#navigations" style="text-decoration:none" onclick="myclick(2)">Ver tudo</a>
@@ -31,7 +31,7 @@
     {{----}}
     <div class="game_qb_title">
         <div class="game_qb_left">
-            <span class="pg_game"></span>In-PP
+            <span class="pg_game"></span>slotc
         </div>
         <div class="game_qb_left" style="text-align:right;">
             <a href="#navigations" style="text-decoration:none" onclick="myclick(1)">Ver tudo</a>
@@ -47,7 +47,7 @@
     {{----}}
     <div class="game_qb_title">
         <div class="game_qb_left">
-            <span class="pg_game"></span>In-Tada
+            <span class="pg_game"></span>live
         </div>
         <div class="game_qb_left" style="text-align:right;">
             <a href="#navigations" style="text-decoration:none" onclick="myclick(3)">Ver tudo</a>
