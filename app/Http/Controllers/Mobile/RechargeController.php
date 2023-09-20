@@ -9,6 +9,8 @@ use App\Services\RechargeService;
 use App\Services\UserService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
+use App\Http\Requests\Mobile\ShopRequest;
+use App\Common\Lib\Result;
 
 class RechargeController extends Controller
 {
@@ -36,5 +38,21 @@ class RechargeController extends Controller
 
     public function pageback(){
         return view(ViewHelper::getTemplate('pay.pageback'));
+    }
+
+    public function queOrder(ShopRequest $shopRequest)
+    {
+        $params = $shopRequest->goCheck('doQueOrder');
+        $orderid = $params['orderid'];
+        if (!$orderid) {
+            return Result::error('orderid column error!.');
+        }
+
+        $order = $this->rechargeService->getOrderByOid($orderid);
+        if($order){
+            return Result::success($order->toArray());
+        }
+
+        return Result::error('order is null!.');
     }
 }

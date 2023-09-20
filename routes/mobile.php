@@ -101,6 +101,7 @@ Route::group([
 ], function ($router) {
     Route::get('recharge', [RechargeController::class, 'index']);
     Route::get('pageback', [RechargeController::class, 'pageback']);
+    Route::post('queOrder', [RechargeController::class, 'queOrder']);
 });
 
 

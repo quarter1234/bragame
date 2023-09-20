@@ -27,8 +27,33 @@
         <p>O pagamento foi concluído, por favor, preste atenção</p>
       </div>
    <script>
+
+  function getOrderInfo(orderid)
+  {
+    $.ajax({
+          url : "{{url('mobile/register')}}",
+          type : 'POST',
+          data : {orderid: orderid},
+          success : function (data) {
+            if(data.code == 200) {
+              
+            }
+          },
+          error: function(jqXHR, textStatus, errorThrown) {
+            
+          }
+        })
+  }
+
    $(function(){
-     
+        var url = window.location.href; //获取当前页面的URL
+        var urlObj = $.url(url); //将URL解析成一个对象
+        var params = urlObj.params;//将URL参数解析成JS对象
+        var orderid = params.orderid;//获取q参数的值
+        if(orderid != '' && orderid != undefined)
+        {
+          getOrderInfo(orderid)
+        }
     })
    </script>
   </body>
