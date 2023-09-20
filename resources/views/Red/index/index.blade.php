@@ -165,6 +165,7 @@
                     <div class="sousuo"> 
                          <img src="/mobile/red/images/sousuo.png" alt="" class="ioop">
                         <input type="text" placeholder="original" class="ss"> 
+                        <button id="search-button" class="search-button">搜索</button>
                      </div>
                     </div>
                     <div style="width:100%; height:10px;"></div> 
@@ -341,13 +342,7 @@
                    </div> 
                    <div class="black_gb"></div> 
                    <div class="black_nav">
-                      <ul>
-                          <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
-                      </ul>
+                      
                    </div>
             </div>
             
@@ -355,9 +350,9 @@
                    <div class="pc_nav">
                       <ul>
                       <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li onclick="location.href='{{url("../images/shoub.png")}}'"><label class="n2"></label><span>Atividades</span></li>
                           <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li onclick="location.href='{{url("../images/fasong.png")}}'"><label class="n4"></label><span>preferenciais</span></li>
                           <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
                           <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
