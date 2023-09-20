@@ -20,6 +20,8 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/mobile/purple/js/jquery.i18n.properties.js"></script>
+
     <meta name="theme-color" content="#14092b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -56,9 +58,9 @@
                   @if (Auth::check())
                     <span style="font-size:0.9rem;position: absolute;right:10px;">
                         <div class="money">
-                            <span>R$</span>
+                            <span class="rf_ico"></span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
+                            {{--<div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>--}}
                             <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/purple/images/qb.png"></div>
                         </div>
                     </span>
@@ -160,7 +162,19 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-
+                    
+                    <div class="juego">
+                        <div class="juego_top">
+                             <img src="/mobile/purple/images/game_jue.png"> <span>juego</span>
+                        </div>
+                       <div class="juego_conten">
+                            <div class="juego_conten_n">
+                            @foreach($getTadaRecommend as $item)
+        <img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" />
+    @endforeach   
+                            </div>
+                       </div>
+                    </div>
                   <script>
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
@@ -211,27 +225,27 @@
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
+                          {{--<div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
+                        {{--<div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
+                        {{--<div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
+                        {{--<div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                        {{--<div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button> 
 
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
+                        {{--<div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>--}}
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada1</span></button> 
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
@@ -292,26 +306,7 @@
               </div>
             </div>
             <div class="winning-box">
-              <div class="news-title clearfix">
-                <img src="/mobile/purple/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
-                <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
-                </h2>
-              </div>
-              <div class="rankBg"></div>
-              <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
-                <ul class="news-scroll" style="padding-left: 0px;">
-
-                @foreach($ranks as $item)
-                <li style="color: #f2f2f2;">
-                <span>{{ $item['playername'] }}</span>
-                    <em>
-                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
-                </li>
-                @endforeach
-
-                </ul>
-              </div>
+              
             </div>
             <div class="index_bottom">
                   <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/index_b.png" />
@@ -552,6 +547,22 @@
           $('.notice-main').find('.draw-contents').eq(index).show();
         });
       });
+
+     function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/purple/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
 
 

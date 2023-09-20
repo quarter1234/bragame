@@ -3531,17 +3531,58 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin:10px auto;
     text-align:center;
 }
-.gg_centen::-webkit-scrollbar-thumb{
-    background-color:rgba(0,0,0,.05);
-    border-radius:10px;
-    -webkit-box-shadow:inset1px1px0rgba(0,0,0,.1);
-    }
 .gg_centen img{
     width:360px;
     height:526px;
 }
 
+.juego{
+    width:100%;
+    padding-top:15px;
+    margin:0 auto;
+}
+.juego_top span{
+    float:left;
+    font-size:13px;
+}
+.juego_top img{
+    width:20px;
+    height:20px;
+    float:left;
+    margin:0 20px;
+}
+.juego_conten{
+    width:95%;
+    height:170px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    margin:0 auto;
+}
+.juego_conten_n{
+    width: 30%;
+    margin-top: 15px;
+    object-fit: cover;
+    transition: 0.1s;
+    transform: scale(1);
+    flex-shrink: 0;
+}
+.juego_conten_n img{
+    border-radius:15px;
+}
 @media screen and (min-width: 1200px) {
+    .juego{
+        width:65%;
+    }
+    .juego_conten::-webkit-scrollbar {
+        -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+        border-radius: 0;
+        background: rgba(255,255,255,0.1);
+        height:0;}
+    .juego_conten_n{
+        width:10%;
+    }
     .game_xx{
         width:10%;
     }
