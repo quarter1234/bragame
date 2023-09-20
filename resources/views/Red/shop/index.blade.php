@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/black/css/share.css">
-    <link rel="stylesheet" href="/mobile/black/css/shop.css">
+    <link rel="stylesheet" href="/mobile/red/css/share.css">
+    <link rel="stylesheet" href="/mobile/red/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -109,36 +109,36 @@
 --}}
 <div class="shopindex">
            <div class="shop_index_list" onclick="location.href='{{ url("mobile/pay/recharge") }}'">
-                <div class="shop_index_left">
+                
                     <span class="s1"></span>
-                </div>
+                
                 <div class="shop_text">
                     <h2>Total</h2>
                     <p>R$ {{$user['coin']}}</p>
                 </div>    
            </div>
            <div class="shop_index_list" onclick="location.href=@if(!$bankInfo) '{{ url("mobile/shop/guide") }}' @else '{{ url("mobile/shop/draw") }}' @endif">
-                  <div class="shop_index_left">
+                 
                     <span class="s2"></span>
-                </div>
+               
                 <div class="shop_text">
                     <h2>Retiravel</h2>
                     <p>R$ {{ $user['gamedraw'] }}</p>
                 </div> 
            </div>
            <div class="shop_index_list" onclick="location.href='{{ url('mobile/member/transaction') }}'">
-           <div class="shop_index_left">
+          
                     <span class="s3"></span>
-                </div>
+            
                 <div class="shop_text">
                     <h2>Transações</h2>
                     
                 </div> 
            </div>
            <div class="shop_index_list" onclick="location.href='{{ url('mobile/shop/guide') }}'">
-           <div class="shop_index_left">
+         
                     <span class="s4"></span>
-                </div>
+               
                 <div class="shop_text"><h2>Carteira</h2></div> 
            </div>       
 </div>
