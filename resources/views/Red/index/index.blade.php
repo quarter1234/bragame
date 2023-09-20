@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title')
+    @include('red.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -22,8 +22,8 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using red-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
@@ -39,8 +39,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('black.common.modal')
-          @include('black.common.modal_sub')
+          @include('red.common.modal')
+          @include('red.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -276,7 +276,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('black.index.game_recommend')
+                          @include('red.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -331,7 +331,7 @@
               <div class="rankBg"></div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/red/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
@@ -367,9 +367,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('black.common.loading')
-            @include('black.index.index_login')
-            @include('black.index.notice')
+            @include('red.common.loading')
+            @include('red.index.index_login')
+            @include('red.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}

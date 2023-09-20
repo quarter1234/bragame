@@ -1577,7 +1577,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 34px;
     height: 29px;
    /*background: linear-gradient(-135deg, #9c16d4, #2b22b1);*/
-   background:#ffb31a;
+   background:#1ac0f3e0;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -3218,10 +3218,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:100px;height:40px;background: #fd3657;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:#fd3657;color:#fff;}
+.dl{width:100px;height:40px;background: rgba(0,120, 212);border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
+.dl:hover{background:rgba(0,120, 212);color:#fff;}
 .zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
-.zc:hover{background:#ef962f;color:#fff;}
+.zc:hover{background:rgba(0,120, 212);color:#fff;}
 
 .swipslider{
    padding-top:43% !important;
@@ -3612,7 +3612,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(../images/xin.png);
     background-size:24px 24px;
 }
 .n3{
@@ -3684,7 +3684,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:24px 24px;
 }
 .pc_on .n2{
-    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background:url(../images/xin.png);
     background-size:24px 24px;
 }
 .pc_on .n3{
