@@ -14,6 +14,7 @@ class ShopRequest extends BaseRequest
             'reaccount' => 'required|string|max:64',
             'username' => 'required|string|min:2|max:132',
             'id_card' => 'string|max:14',
+            'phone' => 'string',
         ];
     }
 
