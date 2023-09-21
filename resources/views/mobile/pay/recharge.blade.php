@@ -135,6 +135,13 @@
       showModal('A escolha de moedas deve ser maior que zero.');
       return false;
     }
+
+    let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
+    if(!(payCoin >= mincoin)){
+      showModal('A quantidade mínima é' + mincoin);
+      return false;
+    }
+
     if(id <= 0) {
       showModal('Por favor, selecione o valor de recarga.');
       return false;
@@ -146,13 +153,6 @@
       return false;
     }
 
-    let mincoin = parseInt($(".re_show.re_curr").attr('mincoin'))
-    if(!(payCoin >= mincoin)){
-      showModal('A quantidade mínima é' + mincoin);
-      return false;
-    }
-
-    
     return true;
    }
    function clearStatus(){
