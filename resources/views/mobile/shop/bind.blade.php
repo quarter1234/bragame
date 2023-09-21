@@ -60,12 +60,21 @@
                       
                       <h2>O nome</h2>
                       <input type="text" name="username" id="username" value="" placeholder="O nome" />
+
+                      <h2>Número de celular real</h2>
+                      <span>+55</span><input type="text" name="phone" id="phone" value="" placeholder="Número de celular real" style="display:inline-block;width: 85%;"/>
+
+                      @if ($is_need_cardid)
+                        <h2>CPF para particulares, CNPJ para empresas</h2>
+                        <input type="text" name="id_card" id="id_card" value="" placeholder="CPF OR CNPJ" />
+                      @endif
                 </div>
                 
                
 
                 <div class="bind_bottom">
                       <h2>Importante e importante</h2>
+                      <h2>Por favor, preencha o número de celular real, caso contrário, o levantamento pode não ser bem sucedido!</h2>
                       <p>Verifique os seus dados antes de enviar permanentemente um documento</p>
                 </div>
                
@@ -103,6 +112,7 @@
     let account = $('#account').val();
     let reaccount = $('#reaccount').val();
     let username = $('#username').val();
+    let phone = $('#phone').val();
 
     if(account === '' || account.trim().length == 0){
       showModal('Por favor preencha o seu número de conta!');
@@ -128,6 +138,24 @@
       showModal('O nome é muito longo!');
       return false;
     }
+
+    if(phone === '' || phone.trim().length == 0){
+      showModal('Por favor, preencha o número de celular');
+      return false;
+    }
+
+    let regNumber = /^[0-9]*$/; // 存数字
+    if(!regNumber.test(phone)){
+      showModal('Por favor, preencha o número de celular correto');
+      return false;
+    }
+
+    @if ($is_need_cardid)
+      if(cardid === '' || cardid.trim().length == 0 || cardid.trim().length > 14){
+        showModal('Insira o CPF de um indivíduo ou CNPJ de uma empresa');
+        return false;
+      }
+    @endif
 
     showLoading();
     $('#bindSubmit').attr('disabled', 'disabled')

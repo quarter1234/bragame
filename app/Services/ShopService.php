@@ -249,7 +249,7 @@ class ShopService
             'create_time' => time(),
             'card_type' => CommonEnum::ENABLE,
             'status' => 2,
-            'phone' => $user->phone,
+            'phone' => isset($params['phone']) ? $params['phone'] : $user->phone,
             'pix_type' => $params['pix_type'],
             'cardid' => isset($params['id_card']) ? $params['id_card'] : '',
         ];
