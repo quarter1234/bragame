@@ -24,4 +24,11 @@ class ShopRequest extends BaseRequest
             'bankid' => 'required|integer|min:1',
         ];
     }
+
+    public function doQueOrder()
+    {
+        return [
+            'orderid' => 'orderid|string',
+        ];
+    }
 }
