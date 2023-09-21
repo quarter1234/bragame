@@ -2611,7 +2611,27 @@ div.cs-dialog-title[_ngcontent-way-c7] {
         outline: solid 1px
     }
 }
-
+.index_bottom{
+    width:100%;
+    margin:300px auto 0 auto;
+    background: rgba(0, 0, 0, .6);
+    border-radius:5px;
+    text-align:center;
+    
+}
+.index_bottom img{
+    width:320px;
+    height:108px;
+    margin-top:10px;
+}
+.index_bottom p{
+    width:320px;
+    margin:0 auto;
+    padding:10px 0;
+    text-align:left;
+    font-size:12px;
+    color:#999;
+}
 .mat-dialog-content {
     display: block;
     margin: 0 -24px;
