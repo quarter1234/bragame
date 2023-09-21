@@ -665,11 +665,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(shttps://baxigame1.s3.sa--1.amazonaws.com/bx_4/public/mobile/img/zfj_ico.png)
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(../images/pianbao.png)
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/huodong.svg)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
@@ -684,7 +684,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
+.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_cs.9be7ce116557877dec91.png)
+}
 
+.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
+}
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
     background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
@@ -1577,7 +1583,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 34px;
     height: 29px;
    /*background: linear-gradient(-135deg, #9c16d4, #2b22b1);*/
-   background:#1ac0f3e0;
+   background:#ffb31a;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2585,11 +2591,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(../images/wb.png)
+    background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(../images/fasong.png)
+    background-image: url(/mobile/black/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
@@ -2601,9 +2607,12 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(../images/fl.png)
+    background-image: url(/mobile/black/images/syfl.png)
 }
 
+.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
+}
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
     background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_cs.9be7ce116557877dec91.png)
@@ -3218,10 +3227,10 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:100px;height:40px;background: rgba(0,120, 212);border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:rgba(0,120, 212);color:#fff;}
+.dl{width:100px;height:40px;background: #fd3657;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
+.dl:hover{background:#fd3657;color:#fff;}
 .zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
-.zc:hover{background:rgba(0,120, 212);color:#fff;}
+.zc:hover{background:#ef962f;color:#fff;}
 
 .swipslider{
    padding-top:43% !important;
@@ -3288,44 +3297,44 @@ button.cancel-btn[_ngcontent-way-c22] {
    
 }
 .qb_ico{
-    background-image: url(../images/dian.png)
+    background-image: url(/mobile/black/images/dn1.png)
 }
 .active-side-menu .qb_ico{
-    background-image: url(../images/dian.png)
+    background-image: url(/mobile/black/images/dn1.png)
 }
 .xh_ico{
-    background-image: url(../images/aixin.png)
-}
-/* .active-side-menu .xh_ico{
     background-image: url(/mobile/black/images/xh_ico1.png)
-} */
+}
+.active-side-menu .xh_ico{
+    background-image: url(/mobile/black/images/xh_ico1.png)
+}
 
 .game_pp{
-    background-image: url(../images/shoub.png)
+    background-image: url(/mobile/black/images/game_pp_on.png)
 }
 .active-side-menu .game_pp{
-    background-image: url(../images/shoub.png)
+    background-image: url(/mobile/black/images/game_pp.png)
 }
 
 .game_pg{
-    background-image: url(../images/shoub.png)
+    background-image: url(/mobile/black/images/game_pg.png)
 }
 .active-side-menu .game_pg{
-    background-image: url(../images/shoub.png)
+    background-image: url(/mobile/black/images/game_pg.png)
 }
 
 .game_ji{
-    background-image: url(../images/puk.png)
+    background-image: url(/mobile/black/images/game_ji_on.png)
 }
 .active-side-menu .game_ji{
-    background-image: url(../images/puk.png)
+    background-image: url(/mobile/black/images/game_ji.png)
 }
 
 .game_qp_ico{
-    background-image: url(../images/ck.png)
+    background-image: url(/mobile/black/images/qp_ico.png)
 }
 .active-side-menu .game_qp_ico{
-    background-image: url(../images/ck.png)
+    background-image: url(/mobile/black/images/qp_ico.png)
 }
 .game_qb_title{
     width:100%;
@@ -3348,7 +3357,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .game_qb_left a{
     color:#fff;
-    background:rgba(0,120, 212);
+    background:rgba(255, 255, 255, .1);
+    border-radius:20px;
     display:inline-block;
     float:right;
     margin-top:-2px;
@@ -3398,6 +3408,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rm a{
     width:15%;
 }
+
 #pg_load_more{
     padding:5px 10px;
     background:rgba(255, 255, 255, .1);
@@ -3409,12 +3420,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     border-radius:5px;
     font-size:14px;
 }
+
 #jl_load_more{
     padding:5px 10px;
     background:rgba(255, 255, 255, .1);
     border-radius:5px;
     font-size:14px;
 }
+
+
 .gg_db{
     width:100%;
     height:100%;
@@ -3426,6 +3440,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     overflow: hidden;
     display:block;
 }
+
 .gg_tc{
     width:94%;
     height:600px;
@@ -3608,23 +3623,23 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .n1{
-    background:url(../images/shoub.png);
+    background:url(/mobile/black/images/home.93b20d6e835f71c043b8.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(../images/xin.png);
+    background:url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(../images/yh.png);
+    background:url(/mobile/black/images/zfj_ico.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(../images/fasong.png);
+    background:url(/mobile/black/images/sk.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(../images/grzx2.png);
+    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
@@ -3632,15 +3647,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:24px 24px;
 }
 .n6{
-    background:url(../images/VIP.png);
+    background:url(/mobile/black/images/f-vip1.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(../images/xin.png);
+    background:url(/mobile/black/images/email-fill1.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(../images/kef.png);
+    background:url(/mobile/black/images/kf_r_ico1.png);
     background-size:24px 24px;
 }
 
@@ -3675,12 +3690,44 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-top:10px;
     margin-left:10px;
 }
-.search-button{
-    width:38px;
-    height: 37px;
-    background-color: #1ac0f3e0;
-    color: black;
-    font-size: 12px;
+
+.pc_nav li.pc_on{
+    color:#ef962f;
+}
+.pc_on .n1{
+    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background-size:24px 24px;
+}
+.pc_on .n2{
+    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background-size:24px 24px;
+}
+.pc_on .n3{
+    background:url(/mobile/black/images/zfj_on_ico.png);
+    background-size:24px 24px;
+}
+.pc_on .n4{
+    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
+    background-size:24px 24px;
+}
+.pc_on .n5{
+    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
+    background-size:24px 24px;
+}
+.pc_on .n6{
+    background:url(/mobile/black/images/f-vip.png);
+    background-size:24px 24px;
+}
+.pc_on .n7{
+    background:url(/mobile/black/images/email-fill.png);
+    background-size:24px 24px;
+}
+.pc_on .n8{
+    background:url(/mobile/black/images/kf_r_ico.png);
+    background-size:24px 24px;
+}
+.pc_tab{
+    display:none;
 }
 
 @media screen and (min-width: 1200px) {
@@ -3781,40 +3828,6 @@ button.cancel-btn[_ngcontent-way-c22] {
         margin-left:10px;
         margin-right:10px;
     }
-}
-.sousuo {
-    width: 95%; /* 搜索框宽度占满父元素 */
-    border: 1px solid white; /* 白色边框 */
-    border-radius: 5px; /* 圆角边框 */
-    display:inline-block;
-    margin-bottom:10px;
-    height: 42px;
-    margin-top: 35px;
+   
     
-}
-.ss{
-    background-color: #000;
-    width: 280px;
-    border: 0px solid black;
-    outline: none;
-    color: #fff;
-    font-size: 17px;
-    margin-left: 5px;
-    height: 40px;
-}
-.side-menu-ctn[_ngcontent-way-c8]::-webkit-scrollbar{
-    display: none;
-}
-/* 移动端样式 */
-@media screen and (min-width: 1200px){
-    .sousuo {
-        font-size: 16px; /* 调整字体大小，使其在小屏幕上更可读 */
-        margin-left: -720px;
-        width: 25%; 
-    }
-}
-.ioop{
-    width: 17px;
-    height: 17px;
-    margin-top: 10px;
 }

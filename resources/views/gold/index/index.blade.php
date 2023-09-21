@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('red.common.common_title')
+    @include('black.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,7 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/mobile/red/css/index.css">
+    <link rel="stylesheet" href="/mobile/black/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -22,12 +22,27 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using red-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="red">
+    <!-- Fixed position has issue with iOS Safari using black-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1309983866312683');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
 	</head>
 
-  <body style="color: white; background-color:black;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #0a0e2b;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -39,8 +54,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('red.common.modal')
-          @include('red.common.modal_sub')
+          @include('black.common.modal')
+          @include('black.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -161,38 +176,25 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-                    <div style="width:100%;text-align: center;">
-                    <div class="sousuo"> 
-                         <img src="/mobile/red/images/sousuo.png" alt="" class="ioop">
-                        <input type="text" placeholder="original" class="ss"> 
-                        <button id="search-button" class="search-button">搜索</button>
-                     </div>
+
+                    <div class="xh_game">
+                        <div class="xh_game_top">
+                            <label></label>
+                            <span>juego</span>
+                        </div>
+                        <div class="xh_game_centen">
+                          <div class="swiper mySwiper1">
+                            <div class="swiper-wrapper">
+                              @foreach($tadaRecommend as $item)
+                                <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
+                              @endforeach 
+                            </div>
+                          </div>
+                        </div>
                     </div>
                     <div style="width:100%; height:10px;"></div> 
                     
                   <script>
-                  document.getElementById("search-button").addEventListener("click", function() {
-               var inputValue = document.getElementById("search-input").value.toLowerCase(); // 获取输入框的值并转为小写
-              switch (inputValue) {
-                 case "favoritos":
-                   window.location.href = "favoritos.html";
-                    break;
-                 case "pg":
-                    window.location.href = "pg.html";
-                  break;
-                  case "xadres":
-                    window.location.href = "xadres.html";
-                   break;
-                   case "tade":
-                     window.location.href = "tade.html";
-                    break;
-                 case "pp":
-                     window.location.href = "pp.html";
-                     break;
-                  default:
-                   alert("未找到匹配的页面");
-                }
-               });
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
                       var swiper = new Swiper(".mySwiper", {
@@ -246,6 +248,8 @@
                          
                           </marquee>
                         </div>
+
+
                       </div>
                     </button>--}}
                   </jx-bulletin-board>
@@ -299,7 +303,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('red.index.game_recommend')
+                          @include('black.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -354,7 +358,7 @@
               <div class="rankBg"></div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/red/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
@@ -364,7 +368,13 @@
                    </div> 
                    <div class="black_gb"></div> 
                    <div class="black_nav">
-                      
+                      <ul>
+                          <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
+                      </ul>
                    </div>
             </div>
             
@@ -372,9 +382,9 @@
                    <div class="pc_nav">
                       <ul>
                       <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("../images/shoub.png")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
                           <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("../images/fasong.png")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
                           <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
                           <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
@@ -384,9 +394,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('red.common.loading')
-            @include('red.index.index_login')
-            @include('red.index.notice')
+            @include('black.common.loading')
+            @include('black.index.index_login')
+            @include('black.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -646,8 +656,6 @@
       })
     })
     </script>
-
-
   </body>
 
 </html>

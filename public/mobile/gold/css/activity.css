@@ -18,13 +18,8 @@ button.activity-btn[_ngcontent-snw-c1] {
     overflow: hidden;
     text-align: start;
     border-radius: 10px;
-    background-color:rgba(0, 0, 0, .2)
+    background-color:rgba(0, 0, 0, .3)
 }
-
-button.activity-btn[_ngcontent-snw-c1]:not(:first-child) {
-    margin-top: 10px
-}
-
 span.activity-status[_ngcontent-snw-c1] {
     position: absolute;
     right: 0;
@@ -34,7 +29,6 @@ span.activity-status[_ngcontent-snw-c1] {
     background-repeat: no-repeat;
     background-size: contain
 }
-
 span.activity-status.open[_ngcontent-snw-c1] {
     /*background-image: url(/mobile/img/activity_on.112eb4162510f8b41ae1.svg)*/
 }
@@ -105,14 +99,12 @@ div.app-background[_ngcontent-snw-c2] {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: rgba(12, 25, 44, 1)
+    
 }
 
 @supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {
     .header-view__nav-row-wrapper[_ngcontent-snw-c3] {
-        background-color: rgba(255, 255, 255, .1);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
+       
     }
 }
 
@@ -245,7 +237,7 @@ div.app-background[_ngcontent-snw-c2] {
 }
 
 .header-view__nav-row-wrapper__container__nav-row__title[_ngcontent-snw-c3]:first-child {
-    padding-left: 15px
+    padding-left: 13%
 }
 
 .header-view__nav-row-wrapper__container__nav-row__content[_ngcontent-snw-c3] {
@@ -2053,7 +2045,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #3262a4;
+    color: #cecece;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -2061,7 +2053,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #469bf2  
+    color: #ef962f !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -2076,43 +2068,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/black/images/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/zfj_ico.png)
+   background-image: url(/mobile/black/images/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/sk.png)
+   background-image: url(/mobile/black/images/sk.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -2605,12 +2597,6 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     min-height: inherit;
     max-height: inherit
 }
-
-@media (-ms-high-contrast:active) {
-    .mat-dialog-container {
-        outline: solid 1px
-    }
-}
 .index_bottom{
     width:100%;
     margin:300px auto 0 auto;
@@ -2632,6 +2618,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     font-size:12px;
     color:#999;
 }
+
+@media (-ms-high-contrast:active) {
+    .mat-dialog-container {
+        outline: solid 1px
+    }
+}
+
 .mat-dialog-content {
     display: block;
     margin: 0 -24px;
@@ -2732,3 +2725,5 @@ button.ok-btn[_ngcontent-way-c22] {
 button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(to bottom, #9ea3aa, #59585d)
 }
+
+
