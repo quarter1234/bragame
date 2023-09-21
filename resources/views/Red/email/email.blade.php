@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title') 
+    @include('red.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/black/css/activity.css">
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/red/css/activity.css">
+    <link rel="stylesheet" href="/mobile/red/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('black.common.top_sub') 
+          @include('red.common.top_sub') 
 
             <div class="email_h"></div>
             <div id="email_list_pages">
@@ -47,7 +47,7 @@
           </div>
 
           {{--loading组件--}}
-          @include('black.common.loading')
+          @include('red.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -74,7 +74,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('red.common.footer') 
                   
                  
                 </jx-tab-bar>

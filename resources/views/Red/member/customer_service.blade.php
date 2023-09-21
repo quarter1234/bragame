@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('blue.common.common_title') 
+    @include('red.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/black/css/activity.css">
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/red/css/activity.css">
+    <link rel="stylesheet" href="/mobile/red/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('black.common.top_sub') 
+          @include('red.common.top_sub') 
 
             <div class="email_h"></div>
 
@@ -45,7 +45,7 @@
                 <div class="kf">
                 <a href="{{ $item['url'] }}">
                   <div class="kf_yq">
-                      <img src="/mobile/black/images/dh_ico.png" />
+                      <img src="/mobile/red/images/kef.png" />
                   </div>
                   <div class="kf_text">
                       <h2>WhatsApp suporte</h2>
@@ -60,7 +60,7 @@
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
-                    <img src="/mobile/black/images/kf_ico.png" />
+                    <img src="/mobile/red/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
                     <h2>Atendimento ao cliente</h2>
@@ -93,7 +93,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('red.common.footer') 
                   
                  
                 </jx-tab-bar>
