@@ -18,6 +18,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
      <!-- Meta Pixel Code -->
      <script>
     !function(f,b,e,v,n,t,s)
@@ -68,6 +69,9 @@
     }
     req_count--
     console.log("req_count:", req_count)
+    if(req_count <= 0){
+      clearTimeOut()
+    }
   }
 
   function clearTimeOut(){
@@ -97,6 +101,11 @@
   }
 
    $(function(){
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         var orderid = GetQueryString('orderid')
         console.log("orderid:", orderid)
         if(orderid && !payTimer)
