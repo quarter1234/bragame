@@ -89,16 +89,19 @@
       }
   }
 
+  function GetQueryString(name)
+  {
+      var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if(r!=null) return  unescape(r[2]); return null;
+  }
+
    $(function(){
-        var url = window.location.href; //获取当前页面的URL
-        var urlObj = $.url(url); //将URL解析成一个对象
-        var params = urlObj.params;//将URL参数解析成JS对象
-        var orderid = params.orderid;//获取q参数的值
-        if(orderid != '' && orderid != undefined)
+        var orderid = GetQueryString('orderid')
+        console.log("orderid:", orderid)
+        if(orderid && !payTimer)
         {
-          if(!payTimer && orderid){
-            payTimer = setInterval(getOrderInfo, 1000, orderid);
-          }
+          payTimer = setInterval(getOrderInfo, 1000, orderid);
         }
     })
    </script>
