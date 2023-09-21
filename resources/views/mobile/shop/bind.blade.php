@@ -114,6 +114,10 @@
     let username = $('#username').val();
     let phone = $('#phone').val();
 
+    @if ($is_need_cardid)
+      let cardid = $('#id_card').val();
+    @endif
+
     if(account === '' || account.trim().length == 0){
       showModal('Por favor preencha o seu número de conta!');
       return false;
@@ -144,7 +148,7 @@
       return false;
     }
 
-    let regNumber = /^[0-9]*$/; // 存数字
+    let regNumber = /^[0-9]*$/; // 纯数字
     if(!regNumber.test(phone)){
       showModal('Por favor, preencha o número de celular correto');
       return false;

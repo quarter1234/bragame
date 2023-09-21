@@ -29,7 +29,7 @@ class ShopRequest extends BaseRequest
     public function doQueOrder()
     {
         return [
-            'orderid' => 'orderid|string',
+            'orderid' => 'required|string',
         ];
     }
 }
