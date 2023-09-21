@@ -55,7 +55,6 @@ div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.username[_ngcon
 }
 .username label{
     font-size:12px;
-    background:#;
 }
 div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.rebate[_ngcontent-xfs-c1] {
     color: #13a2ba;
@@ -145,12 +144,12 @@ button.finance-btn[_ngcontent-xfs-c1]:not(:first-child) {
 }
 
 button.finance-btn.deposit-btn[_ngcontent-xfs-c1] {
-    background:#3262a4;
+    background: radial-gradient(#ef962f, #b56100);
     color:#fff;
 }
 
 button.finance-btn.withdraw-btn[_ngcontent-xfs-c1] {
-   background:#469bf2;
+    background: #111e33
 }
 
 button.finance-btn.transaction-btn[_ngcontent-xfs-c1] {
@@ -203,16 +202,14 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
-    border-radius:10px;
+    border-radius: 10px;
     background-color: transparent;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    background:rgba(0, 0, 0, .4);
-    margin-bottom:10px;
+    background: rgba(0, 0, 0, .2);
+    margin-bottom: 10px;
     position: relative;
-   
+    justify-content: center;
 }
 .finance-entry-btn-group__btn:hover{
     background:rgba(0, 0, 0, .5);
@@ -653,23 +650,23 @@ img.avatar-icon[_ngcontent-xfs-c6] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-xfs-c10] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/home.93b20d6e835f71c043b8.png)
+   background-image: url(../images/yx.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-xfs-c10] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(../images/fasong.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-xfs-c10] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/datin.svg)
+   background-image: url(../images/xx1.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-xfs-c10] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/huodong.svg)
+   background-image: url(../images/pianb.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-xfs-c10] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/my.87c43b85171cb8232892.png)
+   background-image: url(../images/grzx.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-xfs-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-xfs-c10] {
@@ -1935,7 +1932,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #3262a4;
+    color: #cecece;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1943,7 +1940,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #469bf2 
+    color: #ef962f  !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1958,44 +1955,44 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(../images/shoub.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(../images/fl.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/zfj_ico.png)
+   background-image: url(../images/fasong.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/sk.png)
+   background-image: url(../images/pianbao.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
 }
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_home.485e6c98acecf897b8ba.png)
+/* .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
+   background-image: url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/blue/images/active_my.030b4715dce6d516f9c8.png)
-}
+   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
+} */
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
     flex: 0 0 auto;
@@ -2598,12 +2595,11 @@ button.cancel-btn[_ngcontent-way-c22] {
 .top {
     width: 100%;
     height: 62px;
-    background:rgba(255, 255,255, .1);
+    background:#111e33;
     position: fixed;
     color: #fff;
     top: 0;
     left: 0;
-    display:flex;
 }
 
 .logo {
@@ -2650,7 +2646,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .qb {
     width: 34px;
     height: 29px;
-    background:#489ef6;
+    background:#1ac0f3e0;
     border-radius: 5px;
     right: 3px;
     top: 1px;
@@ -2752,16 +2748,16 @@ button.cancel-btn[_ngcontent-way-c22] {
 .sw_jd_b{width:28%; position:absolute;top:0;left:0;height:14px;;border-radius:20px;background:#fff;}
 .sw_text{width:90%;margin:5px auto 0 auto; display:flex;justify-content:space-between;color:rgba(0, 0, 0, .7);font-size:14px;font-weight:bold;}
 .vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:rgba(0, 0, 0, .2);border-radius:10px;color:#fff;text-align:center;}
-.vip_centen h2{color:#fcde50;font-size:18px;line-height:44px;}
-.vip_centen p{line-height:20px;width:96%;font-size:12px;}
-.vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
+.vip_centen h2{color:#fcde50;font-size:18px;line-height:37px;}
+.vip_centen p{line-height:20px;width:96%;font-size:5px;}
+.vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content: space-around; margin-top: 32px;}
 .vip_blist{width:110px;height:153px;background:url(/mobile/green/images/vip_b.png) no-repeat;background-size:110px 153px;}
-.vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto;}
+.vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto; opacity: 0;}
 .vip_blist p{color:#fff391;margin:5px auto 0 auto;width:70%;padding-top:80px;font-size:14px;text-align:center;}
 .vip_button{
     width: 70%;
     margin: 20px auto 0 auto;
-    background-image: linear-gradient(to top, #3262a4, #489ef6);
+    background: linear-gradient(to bottom,#ef962f,#b56100);
     color: #fff;
     height: 48px;
     border-radius: 5px;
@@ -2778,6 +2774,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .email_list a{
     color:#fff;
+    width:100%;
+    display: block;
 }
 .email_list img{
     width:40px;
@@ -2807,16 +2805,28 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:20px;
     overflow: hidden;
     white-space: nowrap;
-    color:#489ef6;
 }
 .email_wk{
     width:250px;
-    margin-left:10px;
+    margin-left:15px;
     margin-top:15px;
     float:left;
 }
 .email_w_bottom{
     width:100%;
+    padding-top:30px;
+}
+.xg{
+    position:absolute;
+    right:10px;
+    width:300px;
+    top:25px;
+}
+.xg_zt{
+    padding-top:20px;
+}
+.xg_bottom{
+    padding:0;
 }
 .email_w_left{
     float:left;
@@ -2868,7 +2878,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
 }
 .e_b2{
-    background-image: linear-gradient(to bottom, #489ef6, #3262a4);
+    background: linear-gradient(to bottom,#1ac0f3e0,#1ac0f3e0);
     color:#fff;
     width:140px;
     height:40px;
@@ -2888,7 +2898,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .email_nr{
     width:90%;
     margin:10px auto;
-    background:rgba(0, 0, 0, .2);
+    background:#111e33;
     padding:10px;
     border-radius:10px;
     font-size:16px;
@@ -2918,7 +2928,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 90%;
     height: 70px;
     margin: 15px auto 0 auto;
-    background:rgba(0, 0, 0, .2);
+    background:#111e33;
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -2959,6 +2969,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     justify-content:center;
     align-items:center;
     display:flex;
+    
 }
 .shop_jt_ico {
     width: 15px;
@@ -2984,7 +2995,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rechare_list{
     width:95%;
     height: 110px;
-    background:rgba(0, 0, 0, .4);
+    background:rgba(0, 0, 0, .2);
     border-radius: 10px;
     margin: 15px auto 0 auto;
     position: relative;
@@ -3004,6 +3015,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 .rechare_zt{
     width:100%;
     font-size:12px;
+    color:#ffb31a;
+    font-size:13px;
 }
 .rechare_list .email_xx1{
     height:65px;
@@ -3012,9 +3025,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:65px;
 }
 .rechare_list .email_w{
-    color:#489ef6;
+    color:#999;
     font-weight:bold;
-    font-size:14px;
+    font-size:12px;
+    position:absolute;
+    right:10px;
+    top:10px;
+    text-align:right;
 }
 .rechare_button{
     width:60px;
@@ -3029,6 +3046,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     color:#fff;
     text-align:center;
     display:block;
+}
+
+.rechare_list .rechare_button{
+    right:10px;
+    top:35px;
 }
 
 .best_top{
@@ -3076,7 +3098,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     line-height:30px;
     display:flex;
     justify-content:space-between;
-    background:rgba(0, 0, 0, .4);
+    background:rgba(0, 0, 0, .2);
     border-radius:40px;
     margin:80px auto 0 auto;
 }
@@ -3088,7 +3110,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
 }
 .transaction_list_on{
-    background: linear-gradient(to bottom, #489ef6,#3262a4);
+    background: radial-gradient(#1ac0f3e0, #1ac0f3e0);
     color:#fff;
 }
 .transaction_b{
@@ -3101,40 +3123,78 @@ button.cancel-btn[_ngcontent-way-c22] {
 .jy_ico{
     width:30px;
     height:30px;
-    background:url(/mobile/blue/images/jyts.png);
+    background:url(../images/qian2.png);
     background-size:30px 30px;
     margin-right:10px;
 }
 .tzjl_ico{
-    width:25px;
-    height:25px;
-    background:url(/mobile/blue/images/tzjl.png);
-    background-size:25px 25px;
+    width:30px;
+    height:30px;
+    background:url(../images/qian3.png);    background-size:30px 30px;
     margin-right:15px;
 }
 .em_ico{
     width:30px;
     height:30px;
-    background:url(/mobile/blue/images/email-fill.png);
+    background:url(../images/xin.png);
     background-size:30px 30px;
     margin-right:10px;
 }
 .vip_ico{
     width:30px;
     height:30px;
-    background:url(/mobile/blue/images/f-vip2.png);
+    background:url(../images/VIP.png);
     background-size:30px 30px;
     margin-right:10px;
 }
 .kf_ico{
     width:30px;
     height:30px;
-    background:url(/mobile/blue/images/kf_r_ico.png);
+    background:url(/mobile/red/images/pianb.png);
     background-size:30px 30px;
     margin-right:10px;
 }
 
+.m_cz{
+    width: 30px;
+    height: 30px;
+    background: url(/mobile/red/images/jyjl.png);
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+.m_tx{
+    width: 30px;
+    height: 30px;
+    background: url(/mobile/red/images/tx.png);
+    background-size: 30px 30px;
+    margin-right: 10px;
+}
+.m_xg{
+    width: 25px;
+    height: 25px;
+    background: url(/mobile/red/images/grzx2.png);
+    background-size: 25px 25px;
+    margin-right: 15px;
+}
+.m_tc{
+    width: 25px;
+    height: 25px;
+    background: url(../images/tc.png);
+    background-size: 25px 25px;
+    margin-right: 15px;
+}
+
+.m_vip{
+    width:20px;
+    height:20px;
+    background: url(/mobile/black/images/VIP.png);
+    background-size: 20px 20px;
+    display:inline-block;
+}
 @media screen and (min-width: 1200px) {
+    .kf{
+        width:65%;
+    }
     .transaction_t{
         width:50%;
         margin:70px auto 0 auto;
@@ -3145,7 +3205,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .email_list{
         width:50%;
-        margin:0 auto;
+        margin:10px auto;
     }
     .vip_bottom{
         width:50%;
@@ -3155,5 +3215,19 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .vip_button{
         width:50%;
+    }
+    .email_tit{
+        width:65%;
+        margin:0 auto;
+    }
+    .email_nr{
+        width:65%;
+    }
+    .e_b_hs{
+        width:65%;
+        margin:0 auto;
+    }
+    .rechare_list{
+        width:65%;
     }
 }

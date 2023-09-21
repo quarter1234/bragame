@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title')
+    @include('red.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -22,8 +22,8 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using red-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="red">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
@@ -39,8 +39,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('black.common.modal')
-          @include('black.common.modal_sub')
+          @include('red.common.modal')
+          @include('red.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -165,6 +165,7 @@
                     <div class="sousuo"> 
                          <img src="/mobile/red/images/sousuo.png" alt="" class="ioop">
                         <input type="text" placeholder="original" class="ss"> 
+                        <button id="search-button" class="search-button">搜索</button>
                      </div>
                     </div>
                     <div style="width:100%; height:10px;"></div> 
@@ -276,7 +277,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('black.index.game_recommend')
+                          @include('red.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -331,7 +332,7 @@
               <div class="rankBg"></div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/red/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
@@ -341,13 +342,7 @@
                    </div> 
                    <div class="black_gb"></div> 
                    <div class="black_nav">
-                      <ul>
-                          <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
-                      </ul>
+                      
                    </div>
             </div>
             
@@ -355,9 +350,9 @@
                    <div class="pc_nav">
                       <ul>
                       <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li onclick="location.href='{{url("../images/shoub.png")}}'"><label class="n2"></label><span>Atividades</span></li>
                           <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li onclick="location.href='{{url("../images/fasong.png")}}'"><label class="n4"></label><span>preferenciais</span></li>
                           <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
                           <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
@@ -367,9 +362,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('black.common.loading')
-            @include('black.index.index_login')
-            @include('black.index.notice')
+            @include('red.common.loading')
+            @include('red.index.index_login')
+            @include('red.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}

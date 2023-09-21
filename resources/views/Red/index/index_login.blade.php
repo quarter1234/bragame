@@ -36,9 +36,9 @@
     .r2,.r4,.r6{display:none;}
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
-    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
+    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;        background: linear-gradient(to bottom,#1ac0f3e0,#1ac0f3e0);
     color: #fff;}
-    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
+    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;       background: linear-gradient(to bottom,#1ac0f3e0,#1ac0f3e0);
     color: #fff;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}

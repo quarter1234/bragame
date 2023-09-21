@@ -55,6 +55,20 @@
     }
 
   </style>
+
+   <!-- Meta Pixel Code -->
+   <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    </script>
+    <!-- End Meta Pixel Code -->
+
   <div class="tc" style="display: none;">
   <div class="close"><img src="/mobile/black/images/gb_black.png"></div>      
       <div class="tc_top">
@@ -186,6 +200,8 @@
           success : function (data) {
             hideLoading()
             if(data.code == 200) {
+              fbq('init', '1309983866312683');
+              fbq('track', 'CompleteRegistration');
               window.location.href= "{{url('mobile/index')}}"
             } else {
               showModal(data.message);

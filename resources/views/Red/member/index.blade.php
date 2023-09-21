@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/red/css/member.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
@@ -190,7 +190,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                  
-                @include('black.common.footer') 
+                @include('red.common.footer') 
                   
                  
                 </jx-tab-bar>
