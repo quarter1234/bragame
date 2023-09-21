@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/red/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -35,8 +35,8 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
 
-          @include('black.common.top') 
-          @include('black.common.modal') 
+          @include('red.common.top') 
+          @include('red.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr" style="height:450px;">
@@ -58,7 +58,7 @@
             </div>
 
             {{--loading组件--}}
-            @include('black.common.loading')
+            @include('red.common.loading')
 
             <div class="e_bottom">
             @if($info['hastake'] == 0) 
@@ -86,7 +86,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('red.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -112,8 +112,6 @@
 
                   showModal('Triunfo');
 
-                 
-
                   window.location.href= "{{ url('mobile/member/email') }}"
                 } else {
                   showModal(data.message);
@@ -123,7 +121,6 @@
               error: function(jqXHR, textStatus, errorThrown) {
               hideLoading()
               showModal(jqXHR.responseJSON.message);
-
             }
           })
         })

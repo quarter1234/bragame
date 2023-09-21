@@ -26,7 +26,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="red">
     <meta name="format-detection" content="telephone=no">
 	</head>
-
   <body style="color: white; background-color:black;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
@@ -146,7 +145,6 @@
                       <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                         @foreach($bnners as $banner)
-
                           <div class="swiper-slide">
                           @if ($banner['url'] === 'activity_info')
                             <img onclick="location.href='{{ route("mobile.banner.info", ["id" => $banner["id"]]) }}'" src="{{$banner['img']}}" />
@@ -169,7 +167,6 @@
                      </div>
                     </div>
                     <div style="width:100%; height:10px;"></div> 
-                    
                   <script>
                   document.getElementById("search-button").addEventListener("click", function() {
                var inputValue = document.getElementById("search-input").value.toLowerCase(); // 获取输入框的值并转为小写
@@ -405,8 +402,6 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
     </button>
 
-
-
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="myFunction()" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}O menu</span>
@@ -422,8 +417,6 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--我的--}}Meu</span>
     </button>
 </div>
-
-
 
                 </jx-tab-bar>
               </jx-footer-row>

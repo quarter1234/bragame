@@ -3676,10 +3676,10 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-left:10px;
 }
 .search-button{
-    width:38px;
+    width:50px;
     height: 37px;
     background-color: #1ac0f3e0;
-    color: black;
+    color: white;
     font-size: 12px;
 }
 
