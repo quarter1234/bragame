@@ -438,7 +438,6 @@
               }
           })
         }
-
       function loadPpGames() {
           let page = $('#pp_load_more').attr('page');
           showLoading();
@@ -459,7 +458,7 @@
               }
           })
         }
-
+        
         function loadJlGames() {
           let page = $('#jl_load_more').attr('page');
           showLoading();
