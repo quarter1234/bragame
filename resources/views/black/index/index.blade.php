@@ -36,8 +36,6 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1309983866312683');
-    fbq('track', 'PageView');
     </script>
     <!-- End Meta Pixel Code -->
 	</head>
@@ -654,6 +652,9 @@
       $('.pc_nav li').mouseout(function(){
         $(this).removeClass('pc_on')
       })
+
+      fbq('init', '1309983866312683');
+      fbq('track', 'PageView');
     })
     </script>
   </body>

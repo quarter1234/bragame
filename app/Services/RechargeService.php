@@ -278,4 +278,13 @@ class RechargeService
 
         return ['totalOrder' => $orders, 'todayOrder' => $ordersToday];
     }
+
+    public function getOrderByOid($orderid)
+    {
+        if($orderid){
+            return $this->rechargeRepo->getRechargeByOrderId($orderid);
+        }
+
+        return null;
+    }
 }

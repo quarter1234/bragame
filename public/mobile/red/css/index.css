@@ -3675,8 +3675,13 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-top:10px;
     margin-left:10px;
 }
-
-
+.search-button{
+    width:50px;
+    height: 37px;
+    background-color: #1ac0f3e0;
+    color: white;
+    font-size: 12px;
+}
 
 @media screen and (min-width: 1200px) {
     .rm {
@@ -3789,7 +3794,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .ss{
     background-color: #000;
-    width: 320px;
+    width: 280px;
     border: 0px solid black;
     outline: none;
     color: #fff;
