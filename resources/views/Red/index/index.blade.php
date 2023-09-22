@@ -173,7 +173,7 @@
               switch (inputValue) {
                  case "favoritos":
                    window.location.href = "favoritos.html";
-                    break;
+                    break; 
                  case "pg":
                     window.location.href = "pg.html";
                   break;
