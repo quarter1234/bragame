@@ -85,8 +85,6 @@
           clearTimeOut()
           $('#h2-pay').text('Pagamento efetuado com sucesso')
           $('#p-pay').text('O pagamento foi realizado com sucesso')
-          fbq('init', '1309983866312683');
-          fbq('track', 'Purchase', {value:0.00, currency:'USD'})
 			}
       else{
        
@@ -110,6 +108,8 @@
         console.log("orderid:", orderid)
         if(orderid && !payTimer)
         {
+          fbq('init', '1309983866312683');
+          fbq('track', 'Purchase', {value:0.00, currency:'USD'})
           payTimer = setInterval(getOrderInfo, 1000, orderid);
         }
     })
