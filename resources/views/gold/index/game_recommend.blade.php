@@ -23,10 +23,12 @@
         </div>
     </div>
     {{--游戏放这里 PG--}}
-    <div class="game_list">
+    <div class="game_x">
+    <div class="game_xx">
     @foreach($pgRecommend as $item)
         <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
     @endforeach   
+    </div>
     </div>
     {{----}}
     <div class="game_qb_title">
@@ -38,12 +40,13 @@
         </div>
     </div>
     {{--游戏放这里--}}
-    <div class="game_list">
+    <div class="game_x">
+    <div class="game_xx">
     @foreach($ppRecommend as $item)
         <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
     @endforeach   
     </div>
-
+    </div>
     {{----}}
     <div class="game_qb_title">
         <div class="game_qb_left">
@@ -54,9 +57,11 @@
         </div>
     </div>
     {{--游戏放这里--}}
-    <div class="game_list">
+    <div class="game_x">
+    <div class="game_xx">
     @foreach($getTadaRecommend as $item)
         <a><img _ngcontent-avh-c16="" gameid="{{ $item['id'] }}" class=" generic-background-image pg_game_go ng-star-inserted" src="{{ $item['icon'] }}" /></a>
     @endforeach   
+    </div>
     </div>
 </div>

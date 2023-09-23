@@ -370,7 +370,7 @@ margin:20px auto;
 .shop_index_list{
     width:49%;
     height:100px;
-    background:#111e33;
+    background:rgba(0, 0, 0, .2);
     border-radius:10px;
     margin-top:10px;
     display:flex;

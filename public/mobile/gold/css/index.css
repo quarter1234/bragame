@@ -76,15 +76,9 @@ div.app-background[_ngcontent-way-c2] {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: rgba(12, 25, 44, 1)
 }
 
 @supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {
-    .header-view__nav-row-wrapper[_ngcontent-way-c3] {
-        background-color: rgba(12, 25, 44, .8);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
-    }
 }
 
 .header-view__nav-row-wrapper--gradient[_ngcontent-way-c3] {
@@ -1551,19 +1545,24 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .money {
-    width: 201px;
+    width:110px;
     height: 32px;
-    background:rgba(0, 0, 0, .5);
-    border-radius: 5px;
+    background:linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    border-radius:32px;
     float: left;
-    margin: 15px 0 0 10px;
+    margin: 9px 0 0 10px;
     position: relative;
     line-height: 32px;
+    display:flex;
+    align-items:center;
 }
 
-.money span {
-    padding-left: 10px;
-    float: left;
+.money_rs{
+    width:20px;
+    height:20px;
+    background:url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background-size:20px 20px;
+    margin:0 5px;
 }
 
 .sx {
@@ -1580,21 +1579,21 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .qb {
-    width: 34px;
-    height: 29px;
+    width: 20px;
+    height: 20px;
    /*background: linear-gradient(-135deg, #9c16d4, #2b22b1);*/
    background:#ffb31a;
-    border-radius: 5px;
+    border-radius:20px;
     right: 3px;
-    top: 1px;
+    top: 7px;
     position: absolute;
     text-align: center;
 }
 
 .qb img {
-    width: 16px;
-    height: 16px;
-    margin-top:7px;
+    width: 12px;
+    height: 12px;
+    margin-top:4px;
 }
 
 .yh {
@@ -1948,15 +1947,9 @@ div.app-background[_ngcontent-way-c2] {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: rgba(12, 25, 44, 1)
 }
 
 @supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {
-    .header-view__nav-row-wrapper[_ngcontent-way-c3] {
-        background-color: rgba(255, 255, 255, .1);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
-    }
 }
 
 .header-view__nav-row-wrapper--gradient[_ngcontent-way-c3] {
@@ -2027,7 +2020,9 @@ div.app-background[_ngcontent-way-c2] {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-    align-items: flex-start
+    align-items: flex-start;
+    background:url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
+    background-size:100% 64px;
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -2069,7 +2064,7 @@ div.app-background[_ngcontent-way-c2] {
    background-image: url(/mobile/black/images/logo11.png);
     height:30px;
     width:132px;
-    margin-right: 10px;
+    margin:0 auto;
     background-size:132px 30px;
 }
 
@@ -2561,6 +2556,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background:#1a1a19;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -2591,23 +2587,23 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
+    background-image: url(/mobile/gold/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/zfj_ico.png)
+    background-image: url(/mobile/gold/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/sk.png)
+    background-image: url(/mobile/gold/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
+    background-image: url(/mobile/gold/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(/mobile/black/images/syfl.png)
+    background-image: url(/mobile/gold/images/home1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
@@ -2636,7 +2632,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     line-height: 14px;
 }
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color:#ef962f !important;
+    color:#ffce2f !important;
 }
 [_nghost-way-c14] {
     box-sizing: border-box;
@@ -3338,26 +3334,28 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .game_qb_title{
     width:100%;
-   height:20px;
+   height:40px;
    line-height:20px;
    text-align:left;
    font-size:12px;
    padding-top:5px;
-  /* background:rgba(0, 0, 0, .2);*/
-  /*background:linear-gradient(to bottom, #e2d238, #f2bc51);*/
    padding-bottom:5px;
    margin-top:10px;
    border-radius:20px;
+   background:url(/mobile/gold/images/gold_d.png) no-repeat;
+   background-size:100% 40px;
+   overflow:hidden;
 }
 .game_qb_left{
     width:47%;
     float:left;
     padding-left:10px;
     color:#fff;
+    line-height:28px;
+    text-indent:10px;
 }
 .game_qb_left a{
     color:#fff;
-    background:rgba(255, 255, 255, .1);
     border-radius:20px;
     display:inline-block;
     float:right;
@@ -3376,10 +3374,13 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .game_list{
-    width:95%;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
+    background:#000;
+    margin-top:-15px;
+    padding:10px;
+    border-radius:0 0 15px 15px;
 }
 .game_list a{
     width: 30%;
@@ -3536,7 +3537,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .xh_game_centen{
     width:100%;
-    height:157px;
+    height:167px;
 }
 
 .xh_game_centen img{
@@ -3730,7 +3731,45 @@ button.cancel-btn[_ngcontent-way-c22] {
     display:none;
 }
 
+.game_x{
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    display: flex;
+    background:#000;
+    margin-top:-15px;
+    padding:10px 0;
+    border-radius:0 0  15px 15px;
+}
+.game_xx{
+    width:30%;
+    margin-top: 15px;
+    object-fit: cover;
+    transition: 0.1s;
+    transform: scale(1);
+    flex-shrink:0;
+}
+.game_x::-webkit-scrollbar {
+    -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+    border-radius: 0;
+    background: rgba(255,255,255,0.1);
+    height:0;
+}
+.game_x::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 5px rgba(255,255,255,0.1);
+            background: rgba(0,0,0,0.2);
+}
+.game_xx img{
+    border-radius:10px;
+    margin-left:10px;
+}
+
 @media screen and (min-width: 1200px) {
+    .game_xx{
+        width:10%;
+    }
     .rm {
         display:flex;
         justify-content: left;
@@ -3828,6 +3867,12 @@ button.cancel-btn[_ngcontent-way-c22] {
         margin-left:10px;
         margin-right:10px;
     }
-   
+   .header-view__nav-row-wrapper__container__nav-row[_ngcontent-way-c3]{
+        background:url(/mobile/gold/images/Rectangle19204-9e00b653.png) center;
+        background-size:100% 64px;
+   }
+   .money{
+    margin-top:0;
+   }
     
 }

@@ -1,20 +1,37 @@
 .top {
     width: 100%;
-    height: 62px;
-    background:#111e33;
+    height: 64px;
+    background:#141413;
     position: fixed;
     color: #fff;
     top: 0;
     left: 0;
+    background: url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
+    background-size: 100% 64px;
+}
+.logo{
+    width:132px;
+    height:30px;
+    margin:10px auto;
 }
 .money {
-    width: 201px;
+    width: 110px;
     height: 32px;
-    background:rgba(0, 0, 0, .5);
-    border-radius: 5px;
-    margin: 15px 0 0 10px;
+    background: linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    border-radius:32px;
+margin-top:-40px;
     position: relative;
     line-height: 32px;
+    display:flex;
+    align-items:center;
+}
+
+.money_rs {
+    width: 20px;
+    height: 20px;
+    background: url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background-size: 20px 20px;
+    margin: 0 5px;
 }
 .money span {
     padding-left: 10px;
@@ -32,20 +49,21 @@
     height: 16px;
 }
 .qb {
-    width: 34px;
-    height: 29px;
-    background:#fff;
-    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    /* background: linear-gradient(-135deg, #9c16d4, #2b22b1); */
+    background: #ffb31a;
+    border-radius: 20px;
     right: 3px;
-    top: 1px;
+    top: 7px;
     position: absolute;
     text-align: center;
 }
 
 .qb img {
-    width: 16px;
-    height: 16px;
-    margin-top:7px;
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
 }
 .yh {
     width: 15px;
@@ -68,12 +86,14 @@
 
 .centen_tab {
     width: 96%;
-    height: 54px;
-    background:#162335;
+    height: 34px;
+    background:rgba(255, 255, 255, .1);
     margin: 0px auto;
     border-radius:10px;
     display: flex;
     justify-content: space-between;
+    border-radius:34px;
+    line-height:34px;
 }
 
 .centen_list {
@@ -81,7 +101,7 @@
     text-align: center;
     align-items: center;
     font-size: 14px;
-    border-radius:10px;
+    border-radius:34px;
     margin: 1px;
     color:#fff;
 }
@@ -90,8 +110,17 @@
     padding:0;
 }
 .centen_on {
-    background:#ef962f;
+    background:rgba(255, 255, 255, .15);
     color:#fff;
+    border:1px solid rgba(255, 255, 255, .2);
+}
+
+.fx_body{
+    width:100%;
+    height:100%;
+    background:url(/mobile/gold/images/bg-light-75f05cd1.png) no-repeat;
+    background-size:cover;
+    background-color:transparent;
 }
 
 .fx{ width:20px;height:20px;background:url(/mobile/purple/images/fx.png) no-repeat;background-size:20px 20px; display:inline-block;margin-top:5px;}
@@ -135,10 +164,15 @@
 .xk_t {
     width: 85%;
     margin: 0 auto;
+    background:#000;
+    overflow:hidden;
+    padding:5px 10px;
+    margin-bottom:10px;
+    border-radius:10px;
 }
 
 .xk_t input {
-    border: 1px #fff solid;
+    border:none;
     width: 80%;
     float: left;
     height: 40px;
@@ -153,60 +187,87 @@
     width: 40px;
     height: 40px;
     border-radius: 5px;
-    background:#ffb31a;
     text-align: center;
     color: #fff;
     float: right;
 }
 
 .xk_t button img {
-    width: 15px;
-    height: 15px;
+    width: 20px;
+    height: 20px;
 }
 
 .xk_b {
     width: 100%;
     margin-top: 15px;
-    background: rgba(255, 255, 255, .1);
+    background:#000;
     border-radius: 10px;
     overflow: hidden;
-    text-align:center;
     padding:10px 0;
 }
+
 .xk_b p{
     width:95%;
     margin:0 auto;
     line-height:20px;
     text-align:left;
-    font-size:12px;
-    color:#999;
+    font-size:14px;
+    color:rgba(255, 255, 255, .6);
     padding-top:10px;
 }
-.xk_b img{
-    width:340px;
-    height:281px;
+.xk_b p span{
+    font-size:16px;
+    color:#e3b009;
 }
-.xk_b label{
-    width: 60px;
-    height: 20px;
-    border-radius: 5px;
-    background: #1e3655;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    line-height: 20px;
-    font-size: 12px;
-    color: #fff;
-    text-align: center;
+.xk_b img{
+    width:100%;
 }
 .xk_b h2 {
     color: #fff;
-    text-align: center;
     padding-top: 10px;
-    font-weight: 500px;
-    font-size: 22px;
+    font-weight: 700px;
+    font-size: 16px;
+    margin:0;
+    padding:0;
+    display:flex;
+    align-items:center;
 }
-
+.xk_b h2 span{
+    background:#e3b009;
+    width:15px;
+    height:15px;
+    border-radius:100%;
+    display:inline-block;
+    margin-right:10px;
+    margin-left:10px;
+    text-align:center;
+    display:flex;
+    align-items:center;
+}
+.xk_b h2 label{
+    width:9px;
+    height:9px;
+    display:inline-block;
+    background:#67520f;
+    border-radius:100%;
+    margin:0 auto;
+}
+.xk_b table{
+    border-collapse:collapse;
+    width:95%;
+    font-size:12px;
+    margin:10px auto;
+}
+.xk_b td{
+    border:1px solid rgba(255, 255, 255, .2);
+    border-collapse:collapse;
+    padding:10px;
+    line-height:24px;
+    text-align:center;
+}
+.xk_b thead td{
+    color:rgba(255, 255, 255, .7);
+}
 .xk_but {
     width: 100%;
     margin-top: 20px;
@@ -311,7 +372,7 @@
 .yh_t_list {
     width: 48%;
     height: 87px;
-    background:#111e33;
+    background:rgba(0, 0, 0, .2);
     border-radius: 10px;
     text-align: center;
 }
@@ -983,6 +1044,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background:#1a1a19;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -1011,11 +1073,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/gold/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/gold/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
@@ -1023,11 +1085,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/sk.png)
+   background-image: url(/mobile/gold/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/gold/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
@@ -1039,11 +1101,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/zfj_on_ico.png)
+   background-image: url(/mobile/gold/images/fx1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/gold/images/qq1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
@@ -1713,7 +1775,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
     font-weight:700;
     font-family: Arial, Helvetica, sans-serif;
-    background: url(../images/dg.png) no-repeat;
     background-position: center right;
     background-size: 12px 12px;
     width: 106px;
@@ -1754,11 +1815,10 @@ button.cancel-btn[_ngcontent-way-c22] {
     display:flex;
     flex-direction:row;
     flex-wrap: wrap;
-    padding:0 10px;
 }
 
 .recharge_kn .recharge_k_n{
-    background:rgba(0, 0, 0, .5);
+    background:rgba(255, 255, 255, .1);
     color:#fff;
 }
 .recharge_kn .recharge_bz{
@@ -1769,16 +1829,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:none;
 }
 .recharge_on .recharge_k_n{
-    background:#ff3757;
+    background:rgba(227,176,9,.3);
     color:#fff;
 }
 .recharge_on .recharge_bz{
-    background: linear-gradient(to right, #29d279, #a5e376);
-    color:#fa3605;
+    background: #e7a738;
+    color:#000;
     font-size: 1px;
 }
 .recharge_on .recharge_k_w{
-    background:url(../images/dg.png) no-repeat;
     background-position:center right;
     background-size: 12px 12px;
     width: 102px;
@@ -1845,8 +1904,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-bottom:40px;
     display:inline-block;
     font-size:14px;
-    background: #ff3757;
-    color:#fff;
+    background: linear-gradient(-90deg,#e7a738 0%,#f1c56e 100%);
+    color:#000;
 }
 
 .recharge_wk{
@@ -1862,14 +1921,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     flex-direction:column;
     flex-shrink:0;
-    width:98px !important;
+    width:110px !important;
     height:60px;
     border-radius:5px;
     overflow: hidden;
-    margin:10px 14px 10px 0;
+    margin:10px 9px;
     text-align:center;
     line-height:60px;
     color:#000;
+    border:1px solid rgba(255, 255, 255, .3);
 }
 .recharge_k1{
     display: flex;
@@ -1877,12 +1937,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     flex-shrink:0;
     width:110px;
     height:60px;
-    border-radius:5px;
+    border-radius:10px;
     overflow: hidden;
     margin:10px 12px;
     text-align:center;
     line-height:60px;
-    color:#000;
 }
 
 .recharge_k_n{
@@ -1906,16 +1965,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:100%;
     position: relative;
     background:rgba(0, 0, 0, .5);
-    color:#fff;
 }
 .recharge_k1 .recharge_k_w{
     background:none;
 }
+
 .re_on .recharge_k_n{
     width:100%;
     height:100%;
     position: relative;
-    background:#ff3757;
 }
 .re_on .recharge_k_w{
     background: url(/mobile/black/images/xz_ico.png) no-repeat;
@@ -1969,7 +2027,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-left:5px;
 }
 .dl_conten{
-    background:#111e33;
+    background:rgba(0, 0, 0, .3);
     width:98%;
     margin:10px auto;
     padding:10px 0;
@@ -2005,6 +2063,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin:0;
     margin-right:10px;
 }
+
+.recharge_wk .re_on{
+    border:1px solid #e7a738;
+    color:#e3b009;
+    background:rgba(255, 255, 255, .1);
+}
+.recharge_kn .recharge_on {
+    border:1px solid #e3b009;
+}
 @media screen and (min-width: 1200px){
     .recharge_top{
       width:49%;
@@ -2015,5 +2082,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .recharge_button{
         margin-left:0;
+    }
+    .xk_b table img{
+        width:50%;
+        height:50%;
     }
   }
