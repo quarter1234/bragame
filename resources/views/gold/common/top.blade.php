@@ -1,10 +1,9 @@
 <div class="top">
-    {{--<div class="logo"><img src="/mobile/black/images/logo11.png"/></div>--}}
+    <div class="logo"><img src="/mobile/gold/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">
-        <span>R$</span>
+        <span class="money_rs"></span>
         <span>{{$user['coin']}}</span>
-        <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png" /></div>
-        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/black/images/qb.png" /></div>
+        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/gold/images/qb.png" /></div>
     </div>
 
     

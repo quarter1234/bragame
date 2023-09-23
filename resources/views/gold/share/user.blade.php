@@ -10,13 +10,12 @@
 </div>
 
 {{--loading组件--}}
-@include('mobile.common.loading')
+@include('gold.common.loading')
 
 <div class="yh_table">
     <table>
         <thead>
         <tr>
-      
             <td>prenome</td>
             <td>série</td>
             <td>tempo</td>
