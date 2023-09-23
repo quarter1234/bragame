@@ -160,37 +160,10 @@
                       </div>
                     </div>
                     <div style="width:100%;text-align: center;">
-                    <div class="sousuo"> 
-                         <img src="/mobile/red/images/sousuo.png" alt="" class="ioop">
-                        <input type="text" placeholder="original" class="ss"> 
-                        <button id="search-button" class="search-button">搜索</button>
-                     </div>
-                    </div>
+                     
                     
                     <div style="width:100%; height:10px;"></div> 
                   <script>
-                  document.getElementById("search-button").addEventListener("click", function() {
-               var inputValue = document.getElementById("search-input").value.toLowerCase(); // 获取输入框的值并转为小写
-              switch (inputValue) {
-                 case "favoritos":
-                   window.location.href = "favoritos.html";
-                    break; 
-                 case "pg":
-                    window.location.href = "pg.html";
-                  break;
-                  case "xadres":
-                    window.location.href = "xadres.html";
-                   break;
-                   case "tade":
-                     window.location.href = "tade.html";
-                    break;
-                 case "pp":
-                     window.location.href = "pp.html";
-                     break;
-                  default:
-                   alert("未找到匹配的页面");
-                }
-               });
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
                       var swiper = new Swiper(".mySwiper", {
@@ -465,7 +438,6 @@
               }
           })
         }
-
       function loadPpGames() {
           let page = $('#pp_load_more').attr('page');
           showLoading();
@@ -486,7 +458,7 @@
               }
           })
         }
-
+        
         function loadJlGames() {
           let page = $('#jl_load_more').attr('page');
           showLoading();

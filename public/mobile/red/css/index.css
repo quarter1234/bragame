@@ -156,7 +156,7 @@ div.app-background[_ngcontent-way-c2] {
 .header-jx-icon[_ngcontent-way-c3] {
     width: 91px;
     height: 22px;
-    background: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png) no-repeat;
+    background: url(../images/logo.png) no-repeat;
     background-size: 91px 22px;
 }
 
@@ -164,12 +164,6 @@ div.app-background[_ngcontent-way-c2] {
     border: 1px solid #3f4f66
 }
 
-.header-laliga-icon[_ngcontent-way-c3] {
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
-    height: 100%;
-    width: 128px;
-    margin-left: 10px
-}
 
 .header-view__nav-row-wrapper__container__nav-row__title[_ngcontent-way-c3] {
     flex: 0 1 auto;
@@ -2060,7 +2054,6 @@ div.app-background[_ngcontent-way-c2] {
 
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
-   background-image: url(/mobile/black/images/logo11.png);
     height:30px;
     width:132px;
     margin-right: 10px;
@@ -2177,12 +2170,10 @@ button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     .safe-area-top {
         padding-top: env(safe-area-inset-top)
     }
-
     .safe-area-fix-top {
         margin-top: calc(-1 * env(safe-area-inset-top));
         padding-top: env(safe-area-inset-top)
     }
-}
 
 @supports (padding-bottom:constant(safe-area-inset-bottom)) or (padding-bottom:env(safe-area-inset-bottom)) {
     .safe-area-bottom {
@@ -2222,13 +2213,11 @@ button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     display: block;
     padding-bottom: calc(480 / 1125 * 100%)
 }
-
 @media screen and (min-aspect-ratio:1125/960) {
     [_nghost-way-c5] {
         padding-bottom: 50vh
     }
 }*/
-
 div.banner-board-wrapper[_ngcontent-way-c5] {
     position: absolute;
     top: 0;
