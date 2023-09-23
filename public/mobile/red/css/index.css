@@ -3633,11 +3633,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:24px 24px;
 }
 
-.black_nav li.black_on{
-    color:#ef962f;
-}
+
 .black_on .n1{
-    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background:url(../images/shoub.png);
     background-size:24px 24px;
 }
 .black_on .n2{

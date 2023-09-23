@@ -37,7 +37,10 @@
                   width:36%;
                   margin:0 auto;
                 }
-
+                .index_bottom{
+                  width: 700px;
+                  margin:450px auto;
+                }
             }
     </style>        
 
