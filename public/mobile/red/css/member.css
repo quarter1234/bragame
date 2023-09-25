@@ -209,7 +209,7 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
     background: rgba(0, 0, 0, .2);
     margin-bottom: 10px;
     position: relative;
-    justify-content: center;
+    justify-content:flex-start;
 }
 .finance-entry-btn-group__btn:hover{
     background:rgba(0, 0, 0, .5);

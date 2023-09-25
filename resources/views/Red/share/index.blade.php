@@ -40,7 +40,7 @@
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
 
-        @include('black.common.top') 
+        @include('red.common.top') 
 
             <div class="centen"></div>
             <div class="centen_tab">

@@ -29,7 +29,7 @@
 </div>
 
 {{--loading组件--}}
-@include('black.common.loading')
+@include('red.common.loading')
 
 <div class="yh_table">
     <table>
