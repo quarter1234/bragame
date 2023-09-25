@@ -50,8 +50,10 @@ div.profile-detail[_ngcontent-xfs-c1]>div[_ngcontent-xfs-c1]>div.username[_ngcon
 }
 .username p{
     width:100%;
-    padding:0;
+    padding:5px 10px;
     margin:0;
+    background:rgba(0, 0, 0, .5);
+    border-radius:20px;
 }
 .username label{
     font-size:12px;
@@ -202,19 +204,21 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
     font-size: 18px;
     font-weight: 400;
     line-height: 25px;
-    border-radius:10px;
     background-color: transparent;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    background:rgba(0, 0, 0, .2);
-    margin-bottom:10px;
+    background:rgba(255, 255, 255, .1);
     position: relative;
+    border-radius:0;
    
 }
-.finance-entry-btn-group__btn:hover{
-    background:rgba(0, 0, 0, .5);
+.finance-entry-btn-group__btn[_ngcontent-xfs-c1]:first-child {
+    border-radius:10px 10px 0 0;
+}
+.finance-entry-btn-group__btn[_ngcontent-xfs-c1]:last-child{
+    border-radius:0 0 10px 10px;
 }
 
 .finance-entry-btn-group__btn[_ngcontent-xfs-c1]>mat-icon[_ngcontent-xfs-c1] {
@@ -1929,6 +1933,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background:#1a1a19;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -1957,43 +1962,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/home.93b20d6e835f71c043b8.png)
+   background-image: url(/mobile/gold/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png)
+   background-image: url(/mobile/gold/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/zfj_ico.png)
+   background-image: url(/mobile/gold/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/sk.png)
+   background-image: url(/mobile/gold/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/gold/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/gold/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/gold/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/gold/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/gold/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
+   background-image: url(/mobile/gold/images/wd1.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -2593,23 +2598,22 @@ button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(to bottom, #9ea3aa, #59585d)
 }
 
-
 .top {
     width: 100%;
-    height: 62px;
-    background:#111e33;
+    height: 64px;
+    background:#141413;
     position: fixed;
     color: #fff;
     top: 0;
     left: 0;
+    background: url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
+    background-size: 100% 64px;
 }
 
 .logo {
     height:30px;
     width:132px;
-    margin-top: 15px;
-    margin-right: 10px;
-    margin-left: 14px;
+    margin:10px auto;
 }
 
 .logo img {
@@ -2618,15 +2622,23 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .money {
-    width: 201px;
+    width: 110px;
     height: 32px;
-    background:rgba(0, 0, 0, .5);
-    border-radius: 5px;
-    margin: 15px 0 0 10px;
+    background: linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    border-radius:32px;
+margin-top:-40px;
     position: relative;
     line-height: 32px;
+    display:flex;
+    align-items:center;
 }
-
+.money_rs {
+    width: 20px;
+    height: 20px;
+    background: url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background-size: 20px 20px;
+    margin: 0 5px;
+}
 .money span {
     padding-left: 10px;
     float: left;
@@ -2646,20 +2658,21 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .qb {
-    width: 34px;
-    height: 29px;
-    background:#ffb31a;
-    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    /* background: linear-gradient(-135deg, #9c16d4, #2b22b1); */
+    background: #ffb31a;
+    border-radius: 20px;
     right: 3px;
-    top: 1px;
+    top: 7px;
     position: absolute;
     text-align: center;
 }
 
 .qb img {
-    width: 16px;
-    height: 16px;
-    margin-top:7px;
+    width: 12px;
+    height: 12px;
+    margin-top: 4px;
 }
 
 .yh {
@@ -2880,8 +2893,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:15px;
 }
 .e_b2{
-    background: linear-gradient(to bottom,#ef962f,#b56100);
-    color:#fff;
+    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
+    color:#141413;
     width:140px;
     height:40px;
     border-radius:8px;
@@ -2930,7 +2943,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 90%;
     height: 70px;
     margin: 15px auto 0 auto;
-    background:#111e33;
+    background:rgba(255, 255, 255, .1);
     border-radius: 5px;
     overflow: hidden;
     position: relative;
@@ -3087,11 +3100,12 @@ button.cancel-btn[_ngcontent-way-c22] {
 .avatar_sub_title label a{
     width:20px;
     height:20px;
-    background:url(/mobile/green/images/copy_ico.png) no-repeat;
+    background:url(/mobile/gold/images/copy_ico.png) no-repeat;
     background-size:20px 20px;
     display: block;
     float:right;
     margin-top:5px;
+    margin-right:10px;
 }
 
 .transaction_t{
@@ -3112,8 +3126,8 @@ button.cancel-btn[_ngcontent-way-c22] {
     font-size:14px;
 }
 .transaction_list_on{
-    background: radial-gradient(#ef962f, #b56100);
-    color:#fff;
+    background: linear-gradient(90deg,#f1c56e 10%,#e7a738 100%);
+    color:#141413;
 }
 .transaction_b{
     width:100%;
@@ -3122,75 +3136,107 @@ button.cancel-btn[_ngcontent-way-c22] {
     height:100%;
 }
 
-.jy_ico{
-    width:30px;
-    height:30px;
-    background:url(/mobile/black/images/jyts.png);
-    background-size:30px 30px;
+.finance-entry-btn-group__btn[_ngcontent-xfs-c1] span{
+    height:40px;
+    background:rgba(0, 0, 0, .2);
+    border-radius:40px;
+    display:flex;
+    align-items:center;
+    text-align:center;
     margin-right:10px;
+    width:40px;
+}
+.finance-entry-btn-group__btn[_ngcontent-xfs-c1] span i{
+    margin-left:10px;
+}
+
+.jy_ico{
+    background:url(/mobile/gold/images/jyts.png);
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .tzjl_ico{
-    width:30px;
-    height:30px;
-    background:url(/mobile/black/images/tzjl.png);
-    background-size:30px 30px;
-    margin-right:15px;
+    background:url(/mobile/gold/images/tzjl.png);
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .em_ico{
-    width:30px;
-    height:30px;
-    background:url(/mobile/black/images/email-fill.png);
-    background-size:30px 30px;
+   
+    background:url(/mobile/gold/images/email-fill.png);
+   
     margin-right:10px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .vip_ico{
-    width:30px;
-    height:30px;
-    background:url(/mobile/black/images/f-vip2.png);
-    background-size:30px 30px;
-    margin-right:10px;
+   
+    background:url(/mobile/gold/images/f-vip2.png);
+   
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .kf_ico{
-    width:30px;
-    height:30px;
-    background:url(/mobile/black/images/kf_r_ico.png);
-    background-size:30px 30px;
-    margin-right:10px;
+  
+    background:url(/mobile/gold/images/kf_r_ico.png);
+   
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 
 .m_cz{
-    width: 30px;
-    height: 30px;
-    background: url(/mobile/black/images/m_cz.png);
-    background-size: 30px 30px;
-    margin-right: 10px;
+   
+    background: url(/mobile/gold/images/m_cz.png);
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .m_tx{
-    width: 30px;
-    height: 30px;
-    background: url(/mobile/black/images/m_tx.png);
-    background-size: 30px 30px;
-    margin-right: 10px;
+   
+    background: url(/mobile/gold/images/m_tx.png);
+
+
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background-size:20px 20px;
 }
 .m_xg{
-    width: 25px;
-    height: 25px;
-    background: url(/mobile/black/images/m_xg.png);
-    background-size: 25px 25px;
-    margin-right: 15px;
+    background: url(/mobile/gold/images/m_xg.png);
+
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-size:15px 15px;
 }
 .m_tc{
-    width: 25px;
-    height: 25px;
-    background: url(/mobile/black/images/m_tc.png);
-    background-size: 25px 25px;
-    margin-right: 15px;
+    background: url(/mobile/gold/images/m_tc.png);
+
+    display:inline-block;
+    width:15px;
+    height:15px;
+    background-size:15px 15px;
 }
 
 .m_vip{
     width:20px;
     height:20px;
-    background: url(/mobile/black/images/VIP.png);
+    background: url(/mobile/gold/images/VIP.png);
     background-size: 20px 20px;
     display:inline-block;
 }

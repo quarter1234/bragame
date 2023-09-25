@@ -38,7 +38,7 @@
 .guide_ico{
     width:40px;
     height:100px;
-    background:url(/mobile/black/images/zf_xt.png) no-repeat;
+    background:url(/mobile/gold/images/zf_xt.png) no-repeat;
     background-size:40px 40px;
     margin:12px;
     margin-left: 30px;
@@ -67,9 +67,9 @@ margin:20px auto;
 .guide_right button{
     width:100%;
     height:42px;
-    background: radial-gradient(#ef962f, #b56100);
-    color:#fff;
-    font-size:24px;
+    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
+    color:#141413;
+    font-size:16px;
     margin: 0;
 }
 .guide_yh{
@@ -178,12 +178,12 @@ margin:20px auto;
     line-height:40px;
     text-align:center;
     margin-top:10px;
-    margin-left:28%;
+    margin-left:3%;
     overflow: hidden;
     font-size:16px;
 
-    background: linear-gradient(to bottom,#ef962f,#b56100);
-    color:#fff;
+    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
+    color:#141413;
 }
 
 .draw_top{
