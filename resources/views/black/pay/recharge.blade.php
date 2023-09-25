@@ -165,9 +165,6 @@
       return false;
     }
 
-    fbq('init', '1309983866312683');
-    fbq('track', 'Purchase', {value:0.00, currency:'USD'})
-
     return true;
    }
    function clearStatus(){
@@ -223,6 +220,9 @@
         // $('#recharge_rate').text(sendcoin)
         // $("#recharge_id").val(id)
       })
+
+      fbq('init', '1309983866312683');
+      fbq('track', 'Purchase', {value:0.00, currency:'USD'})
     })
    </script>
 
