@@ -10,7 +10,7 @@
 </div>
 
 {{--loading组件--}}
-@include('mobile.common.loading')
+@include('red.common.loading')
 
 <div class="yh_table">
     <table>

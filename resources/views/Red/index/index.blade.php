@@ -479,7 +479,6 @@
               }
           })
         }
-
         function loadTadaGames(){
           let page = $('#tada_load_more').attr('page');
           showLoading();
