@@ -110,6 +110,8 @@
         {
           fbq('init', '1309983866312683');
           fbq('track', 'Purchase', {value:0.00, currency:'USD'})
+          fbq('init', '330625666130753');
+          fbq('track', 'Purchase', {value:0.00, currency:'USD'});
           payTimer = setInterval(getOrderInfo, 1000, orderid);
         }
     })
