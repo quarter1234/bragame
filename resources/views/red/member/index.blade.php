@@ -31,10 +31,7 @@
       }
       .shop_jt{
         width:38%;
-      }
-      .pc_nav{
-        margin-top:0 !important;
-      }
+      }   
     }
     [_nghost-xfs-c4] {
     flex: 1 1 auto;
