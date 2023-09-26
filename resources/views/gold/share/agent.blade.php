@@ -12,33 +12,33 @@
 
             <div class="dl_conten">
                 <div class="dl_title">
-                    <span><img src="/mobile/black/images/dl1.png" /></span>Meus dados do agente 
+                    <span><img src="/mobile/black/images/dl1.png" /></span><span>Meus dados do agente</span> 
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/sz_ico.png" />
-                        Número
+                        <span>Número</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneGradeInviteNum'] + $item['twoGradeInviteNum'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/dm_ico.png" />
-                        Valor do código
+                        <span>Valor do código</span> 
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneTbetcoin'] + $item['twoTbetcoin'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/cq_ico.png" />
-                        Recarga total
+                        <span>Recarga total</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneRechargeAmount'] + $item['twoRechargeAmount'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/cs_ico.png" />
-                        Carga inicial
+                        <span>Carga inicial</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneFirstRecharge'] + $item['twoFirstRecharge'] }}</p></div>
                 </div>
@@ -51,28 +51,28 @@
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/sz_ico.png" />
-                        Número
+                        <span>Número</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneGradeInviteNum'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/dm_ico.png" />
-                        Valor do código
+                       <span> Valor do código</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneTbetcoin'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                     <img src="/mobile/black/images/cq_ico.png" />
-                        Recarga total
+                        <span>Recarga total</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneRechargeAmount'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                     <img src="/mobile/black/images/cs_ico.png" />
-                        Carga inicial
+                        <span>Carga inicial</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['oneFirstRecharge'] }}</p></div>
                 </div>
@@ -85,28 +85,28 @@
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/sz_ico.png" />
-                        Número
+                        <span>Número</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoGradeInviteNum'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                         <img src="/mobile/black/images/dm_ico.png" />
-                        Valor do código
+                        <span>Valor do código</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoTbetcoin'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                     <img src="/mobile/black/images/cq_ico.png" />
-                        Recarga total
+                        <span>Recarga total</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoRechargeAmount'] }}</p></div>
                 </div>
                 <div class="dl_conten_list">
                     <div class="dl_list_coentn">
                     <img src="/mobile/black/images/cs_ico.png" />
-                        Carga inicial
+                        <span>Carga inicial</span>
                     </div>
                     <div class="dl_list_coentn dl_wz_right"><p>{{ $item['twoFirstRecharge'] }}</p></div>
                 </div>
