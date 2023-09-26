@@ -3353,7 +3353,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:left;
     margin-right:10px;
 }
-
 .game_list{
     width:95%;
     display: flex;
@@ -3588,6 +3587,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 .black_nav li:hover{
     background:rgba(0, 0, 0, .1);
 }
+.pc_tab{
+    display:none;
+}
 .black_nav li label{
     width:24px;
     height:24px;
@@ -3739,15 +3741,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     .pc_tab{
         width:180px;
         height:100%;
-        position:fixed;
+        position:fixed; 
         left:0;
         top:0;
         z-index:99;
         background:rgba(0, 0, 0, .2);
-        display:block;
+        display: block;
     }
     .pc_nav{
-        margin-top:70px;
+        margin-top:70px;   
     }
     .pc_nav ul{
         margin:0;
@@ -3766,7 +3768,7 @@ button.cancel-btn[_ngcontent-way-c22] {
         height:24px;
         display:inline-block;
         margin-left:10px;
-        margin-right:10px;
+        margin-right:10px; 
     }
 }
 .sousuo {
