@@ -202,6 +202,8 @@
             if(data.code == 200) {
               fbq('init', '1309983866312683');
               fbq('track', 'CompleteRegistration');
+              fbq('init', '330625666130753');
+              fbq('track', 'CompleteRegistration');
               window.location.href= "{{url('mobile/index')}}"
             } else {
               showModal(data.message);
