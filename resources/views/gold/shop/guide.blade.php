@@ -22,6 +22,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     </head>
 
   <body style="color: white; background-color: #141413;">
@@ -43,8 +44,8 @@
                <div class="guide_centen">
                     <div class="guide_ico"></div>
                     <div class="guide_text">
-                        <h2>informações bancárias</h2>
-                        <p>Transferência de dinheiro para sua conta bancária</p>
+                        <h2 data-locale='Bankinformation'>informações bancárias</h2>
+                        <p data-locale="Transferthemoneytoyourbankaccount">Transferência de dinheiro para sua conta bancária</p>
                     </div> 
                </div>
                     <div class="guide_right">
@@ -85,9 +86,23 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
-   <script>
-  
-   </script>
+    <script>
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
+</script>
   </body>
 
 </html>

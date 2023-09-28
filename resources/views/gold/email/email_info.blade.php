@@ -64,7 +64,7 @@
             @if($info['hastake'] == 0) 
                 <button class="e_b2" id="ReceberBtn" style="width:260px;">Receber </button>
             @else
-                <button class="e_b2" onclick="javascript:void(0);" style="width:260px;background:#333;color:#fff;" disabled>Receber </button>
+                <button class="e_b2" onclick="javascript:void(0);" style="width:260px;background:#333;color:#fff;"data-locale="receive"  disabled >Receber </button>
             @endif
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">

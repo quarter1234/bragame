@@ -16,7 +16,7 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-   
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>  
 
     <meta name="theme-color" content="#141413">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,7 +43,7 @@
 
             </div>
             <div style="width:100%;text-align:center;margin-top:1rem">
-              <button id="email_load_more" page="0" onclick="loadEmails()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+              <button id="email_load_more" page="0" onclick="loadEmails()"  style="color:#fff; font-size:14px;" data-locale="Clickmost">{{--点击加载更多--}}Carregue mais</button>
           </div>
 
           {{--loading组件--}}
@@ -109,6 +109,22 @@
     $(document).ready(function() {
       loadEmails();  
     })
+
+    function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
   </body>
 

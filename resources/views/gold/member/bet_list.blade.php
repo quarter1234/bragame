@@ -14,6 +14,6 @@
                 </div>
                 <div class="email_w_right">{{$item['format_create_time']}}</div>
             </div>
-       <div class="rechare_button copy_btn"  data-clipboard-text="{{ $item['bet_id'] }}">Cópia</div> 
+       <div class="rechare_button copy_btn"  data-clipboard-text="{{ $item['bet_id'] }}" data-locale="Copy">Cópia</div> 
 </div>
 @endforeach  

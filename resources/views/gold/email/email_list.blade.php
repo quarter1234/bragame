@@ -5,7 +5,7 @@
         <div class="email_xx1"></div>
         <div class="email_xx2"></div>
         <div class="email_wk">
-            <div class="email_w">Receba sua recompensa</div>
+            <div class="email_w" data-locale="Getrewards">Receba sua recompensa</div>
             <div class="email_w_bottom xg_bottom">
                 <div class="email_w_left">
                 <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/jb.png" />

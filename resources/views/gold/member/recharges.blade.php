@@ -23,6 +23,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script> 
     </head>
 
   <body style="color: white; background-color: #0c192c;">
@@ -37,7 +38,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
           
-          @include('blue.common.top_sub') 
+          @include('gold.common.top_sub') 
 
 
             <div class="email_h"></div>
@@ -46,11 +47,11 @@
             </div>
 
             <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;" data-locale="Clickmost">{{--点击加载更多--}}Carregue mais</button>
             </div>
 
           {{--loading组件--}}
-          @include('black.common.loading')
+          @include('gold.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -77,7 +78,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('gold.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -125,6 +126,22 @@
       })
       
     })
+
+    function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
   </body>
 

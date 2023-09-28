@@ -16,6 +16,7 @@
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script> 
     <meta name="theme-color" content="#141413">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -41,20 +42,20 @@
                   @csrf
                   <div class="bind d1">
 
-                      <h2>conta</h2>
+                      <h2 data-locale="account">conta</h2>
                       <img src="/mobile/img/sj_ico.png" class="tp_1"/>
                       <input name="account" type="text" value="{{ $user['phone'] }}" readonly="readonly" placeholder="conta" />
 
-                      <h2>Senha Antiga</h2>
+                      <h2 data-locale="Oldpassword">Senha Antiga</h2>
                       <img src="/mobile/img/password.png" class="tp_2"/>
                       <input type="password" name="oldPassword" id="oldPassword" value="" placeholder="Senha Antiga" />
 
-                      <h2>Nova Senha</h2>
+                      <h2 data-locale="Newpassword">Nova Senha</h2>
                       <img src="/mobile/img/password.png"  class="tp_3"/>
                       <input type="password" name="newPassword" id="newPassword" value="" placeholder="Nova Senha" />
 
                   </div>
-                  <button type="submit" class="bind_buttom">Confirme as alterações</button>
+                  <button type="submit" class="bind_buttom" data-locale="Confirmchanges">Confirme as alterações</button>
                </form>
 
               </jx-header-row>
@@ -133,6 +134,23 @@
     }
 
    </script>
+   <script>
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
+</script>
   </body>
 
 </html>

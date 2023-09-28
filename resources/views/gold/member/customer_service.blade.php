@@ -23,6 +23,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>  
     </head>
 
   <body style="color: white; background-color: #141413;">
@@ -48,8 +49,8 @@
                       <img src="/mobile/gold/images/dh_ico.png" />
                   </div>
                   <div class="kf_text">
-                      <h2>WhatsApp suporte</h2>
-                      <p>The engines in the .Game Framework</p>
+                      <h2 data-locale="Thesupport">WhatsApp suporte</h2>
+                      <p data-locale="Hisfatherisalawyerandhismotherisalawyer">The engines in the .Game Framework</p>
                   </div>
                   <div class="kf_right">
                       <div class="shop_jt_ico"></div>
@@ -63,8 +64,8 @@
                     <img src="/mobile/gold/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
-                    <h2>Atendimento ao cliente</h2>
-                    <p>The engines in the .Game Framework</p>
+                    <h2 data-locale="Customerservice">Atendimento ao cliente</h2>
+                    <p data-locale="Hisfatherisalawyerandhismotherisalawyer">The engines in the .Game Framework</p>
                 </div>
                 <div class="kf_right">
                     <div class="shop_jt_ico"></div>
@@ -74,7 +75,7 @@
             @endif
           @endforeach  
            <div class="e_bottom">
-                <button class="e_b2" style="width:350px;height:50px;">Relatorio de ldeias e Bugs Jogos </button>
+                <button class="e_b2" style="width:350px;height:50px;" data-locale="ldeiasandbugreports">Relatorio de ldeias e Bugs Jogos </button>
             </div>
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -93,7 +94,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('gold.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -104,5 +105,21 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
+  <script>
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
 
+                    });
+                }
+            });
+        }
+        loadProperties('en');
+</script>   
 </html>

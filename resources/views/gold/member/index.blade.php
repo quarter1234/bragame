@@ -20,6 +20,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     <style>
     @media screen and (min-width: 1200px){
       div.profile-detail[_ngcontent-xfs-c1]>jx-avatar[_ngcontent-xfs-c1]{
@@ -121,7 +122,7 @@
                         <span>
                             <i class="m_cz"></i>
                         </span>
-                        {{--交易记录--}}Recarregar
+                        {{--交易记录--}}<label data-locale="Reload">Recarregar</label>
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button> 
                         @if(!$bankInfo)
                           <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">  
@@ -131,14 +132,14 @@
                         <span>
                             <i class="m_tx"></i>
                         </span>
-                        {{--交易记录--}}Reembolso
+                        {{--交易记录--}}<label data-locale="Repayment">Reembolso</label>
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>     
 
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span>
                             <i class="jy_ico"></i>
                         </span>
-                        {{--交易记录--}}Minhas Transações
+                        {{--交易记录--}} <label data-locale="Mydeal">Minhas Transações</label>
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     
@@ -147,7 +148,7 @@
                         <span>
                             <i class="tzjl_ico"></i>
                         </span>
-                        {{--投注记录--}}Registro de apostas
+                        {{--投注记录--}}<label data-locale="Bettingregistration">Registro de apostas</label>
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
@@ -155,14 +156,14 @@
                       <span>
                           <i class="em_ico"></i>
                       </span>
-                        {{--邮件--}}Correio
+                        {{--邮件--}}<label data-locale="Email">Correio</label>
                         <i class="icon iconfont"   style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
                       <span>
                           <i class="vip_ico"></i>
                       </span>
-                        {{--VIP等级--}}VIP
+                        {{--VIP等级--}}<label data-locale="VIP">VIP</label>
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
@@ -171,21 +172,21 @@
                       <span>
                           <i class="kf_ico"></i>
                       </span>
-                       {{--客服中心--}}Contact Us
+                       {{--客服中心--}}<label>Contact Us</label>
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
                       <span>
                           <i class="m_xg"  style="margin-left:13px;"></i>
                       </span>
-                       {{--客服中心--}}alterar a senha
+                       {{--客服中心--}}<label data-locale="Changepassword">alterar a senha</label>
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>                      
                         
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
                       <span>
                           <i class="m_tc" style="margin-left:13px;"></i>
                       </span>
-                       {{--客服中心--}}Saia da conta
+                       {{--客服中心--}}<label data-locale="Closeanaccount">Saia da conta</label> 
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                         {{--<div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
@@ -219,4 +220,21 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
+  <script>
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
+</script>
 </html>
