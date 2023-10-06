@@ -12,6 +12,7 @@ use App\Http\Controllers\Mobile\RechargeController;
 use App\Http\Controllers\Mobile\RedPackageController;
 use App\Http\Controllers\Mobile\ShareController;
 use App\Http\Controllers\Mobile\ShopController;
+use App\Http\Controllers\Mobile\PgProController;
 use Illuminate\Support\Facades\Route;
 
 
