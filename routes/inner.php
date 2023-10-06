@@ -16,7 +16,11 @@ Route::group([
 
     Route::post('jiliCallBackAuth', [JiliController::class, 'jiliCallBackAuth']); // jili回调获得用户余额
     Route::post('jiliCallBack', [JiliController::class, 'jiliCallBackBet']); // 注单和结算
+});
 
+Route::group([
+    'prefix' => 'inner'
+], function ($router) {
     Route::post('getUserBlance', [PgProController::class, 'getUserBlance']);
 });
 
