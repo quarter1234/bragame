@@ -12,7 +12,6 @@ use App\Http\Controllers\Mobile\RechargeController;
 use App\Http\Controllers\Mobile\RedPackageController;
 use App\Http\Controllers\Mobile\ShareController;
 use App\Http\Controllers\Mobile\ShopController;
-use App\Http\Controllers\Mobile\PgProController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -111,11 +110,4 @@ Route::group([
     'prefix' => 'mobile/redPacket', 'middleware' => ['auth']
 ], function ($router) {
     Route::get('doLottery', [RedPackageController::class, 'doLottery']);
-});
-
-// pg+相关
-Route::group([
-    'prefix' => 'mobile/user'
-], function ($router) {
-    Route::post('getUserBlance', [PgProController::class, 'getUserBlance']);
 });

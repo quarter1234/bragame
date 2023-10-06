@@ -4,6 +4,7 @@ use App\Http\Controllers\Inner\DrawController;
 use App\Http\Controllers\Inner\PgController;
 use App\Http\Controllers\Inner\JiliController;
 use App\Http\Controllers\ManCallBack\CallApiController;
+use App\Http\Controllers\Inner\PgProController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
@@ -15,6 +16,8 @@ Route::group([
 
     Route::post('jiliCallBackAuth', [JiliController::class, 'jiliCallBackAuth']); // jili回调获得用户余额
     Route::post('jiliCallBack', [JiliController::class, 'jiliCallBackBet']); // 注单和结算
+
+    Route::post('getUserBlance', [PgProController::class, 'getUserBlance']);
 });
 
 Route::group([
