@@ -190,6 +190,21 @@
                           </div>
                         </div>
                     </div>
+                    <div class="xh_game">
+                        <div class="xh_game_top">
+                            <label></label>
+                            <span>PG</span>
+                        </div>
+                        <div class="xh_game_centen">
+                          <div class="swiper mySwiper1">
+                            <div class="swiper-wrapper">
+                              @foreach($tadaRecommend as $item)
+                                <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
+                              @endforeach 
+                            </div>
+                          </div>
+                        </div>
+                    </div>
                     <div style="width:100%; height:10px;"></div> 
                     
                   <script>
