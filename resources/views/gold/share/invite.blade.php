@@ -1,5 +1,5 @@
 <div class="xk">
-    <p>Compartilhe o link{{--分享的链接--}}</p>
+    <p data-locale="Sharelink">Compartilhe o link{{--分享的链接--}}</p>
     <div class="xk_t">
         <input type="text" value="{{$link}}" id="demoInput" />
         <button id="btn"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/fz.png" /></button>

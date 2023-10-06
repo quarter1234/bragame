@@ -16,6 +16,6 @@
                 <div class="email_w_right">{{$item['format_create_time']}}</div>
             </div>
         </div>
-       <div class="rechare_button copy_btn"  data-clipboard-text="{{ $item['orderid'] }}">Cópia</div> 
+       <div class="rechare_button copy_btn"  data-clipboard-text="{{ $item['orderid'] }}" data-locale="Clickmost">Cópia</div> 
 </div>
 @endforeach  

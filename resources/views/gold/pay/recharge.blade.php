@@ -21,6 +21,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     </head>
 
   <body style="color: white; background-color: #141413;">
@@ -41,7 +42,7 @@
                        
                     </div>
                 </div>
-                      <div class="recharge_div_t">Pagamento da equipe do projeto</div>
+                      <div class="recharge_div_t" data-locale='Projectteampayment'>Pagamento da equipe do projeto</div>
                       <div class="recharge_wk">
                           @foreach($channels as $k => $channel)
                             <div class="recharge_k1 @if($k == 0) re_on @endif">
@@ -99,7 +100,7 @@
                               <span>permissive3000000</span>
                           </div>--}}
                         
-                          <button id="recharge_submit" class="recharge_button">Carregar agora mesmo</button>
+                          <button id="recharge_submit" class="recharge_button" data-locale="Chargenow">Carregar agora mesmo</button>
                       </form>
               </jx-header-row>
             </div>
@@ -208,6 +209,22 @@
         // $("#recharge_id").val(id)
       })
     })
+
+    function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
    </script>
 
   </body>

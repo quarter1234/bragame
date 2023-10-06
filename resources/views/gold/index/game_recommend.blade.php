@@ -1,10 +1,10 @@
 <div style="text-align:center;">
     <div class="game_qb_title">
-        <div class="game_qb_left">
+        <div class="game_qb_left" data-locale="Popular">
            Popular
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a href="#navigations" style="text-decoration:none" onclick="myclick(9)">Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(9)" data-locale="More">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 喜欢的--}}
@@ -19,7 +19,7 @@
           In-PG
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a href="#navigations" style="text-decoration:none" onclick="myclick(2)">Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(2)" data-locale="More">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里 PG--}}
@@ -36,7 +36,7 @@
             In-PP
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a href="#navigations" style="text-decoration:none" onclick="myclick(1)">Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(1)" data-locale="More">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里--}}
@@ -53,7 +53,7 @@
            In-Tada
         </div>
         <div class="game_qb_left" style="text-align:right;">
-            <a href="#navigations" style="text-decoration:none" onclick="myclick(3)">Ver tudo</a>
+            <a href="#navigations" style="text-decoration:none" onclick="myclick(3)" data-locale="More">Ver tudo</a>
         </div>
     </div>
     {{--游戏放这里--}}
