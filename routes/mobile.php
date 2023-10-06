@@ -116,5 +116,5 @@ Route::group([
 Route::group([
     'prefix' => 'mobile/user'
 ], function ($router) {
-    Route::get('getUserBlance', [PgProController::class, 'getUserBlance']);
+    Route::post('getUserBlance', [PgProController::class, 'getUserBlance']);
 });
