@@ -56,6 +56,16 @@ class UserHelper
         return $token;
     }
 
+    public static function getUserByPgPro(string $userIdStr){
+        $userMsg = explode('x', $userIdStr);
+        if(!empty($userMsg) && isset($userMsg[1])){
+            $userId = $userMsg[1];
+            return self::getUserByUid($userId);
+        }
+
+        return null;
+    }
+
     /**
      * 根据邀请码获取用户信息
      * @param string $code

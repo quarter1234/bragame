@@ -111,3 +111,10 @@ Route::group([
 ], function ($router) {
     Route::get('doLottery', [RedPackageController::class, 'doLottery']);
 });
+
+// pg+相关
+Route::group([
+    'prefix' => 'mobile/user'
+], function ($router) {
+    Route::get('getUserBlance', [PgProController::class, 'getUserBlance']);
+});
