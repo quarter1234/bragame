@@ -238,11 +238,12 @@ class GameService
 
     public function pgproBetResult($user, array $betParams){
         $platConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$platConfig || $platConfig != $betParams['plat_app']){
-            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['INV_PARAM'];
-            $this->pgproRespData['message'] = "param is error!";
-            return $this->pgproRespData;
-        }
+        // TODO 暂时注释掉
+        // if(!$platConfig || $platConfig != $betParams['plat_app']){
+        //     $this->pgproRespData['errorCode'] = $this->pgproErrorCode['INV_PARAM'];
+        //     $this->pgproRespData['message'] = "param is error!";
+        //     return $this->pgproRespData;
+        // }
 
         if(!$user){
             $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
