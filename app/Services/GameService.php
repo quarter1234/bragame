@@ -7,6 +7,8 @@ use App\Helper\LogHelper;
 use App\Repositories\DJlGameBetsRepository;
 use App\Repositories\DPgGameRepository;
 use App\Repositories\DJlGameRepository;
+use App\Repositories\DPgProGameRepository;
+use App\Repositories\DPgProGameBetsRepository;
 use App\Repositories\SConfigRepository;
 use App\Repositories\DPgGameBetsRepository;
 use App\Repositories\CoinLogRepository;
@@ -21,10 +23,12 @@ class GameService
 {
     private $pgRepo;
     private $jlRepo;
+    private $pgproRepo;
     private $sconfig;
     private $pgbets;
     private $coinlog;
     private $jlbets;
+    private $pgprobets;
     public $defauRespData = [
         "status" => "SC_OK",
         "data" => [
@@ -39,6 +43,22 @@ class GameService
         "username" => 0,
         "balance" => 0,
         "currency" => "BRL",
+    ];
+
+    public $pgproRespData = [
+        "errorCode" => 0,
+        "message" => "success",
+        "username" => '',
+        "balance" => 0,
+    ];
+
+    public $pgproErrorCode = [
+        "SUCCESS" => 0,
+        "Al_ACCEPT" => 1,
+        "NOT_ENOUGH" => 2,
+        "INV_PARAM" => 3,
+        "TOKEN_EXP" => 4,
+        "OTHER_ERROR" => 5,
     ];
 
     public static $jiliToCurrData = [
@@ -58,12 +78,14 @@ class GameService
         "Jl" => 1,
         "PGS" => 2,
         "PP" => 3,
+        "PGPRO" => 4,
     ];
 
     private $commissTb = [
         "Jl" => 2,
         "PGS" => 3,
         "PP" => 4,
+        "PGPRO" => 5,
     ];
 
     public function __construct(DPgGameRepository $pgRepo,
@@ -71,7 +93,9 @@ class GameService
                                 DPgGameBetsRepository $pgbets,
                                 CoinLogRepository $coinlog,
                                 DJlGameRepository $jlRepo,
-                                DJlGameBetsRepository $jlbets
+                                DJlGameBetsRepository $jlbets,
+                                DPgProGameRepository $pgproRepo,
+                                DPgProGameBetsRepository $pgprobets
                                 )
     {
         $this->pgRepo  = $pgRepo;
@@ -80,6 +104,8 @@ class GameService
         $this->coinlog = $coinlog;
         $this->jlRepo = $jlRepo;
         $this->jlbets = $jlbets;
+        $this->pgproRepo = $pgproRepo;
+        $this->pgprobets = $pgprobets;
 
         $this->jiliRespData['currency'] = self::$jiliToCurrData[config('app.timezone')] ?? "BRL";
     }
@@ -125,6 +151,10 @@ class GameService
 
     public function getJlGameBet(int $id){
         return $this->jlbets->find($id);
+    }
+
+    public function getPgProGameBet(int $id){
+        return $this->pgprobets->find($id);
     }
 
     /**
@@ -196,6 +226,128 @@ class GameService
         $res = $client->get($url);
         $res = $res->getBody()->getContents();
         return json_decode($res, true);
+    }
+
+    public function pgproBetResult($user, array $betParams){
+        $platConfig = SystemConfigHelper::getByKey('plat_app_id');
+        if(!$platConfig || $platConfig != $betParams['plat_app']){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['INV_PARAM'];
+            $this->pgproRespData['message'] = "param is error!";
+            return $this->pgproRespData;
+        }
+
+        if(!$user){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "user is not exist";
+            return $this->pgproRespData;
+        }
+
+        if($user->isbindphone <= 0){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "phone no bind!";
+            return $this->pgproRespData;
+        }
+
+        $temBetAmount = isset($betParams['bet_amount']) ? $betParams['bet_amount'] : 0;
+        if($user->coin * 100 < $temBetAmount){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "coin is not enough";
+            return $this->pgproRespData;
+        }
+
+        $betParams['is_test'] = $user['is_test'];
+        list($game, $betId)  = $this->_addPgproBetData($user['uid'], $betParams);
+        if(empty($betId)){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "betid is not exist";
+            return $this->pgproRespData;
+        }
+
+        if(!$game){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "game is not exist";
+            return $this->pgproRespData;
+        }
+
+        $betTb = $this->getPgProGameBet($betId);
+        if(!$betTb){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "bet is not exist";
+            return $this->pgproRespData;
+        }
+
+        $relBetId = $betTb->id;
+        $betStatus = $betTb->status ?? 0;
+        $platApp = $betTb->plat_app ?? "";
+        $settledAmount = $betTb->settled_amount ?? 0;
+        $winloseAmount = $betTb->winlose_amount ?? 0;
+        $gameName = $game->game_name ?? "";
+        $gameId = $game->id ?? 0;
+        $currPlatForm = 'PGPRO';
+        $betAmount = $betTb->bet_amount ?? 0;
+        if($betStatus > 0){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
+            $this->pgproRespData['message'] = "bet is do!";
+            return $this->pgproRespData;
+        }
+
+        $uid = $user['uid'];
+        $this->pgproRespData['username'] = $uid;
+        // $beforecoin 和 $aftercoin 会产生变化 而$beforeAmount为最初值
+        $beforecoin = $user->coin;
+        $aftercoin = $beforecoin;
+        $beforeAmount = $beforecoin;
+        $gamePlat = 4;
+        $commType = 5;
+
+        foreach($this->gamePlatTb as $gk => $gv){
+            if($gk == $currPlatForm){
+                $gamePlat = $gv;
+                break;
+            }
+        }
+
+        foreach($this->commissTb as $ck => $cv){
+            if($ck == $currPlatForm){
+                $commType = $cv;
+                break;
+            }
+        }
+
+        $this->_pgProBetDoing($relBetId); // 处理中
+        if($betAmount > 0){
+            $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+            $beforecoin = $reduceRes['beforecoin'];
+            $aftercoin = $reduceRes['aftercoin'];
+            // $effbet = $betAmount - $winLoseAmount;
+            $effbet = $betAmount;
+            if($effbet > 0){ // 按照下注的概念，给上级返利
+                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+            }
+        }
+
+        if($winloseAmount > 0){
+            $addCoinRes = $this->_addCoin($user, $winloseAmount, $gameId, $gamePlat, $relBetId);
+            $beforecoin = $addCoinRes['beforecoin'];
+            $aftercoin = $addCoinRes['aftercoin'];
+        }
+
+        $canDraw = 0;
+        $ispayer = $user['ispayer'] ?? 0;
+        if($ispayer == 0){ // --未充值的会员不得提现
+            $this->_pgProBetOver($betId, $beforeAmount, $aftercoin, $canDraw);
+            $this->pgproRespData['balance'] = $aftercoin;
+            return $this->pgproRespData;
+        }
+
+        $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
+        $canDraw = Bets::checkBets($user, $isAllUseDraw);
+        AllUseGameDrawCache::removeUserDraw($uid);
+
+         // -- 完成
+         $this->_pgProBetOver($betId, $beforeAmount, $aftercoin, $canDraw);
+         $this->pgproRespData['balance'] = $aftercoin;
+         return $this->pgproRespData;
     }
 
     public function jiliBetResult($user, array $betParams){
@@ -375,6 +527,49 @@ class GameService
         return $this->jiliRespData;
     }
 
+    private function _addPgproBetData(int $uid, array $betParams){
+        $game = $this->getJiliGameByCode($betParams['game_code'] ?? 0);
+        if(!$game){
+            return [false, false];
+        }
+
+        $betAmount = isset($betParams['bet_amount']) ? $betParams['bet_amount'] : 0;
+        $winloseAmount = isset($betParams['winlose_amount']) ? $betParams['winlose_amount'] : 0;
+        $settledAmount = $winloseAmount - $betAmount;
+
+        $betAmount = $betAmount != 0 ? retainDig($betAmount / 100) : 0;
+        $winloseAmount = $winloseAmount != 0 ? retainDig($winloseAmount / 100) : 0;
+        $settledAmount = $settledAmount != 0 ? retainDig($settledAmount / 100) : 0;
+
+        $gameType = $game->game_type ?? 0;
+        $gameName = $game->game_name ?? '';
+        $gameId = $game->id ?? 0;
+        $now = time();
+        $nowStr = Date('Y-m-d H:i:s');
+        $addData = [
+            'bet_type' => isset($betParams['bet_type']) ? $betParams['bet_type'] : 1,
+            'uid' => $uid,
+            'player_id' => isset($betParams['player_id']) ? $betParams['player_id'] : '',
+            'currency' => isset($betParams['currency']) ? $betParams['currency'] : 'BRL',
+            'game_type' => $gameType,
+            'platform' => isset($betParams['platform']) ? $betParams['platform'] : '',
+            'game_name' => $gameName,
+            'game_code' => isset($betParams['game_code']) ? $betParams['game_code'] : 0,
+            'game_id' => $gameId,
+            'bet_amount' => $betAmount,
+            'winlose_amount' => $winloseAmount,
+            'settled_amount' => $settledAmount,
+            'game_order_id' => isset($betParams['game_order_id']) ? $betParams['game_order_id'] : '',
+            'bet_stamp' => isset($betParams['bet_stamp']) ? $betParams['bet_stamp'] : $now,
+            'plat_app' => isset($betParams['plat_app']) ? $betParams['plat_app'] : '',
+            'is_test' => isset($betParams['is_test']) ? $betParams['is_test'] : 0,
+            'create_time' => $now,
+        ];
+
+        $pgproBetId = $this->pgprobets->insert($addData);
+        return [$game, $pgproBetId];
+    }
+
     private function _addJiliBetData(int $uid, array $betParams): array{
         $game = $this->getJiliGameByCode($betParams['game_code'] ?? 0);
         if(!$game){
@@ -521,6 +716,24 @@ class GameService
         $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
+    private function _upPgProUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw){
+        $upData = [
+            "status" => $status,
+            "before_amount" => $beforeAmount,
+            "after_amount" => $afterAmount,
+            "can_draw" => $canDraw,
+        ];
+        $this->pgprobets->storePgProGameBet($betId, $upData);
+    }
+
+    private function _pgProBetDoing($betId){
+        $status = 4;  // 处理中
+        $beforeAmount = 0;
+        $afterAmount = 0;
+        $canDraw = 0;
+        $this->_upPgProUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
     private function _betOver($betId, $beforeAmount, $afterAmount, $canDraw){
         $status = 1;
         $this->_upUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
@@ -529,6 +742,11 @@ class GameService
     private function _jlBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
         $status = 1;
         $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    private function _pgProBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
+        $status = 1;
+        $this->_upPgProUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
     /**

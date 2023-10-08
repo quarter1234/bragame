@@ -22,6 +22,7 @@ Route::group([
     'prefix' => 'inner'
 ], function ($router) {
     Route::post('getUserBlance', [PgProController::class, 'getUserBlance']);
+    Route::post('lottCallBack', [PgProController::class, 'lottCallBack']);
 });
 
 Route::group([
