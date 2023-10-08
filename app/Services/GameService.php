@@ -145,6 +145,14 @@ class GameService
         return $this->jlRepo->getJlGameByCode($gameCode);
     }
 
+    public function getPgProGameByCode($gameCode){
+        if(empty($gameCode)){
+            return null;
+        }
+
+        return $this->pgproRepo->getPgProGameByCode($gameCode);
+    }
+
     public function getPGGameBet(int $id){
         return $this->pgbets->find($id);
     }
@@ -278,10 +286,7 @@ class GameService
 
         $relBetId = $betTb->id;
         $betStatus = $betTb->status ?? 0;
-        $platApp = $betTb->plat_app ?? "";
-        $settledAmount = $betTb->settled_amount ?? 0;
         $winloseAmount = $betTb->winlose_amount ?? 0;
-        $gameName = $game->game_name ?? "";
         $gameId = $game->id ?? 0;
         $currPlatForm = 'PGPRO';
         $betAmount = $betTb->bet_amount ?? 0;
@@ -528,7 +533,7 @@ class GameService
     }
 
     private function _addPgproBetData(int $uid, array $betParams){
-        $game = $this->getJiliGameByCode($betParams['game_code'] ?? 0);
+        $game = $this->getPgProGameByCode($betParams['game_code'] ?? 0);
         if(!$game){
             return [false, false];
         }

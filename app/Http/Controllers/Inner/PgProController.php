@@ -31,9 +31,9 @@ class PgProController extends Controller
     }
 
     public function lottCallBack(){
-        $userIdStr = Request::post('user_id', false);
+        $userIdStr = Request::post('player_id', false);
         if(!$userIdStr){
-            return Result::error('not find user_id column!');
+            return Result::error('not find player_id column!');
         }
 
         $params = Request::post();
