@@ -2011,6 +2011,7 @@ div.app-background[_ngcontent-way-c2] {
     }
 }
 /**/
+
 .header-view__nav-row-wrapper__container__nav-row[_ngcontent-way-c3] {
     min-height: 64px;
     color: #fff;
@@ -2021,8 +2022,7 @@ div.app-background[_ngcontent-way-c2] {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    background:url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
-    background-size:100% 64px;
+    background:rgba(0, 0, 0, .2);
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -2061,10 +2061,9 @@ div.app-background[_ngcontent-way-c2] {
 
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
-   background-image: url(/mobile/black/images/logo11.png);
+   background-image: url(/mobile/green2/images/logo11.png);
     height:30px;
     width:132px;
-    margin:0 auto;
     background-size:132px 30px;
 }
 
@@ -2454,12 +2453,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .side-menu-item[_ngcontent-way-c8] {
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
     margin: 0 0 5px;
-    padding: 10px;
     font-size: 12px;
     color: #fff;
     background-size: cover;
@@ -2469,12 +2467,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 .side-menu-item__tag[_ngcontent-way-c8] {
     white-space: nowrap;
+    display: inline;
 }
 
 .active-side-menu[_ngcontent-way-c8] {
-    color: #fff;
-    border-radius:10px;
-    background:rgba(255, 255, 255, .2);
+
 }
 
 .side-menu-item__icon[_ngcontent-way-c8] {
@@ -2719,6 +2716,92 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     animation: none
 }
 
+/**/
+.button1{
+    background:url(/mobile/green2/images/b1.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button1{
+    background:url(/mobile/green2/images/b1l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.button2{
+    background:url(/mobile/green2/images/b2.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button2{
+    background:url(/mobile/green2/images/b2l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.button3{
+    background:url(/mobile/green2/images/b3.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button3{
+    background:url(/mobile/green2/images/b3l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.button4{
+    background:url(/mobile/green2/images/b4.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button4{
+    background:url(/mobile/green2/images/b4l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.button5{
+    background:url(/mobile/green2/images/b5.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button5{
+    background:url(/mobile/green2/images/b5l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.button6{
+    background:url(/mobile/green2/images/b6.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+.active-side-menu .button6{
+    background:url(/mobile/green2/images/b6l.png) no-repeat;
+    width:72px;
+    height:22px;
+    background-size:72px 72px;
+    padding-top:50px;
+}
+/**/
 
 @keyframes mat-progress-spinner-linear-rotate {
     0% {
@@ -3339,8 +3422,6 @@ button.cancel-btn[_ngcontent-way-c22] {
    padding-bottom:5px;
    margin-top:10px;
    border-radius:20px;
-   background:url(/mobile/gold/images/gold_d.png) no-repeat;
-   background-size:100% 40px;
    overflow:hidden;
 }
 .game_qb_left{
@@ -3374,7 +3455,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    background:#000;
     margin-top:-15px;
     padding:10px;
     border-radius:0 0 15px 15px;
@@ -3734,7 +3814,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     overflow-y: hidden;
     white-space: nowrap;
     display: flex;
-    background:#000;
     margin-top:-15px;
     padding:10px 0;
     border-radius:0 0  15px 15px;
