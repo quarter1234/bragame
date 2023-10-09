@@ -2624,6 +2624,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
         outline: solid 1px
     }
 }
+@media screen and (min-width: 1200px) {
+    .index_bottom{
+        width:65%;
+    }
+}
 
 .mat-dialog-content {
     display: block;
