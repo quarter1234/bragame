@@ -236,6 +236,27 @@ class GameService
         return json_decode($res, true);
     }
 
+    public function getPgProGameUrl($gameCode, $user){
+        $params = [];
+        $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+        $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        if(!$appIpConfig){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pgpro game ip');
+        }
+
+        $pre = $appIdConfig;
+        $params['user_id'] = $pre . 'x' . $user['uid'];
+        $params['game_id'] = $gameCode;    
+        $query = http_build_query($params);
+        $pgProPort = env('PG_PRO_GAME_PORT', '80');
+        $host = $appIpConfig . ":{$pgProPort}/";
+        $url = $host . env('PG_PRO_GAME_URI', '') . '?' . $query;
+        $client = new Client();
+        $res = $client->get($url);
+        $res = $res->getBody()->getContents();
+        return json_decode($res, true);
+    }
+
     public function pgproBetResult($user, array $betParams){
         $platConfig = SystemConfigHelper::getByKey('plat_app_id');
         // TODO 暂时注释掉

@@ -46,6 +46,13 @@ class DisplayService
             }
             return $url;
         }
+        elseif($params['act'] == 'pgpro_game_url') {
+            $url = GameHelper::getPgProGameUrl($user, $params['game_code'] ?? '');
+            if(!$url) {
+                throw new BadRequestException(['msg' => 'pgpro game url err:'. $params['game_code']]);
+            }
+            return $url;
+        }
         elseif($params['act'] == 'post_pay') {
 
             lock('pay:recharge:user_'.$user->uid, 5);
