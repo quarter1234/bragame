@@ -183,11 +183,6 @@ class GameService
     public function getPgGameUrl($gameCode, $user)
     {
         $params = [];
-        // $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
-        // if(!$appIdConfig){
-        //     return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pre user');
-        // }
-
         $appIpConfig = false;
         if($user['is_test'] == 0){
             $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
@@ -247,10 +242,10 @@ class GameService
 
     public function getPgProGameUrl($gameCode, $user){
         $params = [];
-        $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
-        $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
-        if(!$appIpConfig){
-            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pgpro game ip');
+        $appIpConfig = SystemConfigHelper::getByKey('plat_app_pgpro_ip');
+        $appIdConfig = SystemConfigHelper::getByKey('plat_app_pgpro_id');
+        if(!$appIpConfig || !$appIdConfig){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find pgpro game ip or pgpro id');
         }
 
         $pre = $appIdConfig;
@@ -267,13 +262,12 @@ class GameService
     }
 
     public function pgproBetResult($user, array $betParams){
-        $platConfig = SystemConfigHelper::getByKey('plat_app_id');
-        // TODO 暂时注释掉
-        // if(!$platConfig || $platConfig != $betParams['plat_app']){
-        //     $this->pgproRespData['errorCode'] = $this->pgproErrorCode['INV_PARAM'];
-        //     $this->pgproRespData['message'] = "param is error!";
-        //     return $this->pgproRespData;
-        // }
+        $platConfig = SystemConfigHelper::getByKey('plat_app_pgpro_id');
+        if(!$platConfig || $platConfig != $betParams['plat_app']){
+            $this->pgproRespData['errorCode'] = $this->pgproErrorCode['INV_PARAM'];
+            $this->pgproRespData['message'] = "param is error!";
+            return $this->pgproRespData;
+        }
 
         if(!$user){
             $this->pgproRespData['errorCode'] = $this->pgproErrorCode['OTHER_ERROR'];
