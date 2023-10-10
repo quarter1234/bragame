@@ -18,6 +18,7 @@ use App\Facades\User;
 use App\Facades\Bets;
 use App\Helper\SystemConfigHelper;
 use App\Helper\RewardHelper;
+use Illuminate\Support\Facades\Log;
 
 class GameService
 {
@@ -255,6 +256,7 @@ class GameService
         $pgProPort = env('PG_PRO_GAME_PORT', '80');
         $host = $appIpConfig . ":{$pgProPort}/";
         $url = $host . env('PG_PRO_GAME_URI', '') . '?' . $query;
+        Log::info("getPgProGameUrl-url:" . $url);
         $client = new Client();
         $res = $client->get($url);
         $res = $res->getBody()->getContents();
