@@ -528,7 +528,7 @@
                 $('#pgpro_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
                   let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
-                  $('#tab4_content_jls').append(itemGame)
+                  $('#tab10_content_pgpro').append(itemGame)
                 })
               },
               error: function(jqXHR, textStatus, errorThrown) {
