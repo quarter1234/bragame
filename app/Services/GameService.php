@@ -251,16 +251,14 @@ class GameService
 
         $pre = $appIdConfig;
         $params['user_id'] = $pre . 'x' . $user['uid'];
-        $params['game_id'] = $gameCode;    
+        $params['game_code'] = $gameCode;    
         $query = http_build_query($params);
         $pgProPort = env('PG_PRO_GAME_PORT', '80');
         $host = $appIpConfig . ":{$pgProPort}/";
         $url = $host . env('PG_PRO_GAME_URI', '') . '?' . $query;
-        Log::info("getPgProGameUrl-url:" . $url);
         $client = new Client();
         $res = $client->get($url);
         $res = $res->getBody()->getContents();
-        Log::info("getPgProGameUrl-res:" . $res);
         return json_decode($res, true);
     }
 
