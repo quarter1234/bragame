@@ -259,6 +259,7 @@ class GameService
         $client = new Client();
         $res = $client->get($url);
         $res = $res->getBody()->getContents();
+        Log::info("getPgProGameUrl-res:" . $res);
         return json_decode($res, true);
     }
 
