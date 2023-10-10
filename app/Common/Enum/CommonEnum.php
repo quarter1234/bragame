@@ -21,6 +21,7 @@ class CommonEnum
     const GAME_PLAT_SELF = 0;
     const GAME_PLAT_TADA = 1;
     const GAME_PLAT_PG = 2;
+    const GAME_PLAT_PGPRO = 3;
 
     const S3_PATH_ARR = [
         "mobile" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public',

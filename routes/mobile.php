@@ -29,6 +29,7 @@ Route::group([
     Route::get('getPps', [GameController::class, 'getPps']);
     Route::get('getJls', [GameController::class, 'getJls']);
     Route::get('getTadas', [GameController::class, 'getTadas']);
+    Route::get('getPgPros', [GameController::class, 'getPgPros']);
     
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
@@ -39,6 +40,7 @@ Route::group([
     Route::get('banner/{id}', [IndexController::class, 'bannerShow'])->name('mobile.banner.info');
     Route::get('pgUrl', [GameController::class, 'getPgUrl']); // 获得游戏登录地址
     Route::get('tadaUrl', [GameController::class, 'tadaUrl']);
+    Route::get('pgproUrl', [GameController::class, 'pgproUrl']);
     // 通知
     Route::get('notices', [NoticeController::class, 'notices']);
     Route::get('notice/info', [NoticeController::class, 'show'])->name('mobile.notice.info');

@@ -119,6 +119,10 @@ class GameService
         return $this->jlRepo->getGames();
     }
 
+    public function getPgProGames(){
+        return $this->pgproRepo->getGames();
+    }
+
     public function getDPGGameInfo(int $id)
     {
         return $this->pgRepo->find($id);
@@ -127,6 +131,11 @@ class GameService
     public function getTadaGameInfo(int $id)
     {
         return $this->jlRepo->find($id);
+    }
+
+    public function getPgProGameInfo(int $id)
+    {
+        return $this->pgproRepo->find($id);
     }
 
     public function getDPGameByCode($gameCode){
