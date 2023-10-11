@@ -1547,7 +1547,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .money {
     width:110px;
     height: 32px;
-    background:linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    background:rgba(0, 0, 0, .2);
     border-radius:32px;
     float: left;
     margin: 9px 0 0 10px;
@@ -1560,7 +1560,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .money_rs{
     width:20px;
     height:20px;
-    background:url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background:url(/mobile/green2/images/coin-0506a985.png) no-repeat;
     background-size:20px 20px;
     margin:0 5px;
 }
@@ -2022,7 +2022,7 @@ div.app-background[_ngcontent-way-c2] {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    background:rgba(0, 0, 0, .2);
+    background:#04431f;
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -2553,7 +2553,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#1a1a19;
+    background:#0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -2584,23 +2584,23 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(/mobile/gold/images/gg2.png)
+    background-image: url(/mobile/green2/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/gold/images/fx2.png)
+    background-image: url(/mobile/green2/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(/mobile/gold/images/sk1.png)
+    background-image: url(/mobile/green2/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(/mobile/gold/images/wd2.png)
+    background-image: url(/mobile/green2/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(/mobile/gold/images/home1.png)
+    background-image: url(/mobile/green2/images/home1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
@@ -3418,26 +3418,28 @@ button.cancel-btn[_ngcontent-way-c22] {
    line-height:20px;
    text-align:left;
    font-size:12px;
-   padding-top:5px;
-   padding-bottom:5px;
    margin-top:10px;
    border-radius:20px;
    overflow:hidden;
+   background:url(/mobile/green2/images/bg01.235dee43.png) no-repeat;
+   background-size:cover;
 }
 .game_qb_left{
-    width:47%;
+    width:40%;
     float:left;
     padding-left:10px;
     color:#fff;
-    line-height:28px;
-    text-indent:10px;
+    text-indent:30px;
+    line-height:35px;
+    margin-top:5px;
+    margin-left:20px;
 }
 .game_qb_left a{
     color:#fff;
     border-radius:20px;
     display:inline-block;
     float:right;
-    margin-top:-2px;
+    margin-top:-5px;
     margin-right:5px;
     font-size:12px;
     padding:2px 8px;
@@ -3842,6 +3844,37 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-left:10px;
 }
 
+.xh_icon{
+    background:url(/mobile/green2/images/xhicon.png) no-repeat;
+    background-size:35px 28px;
+    font-weight:bold;
+    text-shadow: 0px 0px 5px #de2f9d;
+   
+}
+.pg_icon{
+    background:url(/mobile/green2/images/pgicon.png) no-repeat;
+    background-size:36px 28px;
+    font-weight:bold;
+    text-shadow: 0px 0px 5px #de2f9d;
+   
+}
+.pp_icon{
+    background:url(/mobile/green2/images/ppicon.png) no-repeat;
+    background-size:28px 28px;
+    font-weight:bold;
+    text-shadow: 0px 0px 5px #df2710;
+   
+}
+.tada_icon{
+    background:url(/mobile/green2/images/tadaicon.png) no-repeat;
+    background-size:26px 28px;
+    font-weight:bold;
+    text-shadow: 0px 0px 5px #3895dd;
+   
+}
+
+
+
 @media screen and (min-width: 1200px) {
     .game_xx{
         width:10%;
@@ -3944,11 +3977,13 @@ button.cancel-btn[_ngcontent-way-c22] {
         margin-right:10px;
     }
    .header-view__nav-row-wrapper__container__nav-row[_ngcontent-way-c3]{
-        background:url(/mobile/gold/images/Rectangle19204-9e00b653.png) center;
+        background:url(/mobile/green2/images/Rectangle19204-9e00b653.png) center;
         background-size:100% 64px;
    }
    .money{
     margin-top:0;
    }
-    
+   .game_qb_left{
+    width:45%;
+   } 
 }
