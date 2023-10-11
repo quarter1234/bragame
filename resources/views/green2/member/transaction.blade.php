@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/gold/css/activity.css">
-    <link rel="stylesheet" href="/mobile/gold/css/member.css">
+    <link rel="stylesheet" href="/mobile/green2/css/activity.css">
+    <link rel="stylesheet" href="/mobile/green2/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -17,15 +17,15 @@
       }</script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/clipboard.min.js"></script>
-    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>   
-    <meta name="theme-color" content="#141413">
+    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>   
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #141413;">
+  <body style="color: white; background-color: #04431f;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -37,7 +37,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
           
-          @include('gold.common.top_sub') 
+          @include('green2.common.top_sub') 
           {{-- Tab --}}
          <div class="transaction_t">
             <div class="transaction_list transaction_list_on" data-locale="Charginghistory">Historico de recargas</div>
@@ -66,7 +66,7 @@
 
 
           {{--loading组件--}}
-          @include('gold.common.loading')      
+          @include('green2.common.loading')      
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -83,7 +83,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('gold.common.footer') 
+                  @include('green2.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -161,7 +161,7 @@
 function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {

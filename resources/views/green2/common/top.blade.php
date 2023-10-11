@@ -1,9 +1,9 @@
 <div class="top">
-    <div class="logo"><img src="/mobile/gold/images/logo11.png"/></div>
+    <div class="logo"><img src="/mobile/green2/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">
         <span class="money_rs"></span>
         <span>{{$user['coin']}}</span>
-        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/gold/images/qb.png" /></div>
+        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/green2/images/qb.png" /></div>
     </div>
 
     

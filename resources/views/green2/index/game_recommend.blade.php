@@ -1,6 +1,6 @@
 <div style="text-align:center;">
     <div class="game_qb_title">
-        <div class="game_qb_left" data-locale="Popular">
+        <div class="game_qb_left xh_icon" data-locale="Popular">
            Popular
         </div>
         <div class="game_qb_left" style="text-align:right;">
@@ -15,7 +15,7 @@
     </div>
     {{----}}
     <div class="game_qb_title">
-        <div class="game_qb_left">
+        <div class="game_qb_left pg_icon">
           In-PG
         </div>
         <div class="game_qb_left" style="text-align:right;">
@@ -32,7 +32,7 @@
     </div>
     {{----}}
     <div class="game_qb_title">
-        <div class="game_qb_left">
+        <div class="game_qb_left pp_icon">
             In-PP
         </div>
         <div class="game_qb_left" style="text-align:right;">
@@ -49,7 +49,7 @@
     </div>
     {{----}}
     <div class="game_qb_title">
-        <div class="game_qb_left">
+        <div class="game_qb_left tada_icon">
            In-Tada
         </div>
         <div class="game_qb_left" style="text-align:right;">

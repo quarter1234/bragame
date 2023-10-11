@@ -1,5 +1,5 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#141413;}
+    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#04431f;}
     .tc_top{height:40px;width:204px; background:rgba(0, 0, 0, 0.5); margin:20px auto; border-radius:5px;}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
@@ -37,9 +37,9 @@
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
     .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
-    color: #141413;}
+    color: #04431f;}
     .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
-    color: #141413;}
+    color: #04431f;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}
     .yzm{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
@@ -57,7 +57,7 @@
   </style>
 
   <div class="tc" style="display: none;">
-  <div class="close"><img src="/mobile/black/images/gb_black.png"></div>      
+  <div class="close"><img src="/mobile/green2/images/gb_black.png"></div>      
       <div class="tc_top">
               <div class="tc_top_list tc_on" data-locale="Login">{{ trans('auth.login') }}</div>
               <div class="tc_top_list" data-locale="Register">{{ trans('auth.register') }}</div>
@@ -81,8 +81,8 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/black/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/black/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/green2/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/green2/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                         <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
@@ -121,8 +121,8 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/black/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/black/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/green2/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/green2/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>

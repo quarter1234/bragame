@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title')
+    @include('green2.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,7 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/mobile/gold/css/index.css">
+    <link rel="stylesheet" href="/mobile/green2/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -20,15 +20,15 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
-    <meta name="theme-color" content="#141413">
+    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>
+    <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
-  <body style="color: white; background-color: #141413;width: 100%;overflow-x: hidden;">
+  <body style="color: white; background-color: #04431f;width: 100%;overflow-x: hidden;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
@@ -40,8 +40,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('black.common.modal')
-          @include('black.common.modal_sub')
+          @include('green2.common.modal')
+          @include('green2.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -254,28 +254,32 @@
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
-                         
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Game">jogos</span></button>
+                          <div class="button1">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Game">jogos</span>
+                          </div>
+                      </button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                         
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Favorite">Favoritos</span></button>
+                          <div class="button2">
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Favorite">Favoritos</span>
+                          </div>
+                          </button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                         
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PG">>P G</span></button>
+                            <div class="button3"><span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PG">>P G</span></div>
+                          </button>
                           <!---->
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                         
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Xadrez">Xadrez</span></button> 
+                            <div class="button4"><span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Xadrez">Xadrez</span></div>
+                          </button> 
                           <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Tada">Tada</span></button>
+                          <div class="button5"><span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Tada">Tada</span></div>
+                          </button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                        
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PP">P P</span></button>
+                          <div class="button6"> <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PP">P P</span></div>
+                         </button>
                        
                              
                      
@@ -285,7 +289,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('gold.index.game_recommend')
+                          @include('green2.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -340,16 +344,16 @@
               <div class="rankBg"></div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/green2/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
             <div class="menu_body">
-                   <div class="black_logo">
+                   <div class="green2_logo">
                       
                    </div> 
-                   <div class="black_gb"></div> 
-                   <div class="black_nav">
+                   <div class="green2_gb"></div> 
+                   <div class="green2_nav">
                       <ul>
                           <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
                           <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
@@ -376,9 +380,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('gold.common.loading')
-            @include('gold.index.index_login')
-            @include('gold.index.notice')
+            @include('green2.common.loading')
+            @include('green2.index.index_login')
+            @include('green2.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -624,11 +628,11 @@
         $('.menu_body').animate({left:"0"},300)
     }
     $(function(){
-      $('.black_gb').click(function(){
+      $('.green2_gb').click(function(){
         $('.menu_body').animate({left:"-100%"},300)
       })
-      $('.black_nav li').click(function(){
-        $(this).addClass('black_on').siblings().removeClass('black_on')
+      $('.green2_nav li').click(function(){
+        $(this).addClass('green2_on').siblings().removeClass('green2_on')
       })
       $('.pc_nav li').hover(function(){
         $(this).addClass('pc_on').siblings().removeClass('pc_on')
@@ -641,7 +645,7 @@
     function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {
