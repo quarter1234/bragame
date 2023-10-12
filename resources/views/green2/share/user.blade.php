@@ -10,7 +10,7 @@
 </div>
 
 {{--loading组件--}}
-@include('gold.common.loading')
+@include('green2.common.loading')
 
 <div class="yh_table">
     <table>

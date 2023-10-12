@@ -21,8 +21,8 @@
 
     <meta name="theme-color" content="#0C192C">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
     <meta name="format-detection" content="telephone=no">
   </head>
 <body class="bg_fff"style="background: #0c192c;">

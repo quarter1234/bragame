@@ -6,30 +6,30 @@
     color: #fff;
     top: 0;
     left: 0;
-    background: url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
-    background-size: 100% 64px;
+    background:#04431f;
 }
 .logo{
     width:132px;
     height:30px;
-    margin:10px auto;
+    margin:10px;
+    float: left;
 }
 .money {
     width: 110px;
     height: 32px;
-    background: linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    background:rgba(0, 0, 0, .2);
     border-radius:32px;
-margin-top:-40px;
     position: relative;
     line-height: 32px;
     display:flex;
     align-items:center;
+    margin-top:10px;
 }
 
 .money_rs {
     width: 20px;
     height: 20px;
-    background: url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background: url(/mobile/green2/images/coin-0506a985.png) no-repeat;
     background-size: 20px 20px;
     margin: 0 5px;
 }
@@ -118,7 +118,7 @@ margin-top:-40px;
 .fx_body{
     width:100%;
     height:100%;
-    background:url(/mobile/gold/images/bg-light-75f05cd1.png) no-repeat;
+    background:url(/mobile/green2/images/bg-light-75f05cd1.png) no-repeat;
     background-size:cover;
     background-color:transparent;
 }
@@ -386,7 +386,7 @@ margin-top:-40px;
     padding:0;
 }
 .yh_t_list img {
-    margin: 0;
+    margin: 0 auto;
     width:25px;
     height:25px;
 }
@@ -1044,7 +1044,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#1a1a19;
+    background:#0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -1058,7 +1058,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #ef962f ;
+    color: #ffce2f;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1073,11 +1073,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/home2.png)
+   background-image: url(/mobile/green2/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/gg2.png)
+   background-image: url(/mobile/green2/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
@@ -1085,11 +1085,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/sk1.png)
+   background-image: url(/mobile/green2/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/wd2.png)
+   background-image: url(/mobile/green2/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
@@ -1101,11 +1101,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/fx1.png)
+   background-image: url(/mobile/green2/images/fx1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/qq1.png)
+   background-image: url(/mobile/green2/images/qq1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {

@@ -1933,7 +1933,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#1a1a19;
+    background:#0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -1947,7 +1947,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #ef962f  !important;
+    color: #ffce2f   !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -1962,43 +1962,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/home2.png)
+   background-image: url(/mobile/green2/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/gg2.png)
+   background-image: url(/mobile/green2/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/fx2.png)
+   background-image: url(/mobile/green2/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/sk1.png)
+   background-image: url(/mobile/green2/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/green2/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/green2/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/green2/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/green2/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/green2/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/wd1.png)
+   background-image: url(/mobile/green2/images/wd1.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -2606,36 +2606,29 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
-    background: url(/mobile/gold/images/Rectangle19204-e8b358f5.png) center;
-    background-size: 100% 64px;
+    background:#04431f;
 }
-
-.logo {
-    height:30px;
+.logo{
     width:132px;
-    margin:10px auto;
-}
-
-.logo img {
     height:30px;
-    width:132px;
+    margin:10px;
+    float: left;
 }
-
 .money {
     width: 110px;
     height: 32px;
-    background: linear-gradient(126deg,rgba(20,20,19,0) 0%,#464645 100%);
+    background:rgba(0, 0, 0, .2);
     border-radius:32px;
-margin-top:-40px;
     position: relative;
     line-height: 32px;
     display:flex;
     align-items:center;
+    margin-top:10px;
 }
 .money_rs {
     width: 20px;
     height: 20px;
-    background: url(/mobile/gold/images/coin-0506a985.png) no-repeat;
+    background: url(/mobile/green2/images/coin-0506a985.png) no-repeat;
     background-size: 20px 20px;
     margin: 0 5px;
 }
@@ -3100,7 +3093,7 @@ margin-top:-40px;
 .avatar_sub_title label a{
     width:20px;
     height:20px;
-    background:url(/mobile/gold/images/copy_ico.png) no-repeat;
+    background:url(/mobile/green2/images/copy_ico.png) no-repeat;
     background-size:20px 20px;
     display: block;
     float:right;
@@ -3151,7 +3144,7 @@ margin-top:-40px;
 }
 
 .jy_ico{
-    background:url(/mobile/gold/images/jyts.png);
+    background:url(/mobile/green2/images/jyts.png);
 
     display:inline-block;
     width:20px;
@@ -3159,7 +3152,7 @@ margin-top:-40px;
     background-size:20px 20px;
 }
 .tzjl_ico{
-    background:url(/mobile/gold/images/tzjl.png);
+    background:url(/mobile/green2/images/tzjl.png);
 
     display:inline-block;
     width:20px;
@@ -3168,7 +3161,7 @@ margin-top:-40px;
 }
 .em_ico{
    
-    background:url(/mobile/gold/images/email-fill.png);
+    background:url(/mobile/green2/images/email-fill.png);
    
     margin-right:10px;
     display:inline-block;
@@ -3178,7 +3171,7 @@ margin-top:-40px;
 }
 .vip_ico{
    
-    background:url(/mobile/gold/images/f-vip2.png);
+    background:url(/mobile/green2/images/f-vip2.png);
    
 
     display:inline-block;
@@ -3188,7 +3181,7 @@ margin-top:-40px;
 }
 .kf_ico{
   
-    background:url(/mobile/gold/images/kf_r_ico.png);
+    background:url(/mobile/green2/images/kf_r_ico.png);
    
 
     display:inline-block;
@@ -3199,7 +3192,7 @@ margin-top:-40px;
 
 .m_cz{
    
-    background: url(/mobile/gold/images/m_cz.png);
+    background: url(/mobile/green2/images/m_cz.png);
 
     display:inline-block;
     width:20px;
@@ -3208,7 +3201,7 @@ margin-top:-40px;
 }
 .m_tx{
    
-    background: url(/mobile/gold/images/m_tx.png);
+    background: url(/mobile/green2/images/m_tx.png);
 
 
     display:inline-block;
@@ -3217,7 +3210,7 @@ margin-top:-40px;
     background-size:20px 20px;
 }
 .m_xg{
-    background: url(/mobile/gold/images/m_xg.png);
+    background: url(/mobile/green2/images/m_xg.png);
 
     display:inline-block;
     width:15px;
@@ -3225,7 +3218,7 @@ margin-top:-40px;
     background-size:15px 15px;
 }
 .m_tc{
-    background: url(/mobile/gold/images/m_tc.png);
+    background: url(/mobile/green2/images/m_tc.png);
 
     display:inline-block;
     width:15px;
@@ -3236,7 +3229,7 @@ margin-top:-40px;
 .m_vip{
     width:20px;
     height:20px;
-    background: url(/mobile/gold/images/VIP.png);
+    background: url(/mobile/green2/images/VIP.png);
     background-size: 20px 20px;
     display:inline-block;
 }

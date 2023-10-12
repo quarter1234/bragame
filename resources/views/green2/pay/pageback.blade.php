@@ -15,13 +15,13 @@
 
     <meta name="theme-color" content="#1e366b">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
     <meta name="format-detection" content="telephone=no">
     </head>
 
   <body style="color: white; background-color: #1e366b;">
-      <div class="fk_ico"><img src='/mobile/gold/images/dg_yq.png'></div>
+      <div class="fk_ico"><img src='/mobile/green2/images/dg_yq.png'></div>
       <div class="fk_text_1">
         <h2>O pagamento foi concluído！</h2>
         <p>O pagamento foi concluído, por favor, preste atenção</p>

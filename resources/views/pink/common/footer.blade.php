@@ -136,7 +136,7 @@
     }
     .pc_nav ul{
         margin:0;
-        padding:0;
+        padding:66px 0 0 0;
     }
     .pc_nav li{
         height:40px;

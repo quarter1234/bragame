@@ -26,16 +26,16 @@ div.dialog-header-row[_ngcontent-iif-c1] {font-size:24px;font-weight:700;margin-
 @supports ((webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {.header-view__nav-row-wrapper[_ngcontent-iif-c3] {background-color:rgba(12,25,44,.8);webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 }
 .header-view__nav-row-wrapper--gradient[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to bottom,#0c192c,rgba(12,25,44,0))}
-.header-view__nav-row-wrapper--gradient-black[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(12,25,44,0))}
-@supports ((webkit-backdrop-filter:none) or (backdrop-filter:none)) {.header-view__nav-row-wrapper--gradient[_ngcontent-iif-c3],.header-view__nav-row-wrapper--gradient-black[_ngcontent-iif-c3] {webkit-backdrop-filter:none;backdrop-filter:none}
+.header-view__nav-row-wrapper--gradient-green2[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to bottom,rgba(0,0,0,1),rgba(12,25,44,0))}
+@supports ((webkit-backdrop-filter:none) or (backdrop-filter:none)) {.header-view__nav-row-wrapper--gradient[_ngcontent-iif-c3],.header-view__nav-row-wrapper--gradient-green2[_ngcontent-iif-c3] {webkit-backdrop-filter:none;backdrop-filter:none}
 }
 </style><style>.header-view__footer-row-wrapper[_ngcontent-iif-c3] {position:fixed;bottom:0;left:0;right:0;z-index:999;background-color:rgba(19,34,53,1)}
 @supports ((webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {.header-view__footer-row-wrapper[_ngcontent-iif-c3] {background-color:rgba(19,34,53,.8);webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
 }
 .header-view__footer-row-wrapper[_ngcontent-iif-c3]:empty {display:none}
 .header-view__footer-row-wrapper--gradient[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to top,#0c192c,rgba(19,34,53,0))}
-.header-view__footer-row-wrapper--gradient-black[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to top,rgba(0,0,0,1),rgba(19,34,53,0))}
-@supports ((webkit-backdrop-filter:none) or (backdrop-filter:none)) {.header-view__footer-row-wrapper--gradient[_ngcontent-iif-c3],.header-view__footer-row-wrapper--gradient-black[_ngcontent-iif-c3] {webkit-backdrop-filter:none;backdrop-filter:none}
+.header-view__footer-row-wrapper--gradient-green2[_ngcontent-iif-c3] {background-color:transparent;background-image:linear-gradient(to top,rgba(0,0,0,1),rgba(19,34,53,0))}
+@supports ((webkit-backdrop-filter:none) or (backdrop-filter:none)) {.header-view__footer-row-wrapper--gradient[_ngcontent-iif-c3],.header-view__footer-row-wrapper--gradient-green2[_ngcontent-iif-c3] {webkit-backdrop-filter:none;backdrop-filter:none}
 }
 </style><style>.header-view__nav-row-wrapper__container__nav-row[_ngcontent-iif-c3] {min-height:64px;color:#fff;font-size:30px;font-weight:500;line-height:34px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:flex-start}
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-iif-c3] {flex:0 0 auto;box-sizing:border-box;padding:0;width:44px;height:64px;color:#fff;border-radius:0;display:flex;flex-flow:column nowrap;justify-content:center;align-items:center}
