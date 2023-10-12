@@ -33,5 +33,6 @@ class CommonEnum
         "gold" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
         "spain" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
         "green2" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
+        "green" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
     ];
 }
