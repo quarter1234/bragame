@@ -3977,11 +3977,10 @@ button.cancel-btn[_ngcontent-way-c22] {
         margin-right:10px;
     }
    .header-view__nav-row-wrapper__container__nav-row[_ngcontent-way-c3]{
-        background:url(/mobile/green2/images/Rectangle19204-9e00b653.png) center;
-        background-size:100% 64px;
+       background:#04431f;
    }
    .money{
-    margin-top:0;
+    margin-top:10px;
    }
    .game_qb_left{
     width:45%;

@@ -2040,7 +2040,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#1a1a19;
+    background:#0c5b2c;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -2054,7 +2054,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #ef962f !important;
+    color: #ffce2f  !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -2069,31 +2069,31 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/home2.png)
+   background-image: url(/mobile/green2/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/gg1.png)
+   background-image: url(/mobile/green2/images/gg1.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/fx2.png)
+   background-image: url(/mobile/green2/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/sk1.png)
+   background-image: url(/mobile/green2/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/wd2.png)
+   background-image: url(/mobile/green2/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/green2/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/gold/images/gg1.png)
+   background-image: url(/mobile/green2/images/gg1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {

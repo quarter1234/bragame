@@ -50,7 +50,7 @@
     .yzm_right{width:80px;height:40px;position:absolute;text-align:center;background:#344e5e;color:#fff;right:10px;top:10px;border-radius:10px;line-height:40px;}
 
     @media screen and (min-width: 1200px){
-      .tc{ width:40%;height:410px;position:fixed;top:50%;z-index:999; border-radius:10px 10px 0 0; background:#111e33;margin-top:-205px;left:50%;margin-left:-20%;}
+      .tc{ width:40%;height:410px;position:fixed;top:50%;z-index:999; border-radius:10px 10px 0 0; background:#033619;margin-top:-205px;left:50%;margin-left:-20%;}
 
     }
 
