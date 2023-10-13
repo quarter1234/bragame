@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green2/css/member.css">
+    <link rel="stylesheet" href="/mobile/deep/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -19,8 +19,8 @@
 
     <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using deep-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="deep">
     <meta name="format-detection" content="telephone=no">
     </head>
 
@@ -35,8 +35,8 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
 
-          @include('green2.common.top') 
-          @include('green2.common.modal') 
+          @include('deep.common.top') 
+          @include('deep.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr" style="height:450px;">
@@ -58,7 +58,7 @@
             </div>
 
             {{--loading组件--}}
-            @include('green2.common.loading')
+            @include('deep.common.loading')
 
             <div class="e_bottom">
             @if($info['hastake'] == 0) 
@@ -86,7 +86,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green2.common.footer') 
+                  @include('deep.common.footer') 
                   
                  
                 </jx-tab-bar>

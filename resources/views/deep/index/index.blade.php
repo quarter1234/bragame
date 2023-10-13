@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('green2.common.common_title')
+    @include('deep.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,7 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/mobile/green2/css/index.css">
+    <link rel="stylesheet" href="/mobile/deep/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -20,11 +20,11 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>
+    <script type="text/javascript" src="/mobile/deep/js/jquery.i18n.properties.js"></script>
     <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using deep-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="deep">
     <meta name="format-detection" content="telephone=no">
 	</head>
 
@@ -40,8 +40,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('green2.common.modal')
-          @include('green2.common.modal_sub')
+          @include('deep.common.modal')
+          @include('deep.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -159,7 +159,7 @@
                       </div>
                     </div>
 
-                    <div class="xh_game">
+                    {{--<div class="xh_game">
                         <div class="xh_game_top">
                             <label></label>
                             <span  data-locale="Favorite">juego</span>
@@ -173,7 +173,7 @@
                             </div>
                           </div>
                         </div>
-                    </div>
+                    </div>--}}
                     <div style="width:100%; height:10px;"></div> 
                     
                   <script>
@@ -252,7 +252,7 @@
                   <jx-home-game-board _ngcontent-way-c1="" _nghost-way-c8="">
                     <!---->
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
-                      <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
+                     {{-- <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
                           <div class="button1">
                           <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Game">jogos</span>
@@ -283,13 +283,13 @@
                        
                              
                      
-                      </div>
+                      </div>--}}
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('green2.index.game_recommend')
+                          @include('deep.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -341,19 +341,38 @@
               </div>
             </div>
             <div class="winning-box">
+              <div class="news-title clearfix">
+                <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
+                <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
+                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
+                </h2>
+              </div>
               <div class="rankBg"></div>
+              <div class="news-content myScroll" style="height: 200px; padding: 0px 10px;">
+                <ul class="news-scroll" style="padding-left: 0px;">
+
+                @foreach($ranks as $item)
+                <li style="color: #f2f2f2;">
+                <span>{{ $item['playername'] }}</span>
+                    <em>
+                    <em style="color: #f2f2f2;">{{ $item['coin'] }}</em></em>
+                </li>
+                @endforeach
+
+                </ul>
+              </div>
             </div>
             <div class="index_bottom">
-                  <img src="/mobile/green2/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/deep/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
             <div class="menu_body">
-                   <div class="green2_logo">
+                   <div class="deep_logo">
                       
                    </div> 
-                   <div class="green2_gb"></div> 
-                   <div class="green2_nav">
+                   <div class="deep_gb"></div> 
+                   <div class="deep_nav">
                       <ul>
                           <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
                           <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
@@ -380,9 +399,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('green2.common.loading')
-            @include('green2.index.index_login')
-            @include('green2.index.notice')
+            @include('deep.common.loading')
+            @include('deep.index.index_login')
+            @include('deep.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -628,11 +647,11 @@
         $('.menu_body').animate({left:"0"},300)
     }
     $(function(){
-      $('.green2_gb').click(function(){
+      $('.deep_gb').click(function(){
         $('.menu_body').animate({left:"-100%"},300)
       })
-      $('.green2_nav li').click(function(){
-        $(this).addClass('green2_on').siblings().removeClass('green2_on')
+      $('.deep_nav li').click(function(){
+        $(this).addClass('deep_on').siblings().removeClass('deep_on')
       })
       $('.pc_nav li').hover(function(){
         $(this).addClass('pc_on').siblings().removeClass('pc_on')
@@ -645,7 +664,7 @@
     function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/deep/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {
@@ -657,6 +676,25 @@
             });
         }
         loadProperties('en');
+    </script>
+    <script>
+    $(function() {
+        $('.myScroll').myScroll({
+          speed: 40,
+          //数值越大，速度越慢
+          rowHeight:40 //li的高度
+        });
+
+        $('.notice-tab li.tab_g').hover(function() {
+          //获取当前的索引
+          //去掉全部的on class
+          $('.notice-tab li').removeClass('on');
+          $(this).addClass('on');
+          var index = $('.notice-tab li').index(this);
+          $('.notice-main .draw-contents').hide();
+          $('.notice-main').find('.draw-contents').eq(index).show();
+        });
+      });
     </script>
   </body>
 

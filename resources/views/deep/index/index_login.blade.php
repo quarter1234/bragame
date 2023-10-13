@@ -57,7 +57,7 @@
   </style>
 
   <div class="tc" style="display: none;">
-  <div class="close"><img src="/mobile/green2/images/gb_black.png"></div>      
+  <div class="close"><img src="/mobile/deep/images/gb_black.png"></div>      
       <div class="tc_top">
               <div class="tc_top_list tc_on" data-locale="Login">{{ trans('auth.login') }}</div>
               <div class="tc_top_list" data-locale="Register">{{ trans('auth.register') }}</div>
@@ -81,8 +81,8 @@
               </div>
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/green2/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/green2/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/deep/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/deep/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                         <input type="hidden" name="remember_me" value="true" />
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
@@ -121,8 +121,8 @@
               </div>--}}
               <div class="remember">
                   <div class="remember_left">
-                        <div class="r_left r2"><img src="/mobile/green2/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
-                        <div class="r_left r1"><img src="/mobile/green2/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r2"><img src="/mobile/deep/images/25gf.png" />{{ trans('auth.remember_password') }}</div>
+                        <div class="r_left r1"><img src="/mobile/deep/images/24gf.png" />{{ trans('auth.remember_password') }}</div>
                   </div>
                   <div class="r_right">{{--<a>忘记密码？</a>--}}</div>
               </div>

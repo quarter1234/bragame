@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('green2.common.common_title') 
+    @include('deep.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green2/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green2/css/member.css">
+    <link rel="stylesheet" href="/mobile/deep/css/activity.css">
+    <link rel="stylesheet" href="/mobile/deep/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -20,10 +20,10 @@
 
     <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using deep-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="deep">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>  
+    <script type="text/javascript" src="/mobile/deep/js/jquery.i18n.properties.js"></script>  
     </head>
 
   <body style="color: white; background-color: #202121;">
@@ -37,7 +37,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('green2.common.top_sub')  
+          @include('deep.common.top_sub')  
 
 
             <div class="email_h"></div>
@@ -66,7 +66,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('green2.common.loading')
+          @include('deep.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -93,7 +93,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green2.common.footer') 
+                  @include('deep.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -145,7 +145,7 @@
     function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/deep/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {

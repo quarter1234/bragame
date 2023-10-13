@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green2/css/share.css">
-    <link rel="stylesheet" href="/mobile/green2/css/shop.css">
+    <link rel="stylesheet" href="/mobile/deep/css/share.css">
+    <link rel="stylesheet" href="/mobile/deep/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -19,10 +19,10 @@
 
     <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using deep-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="deep">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>
+    <script type="text/javascript" src="/mobile/deep/js/jquery.i18n.properties.js"></script>
     <style>
     @media screen and (min-width: 1200px){
       .shop_button{
@@ -49,7 +49,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             
-          @include('green2.common.top') 
+          @include('deep.common.top') 
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -145,7 +145,7 @@
 </div>
 <div style="width:100%;height:60px"></div>
 <div class="index_bottom">
-                  <img src="/mobile/green2/images/footer_icon_2-18834dfc.png" />
+                  <img src="/mobile/deep/images/footer_icon_2-18834dfc.png" />
                   <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
 ? 2022 brcrown.com All rights reserved.</p>
             </div>
@@ -162,7 +162,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green2.common.footer') 
+                  @include('deep.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -177,7 +177,7 @@
 function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/deep/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {
