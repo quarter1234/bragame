@@ -35,5 +35,6 @@ class CommonEnum
         "green2" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
         "green" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
         "deep" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
+        "lake" => 'https://baxigame1.s3.sa-east-1.amazonaws.com/bx_5/public',
     ];
 }
