@@ -17,7 +17,7 @@
         "ROOT": "__ROOT__"
       }</script>
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using green2-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="green2">
@@ -38,7 +38,7 @@
     </style>
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #202121;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
