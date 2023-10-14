@@ -2022,7 +2022,6 @@ div.app-background[_ngcontent-way-c2] {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start;
-    background:#04431f;
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -2553,7 +2552,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#0c5b2c;
+    background:#000;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -2718,87 +2717,87 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 /**/
 .button1{
-    background:url(/mobile/green2/images/b1.png) no-repeat;
+    background:url(/mobile/lake/images/zf_yx.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:70px 63px;
+    padding-top:52px;
 }
 .active-side-menu .button1{
-    background:url(/mobile/green2/images/b1l.png) no-repeat;
+    background:url(/mobile/lake/images/zf_yx.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:70px 63px;
+    padding-top:52px;
 }
 .button2{
-    background:url(/mobile/green2/images/b2.png) no-repeat;
+    background:url(/mobile/lake/images/zf_bs.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:73px 57px;
+    padding-top:54px;
 }
 .active-side-menu .button2{
-    background:url(/mobile/green2/images/b2l.png) no-repeat;
+    background:url(/mobile/lake/images/zf_bs.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:73px 57px;
+    padding-top:54px;
 }
 .button3{
-    background:url(/mobile/green2/images/b3.png) no-repeat;
+    background:url(/mobile/lake/images/zf_sz.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:72px 56px;
+    padding-top:54px;
 }
 .active-side-menu .button3{
-    background:url(/mobile/green2/images/b3l.png) no-repeat;
-    width:72px;
-    height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background:url(/mobile/lake/images/zf_sz.png) no-repeat;
+    width: 72px;
+    height: 22px;
+    background-size: 77px 56px;
+    padding-top: 54px;
 }
 .button4{
-    background:url(/mobile/green2/images/b4.png) no-repeat;
-    width:72px;
-    height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background:url(/mobile/lake/images/zf_hg.png) no-repeat;
+    width: 72px;
+    height: 22px;
+    background-size: 68px 47px;
+    padding-top: 50px;
 }
 .active-side-menu .button4{
-    background:url(/mobile/green2/images/b4l.png) no-repeat;
-    width:72px;
-    height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background:url(/mobile/lake/images/zf_hg.png) no-repeat;
+    width: 72px;
+    height: 22px;
+    background-size: 68px 47px;
+    padding-top: 50px;
 }
 .button5{
-    background:url(/mobile/green2/images/b5.png) no-repeat;
+    background:url(/mobile/lake/images/zf_jp.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:72px 60px;
+    padding-top:58px;
 }
 .active-side-menu .button5{
-    background:url(/mobile/green2/images/b5l.png) no-repeat;
+    background:url(/mobile/lake/images/zf_jp.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:72px 60px;
+    padding-top:58px;
 }
 .button6{
-    background:url(/mobile/green2/images/b6.png) no-repeat;
+    background:url(/mobile/lake/images/zf_jb.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
-    padding-top:50px;
+    background-size:72px 60px;
+    padding-top:57px;
 }
 .active-side-menu .button6{
-    background:url(/mobile/green2/images/b6l.png) no-repeat;
+    background:url(/mobile/lake/images/zf_jb.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 72px;
+    background-size:72px 60px;
     padding-top:50px;
 }
 /**/
@@ -3421,7 +3420,7 @@ button.cancel-btn[_ngcontent-way-c22] {
    margin-top:10px;
    border-radius:20px;
    overflow:hidden;
-   background:url(/mobile/green2/images/bg01.235dee43.png) no-repeat;
+  
    background-size:cover;
 }
 .game_qb_left{
@@ -3441,7 +3440,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     float:right;
     margin-top:-5px;
     margin-right:5px;
-    font-size:12px;
+    font-size:17px;
     padding:2px 8px;
 }
 .game_ico{
@@ -3976,9 +3975,7 @@ button.cancel-btn[_ngcontent-way-c22] {
         margin-left:10px;
         margin-right:10px;
     }
-   .header-view__nav-row-wrapper__container__nav-row[_ngcontent-way-c3]{
-       background:#04431f;
-   }
+   
    .money{
     margin-top:10px;
    }

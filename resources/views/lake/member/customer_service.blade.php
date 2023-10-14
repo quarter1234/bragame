@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green2/css/activity.css">
-    <link rel="stylesheet" href="/mobile/green2/css/member.css">
+    <link rel="stylesheet" href="/mobile/lake/css/activity.css">
+    <link rel="stylesheet" href="/mobile/lake/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -20,10 +20,10 @@
 
     <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using lake-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="lake">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>  
+    <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>  
     </head>
 
   <body style="color: white; background-color: #04431f;">
@@ -37,7 +37,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('green2.common.top_sub') 
+          @include('lake.common.top_sub') 
 
             <div class="email_h"></div>
 
@@ -46,7 +46,7 @@
                 <div class="kf">
                 <a href="{{ $item['url'] }}">
                   <div class="kf_yq">
-                      <img src="/mobile/green2/images/dh_ico.png" />
+                      <img src="/mobile/lake/images/dh_ico.png" />
                   </div>
                   <div class="kf_text">
                       <h2 data-locale="Thesupport">WhatsApp suporte</h2>
@@ -61,7 +61,7 @@
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
-                    <img src="/mobile/green2/images/kf_ico.png" />
+                    <img src="/mobile/lake/images/kf_ico.png" />
                 </div>
                 <div class="kf_text">
                     <h2 data-locale="Customerservice">Atendimento ao cliente</h2>
@@ -94,7 +94,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green2.common.footer') 
+                  @include('lake.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -109,7 +109,7 @@
 function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/lake/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {

@@ -24,7 +24,7 @@
 .kl{
         width:100px;
         height:100px;
-        background:url(/mobile/green2/images/hs_ico.png) no-repeat;
+        background:url(/mobile/lake/images/hs_ico.png) no-repeat;
         background-size:100px 100px;
         margin:10px auto;
     }

@@ -44,39 +44,39 @@
             </div>
 <style>
 .n1{
-    background:url(/mobile/green2/images/home.93b20d6e835f71c043b8.png);
+    background:url(/mobile/lake/images/home.93b20d6e835f71c043b8.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/green2/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(/mobile/lake/images/activity.8a6a35ba2ac648314ace.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(/mobile/green2/images/zfj_ico.png);
+    background:url(/mobile/lake/images/zfj_ico.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(/mobile/green2/images/sk.png);
+    background:url(/mobile/lake/images/sk.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(/mobile/green2/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
-    background:url(/mobile/green2/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .n6{
-    background:url(/mobile/green2/images/f-vip1.png);
+    background:url(/mobile/lake/images/f-vip1.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(/mobile/green2/images/email-fill1.png);
+    background:url(/mobile/lake/images/email-fill1.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(/mobile/green2/images/kf_r_ico1.png);
+    background:url(/mobile/lake/images/kf_r_ico1.png);
     background-size:24px 24px;
 }
 
@@ -84,35 +84,35 @@
     color:#ef962f;
 }
 .pc_on .n1{
-    background:url(/mobile/green2/images/active_home.485e6c98acecf897b8ba.png);
+    background:url(/mobile/lake/images/active_home.485e6c98acecf897b8ba.png);
     background-size:24px 24px;
 }
 .pc_on .n2{
-    background:url(/mobile/green2/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background:url(/mobile/lake/images/active_activity.0eee109d4b6a4ccedf91.png);
     background-size:24px 24px;
 }
 .pc_on .n3{
-    background:url(/mobile/green2/images/zfj_on_ico.png);
+    background:url(/mobile/lake/images/zfj_on_ico.png);
     background-size:24px 24px;
 }
 .pc_on .n4{
-    background:url(/mobile/green2/images/active_brand.26b0bef9602b57eac72e.png);
+    background:url(/mobile/lake/images/active_brand.26b0bef9602b57eac72e.png);
     background-size:24px 24px;
 }
 .pc_on .n5{
-    background:url(/mobile/green2/images/active_my.030b4715dce6d516f9c8.png);
+    background:url(/mobile/lake/images/active_my.030b4715dce6d516f9c8.png);
     background-size:24px 24px;
 }
 .pc_on .n6{
-    background:url(/mobile/green2/images/f-vip.png);
+    background:url(/mobile/lake/images/f-vip.png);
     background-size:24px 24px;
 }
 .pc_on .n7{
-    background:url(/mobile/green2/images/email-fill.png);
+    background:url(/mobile/lake/images/email-fill.png);
     background-size:24px 24px;
 }
 .pc_on .n8{
-    background:url(/mobile/green2/images/kf_r_ico.png);
+    background:url(/mobile/lake/images/kf_r_ico.png);
     background-size:24px 24px;
 }
 .pc_tab{

@@ -1,10 +1,10 @@
 <div class="top">
-    <div class="green2"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/left_ico.png" /></div>
-   <div class="logo"><img src="/mobile/green2/images/logo11.png"/></div>
+    <div class="lake"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/left_ico.png" /></div>
+   <div class="logo"><img src="/mobile/lake/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">
         <span class="money_rs"></span>
         <span>{{$user['coin']}}</span>
-        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/green2/images/qb.png" /></div>
+        <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/lake/images/qb.png" /></div>
     </div>
 
     
@@ -14,18 +14,18 @@ $(function(){
     $('.sx').click(function(){
         location.reload(true)
     })
-    $('.green2').click(function(){
+    $('.lake').click(function(){
         // window.history.go(-1);
         window.location.href= "{{url('mobile/index')}}"
     })
 })
 </script>
 <style>
-    .green2{
+    .lake{
         float:left;
         margin:20px 0px 0 5px;
     }
-    .green2 img{
+    .lake img{
         width:20px;
         height:20px;
     }

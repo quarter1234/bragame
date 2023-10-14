@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green2/css/share.css">
-    <link rel="stylesheet" href="/mobile/green2/css/shop.css">
+    <link rel="stylesheet" href="/mobile/lake/css/share.css">
+    <link rel="stylesheet" href="/mobile/lake/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,10 +18,10 @@
     <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using lake-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="lake">
     <meta name="format-detection" content="telephone=no">
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>
+    <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>
     </head>
 
   <body style="color: white; background-color: #0a0e2b;">
@@ -30,7 +30,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('green2.common.top_sub')
+        @include('lake.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -56,8 +56,8 @@
                     <p id="postMaxValue" max="{{ $user['maxcoin'] }}" data-locale="Alloweverytime">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
                     <div class="draw_c">
-                      <a href="{{url('green2/shop/bind')}}">
-                          <div class="draw_img"><img src="/mobile/green2/images/yh_ico.png" /></div>
+                      <a href="{{url('lake/shop/bind')}}">
+                          <div class="draw_img"><img src="/mobile/lake/images/yh_ico.png" /></div>
                           <div class="draw_text">
                               <h2>Nova conta bancária</h2>
                               <p>Adicione uma nova conta bancaria.</p>
@@ -73,7 +73,7 @@
                     <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
-                            <img src="/mobile/green2/images/t_yhk.png" />
+                            <img src="/mobile/lake/images/t_yhk.png" />
                         </div>
                         <div class="draw_text">
                             <p>verificar</p>
@@ -90,8 +90,8 @@
               </form>
               </jx-header-row>
             </div>
-            @include('green2.common.loading')
-            @include('green2.common.modal')
+            @include('lake.common.loading')
+            @include('lake.common.modal')
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -188,7 +188,7 @@
       function loadProperties(lang) {
             $.i18n.properties({
                 name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                path: '../mobile/lake/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
                 mode: 'map',     //用 Map 的方式使用资源文件中的值
                 language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
                 callback: function () {
