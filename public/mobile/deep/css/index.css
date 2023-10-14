@@ -2560,7 +2560,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #cecece;
+    color: #8e8f91;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -3308,7 +3308,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 
 .dl{height:40px;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.zc{height:40px;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
+.zc{height:40px;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#8e8f91;}
 .swipslider{
    padding-top:43% !important;
 }
@@ -3374,44 +3374,44 @@ button.cancel-btn[_ngcontent-way-c22] {
    
 }
 .qb_ico{
-    background-image: url(/mobile/black/images/dn1.png)
+    background-image: url(/mobile/deep/images/dn1.png)
 }
 .active-side-menu .qb_ico{
-    background-image: url(/mobile/black/images/dn1.png)
+    background-image: url(/mobile/deep/images/dn1.png)
 }
 .xh_ico{
-    background-image: url(/mobile/black/images/xh_ico1.png)
+    background-image: url(/mobile/deep/images/xh_ico1.png)
 }
 .active-side-menu .xh_ico{
-    background-image: url(/mobile/black/images/xh_ico1.png)
+    background-image: url(/mobile/deep/images/xh_ico1.png)
 }
 
 .game_pp{
-    background-image: url(/mobile/black/images/game_pp_on.png)
+    background-image: url(/mobile/deep/images/game_pp_on.png)
 }
 .active-side-menu .game_pp{
-    background-image: url(/mobile/black/images/game_pp.png)
+    background-image: url(/mobile/deep/images/game_pp.png)
 }
 
 .game_pg{
-    background-image: url(/mobile/black/images/game_pg.png)
+    background-image: url(/mobile/deep/images/game_pg.png)
 }
 .active-side-menu .game_pg{
-    background-image: url(/mobile/black/images/game_pg.png)
+    background-image: url(/mobile/deep/images/game_pg.png)
 }
 
 .game_ji{
-    background-image: url(/mobile/black/images/game_ji_on.png)
+    background-image: url(/mobile/deep/images/game_ji_on.png)
 }
 .active-side-menu .game_ji{
-    background-image: url(/mobile/black/images/game_ji.png)
+    background-image: url(/mobile/deep/images/game_ji.png)
 }
 
 .game_qp_ico{
-    background-image: url(/mobile/black/images/qp_ico.png)
+    background-image: url(/mobile/deep/images/qp_ico.png)
 }
 .active-side-menu .game_qp_ico{
-    background-image: url(/mobile/black/images/qp_ico.png)
+    background-image: url(/mobile/deep/images/qp_ico.png)
 }
 .game_qb_title{
     width:100%;
@@ -3606,7 +3606,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     width:16px;
     height:16px;
     display:inline-block;
-    background:url(/mobile/black/images/rank.png) no-repeat;
+    background:url(/mobile/deep/images/rank.png) no-repeat;
     background-size:16px 16px;
 }
 .xh_game_top span{
@@ -3656,7 +3656,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .black_gb{
     width:20px;
     height:20px;
-    background:url(/mobile/black/images/gb_black.png);
+    background:url(/mobile/deep/images/gb_black.png);
     background-size:20px 20px;
     transform: rotate(0deg);
     transition: all .3s;
@@ -3687,7 +3687,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     align-items:center;
     line-height:40px;
     font-size:14px;
-    color:#cecece;
+    color:#8e8f91;
 }
 .black_nav li:hover{
     background:rgba(0, 0, 0, .1);
@@ -3701,39 +3701,39 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .n1{
-    background:url(/mobile/black/images/home.93b20d6e835f71c043b8.png);
+    background:url(/mobile/deep/images/home.93b20d6e835f71c043b8.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(/mobile/deep/images/activity.8a6a35ba2ac648314ace.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(/mobile/black/images/zfj_ico.png);
+    background:url(/mobile/deep/images/zfj_ico.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(/mobile/black/images/sk.png);
+    background:url(/mobile/deep/images/sk.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/deep/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
-    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/deep/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .n6{
-    background:url(/mobile/black/images/f-vip1.png);
+    background:url(/mobile/deep/images/f-vip1.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(/mobile/black/images/email-fill1.png);
+    background:url(/mobile/deep/images/email-fill1.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(/mobile/black/images/kf_r_ico1.png);
+    background:url(/mobile/deep/images/kf_r_ico1.png);
     background-size:24px 24px;
 }
 
@@ -3741,30 +3741,30 @@ button.cancel-btn[_ngcontent-way-c22] {
     color:#ef962f;
 }
 .black_on .n1{
-    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background:url(/mobile/deep/images/active_home.485e6c98acecf897b8ba.png);
     background-size:24px 24px;
 }
 .black_on .n2{
-    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background:url(/mobile/deep/images/active_activity.0eee109d4b6a4ccedf91.png);
     background-size:24px 24px;
 }
 .black_on .n3{
-    background:url(/mobile/black/images/zfj_on_ico.png);
+    background:url(/mobile/deep/images/zfj_on_ico.png);
     background-size:24px 24px;
 }
 .black_on .n4{
-    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
+    background:url(/mobile/deep/images/active_brand.26b0bef9602b57eac72e.png);
     background-size:24px 24px;
 }
 .black_on .n5{
-    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
+    background:url(/mobile/deep/images/active_my.030b4715dce6d516f9c8.png);
     background-size:24px 24px;
 }
 .black_logo{
     width:132px;
     height:30px;
     float:left;
-    background:url(/mobile/black/images/logo11.png);
+    background:url(/mobile/deep/images/logo11.png);
     margin-top:10px;
     margin-left:10px;
 }
@@ -3773,35 +3773,35 @@ button.cancel-btn[_ngcontent-way-c22] {
     color:#ef962f;
 }
 .pc_on .n1{
-    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
+    background:url(/mobile/deep/images/active_home.485e6c98acecf897b8ba.png);
     background-size:24px 24px;
 }
 .pc_on .n2{
-    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
+    background:url(/mobile/deep/images/active_activity.0eee109d4b6a4ccedf91.png);
     background-size:24px 24px;
 }
 .pc_on .n3{
-    background:url(/mobile/black/images/zfj_on_ico.png);
+    background:url(/mobile/deep/images/zfj_on_ico.png);
     background-size:24px 24px;
 }
 .pc_on .n4{
-    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
+    background:url(/mobile/deep/images/active_brand.26b0bef9602b57eac72e.png);
     background-size:24px 24px;
 }
 .pc_on .n5{
-    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
+    background:url(/mobile/deep/images/active_my.030b4715dce6d516f9c8.png);
     background-size:24px 24px;
 }
 .pc_on .n6{
-    background:url(/mobile/black/images/f-vip.png);
+    background:url(/mobile/deep/images/f-vip.png);
     background-size:24px 24px;
 }
 .pc_on .n7{
-    background:url(/mobile/black/images/email-fill.png);
+    background:url(/mobile/deep/images/email-fill2.png);
     background-size:24px 24px;
 }
 .pc_on .n8{
-    background:url(/mobile/black/images/kf_r_ico.png);
+    background:url(/mobile/deep/images/kf_r_ico.png);
     background-size:24px 24px;
 }
 .pc_tab{
@@ -3965,7 +3965,7 @@ button.cancel-btn[_ngcontent-way-c22] {
         align-items:center;
         line-height:40px;
         font-size:14px;
-        color:#cecece;
+        color:#8e8f91;
     }
     .pc_nav li label{
         width:24px;

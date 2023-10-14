@@ -1933,13 +1933,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#0c5b2c;
+    background:#202121;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #cecece;
+    color: #8e8f91;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1962,43 +1962,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/home2.png)
+   background-image: url(/mobile/deep/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/gg2.png)
+   background-image: url(/mobile/deep/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/fx2.png)
+   background-image: url(/mobile/deep/images/fx2.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/sk1.png)
+   background-image: url(/mobile/deep/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/my.87c43b85171cb8232892.png)
+   background-image: url(/mobile/deep/images/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/active_home.485e6c98acecf897b8ba.png)
+   background-image: url(/mobile/deep/images/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/active_activity.0eee109d4b6a4ccedf91.png)
+   background-image: url(/mobile/deep/images/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/active_cs.9be7ce116557877dec91.png)
+   background-image: url(/mobile/deep/images/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/active_brand.26b0bef9602b57eac72e.png)
+   background-image: url(/mobile/deep/images/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/wd1.png)
+   background-image: url(/mobile/deep/images/wd1.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -2606,7 +2606,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #fff;
     top: 0;
     left: 0;
-    background:#04431f;
+    background:#202121;
 }
 .logo{
     width:132px;
@@ -2628,7 +2628,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .money_rs {
     width: 20px;
     height: 20px;
-    background: url(/mobile/green2/images/coin-0506a985.png) no-repeat;
+    background: url(/mobile/deep/images/coin-0506a985.png) no-repeat;
     background-size: 20px 20px;
     margin: 0 5px;
 }
@@ -3093,7 +3093,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .avatar_sub_title label a{
     width:20px;
     height:20px;
-    background:url(/mobile/green2/images/copy_ico.png) no-repeat;
+    background:url(/mobile/deep/images/copy_ico.png) no-repeat;
     background-size:20px 20px;
     display: block;
     float:right;
@@ -3144,7 +3144,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .jy_ico{
-    background:url(/mobile/green2/images/jyts.png);
+    background:url(/mobile/deep/images/jyts.png);
 
     display:inline-block;
     width:20px;
@@ -3152,7 +3152,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:20px 20px;
 }
 .tzjl_ico{
-    background:url(/mobile/green2/images/tzjl.png);
+    background:url(/mobile/deep/images/tzjl.png);
 
     display:inline-block;
     width:20px;
@@ -3161,7 +3161,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .em_ico{
    
-    background:url(/mobile/green2/images/email-fill.png);
+    background:url(/mobile/deep/images/email-fill.png);
    
     margin-right:10px;
     display:inline-block;
@@ -3171,7 +3171,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .vip_ico{
    
-    background:url(/mobile/green2/images/f-vip2.png);
+    background:url(/mobile/deep/images/f-vip2.png);
    
 
     display:inline-block;
@@ -3181,7 +3181,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .kf_ico{
   
-    background:url(/mobile/green2/images/kf_r_ico.png);
+    background:url(/mobile/deep/images/kf_r_ico.png);
    
 
     display:inline-block;
@@ -3192,7 +3192,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 
 .m_cz{
    
-    background: url(/mobile/green2/images/m_cz.png);
+    background: url(/mobile/deep/images/m_cz.png);
 
     display:inline-block;
     width:20px;
@@ -3201,7 +3201,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .m_tx{
    
-    background: url(/mobile/green2/images/m_tx.png);
+    background: url(/mobile/deep/images/m_tx.png);
 
 
     display:inline-block;
@@ -3210,7 +3210,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:20px 20px;
 }
 .m_xg{
-    background: url(/mobile/green2/images/m_xg.png);
+    background: url(/mobile/deep/images/m_xg.png);
 
     display:inline-block;
     width:15px;
@@ -3218,7 +3218,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-size:15px 15px;
 }
 .m_tc{
-    background: url(/mobile/green2/images/m_tc.png);
+    background: url(/mobile/deep/images/m_tc.png);
 
     display:inline-block;
     width:15px;
@@ -3229,7 +3229,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .m_vip{
     width:20px;
     height:20px;
-    background: url(/mobile/green2/images/VIP.png);
+    background: url(/mobile/deep/images/VIP.png);
     background-size: 20px 20px;
     display:inline-block;
 }

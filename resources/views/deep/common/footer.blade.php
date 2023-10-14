@@ -81,7 +81,7 @@
 }
 
 .pc_nav li.pc_on{
-    color:#ef962f;
+    color:#feba00;
 }
 .pc_on .n1{
     background:url(/mobile/deep/images/active_home.485e6c98acecf897b8ba.png);
@@ -108,7 +108,7 @@
     background-size:24px 24px;
 }
 .pc_on .n7{
-    background:url(/mobile/deep/images/email-fill.png);
+    background:url(/mobile/deep/images/email-fill2.png);
     background-size:24px 24px;
 }
 .pc_on .n8{
