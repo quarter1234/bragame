@@ -2053,7 +2053,7 @@ div.app-background[_ngcontent-way-c2] {
 .header-icons-ctn[_ngcontent-way-c3] {
     height: 34px;
     width: 100%;
-    margin: 15px;
+    margin: 8px;
     display: flex;
     flex-flow: row nowrap
 }
@@ -2067,10 +2067,10 @@ div.app-background[_ngcontent-way-c2] {
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
    background-image: url(/mobile/black/images/logo11.png);
-    height:30px;
+    height:50px;
     width:132px;
     margin-right: 10px;
-    background-size:132px 30px;
+    background-size:132px 50px;
 }
 
 .header-vertical-line[_ngcontent-way-c3] {
