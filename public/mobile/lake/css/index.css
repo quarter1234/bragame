@@ -2720,85 +2720,95 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background:url(/mobile/lake/images/zf_yx.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:70px 63px;
+    background-size:54px 51px;
     padding-top:52px;
+    background-position-x:8px;
 }
 .active-side-menu .button1{
     background:url(/mobile/lake/images/zf_yx.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:70px 63px;
+    background-size:54px 51px;
     padding-top:52px;
+    background-position-x:8px;
 }
 .button2{
     background:url(/mobile/lake/images/zf_bs.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:73px 57px;
-    padding-top:54px;
+    background-size: 59px 47px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .active-side-menu .button2{
     background:url(/mobile/lake/images/zf_bs.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:73px 57px;
-    padding-top:54px;
+    background-size: 59px 47px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .button3{
     background:url(/mobile/lake/images/zf_sz.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 56px;
-    padding-top:54px;
+    background-size: 57px 49px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .active-side-menu .button3{
     background:url(/mobile/lake/images/zf_sz.png) no-repeat;
     width: 72px;
     height: 22px;
-    background-size: 77px 56px;
-    padding-top: 54px;
+    background-size: 57px 49px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .button4{
     background:url(/mobile/lake/images/zf_hg.png) no-repeat;
     width: 72px;
     height: 22px;
-    background-size: 68px 47px;
-    padding-top: 50px;
+    background-size: 56px 44px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .active-side-menu .button4{
     background:url(/mobile/lake/images/zf_hg.png) no-repeat;
     width: 72px;
     height: 22px;
-    background-size: 68px 47px;
-    padding-top: 50px;
+    background-size: 56px 44px;
+    padding-top: 48px;
+    background-position-x:8px;
 }
 .button5{
     background:url(/mobile/lake/images/zf_jp.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 60px;
-    padding-top:58px;
+    background-size: 69px 57px;
+    padding-top: 54px;
+
 }
 .active-side-menu .button5{
     background:url(/mobile/lake/images/zf_jp.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 60px;
-    padding-top:58px;
+    background-size: 69px 57px;
+    padding-top: 54px;
+
 }
 .button6{
     background:url(/mobile/lake/images/zf_jb.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 60px;
-    padding-top:57px;
+    background-size: 68px 56px;
+    padding-top: 50px;
 }
 .active-side-menu .button6{
     background:url(/mobile/lake/images/zf_jb.png) no-repeat;
     width:72px;
     height:22px;
-    background-size:72px 60px;
-    padding-top:50px;
+    background-size: 68px 56px;
+    padding-top: 50px;
 }
 /**/
 
