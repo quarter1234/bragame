@@ -1,7 +1,7 @@
 @foreach($data as $item)
 <div class="rechare_list">
     
-        <img src="../../mobile/green2/images/zf_sj.png" />
+        <img src="../../mobile/deep/images/zf_sj.png" />
         <div class="email_xx1"></div>
         <div class="email_xx2"></div>
         <div class="email_wk">
