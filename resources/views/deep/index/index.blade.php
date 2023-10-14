@@ -344,7 +344,7 @@
               <div class="news-title clearfix">
                 <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
                 <h2 class="news-tit pull-left" style="display: inline-block;font-size: 14px;vertical-align: middle;">
-                  <strong style="color: #a9bed8;">{{--最新中奖榜--}}Ranking</strong>
+                  <strong style="color: #fff;">{{--最新中奖榜--}}Ranking</strong>
                 </h2>
               </div>
               <div class="rankBg"></div>
