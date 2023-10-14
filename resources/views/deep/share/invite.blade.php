@@ -15,7 +15,7 @@
     <p style="border-bottom:1px solid rgba(255,255,255,.1); padding-bottom:5px">Bônus atual por novo membro：<span>R$10</span></p>
     <p>Para cada membro que você convidar, você receberá R$ <span>10.00</span>&nbsp;&nbsp;a&nbsp;&nbsp;<span>20.00</span> ao completar um depósito igual ou superior a R$ 20.Ao</p>
     <p>convidar mais novos membros para se juntarem à equipe, você poderá receber bônus de convite adicionais de membros até dois níveis abaixo</p>
-    <p><img src="/mobile/green2/images/agent-relation-c804b4ec.png" /></p>
+    <p><img src="/mobile/deep/images/agent-relation-c804b4ec.png" /></p>
     <table>
         <thead>
            <tr>
@@ -30,35 +30,35 @@
            </tr>
     </thead>
            <tr>
-                <td><img src="/mobile/green2/images/level-one-e2a0e6af (1).png" /></td>
+                <td><img src="/mobile/deep/images/level-one-e2a0e6af (1).png" /></td>
                 <td>0</td>
                 <td>10</td>
                 <td>0</td>
                 <td>0</td>
            </tr>
            <tr>
-                <td><img src="/mobile/green2/images/level-two-cb45bb36 (1).png" /></td>
+                <td><img src="/mobile/deep/images/level-two-cb45bb36 (1).png" /></td>
                 <td>79+</td>
                 <td>13</td>
                 <td>3</td>
                 <td>0</td>
            </tr>
            <tr>
-                <td><img src="/mobile/green2/images/level-three-82829089 (1).png" /></td>
+                <td><img src="/mobile/deep/images/level-three-82829089 (1).png" /></td>
                 <td>899+</td>
                 <td>15</td>
                 <td>3</td>
                 <td>1</td>
            </tr>
            <tr>
-                <td><img src="/mobile/green2/images/level-four-e2e963fc (1).png" /></td>
+                <td><img src="/mobile/deep/images/level-four-e2e963fc (1).png" /></td>
                 <td>7999+</td>
                 <td>17</td>
                 <td>3</td>
                 <td>1</td>
            </tr>
            <tr>
-                <td><img src="/mobile/green2/images/level-five-b93b8b4f_1.png" /></td>
+                <td><img src="/mobile/deep/images/level-five-b93b8b4f_1.png" /></td>
                 <td>39999+</td>
                 <td>20</td>
                 <td>3</td>
@@ -70,17 +70,17 @@
 <div class="yh_top">
 <div class="yh_t_list">
             <h2>{{ $invite['one_grade_count'] }}</h2>
-            <p><img src="/mobile/green2/images/d_l1.png" />{{--一级邀请--}}</p>
+            <p><img src="/mobile/deep/images/d_l1.png" />{{--一级邀请--}}</p>
         </div>
         <div class="yh_t_list">
             <h2>{{ $invite['two_grade_count'] }}</h2>
-            <p><img src="/mobile/green2/images/d_l2.png" />{{--二级邀请--}}</p>
+            <p><img src="/mobile/deep/images/d_l2.png" />{{--二级邀请--}}</p>
         </div>
        
 </div>
 
 {{--loading组件--}}
-@include('green2.common.loading')
+@include('deep.common.loading')
 
 <script>
     const btn = document.querySelector('#btn');

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/green2/css/member.css">
+    <link rel="stylesheet" href="/mobile/deep/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -17,14 +17,14 @@
 
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
 
-    <meta name="theme-color" content="#04431f">
+    <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Fixed position has issue with iOS Safari using green2-translucent -->
-    <meta name="apple-mobile-web-app-status-bar-style" content="green2">
+    <!-- Fixed position has issue with iOS Safari using deep-translucent -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="deep">
     <meta name="format-detection" content="telephone=no">
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #202121;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -35,8 +35,8 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
 
-          @include('green2.common.top') 
-          @include('green2.common.modal') 
+          @include('deep.common.top') 
+          @include('deep.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr" style="height:450px;">
@@ -58,7 +58,7 @@
             </div>
 
             {{--loading组件--}}
-            @include('green2.common.loading')
+            @include('deep.common.loading')
 
             <div class="e_bottom">
             @if($info['hastake'] == 0) 
@@ -86,7 +86,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('green2.common.footer') 
+                  @include('deep.common.footer') 
                   
                  
                 </jx-tab-bar>

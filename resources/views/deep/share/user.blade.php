@@ -10,7 +10,7 @@
 </div>
 
 {{--loading组件--}}
-@include('green2.common.loading')
+@include('deep.common.loading')
 
 <div class="yh_table">
     <table>
