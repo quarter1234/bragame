@@ -585,9 +585,22 @@ if (!function_exists('gentRandInt')) {
     }
 }
 
+/**
+ *  默认保留2位小数，带四舍五入
+ */
 if (!function_exists('roundCoin')) {
     function roundCoin($coin, $num = 2){
         return round($coin, $num);
+    }
+}
+
+/**
+ *  默认保留2位小数
+ */
+if (!function_exists('retainDig')) {
+    function retainDig($coin, $num = 2){
+        $formatStr = "%.{$num}f";
+        return sprintf($formatStr, $coin);
     }
 }
 

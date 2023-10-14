@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/mobile/black/css/activity.css">
-    <link rel="stylesheet" href="/mobile/black/css/member.css">
+    <link rel="stylesheet" href="/mobile/gold/css/activity.css">
+    <link rel="stylesheet" href="/mobile/gold/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,14 +18,15 @@
     <script type="text/javascript" src="/static/js/way.min.js"></script>
     <script type="text/javascript" src="/static/js/clipboard.min.js"></script>
 
-    <meta name="theme-color" content="#0a0e2b">
+    <meta name="theme-color" content="#141413">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>  
     </head>
 
-  <body style="color: white; background-color: #0a0e2b;">
+  <body style="color: white; background-color: #141413;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -61,11 +62,11 @@
             </div>
 
             <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                <button id="content_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;" data-locale="Clickmost">{{--点击加载更多--}}Carregue mais</button>
             </div>
 
           {{--loading组件--}}
-          @include('black.common.loading')
+          @include('gold.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -92,7 +93,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('gold.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -140,6 +141,22 @@
       })
       
     })
+
+    function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
   </body>
 

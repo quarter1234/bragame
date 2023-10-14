@@ -6,20 +6,20 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/mobile/pink/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/index.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -58,7 +58,7 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
+                            <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sx.png"></div>
                             <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png"></div>
                         </div>
                     </span>
@@ -242,7 +242,7 @@
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/audio/btn_click.mp3">
+                    <source src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -279,6 +279,11 @@
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
+
+                        <!---->
+                        <button _ngcontent-way-c8="" id="tab10" onclick="myclick(10)" class="side-menu-item ng-star-inserted" style="width: 30%;">
+                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">PGPRO</span></button>
                        
                              
                      
@@ -330,6 +335,14 @@
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
                             <div style="width:100%;text-align:center;margin-top:1rem">
                                 <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
+                        </div>
+
+                        {{-- PG+添加 --}}
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab10_content" style="display: none;">
+                            <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab10_content_pgpro"></div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="pgpro_load_more" page="0" onclick="loadPgProGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
 
@@ -503,6 +516,27 @@
           })
         }
 
+        function loadPgProGames(){
+          let page = $('#pgpro_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getPgPros')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#pgpro_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab10_content_pgpro').append(itemGame)
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -517,6 +551,7 @@
         loadPpGames()
         loadJlGames()
         loadTadaGames()
+        loadPgProGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
@@ -592,9 +627,46 @@
           })
         });
 
+        $(document).on('click', '.pgpro_game_go', function() {
+          showLoading();
+
+          let gameId = $(this).attr('gameid')
+          $.ajax({
+              url : "{{url('mobile/pgproUrl')}}",
+              type : 'GET',
+              data : {id: parseInt(gameId)},
+              success : function (data) {
+                if(data.code == 200) {
+				          window.location.href= "{{ route('mobile.display', ['act' => 'pgpro_game_url']) }}" +'&game_code=' +data.data.code
+                } else {
+                    if(data.code == '400005') {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                    } else {
+                      showModal(data.message);
+                    }
+                }
+
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading();
+                if(jqXHR.responseJSON.code == 400005) {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                  } else {
+                    showModal(jqXHR.responseJSON.message);
+                  }
+
+              }
+          })
+        });
+
       });
     </script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/scroll.js"></script>
     <script>
     function myFunction() {
         $('.menu_body').animate({left:"0"},300)

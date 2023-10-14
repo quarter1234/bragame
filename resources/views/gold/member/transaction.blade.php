@@ -5,9 +5,9 @@
     @include('mobile.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/gold/css/activity.css">
     <link rel="stylesheet" href="/mobile/gold/css/member.css">
     <!-- Used in supported Android browsers -->
@@ -15,9 +15,9 @@
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/clipboard.min.js"></script>
-
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>   
     <meta name="theme-color" content="#141413">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -40,8 +40,8 @@
           @include('gold.common.top_sub') 
           {{-- Tab --}}
          <div class="transaction_t">
-            <div class="transaction_list transaction_list_on" >Historico de recargas</div>
-            <div class="transaction_list"  >Registro de saque</div>
+            <div class="transaction_list transaction_list_on" data-locale="Charginghistory">Historico de recargas</div>
+            <div class="transaction_list" data-locale="Withdrawalrecord" >Registro de saque</div>
          </div>
 
         {{--内容切换 Recharges --}}
@@ -49,7 +49,7 @@
             <div id="content_recharge_list_pages">
             </div>
             <div style="width:100%;text-align:center;margin-top:1rem">
-                <button id="content_recharge_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                <button id="content_recharge_load_more" page="0" onclick="loadRecharges()"  style="color:#fff; font-size:14px;" data-locale="Clickmost">{{--点击加载更多--}}Carregue mais</button>
             </div>
             <div class="email_h" style="height: 100px;"></div>
          </div>
@@ -59,7 +59,7 @@
             <div id="content_draw_list_pages">
             </div>
             <div style="width:100px;text-align:center;margin-top:1rem;height: 30px; margin: 0 auto; border-radius: 10px;">
-                <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px; line-height: 30px; ">{{--点击加载更多--}}Carregue mais</button>
+                <button id="content_draws_load_more" page="0" onclick="loadDraws()"  style="color:#fff; font-size:14px; line-height: 30px; "data-locale="Clickmost">{{--点击加载更多--}}Carregue mais</button>
             </div>
             <div class="email_h" style="height: 100px;"></div>
          </div>
@@ -156,6 +156,23 @@
          $('.transaction_b').hide().eq(index).show()
       })
     })
+
+    
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
   </body>
 

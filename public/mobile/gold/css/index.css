@@ -2061,7 +2061,7 @@ div.app-background[_ngcontent-way-c2] {
 
 .header-jx-icon[_ngcontent-way-c3] {
    /* background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/icon_logo01.png);*/
-   background-image: url(/mobile/black/images/logo11.png);
+   background-image: url(/mobile/gold/images/logo11.png);
     height:30px;
     width:132px;
     margin:0 auto;
@@ -3223,11 +3223,8 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 
-.dl{width:100px;height:40px;background: #fd3657;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
-.dl:hover{background:#fd3657;color:#fff;}
-.zc{width:80px;height:40px;background:#111e33;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
-.zc:hover{background:#ef962f;color:#fff;}
-
+.dl{height:40px;border-radius:10px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:100px;top:13px; color:#fff;}
+.zc{height:40px;border-radius:5px;font-size:14px;text-align:center; line-height:40px;position:absolute;right:10px;top:13px; color:#cecece;}
 .swipslider{
    padding-top:43% !important;
 }

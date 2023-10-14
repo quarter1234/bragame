@@ -5,10 +5,10 @@
     @include('mobile.common.common_title') 
     <base href="/">
    <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/activity.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/activity.css">
     <link rel="stylesheet" href="/mobile/gold/css/share.css">
     <link rel="stylesheet" href="/mobile/gold/css/shop.css">
     <!-- Used in supported Android browsers -->
@@ -22,6 +22,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     <style>
     @media screen and (min-width: 1200px){
       .shop_button{
@@ -113,7 +114,7 @@
                     <span class="s1"></span>
                 </div>
                 <div class="shop_text">
-                    <h2>Total</h2>
+                    <h2 data-locale="Total">Total</h2>
                     <p>R$ {{$user['coin']}}</p>
                 </div>    
            </div>
@@ -122,7 +123,7 @@
                     <span class="s2"></span>
                 </div>
                 <div class="shop_text">
-                    <h2>Retiravel</h2>
+                    <h2 data-locale="Withdraw">Retiravel</h2>
                     <p>R$ {{ $user['gamedraw'] }}</p>
                 </div> 
            </div>
@@ -131,7 +132,7 @@
                     <span class="s3"></span>
                 </div>
                 <div class="shop_text">
-                    <h2>Transações</h2>
+                    <h2 data-locale="Trading">Transações</h2>
                     
                 </div> 
            </div>
@@ -139,7 +140,7 @@
            <div class="shop_index_left">
                     <span class="s4"></span>
                 </div>
-                <div class="shop_text"><h2>Carteira</h2></div> 
+                <div class="shop_text"><h2 data-locale="Purse">Carteira</h2></div> 
            </div>       
 </div>
 <div style="width:100%;height:60px"></div>
@@ -161,7 +162,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('black.common.footer') 
+                  @include('gold.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -172,5 +173,21 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
+<script>
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
 
+                    });
+                }
+            });
+        }
+        loadProperties('en');
+</script>
 </html>

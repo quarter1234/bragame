@@ -12,7 +12,7 @@ class UserHelper
 {
     public static function avatar($usericon)
     {
-        return ' https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/head/head_'.$usericon.'.png';
+        return ' https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/head/head_'.$usericon.'.png';
     }
 
     /**
@@ -54,6 +54,16 @@ class UserHelper
         }
 
         return $token;
+    }
+
+    public static function getUserByPgPro(string $userIdStr){
+        $userMsg = explode('x', $userIdStr);
+        if(!empty($userMsg) && isset($userMsg[1])){
+            $userId = $userMsg[1];
+            return self::getUserByUid($userId);
+        }
+
+        return null;
     }
 
     /**

@@ -36,4 +36,16 @@ class GameHelper
 
         return false;
     }
+
+    public static function getPgProGameUrl($user, $gameCode)
+    {
+        $gameService = app()->make(GameService::class);
+        $res = $gameService->getPgProGameUrl($gameCode, $user);
+
+        if(isset($res['code']) && $res['code'] === 0) {
+            return $res['data']['url'];
+        }
+
+        return false;
+    }
 }

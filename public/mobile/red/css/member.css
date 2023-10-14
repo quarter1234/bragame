@@ -186,8 +186,13 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
 }
 
 .finance-entry-btn-group[_ngcontent-xfs-c1]:not(:empty) {
-    padding-top: 10px;
-    padding-bottom: 10px
+    padding-top: 7px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
 }
 
 .finance-entry-btn-group[_ngcontent-xfs-c1]+.finance-entry-btn-group[_ngcontent-xfs-c1]:not(:empty) {
@@ -196,8 +201,8 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
 
 .finance-entry-btn-group__btn[_ngcontent-xfs-c1] {
     box-sizing: border-box;
-    padding: 10px 0 10px 20px;
-    width: 100%;
+    padding: 41px 0 23px 20px;
+    width: 47%;
     color: #fff;
     font-size: 18px;
     font-weight: 400;
@@ -209,7 +214,10 @@ span.finance-btn-icon.withdraw-icon[_ngcontent-xfs-c1] {
     background: rgba(0, 0, 0, .2);
     margin-bottom: 10px;
     position: relative;
-    justify-content:flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: 10px;
 }
 .finance-entry-btn-group__btn:hover{
     background:rgba(0, 0, 0, .5);

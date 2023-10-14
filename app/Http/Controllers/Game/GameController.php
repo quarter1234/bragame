@@ -51,6 +51,12 @@ class GameController extends Controller
         return Result::success($res);
     }
 
+    public function getPgPros()
+    {
+        $res = $this->gameService->getPgProGames();
+        return Result::success($res);
+    }
+
     /**
      * 获取游戏地址
      * @return mixed
@@ -91,6 +97,28 @@ class GameController extends Controller
         $params['ip'] = Request::getClientIp();
         $params['game_id'] = $gameInfo['id'];
         $params['game_plat'] = CommonEnum::GAME_PLAT_TADA;
+        
+        event(new UserGameEvent($user, $params));
+        if($user->coin < $gameInfo->en_coin) {
+            return Result::error("Menos de {$gameInfo['en_coin']} moedas");
+        }
+
+        return Result::success(['code' => $gameInfo['game_code'] ?? '']);
+    }
+
+    public function pgproUrl()
+    {
+        $id = intval(Request::get('id', 0));
+        $gameInfo = $this->gameService->getPgProGameInfo($id);
+        if(!$gameInfo) {
+            return Result::error('not find game');
+        }
+
+        $user = Auth::user();
+        $params = [];
+        $params['ip'] = Request::getClientIp();
+        $params['game_id'] = $gameInfo['id'];
+        $params['game_plat'] = CommonEnum::GAME_PLAT_PGPRO;
         
         event(new UserGameEvent($user, $params));
         if($user->coin < $gameInfo->en_coin) {

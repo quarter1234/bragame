@@ -6,20 +6,21 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/mobile/gold/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/index.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     <meta name="theme-color" content="#141413">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
@@ -62,8 +63,8 @@
                         </div>
                     </span>
                   @else
-                    <div class="dl show_login">Login</div>
-                    <div class="zc show_login">Registo</div>
+                    <div class="dl show_login" data-locale="Login">Login</div>
+                    <div class="zc show_login" data-locale="Register">Registo</div>
                   @endif
                 </div>
 
@@ -161,7 +162,7 @@
                     <div class="xh_game">
                         <div class="xh_game_top">
                             <label></label>
-                            <span>juego</span>
+                            <span  data-locale="Favorite">juego</span>
                         </div>
                         <div class="xh_game_centen">
                           <div class="swiper mySwiper1">
@@ -238,7 +239,7 @@
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/audio/btn_click.mp3">
+                    <source src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -253,28 +254,28 @@
                     <div _ngcontent-way-c8="" class="home-game-board-ctn" name="navigations">
                       <div _ngcontent-way-c8="" class="side-menu-ctn" id="qh">
                       <button _ngcontent-way-c8="" id="tab8" onclick="myclick(8)" class="side-menu-item ng-star-inserted active-side-menu" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon side-menu-icon-qb qb_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag" style="text-transform: uppercase">jogos</span></button>
+                         
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Game">jogos</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab9" onclick="myclick(9)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon xh_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Favoritos</span></button>
+                         
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Favorite">Favoritos</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pg active-side-menu-icon"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P G</span></button>
+                         
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PG">>P G</span></button>
                           <!---->
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_qp_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button> 
+                         
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Xadrez">Xadrez</span></button> 
                           <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Tada</span></button>
+                          
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="Tada">Tada</span></button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
+                        
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PP">P P</span></button>
                        
                              
                      
@@ -303,14 +304,14 @@
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab1_content" style="display: none">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab1_content_pps"></div>
                           <div style="width:100%;text-align:center;margin-top:1rem">
-                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;">{{--点击加载更多--}}Carregue mais</button>
+                              <button id="pp_load_more" page="0" onclick="loadPpGames()"  style="color:#fff;" data-locale="More">{{--点击加载更多--}}Carregue mais</button>
                           </div>
                         </div>
                       {{-- PG 游戏 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab2_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab2_content_pgs"></div>
                             <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                                <button id="pg_load_more" page="0" onclick="loadPgGames()"  style="color:#fff; font-size:14px;" data-locale="More">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
 
@@ -318,14 +319,14 @@
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab3_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab3_content_jls"></div>
                             <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="jl_load_more" page="0" onclick="loadJlGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                                <button id="jl_load_more" page="0" onclick="loadJlGames()"  style="color:#fff; font-size:14px;" data-locale="More">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
                         {{-- Tada棋牌添加 --}}
                         <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab4_content" style="display: none;">
                             <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
                             <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;" data-locale="More">{{--点击加载更多--}}Carregue mais</button>
                             </div>
                         </div>
 
@@ -362,14 +363,14 @@
             <div class="pc_tab">
                    <div class="pc_nav">
                       <ul>
-                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
-                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
+                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
+                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
+                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
+                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                    </div>
             </div>
@@ -388,29 +389,29 @@
                 <div _ngcontent-way-c10="" class="tab-bar safe-area-fix-bottom safe-area-fix-left safe-area-fix-right" jxsafeareafixbottom="" jxsafeareafixleft="" jxsafeareafixright="">
                 <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/share")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--cs"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Convidar</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title"  data-locale="Share">{{--分享--}}Convidar</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/activity")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--activity"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title"data-locale="Events"> >{{--活动--}}Atividades</span>
     </button>
 
 
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}Cassino</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Home">{{--首页--}}Cassino</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title"  data-locale="Promotional" >{{--优惠活动--}}preferenciais</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-right @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\MemberController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/member/index")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--my"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--我的--}}Meu</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Mine">{{--我的--}}Meu</span>
     </button>
 </div>
 
@@ -617,7 +618,7 @@
 
       });
     </script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/scroll.js"></script>
     <script>
     function myFunction() {
         $('.menu_body').animate({left:"0"},300)
@@ -636,6 +637,22 @@
         $(this).removeClass('pc_on')
       })
     })
+
+    function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
     </script>
   </body>
 

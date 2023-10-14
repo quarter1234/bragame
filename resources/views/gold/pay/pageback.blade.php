@@ -21,7 +21,7 @@
     </head>
 
   <body style="color: white; background-color: #1e366b;">
-      <div class="fk_ico"><img src='/mobile/blue/images/dg_yq.png'></div>
+      <div class="fk_ico"><img src='/mobile/gold/images/dg_yq.png'></div>
       <div class="fk_text_1">
         <h2>O pagamento foi concluído！</h2>
         <p>O pagamento foi concluído, por favor, preste atenção</p>

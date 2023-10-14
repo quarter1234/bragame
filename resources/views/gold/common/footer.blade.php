@@ -9,36 +9,36 @@
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/activity")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--activity"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Events">{{--活动--}}Atividades</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/index")}}'" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}Casa</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Home">{{--首页--}}Casa</span>
     </button>
    
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Promotional">{{--优惠活动--}}preferenciais</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-right @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\MemberController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/member/index")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--my"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--我的--}}Meu</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Mine">{{--我的--}}Meu</span>
     </button>
 </div>
 
 <div class="pc_tab">
                    <div class="pc_nav">
                       <ul>
-                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
-                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
+                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
+                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
+                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
+                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                    </div>
             </div>

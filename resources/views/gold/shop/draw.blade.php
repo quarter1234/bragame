@@ -5,9 +5,9 @@
     @include('mobile.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/black/css/share.css">
     <link rel="stylesheet" href="/mobile/black/css/shop.css">
     <!-- Used in supported Android browsers -->
@@ -15,12 +15,13 @@
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <script type="text/javascript" src="/mobile/gold/js/jquery.i18n.properties.js"></script>
     </head>
 
   <body style="color: white; background-color: #0a0e2b;">
@@ -29,7 +30,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('black.common.top_sub')
+        @include('gold.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -41,7 +42,7 @@
                 <form method="post" onSubmit="return check_draw(this)" id="form1" action="{{url('mobile/shop/doDraw')}}">
                     @csrf
                     <div class="draw_top">
-                        <div class="draw_top_l">disponível para retirada</div>
+                        <div class="draw_top_l" data-locale='Canwithdraw'>disponível para retirada</div>
                         <div class="draw_top_r">$R{{ $user['dcoin'] }}</div>
                     </div>
                     <div class="braw_d">
@@ -51,12 +52,12 @@
                         <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
                         <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
                     </div>
-                    <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
-                    <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
+                    <p id="postMinValue" min="{{ $user['mincoin'] }}" data-locale="Minimumwithdrawalamount">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
+                    <p id="postMaxValue" max="{{ $user['maxcoin'] }}" data-locale="Alloweverytime">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
                     <div class="draw_c">
-                      <a href="{{url('mobile/shop/bind')}}">
-                          <div class="draw_img"><img src="/mobile/black/images/yh_ico.png" /></div>
+                      <a href="{{url('gold/shop/bind')}}">
+                          <div class="draw_img"><img src="/mobile/gold/images/yh_ico.png" /></div>
                           <div class="draw_text">
                               <h2>Nova conta bancária</h2>
                               <p>Adicione uma nova conta bancaria.</p>
@@ -72,7 +73,7 @@
                     <div class="draw_bottom @if($key == 0) braw_on @endif" id="{{$item['id']}}">
                       <a>
                         <div class="draw_b_left">
-                            <img src="/mobile/black/images/t_yhk.png" />
+                            <img src="/mobile/gold/images/t_yhk.png" />
                         </div>
                         <div class="draw_text">
                             <p>verificar</p>
@@ -89,8 +90,8 @@
               </form>
               </jx-header-row>
             </div>
-            @include('green.common.loading')
-            @include('green.common.modal')
+            @include('gold.common.loading')
+            @include('gold.common.modal')
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -183,6 +184,22 @@
             $(this).addClass('braw_on').siblings().removeClass('braw_on')
           })
       })
+
+      function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/gold/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            });
+        }
+        loadProperties('en');
   </script>
   </body>
 

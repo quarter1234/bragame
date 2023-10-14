@@ -1,5 +1,5 @@
 <style>
-    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#111e33;}
+    .tc{ width:100%;height:600px;position:fixed;bottom:0;z-index:999; border-radius:10px 10px 0 0; background:#141413;}
     .tc_top{height:40px;width:204px; background:rgba(0, 0, 0, 0.5); margin:20px auto; border-radius:5px;}
     .close{position:absolute; right:20px;text-align:right;top:15px;width:20px;height:20px;}
     .close img{width:20px;height:20px;}
@@ -36,10 +36,10 @@
     .r2,.r4,.r6{display:none;}
     .r_right{width:50%;float:right;text-align:right;font-size:14px;}
     .r_right a{color:#abb4ce; text-decoration:underline;}
-    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
-    color: #fff;}
-    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(to bottom,#ef962f,#b56100);
-    color: #fff;}
+    .login{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
+    color: #141413;}
+    .login2{width:100%;height:50px;line-height:50px; margin-top:15px;border-radius:5px;font-size:14px;    background: linear-gradient(307deg,#e7a738 0%,#f1c56e 100%);
+    color: #141413;}
     .xl{position:absolute;width:80px;left:40px;top:20px}
     .xl select{background:none; border:none;color:#fff; outline:none;}
     .yzm{width:100%;height:60px;margin-top:15px; background:#12202e;border-radius:10px; position:relative;}
@@ -59,8 +59,8 @@
   <div class="tc" style="display: none;">
   <div class="close"><img src="/mobile/black/images/gb_black.png"></div>      
       <div class="tc_top">
-              <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
-              <div class="tc_top_list">{{ trans('auth.register') }}</div>
+              <div class="tc_top_list tc_on" data-locale="Login">{{ trans('auth.login') }}</div>
+              <div class="tc_top_list" data-locale="Register">{{ trans('auth.register') }}</div>
       </div>
       <div class="list" style="display:block;">
           
@@ -69,15 +69,15 @@
           <form method="post" class="login-form ng-untouched ng-pristine ng-valid" onSubmit="return check_login(this)" id="form1" checkby_ruivalidate url="" action="{{url('Public/login')}}" style="margin-top: 30px;">
           @csrf
           <div class="entry">
-                  <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/iphone.png" /></div>
+                  <div class="email"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
-                  <div class="sr" style="left:100px"><input type="text" id="phone" name="phone" onkeyup="checkContent(this)" placeholder="Número" /></div>
-                  <div class="sr_close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>
+                  <div class="sr" style="left:100px"><input type="text" id="phone" name="phone" onkeyup="checkContent(this)"/></div>
+                  <div class="sr_close"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/close.png"></div>
               </div>
               <div class="pass">
-                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/pass.png" /></div>
-                <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" placeholder="Senha" /></div>
-                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
+                <div class="email"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/pass.png" /></div>
+                <div class="pass_sr"><input id="pass" name="password" type="password" onkeyup="checkContent(this)" /></div>
+                <div class="pass_show"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/show.png"></div>
               </div>
               <div class="remember">
                   <div class="remember_left">
@@ -99,23 +99,23 @@
             <form method="post" action="{{url('Public/register')}}"  class="ruivalidate_form_class" onSubmit="return check_register(this)" id="form_register">
                 @csrf  
                 <div class="pass">
-                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/zh.png" /></div>
+                <div class="email"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/zh.png" /></div>
                 <div class="pass_sr"><input name="playername" id="playernameRegister" placeholder="Nome do usuário" type="text"/></div>
-                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/show.png"></div>
               </div>  
               <div class="entry">
-                  <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/iphone.png" /></div>
+                  <div class="email"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
                   <div class="sr" style="left:100px"><input id="phoneRegister" name="phone" onkeyup="checkRegisterContent(this)" type="text" placeholder="Número" /></div>
-                  <div class="sr_close"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/close.png"></div>
+                  <div class="sr_close"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/close.png"></div>
               </div>
               <div class="pass">
-                <div class="email"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/pass.png" /></div>
+                <div class="email"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/pass.png" /></div>
                 <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="Senha" /></div>
-                <div class="pass_show"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/show.png"></div>
+                <div class="pass_show"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/show.png"></div>
               </div>
               {{--<div class="yzm">
-                  <div class="yzm_left"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/yzm.png" /></div>
+                  <div class="yzm_left"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/yzm.png" /></div>
                   <div class="yzm_sr"><input type="text" placeholder="验证码" /></div>
                   <div class="yzm_right">验证码</div>
               </div>--}}
