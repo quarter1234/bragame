@@ -392,9 +392,10 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
             </div>
             
             {{--loading组件--}}
-            @include('black.common.loading')
-            @include('black.index.index_login')
-            @include('black.index.notice')
+            @include('pink.common.loading')
+            @include('pink.index.index_login')
+            @include('pink.index.notice')
+            @include('pink.common.slide')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
