@@ -1,6 +1,6 @@
 <div class="top">
-    <div class="deep"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/left_ico.png" /></div>
-   <div class="logo"><img src="/mobile/deep/images/logo11.png"/></div>
+    <div class="green2"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/left_ico.png" /></div>
+    <div class="logo"><img src="/mobile/deep/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">
         <span class="money_rs"></span>
         <span>{{$user['coin']}}</span>

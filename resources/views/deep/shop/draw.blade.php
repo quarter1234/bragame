@@ -5,9 +5,9 @@
     @include('mobile.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/deep/css/share.css">
     <link rel="stylesheet" href="/mobile/deep/css/shop.css">
     <!-- Used in supported Android browsers -->
@@ -15,7 +15,7 @@
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using deep-translucent -->

@@ -6,18 +6,18 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/artDialog.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/artDialog.css">
     <link rel="stylesheet" href="/mobile/lake/css/share.css">
     <link rel="stylesheet" href="/mobile/lake/css/shop.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
 
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>
 
     <meta name="theme-color" content="#04431f">
@@ -36,7 +36,7 @@
     }
     </style>
 	</head>
-    <body style="color: white; background-color: #04431f;">
+    <body style="color: white; background-color: #000;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">

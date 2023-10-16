@@ -5,15 +5,15 @@
     @include('mobile.common.common_title')
     <base href="/">
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <!-- Used in supported Android browsers -->
     <link rel="stylesheet" href="/mobile/deep/css/member.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/clipboard.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/clipboard.min.js"></script>
 
     <meta name="theme-color" content="#202121">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -123,7 +123,7 @@
                             <i class="m_cz"></i>
                         </span>
                         {{--交易记录--}}<label data-locale="Reload">Recarregar</label>
-                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button> 
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button> 
                         @if(!$bankInfo)
                           <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">  
                         @else
@@ -133,14 +133,14 @@
                             <i class="m_tx"></i>
                         </span>
                         {{--交易记录--}}<label data-locale="Repayment">Reembolso</label>
-                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>     
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>     
 
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span>
                             <i class="jy_ico"></i>
                         </span>
                         {{--交易记录--}} <label data-locale="Mydeal">Minhas Transações</label>
-                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     
                         
@@ -149,7 +149,7 @@
                             <i class="tzjl_ico"></i>
                         </span>
                         {{--投注记录--}}<label data-locale="Bettingregistration">Registro de apostas</label>
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
@@ -157,14 +157,14 @@
                           <i class="em_ico"></i>
                       </span>
                         {{--邮件--}}<label data-locale="Email">Correio</label>
-                        <i class="icon iconfont"   style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont"   style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
                       <span>
                           <i class="vip_ico"></i>
                       </span>
                         {{--VIP等级--}}<label data-locale="VIP">VIP</label>
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                     
@@ -173,21 +173,21 @@
                           <i class="kf_ico"></i>
                       </span>
                        {{--客服中心--}}<label>Contact Us</label>
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
                       <span>
                           <i class="m_xg"  style="margin-left:13px;"></i>
                       </span>
                        {{--客服中心--}}<label data-locale="Changepassword">alterar a senha</label>
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>                      
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>                      
                         
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
                       <span>
                           <i class="m_tc" style="margin-left:13px;"></i>
                       </span>
                        {{--客服中心--}}<label data-locale="Closeanaccount">Saia da conta</label> 
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                         {{--<div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                     <button _ngcontent-xfs-c1="" style="background:#111e33;color:#fff;" class="finance-btn deposit-btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
