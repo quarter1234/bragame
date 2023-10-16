@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/lake/css/activity.css">
     <link rel="stylesheet" href="/mobile/lake/css/member.css">
+    <link rel="stylesheet" href="/mobile/lake/js/bofangqi.js">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -26,7 +27,7 @@
     <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>  
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #000;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
@@ -104,22 +105,5 @@
         </jx-activity-page>
       </jx-main-wrapper>
     </jx-root>
-  </body>
-  <script>
-function loadProperties(lang) {
-            $.i18n.properties({
-                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/lake/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
-                mode: 'map',     //用 Map 的方式使用资源文件中的值
-                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
-                callback: function () {
-                    $("[data-locale]").each(function () {
-                        $(this).html($.i18n.prop($(this).data("locale")));
-
-                    });
-                }
-            });
-        }
-        loadProperties('en');
-</script>   
+  </body>   
 </html>

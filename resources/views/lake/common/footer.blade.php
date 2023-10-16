@@ -27,22 +27,59 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Mine">{{--我的--}}Meu</span>
     </button>
 </div>
-
+{{--侧边导航--}}
 <div class="pc_tab">
                    <div class="pc_nav">
-                      <ul>
-                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
-                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
-                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
+                      <ul class="zf_box">
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
+                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
-                   </div>
-            </div>
+                      <div id="music-player">
+                    <audio id="audio" controls>
+                <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                  </audio>
+                  </div>
+                  <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
+                </div>  
+                </div>
+            
+    </div>
+</div>
 <style>
+ /* 自定义播放器样式 */
+ #music-player {
+    width: 180px;
+    color: #06c1fa;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 20px;
+}
+#music-player audio {
+    width: 100%;
+}
+.zf_touzhu{
+    background-color: rgb(24, 36, 52);
+    color: #f7f0f0;
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 20px;
+    display: flex;
+    padding-top: 10px;
+}
+.tubiao{
+    width: 20px;
+    height: 20px;
+    line-height: 40px;
+}
+
 .n1{
     background:url(/mobile/lake/images/home.93b20d6e835f71c043b8.png);
     background-size:24px 24px;
@@ -118,6 +155,14 @@
 .pc_tab{
     display:none;
 }
+.zf_box{
+    display: flex;
+    list-style: none;
+}
+.zf_box1{
+    display: flex;
+    
+}
 @media screen and (min-width: 1200px) {
     .tab-bar[_ngcontent-way-c10]{
         display:none;
@@ -131,21 +176,41 @@
         display:block;
     }
     .pc_nav{
-        margin-top:66px;
-        background:rgba(0, 0, 0, .2);
-        padding-bottom:1000;
+        margin-top:70px;
+    }
+    .zf_box{
+        margin-top: 20px;
+        background-color: rgb(21, 29, 41);
     }
     .pc_nav ul{
         margin:0;
-        padding:66px 0 0 0;
+        padding:0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 104px;
     }
     .pc_nav li{
-        height:40px;
-        display:flex;
-        align-items:center;
-        line-height:40px;
-        font-size:14px;
-        color:#cecece;
+        height: 87px;
+        width: 90px;
+        display: flex;
+        line-height: 40px;
+        font-size: 14px;
+        color: #cecece;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgb(24, 36, 52);
+        border-radius: 30px;
+    }
+    .pc_nav li label{
+        width:24px;
+        height:24px;
+        display:inline-block;
+        margin-left:10px;
+        margin-right:10px;
+        margin-top: 18px;
+    }
+    .pc_nav li:hover{
+        background-color: rgb(0, 93, 254);
     }
     .pc_nav li label{
         width:24px;
@@ -165,4 +230,23 @@
         $(this).removeClass('pc_on')
       })
     })
+    
+
+    
+function loadProperties(lang) {
+            $.i18n.properties({
+                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
+                path: '../mobile/lake/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
+                mode: 'map',     //用 Map 的方式使用资源文件中的值
+                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
+                callback: function () {
+                    $("[data-locale]").each(function () {
+                        $(this).html($.i18n.prop($(this).data("locale")));
+
+                    });
+                }
+            })
+        }
+        loadProperties('en');
+
 </script>

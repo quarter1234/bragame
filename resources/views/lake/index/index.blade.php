@@ -266,7 +266,7 @@
                           </button>
                         <!---->
                         <button _ngcontent-way-c8="" id="tab2" onclick="myclick(2)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                            <div class="button3"><span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PG">>P G</span></div>
+                            <div class="button3"><span _ngcontent-way-c8="" class="side-menu-item__tag" data-locale="PG">P G</span></div>
                           </button>
                           <!---->
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
@@ -366,7 +366,7 @@
             
             <div class="pc_tab">
                    <div class="pc_nav">
-                      <ul>
+                      <ul class="zf_box">
                       <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
                           <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
                           <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
@@ -376,6 +376,13 @@
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
                           <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
+                      <div id="music-player">
+                    <audio id="audio" controls>
+                <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+                  </audio>
+                  </div>
+                  <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
                    </div>
             </div>
             
@@ -431,6 +438,7 @@
     <style>
 
     </style>
+
     <script type="text/javascript">
     var myclick = function(v) {
         $('#tab' +v).addClass("side-menu-item ng-star-inserted active-side-menu").siblings().removeClass("active-side-menu");
@@ -623,41 +631,6 @@
       });
     </script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/scroll.js"></script>
-    <script>
-    function myFunction() {
-        $('.menu_body').animate({left:"0"},300)
-    }
-    $(function(){
-      $('.green2_gb').click(function(){
-        $('.menu_body').animate({left:"-100%"},300)
-      })
-      $('.green2_nav li').click(function(){
-        $(this).addClass('green2_on').siblings().removeClass('green2_on')
-      })
-      $('.pc_nav li').hover(function(){
-        $(this).addClass('pc_on').siblings().removeClass('pc_on')
-      })
-      $('.pc_nav li').mouseout(function(){
-        $(this).removeClass('pc_on')
-      })
-    })
-
-    function loadProperties(lang) {
-            $.i18n.properties({
-                name: 'strings',  //资源文件名称 ， 命名格式： 文件名_国家代号.properties
-                path: '../mobile/green2/lang/',    //资源文件路径，注意这里路径是你属性文件的所在文件夹,可以自定义。
-                mode: 'map',     //用 Map 的方式使用资源文件中的值
-                language: lang,  //这就是国家代号 name+language刚好组成属性文件名：strings+zh -> strings_zh.properties
-                callback: function () {
-                    $("[data-locale]").each(function () {
-                        $(this).html($.i18n.prop($(this).data("locale")));
-
-                    });
-                }
-            });
-        }
-        loadProperties('en');
-    </script>
   </body>
 
 </html>
