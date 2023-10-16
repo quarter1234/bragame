@@ -1044,7 +1044,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#0c5b2c;
+    background:#000;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
@@ -1829,13 +1829,11 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:none;
 }
 .recharge_on .recharge_k_n{
-    background:rgba(227,176,9,.3);
     color:#fff;
 }
 .recharge_on .recharge_bz{
-    background: #e7a738;
     color:#000;
-    font-size: 1px;
+    font-size: 10px;
 }
 .recharge_on .recharge_k_w{
     background-position:center right;
@@ -1850,7 +1848,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     width: 100px;
     height: 88px;
 }
-
 
 .recharge_input{
     width:93%;
