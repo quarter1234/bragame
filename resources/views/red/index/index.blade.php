@@ -6,20 +6,20 @@
     <base href="/">
 
     <!-- Material Icons -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/material-icons.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swipeslider.css">
-    <link rel="stylesheet" href="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swipeslider.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="/mobile/red/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/index.js"></script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/index.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using red-translucent -->
@@ -57,7 +57,7 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/sx.png"></div>
+                            <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sx.png"></div>
                             <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png"></div>
                         </div>
                     </span>
@@ -224,7 +224,7 @@
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
-                    <source src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/audio/btn_click.mp3">
+                    <source src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/audio/btn_click.mp3">
                   </audio>
                   {{--
                   <script>
@@ -591,7 +591,7 @@
 
       });
     </script>
-    <script type="text/javascript" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/static/js/scroll.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/scroll.js"></script>
     <script>
     function myFunction() {
         $('.menu_body').animate({left:"0"},300)

@@ -1,17 +1,17 @@
 <div class="menu_on">
-<img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/menu_on.png" />
+<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/menu_on.png" />
 </div>
 <div class="kj_kf">
-<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/kf_ico.png" />
+<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/kf_ico.png" />
 </div>
 {{--
 <div class="down_ico">
-<img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/down_ico.png" />
+<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/down_ico.png" />
 </div>
 --}}
 @if($showUserRedPakc)
 <div class="hb">
-<a href="javascript:void(0);" id="redPacket"><img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/hb.png" /></a>
+<a href="javascript:void(0);" id="redPacket"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/hb.png" /></a>
 </div>
 @endif
 <div class="menu_tc">
@@ -20,7 +20,7 @@
             <li>
                 <a href="{{url('mobile/member/vip')}}">
                     <span>
-                        <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/f-vip.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/f-vip.png" />
                     </span>
                     <label>VIP Grau</label>
                 </a>
@@ -28,7 +28,7 @@
             <li>
                 <a href="{{url('mobile/member/email')}}">
                 <span>
-                        <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/email-fill.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/email-fill.png" />
                     </span>
                     <label>Email</label>
                 </a>
@@ -36,7 +36,7 @@
             <li>
                 <a href="{{url('mobile/member/customerService')}}">
                 <span>
-                        <img src="https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/kf_r_ico.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/kf_r_ico.png" />
                     </span>
                     <label>Atendimento</label>
                 </a>

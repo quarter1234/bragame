@@ -6,7 +6,7 @@
     color: #fff;
     top: 0;
     left: 0;
-    background:#04431f;
+    background:#202121;
 }
 .logo{
     width:132px;
@@ -29,7 +29,7 @@
 .money_rs {
     width: 20px;
     height: 20px;
-    background: url(/mobile/green2/images/coin-0506a985.png) no-repeat;
+    background: url(/mobile/deep/images/coin-0506a985.png) no-repeat;
     background-size: 20px 20px;
     margin: 0 5px;
 }
@@ -118,7 +118,7 @@
 .fx_body{
     width:100%;
     height:100%;
-    background:url(/mobile/green2/images/bg-light-75f05cd1.png) no-repeat;
+    background:url(/mobile/deep/images/bg-light-75f05cd1.png) no-repeat;
     background-size:cover;
     background-color:transparent;
 }
@@ -441,7 +441,7 @@ div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
 div.jx-app-download-dismiss[_ngcontent-way-c1] {
     width: 44px;
     height: 44px;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px
@@ -467,7 +467,7 @@ div.dialog-header-row[_ngcontent-way-c1] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
 }
 
 div.app-background[_ngcontent-way-c2] {
@@ -483,7 +483,7 @@ div.app-background[_ngcontent-way-c2] {
     user-select: none;
     touch-action: none;
     pointer-events: none;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/pi-xiu.a23ab2aff01478fd81ad.svg);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/pi-xiu.a23ab2aff01478fd81ad.svg);
     background-position: center 20%;
     background-repeat: no-repeat;
     background-size: contain
@@ -612,7 +612,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-jx-icon[_ngcontent-way-c3] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/jx-logo.443c8ffbee580d3672f7.png);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jx-logo.443c8ffbee580d3672f7.png);
     height: 100%;
     width: 91px;
     margin-right: 10px
@@ -623,7 +623,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-laliga-icon[_ngcontent-way-c3] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
     height: 100%;
     width: 128px;
     margin-left: 10px
@@ -706,20 +706,20 @@ div.app-background[_ngcontent-way-c2] {
 div.message-centre[_ngcontent-way-c3] {
     width: 24px;
     height: 16px;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
 }
 
 div.message-centre.unread[_ngcontent-way-c3] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
 }
 
 button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     width: 28px;
     height: 28px;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -838,7 +838,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)
 }
 
 .more-announcement-icon[_ngcontent-way-c6] {
@@ -848,7 +848,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
 }
 
 div.bulletin-board[_ngcontent-way-c6] {
@@ -894,7 +894,7 @@ div.util-bar-container[_ngcontent-way-c7] {
 }
 
 .daily-gift-logo[_ngcontent-way-c7] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -950,19 +950,19 @@ span.util-btn-icon[_ngcontent-way-c7] {
 }
 
 span.util-btn-icon.deposit[_ngcontent-way-c7] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
 }
 
 span.util-btn-icon.transfer[_ngcontent-way-c7] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/transfer.a1c5b153615b288c7824.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/transfer.a1c5b153615b288c7824.png)
 }
 
 span.util-btn-icon.withdraw[_ngcontent-way-c7] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/withdraw.a41c76f1715915566d01.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/withdraw.a41c76f1715915566d01.png)
 }
 
 span.util-btn-icon.ac[_ngcontent-way-c7] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
 }
 
 div.cs-dialog-icon[_ngcontent-way-c7] {
@@ -972,7 +972,7 @@ div.cs-dialog-icon[_ngcontent-way-c7] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
+    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
 }
 
 div.cs-dialog-title[_ngcontent-way-c7] {
@@ -1018,7 +1018,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 
 .active-side-menu[_ngcontent-way-c8] {
     color: #fff;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/bg_active.4290af043bcec3617ad5.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bg_active.4290af043bcec3617ad5.png)
 }
 
 .side-menu-item__icon[_ngcontent-way-c8] {
@@ -1044,13 +1044,13 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
-    background:#0c5b2c;
+    background:#202121;
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {
     flex: 1 1 0;
     min-height: 66px;
-    color: #cecece;
+    color: #8e8f91;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
@@ -1073,11 +1073,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/home2.png)
+   background-image: url(/mobile/deep/images/home2.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/gg2.png)
+   background-image: url(/mobile/deep/images/gg2.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
@@ -1085,11 +1085,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/sk1.png)
+   background-image: url(/mobile/deep/images/sk1.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/wd2.png)
+   background-image: url(/mobile/deep/images/wd2.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
@@ -1101,11 +1101,11 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/fx1.png)
+   background-image: url(/mobile/deep/images/fx1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/qq1.png)
+   background-image: url(/mobile/deep/images/qq1.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
@@ -1512,7 +1512,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
 }
 
 .title[_ngcontent-way-c15] {
@@ -1551,42 +1551,42 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
     border-radius: 10px;
     width: 100%;
     padding-bottom: calc((100% * 144 / 314))
 }
 
 .game-1[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/1.94732245082a337d973a.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/1.94732245082a337d973a.png)
 }
 
 .game-6[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/6.f45183d305b4055e0491.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/6.f45183d305b4055e0491.png)
 }
 
 .game-26[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/26.b99820baf827d5c86613.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/26.b99820baf827d5c86613.png)
 }
 
 .game-27[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
 }
 
 .game-28[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/28.5004283522d159495603.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/28.5004283522d159495603.png)
 }
 
 .game-32[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/32.552f1aa9ef799e732bce.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/32.552f1aa9ef799e732bce.png)
 }
 
 .game-43[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
 }
 
 .game-45[_ngcontent-way-c15] {
-   background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/45.36dd88e459f576fea52e.png)
+   background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/45.36dd88e459f576fea52e.png)
 }
 
 .mat-dialog-container {
