@@ -357,8 +357,8 @@
             </div>
             <div class="index_bottom">
                   <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
-                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
-? 2022 brcrown.com All rights reserved.</p>
+                  <p>As informações sobre handicap e probabilidades esportivas contidas neste site são apenas para fins de entretenimento. Favor verificar os regulamentos de apostas em sua jurisdição, pois eles variam de estado para estado, de província para província e de país para país. É proibido usar estas informações para violar qualquer lei ou estatuto. O site não está associado a nenhuma liga, associação ou equipe profissional ou colegiada, nem é endossado por ela. 777hello.com não tem como alvo público menores de 18 anos de idade. 
+COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
             </div>
             <div class="menu_body">
                    <div class="black_logo">
@@ -392,9 +392,10 @@
             </div>
             
             {{--loading组件--}}
-            @include('black.common.loading')
-            @include('black.index.index_login')
-            @include('black.index.notice')
+            @include('pink.common.loading')
+            @include('pink.index.index_login')
+            @include('pink.index.notice')
+            @include('pink.common.slide')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}

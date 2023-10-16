@@ -1,8 +1,6 @@
-<div class="menu_on">
-<img src="/mobile/blue/images/menu_on.png" />
-</div>
+
 <div class="kj_kf">
-<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/blue/images/kf_ico.png" />
+<img onclick="location.href='{{url("mobile/member/customerService")}}'" src="/mobile/pink/images/kf_ico.png" />
 </div>
 {{--
 <div class="down_ico">
@@ -130,6 +128,11 @@
         width:25px;
         height:25px;
         margin-top:9px;
+        -webkit-animation-name: xing;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 1s;
+
    }
    .down_ico{
     width:40px;
@@ -165,7 +168,24 @@
     width:20px;
         height:20px;
         margin-top:10px;
+       
    }
+
+
+@keyframes xing {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1);
+    }
+    75% {
+        transform: scale(0.8);
+    }
+}
 </style>
 <script>
     $(function(){
