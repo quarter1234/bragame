@@ -99,7 +99,7 @@
                    </div>
 
                   </div>
-                   <button onclick="location.href='{{ route("brling.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
+                   <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
                    </jx-content-view>
                 </jx-safe-area>
               </div>
