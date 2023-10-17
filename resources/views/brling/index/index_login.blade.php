@@ -170,21 +170,13 @@
     function check_register(obj) {
       showLoading();
        $.ajax({
-<<<<<<< HEAD
           url : "{{url('mobile/register')}}",
-=======
-          url : "{{url('brling/register')}}",
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
           type : 'POST',
           data : $("#form_register").serialize(),
           success : function (data) {
             hideLoading()
             if(data.code == 200) {
-<<<<<<< HEAD
               window.location.href= "{{url('mobile/index')}}"
-=======
-              window.location.href= "{{url('brling/index')}}"
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
             } else {
               showModal(data.message);
             }
