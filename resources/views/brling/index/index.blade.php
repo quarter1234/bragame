@@ -498,12 +498,12 @@
 
           let gameId = $(this).attr('gameid')
           $.ajax({
-              url : "{{url('brling/pgUrl')}}",
+              url : "{{url('mobile/pgUrl')}}",
               type : 'GET',
               data : {id: parseInt(gameId)},
               success : function (data) {
                 if(data.code == 200) {
-				          window.location.href= "{{ route('brling.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
+				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       showModal('Por favor faça login primeiro');

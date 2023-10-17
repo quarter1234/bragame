@@ -462,7 +462,7 @@
         $(document).on('click', '.pg_game_go', function() {
           let gameId = $(this).attr('gameid')
           $.ajax({
-              url : "{{url('brling/pgUrl')}}",
+              url : "{{url('mobile/pgUrl')}}",
               type : 'GET',
               data : {id: parseInt(gameId)},
               success : function (data) {

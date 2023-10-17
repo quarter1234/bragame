@@ -78,7 +78,7 @@
                         {{--最外层Foreach--}}
                       @endforeach  
 
-                      <form method="get" onSubmit="return check_submit(this)" action="{{url('brling/display')}}" >
+                      <form method="get" onSubmit="return check_submit(this)" action="{{url('mobile/display')}}" >
                           @csrf
                           <div class="recharge_input">
                             <span>R$</span>
