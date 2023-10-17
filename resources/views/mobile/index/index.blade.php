@@ -285,6 +285,96 @@
                 </jx-safe-area>
               </div>
             </div>
+
+            
+                  <style>
+                      
+.gg_db{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:99999;
+    top:0;
+    left:0;
+    background:#0c192c;
+    overflow: hidden;
+    display:block;
+}
+
+.gg_tc{
+    width:94%;
+    height:600px;
+    background:#0a0e2b;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-300px 0 0 -48%;
+    border:3px solid #31fff3;
+    border-radius:10px;
+}
+.gg_tc_title{
+    width:100%;
+    height:40px;
+    border-bottom:1px solid rgba(255, 255, 255, .2);
+}
+.gg_tc_title span{
+    line-height:40px;
+    margin-left:20px;
+}
+.gg_tc_title label{
+    width:24px;
+    height:24px;
+    background:url(/mobile/green/images/gg_gb_ico.png) no-repeat;
+    background-size:24px 24px;
+    display:inline-block;
+    float:right;
+    margin:8px 8px 0 0;
+}
+.gg_tc_title a {
+    width:24px;
+    height:24px;
+    display: block;
+}
+.gg_tc_tit{
+    width:90%;
+    padding:10px 0;
+    margin:0 auto;
+}
+.gg_tc_tit h2{
+    margin:0;
+    padding:0;
+    font-size:14px;
+    width:50%;
+    float:left;
+    text-align:left;
+}
+.gg_tc_tit p{
+    margin:0;
+    padding:0;
+    font-size:12px;
+    color:#999;
+    float:left;
+    width:50%;
+    text-align:right;
+}
+.gg_centen{
+    width:99%;
+    height:490px;
+    overflow-y:auto;
+    margin:10px auto;
+    text-align:center;
+}
+.gg_centen::-webkit-scrollbar-thumb{
+    background-color:rgba(0,0,0,.05);
+    border-radius:10px;
+    -webkit-box-shadow:inset1px1px0rgba(0,0,0,.1);
+    }
+.gg_centen img{
+    width:360px;
+    height:526px;
+}
+                  </style>
+
             <div class="winning-box">
               <div class="news-title clearfix">
                 <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/rank.png" style="margin: 10px;width: 16px;vertical-align:middle;">
@@ -315,6 +405,7 @@
             @include('mobile.common.loading')
             @include('mobile.index.index_login')
             @include('mobile.common.slide')
+            @include('mobile.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -330,9 +421,6 @@
         </jx-home-page>
       </jx-main-wrapper>
     </jx-root>
-    <style>
-
-    </style>
     <script type="text/javascript">
     var myclick = function(v) {
         $('#tab' +v).addClass("side-menu-item ng-star-inserted active-side-menu").siblings().removeClass("active-side-menu");
@@ -462,7 +550,17 @@
         });
       });
     </script>
-
+    <script>
+    function showNotice() {
+        $('.gg_db').show()
+    }
+    $(function(){
+        showNotice();
+        $('.gg_tc a').click(function(){
+            $('.gg_db').hide()
+        })
+    })
+</script>   
 
   </body>
 

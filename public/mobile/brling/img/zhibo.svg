@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>视频 播放</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.6419271%" y1="0%" x2="22.3776042%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#13A2BA" offset="0%"></stop>
+            <stop stop-color="#087C95" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="玩法列表_pk10" transform="translate(-314.000000, -110.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="pk10最新开奖" transform="translate(15.000000, 75.000000)">
+                <g id="视频-播放" transform="translate(299.000000, 35.000000)">
+                    <path d="M18,0 C8.14012739,0 0,8.14012739 0,18 C0,27.8598726 8.02547771,36 18,36 C27.8598726,36 36,27.9745223 36,18 C36,8.14012739 27.8598726,0 18,0 Z M20.522293,23.5031847 C15.0191083,27.0573248 12.3821656,26.5987261 12.3821656,18.2292994 C12.3821656,10.3184713 15.133758,9.40127389 20.522293,12.955414 C27.4012739,17.3121019 27.4012739,19.1464968 20.522293,23.5031847 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
