@@ -1,0 +1,36 @@
+<html lang="zh-Hans">
+  
+  <head>
+    <meta charset="utf-8">
+    @include('drling.common.common_title') 
+    <base href="/">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="/static/css/material-icons.css">
+    <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
+    <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="/drling/blue/css/activity.css">
+    <link rel="stylesheet" href="/drling/blue/css/share.css">
+    <!-- Used in supported Android browsers -->
+ 
+
+    <meta name="theme-color" content="#1e366b">
+    <meta name="apple-drling-web-app-capable" content="yes">
+    <!-- Fixed position has issue with iOS Safari using black-translucent -->
+    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    </head>
+
+  <body style="color: white; background-color: #1e366b;">
+      <div class="fk_ico"><img src='/drling/blue/images/dg_yq.png'></div>
+      <div class="fk_text_1">
+        <h2>O pagamento foi concluído！</h2>
+        <p>O pagamento foi concluído, por favor, preste atenção</p>
+      </div>
+   <script>
+   $(function(){
+       
+    })
+   </script>
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "DIN Alternate Bold";
+  font-weight: bold;
+  src: url(../image/DINAlternate-Bold.eot); /* For IE6-8 */
+  src: local("DIN Alternate Bold"), url(../image/../image/DINAlternate-Bold.woff2) format("woff2"),
+    url(../image/DINAlternate-Bold.woff) format("woff"),
+    url(../image/DINAlternate-Bold.ttf) format("truetype");
+}
+
+.din-alternate-bold {
+  font-family: "DIN Alternate Bold", sans-serif;
+}
