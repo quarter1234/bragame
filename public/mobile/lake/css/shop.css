@@ -361,7 +361,7 @@ margin:20px auto;
 }
 
 .shopindex{
-    width:25%;
+    width:60%;
     margin:0px auto;
     display:flex;
     justify-content:space-between;
@@ -509,7 +509,7 @@ margin:20px auto;
         width:50%;
     }
     .shopindex{
-        width:65%;
+        width:20%;
     }
     .index_bottom{
         width:65%;

@@ -377,7 +377,7 @@
                           <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                       <div id="music-player">
-                    <audio id="audio" controls>
+                    <audio id="audio" controls autoplay>
                 <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
                   </audio>
@@ -387,9 +387,9 @@
             </div>
             
             {{--loading组件--}}
-            @include('green2.common.loading')
-            @include('green2.index.index_login')
-            @include('green2.index.notice')
+            @include('lake.common.loading')
+            @include('lake.index.index_login')
+            @include('lake.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
