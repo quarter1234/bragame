@@ -288,7 +288,6 @@
                 z-index:99999;
                 top:0;
                 left:0;
-                background:#0c192c;
                 overflow: hidden;
                 display:block;
             }
@@ -301,7 +300,6 @@
                 left:50%;
                 top:50%;
                 margin:-300px 0 0 -48%;
-                border:3px solid #31fff3;
                 border-radius:10px;
             }
             .gg_tc_title{
@@ -363,7 +361,13 @@
                 }
             .gg_centen img{
                 width:360px;
-                height:526px;
+                height:900px;
+            }
+            @media screen and (min-width: 1200px) {
+              .gg_tc{
+                width:360px;
+              }
+               
             }
                 </style>
                   </jx-home-game-board>
