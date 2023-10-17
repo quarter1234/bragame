@@ -164,14 +164,22 @@
     showLoading();
     $('#bindSubmit').attr('disabled', 'disabled')
     $.ajax({
+<<<<<<< HEAD
         url : "{{url('mobile/shop/doBind')}}",
+=======
+        url : "{{url('brling/shop/doBind')}}",
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
         type : 'POST',
         data : $("#form1").serialize(),
         success : function (data) {
           $('#bindSubmit').attr('disabled', false)
             hideLoading()
             if(data.code == 200) {
+<<<<<<< HEAD
               window.location.href= "{{url('mobile/shop/guide')}}"
+=======
+              window.location.href= "{{url('brling/shop/guide')}}"
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
             } else {
               showModal(data.message);
             }

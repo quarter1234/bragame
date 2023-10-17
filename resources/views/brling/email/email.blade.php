@@ -2,14 +2,23 @@
   
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
     @include('mobile.common.common_title') 
+=======
+    @include('brling.common.common_title') 
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
+<<<<<<< HEAD
     <link rel="stylesheet" href="/mobile/css/activity.css">
     <link rel="stylesheet" href="/mobile/css/member.css">
+=======
+    <link rel="stylesheet" href="/brling/css/activity.css">
+    <link rel="stylesheet" href="/brling/css/member.css">
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -19,9 +28,15 @@
    
 
     <meta name="theme-color" content="#0C192C">
+<<<<<<< HEAD
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
+=======
+    <meta name="apple-brling-web-app-capable" content="yes">
+    <!-- Fixed position has issue with iOS Safari using black-translucent -->
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
     <meta name="format-detection" content="telephone=no">
     </head>
 
@@ -36,7 +51,11 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
+<<<<<<< HEAD
           @include('mobile.common.top_sub') 
+=======
+          @include('brling.common.top_sub') 
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
 
             <div class="email_h"></div>
             <div id="email_list_pages">
@@ -47,7 +66,11 @@
           </div>
 
           {{--loading组件--}}
+<<<<<<< HEAD
           @include('mobile.common.loading')
+=======
+          @include('brling.common.loading')
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
           
           {{--
             <div class="e_bottom">
@@ -74,7 +97,11 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
+<<<<<<< HEAD
                   @include('mobile.common.footer') 
+=======
+                  @include('brling.common.footer') 
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                   
                  
                 </jx-tab-bar>
@@ -90,7 +117,11 @@
         let page = $('#email_load_more').attr('page');
           showLoading();
           $.ajax({
+<<<<<<< HEAD
               url : "{{url('mobile/member/emailList')}}",
+=======
+              url : "{{url('brling/member/emailList')}}",
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {

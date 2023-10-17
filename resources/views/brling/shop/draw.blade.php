@@ -90,8 +90,13 @@
               </form>
               </jx-header-row>
             </div>
+<<<<<<< HEAD
             @include('mobile.common.loading')
             @include('mobile.common.modal')
+=======
+            @include('brling.common.loading')
+            @include('brling.common.modal')
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">

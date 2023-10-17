@@ -9,7 +9,11 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
+<<<<<<< HEAD
 	<link rel="stylesheet" href="/mobile/css/material-icons.css">
+=======
+	<link rel="stylesheet" href="/brling/css/material-icons.css">
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/static/css/styles.41928e9497559161f9b8.css">
 	<link rel="stylesheet" href="/static/css/artDialog.css">
@@ -162,7 +166,11 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 .bg{
   width:299px;
   height:198px;
+<<<<<<< HEAD
   background:url(../mobile/img/error.png) no-repeat;
+=======
+  background:url(../brling/img/error.png) no-repeat;
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
   margin:60px auto;
 }
 .bgtext{
@@ -205,7 +213,11 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                   <!---->
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-title">Error Message</div>
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
+<<<<<<< HEAD
                         <div><a style="color:white" href="http://www.baxigame.cn/mobile/pay/recharge">{{$msg}}</a></div>
+=======
+                        <div><a style="color:white" href="http://www.baxigame.cn/brling/pay/recharge">{{$msg}}</a></div>
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                         <div><span class="second"></span></div>
 				          </div>
 
@@ -229,7 +241,11 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 
     function change() {
         if (time == 0) {
+<<<<<<< HEAD
             location.href = "http://www.baxigame.cn/mobile/pay/recharge";
+=======
+            location.href = "http://www.baxigame.cn/brling/pay/recharge";
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
         } else {
             div.innerHTML = '' + time + '';
             time--;

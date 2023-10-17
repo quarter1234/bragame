@@ -36,5 +36,6 @@ class CommonEnum
         "green" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
         "deep" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
         "lake" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
+        "brling" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
     ];
 }

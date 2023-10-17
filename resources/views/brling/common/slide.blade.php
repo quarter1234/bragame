@@ -34,9 +34,15 @@
                 </a>
             </li>
             <li>
+<<<<<<< HEAD
                 <a href="{{url('mobile/member/customerService')}}">
                 <span>
                         <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/kf_r_ico.png" />
+=======
+                <a href="{{url('brling/member/customerService')}}">
+                <span>
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/kf_r_ico.png" />
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                     </span>
                     <label>Atendimento</label>
                 </a>
@@ -184,7 +190,11 @@
             showLoading()
             $('body,html').addClass('notScroll')
             $.ajax({
+<<<<<<< HEAD
               url : "{{url('mobile/redPacket/doLottery')}}",
+=======
+              url : "{{url('brling/redPacket/doLottery')}}",
+>>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
               type : 'GET',
               data : {},
               success : function (data) {
