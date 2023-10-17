@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/mobile/brling/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swiper-bundle.min.css">
+    <link rel="shortcut icon" href="/mobile/brling/img/brling.ico" />
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -366,6 +367,10 @@
             @media screen and (min-width: 1200px) {
               .gg_tc{
                 width:360px;
+                margin:-300px 0 0 -180px;
+                position:absolute;
+                left:50%;
+                top:50%;
               }
                
             }
