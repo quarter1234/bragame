@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="20px" viewBox="0 0 19 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>personalpage_icon_details</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="20.6419271%" y1="0%" x2="22.3776042%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#13A2BA" offset="0%"></stop>
+            <stop stop-color="#087C95" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="首页_侧滑-" transform="translate(-35.000000, -445.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+            <g id="Group-6" transform="translate(15.000000, 321.000000)">
+                <g id="personalpage_icon_details" transform="translate(20.000000, 124.000000)">
+                    <path d="M10,0 L10,9.35680433 L19.022794,9.35680433 C19.022794,4.22929361 14.9943579,0.067704807 10,0 Z" id="Shape"></path>
+                    <path d="M9.39291356,1.00225683 C9.3116678,1 9.23042203,1 9.14691943,1 C4.09614083,1 0,5.18867073 0,10.3568043 C0,15.5249379 4.09614083,19.7136087 9.14691943,19.7136087 C14.1909276,19.7136087 18.2825547,15.5362221 18.2938389,10.3771158 L9.39291356,10.3771158 L9.39291356,1.00225683 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,386 @@
+.shop_top{width:100%;}
+.shop_t_text{text-align:center;color:#fff;font-size:18px;}
+.shop_b{width:100%;height:32px;background:url(../img/shop_top.png) no-repeat center; margin-top:10px; text-align:center;line-height:32px;}
+.shop_button{width:70%;margin:20px auto 0 auto;background: linear-gradient(to bottom, #31fff3, #05b3e6);height:48px;border-radius:5px; display: block;}
+.shop_list{width:98%;height:100px;margin:15px auto 0 auto;background:#132235; border-radius:10px;overflow: hidden; position: relative;}
+.shop_list span{width:180px;height:32px;background:url(../img/tt.png) no-repeat;margin-top:10px; font-size:12px;display:block;line-height:32px; padding-left:10px; }
+.shop_list p{padding-left:10px;font-size:14px;}
+.shop_list_button{width:25px;height:25px;position:absolute; right:10px;top:10px;background:url(../img/xx1.png) no-repeat;background-size:25px 25px;}
+.shop_list_button2{width:25px;height:25px;position:absolute; right:10px;top:10px;background:url(../img/gth.png) no-repeat;background-size:25px 25px;}
+.shop_wk{width:180px;height:30px;background: linear-gradient(to bottom, #31fff3, #05b3e6);text-align:center;line-height:30px;color:#fff; position:absolute;right:20px;top:40px; border-radius:10px;}
+.shop_wk2{width:220px;height:20px;position:absolute;top:75px; right:10px;text-align:center;color:#fff;font-size:12px;}
+.shop_h{width:100%;height:20px; display:block; overflow: hidden;}
+.shop_jt{width:98%;height:70px;margin:15px auto 0 auto;background:#132235; border-radius:10px;overflow: hidden; position: relative;}
+.shop_jt_left{width:75%;height:70px;position:absolute;left:0;top:0;display:flex;align-items:center;vertical-align:middle;padding-left:10px;}
+.shop_jt_left h2{width:100%; font-size:14px;}
+.shop_jt_left span{width:100%;display: block;font-size:12px;color:#a2cce8;}
+.shop_right{width:50px;height:100%;position:absolute;right:0;background:rgba(0, 0, 0, 0.5); display:flex;align-items:center;text-align:center; justify-content:center;}
+.shop_jt_ico{width:25px;height:25px;background:url(../img/right_ico.png) no-repeat;background-size:25px 25px;}
+.shop_wk a{
+    color:#000;
+    text-decoration:none;
+}
+
+.guide_top{
+    text-indent:20px;
+    line-height:40px;
+    font-size:14px;
+}
+
+.guide_centen{
+    width:95%;
+    margin:10px auto;
+    background:#132235;
+    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+}
+.guide_ico{
+    width:20px;
+    height:20px;
+    background:url(../img/yh_ico.png) no-repeat;
+    background-size:20px 20px;
+    margin:12px;
+}
+.guide_text{
+    width:200px;
+    margin-top:12px;
+}
+.guide_centen h2{
+    margin:0;
+    font-size:14px;
+}
+.guide_centen p{
+    font-size:12px;
+    color:#999;
+    margin:10px 0;
+}
+.guide_right{
+    width:80px;
+    margin:12px;
+    font-size:12px;
+    padding-top:5px;
+}
+.guide_right button{
+    width:100%;
+    height:30px;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    font-size:12px;
+}
+.guide_yh{
+    width:95%;
+    margin:10px auto 0 auto;
+    background:#132235;
+    border-radius:5px;
+    display:flex;
+    justify-content:space-between;
+}
+.gui_left{
+    width:200px;
+    margin:12px;
+}
+.gui_right{
+    width:15px;
+    height:15px;
+    background:url(../img/right_ico.png) no-repeat;
+    background-size:15px 15px;
+    margin:15px;
+}
+.gui_bottom{
+    width:95%;
+    margin:10px auto 0 auto;
+    background:#132235;
+    border-radius:5px;
+    padding:20px 0;
+    overflow: hidden;
+}
+.gui_bottom h2{
+    text-indent:12px;
+    line-height:40px;
+    margin:0;
+    font-size:14px;
+}
+.gui_bottom p{
+    font-size:12px;
+    margin-bottom:10px;
+    margin-right:10px;
+    text-indent:12px;
+}
+.bind{
+    width:95%;
+    margin:10px auto 0 auto;
+    background:#132235;
+    border-radius:5px;
+    padding:20px 0;
+    overflow: hidden;
+    position: relative;
+}
+.bind h2{
+    color:#fff;
+    font-size:14px;
+    font-weight:normal;
+    padding-left:20px;
+    margin:10px 0 0 0;
+}
+
+.bind input{
+    background:rgba(0, 0, 0, 0.3);
+    border:none;
+    width:94%;
+    height:40px;
+    font-size:14px;
+    outline: none;
+    margin:10px 0 0 10px;
+    line-height:40px;
+    border-radius:3px;
+    color:#fff;
+    padding-left:10px;
+}
+.bind select{
+    background:rgba(0, 0, 0, 0.3);
+    border:none;
+    width:94%;
+    height:40px;
+    font-size:14px;
+    outline: none;
+    margin:10px 0 0 10px;
+    padding-right:10px;
+    color:#fff;
+    padding-left:10px;
+}
+.bind_bottom{
+    width:94%;
+    padding:10px 0;
+    background:rgba(255, 255, 255, 0.1);
+    margin:10px auto 0 auto;
+}
+.bind_bottom h2{
+    font-size:14px;
+    text-indent:20px;
+    margin:10px 0 0 0;
+}
+.bind_bottom p{
+    font-size:14px;
+    text-indent:20px;
+    margin:10px 0 0 0;
+}
+.bind_buttom{
+    width:94%;
+    height:40px;
+    border-radius:3px;
+    background: linear-gradient(to bottom, #31fff3, #05b3e6);
+    line-height:40px;
+    text-align:center;
+    margin-top:10px;
+    margin-left:3%;
+    overflow: hidden;
+    font-size:16px;
+    color:#000;
+}
+
+.draw_top{
+    width:100%;
+    height:40px;
+}
+.draw_top_l{
+    width:50%;
+    float:left;
+    font-size:14px;
+    text-indent:12px;
+    line-height:40px;
+}
+.draw_top_r{
+    width:40%;
+    text-align:right;
+    padding-right:20px;
+    float:right;
+    color:#05b3e6;
+    line-height:40px;
+    font-weight:700;
+}
+
+.draw_c{
+    width:100%;
+    padding:10px 0;
+    background:#132235;
+    display:flex;
+    position:relative;
+}
+.draw_img{
+    width:20px;
+    height:20px;
+    margin-left:20px;
+    float: left;
+}
+.draw_img img{
+    width:20px;
+    height:20px;
+}
+.draw_text{
+    margin-left:20px;
+    width:250px;
+    font-size:12px;
+    float: left;
+}
+.draw_text h2{
+    margin:0;
+    color:#fff;
+    font-weight:normal;
+}
+.draw_text p{
+    margin:0;
+    color:#999;
+}
+.draw_arrow{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.draw_arrow img{
+    width:20px;
+    height:20px;
+    
+}
+.draw_bottom a{
+    width:100%;
+    display:flex;
+    position:relative;
+    background:rgba(0, 0, 0, 0.1);
+    padding:10px 0;
+    margin-top:10px;
+}
+
+.draw_b_left{
+    width:20px;
+    height:20px;
+    margin-left:20px;
+}
+.draw_b_left img{
+    width:20px;
+    height:20px;
+}
+.draw_xz{
+    width:20px;
+    height:20px;
+    background:url(../img/25gf.png) no-repeat;
+    background-size:20px 20px;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.draw_bottom a:hover{
+    background:rgba(255, 255, 255, 0.1);
+}
+.braw_on .draw_xz{
+    width:20px;
+    height:20px;
+    background:url(../img/24gf.png) no-repeat;
+    background-size:20px 20px;
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+.braw_d{
+    margin-top:50px;
+    width:100%;
+    font-size:14px;
+}
+.braw_d p{
+    margin:0;
+    text-indent:20px;
+    padding:10px 0;
+}
+.braw_d_sr{
+    margin-left:20px;
+    padding-top:10px;
+    color:#05b3e6;
+    font-size:14px;
+}
+.braw_d_sr input {
+    background:rgba(255, 255, 255, 0.1);
+    border:none;
+    width:80%;
+    height:40px;
+    padding-left:10px;
+    color:#fff;
+    outline:none;
+}
+.braw_b{
+    width:89%;
+    height:30px;
+    background:linear-gradient(to bottom, #31fff3, #05b3e6);
+    color: #000;
+    line-height:30px;
+    border-radius:5px;
+    margin-left:20px;
+}
+.d1 input{
+    padding-left:40px;
+}
+.tp_1{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:67px;
+    left:20px;
+}
+.tp_2{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:144px;
+    left:20px;
+}
+.tp_3{
+    width:20px;
+    height:20px;
+    position:absolute;
+    top:222px;
+    left:20px;
+}
+
+.draw_c a{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+@media screen and (min-width: 1200px){
+    .guide_top{
+        text-indent: 26%;
+    }
+    .guide_centen{
+      width:49%;
+    }
+    .gui_bottom{
+        width:49%;
+    }
+    .draw_top{
+        width:50%;
+        margin:0 auto;
+    }
+    .draw_c{
+        width:50%;
+        margin:0 auto;
+    }
+    .braw_d{
+        width:50%;
+        margin:0 auto;
+    }
+    .braw_b{
+        width:50%;
+        margin-left:25%;
+    }
+    .bind{
+        width:50%;
+    }
+    .bind_bottom{
+        width:50%;
+    }
+    .bind_buttom{
+        width:50%;
+        margin-left:25%;
+    }
+  }
+
