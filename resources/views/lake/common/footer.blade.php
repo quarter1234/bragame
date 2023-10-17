@@ -41,7 +41,7 @@
                       <li class="zf_box1" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                       <div id="music-player">
-                    <audio id="audio" controls>
+                    <audio id="audio" controls autoplay>
                 <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
                   </audio>
@@ -65,14 +65,12 @@
     width: 100%;
 }
 .zf_touzhu{
-    background-color: rgb(24, 36, 52);
+    background-color: rgba(255, 255, 255,.1);
     color: #f7f0f0;
     width: 180px;
     height: 40px;
     font-size: 16px;
     margin-top: 20px;
-    display: flex;
-    padding-top: 10px;
 }
 .tubiao{
     width: 20px;
@@ -175,31 +173,27 @@
         top:-970px;  
         display:block;
     }
-    .pc_nav{
-        margin-top:70px;
-    }
-    .zf_box{
-        margin-top: 20px;
-        background-color: rgb(21, 29, 41);
-    }
     .pc_nav ul{
         margin:0;
         padding:0;
         display: flex;
         flex-wrap: wrap;
-        margin-top: 104px;
+        border-radius: 15px;
+        margin-top: 130px;
     }
     .pc_nav li{
         height: 87px;
-        width: 90px;
+        width: 86px;
         display: flex;
         line-height: 40px;
         font-size: 14px;
         color: #cecece;
         flex-direction: column;
         align-items: center;
-        background-color: rgb(24, 36, 52);
-        border-radius: 30px;
+        background-color: rgba(255, 255, 255,.1);
+        border-radius: 15px;
+        margin-top: 4px;
+        margin-left: 4px;
     }
     .pc_nav li label{
         width:24px;
@@ -230,8 +224,6 @@
         $(this).removeClass('pc_on')
       })
     })
-    
-
     
 function loadProperties(lang) {
             $.i18n.properties({
