@@ -2,13 +2,13 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title')
+    @include('brling.common.common_title')
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <!-- Used in supported Android browsers -->
-    <link rel="stylesheet" href="/drling/css/member.css">
+    <link rel="stylesheet" href="/brling/css/member.css">
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
@@ -16,9 +16,9 @@
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/clipboard.min.js"></script>
 
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <style>
     @media screen and (min-width: 1200px){
@@ -91,13 +91,13 @@
                   <jx-content-view _ngcontent-xfs-c1="" _nghost-xfs-c7="" class="ng-tns-c1-1">
                    
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("drling/pay/recharge") }}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("brling/pay/recharge") }}'" tabindex="0">
                       <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"></span>{{--充值--}}Recarregar</button>
                         
                         @if(!$bankInfo)
-                              <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("drling/shop/guide") }}'" tabindex="0">
+                              <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("brling/shop/guide") }}'" tabindex="0">
                           @else
-                            <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("drling/shop/draw") }}'" tabindex="0">
+                            <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("brling/shop/draw") }}'" tabindex="0">
                           @endif
                       <span _ngcontent-xfs-c1="" class="finance-btn-icon withdraw-icon"></span>{{--提现--}}Reembolso</button>
 
@@ -105,38 +105,38 @@
 
                     <div _ngcontent-xfs-c1="" class="finance-entry-btn-group ng-tns-c1-1">
                       
-                    <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("drling/member/transaction")}}'" tabindex="0">
+                    <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("brling/member/transaction")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon transfer-records-icon"></span>{{--交易记录--}}Minhas Transações
                         <i class="icon iconfont" style="margin-left: auto;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     
                         
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("drling/member/bets")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("brling/member/bets")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon bet-record-icon"></span>{{--投注记录--}}Registro de apostas
                         <i class="icon iconfont" style="margin-left: auto;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("drling/member/email")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("brling/member/email")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon yj-icon"></span>{{--邮件--}}Correio
                         <i class="icon iconfont" style="margin-left: auto;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("drling/member/vip")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("brling/member/vip")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon vip-icon"></span>{{--VIP等级--}}VIP
                         <i class="icon iconfont" style="margin-left: auto;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                     
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("drling/member/customerService")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("brling/member/customerService")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-entry-icon kf-icon"></span>{{--客服中心--}}Contact Us
                         <i class="icon iconfont" style="margin-left: auto;"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
 
                     <div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
-                    <button _ngcontent-xfs-c1="" style="background-image:linear-gradient(180deg, #008298, #005668);" class="finance-btn deposit-btn" onclick="location.href='{{url("drling/member/resetPassword")}}'" tabindex="0">
+                    <button _ngcontent-xfs-c1="" style="background-image:linear-gradient(180deg, #008298, #005668);" class="finance-btn deposit-btn" onclick="location.href='{{url("brling/member/resetPassword")}}'" tabindex="0">
                           {{--修改密码--}}alterar a senha
                       </button>
 
-                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("drling/logout")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("brling/logout")}}'" tabindex="0">
                         {{--<span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"> </span>--}}
                         
                         {{--退出账号--}}Saia da conta
@@ -151,7 +151,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                  
-                @include('drling.common.footer') 
+                @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

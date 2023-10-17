@@ -10,7 +10,7 @@
 </div>
 
 {{--loading组件--}}
-@include('drling.common.loading')
+@include('brling.common.loading')
 
 <div class="yh_table">
     <table>
@@ -40,7 +40,7 @@
         let page = $('#invite_load_more').attr('page');
           showLoading();
           $.ajax({
-              url : "{{url('drling/share/invites')}}",
+              url : "{{url('brling/share/invites')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {

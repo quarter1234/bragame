@@ -1,42 +1,42 @@
 <div class="menu_on">
-<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/menu_on.png" />
+<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/menu_on.png" />
 </div>
 <div class="kj_kf">
-<img onclick="location.href='{{url("drling/member/customerService")}}'" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/kf_ico.png" />
+<img onclick="location.href='{{url("brling/member/customerService")}}'" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/kf_ico.png" />
 </div>
 {{--
 <div class="down_ico">
-<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/down_ico.png" />
+<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/down_ico.png" />
 </div>
 --}}
 @if($showUserRedPakc)
 <div class="hb">
-<a href="javascript:void(0);" id="redPacket"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/hb.png" /></a>
+<a href="javascript:void(0);" id="redPacket"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/hb.png" /></a>
 </div>
 @endif
 <div class="menu_tc">
     <div class="menu_right">
         <ul>
             <li>
-                <a href="{{url('drling/member/vip')}}">
+                <a href="{{url('brling/member/vip')}}">
                     <span>
-                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/f-vip.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/f-vip.png" />
                     </span>
                     <label>VIP Grau</label>
                 </a>
             </li>
             <li>
-                <a href="{{url('drling/member/email')}}">
+                <a href="{{url('brling/member/email')}}">
                 <span>
-                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/email-fill.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/email-fill.png" />
                     </span>
                     <label>Email</label>
                 </a>
             </li>
             <li>
-                <a href="{{url('drling/member/customerService')}}">
+                <a href="{{url('brling/member/customerService')}}">
                 <span>
-                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/kf_r_ico.png" />
+                        <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/kf_r_ico.png" />
                     </span>
                     <label>Atendimento</label>
                 </a>
@@ -184,7 +184,7 @@
             showLoading()
             $('body,html').addClass('notScroll')
             $.ajax({
-              url : "{{url('drling/redPacket/doLottery')}}",
+              url : "{{url('brling/redPacket/doLottery')}}",
               type : 'GET',
               data : {},
               success : function (data) {

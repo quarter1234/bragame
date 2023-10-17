@@ -2,29 +2,31 @@
 
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title')
+    @include('brling.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
      <!-- 分离好的样式开始 -->
-    <link rel="stylesheet" href="/drling/css/index_style03.css?rand=3">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/swipeslider.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/brling/css/index_style03.css?rand=3">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/swipeslider.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/swiper-bundle.min.css">
+    <link rel="brling777 icon" href="brling/img/brling.ico" />
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
-    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/js/index.js"></script>
-    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/js/index.js"></script>
+    <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/js/swiper-bundle.min.js"></script>
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+
 	</head>
 
   <body style="color: white; background-color: #0c192c;width: 100%;overflow-x: hidden;">
@@ -39,8 +41,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('drling.common.modal')
-          @include('drling.common.modal_sub')
+          @include('brling.common.modal')
+          @include('brling.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -58,8 +60,8 @@
                         <div class="money">
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ url("drling/pay/recharge") }}'" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/qb.png"></div>
+                            <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/sx.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ url("brling/pay/recharge") }}'" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/qb.png"></div>
                         </div>
                     </span>
                   @else
@@ -148,7 +150,7 @@
 
                           <div class="swiper-slide">
                           @if ($banner['url'] === 'activity_info')
-                            <img onclick="location.href='{{ route("drling.banner.info", ["id" => $banner["id"]]) }}'" src="{{$banner['img']}}" />
+                            <img onclick="location.href='{{ route("brling.banner.info", ["id" => $banner["id"]]) }}'" src="{{$banner['img']}}" />
                           @elseif (in_array($banner['url'],['download', 'game_out']))
                             <img onclick="location.href='{{$banner["title"]}}'" src="{{$banner['img']}}" />
                           @else
@@ -249,7 +251,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('drling.index.game_recommend')
+                          @include('brling.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -324,7 +326,7 @@
 .gg_tc_title label{
     width:24px;
     height:24px;
-    background:url(/drling/green/images/gg_gb_ico.png) no-repeat;
+    background:url(/brling/green/images/gg_gb_ico.png) no-repeat;
     background-size:24px 24px;
     display:inline-block;
     float:right;
@@ -398,14 +400,14 @@
               </div>
             </div>
             <div class="index_bottom">
-                  <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/index_b.png" />
+                  <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/index_b.png" />
                   <p>Este site oferece jogos e experiências de aventura.  Para se tornar um usuário do nosso site, você deve ter 18 anos de idade ou mais.  Não somos responsáveis por violações das leis locais de jogos de azar online.  Espero que joguem com responsabilidade e se divirtam em nossa pl</p>
             </div>
             {{--loading组件--}}
-            @include('drling.common.loading')
-            @include('drling.index.index_login')
-            @include('drling.common.slide')
-            @include('drling.index.notice')
+            @include('brling.common.loading')
+            @include('brling.index.index_login')
+            @include('brling.common.slide')
+            @include('brling.index.notice')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -413,7 +415,7 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                @include('drling.common.footer')
+                @include('brling.common.footer')
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -440,7 +442,7 @@
           let page = $('#pg_load_more').attr('page');
           showLoading();
           $.ajax({
-              url : "{{url('drling/getPgs')}}",
+              url : "{{url('brling/getPgs')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {
@@ -461,7 +463,7 @@
           let page = $('#pp_load_more').attr('page');
           showLoading();
           $.ajax({
-              url : "{{url('drling/getPps')}}",
+              url : "{{url('brling/getPps')}}",
               type : 'GET',
               data : {page: parseInt(page) + 1},
               success : function (data) {
@@ -496,12 +498,12 @@
 
           let gameId = $(this).attr('gameid')
           $.ajax({
-              url : "{{url('drling/pgUrl')}}",
+              url : "{{url('brling/pgUrl')}}",
               type : 'GET',
               data : {id: parseInt(gameId)},
               success : function (data) {
                 if(data.code == 200) {
-				          window.location.href= "{{ route('drling.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
+				          window.location.href= "{{ route('brling.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       showModal('Por favor faça login primeiro');

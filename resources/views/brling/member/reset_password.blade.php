@@ -2,15 +2,15 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/activity.css">
-    <link rel="stylesheet" href="/drling/css/shop.css">
-    <link rel="stylesheet" href="/drling/css/share.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/activity.css">
+    <link rel="stylesheet" href="/brling/css/shop.css">
+    <link rel="stylesheet" href="/brling/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,9 +18,9 @@
       }</script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
@@ -30,7 +30,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('drling.common.top_sub')
+        @include('brling.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -38,20 +38,20 @@
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row"></div>
-                <form method="post" onSubmit="return check_form(this)" id="form1" action="{{url('drling/member/doChangePassword')}}">
+                <form method="post" onSubmit="return check_form(this)" id="form1" action="{{url('brling/member/doChangePassword')}}">
                   @csrf
                   <div class="bind d1">
 
                       <h2>conta</h2>
-                      <img src="/drling/img/sj_ico.png" class="tp_1"/>
+                      <img src="/brling/img/sj_ico.png" class="tp_1"/>
                       <input name="account" type="text" value="{{ $user['phone'] }}" readonly="readonly" placeholder="conta" />
 
                       <h2>Senha Antiga</h2>
-                      <img src="/drling/img/password.png" class="tp_2"/>
+                      <img src="/brling/img/password.png" class="tp_2"/>
                       <input type="password" name="oldPassword" id="oldPassword" value="" placeholder="Senha Antiga" />
 
                       <h2>Nova Senha</h2>
-                      <img src="/drling/img/password.png"  class="tp_3"/>
+                      <img src="/brling/img/password.png"  class="tp_3"/>
                       <input type="password" name="newPassword" id="newPassword" value="" placeholder="Nova Senha" />
 
                   </div>
@@ -60,8 +60,8 @@
 
               </jx-header-row>
             </div>
-            @include('drling.common.loading')
-            @include('drling.common.modal')
+            @include('brling.common.loading')
+            @include('brling.common.modal')
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
@@ -111,7 +111,7 @@
     }
         showLoading();
         $.ajax({
-            url : "{{url('drling/member/doChangePassword')}}",
+            url : "{{url('brling/member/doChangePassword')}}",
             type : 'POST',
             data : $("#form1").serialize(),
             success : function (data) {
@@ -119,7 +119,7 @@
                 if(data.code == 200) {
                   showModal('Triunfo');
 
-				          window.location.href= "{{url('drling/member/index')}}"
+				          window.location.href= "{{url('brling/member/index')}}"
                 } else {
                   showModal(data.message);
                 }

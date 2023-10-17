@@ -2,15 +2,15 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
    <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/activity.css">
-    <link rel="stylesheet" href="/drling/css/share.css">
-    <link rel="stylesheet" href="/drling/css/shop.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/activity.css">
+    <link rel="stylesheet" href="/brling/css/share.css">
+    <link rel="stylesheet" href="/brling/css/shop.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -18,9 +18,9 @@
       }</script>
 
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <style>
     @media screen and (min-width: 1200px){
@@ -48,7 +48,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
             
-          @include('drling.common.top') 
+          @include('brling.common.top') 
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -58,7 +58,7 @@
                       <div class="shop_top">
                           <div class="shop_t_text">Saldo Total</div>
                           <div class="shop_b">{{ $user['coin'] }}</div>
-                          <button onclick="location.href='{{ url("drling/pay/recharge") }}'" class="shop_button">Adicionar dinheiro</button>
+                          <button onclick="location.href='{{ url("brling/pay/recharge") }}'" class="shop_button">Adicionar dinheiro</button>
                       </div>
                       <div class="shop_list">
                           <span>Adicionar dinheiro</span>
@@ -73,9 +73,9 @@
 
                           <div class="shop_wk">
                             @if(!$bankInfo)
-                              <a href="{{ url('drling/shop/guide') }}" >
+                              <a href="{{ url('brling/shop/guide') }}" >
                             @else
-                              <a href="{{ url('drling/shop/draw') }}" >
+                              <a href="{{ url('brling/shop/draw') }}" >
                             @endif
                               Verdifcar agora
                             </a>
@@ -85,7 +85,7 @@
 
                       </div>
                       <div class="shop_h"></div>
-                      <a style="color:white" href="{{ url('drling/member/transaction') }}" >
+                      <a style="color:white" href="{{ url('brling/member/transaction') }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Minhas Transações</h2>
@@ -96,7 +96,7 @@
                       </div>
                       </a>
                       
-                      <a style="color:white" href="{{ url('drling/shop/guide') }}" >
+                      <a style="color:white" href="{{ url('brling/shop/guide') }}" >
                       <div class="shop_jt">
                        <div class="shop_jt_left">
                           <h2>Carteira<span>Gerenciar contas bancárias</span></h2>
@@ -121,7 +121,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('drling.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

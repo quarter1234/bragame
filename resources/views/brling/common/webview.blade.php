@@ -37,13 +37,13 @@
       let act = "{{ $act }}";
 
       if(act == 'kyc') {
-        window.location.href = "{{ url('drling/shop') }}"
+        window.location.href = "{{ url('brling/shop') }}"
       } else if(act == 'pay') {
-          window.location.href = "{{ url('drling/shop') }}"
+          window.location.href = "{{ url('brling/shop') }}"
       } else if(act == 'payment') {
-          window.location.href = "{{ url('drling/shop') }}"
+          window.location.href = "{{ url('brling/shop') }}"
       } else if(act == 'post_pay') {
-          window.location.href = "{{ url('drling/pay/recharge') }}"
+          window.location.href = "{{ url('brling/pay/recharge') }}"
       } else {
         window.history.back();
       }

@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
 
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/activity.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/activity.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -19,9 +19,9 @@
    
 
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
     <style>
@@ -65,7 +65,7 @@
                       <!---->
                       <!---->
                       
-                      <button _ngcontent-snw-c1="" onclick="location.href='{{ route("drling.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
+                      <button _ngcontent-snw-c1="" onclick="location.href='{{ route("brling.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
                       
                     </jx-header-nav-content>--}}
                   </div>
@@ -84,7 +84,7 @@
                     <!---->
 
                     @foreach($activity as $item)
-					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("drling.activity.info", ["id" => $item['id']])}}'" tabindex="0">
+					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("brling.activity.info", ["id" => $item['id']])}}'" tabindex="0">
                       <span _ngcontent-snw-c1="" class="activity-status open"></span>
                       <span _ngcontent-snw-c1="" class="activity-btn-title">{{ $item['title'] }}</span>
                       <span _ngcontent-snw-c1="" class="activity-btn-duration">Tempo：A eficácia a Longo prazo</span>
@@ -102,7 +102,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('drling.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

@@ -149,13 +149,13 @@
     function check_login(obj) {
         showLoading();
         $.ajax({
-            url : "{{url('drling/login')}}",
+            url : "{{url('brling/login')}}",
             type : 'POST',
             data : $("#form1").serialize(),
             success : function (data) {
                 hideLoading()
                 if(data.code == 200) {
-				          window.location.href= "{{url('drling/index')}}"
+				          window.location.href= "{{url('brling/index')}}"
                 } else {
                   showModal(data.message);
                 }
@@ -170,13 +170,13 @@
     function check_register(obj) {
       showLoading();
        $.ajax({
-          url : "{{url('drling/register')}}",
+          url : "{{url('brling/register')}}",
           type : 'POST',
           data : $("#form_register").serialize(),
           success : function (data) {
             hideLoading()
             if(data.code == 200) {
-              window.location.href= "{{url('drling/index')}}"
+              window.location.href= "{{url('brling/index')}}"
             } else {
               showModal(data.message);
             }

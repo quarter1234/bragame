@@ -45,7 +45,7 @@
     width:20px;
     height:20px;
     float:right;
-    background:url(../drling/img/gb_ico.png) no-repeat;
+    background:url(../brling/img/gb_ico.png) no-repeat;
     background-size:20px 20px;
     margin-right:5px;
     margin-top:5px;

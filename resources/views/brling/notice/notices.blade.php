@@ -2,11 +2,11 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
-	<link rel="stylesheet" href="/drling/css/material-icons.css">
+	<link rel="stylesheet" href="/brling/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/static/css/styles.41928e9497559161f9b8.css">
 	<link rel="stylesheet" href="/static/css/artDialog.css">
@@ -81,7 +81,7 @@ div.banner-item-container[_ngcontent-iif-c5] {width:100%;height:100%;display:fle
 img.banner-item[_ngcontent-iif-c5] {flex:0 0 auto;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;pointer-events:none;background-image:linear-gradient(to right,transparent,#000 calc(50% - 50vh / 480 * 1125 / 2),#000 calc(50% + 50vh / 480 * 1125 / 2),transparent)}
 </style><style>button.bulletin-board-btn[_ngcontent-iif-c6] {display:block;margin:0;padding:8px 15px;width:100%;border-radius:0;color:#fff}
 div.bulletin-board-container[_ngcontent-iif-c6] {box-sizing:border-box;height:20px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
-div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/bulletin-icon.a996c907273958ac2d65.svg)}
+div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/bulletin-icon.a996c907273958ac2d65.svg)}
 .more-announcement-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:70px;height:100%;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(more-announcement.e9aba3242f773db1453a.png)}
 div.bulletin-board[_ngcontent-iif-c6] {flex:1 1 auto;margin-left:1em;height:20px;overflow:hidden;text-align:start;font-size:14px;font-weight:400;color:#878e97;line-height:20px}
 </style><style>div.util-bar-container[_ngcontent-iif-c7] {padding:0 10px 10px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
@@ -99,7 +99,7 @@ span.util-btn-icon.deposit[_ngcontent-iif-c7] {background-image:url(deposit.862c
 span.util-btn-icon.transfer[_ngcontent-iif-c7] {background-image:url(transfer.a1c5b153615b288c7824.png)}
 span.util-btn-icon.withdraw[_ngcontent-iif-c7] {background-image:url(withdraw.a41c76f1715915566d01.png)}
 span.util-btn-icon.ac[_ngcontent-iif-c7] {background-image:url(ac.6e82c2d8f893679d58fb.png)}
-div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/cs_img.c95648a5d29ec2d84117.svg)}
+div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/cs_img.c95648a5d29ec2d84117.svg)}
 div.cs-dialog-title[_ngcontent-iif-c7] {margin-top:22px;color:#333;font-size:24px;font-weight:500}
 </style><style>.home-game-board-ctn[_ngcontent-iif-c8] {display:flex;flex-flow:row nowrap}
 .side-menu-ctn[_ngcontent-iif-c8] {margin-left:10px;display:flex;flex-flow:column nowrap;align-items:center;justify-content:flex-start}
@@ -271,7 +271,7 @@ jx-content-view.no-more-record[_ngcontent-iif-c23] {text-align:center}
 .message-tab-btn-group__tab-btn__content-wrapper[_ngcontent-iif-c25] {box-sizing:border-box;padding:5px;height:100%;min-height:49px;font-size:16px;font-weight:500;line-height:22px;text-align:center;color:#5d636e;display:flex;flex-flow:row nowrap;justify-content:center;align-items:center;width:100%;margin:0 auto}
 .message-tab-btn-group__tab-btn__content-wrapper--active[_ngcontent-iif-c25] {color:#fff;border-bottom:2px solid #14a4be}
 .message-tab-btn-group__tab-btn__content-wrapper__icon[_ngcontent-iif-c25] {flex:0 0 auto;display:block;margin-right:10px;width:30px;height:30px;background-size:contain;background-repeat:no-repeat;background-position:center center;position:relative}
-.message-tab-btn-group__tab-btn__content-wrapper__icon--announcement[_ngcontent-iif-c25] {background-image:url(/drling/img/message-center-tab-bar-notice_icon.ce1d06cb69405ac3c3e3.svg)}
+.message-tab-btn-group__tab-btn__content-wrapper__icon--announcement[_ngcontent-iif-c25] {background-image:url(/brling/img/message-center-tab-bar-notice_icon.ce1d06cb69405ac3c3e3.svg)}
 .message-tab-btn-group__tab-btn__content-wrapper__icon--chatroom[_ngcontent-iif-c25] {background-image:url(message-center-tab-bar-message_icon.442135c6e41a14c2f1ef.svg)}
 .message-tab-btn-group__tab-btn__content-wrapper__icon[_ngcontent-iif-c25] > div.unread[_ngcontent-iif-c25] {position:absolute;top:-8px;left:20px;font-size:12px;color:#fff;background-color:red;border-radius:8px;width:auto;min-width:16px;height:16px;line-height:16px;font-weight:inherit}
 .message-tab-btn-group__tab-btn__content-wrapper__icon[_ngcontent-iif-c25] > div.unread.twoDigit[_ngcontent-iif-c25] {padding:0 2px}

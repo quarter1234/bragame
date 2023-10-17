@@ -1,7 +1,7 @@
 @foreach($data as $item)
 <div class="rechare_list">
     
-        <img src="../../drling/img/dd_ico.png" />
+        <img src="../../brling/img/dd_ico.png" />
         <div class="email_xx1"></div>
         <div class="email_xx2"></div>
         <div class="email_wk">
@@ -9,7 +9,7 @@
             <div class="rechare_zt">{{ $item['format_status'] }}</div>
             <div class="email_w_bottom">
                 <div class="email_w_left">
-                <img src="../../drling/img/jb.png" />
+                <img src="../../brling/img/jb.png" />
                 {{$item['count'] ?? 0}}  
                 </div>
                 <div class="email_w_right">{{$item['format_create_time']}}</div>

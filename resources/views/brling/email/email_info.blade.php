@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/activity.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/css/member.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/activity.css">
+    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/css/member.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -19,9 +19,9 @@
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
 
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
@@ -36,8 +36,8 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
 
-          @include('drling.common.top') 
-          @include('drling.common.modal') 
+          @include('brling.common.top') 
+          @include('brling.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
             <div class="email_nr">
@@ -53,13 +53,13 @@
             <div class="e_b_hs">
                 <span>Correio:</span>
                 <div class="email_w_left">
-                <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/jb.png" />
+                <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/jb.png" />
                 <label>{{ $info['attach'][1] ?? 0 }}</label> 
                 </div>
             </div>
 
             {{--loading组件--}}
-            @include('drling.common.loading')
+            @include('brling.common.loading')
 
             <div class="e_bottom">
             @if($info['hastake'] == 0) 
@@ -87,7 +87,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('drling.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>
@@ -103,7 +103,7 @@
         $('#ReceberBtn').click(function(){
           showLoading();
           $.ajax({
-              url : "{{ route('drling.email.attach', ['id' => $info['id']]) }}",
+              url : "{{ route('brling.email.attach', ['id' => $info['id']]) }}",
               type : 'GET',
               data : {},
               success : function (data) {
@@ -115,7 +115,7 @@
 
                  
 
-                  window.location.href= "{{ url('drling/member/email') }}"
+                  window.location.href= "{{ url('brling/member/email') }}"
                 } else {
                   showModal(data.message);
                  

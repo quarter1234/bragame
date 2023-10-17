@@ -2,11 +2,11 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
-	<link rel="stylesheet" href="/drling/css/material-icons.css">
+	<link rel="stylesheet" href="/brling/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/static/css/styles.41928e9497559161f9b8.css">
 	<link rel="stylesheet" href="/static/css/artDialog.css">

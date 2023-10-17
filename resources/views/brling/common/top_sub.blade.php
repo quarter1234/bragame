@@ -1,12 +1,12 @@
 <div class="top">
-    <div class="black"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/left_ico.png" /></div>
-    <div class="logo"><img src="/drling/img/icon_logo01.png"/></div>
+    <div class="black"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/left_ico.png" /></div>
+    <div class="logo"><img src="/brling/img/icon_logo01.png"/></div>
 
     <div class="money" style="float:right;margin-right:10px">
         <span>R$</span>
         <span>{{$user['coin']}}</span>
-        <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/drling/img/sx.png" /></div>
-        <div class="qb"><img onclick="location.href='{{ url("drling/pay/recharge") }}'" src="../../drling/img/qb.png" /></div>
+        <div class="sx"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/brling/img/sx.png" /></div>
+        <div class="qb"><img onclick="location.href='{{ url("brling/pay/recharge") }}'" src="../../brling/img/qb.png" /></div>
     </div>
 
 </div>
@@ -17,7 +17,7 @@ $(function(){
     })
     $('.black').click(function(){
         // window.history.go(-1);
-        window.location.href= "{{url('drling/index')}}"
+        window.location.href= "{{url('brling/index')}}"
     })
 })
 </script>

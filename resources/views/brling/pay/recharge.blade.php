@@ -2,14 +2,14 @@
   
   <head>
     <meta charset="utf-8">
-    @include('drling.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
     <link rel="stylesheet" href="/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="/drling/css/activity.css">
-    <link rel="stylesheet" href="/drling/css/share.css">
+    <link rel="stylesheet" href="/brling/css/activity.css">
+    <link rel="stylesheet" href="/brling/css/share.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
@@ -17,9 +17,9 @@
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
     <meta name="theme-color" content="#0C192C">
-    <meta name="apple-drling-web-app-capable" content="yes">
+    <meta name="apple-brling-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
-    <meta name="apple-drling-web-app-status-bar-style" content="black">
+    <meta name="apple-brling-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     </head>
 
@@ -29,7 +29,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('drling.common.top_sub')
+        @include('brling.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -78,7 +78,7 @@
                         {{--最外层Foreach--}}
                       @endforeach  
 
-                      <form method="get" onSubmit="return check_submit(this)" action="{{url('drling/display')}}" >
+                      <form method="get" onSubmit="return check_submit(this)" action="{{url('brling/display')}}" >
                           @csrf
                           <div class="recharge_input">
                             <span>R$</span>
@@ -104,7 +104,7 @@
               </jx-header-row>
             </div>
 
-            @include('drling.common.modal') 
+            @include('brling.common.modal') 
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
