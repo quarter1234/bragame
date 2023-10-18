@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title')
+    @include('brling.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -40,7 +40,7 @@
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
 
-        @include('mobile.common.top') 
+        @include('brling.common.top') 
 
             <div class="centen"></div>
             <div class="centen_tab">
@@ -58,20 +58,20 @@
                   </div>
             </div>
             <div class="centen_show"  style="display:block;" >
-             @include('mobile.share.invite') 
+             @include('brling.share.invite') 
             </div>
             <div class="centen_show" >
-            @include('mobile.share.agent') 
+            @include('brling.share.agent') 
             </div>
             <div class="centen_show" >
-            @include('mobile.share.user') 
+            @include('brling.share.user') 
             </div>
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                @include('mobile.common.footer') 
+                @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

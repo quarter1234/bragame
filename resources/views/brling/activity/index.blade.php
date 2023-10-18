@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
 
     <!-- Material Icons -->
@@ -102,7 +102,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

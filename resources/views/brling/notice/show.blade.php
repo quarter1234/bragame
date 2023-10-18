@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <meta charset="UTF-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
