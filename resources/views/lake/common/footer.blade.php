@@ -45,6 +45,7 @@
                 <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
                 Your browser does not support the audio element.
                   </audio>
+                  <button id="play-button">播放</button>
                   </div>
                   <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
                 </div> 
@@ -249,4 +250,31 @@ function loadProperties(lang) {
     // button.addEventListener("click",function(){
     //     window.location.href="views/lack/member/bets.blade.php"
     // })
+
+
+    const audio = document.getElementById("audio");
+        const playButton = document.getElementById("play-button");
+
+        playButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "暂停";
+            } else {
+                audio.pause();
+                playButton.textContent = "播放";
+            }
+        });
+
+         // 监听来自其他窗口的消息
+         window.addEventListener("message", function(event) {
+            if (event.data === "toggleAudio") {
+                // 切换音乐的播放状态
+                if (audio.paused) {
+                    audio.play();
+                } else {
+                    audio.pause();
+                }
+            }
+        });
+
 </script>
