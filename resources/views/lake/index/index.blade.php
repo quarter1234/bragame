@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('green2.common.common_title')
+    @include('lake.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -20,7 +20,7 @@
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/way.min.js"></script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/index.js"></script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="/mobile/green2/js/jquery.i18n.properties.js"></script>
+    <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>
     <meta name="theme-color" content="#04431f">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using green2-translucent -->
@@ -40,8 +40,8 @@
             <div _ngcontent-way-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
-          @include('green2.common.modal')
-          @include('green2.common.modal_sub')
+          @include('lake.common.modal')
+          @include('lake.common.modal_sub')
             <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
@@ -49,6 +49,9 @@
                   <!---->
                   <!---->
                   <!---->
+                  <button class="aaa">
+                    <img src="/mobile/lake/images/zf_cd.png" alt="">
+                    </button>
                   <div _ngcontent-way-c3="" class="header-icons-ctn ng-star-inserted">
                     <div _ngcontent-way-c3="" class="header-jx-icon header-icon"></div>
                   </div>
@@ -158,7 +161,6 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-
                     <div class="xh_game">
                         <div class="xh_game_top">
                             <label></label>
@@ -631,6 +633,13 @@
       });
     </script>
     <script type="text/javascript" src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/js/scroll.js"></script>
+    <script>
+    $(function(){
+      $('.aaa').click(function(){
+          $('.pc_tab').toggle()
+      })
+    })
+    </script>
   </body>
 
 </html>
