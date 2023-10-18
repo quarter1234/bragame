@@ -47,11 +47,12 @@
                   </audio>
                   </div>
                   <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
-                </div>  
+                </div> 
                 </div>
             
     </div>
 </div>
+
 <style>
  /* 自定义播放器样式 */
  #music-player {
@@ -223,6 +224,9 @@
       $('.pc_nav li').mouseout(function(){
         $(this).removeClass('pc_on')
       })
+      $('.aaa').click(function(){
+          $('.pc_tab').toggle()
+      })
     })
     
 function loadProperties(lang) {
@@ -240,5 +244,9 @@ function loadProperties(lang) {
             })
         }
         loadProperties('en');
-
+   
+    // var button = document.getElementById("aaa");
+    // button.addEventListener("click",function(){
+    //     window.location.href="views/lack/member/bets.blade.php"
+    // })
 </script>

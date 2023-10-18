@@ -107,10 +107,12 @@ div.app-background[_ngcontent-way-c2] {
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    margin-left: 40px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start
+    
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -3645,6 +3647,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .generic-background-image{
     border-radius:10px;
+    display: inline;
 }
 .menu_body{
     width:100%;
@@ -3656,6 +3659,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     top:0;
     left:-100%;
 }
+
 
 /*/deep/ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 0px transparent inset !important;
@@ -3758,7 +3762,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:url(/mobile/lake/images/kf_r_ico1.png);
     background-size:24px 24px;
 }
-
 .black_nav li.black_on{
     color:#ef962f;
 }
@@ -3790,9 +3793,25 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-top:10px;
     margin-left:10px;
 }
-
 .pc_nav li.pc_on{
     color:#ef962f;
+}
+.aaa img{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+.aaa{
+    width: 70px;
+    height: 43px;
+    color: #f7f0f0;
+    font-size: 20px;
+    /* margin-left: 143px; */
+    background-color: rgba(255, 255, 255,.1);
+    position: sticky;
+    margin-left: -40px;
+    top:1%;
 }
 .pc_on .n1{
     background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
@@ -3893,12 +3912,15 @@ button.cancel-btn[_ngcontent-way-c22] {
     color: #f7f0f0;
     width: 180px;
     height: 40px;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 20px;
+    display: flex;
+    line-height: 40px;
 }
 .tubiao{
     width: 20px;
     height: 20px;
+    margin-top: 10px;
 }
 
 .pc_tab{
