@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
@@ -38,7 +38,7 @@
           
           
 <<<<<<< HEAD
-          @include('mobile.common.top_sub') 
+          @include('brling.common.top_sub') 
 =======
           @include('brling.common.top_sub') 
 >>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
@@ -55,7 +55,7 @@
 
           {{--loading组件--}}
 <<<<<<< HEAD
-          @include('mobile.common.loading')
+          @include('brling.common.loading')
 =======
           @include('brling.common.loading')
 >>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
@@ -86,7 +86,7 @@
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
 <<<<<<< HEAD
-                  @include('mobile.common.footer') 
+                  @include('brling.common.footer') 
 =======
                   @include('brling.common.footer') 
 >>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a

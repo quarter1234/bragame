@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title')
+    @include('brling.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -247,7 +247,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('mobile.index.game_recommend')
+                          @include('brling.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">
@@ -288,7 +288,6 @@
                 z-index:99999;
                 top:0;
                 left:0;
-                background:#0c192c;
                 overflow: hidden;
                 display:block;
             }
@@ -301,7 +300,6 @@
                 left:50%;
                 top:50%;
                 margin:-300px 0 0 -48%;
-                border:3px solid #31fff3;
                 border-radius:10px;
             }
             .gg_tc_title{
@@ -363,7 +361,17 @@
                 }
             .gg_centen img{
                 width:360px;
-                height:526px;
+                height:900px;
+            }
+            @media screen and (min-width: 1200px) {
+              .gg_tc{
+                width:360px;
+                margin:-300px 0 0 -180px;
+                position:absolute;
+                left:50%;
+                top:50%;
+              }
+               
             }
                 </style>
                   </jx-home-game-board>

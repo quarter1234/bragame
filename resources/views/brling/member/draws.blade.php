@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
@@ -36,7 +36,7 @@
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
-          @include('mobile.common.top_sub') 
+          @include('brling.common.top_sub') 
 
 
             <div class="email_h"></div>
@@ -49,7 +49,7 @@
             </div>
 
           {{--loading组件--}}
-          @include('mobile.common.loading')
+          @include('brling.common.loading')
           
           {{--
             <div class="e_bottom">
@@ -76,7 +76,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>

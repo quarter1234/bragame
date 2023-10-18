@@ -26,7 +26,7 @@
     <script type="text/javascript" src="/mobile/lake/js/jquery.i18n.properties.js"></script>  
     </head>
 
-  <body style="color: white; background-color: #04431f;">
+  <body style="color: white; background-color: #000;">
     <jx-root ng-version="8.2.12">
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-snw-c0="">
