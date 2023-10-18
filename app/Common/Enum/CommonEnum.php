@@ -23,6 +23,9 @@ class CommonEnum
     const GAME_PLAT_PG = 2;
     const GAME_PLAT_PGPRO = 3;
 
+    const USER_TEAM_BAN_NOR = 1; // 正常
+    const USER_TEAM_BAN_BLOCK = 2; // 封禁
+
     const S3_PATH_ARR = [
         "mobile" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public',
         "black" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',

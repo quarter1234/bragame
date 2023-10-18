@@ -98,4 +98,18 @@ class DUserTreeRepository extends Repository
     {
         return $this->model()::where('ancestor_id', $uid)->whereIn('ancestor_h', $heights)->count();
     }
+
+    public function checkUidInTeamBan($uid)
+    {
+        $count = $this->model()::join('d_user', 'd_user_tree.ancestor_id', '=', 'd_user.uid')
+                    ->where('d_user.team_ban', CommonEnum::USER_TEAM_BAN_BLOCK)
+                    ->where('d_user_tree.descendant_id', $uid)
+                    ->count();
+        if($count > 0)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

@@ -127,6 +127,11 @@ class ShopController extends Controller
             return Result::error("Acima do valor máximo:R$ {$userDrawLimit['maxcoin']}");
         }
 
+        $ckRes = $this->shopService->checkTeamBan($user);
+        if($ckRes){
+            return $ckRes;
+        }
+
         if($err = $this->shopService->checkIsPlayer($user, $dcoin)) {
              return $err;
         }
