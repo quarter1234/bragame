@@ -107,10 +107,12 @@ div.app-background[_ngcontent-way-c2] {
     font-size: 20px;
     font-weight: 500;
     line-height: 20px;
+    margin-left: 40px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: flex-start
+    
 }
 
 .header-view__nav-row-wrapper__container__nav-row__prefix[_ngcontent-way-c3] {
@@ -3645,6 +3647,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 .generic-background-image{
     border-radius:10px;
+    display: inline;
 }
 .menu_body{
     width:100%;
@@ -3656,6 +3659,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     top:0;
     left:-100%;
 }
+
 
 /*/deep/ input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 0px transparent inset !important;
@@ -3723,42 +3727,41 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .n1{
-    background:url(/mobile/black/images/home.93b20d6e835f71c043b8.png);
+    background:url(/mobile/lake/images/home.93b20d6e835f71c043b8.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/black/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(/mobile/lake/images/activity.8a6a35ba2ac648314ace.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(/mobile/black/images/zfj_ico.png);
+    background:url(/mobile/lake/images/zfj_ico.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(/mobile/black/images/sk.png);
+    background:url(/mobile/lake/images/sk.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
-    background:url(/mobile/black/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
     background-size:24px 24px;
 }
 .n6{
-    background:url(/mobile/black/images/f-vip1.png);
+    background:url(/mobile/lake/images/f-vip1.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(/mobile/black/images/email-fill1.png);
+    background:url(/mobile/lake/images/email-fill1.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(/mobile/black/images/kf_r_ico1.png);
+    background:url(/mobile/lake/images/kf_r_ico1.png);
     background-size:24px 24px;
 }
-
 .black_nav li.black_on{
     color:#ef962f;
 }
@@ -3790,9 +3793,25 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-top:10px;
     margin-left:10px;
 }
-
 .pc_nav li.pc_on{
     color:#ef962f;
+}
+.aaa img{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+.aaa{
+    width: 70px;
+    height: 43px;
+    color: #f7f0f0;
+    font-size: 20px;
+    /* margin-left: 143px; */
+    background-color: rgba(255, 255, 255,.1);
+    position: sticky;
+    margin-left: -40px;
+    top:1%;
 }
 .pc_on .n1{
     background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
@@ -3826,10 +3845,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:url(/mobile/black/images/kf_r_ico.png);
     background-size:24px 24px;
 }
-.pc_tab{
-    display:none;
-}
-
 .game_x{
     width: 100%;
     overflow-x: scroll;
@@ -3893,20 +3908,70 @@ button.cancel-btn[_ngcontent-way-c22] {
    
 }
 .zf_touzhu{
-    background-color: rgb(24, 36, 52);
+    background-color: rgba(255, 255, 255,.1);
     color: #f7f0f0;
     width: 180px;
     height: 40px;
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 20px;
+    display: flex;
+    line-height: 40px;
 }
 .tubiao{
     width: 20px;
     height: 20px;
+    margin-top: 10px;
 }
 
-
-
+.pc_tab{
+    width:180px;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:34px;
+    z-index:99;
+    background:rgba(0, 0, 0, .2);
+    display:block;
+}
+.pc_nav{
+    margin-top:70px;
+    background-color: #000;
+}
+.zf_box{
+    margin-top: 20px;
+}
+.pc_nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+.pc_nav li{
+    height: 87px;
+    width: 86px;
+    display: flex;
+    line-height: 40px;
+    font-size: 14px;
+    color: #cecece;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255,.1);
+    border-radius: 15px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.pc_nav li label{
+    width:24px;
+    height:24px;
+    display:inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 18px;
+}
+.pc_nav li:hover{
+    background-color: rgb(0, 93, 254);
+}
 @media screen and (min-width: 1200px) {
     .game_xx{
         width:10%;
@@ -3976,52 +4041,6 @@ button.cancel-btn[_ngcontent-way-c22] {
         display:none;
     }
 
-    .pc_tab{
-        width:180px;
-        height:100%;
-        position:fixed;
-        left:0;
-        top:34px;
-        z-index:99;
-        background:rgba(0, 0, 0, .2);
-        display:block;
-    }
-    .pc_nav{
-        margin-top:70px;
-    }
-    .zf_box{
-        margin-top: 20px;
-        background-color: rgb(21, 29, 41);
-    }
-    .pc_nav ul{
-        margin:0;
-        padding:0;
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .pc_nav li{
-        height: 87px;
-        width: 90px;
-        display: flex;
-        line-height: 40px;
-        font-size: 14px;
-        color: #cecece;
-        flex-direction: column;
-        align-items: center;
-        background-color: rgb(24, 36, 52);
-        border-radius: 30px;
-    }
-    .pc_nav li label{
-        width:24px;
-        height:24px;
-        display:inline-block;
-        margin-left:10px;
-        margin-right:10px;
-        margin-top: 18px;
-    }
-    .pc_nav li:hover{
-        background-color: rgb(0, 93, 254);
-    }
    .money{
     margin-top:10px;
    }
