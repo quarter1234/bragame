@@ -2,7 +2,7 @@
 
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title')
+    @include('brling.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="/mobile/brling/css/index_style03.css?rand=3">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/swiper-bundle.min.css">
-    <link rel="shortcut icon" href="/mobile/brling/img/brling.ico" />
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->
     <script>var Webconfigs = {
@@ -248,7 +247,7 @@
                         {{-- 全部游戏 --}}
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab8_content" style="display: block">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab8_content_pps"></div>
-                          @include('mobile.index.game_recommend')
+                          @include('brling.index.game_recommend')
                         </div>
                         <!---->
                         <div _ngcontent-avh-c16="" class="lottery-board-ctn tab" id="tab9_content" style="display: none">

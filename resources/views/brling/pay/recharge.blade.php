@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
@@ -29,7 +29,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('mobile.common.top_sub')
+        @include('brling.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -105,7 +105,7 @@
             </div>
 
 <<<<<<< HEAD
-            @include('mobile.common.modal') 
+            @include('brling.common.modal') 
 =======
             @include('brling.common.modal') 
 >>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a

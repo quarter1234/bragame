@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
@@ -30,7 +30,7 @@
       <jx-main-wrapper _nghost-snw-c0="">
         <router-outlet _ngcontent-snw-c0=""></router-outlet>
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-        @include('mobile.common.top_sub')
+        @include('brling.common.top_sub')
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
@@ -91,8 +91,8 @@
               </jx-header-row>
             </div>
 <<<<<<< HEAD
-            @include('mobile.common.loading')
-            @include('mobile.common.modal')
+            @include('brling.common.loading')
+            @include('brling.common.modal')
 =======
             @include('brling.common.loading')
             @include('brling.common.modal')

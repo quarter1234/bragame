@@ -2,7 +2,7 @@
   
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('brling.common.common_title') 
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
@@ -37,7 +37,7 @@
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
           
           
-          @include('mobile.common.top_sub') 
+          @include('brling.common.top_sub') 
           {{-- Tab --}}
          <div class="transaction_t">
             <div class="transaction_list transaction_list_on">Historico de recargas</div>
@@ -66,7 +66,7 @@
 
 
           {{--loading组件--}}
-          @include('mobile.common.loading')      
+          @include('brling.common.loading')      
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
@@ -83,7 +83,7 @@
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
                   
-                  @include('mobile.common.footer') 
+                  @include('brling.common.footer') 
                   
                  
                 </jx-tab-bar>
