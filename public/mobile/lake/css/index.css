@@ -3933,6 +3933,27 @@ button.cancel-btn[_ngcontent-way-c22] {
     background:rgba(0, 0, 0, .2);
     display:block;
 }
+.toggleButton{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .1);
+    position: sticky;
+    left: 1203px;
+    /* top: 12%; */
+    position: fixed;
+    top: 64%;
+    position: sticky;
+}
+.toggleButton img{
+    width: 20px;
+    height: 20px;
+}
+#play-button {
+    background-color: #009688;
+    color: #fff;
+    padding: 5px 10px;
+    cursor: pointer;
+}
 .pc_nav{
     margin-top:70px;
     background-color: #000;
