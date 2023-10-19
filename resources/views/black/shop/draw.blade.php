@@ -51,6 +51,7 @@
                         <input name="amount" id="postAmount" value="{{ $user['mincoin'] }}" placeholder="Por favor, insira o valor" />
                         <input type="hidden" id="bankId" value="{{$banks[0]['id']}}"  name="bankid" />
                     </div>
+                    <p>O valor do saque deve ser inteiro e 0</p>
                     <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
                     <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
                 </div>
@@ -116,6 +117,23 @@
       </jx-main-wrapper>
     </jx-root>
     <script>
+      function isOf(amount){
+        if(String(amount).indexOf('.') > -1){
+           return true;
+        } 
+
+        return false;
+      }
+
+      function checkUnit(amount){
+        let theUnit = parseInt(amount % 10);
+        if(theUnit == 0){
+          return true;
+        }
+        
+        return false;
+      }
+
       function check_draw(obj) {
         let amount = $('#postAmount').val();
         let bank_id = $('#bankId').val();
@@ -139,6 +157,16 @@
 
         if(amount.trim().length > 132){
           showModal('Por favor, insira um valor de saque correto.');
+          return false;
+        }
+
+        if(isOf(amount)){
+          showModal('Os montantes só podem ser redondos');
+          return false;
+        }
+
+        if(!checkUnit(amount)){
+          showModal('O único dígito do valor é 0');
           return false;
         }
 
