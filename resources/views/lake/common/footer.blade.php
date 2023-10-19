@@ -41,14 +41,16 @@
                       <li class="zf_box1" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                       <div id="music-player">
-                    <audio id="audio" controls autoplay>
-                <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-                  </audio>
-                  <button id="play-button">播放</button>
+                       <audio id="audio" controls autoplay>
+                       <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                         </audio>
+                        
+                         <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
                   </div>
-                  <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
+                  
                 </div> 
+                <button id="play-button"></button>
                 </div>
             
     </div>
@@ -63,6 +65,7 @@
     border-radius: 25px;
     margin-top: 20px;
 }
+
 #music-player audio {
     width: 100%;
 }
@@ -152,7 +155,7 @@
     background:url(/mobile/lake/images/kf_r_ico.png);
     background-size:24px 24px;
 }
-.pc_tab{
+.pc_nav{
     display:none;
 }
 .zf_box{
@@ -226,7 +229,7 @@
         $(this).removeClass('pc_on')
       })
       $('.aaa').click(function(){
-          $('.pc_tab').toggle()
+          $('.pc_nav').toggle()
       })
     })
     
@@ -258,22 +261,10 @@ function loadProperties(lang) {
         playButton.addEventListener("click", function() {
             if (audio.paused) {
                 audio.play();
-                playButton.textContent = "暂停";
+                playButton.textContent = "";
             } else {
                 audio.pause();
-                playButton.textContent = "播放";
-            }
-        });
-
-         // 监听来自其他窗口的消息
-         window.addEventListener("message", function(event) {
-            if (event.data === "toggleAudio") {
-                // 切换音乐的播放状态
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                    audio.pause();
-                }
+                playButton.textContent = "";
             }
         });
 

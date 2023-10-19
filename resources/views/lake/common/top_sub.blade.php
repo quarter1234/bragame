@@ -1,4 +1,5 @@
 <div class="top">
+   
     <div class="lake"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/left_ico.png" /></div>
    <div class="logo"><img src="/mobile/lake/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">

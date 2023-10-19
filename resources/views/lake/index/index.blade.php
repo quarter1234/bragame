@@ -237,7 +237,7 @@
                       </div>
                     </button>--}}
                   </jx-bulletin-board>
-
+                      
                   <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
                   <!--触发声音-->
                   <audio id="myTune">
@@ -376,18 +376,17 @@
                           <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
                           <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
                           <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
-                      </ul>
-                      <div id="music-player">
-                    <audio id="audio" controls autoplay>
-                <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-                  </audio>
-                  </div>
-                  <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
+                             <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
+                         </ul>
+                         <div id="music-player">
+                         <audio id="audio" controls autoplay>
+                           <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                        </audio>
+                          <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
                    </div>
             </div>
-            
+            <button id="play-button"></button>
             {{--loading组件--}}
             @include('lake.common.loading')
             @include('lake.index.index_login')
@@ -593,6 +592,19 @@
           })
         });
 
+        const audio = document.getElementById("audio");
+        const playButton = document.getElementById("play-button");
+
+        playButton.addEventListener("click", function() {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = "";
+            } else {
+                audio.pause();
+                playButton.textContent = "";
+            }
+        });  
+
         $(document).on('click', '.tada_game_go', function() {
           showLoading();
 
@@ -636,9 +648,12 @@
     <script>
     $(function(){
       $('.aaa').click(function(){
-          $('.pc_tab').toggle()
+          $('.pc_nav').toggle()
       })
     })
+
+
+    
     </script>
   </body>
 

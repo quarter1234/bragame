@@ -1904,7 +1904,29 @@ button.cancel-btn[_ngcontent-way-c22] {
     background: linear-gradient(-90deg,#e7a738 0%,#f1c56e 100%);
     color:#000;
 }
-
+.aaa img{
+    display: block;
+    margin: 0 auto;
+    width: 20px;
+    height: 20px;
+}
+.aaa{
+    width: 70px;
+    height: 43px;
+    color: #f7f0f0;
+    font-size: 20px;
+    /* margin-left: 143px; */
+    background-color: rgba(255, 255, 255,.1);
+    position: sticky;
+    margin-left: -147px;
+    top:1%;
+}
+.logo img{
+    width: 132px;
+    height: 30px;
+    margin-left: 64px;
+    margin-top: 5px;
+}
 .recharge_wk{
     width: 100%;
 	overflow-x: auto;

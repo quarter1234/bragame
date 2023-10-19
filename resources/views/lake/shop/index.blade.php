@@ -48,6 +48,7 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
+          
             
           @include('lake.common.top') 
 
@@ -55,8 +56,10 @@
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
+
                 {{--
                       <div class="shop_top">
+                          
                           <div class="shop_t_text">Saldo Total</div>
                           <div class="shop_b">{{ $user['coin'] }}</div>
                           <button onclick="location.href='{{ url("mobile/pay/recharge") }}'" class="shop_button">Adicionar dinheiro</button>
@@ -109,6 +112,7 @@
                       </a>
 --}}
 <div class="shopindex">
+              
            <div class="shop_index_list" onclick="location.href='{{ url("mobile/pay/recharge") }}'">
                 <div class="shop_index_left">
                     <span class="s1"></span>
