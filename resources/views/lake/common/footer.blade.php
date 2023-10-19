@@ -41,7 +41,7 @@
                       <li class="zf_box1" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                       </ul>
                       <div id="music-player">
-                       <audio id="audio" controls autoplay>
+                <audio id="audio" controls>
                        <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
                         Your browser does not support the audio element.
                          </audio>
@@ -76,11 +76,13 @@
     height: 40px;
     font-size: 16px;
     margin-top: 20px;
+    display: flex;
+    line-height: 40px;
 }
 .tubiao{
     width: 20px;
     height: 20px;
-    line-height: 40px;
+    margin-top: 10px;
 }
 
 .n1{

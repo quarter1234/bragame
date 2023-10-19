@@ -379,7 +379,7 @@
                              <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
                          </ul>
                          <div id="music-player">
-                         <audio id="audio" controls autoplay>
+                         <audio id="audio" controls>
                            <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
                           Your browser does not support the audio element.
                         </audio>
