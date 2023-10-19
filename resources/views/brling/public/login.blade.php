@@ -101,11 +101,7 @@ div.login-method-button-group[_ngcontent-inw-c0] div.button-group-container[_ngc
           <div _ngcontent-inw-c0="" class="login-action-btn-group">
             <a href="javascript:void(0)" style="flex: 0 1 auto;padding: 0;color: #878e97;font-size: 14px;font-weight: 400;line-height: 20px;text-decoration: none;"></a>
             
-<<<<<<< HEAD
             <a href="{{url('mobile/register')}}" style="flex: 0 1 auto;padding: 0;color: #878e97;font-size: 14px;font-weight: 400;line-height: 20px;text-decoration: none;">立即注册</a>
-=======
-            <a href="{{url('brling/register')}}" style="flex: 0 1 auto;padding: 0;color: #878e97;font-size: 14px;font-weight: 400;line-height: 20px;text-decoration: none;">立即注册</a>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
 			</div>
           <div _ngcontent-inw-c0="" class="login-page-version-info">系统版本：1.2.0.2366</div></div>
 <script>
