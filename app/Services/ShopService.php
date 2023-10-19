@@ -10,20 +10,24 @@ use App\Repositories\DUserBankRepository;
 use App\Repositories\DUserDrawRepository;
 use App\Repositories\SPayCfgDrawcomRepository;
 use App\Repositories\SPayCfgDrawlimitRepository;
+use App\Repositories\DUserTreeRepository;
 
 class ShopService
 {
     private $bankRepo;
     private $drawComRepo;
     private $drawRepo;
+    private $utRepo;
 
     public function __construct(DUserBankRepository $bankRepo, 
         SPayCfgDrawcomRepository $drawComRepo,
-        DUserDrawRepository $drawRepo)
+        DUserDrawRepository $drawRepo,
+        DUserTreeRepository $utRepo)
     {
         $this->bankRepo  = $bankRepo;
         $this->drawComRepo = $drawComRepo;
         $this->drawRepo = $drawRepo;
+        $this->utRepo = $utRepo;
     }
 
     public function checkDoBind($params)
@@ -279,6 +283,20 @@ class ShopService
                 return Result::error('You have a withdrawal order under review, please wait patiently.');
             }
         }
+    }
+
+    public function checkTeamBan($user)
+    {
+        if($user['team_ban'] == CommonEnum::USER_TEAM_BAN_BLOCK) // 团队封禁
+        {
+            return Result::error('Você não pode retirar, foi banido.');
+        }
+
+        if($this->utRepo->checkUidInTeamBan($user['uid'])){
+            return Result::error('Você não pode retirar, foi banido.');
+        }
+
+        return false;
     }
 
     public function checkLimit($user, $dcoin)

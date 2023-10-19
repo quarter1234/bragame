@@ -9,11 +9,7 @@
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
     <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico">
     <link rel="stylesheet" href="/static/css/material-icons.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" href="/mobile/css/material-icons.css">
-=======
-	<link rel="stylesheet" href="/brling/css/material-icons.css">
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
     <link rel="stylesheet" href="/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/static/css/styles.41928e9497559161f9b8.css">
 	<link rel="stylesheet" href="/static/css/artDialog.css">
