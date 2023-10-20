@@ -3930,7 +3930,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     left:0;
     top:34px;
     z-index:99;
-    background:rgba(0, 0, 0, .2);
     display:block;
 }
 #play-button{
@@ -3938,10 +3937,10 @@ button.cancel-btn[_ngcontent-way-c22] {
     height: 40px;
     background-color: rgba(255, 255, 255, .1);
     /* position: sticky; */
-    left: 16px;
+    left: 10px;
     /* top: 12%; */
     position: fixed;
-    top: 64%;
+    top: 66%;
     background-image: url(/mobile/lake/images/zf_lb.png);
     background-size: cover;
 }

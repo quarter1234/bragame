@@ -48,7 +48,6 @@
                         
                          <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
                   </div>
-                  
                 </div> 
                 <button id="play-button"></button>
                 </div>

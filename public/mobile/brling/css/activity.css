@@ -112,7 +112,9 @@ div.app-background[_ngcontent-snw-c2] {
     .header-view__nav-row-wrapper[_ngcontent-snw-c3] {
         background-color: rgba(12, 25, 44, .8);
         -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
+        backdrop-filter: blur(20px);
+        overflow-y:auto;
+        height:100%;
     }
 }
 
@@ -148,7 +150,8 @@ div.app-background[_ngcontent-snw-c2] {
     .header-view__footer-row-wrapper[_ngcontent-snw-c3] {
         background-color: rgba(19, 34, 53, .8);
         -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
+        backdrop-filter: blur(20px);
+       
     }
 }
 
