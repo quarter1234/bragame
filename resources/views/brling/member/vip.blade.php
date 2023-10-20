@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/member.css">
-    <link rel="stylesheet" href="/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/mobile/brling/css/member.css">
+    <link rel="stylesheet" href="/mobile/brling/css/swiper-bundle.min.css">
     <!-- Used in supported Android browsers -->
  
     <script>var Webconfigs = {
