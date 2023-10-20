@@ -350,7 +350,6 @@
             .gg_centen{
                 width:99%;
                 height:490px;
-                overflow-y:auto;
                 margin:10px auto;
                 text-align:center;
             }
@@ -361,7 +360,7 @@
                 }
             .gg_centen img{
                 width:360px;
-                height:900px;
+                height:562px;
             }
             @media screen and (min-width: 1200px) {
               .gg_tc{
