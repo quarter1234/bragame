@@ -3940,7 +3940,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     left: 10px;
     /* top: 12%; */
     position: fixed;
-    top: 66%;
+    top: 87%;
     background-image: url(/mobile/lake/images/zf_lb.png);
     background-size: cover;
 }
@@ -4055,7 +4055,6 @@ button.cancel-btn[_ngcontent-way-c22] {
     .tab-bar[_ngcontent-way-c10]{
         display:none;
     }
-
    .money{
     margin-top:10px;
    }

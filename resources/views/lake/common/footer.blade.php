@@ -31,28 +31,24 @@
 <div class="pc_tab">
                    <div class="pc_nav">
                       <ul class="zf_box">
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
-                      <li class="zf_box1" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
-                      </ul>
-                      <div id="music-player">
-                <audio id="audio" controls>
-                       <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                         </audio>
-                        
-                         <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
-                  </div>
-                </div> 
-                <button id="play-button"></button>
-                </div>
-            
-    </div>
+                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span data-locale="Home">Casa</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span data-locale="Events">Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span data-locale="Share" >Partilhar</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span data-locale="Favorable">preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span data-locale="VIP">VIP Grau</span></li>
+                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span data-locale="Email">Email</span></li>
+                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span data-locale="Service">Atendimento</span></li>
+                             <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span data-locale="Mine">Meu</span></li>
+                         </ul>
+                         <div id="music-player">
+                         <audio id="audio" controls>
+                           <source src="/mobile/lake/yinyue/11111.mp3" type="audio/mpeg">
+                          Your browser does not support the audio element.
+                        </audio>
+                          <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
+                          </div>
+                     </div>
+            <button id="play-button"></button>
 </div>
 
 <style>
@@ -157,7 +153,21 @@
     background-size:24px 24px;
 }
 .pc_nav{
-    display:none;
+    display: none;
+}
+#play-button{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .1);
+    left: 10px;
+    position: fixed;
+    background-image: url(/mobile/lake/images/zf_lb.png);
+    background-size: cover;
+    bottom:200px;
+}
+#play-button img{
+    width: 20px;
+    height: 20px;
 }
 .zf_box{
     display: flex;
@@ -179,6 +189,7 @@
         top:-970px;  
         display:block;
     }
+    
     .pc_nav ul{
         margin:0;
         padding:0;

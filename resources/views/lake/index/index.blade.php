@@ -384,8 +384,8 @@
                           Your browser does not support the audio element.
                         </audio>
                           <button class="zf_touzhu"><img class="tubiao" src="/mobile/lake/images/zf_jinbi.png" alt="">Registro de apuestas</button>
-                   </div>
-            </div>
+                          </div>
+                     </div>
             <button id="play-button"></button>
             {{--loading组件--}}
             @include('lake.common.loading')
@@ -650,10 +650,7 @@
       $('.aaa').click(function(){
           $('.pc_nav').toggle()
       })
-    })
-
-
-    
+    }) 
     </script>
   </body>
 
