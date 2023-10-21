@@ -10,7 +10,7 @@
             <div class="email_w_bottom">
                 <div class="email_w_left">
                 <img src="../../mobile/img/jb.png" />
-               {{$item['real_amount'] ?? 0}}  
+               {{$item['coin'] ?? 0}}  
                {{-- 金币：{{$item['coin'] ?? 0}}  --}} 
               
                 </div>

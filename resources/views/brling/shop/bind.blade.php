@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/css/DINAlternate-bold.css">
-    <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/activity.css">
-    <link rel="stylesheet" href="/mobile/css/shop.css">
+    <link rel="stylesheet" href="/mobile/brling/css/activity.css">
+    <link rel="stylesheet" href="/mobile/brling/css/shop.css">
     <link rel="stylesheet" href="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/css/share.css">
     <!-- Used in supported Android browsers -->
  
@@ -62,7 +62,7 @@
                       <input type="text" name="username" id="username" value="" placeholder="O nome" />
 
                       <h2>Número de celular real</h2>
-                      <span>+55</span><input type="text" name="phone" id="phone" value="" placeholder="Número de celular real" style="display:inline-block;width: 85%;"/>
+                      <span style="padding-left:5px;font-size:12px">+55</span><input type="text" name="phone" id="phone" value="" placeholder="Número de celular real" style="display:inline-block;width: 85%;"/>
 
                       @if ($is_need_cardid)
                         <h2>CPF para particulares, CNPJ para empresas</h2>

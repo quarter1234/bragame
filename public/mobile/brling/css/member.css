@@ -2732,7 +2732,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 .vip_centen{width:92%;height:190px;margin:20px auto 0 auto; background:#132235;border-radius:10px;color:#fff;text-align:center;}
 .vip_centen h2{color:#9efff9;font-size:18px;line-height:44px;}
 .vip_centen p{line-height:20px;width:96%;font-size:12px;}
-.vip_bottom {width:92%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
+.vip_bottom {width:100%;margin:15px auto 0 auto; display:flex;justify-content:space-between;}
 .vip_blist{width:110px;height:153px;background:url(../img/vip_b.png) no-repeat;background-size:110px 153px;}
 .vip_blist h2{text-transform:uppercase;font-size:14px;color:#093e48;width:70%;text-align:center;margin:5px auto 0 auto;}
 .vip_blist p{color:#fff391;margin:5px auto 0 auto;width:70%;padding-top:80px;font-size:14px;text-align:center;}
@@ -3075,4 +3075,9 @@ button.cancel-btn[_ngcontent-way-c22] {
     display:none;
     color:#fff;
     height:100%;
+}
+@media screen and (min-width: 1200px) {
+    .vip_bottom{
+        width:92%;
+    }
 }
