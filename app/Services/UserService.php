@@ -17,6 +17,7 @@ use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
 use App\Cache\AllUseGameDrawCache;
+use App\Models\DUserMailNew;
 use App\Repositories\DUserBindRepository;
 use Illuminate\Support\Facades\Log;
 
@@ -386,6 +387,36 @@ class UserService
             return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
         }
 
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /**
+     * 后台站内信
+     * @param $awradId
+     * @param $act
+     * @return mixed
+     */
+    public function getAttach($id,$uid)
+    {
+        $info = DUserMailNew::where('id',$id)->first();
+        if(!$info) {
+            return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
+        }
+        if($info->hastake != CommonEnum::UNABLE) {
+            return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
+        }
+        RewardHelper::addCoinByRate($uid, 
+                                    $info->attach[1] ?? 0, 
+                                    $info->rate, 
+                                    GameEnum::PDEFINE['TYPE']['SOURCE']['Mail'], 
+                                    GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['MAILATTACH'], 
+                                    '', 
+                                    false, 
+                                    $info['id']);
+        $info->hastake = CommonEnum::ENABLE;
+        $info->hasread = CommonEnum::ENABLE;
+        $info->draw_time = time();
+        $info->save();
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 }

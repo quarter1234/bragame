@@ -9,6 +9,9 @@ use App\Facades\User;
 class CallApiController extends Controller{
     public function index(Request $request){
         $mod = $request->get("mod", '');
+        if($mod == "email"){// 站内信
+            return $this->processRequestEmail($request);
+        }
         if($mod == "coin"){ // 后台上下分
             return $this->processRequestCoin($request);
         }
@@ -128,6 +131,21 @@ class CallApiController extends Controller{
             return 'succ';
         }
 
+        return 'error';
+    }
+
+    /**
+     * 站内信
+     * @param Request $request
+     * @return string
+     */
+    public function processRequestEmail(Request $request){
+        $uid = $request->get("uid", false);
+        $id = $request->get("id", false);
+        $resVal = User::getAttach($id, $uid);
+        if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+            return 'succ';
+        }
         return 'error';
     }
 }
