@@ -18,7 +18,7 @@
     </button>
    
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand" style="background-image: url(/mobile/lake/images/zf-qianbao.png);"></span>
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title" data-locale="Promotional">{{--优惠活动--}}preferenciais</span>
     </button>
 
