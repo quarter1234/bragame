@@ -179,7 +179,7 @@
     
 }
 .pc_nav{
-    margin-top:70px;
+    margin-top:-740px;
     background-color: #000;
 }
 .zf_box{
@@ -213,6 +213,15 @@
     margin-left:10px;
     margin-right:10px;
     margin-top: 18px;
+}
+.pc_tab {
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 34px;
+    z-index: 99;
+    display: block;
 }
 .pc_nav li:hover{
     background-color: rgb(0, 93, 254);
