@@ -685,7 +685,8 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
+    /* background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png) */
+    background-color: #007aff !important;
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
