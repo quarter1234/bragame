@@ -162,11 +162,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 .bg{
   width:299px;
   height:198px;
-<<<<<<< HEAD
   background:url(../mobile/img/error.png) no-repeat;
-=======
-  background:url(../brling/img/error.png) no-repeat;
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
   margin:60px auto;
 }
 .bgtext{
@@ -209,11 +205,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
                   <!---->
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-title">Error Message</div>
                   <div _ngcontent-uwv-c12="" class="bulletin-detail-content">
-<<<<<<< HEAD
                         <div><a style="color:white" href="http://www.baxigame.cn/mobile/pay/recharge">{{$msg}}</a></div>
-=======
-                        <div><a style="color:white" href="http://www.baxigame.cn/brling/pay/recharge">{{$msg}}</a></div>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                         <div><span class="second"></span></div>
 				          </div>
 
@@ -237,11 +229,7 @@ div.bulletin-detail-content[_ngcontent-uwv-c12] {margin-top:20px;font-size:15px;
 
     function change() {
         if (time == 0) {
-<<<<<<< HEAD
             location.href = "http://www.baxigame.cn/mobile/pay/recharge";
-=======
-            location.href = "http://www.baxigame.cn/brling/pay/recharge";
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
         } else {
             div.innerHTML = '' + time + '';
             time--;

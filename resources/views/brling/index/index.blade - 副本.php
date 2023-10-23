@@ -130,19 +130,11 @@
                         <div _ngcontent-way-c5="" class="banner-item-container ng-trigger ng-trigger-carousel" style="transform: translateX(-100%);">
                           <!---->
                           <!---->
-<<<<<<< HEAD
                           <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/mobile/img/rgbanner.jpg" style="">
                           <!---->
                           <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/mobile/img/rgbanner.jpg" style="">
                           <!---->
                           <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/mobile/img/rgbanner.jpg" style=""></div>
-=======
-                          <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/brling/img/rgbanner.jpg" style="">
-                          <!---->
-                          <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/brling/img/rgbanner.jpg" style="">
-                          <!---->
-                          <img _ngcontent-way-c5="" alt="Banner Image" class="banner-item ng-tns-c5-0 ng-star-inserted" src="/brling/img/rgbanner.jpg" style=""></div>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                       </div>
                     </div>
                   </jx-banner-board>
@@ -155,36 +147,18 @@
                         <!---->
                         <!--系统通知公告-->
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
-<<<<<<< HEAD
                           <a href="{{ route('mobile.notice.info', ['id' => 2])}}" style="text-align: start;font-size: 14px;font-weight: 400;color: #878e97;line-height: 20px;">
                             <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">系统公告1</marquee></div>
                           </a>
                           <a _ngcontent-way-c6="" class="more-announcement-icon" href="{{url('mobile/notices')}}"></a>
-=======
-                          <a href="{{ route('brling.notice.info', ['id' => 2])}}" style="text-align: start;font-size: 14px;font-weight: 400;color: #878e97;line-height: 20px;">
-                            <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">系统公告1</marquee></div>
-                          </a>
-                          <a _ngcontent-way-c6="" class="more-announcement-icon" href="{{url('brling/notices')}}"></a>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                       </div>
                     </button>
-                  </jx-bulletin-board>
-
-                  <jx-util-bar _ngcontent-way-c1="" _nghost-way-c7="">
-                    <div _ngcontent-way-c7="" class="util-bar-container">
-                      <div _ngcontent-way-c7="" class="daily-gift">
-                        <div _ngcontent-way-c7="" class="daily-gift-title-row">
                           <div _ngcontent-way-c7="" class="daily-gift-username-title">
                           @if (Auth::check())
                             欢迎您，{{ $user['playername'] }}
                           @else 
-<<<<<<< HEAD
                             您好， <a href="{{url('mobile/login')}}" style="color:#7998b1;text-decoration: none;">请登录</a>  /  
                             <a href="{{url('mobile/register')}}" style="color:#7998b1;text-decoration: none;">免费注册</a>
-=======
-                            您好， <a href="{{url('brling/login')}}" style="color:#7998b1;text-decoration: none;">请登录</a>  /  
-                            <a href="{{url('brling/register')}}" style="color:#7998b1;text-decoration: none;">免费注册</a>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                           @endif
                           </div>
                           
