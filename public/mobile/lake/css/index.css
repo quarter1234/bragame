@@ -685,7 +685,8 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
+    /* background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png) */
+    background-color: #007aff !important;
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
@@ -2580,45 +2581,29 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-position: center
 }
 
-.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/home.93b20d6e835f71c043b8.png)
-}
+
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(/mobile/green2/images/gg2.png)
+    background-image: url(/mobile/lake/images/zf_xinxi.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(/mobile/green2/images/fx2.png)
+    background-image: url(/mobile/lake/images/zf_fenxiang.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(/mobile/green2/images/sk1.png)
+    background-image: url(/mobile/lake/images/zf-qianbao.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(/mobile/green2/images/wd2.png)
+    background-image: url(/mobile/lake/images/zf_yh.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(/mobile/green2/images/home1.png)
+    background-image: url(/mobile/lake/images/zf_zhuye.png)
 }
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
-}
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_cs.9be7ce116557877dec91.png)
-}
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
-}
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
-}
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
     flex: 0 0 auto;
@@ -2630,7 +2615,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     line-height: 14px;
 }
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color:#ffce2f !important;
+    color:#2f9aff !important;
 }
 [_nghost-way-c14] {
     box-sizing: border-box;
@@ -3727,39 +3712,39 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .n1{
-    background:url(/mobile/lake/images/home.93b20d6e835f71c043b8.png);
+    background:url(/mobile/lake/images/zf_sb.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/lake/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(/mobile/lake/images/zf_xx.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(/mobile/lake/images/zfj_ico.png);
+    background:url(/mobile/lake/images/zf_fx.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(/mobile/lake/images/sk.png);
+    background:url(/mobile/lake/images/zf_qb.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/zf_yh.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
-    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/zf_vip.png);
     background-size:24px 24px;
 }
 .n6{
-    background:url(/mobile/lake/images/f-vip1.png);
+    background:url(/mobile/lake/images/zf_vip.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(/mobile/lake/images/email-fill1.png);
+    background:url(/mobile/lake/images/zf_xx.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(/mobile/lake/images/kf_r_ico1.png);
+    background:url(/mobile/lake/images/zf_kf.png);
     background-size:24px 24px;
 }
 .black_nav li.black_on{
@@ -3813,38 +3798,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     margin-left: -40px;
     top:1%;
 }
-.pc_on .n1{
-    background:url(/mobile/black/images/active_home.485e6c98acecf897b8ba.png);
-    background-size:24px 24px;
-}
-.pc_on .n2{
-    background:url(/mobile/black/images/active_activity.0eee109d4b6a4ccedf91.png);
-    background-size:24px 24px;
-}
-.pc_on .n3{
-    background:url(/mobile/black/images/zfj_on_ico.png);
-    background-size:24px 24px;
-}
-.pc_on .n4{
-    background:url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png);
-    background-size:24px 24px;
-}
-.pc_on .n5{
-    background:url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png);
-    background-size:24px 24px;
-}
-.pc_on .n6{
-    background:url(/mobile/black/images/f-vip.png);
-    background-size:24px 24px;
-}
-.pc_on .n7{
-    background:url(/mobile/black/images/email-fill.png);
-    background-size:24px 24px;
-}
-.pc_on .n8{
-    background:url(/mobile/black/images/kf_r_ico.png);
-    background-size:24px 24px;
-}
+
 .game_x{
     width: 100%;
     overflow-x: scroll;

@@ -2095,10 +2095,10 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
    background-image: url(/mobile/green2/images/gg1.png)
 }
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
+.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
+    background-image: url(https://baxigame1.s3.sa-east-1.amazonaws.com/bx_4/public/mobile/img/active_brand.26b0bef….png);
 }
+
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
    background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
