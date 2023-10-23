@@ -2054,7 +2054,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10] {
-    color: #ffce2f  !important;
+    color: #2fd5ff  !important;
 }
 
 .tab-bar__nav-btn__icon[_ngcontent-way-c10] {
@@ -2069,44 +2069,26 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/home2.png)
+   background-image: url(/mobile/lake/images/zf_zhuye.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/gg1.png)
+   background-image: url(/mobile/lake/images/zf_xinxi.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/fx2.png)
+   background-image: url(/mobile/lake/images/zf_fenxiang.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/sk1.png)
+   background-image: url(/mobile/lake/images/zf-qianbao.png)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/wd2.png)
+   background-image: url(/mobile/lake/images/zf_yh.png)
 }
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/active_home.485e6c98acecf897b8ba.png)
-}
 
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-   background-image: url(/mobile/green2/images/gg1.png)
-}
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_cs.9be7ce116557877dec91.png)
-}
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_brand.26b0bef9602b57eac72e.png)
-}
-
-.tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-   background-image: url(/mobile/black/images/active_my.030b4715dce6d516f9c8.png)
-}
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
     flex: 0 0 auto;

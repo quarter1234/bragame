@@ -64,6 +64,7 @@
 #music-player audio {
     width: 100%;
 }
+
 .zf_touzhu{
     background-color: rgba(255, 255, 255,.1);
     color: #f7f0f0;
@@ -81,39 +82,39 @@
 }
 
 .n1{
-    background:url(/mobile/lake/images/home.93b20d6e835f71c043b8.png);
+    background:url(/mobile/lake/images/zf_sb.png);
     background-size:24px 24px;
 }
 .n2{
-    background:url(/mobile/lake/images/activity.8a6a35ba2ac648314ace.png);
+    background:url(/mobile/lake/images/zf_xx.png);
     background-size:24px 24px;
 }
 .n3{
-    background:url(/mobile/lake/images/zfj_ico.png);
+    background:url(/mobile/lake/images/zf_fx.png);
     background-size:24px 24px;
 }
 .n4{
-    background:url(/mobile/lake/images/sk.png);
+    background:url(/mobile/lake/images/zf_qb.png);
     background-size:24px 24px;
 }
 .n5{
-    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/zf_yh.png);
     background-size:24px 24px;
 }
 .pc_nav.n5{
-    background:url(/mobile/lake/images/my.87c43b85171cb8232892.png);
+    background:url(/mobile/lake/images/zf_vip.png);
     background-size:24px 24px;
 }
 .n6{
-    background:url(/mobile/lake/images/f-vip1.png);
+    background:url(/mobile/lake/images/zf_vip.png);
     background-size:24px 24px;
 }
 .n7{
-    background:url(/mobile/lake/images/email-fill1.png);
+    background:url(/mobile/lake/images/zf_xx.png);
     background-size:24px 24px;
 }
 .n8{
-    background:url(/mobile/lake/images/kf_r_ico1.png);
+    background:url(/mobile/lake/images/zf_kf.png);
     background-size:24px 24px;
 }
 
@@ -176,6 +177,45 @@
 .zf_box1{
     display: flex;
     
+}
+.pc_nav{
+    margin-top:70px;
+    background-color: #000;
+}
+.zf_box{
+    margin-top: 20px;
+}
+.pc_nav ul{
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 15px;
+}
+.pc_nav li{
+    height: 87px;
+    width: 86px;
+    display: flex;
+    line-height: 40px;
+    font-size: 14px;
+    color: #cecece;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255,.1);
+    border-radius: 15px;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+.pc_nav li label{
+    width:24px;
+    height:24px;
+    display:inline-block;
+    margin-left:10px;
+    margin-right:10px;
+    margin-top: 18px;
+}
+.pc_nav li:hover{
+    background-color: rgb(0, 93, 254);
 }
 @media screen and (min-width: 1200px) {
     .tab-bar[_ngcontent-way-c10]{
