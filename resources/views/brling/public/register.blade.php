@@ -38,11 +38,7 @@
                     <input class="inputFrame R-UserID" type="password"  name="repassword" id="repassword" class="input_txt" placeholder="请再次输入密码">
                     
                     <!-- <input class="inputFrame R-UserID" type="password"  name="tradepassword" id="tradepassword" class="input_txt" placeholder="请输入提款密码"> -->
-<<<<<<< HEAD
 					<p class="bank_pass"><a href="{{url('mobile/login')}}" style="font-size: 14px;color: #118799;padding-left: 8px;">已有账号? 立即登录</a></p>
-=======
-					<p class="bank_pass"><a href="{{url('brling/login')}}" style="font-size: 14px;color: #118799;padding-left: 8px;">已有账号? 立即登录</a></p>
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
                     
                     <input id="btnRegister" class="BtnLogin BTN-Register" type="submit" value="立即注册">
 				</form>

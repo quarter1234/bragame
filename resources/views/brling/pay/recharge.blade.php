@@ -104,11 +104,7 @@
               </jx-header-row>
             </div>
 
-<<<<<<< HEAD
             @include('brling.common.modal') 
-=======
-            @include('brling.common.modal') 
->>>>>>> a0eae707048c0c2095d544dd0d575b0763b4be2a
 
             <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
