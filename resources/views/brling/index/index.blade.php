@@ -360,7 +360,7 @@
                 }
             .gg_centen img{
                 width:360px;
-                height:562px;
+                height:500px;
             }
             @media screen and (min-width: 1200px) {
               .gg_tc{
