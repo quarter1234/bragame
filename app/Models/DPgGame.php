@@ -8,7 +8,7 @@ class DPgGame extends BaseMoel
 
     public function getIconAttribute($value)
     {
-        $pre = CommonEnum::S3_PATH_ARR[config('view.template')];
+        $pre = env('REMOTE_IMG_URL', 'http://localhost') . CommonEnum::S3_PATH_ARR[config('view.template')];
         return $pre.$value;
     }
 }

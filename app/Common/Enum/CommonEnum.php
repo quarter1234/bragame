@@ -27,18 +27,18 @@ class CommonEnum
     const USER_TEAM_BAN_BLOCK = 2; // 封禁
 
     const S3_PATH_ARR = [
-        "mobile" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public',
-        "black" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "pink" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "red" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "blue" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "purple" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "gold" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "spain" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "green2" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "green" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "deep" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "lake" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
-        "brling" => 'https://bxgames3.s3.sa-east-1.amazonaws.com/bx_4/public',
+        "mobile" => '/bx_1/public',
+        "black" => '/bx_4/public',
+        "pink" => '/bx_4/public',
+        "red" => '/bx_4/public',
+        "blue" => '/bx_4/public',
+        "purple" => '/bx_4/public',
+        "gold" => '/bx_4/public',
+        "spain" => '/bx_4/public',
+        "green2" => '/bx_4/public',
+        "green" => '/bx_4/public',
+        "deep" => '/bx_4/public',
+        "lake" => '/bx_4/public',
+        "brling" => '/bx_4/public',
     ];
 }
