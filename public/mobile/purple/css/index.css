@@ -21,7 +21,7 @@ div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
 div.jx-app-download-dismiss[_ngcontent-way-c1] {
     width: 44px;
     height: 44px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px
@@ -47,7 +47,7 @@ div.dialog-header-row[_ngcontent-way-c1] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
 }
 
 /**/
@@ -156,7 +156,7 @@ div.app-background[_ngcontent-way-c2] {
 .header-jx-icon[_ngcontent-way-c3] {
     width: 91px;
     height: 22px;
-    background: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/icon_logo01.png) no-repeat;
+    background: url(https://www.betbra.net:8032/bx_1/public/mobile/img/icon_logo01.png) no-repeat;
     background-size: 91px 22px;
 }
 
@@ -165,7 +165,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-laliga-icon[_ngcontent-way-c3] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
     height: 100%;
     width: 128px;
     margin-left: 10px
@@ -248,20 +248,20 @@ div.app-background[_ngcontent-way-c2] {
 div.message-centre[_ngcontent-way-c3] {
     width: 24px;
     height: 16px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
 }
 
 div.message-centre.unread[_ngcontent-way-c3] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
 }
 
 button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     width: 28px;
     height: 28px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -382,7 +382,7 @@ div.bulletin-board-container[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/more-announcement.e9aba3242f773db1453a.png)
 }
 
 div.bulletin-board[_ngcontent-way-c6] {
@@ -429,7 +429,7 @@ div.util-bar-container[_ngcontent-way-c7] {
 }
 
 .daily-gift-logo[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -485,19 +485,19 @@ span.util-btn-icon[_ngcontent-way-c7] {
 }
 
 span.util-btn-icon.deposit[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
 }
 
 span.util-btn-icon.transfer[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/transfer.a1c5b153615b288c7824.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/transfer.a1c5b153615b288c7824.png)
 }
 
 span.util-btn-icon.withdraw[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/withdraw.a41c76f1715915566d01.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/withdraw.a41c76f1715915566d01.png)
 }
 
 span.util-btn-icon.ac[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
 }
 
 div.cs-dialog-icon[_ngcontent-way-c7] {
@@ -507,7 +507,7 @@ div.cs-dialog-icon[_ngcontent-way-c7] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
 }
 
 div.cs-dialog-title[_ngcontent-way-c7] {
@@ -565,59 +565,59 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .side-menu-icon-lottery[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery.45d67018e32eec8b862c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery.45d67018e32eec8b862c.png)
 }
 
 .side-menu-icon-lottery.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_active.88066d8dcaf479878e64.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_active.88066d8dcaf479878e64.png)
 }
 
 .side-menu-icon-live[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/live.3be00c21be6f02e81489.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/live.3be00c21be6f02e81489.png)
 }
 
 .side-menu-icon-live.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/live_active.a0070344ba437bf32dea.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/live_active.a0070344ba437bf32dea.png)
 }
 
 .side-menu-icon-slot[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/slot.8c1c064dca40f3e255e7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/slot.8c1c064dca40f3e255e7.png)
 }
 
 .side-menu-icon-slot.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/slot_active.9725d9aea1b9d087c9b7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/slot_active.9725d9aea1b9d087c9b7.png)
 }
 
 .side-menu-icon-sport[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sport.56210547767ef73a4d32.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/sport.56210547767ef73a4d32.png)
 }
 
 .side-menu-icon-sport.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sport_active.d66e7bcb8a1eeb5070c7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/sport_active.d66e7bcb8a1eeb5070c7.png)
 }
 
 .side-menu-icon-fishing[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/fishing.149177d7d963fea179e2.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/fishing.149177d7d963fea179e2.png)
 }
 
 .side-menu-icon-fishing.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/fishing_active.016cd2b3678134b02ace.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/fishing_active.016cd2b3678134b02ace.png)
 }
 
 .side-menu-icon-boardgame[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/boardgame.201c62bfbf568040859b.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/boardgame.201c62bfbf568040859b.png)
 }
 
 .side-menu-icon-boardgame.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/boardgame_active.eb4ce6f334b0fc8e9137.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/boardgame_active.eb4ce6f334b0fc8e9137.png)
 }
 
 .side-menu-icon-esport[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/esport.a4eb4a91f21db4f5ee2c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/esport.a4eb4a91f21db4f5ee2c.png)
 }
 
 .side-menu-icon-esport.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/esport_active.23c7638fe647fe2598c0.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/esport_active.23c7638fe647fe2598c0.png)
 }
 
 
@@ -657,43 +657,43 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/home.93b20d6e835f71c043b8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/activity.8a6a35ba2ac648314ace.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/activity.8a6a35ba2ac648314ace.png)
 }
 
 .tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/zfj_ico.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/zfj_ico.png)
 }
 
 .tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/huodong.svg)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/huodong.svg)
 }
 
 .tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/my.87c43b85171cb8232892.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/my.87c43b85171cb8232892.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_home.485e6c98acecf897b8ba.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_home.485e6c98acecf897b8ba.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_cs.9be7ce116557877dec91.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -1101,7 +1101,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
 }
 
 .title[_ngcontent-way-c15] {
@@ -1140,42 +1140,42 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
     border-radius: 10px;
     width: 100%;
     padding-bottom: calc((100% * 144 / 314))
 }
 
 .game-1[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/1.94732245082a337d973a.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/1.94732245082a337d973a.png)
 }
 
 .game-6[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/6.f45183d305b4055e0491.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/6.f45183d305b4055e0491.png)
 }
 
 .game-26[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/26.b99820baf827d5c86613.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/26.b99820baf827d5c86613.png)
 }
 
 .game-27[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
 }
 
 .game-28[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/28.5004283522d159495603.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/28.5004283522d159495603.png)
 }
 
 .game-32[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/32.552f1aa9ef799e732bce.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/32.552f1aa9ef799e732bce.png)
 }
 
 .game-43[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
 }
 
 .game-45[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/45.36dd88e459f576fea52e.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/45.36dd88e459f576fea52e.png)
 }
 
 /**/
@@ -1323,31 +1323,31 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .game-sa[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/ae.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/ae.png)
 }
 
 .game-dg[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/dg.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/dg.png)
 }
 
 .game-og[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/og.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/og.png)
 }
 
 .game-bg[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bg.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bg.png)
 }
 
 .game-allbet[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/allbet.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/allbet.png)
 }
 
 .game-bbvideo[_ngcontent-avh-c16] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bbvideo.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bbvideo.png)
 }
 
 .jx-slot[_ngcontent-avh-c17] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/999001.dbb253d4b1149f3efee6.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/999001.dbb253d4b1149f3efee6.png);
     border-radius: 10px;
     margin-bottom: 10px;
     padding-bottom: calc((100% * 113 / 314))
@@ -1374,19 +1374,19 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .game-999010[_ngcontent-avh-c17] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/999010.1aeeaeb022dc7811eba2.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/999010.1aeeaeb022dc7811eba2.png)
 }
 
 .game-999011[_ngcontent-avh-c17] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/999011.6b074fb8a5f1fb867d20.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/999011.6b074fb8a5f1fb867d20.png)
 }
 
 .game-jdb[_ngcontent-avh-c17] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jdb.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/jdb.png)
 }
 
 .game-sg[_ngcontent-avh-c17] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sg.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/sg.png)
 }
 
 /**/
@@ -1403,47 +1403,47 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .game-888001[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/888001.7f42bfe3ee80d1c8e8cb.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/888001.7f42bfe3ee80d1c8e8cb.png)
 }
 
 .game-agti[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/agti.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/agti.png)
 }
 
 .game-bbti[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bbti.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bbti.png)
 }
 
 .game-gj[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/gj.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/gj.png)
 }
 
 .game-ky[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/ky.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/ky.png)
 }
 
 .game-rmg[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/rmg.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/rmg.png)
 }
 
 .game-mt[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/mt.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/mt.png)
 }
 
 .game-nw[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/nw.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/nw.png)
 }
 
 .game-999008[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/avia.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/avia.png)
 }
 
 .game-999009[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bbnew.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bbnew.png)
 }
 
 .game-esb[_ngcontent-avh-c18] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/esb.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/esb.png)
 }
 
 /**/
@@ -1461,15 +1461,15 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .fishing-game-999006[_ngcontent-avh-c19] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bbby.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bbby.png)
 }
 
 .fishing-game-bgby[_ngcontent-avh-c19] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bgby.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bgby.png)
 }
 
 .fishing-game-999013[_ngcontent-avh-c19] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/999013.bcca34c8f027fb828449.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/999013.bcca34c8f027fb828449.png)
 }
 
 /**/
@@ -1894,7 +1894,7 @@ div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
 div.jx-app-download-dismiss[_ngcontent-way-c1] {
     width: 44px;
     height: 44px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/close.07a630d9b4dd917a2c57.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px 20px
@@ -1920,7 +1920,7 @@ div.dialog-header-row[_ngcontent-way-c1] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/jx_brand_icon.573366da01d92eacea3d.svg)
 }
 /**/
 div.app-background[_ngcontent-way-c2] {
@@ -2064,7 +2064,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-jx-icon[_ngcontent-way-c3] {
-   /* background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/icon_logo01.png);*/
+   /* background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/icon_logo01.png);*/
    background-image: url(/mobile/green/images/logo11.png);
     height:30px;
     width:132px;
@@ -2077,7 +2077,7 @@ div.app-background[_ngcontent-way-c2] {
 }
 
 .header-laliga-icon[_ngcontent-way-c3] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/laliga-logo.01f82bb57660e2ece9d1.png);
     height: 100%;
     width: 128px;
     margin-left: 10px
@@ -2160,20 +2160,20 @@ div.app-background[_ngcontent-way-c2] {
 div.message-centre[_ngcontent-way-c3] {
     width: 24px;
     height: 16px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/letter.a6d96d31aad6d4b972f8.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover
 }
 
 div.message-centre.unread[_ngcontent-way-c3] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/unread-letter.2071a72b2e3b5bc9b34c.png)
 }
 
 button.create-agent-link-btn[_ngcontent-way-c3]>div[_ngcontent-way-c3] {
     width: 28px;
     height: 28px;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/create-agentlink.1b7d4b7a8cd476e6b31b.svg);
     background-repeat: no-repeat;
     background-size: contain
 }
@@ -2295,7 +2295,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-   /* background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg);*/
+   /* background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg);*/
    background-image:url(/mobile/purple/images/gg.png);
     padding-left:10px;
 }
@@ -2307,7 +2307,7 @@ div.bulletin-icon[_ngcontent-way-c6] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/more-announcement.e9aba3242f773db1453a.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/more-announcement.e9aba3242f773db1453a.png);
     padding-right:8px;
 }
 
@@ -2354,7 +2354,7 @@ div.util-bar-container[_ngcontent-way-c7] {
 }
 
 .daily-gift-logo[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/bgDailyGift.f36b818e9b284312109a.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -2410,19 +2410,19 @@ span.util-btn-icon[_ngcontent-way-c7] {
 }
 
 span.util-btn-icon.deposit[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/deposit.862cd26ec57e83f225c4.png)
 }
 
 span.util-btn-icon.transfer[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/transfer.a1c5b153615b288c7824.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/transfer.a1c5b153615b288c7824.png)
 }
 
 span.util-btn-icon.withdraw[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/withdraw.a41c76f1715915566d01.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/withdraw.a41c76f1715915566d01.png)
 }
 
 span.util-btn-icon.ac[_ngcontent-way-c7] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/ac.6e82c2d8f893679d58fb.png)
 }
 
 div.cs-dialog-icon[_ngcontent-way-c7] {
@@ -2432,7 +2432,7 @@ div.cs-dialog-icon[_ngcontent-way-c7] {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)
 }
 
 div.cs-dialog-title[_ngcontent-way-c7] {
@@ -2500,59 +2500,59 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .side-menu-icon-lottery[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery.45d67018e32eec8b862c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery.45d67018e32eec8b862c.png)
 }
 
 .side-menu-icon-lottery.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_active.88066d8dcaf479878e64.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_active.88066d8dcaf479878e64.png)
 }
 
 .side-menu-icon-live[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/live.3be00c21be6f02e81489.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/live.3be00c21be6f02e81489.png)
 }
 
 .side-menu-icon-live.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/live_active.a0070344ba437bf32dea.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/live_active.a0070344ba437bf32dea.png)
 }
 
 .side-menu-icon-slot[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/slot.8c1c064dca40f3e255e7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/slot.8c1c064dca40f3e255e7.png)
 }
 
 .side-menu-icon-slot.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/slot_active.9725d9aea1b9d087c9b7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/slot_active.9725d9aea1b9d087c9b7.png)
 }
 
 .side-menu-icon-sport[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sport.56210547767ef73a4d32.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/sport.56210547767ef73a4d32.png)
 }
 
 .side-menu-icon-sport.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/sport_active.d66e7bcb8a1eeb5070c7.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/sport_active.d66e7bcb8a1eeb5070c7.png)
 }
 
 .side-menu-icon-fishing[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/fishing.149177d7d963fea179e2.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/fishing.149177d7d963fea179e2.png)
 }
 
 .side-menu-icon-fishing.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/fishing_active.016cd2b3678134b02ace.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/fishing_active.016cd2b3678134b02ace.png)
 }
 
 .side-menu-icon-boardgame[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/boardgame.201c62bfbf568040859b.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/boardgame.201c62bfbf568040859b.png)
 }
 
 .side-menu-icon-boardgame.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/boardgame_active.eb4ce6f334b0fc8e9137.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/boardgame_active.eb4ce6f334b0fc8e9137.png)
 }
 
 .side-menu-icon-esport[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/esport.a4eb4a91f21db4f5ee2c.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/esport.a4eb4a91f21db4f5ee2c.png)
 }
 
 .side-menu-icon-esport.active-side-menu-icon[_ngcontent-way-c8] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/esport_active.23c7638fe647fe2598c0.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/esport_active.23c7638fe647fe2598c0.png)
 }
 
 
@@ -2591,7 +2591,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn__icon--home[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/home.93b20d6e835f71c043b8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/home.93b20d6e835f71c043b8.png)
 }
 
 .tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
@@ -2615,19 +2615,19 @@ div.cs-dialog-title[_ngcontent-way-c7] {
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--activity[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_activity.0eee109d4b6a4ccedf91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--cs[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_cs.9be7ce116557877dec91.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_cs.9be7ce116557877dec91.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--brand[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_brand.26b0bef9602b57eac72e.png)
 }
 
 .tab-bar__nav-btn--active[_ngcontent-way-c10]>.tab-bar__nav-btn__icon--my[_ngcontent-way-c10] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/active_my.030b4715dce6d516f9c8.png)
 }
 
 .tab-bar__nav-btn__title[_ngcontent-way-c10] {
@@ -3034,7 +3034,7 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_bg.5b0db9f6401c9434ec75.png)
 }
 
 .title[_ngcontent-way-c15] {
@@ -3073,42 +3073,42 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/lottery_lobby.3ebc4b9cfc4f865db015.png);
     border-radius: 10px;
     width: 100%;
     padding-bottom: calc((100% * 144 / 314))
 }
 
 .game-1[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/1.94732245082a337d973a.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/1.94732245082a337d973a.png)
 }
 
 .game-6[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/6.f45183d305b4055e0491.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/6.f45183d305b4055e0491.png)
 }
 
 .game-26[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/26.b99820baf827d5c86613.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/26.b99820baf827d5c86613.png)
 }
 
 .game-27[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/27.b66a27dc46bf56e60c6a.png)
 }
 
 .game-28[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/28.5004283522d159495603.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/28.5004283522d159495603.png)
 }
 
 .game-32[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/32.552f1aa9ef799e732bce.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/32.552f1aa9ef799e732bce.png)
 }
 
 .game-43[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/43.c402a9fb3d3945ac39b8.png)
 }
 
 .game-45[_ngcontent-way-c15] {
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/45.36dd88e459f576fea52e.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/45.36dd88e459f576fea52e.png)
 }
 /**/
 .mat-dialog-container {
@@ -3311,21 +3311,21 @@ button.cancel-btn[_ngcontent-way-c22] {
     background-image: url(/mobile/purple/images/xh_ico.png)
 }
 .active-side-menu .xh_ico{
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/xh_on.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/xh_on.png)
 }
 
 .game_pp{
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/game_pp_on.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/game_pp_on.png)
 }
 .active-side-menu .game_pp{
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/game_pp.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/game_pp.png)
 }
 
 .game_pg{
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/game_pg.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/game_pg.png)
 }
 .active-side-menu .game_pg{
-    background-image: url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/game_pg_on.png)
+    background-image: url(https://www.betbra.net:8032/bx_1/public/mobile/img/game_pg_on.png)
 }
 
 .game_ji{

@@ -1,6 +1,6 @@
 {{--loading开始--}}
     <div class="loadings">
-          <div class="gif"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/images/20150210104952902.gif" /></div>
+          <div class="gif"><img src="https://www.betbra.net:8032/bx_1/public/static/images/20150210104952902.gif" /></div>
     </div>
   <style>
   .loadings{width:100%;height:100%;position:fixed; background:rgba(0,0,0,.5);z-index:9999;top:0;left:0;display: none;}

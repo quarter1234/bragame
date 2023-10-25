@@ -81,7 +81,7 @@ div.banner-item-container[_ngcontent-iif-c5] {width:100%;height:100%;display:fle
 img.banner-item[_ngcontent-iif-c5] {flex:0 0 auto;width:100%;height:100%;-o-object-fit:contain;object-fit:contain;pointer-events:none;background-image:linear-gradient(to right,transparent,#000 calc(50% - 50vh / 480 * 1125 / 2),#000 calc(50% + 50vh / 480 * 1125 / 2),transparent)}
 </style><style>button.bulletin-board-btn[_ngcontent-iif-c6] {display:block;margin:0;padding:8px 15px;width:100%;border-radius:0;color:#fff}
 div.bulletin-board-container[_ngcontent-iif-c6] {box-sizing:border-box;height:20px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
-div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)}
+div.bulletin-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:20px;height:20px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://www.betbra.net:8032/bx_1/public/mobile/img/bulletin-icon.a996c907273958ac2d65.svg)}
 .more-announcement-icon[_ngcontent-iif-c6] {flex:0 0 auto;width:70px;height:100%;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(more-announcement.e9aba3242f773db1453a.png)}
 div.bulletin-board[_ngcontent-iif-c6] {flex:1 1 auto;margin-left:1em;height:20px;overflow:hidden;text-align:start;font-size:14px;font-weight:400;color:#878e97;line-height:20px}
 </style><style>div.util-bar-container[_ngcontent-iif-c7] {padding:0 10px 10px;display:flex;flex-flow:row nowrap;justify-content:space-between;align-items:center}
@@ -99,7 +99,7 @@ span.util-btn-icon.deposit[_ngcontent-iif-c7] {background-image:url(deposit.862c
 span.util-btn-icon.transfer[_ngcontent-iif-c7] {background-image:url(transfer.a1c5b153615b288c7824.png)}
 span.util-btn-icon.withdraw[_ngcontent-iif-c7] {background-image:url(withdraw.a41c76f1715915566d01.png)}
 span.util-btn-icon.ac[_ngcontent-iif-c7] {background-image:url(ac.6e82c2d8f893679d58fb.png)}
-div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)}
+div.cs-dialog-icon[_ngcontent-iif-c7] {display:block;width:99px;height:92px;background-size:contain;background-repeat:no-repeat;background-position:center center;background-image:url(https://www.betbra.net:8032/bx_1/public/mobile/img/cs_img.c95648a5d29ec2d84117.svg)}
 div.cs-dialog-title[_ngcontent-iif-c7] {margin-top:22px;color:#333;font-size:24px;font-weight:500}
 </style><style>.home-game-board-ctn[_ngcontent-iif-c8] {display:flex;flex-flow:row nowrap}
 .side-menu-ctn[_ngcontent-iif-c8] {margin-left:10px;display:flex;flex-flow:column nowrap;align-items:center;justify-content:flex-start}

@@ -8,7 +8,7 @@
             <div class="email_w">Receba sua recompensa</div>
             <div class="email_w_bottom">
                 <div class="email_w_left">
-                <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jb.png" />
+                <img src="https://www.betbra.net:8032/bx_1/public/mobile/img/jb.png" />
                 {{$item['attach'][1] ?? 0}} 
                 </div>
                 <div class="email_w_right">{{$item['timestamp']}}</div>

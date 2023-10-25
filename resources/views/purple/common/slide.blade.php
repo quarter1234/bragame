@@ -1,12 +1,12 @@
 
 {{--
 <div class="down_ico">
-<img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/down_ico.png" />
+<img src="https://www.betbra.net:8032/bx_1/public/mobile/img/down_ico.png" />
 </div>
 --}}
 @if($showUserRedPakc)
 <div class="hb">
-<a href="javascript:void(0);" id="redPacket"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/hb.png" /></a>
+<a href="javascript:void(0);" id="redPacket"><img src="https://www.betbra.net:8032/bx_1/public/mobile/img/hb.png" /></a>
 </div>
 @endif
 <div class="menu_tc">

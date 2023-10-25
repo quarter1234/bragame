@@ -5,7 +5,7 @@
             <div class="rechare_zt">Montante da aposta: {{ $item['bet_amount'] }}</div>
             <div class="email_w_bottom">
                 <div class="email_w_left">
-                <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/jb.png" />
+                <img src="https://www.betbra.net:8032/bx_1/public/mobile/img/jb.png" />
                {{$item['settled_amount'] ?? 0}}  
                {{-- 金币：{{$item['format_platform'] ?? 0}}  --}} 
                {{-- {{$item['settled_amount']}}  --}} 

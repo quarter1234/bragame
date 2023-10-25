@@ -27,7 +27,7 @@
 <body>
   <div id="game-container">
     <a id="return-button" onclick="goBack()">
-       <img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/static/close/bgt.png" alt="返回按钮">
+       <img src="https://www.betbra.net:8032/bx_1/public/static/close/bgt.png" alt="返回按钮">
     </a>
     <iframe id="game-frame" src="{{$url}}"></iframe>
   </div>

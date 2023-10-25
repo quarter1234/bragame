@@ -1,5 +1,5 @@
 <div class="top">
-    <div class="green2"><img src="https://bxgames3.s3.sa-east-1.amazonaws.com/bx_1/public/mobile/img/left_ico.png" /></div>
+    <div class="green2"><img src="https://www.betbra.net:8032/bx_1/public/mobile/img/left_ico.png" /></div>
    <div class="logo"><img src="/mobile/green2/images/logo11.png"/></div>
     <div class="money" style="float:right;margin-right:10px">
         <span class="money_rs"></span>
