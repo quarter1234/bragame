@@ -181,18 +181,16 @@
                             <span>juego</span>
                         </div>
                         <div class="xh_game_centen">
-                          <div _ngcontent-avh-c16="" class="other-live-ctn nowspink" id="tab10_content_pgpro"></div>
-                          {{--<div class="swiper mySwiper1">
+                          <div class="swiper mySwiper1">
                             <div class="swiper-wrapper">
                               @foreach($tadaRecommend as $item)
                                 <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
-                                
-                                <div class="swiper-slide"></div>
                               @endforeach 
                             </div>
-                          </div>--}}
+                          </div>
                         </div>
                     </div>
+                    
                     <div style="width:100%; height:10px;"></div> 
                     
                   <script>
@@ -295,11 +293,6 @@
                         <button _ngcontent-way-c8="" id="tab1" onclick="myclick(1)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">P P</span></button>
-
-                        <!---->
-                        {{--<button _ngcontent-way-c8="" id="tab10" onclick="myclick(10)" class="side-menu-item ng-star-inserted" style="width: 30%;">
-                          <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">PGPRO</span></button>--}}
                        
                              
                      
@@ -354,14 +347,6 @@
                             </div>
                         </div>
 
-                        {{-- PG+添加 --}}
-                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab10_content" style="display: none;">
-                            <div _ngcontent-avh-c16="" class="other-live-ctn"></div>
-                            <div style="width:100%;text-align:center;margin-top:1rem">
-                                <button id="pgpro_load_more" page="0" onclick="loadPgProGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
-                            </div>
-                        </div>
-
                       </div>
                     </div>
                   </jx-home-game-board>
@@ -373,8 +358,8 @@
             </div>
             <div class="index_bottom">
                   <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
-                  <p>As informações sobre handicap e probabilidades esportivas contidas neste site são apenas para fins de entretenimento. Favor verificar os regulamentos de apostas em sua jurisdição, pois eles variam de estado para estado, de província para província e de país para país. É proibido usar estas informações para violar qualquer lei ou estatuto. O site não está associado a nenhuma liga, associação ou equipe profissional ou colegiada, nem é endossado por ela. 777hello.com não tem como alvo público menores de 18 anos de idade. 
-COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
+                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
+? 2022 brcrown.com All rights reserved.</p>
             </div>
             <div class="menu_body">
                    <div class="black_logo">
@@ -411,7 +396,6 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
             @include('black.common.loading')
             @include('black.index.index_login')
             @include('black.index.notice')
-            @include('black.common.slide')
             <style>
               .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
               .other-live-ctn a:active img{transform:scale(0.9);}
@@ -419,7 +403,34 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                @include('black.common.footer')
+                <div _ngcontent-way-c10="" class="tab-bar safe-area-fix-bottom safe-area-fix-left safe-area-fix-right" jxsafeareafixbottom="" jxsafeareafixleft="" jxsafeareafixright="">
+                <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/share")}}'">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--cs"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--分享--}}Partilhar</span>
+    </button>
+
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/activity")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--activity"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
+    </button>
+
+
+
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-left @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController')  tab-bar__nav-btn--active @endif" onclick="myFunction()" jxsafeareafixleft="" routerlink="/home" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--home"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--首页--}}O menu</span>
+    </button>
+
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
+    </button>
+
+    <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-right @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\MemberController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/member/index")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--my"></span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--我的--}}Meu</span>
+    </button>
+</div>
 
 
 
@@ -533,32 +544,6 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
           })
         }
 
-        function loadPgProGames(){
-          let page = $('#pgpro_load_more').attr('page');
-          showLoading();
-          $.ajax({
-              url : "{{url('mobile/getPgPros')}}",
-              type : 'GET',
-              data : {page: parseInt(page) + 1},
-              success : function (data) {
-                hideLoading();
-                $('#pgpro_load_more').attr('page', data.data.current_page);
-                data.data.data.forEach(element => {
-                  if(element.platform == 'PGSPRO'){
-                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
-                    $('#tab10_content_pgpro').append(itemGame)
-                  }else{
-                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
-                    $('#tab10_content_pgpro').append(itemGame)
-                  }
-                })
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                hideLoading()
-              }
-          })
-        }
-
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -573,7 +558,6 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
         loadPpGames()
         loadJlGames()
         loadTadaGames()
-        loadPgProGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
@@ -649,43 +633,6 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
           })
         });
 
-        $(document).on('click', '.pgpro_game_go', function() {
-          showLoading();
-
-          let gameId = $(this).attr('gameid')
-          $.ajax({
-              url : "{{url('mobile/pgproUrl')}}",
-              type : 'GET',
-              data : {id: parseInt(gameId)},
-              success : function (data) {
-                if(data.code == 200) {
-				          window.location.href= "{{ route('mobile.display', ['act' => 'pgpro_game_url']) }}" +'&game_code=' +data.data.code
-                } else {
-                    if(data.code == '400005') {
-                      showModal('Por favor faça login primeiro');
-                      $('.tc').show();
-                    } else {
-                      showModal(data.message);
-                    }
-                }
-
-                setTimeout(function(){
-                  hideLoading();
-                }, 2000)
-              },
-              error: function(jqXHR, textStatus, errorThrown) {
-                hideLoading();
-                if(jqXHR.responseJSON.code == 400005) {
-                      showModal('Por favor faça login primeiro');
-                      $('.tc').show();
-                  } else {
-                    showModal(jqXHR.responseJSON.message);
-                  }
-
-              }
-          })
-        });
-
       });
     </script>
     <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/static/js/scroll.js"></script>
@@ -706,10 +653,13 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
       $('.pc_nav li').mouseout(function(){
         $(this).removeClass('pc_on')
       })
+
+      fbq('init', '1309983866312683');
+      fbq('track', 'PageView');
+      fbq('init', '330625666130753');
+      fbq('track', 'PageView');
     })
     </script>
-
-
   </body>
 
 </html>
