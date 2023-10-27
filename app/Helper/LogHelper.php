@@ -9,7 +9,7 @@ use App\Repositories\DLogSenddrawRepository;
 use Illuminate\Support\Facades\Log;
 
 class LogHelper{
-    public static function insertCoinLog($uid, $beforecoin, $altercoin, $aftercoin, $alterlog, $gameId, $type, $state = 0, $gamePlat = 0, $relBetId = 0){
+    public static function insertCoinLog($uid, $beforecoin, $altercoin, $aftercoin, $alterlog, $gameId, $type, $state = 0, $gamePlat = 0, $relBetId = 0, $tax_amount=0){
         $now = time();
         $addData = [
             'uid' => $uid,

@@ -9,6 +9,8 @@ use App\Services\GameService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use App\Common\Enum\CommonEnum;
+use App\Helper\SystemConfigHelper;
+
 class GameController extends Controller
 {
     private $gameService;
@@ -22,8 +24,12 @@ class GameController extends Controller
     {
         $params = [];
         $params['platform'] = 'PGS';
-        $res = $this->gameService->getPGGames($params);
-
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if(!$pgstatus){ //0=真PG 1=假PG
+            $res = $this->gameService->getPGGames($params);
+        }else{
+            $res = $this->gameService->getPGGamestc($params);
+        }
         return Result::success($res);
     }
 
@@ -53,6 +59,13 @@ class GameController extends Controller
 
     public function getPgPros()
     {
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if(!$pgstatus){ //0=真PG 1=假PG
+            $params = [];
+            $params['platform'] = 'PGS';
+            $res['data'] = $this->gameService->getPGGameslimit($params);
+            return Result::success($res);
+        }
         $res = $this->gameService->getPgProGames();
         return Result::success($res);
     }

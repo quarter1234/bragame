@@ -3,6 +3,7 @@
 namespace App\Cache;
 
 use App\Common\Enum\CommonEnum;
+use App\Models\DPgGame;
 use App\Repositories\DJlGameRepository;
 use App\Repositories\DPgGameRepository;
 use Illuminate\Support\Facades\Cache;
@@ -24,6 +25,17 @@ class IndexGameCache
                 $pgRepo = app()->make(DPgGameRepository::class);
                 return $pgRepo->getGameRecommend(['platform' => 'PGS'])->toArray();
         });
+    }
+
+    public static function getPGRecommendtc()//剔除假PG
+    {
+        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福");
+        return DPgGame::where('platform', 'PGS')
+        ->where('game_status', CommonEnum::ENABLE)
+        ->whereNotIn('game_name', $str)
+        ->orderBy('sort', 'desc')
+        ->limit(9)
+        ->get()->toArray();
     }
 
     public static function getPPRecommend()

@@ -5,11 +5,16 @@ use App\Cache\IndexGameCache;
 use App\Cache\UserCache;
 use App\Common\Enum\CommonEnum;
 use App\Helper\RedPackageHelper;
+use App\Helper\SystemConfigHelper;
+use App\Models\DPgProGame;
 use App\Models\DRedPacket;
+use App\Repositories\DPgProGameRepository;
 use App\Repositories\DRedPacketUserRepository;
 use App\Repositories\SConfigPicRepository;
 use App\Repositories\SNoticeIndexRepository;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+
 
 class IndexService
 {
@@ -46,7 +51,12 @@ class IndexService
         if($data['code']) {
             session([CommonEnum::INVITE_CODE_KEY => $data['code']]);
         }
-        $data['pgRecommend'] = IndexGameCache::getPGRecommend();
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if(!$pgstatus){ //0=真PG 1=假PG
+            $data['pgRecommend'] = IndexGameCache::getPGRecommend();
+        }else{
+            $data['pgRecommend'] = IndexGameCache::getPGRecommendtc();
+        }
         $data['ppRecommend'] = IndexGameCache::getPPRecommend();
         $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
         $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
@@ -55,25 +65,25 @@ class IndexService
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
         
         $data['bnners'] = $this->picRepo->getBanners();
-        $data['indexNotice'] = $this->getIndexNotice($data['user']);
+        $data['indexNotice'] = $this->getIndexNotice();
         $data['ranks'] = UserCache::getRankCoin();
         $data['notice'] = $this->noticeRepo->getNoticeIndex(time());
         
         return $data;
     }
 
-    public function getIndexNotice($user)
+    public function getIndexNotice()
     {
-        if(!$user) {
-            return false;
-        }
+        // if(!$user) {
+        //     return false;
+        // }
         
-        $hadShow = UserCache::getIndexNoticeCache($user);
-        if($hadShow) {
-            return false;
-        }
+        // $hadShow = UserCache::getIndexNoticeCache($user);
+        // if($hadShow) {
+        //     return false;
+        // }
 
-        UserCache::setIndexNoticeCache($user);
+        // UserCache::setIndexNoticeCache($user);
         
         return $this->picRepo->getIndexNotice();
     }

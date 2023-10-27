@@ -16,7 +16,7 @@ class DUserDrawRepository extends Repository
         return $this->model()::where('uid', $user->uid)
         ->where('create_time', '>', $startTime)
         ->where('create_time', '<', $endTime)
-        ->whereIn('status', [0, 1, 2, 3])
+        ->whereIn('status', [0, 1, 2, 3, 5])
         ->orderBy('id', 'desc')
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }

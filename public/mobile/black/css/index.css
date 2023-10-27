@@ -3729,7 +3729,9 @@ button.cancel-btn[_ngcontent-way-c22] {
 .pc_tab{
     display:none;
 }
-
+.nowspink{
+    flex-wrap:nowrap !important;
+}
 @media screen and (min-width: 1200px) {
     .rm {
         display:flex;

@@ -21,9 +21,13 @@ class DPgProGameRepository extends Repository
 
     public function getGames()
     {
-        return $this->model()::where('game_status', CommonEnum::ENABLE)
+        $res = $this->model()::where('game_status', CommonEnum::ENABLE)
                     ->orderBy('sort', 'desc')
                     ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
+                    foreach($res as &$val){
+                        $val['platform'] = "PGSPRO";
+                    }
+                    return $res;
     }
 
     public function getGameFavor()

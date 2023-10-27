@@ -21,6 +21,7 @@ class DUserDraw extends BaseMoel
             1 => trans('member.processing'), 
             2 => trans('member.completed'), 
             3 => trans('member.refuse'), 
+            5 => trans('member.completed'), 
         ];
         return $statusArr[$this->attributes['status']];
     }

@@ -165,7 +165,7 @@ class RewardHelper
         }
     }
 
-    public static function alterCoinLog($user, $coin, $rewardsType, $gameId = 0, $title = '', $gamePlat = 0, $relBetId = 0){
+    public static function alterCoinLog($user, $coin, $rewardsType, $gameId = 0, $title = '', $gamePlat = 0, $relBetId = 0,$tax_amount = 0){
         list($beforecoin, $aftercoin) = User::alterUserCoin($user, $coin, $rewardsType);
         $alterlog = $title . ':变化金额:' . $coin . ':修改前现金:' . $beforecoin . ':修改前提现钱包:' . $user['gamedraw'];
         LogHelper::insertCoinLog($user['uid'],
@@ -177,7 +177,8 @@ class RewardHelper
                             $rewardsType,
                             0,
                             $gamePlat,
-                            $relBetId);
+                            $relBetId,
+                            $tax_amount);
         return [$beforecoin, $aftercoin];
     }
 

@@ -19,6 +19,17 @@ class DPgGameRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
+    //剔除假PG
+    public function getGamestc(array $params)
+    {
+        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福");
+        return $this->model()::where('platform', $params['platform'])
+        ->where('game_status', CommonEnum::ENABLE)
+        ->whereNotIn('game_name', $str)
+        ->orderBy('sort', 'desc')
+        ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
+    }
+
     public function getGameRecommend(array $params)
     {
         return $this->model()::where('platform', $params['platform'])
