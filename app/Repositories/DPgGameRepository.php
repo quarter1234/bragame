@@ -30,6 +30,15 @@ class DPgGameRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
+    public function getGameslimit(array $params)
+    {
+        return $this->model()::where('platform', $params['platform'])
+        ->where('game_status', CommonEnum::ENABLE)
+        ->orderBy('sort', 'desc')
+        ->limit(4)
+        ->get();
+    }
+    
     public function getGameRecommend(array $params)
     {
         return $this->model()::where('platform', $params['platform'])
