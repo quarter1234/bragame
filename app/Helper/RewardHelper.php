@@ -46,6 +46,10 @@ class RewardHelper
                 }
 
             }
+        }elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
+            if($invitUid > 0 && $isPlayer == 0){
+                $flag = true;
+            }
         }
         else{
             if($invitUid > 0 && $isPlayer == 1){
@@ -76,8 +80,8 @@ class RewardHelper
                 }
             } elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']) {
                 $title = 'userrecharge';
-                $coin1 = roundCoin($config['recharge']['rrate1']);//一级奖励固定金额
-                $coin2 = roundCoin($config['recharge']['rrate2']);//二级奖励固定金额
+                $coin1 = $config['recharge']['rrate1'];//一级奖励固定金额
+                $coin2 = $config['recharge']['rrate2'];//二级奖励固定金额
                 $rate1 = $config['recharge']['rate1'];//一级分配比例
                 $rate2 = $config['recharge']['rate2'];//二级分配比例
             } elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BET']) {
