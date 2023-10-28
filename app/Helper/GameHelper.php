@@ -43,7 +43,16 @@ class GameHelper
         $res = $gameService->getPgProGameUrl($gameCode, $user);
 
         if(isset($res['code']) && $res['code'] === 0) {
-            return $res['data']['url'];
+            $uri = $res['data']['url'];
+            $remote = SystemConfigHelper::getByKey('plat_app_pgpro_s3');
+            if($remote){
+                $url = $remote . '?' . $uri;
+            }
+            else{
+                $url = "https://dkwin.vip/?" . $uri;
+            }
+            
+            return $url;
         }
 
         return false;
