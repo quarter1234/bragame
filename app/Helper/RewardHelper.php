@@ -94,7 +94,10 @@ class RewardHelper
                 if($pInfo && $pInfo['stopregrebat'] == 0) { // 是否停止奖励
                     $added1 = true;
                     if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
-                        self::addCoinByRatenew($parentuid, $coin1, $rate1, $actType, $gameId);
+                        //是否首充
+                        if($playInfo['ispayer'] == 0){
+                            self::addCoinByRatenew($parentuid, $coin1, $rate1, $actType, $gameId);
+                        }
                     }else{
                         self::addCoinByRate($parentuid, $coin1, $rate1, $actType, $gameId);
                     }
@@ -112,7 +115,10 @@ class RewardHelper
                     if($ppinfo && $ppinfo['stopregrebat'] == 0) {
                         $added2 = true;
                         if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
-                            self::addCoinByRatenew($ppid, $coin2, $rate2, $actType, $gameId);
+                            //是否首充
+                            if($playInfo['ispayer'] == 0){
+                                self::addCoinByRatenew($ppid, $coin2, $rate2, $actType, $gameId);
+                            }
                         }else{
                             self::addCoinByRate($ppid, $coin2, $rate2, $actType, $gameId);
                         }
