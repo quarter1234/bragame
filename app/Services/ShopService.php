@@ -113,7 +113,7 @@ class ShopService
 
         $data['mincoin'] = $mincoin; //最低
         $data['maxcoin'] = $maxcoin; //最高
-
+        $data['totalbet'] = $user['totalbet'];//总打码量
         return $data;
     }
 

@@ -46,6 +46,10 @@ class RewardHelper
                 }
 
             }
+        }elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
+            if($invitUid > 0 && $isPlayer == 0){
+                $flag = true;
+            }
         }
         else{
             if($invitUid > 0 && $isPlayer == 1){
@@ -76,10 +80,10 @@ class RewardHelper
                 }
             } elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']) {
                 $title = 'userrecharge';
-                $coin1 = roundCoin($coin * $config['recharge']['rrate1']);
-                $coin2 = roundCoin($coin * $config['recharge']['rrate2']);
-                $rate1 = $config['recharge']['rate1'];
-                $rate2 = $config['recharge']['rate2'];
+                $coin1 = $config['recharge']['rrate1'];//一级奖励固定金额
+                $coin2 = $config['recharge']['rrate2'];//二级奖励固定金额
+                $rate1 = $config['recharge']['rate1'];//一级分配比例
+                $rate2 = $config['recharge']['rate2'];//二级分配比例
             } elseif($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BET']) {
                 $title = 'userbet';
                 $coin1 = roundCoin($coin * $config['bet']['rrate1']);
@@ -93,7 +97,14 @@ class RewardHelper
                 $pInfo = UserHelper::getUserByUid($parentuid);
                 if($pInfo && $pInfo['stopregrebat'] == 0) { // 是否停止奖励
                     $added1 = true;
-                    self::addCoinByRate($parentuid, $coin1, $rate1, $actType, $gameId);
+                    if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
+                        //是否首充
+                        if($playInfo['ispayer'] == 0){
+                            self::addCoinByRatenew($parentuid, $coin1, $rate1, $actType, $gameId);
+                        }
+                    }else{
+                        self::addCoinByRate($parentuid, $coin1, $rate1, $actType, $gameId);
+                    }
                 }
             }
 
@@ -107,7 +118,14 @@ class RewardHelper
                     $ppinfo = UserHelper::getUserByUid($ppid);
                     if($ppinfo && $ppinfo['stopregrebat'] == 0) {
                         $added2 = true;
-                        self::addCoinByRate($ppid, $coin2, $rate2, $actType, $gameId);
+                        if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){
+                            //是否首充
+                            if($playInfo['ispayer'] == 0){
+                                self::addCoinByRatenew($ppid, $coin2, $rate2, $actType, $gameId);
+                            }
+                        }else{
+                            self::addCoinByRate($ppid, $coin2, $rate2, $actType, $gameId);
+                        }
                     }
                 }
             }
@@ -207,6 +225,87 @@ class RewardHelper
             $sendArr[0] = roundCoin($rateArr[0] * $addCoin);
             $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
             $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
+        }
+        $rewardsType = 0; // 奖励类型
+        $title = '';
+        if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // --下级注册
+            $title = 'reg';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_REG_REWARDS']; // --下级注册奖励
+        }
+        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BUY']){ // --充值
+            $title = 'buy';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_BUY_REWARDS']; // --下级购买奖励
+            if($gameId == GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['STORE_SEND']){
+                $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_SEND_REWARDS']; // 商城赠送奖励
+            }
+        }
+        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['BET']){ // --下级下注
+            $title = 'bet';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['AGENT_BET_REWARDS']; // --下级bet奖励
+        }
+        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['Mail']){ // --邮件奖励
+            $title = 'mail';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']; // --邮件
+        }
+        else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['VIP']){ // -- vip升级
+            $title = 'vipbonus';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['VIP_BONUS']; // --VIP奖励
+        }else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['RedPacket']){ // -- 红包奖励
+            $title = 'RedPacket';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['REDBAG']; // 红包
+        }
+        else{
+            $title = 'other';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['OTHER_REWARDS'];
+        }
+
+        if($sendArr[0] > 0) {
+            $svip = $parentInfo['svip'] ?? 0;
+            $coin = $sendArr[0];
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title, 0, $relBetId);
+            LogHelper::addSendLog($parentid, $coin, $actType, 0, 1, 0, $svip);
+            if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['MAIL_REWARDS']){ // 站内信
+                Bets::addUserBetMatch($parentid, '', $coin, 3);
+            }
+            else if($rewardsType == GameEnum::PDEFINE['ALTERCOINTAG']['SHOP_SEND_REWARDS']){ // 商城赠送奖励
+                Bets::addUserBetMatch($parentid, $orderid, $coin, 2);
+            }
+
+        }
+        if($sendArr[1] > 0) {
+            $coin = $sendArr[1];
+            // 添加提现钱包和背包金额
+            self::alterCoinLog($parentInfo, $coin, $rewardsType, $gameId, $title, 0, $relBetId);
+            User::updateGameDrawInDraw($parentInfo, $coin);
+            LogHelper::addSenddrawLog($parentid, $title, $coin, $actType);
+        }
+    }
+
+    /**
+     * 奖励金额按照奖励占比分成
+     * @param $parentid
+     * @param $addCoin
+     * @param $rate
+     * @param $actType
+     */
+    public static function addCoinByRatenew($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '', $optOver = false, $relBetId = 0)
+    {
+        $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
+        if(is_string($rate)){
+            $rateArr = self::decodeRate($rate);
+        }
+        else{
+            $rateArr = $rate;
+        }
+        $nowtime = time();
+        $sendArr = [0, 0, 0];
+        if($optOver){
+            $sendArr = $rateArr;
+        }
+        else{
+            $sendArr[0] = $rateArr[0];
+            $sendArr[1] = $rateArr[1];
+            $sendArr[2] = $rateArr[2];
         }
         $rewardsType = 0; // 奖励类型
         $title = '';

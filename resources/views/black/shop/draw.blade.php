@@ -54,6 +54,7 @@
                     <p>O valor do saque deve ser inteiro e 0</p>
                     <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
                     <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
+                    <p id="postMaxValue">&Valor total da aposta.:R$ {{ $user['totalbet'] }}</p>
                 </div>
                     <div class="draw_c">
                       <a href="{{url('mobile/shop/bind')}}">
