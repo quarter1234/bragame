@@ -71,13 +71,27 @@ class GameController extends Controller
     public function getPgPros()
     {
         $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        $res = false;
         if(!$pgstatus){ //0=真PG 1=假PG
             $params = [];
             $params['platform'] = 'PGS';
             $res['data'] = $this->gameService->getPGGameslimit($params);
             return Result::success($res);
         }
-        $res = $this->gameService->getPgProGames();
+
+        if (Auth::check()) {
+            $user = Auth::user();
+            if($user && $user['is_test'] == 1){ // 测试号使用的真PG
+                $params = [];
+                $params['platform'] = 'PGS';
+                $res['data'] = $this->gameService->getPGGameslimit($params);
+            }
+        }
+       
+        if(!$res){
+            $res = $this->gameService->getPgProGames();
+        }
+
         return Result::success($res);
     }
 
