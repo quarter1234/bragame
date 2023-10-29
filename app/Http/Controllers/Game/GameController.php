@@ -24,11 +24,22 @@ class GameController extends Controller
     {
         $params = [];
         $params['platform'] = 'PGS';
+        $res = false;
         $pgstatus = SystemConfigHelper::getByKey('pgstatus');
         if(!$pgstatus){ //0=真PG 1=假PG
             $res = $this->gameService->getPGGames($params);
         }else{
-            $res = $this->gameService->getPGGamestc($params);
+            if (Auth::check()) {
+                $user = Auth::user();
+                if($user && $user['is_test'] == 1){ // 测试号使用的真PG
+                    $res = $this->gameService->getPGGames($params);
+                }
+            }
+            
+            if(!$res){
+                $res = $this->gameService->getPGGamestc($params);
+            }
+            
         }
         return Result::success($res);
     }
