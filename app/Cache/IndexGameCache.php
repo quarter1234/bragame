@@ -65,6 +65,17 @@ class IndexGameCache
         });
     }
 
+    public static function getFavorRecommendtc()//剔除假PG
+    {
+        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福");
+        return DPgGame::where('game_status', CommonEnum::ENABLE)
+        ->where('platform', 'PGS')
+        ->whereNotIn('game_name', $str)
+        ->orderBy('id', 'desc')
+        ->limit(6)
+        ->get()->toArray();
+    }
+
     public static function getFavorRecommendTada()
     {
         $cacheKey = sprintf(self::FAVOR_RECOMMEND_TADA_KEY);
