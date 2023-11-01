@@ -58,8 +58,11 @@ class IndexService
             $data['pgRecommend'] = IndexGameCache::getPGRecommendtc();
         }
         $data['ppRecommend'] = IndexGameCache::getPPRecommend();
-        $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
-        $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
+        if(!$pgstatus){ //0=真PG 1=假PG
+            $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
+        }else{
+            $data['favorRecommend'] = IndexGameCache::getFavorRecommendtc();
+        }        $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
         $data['getTadaRecommend'] = IndexGameCache::getTadaRecommend();
 
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
