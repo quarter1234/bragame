@@ -62,7 +62,8 @@ class IndexService
             $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
         }else{
             $data['favorRecommend'] = IndexGameCache::getFavorRecommendtc();
-        }        $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
+        }        
+        $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
         $data['getTadaRecommend'] = IndexGameCache::getTadaRecommend();
 
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
