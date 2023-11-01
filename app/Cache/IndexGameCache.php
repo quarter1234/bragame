@@ -71,7 +71,7 @@ class IndexGameCache
         return DPgGame::where('game_status', CommonEnum::ENABLE)
         ->where('platform', 'PGS')
         ->whereNotIn('game_name', $str)
-        ->orderBy('id', 'desc')
+        ->orderBy('sort', 'desc')
         ->limit(6)
         ->get()->toArray();
     }
