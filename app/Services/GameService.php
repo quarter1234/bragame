@@ -126,6 +126,11 @@ class GameService
         return $this->pgRepo->getGameslimit($params);
     }
 
+    public function getGameslimitlast(array $params)
+    {
+        return $this->pgRepo->getGameslimitlast($params);
+    }
+
     public function getTadaGames(){
         return $this->jlRepo->getGames();
     }
