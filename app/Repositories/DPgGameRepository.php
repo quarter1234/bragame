@@ -46,7 +46,7 @@ class DPgGameRepository extends Repository
         ->where('game_status', CommonEnum::ENABLE)
         ->whereNotIn('game_name', $str)
         ->orderBy('sort', 'desc')
-        ->limit(4)
+        ->limit(2)
         ->get();
     }
     
