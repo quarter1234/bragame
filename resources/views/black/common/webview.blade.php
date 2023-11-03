@@ -24,7 +24,7 @@
     }
   </style>
 </head>
-<body>
+<body style="margin: 0;padding:0">
   <div id="game-container">
     <a id="return-button" onclick="goBack()">
        <img src="https://www.betbra.net:8032/bx_1/public/static/close/bgt.png" alt="返回按钮">
