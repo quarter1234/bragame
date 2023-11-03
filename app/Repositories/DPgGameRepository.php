@@ -35,7 +35,7 @@ class DPgGameRepository extends Repository
         return $this->model()::where('platform', $params['platform'])
         ->where('game_status', CommonEnum::ENABLE)
         ->orderBy('sort', 'desc')
-        ->limit(4)
+        ->limit(6)
         ->get();
     }
 
