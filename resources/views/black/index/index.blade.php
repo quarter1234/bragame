@@ -168,7 +168,7 @@
                             <span>juego</span>
                         </div>
                         <div class="xh_game_centen">
-                          <div _ngcontent-avh-c16="" class="other-live-ctn nowspink" id="tab10_content_pgpro"></div>
+                          <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab10_content_pgpro"></div>
                           {{--<div class="swiper mySwiper1">
                             <div class="swiper-wrapper">
                               @foreach($tadaRecommend as $item)

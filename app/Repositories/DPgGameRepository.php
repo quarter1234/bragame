@@ -35,7 +35,18 @@ class DPgGameRepository extends Repository
         return $this->model()::where('platform', $params['platform'])
         ->where('game_status', CommonEnum::ENABLE)
         ->orderBy('sort', 'desc')
-        ->limit(4)
+        ->limit(6)
+        ->get();
+    }
+
+    public function getGameslimitlast(array $params)
+    {
+        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福");
+        return $this->model()::where('platform', $params['platform'])
+        ->where('game_status', CommonEnum::ENABLE)
+        ->whereNotIn('game_name', $str)
+        ->orderBy('sort', 'desc')
+        ->limit(2)
         ->get();
     }
     
