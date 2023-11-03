@@ -135,9 +135,6 @@
             filter:brightness(70%);
             
            }
-           .new_pg_game_go{
-              flex-flow: row wrap;
-           }
           
             </style>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style="margin-top:84px;">
@@ -171,7 +168,7 @@
                             <span>juego</span>
                         </div>
                         <div class="xh_game_centen">
-                          <div _ngcontent-avh-c16="" class="other-live-ctn nowspink" id="tab10_content_pgpro"></div>
+                          <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab10_content_pgpro"></div>
                           {{--<div class="swiper mySwiper1">
                             <div class="swiper-wrapper">
                               @foreach($tadaRecommend as $item)
@@ -535,10 +532,10 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
                 $('#pgpro_load_more').attr('page', data.data.current_page);
                 data.data.data.forEach(element => {
                   if(element.platform == 'PGSPRO'){
-                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted new_pg_game_go" src="'+element.icon+'" /></a>'
+                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                     $('#tab10_content_pgpro').append(itemGame)
                   }else{
-                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted new_pg_game_go" src="'+element.icon+'" /></a>'
+                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
                     $('#tab10_content_pgpro').append(itemGame)
                   }
                 })
