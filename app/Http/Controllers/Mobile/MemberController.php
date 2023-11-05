@@ -121,6 +121,22 @@ class MemberController extends Controller
         return view(ViewHelper::getTemplate('member.transaction'), $data);
     }
 
+    public function transactions()
+    {
+        $user = Auth::user();
+        $data = [];
+        $data['user'] = $user;
+        return view(ViewHelper::getTemplate('member.transactions'), $data);
+    }
+
+    public function transactionslist()
+    {
+        $user = Auth::user();
+        $data['user'] = $user;
+        $list = $this->memberService->getCoinList($user)->toArray();
+        return view(ViewHelper::getTemplate('member.transactions_list'), $list);
+    }
+    
     public function resetPassword()
     {
         $user = Auth::user();

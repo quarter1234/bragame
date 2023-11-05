@@ -63,6 +63,25 @@ class GameEnum{
                 "DRAW_ERR_BANKINFO" => 549, // draw 账户信息不存在
                 "FUND_NOT_FOUND" => 946, // --未找到
             ],
-        ]
+        ],
+        "TYPENAME" => [
+            1 => "Operação de sistema", // 上分
+            2 => "Operação de sistema", // 下分
+            3 => "Aposta", // 下注
+            4 => "Ganhar dinheiro", // 赢钱
+            6 => "Pacote vermelho", // 红包
+            123 => "Retirar dinheiro", // 提现
+            // 奖励类型
+            130 => "Recompensas de registro de nível inferior", // --下级注册奖励
+            131 => "Recompensas de compra subordinadas", // --下级购买奖励
+            132 => "Recompensas de apostas de nível inferior", // --下级bet奖励
+            136 => "Correio", // --邮件
+            138 => "VIP Bônus", // --VIP奖励
+            15 => "Recarrega", // --商城充值
+            148 => "Distribua recompensas", // --商城赠送奖励
+            137 => "Retirada recusada", // --拒绝draw，返回
+            149 => "prêmio de caixa", // 宝箱奖励
+            150 => "Recompensa salarial semanal", // 周工资奖励
+        ],
     ];
 }
