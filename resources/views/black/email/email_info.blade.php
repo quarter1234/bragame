@@ -39,7 +39,7 @@
           @include('black.common.modal') 
             <div class="email_h"></div>
             <div class="email_tit">Receba sua recompensa</div>
-            <div class="email_nr" style="height:450px;">
+            <div class="email_nr" style="height:280px;">
 
             @if($info['hastake'] == 1) 
                 
