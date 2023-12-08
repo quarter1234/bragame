@@ -26,7 +26,25 @@ div.jx-app-download-dismiss[_ngcontent-way-c1] {
     background-position: center;
     background-size: 20px 20px
 }
-
+.nowspink{
+    flex-wrap:nowrap !important;
+}
+.xh_game_top{
+    width:100%;
+    height:30px;
+    display:flex;
+    align-items:center;
+}
+.xh_game_top label{
+    width:16px;
+    height:16px;
+    display:inline-block;
+    background:url(/mobile/black/images/rank.png) no-repeat;
+    background-size:16px 16px;
+}
+.xh_game_top span{
+    padding-left:5px;
+}
 div.dialog-header-row[_ngcontent-way-c1] {
     font-size: 24px;
     font-weight: 700;
@@ -1319,7 +1337,7 @@ button.cancel-btn[_ngcontent-way-c22] {
 }
 
 .other-live-ctn[_ngcontent-avh-c16] {
-    width: 95%;
+    width: 100%;
 }
 
 .other-live-ctn[_ngcontent-avh-c16] .other-live[_ngcontent-avh-c16] {
@@ -3558,5 +3576,39 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .pass_sr{
         width:90% !important;
+    }
+    .xh_game{
+        width:95%;
+        margin:20px auto 0 auto;  
+    }
+    .xh_game_top{
+        width:95%;
+        height:30px;
+        display:flex;
+        align-items:center;
+        margin: 0 auto;
+    }
+    .xh_game_top label{
+        width:16px;
+        height:16px;
+        display:inline-block;
+        background:url(/mobile/black/images/rank.png) no-repeat;
+        background-size:16px 16px;
+    }
+    .xh_game_top span{
+        padding-left:5px;
+    }
+    .xh_game_centen{
+        width:100%;
+        height:157px;
+    }
+    
+    .xh_game_centen img{
+        width:90% !important;
+        border-radius:10px;
+    }
+    .other-live-ctn a{
+        width:9% !important;
+        margin-left:10px;
     }
 }
