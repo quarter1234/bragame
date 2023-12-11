@@ -9,8 +9,6 @@ div.jx-app-download-container[_ngcontent-way-c1]>img[_ngcontent-way-c1] {
     width: 32px;
     height: auto;
     margin: auto 10px auto 15px;
-    margin-left: 10px;
-
 }
 
 div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
@@ -32,10 +30,11 @@ div.jx-app-download-dismiss[_ngcontent-way-c1] {
     flex-wrap:nowrap !important;
 }
 .xh_game_top{
-    width:100%;
+    width:95%;
     height:30px;
     display:flex;
     align-items:center;
+    margin-left: 10px;
 }
 .xh_game_top label{
     width:16px;
