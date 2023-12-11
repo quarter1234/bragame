@@ -8,7 +8,9 @@ div.jx-app-download-container[_ngcontent-way-c1] {
 div.jx-app-download-container[_ngcontent-way-c1]>img[_ngcontent-way-c1] {
     width: 32px;
     height: auto;
-    margin: auto 10px auto 15px
+    margin: auto 10px auto 15px;
+    margin-left: 10px;
+
 }
 
 div.jx-app-download-container[_ngcontent-way-c1]>span[_ngcontent-way-c1] {
