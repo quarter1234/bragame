@@ -12,6 +12,7 @@ use App\Repositories\DUserInviteRepository;
 use App\Repositories\DUserTreeRepository;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Support\Facades\Cache;
+use App\Repositories\DCommissionRepository;
 
 class RegisterListener implements ShouldQueue
 {
@@ -114,19 +115,19 @@ class RegisterListener implements ShouldQueue
 //        file_put_contents('/tmp/register.log', json_encode($register).PHP_EOL, FILE_APPEND);
 
         // 代理返利配置
-        // if($inviteConfig['invite']['rtype'] == 2) {
-        //     // 如果之前没有获取
-        //     $commissionRepo = app()->make(DCommissionRepository::class);
-        //     $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
-        //     if(!$hasCommission) {
-        //         RewardHelper::addSuperiorRewards(
-        //             $register->uid,
-        //             GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
-        //             $inviteConfig['invite']['coin1'],
-        //             $inviteConfig['invite']['rtype']
-        //         );
-        //     }
-        // }
+         if($inviteConfig['invite']['rtype'] == 2) {
+             // 如果之前没有获取
+             $commissionRepo = app()->make(DCommissionRepository::class);
+             $hasCommission = $commissionRepo->getInfoByUid($register->uid, 1);
+             if(!$hasCommission) {
+                 RewardHelper::addSuperiorRewards(
+                     $register->uid,
+                     GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
+                     $inviteConfig['invite']['coin1'],
+                     $inviteConfig['invite']['rtype']
+                 );
+             }
+         }
     }
 
     private function storeUserBind($registerUser)

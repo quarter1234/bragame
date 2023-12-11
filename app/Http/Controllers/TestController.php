@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Common\Enum\GameEnum;
 use App\Facades\User;
+use App\Helper\RewardHelper;
+use App\Helper\SystemConfigHelper;
 use App\Helper\UserHelper;
 use App\Helper\VipHelper;
+use App\Repositories\DCommissionRepository;
 use App\Services\ShareService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
@@ -19,15 +23,22 @@ class TestController extends Controller
     }
     public function index(Request $request)
     {
-        $uid = 40001;
-//        $dayStr = '2023-08-01';
-//        $startTime = strtotime($dayStr);
-//        $endTime = strtotime($dayStr . ' 23:59:59');
-//        Log::debug("test-index:", [$startTime, $endTime]);
-        VipHelper::useVipDiamond($uid, 25);
-        return "succ";
-        // $isNeedRand = UserHelper::getTestIsInviteFilter($uid, $startTime, $endTime);
-        // return $this->shareService->getTestFirstRecharge($uid, $startTime, $endTime);
-         // User::testStr();
+        $uid = $request->get("uid", false);
+        if($uid){
+            $inviteConfig = SystemConfigHelper::getByKey('invite');
+            if($inviteConfig['invite']['rtype'] == 2) {
+                // 如果之前没有获取
+                $commissionRepo = app()->make(DCommissionRepository::class);
+                $hasCommission = $commissionRepo->getInfoByUid($uid, 1);
+                if(!$hasCommission) {
+                    RewardHelper::addSuperiorRewards(
+                        $uid,
+                        GameEnum::PDEFINE['TYPE']['SOURCE']['REG'],
+                        $inviteConfig['invite']['coin1'],
+                        $inviteConfig['invite']['rtype']
+                    );
+                }
+            }
+        }
     }
 }

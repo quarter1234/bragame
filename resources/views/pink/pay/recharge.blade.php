@@ -174,7 +174,7 @@
     })
     
     if(selObj){
-         setSelOptView(selObj)
+         setSelOptView(selObj, payCoin)
     }
    }
 
@@ -183,15 +183,23 @@
       $('#recharge_value').val(payCoin)
    }
 
-   function setSelOptView(obj){
-        let sendcoin = $(obj).attr('sendcoin');
-        let id = $(obj).attr('itemId');
-        $('#recharge_rate').text(sendcoin)
-        $("#recharge_id").val(id)
-        $(obj).addClass('recharge_on').siblings().removeClass('recharge_on')
+   function setSelOptView(obj, payCoin){
+      payCoin = payCoin || $(obj).attr('payCoin');
+      let sendcoin = $(obj).attr('sendcoin');
+      let rate = $(obj).attr('rate');
+      if(rate > 0){
+          sendcoin = (payCoin * rate).toFixed(2);
+      }
+      let id = $(obj).attr('itemId');
+      $('#recharge_rate').text(sendcoin)
+      $("#recharge_id").val(id)
+      $(obj).addClass('recharge_on').siblings().removeClass('recharge_on')
    }
 
    $(function(){
+      setSelOptView($('.re_show').eq(0).find('.recharge_k.recharge_on'))
+        setInputVal($('.re_show').eq(0).find('.recharge_k.recharge_on'))
+
       $('.recharge_kn .recharge_k').click(function(){
           setSelOptView(this)
           setInputVal(this)
