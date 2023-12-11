@@ -2,7 +2,7 @@
 <div class="rechare_list">
         {{-- <div class="email_w" style="width:150px;">{{ $item['id'] }}</div> --}}
         <div class="email_wk" style="width:330px;">
-            <div class="rechare_zt">Montante da aposta: {{ $item['coins'] }}</div>
+            <div class="rechare_zt">{{ $item['title'] }}</div>
         </div>
         <div class="email_w_bottom xg">
                 <div class="email_w_left">

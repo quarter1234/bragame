@@ -160,7 +160,25 @@
                         <div class="swiper-pagination"></div>
                       </div>
                     </div>
-
+                    <div class="xh_game">
+                        <div class="xh_game_top">
+                            <label></label>
+                            <span>juego</span>
+                        </div>
+                        <div class="xh_game_centen">
+                          <div _ngcontent-avh-c16="" style="margin: 0 auto" class="other-live-ctn nowspink" id="tab10_content_pgpro"></div>
+                          {{--<div class="swiper mySwiper1">
+                            <div class="swiper-wrapper">
+                              @foreach($tadaRecommend as $item)
+                                <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
+                                
+                                <div class="swiper-slide"></div>
+                              @endforeach 
+                            </div>
+                          </div>--}}
+                        </div>
+                    </div>
+                    <div style="width:100%; height:10px;"></div> 
                   <script>
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
@@ -290,6 +308,21 @@
                             </div>
                         </div>
 
+                        {{-- Tada棋牌添加 --}}
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab4_content" style="display: none;">
+                            <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab4_content_jls"></div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="tada_load_more" page="0" onclick="loadTadaGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
+                        </div>
+
+                        {{-- PG+添加 --}}
+                        <div _ngcontent-avh-c16="" class="live-game-board-ctn tab" id="tab10_content" style="display: none;">
+                            <div _ngcontent-avh-c16="" class="other-live-ctn"></div>
+                            <div style="width:100%;text-align:center;margin-top:1rem">
+                                <button id="pgpro_load_more" page="0" onclick="loadPgProGames()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+                            </div>
+                        </div>
                       </div>
                     </div>
                   </jx-home-game-board>
@@ -330,7 +363,7 @@
             @include('green.common.slide')
             @include('green.index.notice')
             <style>
-              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
+              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 10px}
               .other-live-ctn a:active img{transform:scale(0.9);}
             </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
@@ -426,6 +459,53 @@
           })
         }
 
+        function loadTadaGames(){
+          let page = $('#tada_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getTadas')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#tada_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image tada_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                  $('#tab4_content_jls').append(itemGame)
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
+        function loadPgProGames(){
+          let page = $('#pgpro_load_more').attr('page');
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/getPgPros')}}",
+              type : 'GET',
+              data : {page: parseInt(page) + 1},
+              success : function (data) {
+                hideLoading();
+                $('#pgpro_load_more').attr('page', data.data.current_page);
+                data.data.data.forEach(element => {
+                  if(element.platform == 'PGSPRO'){
+                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pgpro_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                    $('#tab10_content_pgpro').append(itemGame)
+                  }else{
+                    let itemGame = '<a><img _ngcontent-avh-c16="" gameid="'+element.id+'" class=" generic-background-image pg_game_go ng-star-inserted" src="'+element.icon+'" /></a>'
+                    $('#tab10_content_pgpro').append(itemGame)
+                  }
+                })
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading()
+              }
+          })
+        }
+
       $(document).ready(function() {
         $('#qh .side-menu-item').click(function() {
           $(this).siblings().removeClass('active-side-menu');
@@ -439,6 +519,8 @@
         loadPgGames()
         loadPpGames()
         loadJlGames()
+        loadTadaGames()
+        loadPgProGames()
 
         $(document).on('click', '.pg_game_go', function() {
           showLoading();
@@ -451,6 +533,43 @@
               success : function (data) {
                 if(data.code == 200) {
 				          window.location.href= "{{ route('mobile.display', ['act' => 'game_url']) }}" +'&game_code=' +data.data.code
+                } else {
+                    if(data.code == '400005') {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                    } else {
+                      showModal(data.message);
+                    }
+                }
+
+                setTimeout(function(){
+                  hideLoading();
+                }, 2000)
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                hideLoading();
+                if(jqXHR.responseJSON.code == 400005) {
+                      showModal('Por favor faça login primeiro');
+                      $('.tc').show();
+                  } else {
+                    showModal(jqXHR.responseJSON.message);
+                  }
+
+              }
+          })
+        });
+
+        $(document).on('click', '.pgpro_game_go', function() {
+          showLoading();
+
+          let gameId = $(this).attr('gameid')
+          $.ajax({
+              url : "{{url('mobile/pgproUrl')}}",
+              type : 'GET',
+              data : {id: parseInt(gameId)},
+              success : function (data) {
+                if(data.code == 200) {
+				          window.location.href= "{{ route('mobile.display', ['act' => 'pgpro_game_url']) }}" +'&game_code=' +data.data.code
                 } else {
                     if(data.code == '400005') {
                       showModal('Por favor faça login primeiro');

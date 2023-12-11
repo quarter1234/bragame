@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\Helper\UserHelper;
+use App\Repositories\CoinLogRepository;
 use App\Repositories\DPgGameBetsRepository;
 use App\Repositories\DUserDrawRepository;
 use App\Repositories\DUserRechargeRepository;
@@ -11,15 +12,19 @@ class MemberService
     private $rechargeRepo;
     private $drawRepo;
     private $pgBetsRepo;
+    private $coinlogRepo;
 
     public function __construct(
         DUserRechargeRepository $rechargeRepo, 
         DUserDrawRepository $drawRepo,
-        DPgGameBetsRepository $pgBetsRepo)
+        DPgGameBetsRepository $pgBetsRepo,
+        CoinLogRepository $coinlogRepo
+        )
     {
         $this->rechargeRepo = $rechargeRepo;
         $this->drawRepo = $drawRepo;
         $this->pgBetsRepo = $pgBetsRepo;
+        $this->coinlogRepo = $coinlogRepo;
     }
 
     public function getVipInfo($user) :array
@@ -52,7 +57,13 @@ class MemberService
     public function getPgBetsList($user)
     {
         $dateTime = $this->getWhereTime(4);
-        return $this->pgBetsRepo->getPgBets($user, $dateTime['startTime'], $dateTime['endTime']);
+        return $this->coinlogRepo->getPgBets($user, $dateTime['startTime'], $dateTime['endTime']);
+    }
+
+    public function getCoinList($user)
+    {
+        $dateTime = $this->getWhereTime(4);
+        return $this->coinlogRepo->getCoinlog($user, $dateTime['startTime'], $dateTime['endTime']);
     }
 
     private function getWhereTime(int $type)

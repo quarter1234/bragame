@@ -132,7 +132,7 @@
 
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span class="jy_ico"></span>
-                        {{--交易记录--}}Minhas Transações
+                        {{--交易记录--}}Depósito e saque
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     
@@ -142,8 +142,12 @@
                         {{--投注记录--}}Registro de apostas
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                     
-
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
+                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transactions")}}'" tabindex="0">
+                        <span class="jy_ico"></span>
+                        {{--交易记录--}}Minhas Transações
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+                     
+                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
                       <span class="em_ico"></span>
                         {{--邮件--}}Correio
                         <i class="icon iconfont"   style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>

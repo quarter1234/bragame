@@ -70,6 +70,9 @@ Route::group([
 
     // 交易记录
     Route::get('transaction', [MemberController::class, 'transaction']);
+
+    Route::get('transactions', [MemberController::class, 'transactions']);
+    Route::get('transactionslist', [MemberController::class, 'transactionslist']);
     Route::get('rechargeList', [MemberController::class, 'rechargeList']);
     Route::get('drawList', [MemberController::class, 'drawsList']);
 
