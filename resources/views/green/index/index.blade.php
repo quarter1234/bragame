@@ -59,7 +59,7 @@
                             <span>R$</span>
                             <span>{{ $user['coin'] }}</span>
                             <div class="sx"><img src="https://www.betbra.net:8032/bx_1/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" src="/mobile/green/images/qb.png"></div>
+                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png"></div>
                         </div>
                     </span>
                   @else
