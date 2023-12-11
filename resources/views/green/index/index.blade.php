@@ -363,7 +363,7 @@
             @include('green.common.slide')
             @include('green.index.notice')
             <style>
-              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 10px}
+              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 3px}
               .other-live-ctn a:active img{transform:scale(0.9);}
             </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
