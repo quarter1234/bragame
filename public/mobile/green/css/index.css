@@ -34,7 +34,7 @@ div.jx-app-download-dismiss[_ngcontent-way-c1] {
     height:30px;
     display:flex;
     align-items:center;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 .xh_game_top label{
     width:16px;
@@ -3557,7 +3557,7 @@ button.cancel-btn[_ngcontent-way-c22] {
     }
     .other-live-ctn a{
         width:9% !important;
-        margin-left:10px;
+        margin-left:5px;
     }
     .swipslider{
         padding-top:17% !important;
