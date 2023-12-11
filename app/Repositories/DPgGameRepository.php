@@ -22,7 +22,7 @@ class DPgGameRepository extends Repository
     //剔除假PG
     public function getGamestc(array $params)
     {
-        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福");
+        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福","Slot_fortunerabbit");
         return $this->model()::where('platform', $params['platform'])
         ->where('game_status', CommonEnum::ENABLE)
         ->whereNotIn('game_name', $str)
