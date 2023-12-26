@@ -189,9 +189,9 @@
       payCoin = payCoin || $(obj).attr('payCoin');
       let sendcoin = $(obj).attr('sendcoin');
       let rate = $(obj).attr('rate');
-      if(rate > 0){
-          sendcoin = (payCoin * rate).toFixed(2);
-      }
+      // if(rate > 0){
+      //     sendcoin = (payCoin * rate).toFixed(2);
+      // }
       let id = $(obj).attr('itemId');
       $('#recharge_rate').text(sendcoin)
       $("#recharge_id").val(id)
