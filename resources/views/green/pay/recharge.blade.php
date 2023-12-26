@@ -69,7 +69,7 @@
                                        <label>R$</label> {{ $page['pay_view_coin'] }}
                                         </div>
                                         <div class="recharge_bz">
-                                          {{ $page['disrate'] }}
+                                          +{{ $page['sendcoin'] }}
                                         </div>
                                     </div>
                                 </div>
