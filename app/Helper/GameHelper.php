@@ -45,6 +45,7 @@ class GameHelper
         if(isset($res['code']) && $res['code'] === 0) {
             $uri = $res['data']['url'];
             $remote = SystemConfigHelper::getByKey('plat_app_pgpro_s3');
+            $remote = $remote . $gameCode . '/';
             if($remote){
                 $url = $remote . '?' . $uri;
             }
