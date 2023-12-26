@@ -44,9 +44,9 @@ class UserRepository extends Repository
     public function getRankCoin()
     {
         $list = $this->model()::where('status', CommonEnum::ENABLE)
-        ->where('create_time', '>', 1685180041)//5月份开始
+        // ->where('create_time', '>', 1685180041)//5月份开始
         ->orderBy('coin', 'desc')
-        ->limit(20)
+        ->limit(50)
         ->get();
 
         $data = [];
