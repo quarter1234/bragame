@@ -166,7 +166,7 @@
                             <span>juego</span>
                         </div>
                         <div class="xh_game_centen">
-                          <div _ngcontent-avh-c16="" style="margin: 0 auto" class="other-live-ctn nowspink" id="tab10_content_pgpro"></div>
+                          <div _ngcontent-avh-c16="" style="margin: 0 auto" class="other-live-ctn" id="tab10_content_pgpro"></div>
                           {{--<div class="swiper mySwiper1">
                             <div class="swiper-wrapper">
                               @foreach($tadaRecommend as $item)
@@ -363,7 +363,7 @@
             @include('green.common.slide')
             @include('green.index.notice')
             <style>
-              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 10px}
+              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 3px}
               .other-live-ctn a:active img{transform:scale(0.9);}
             </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
