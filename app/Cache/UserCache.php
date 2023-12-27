@@ -54,11 +54,13 @@ class UserCache
 
     public static function getRankCoin()
     {
-        $cacheKey = self::USER_RANK_COIN_CACHE;
+        // $cacheKey = self::USER_RANK_COIN_CACHE;
 
-        return Cache::remember($cacheKey, 1800, function () {
-            $userRepo = app()->make(UserRepository::class);
-            return $userRepo->getRankCoin();
-        });
+        // return Cache::remember($cacheKey, 1800, function () {
+        //     $userRepo = app()->make(UserRepository::class);
+        //     return $userRepo->getRankCoin();
+        // });
+        $userRepo = app()->make(UserRepository::class);
+        return $userRepo->getRankCoin();
     }
 }

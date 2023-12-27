@@ -46,7 +46,7 @@ class UserRepository extends Repository
         $list = $this->model()::where('status', CommonEnum::ENABLE)
         // ->where('create_time', '>', 1685180041)//5月份开始
         ->orderBy('coin', 'desc')
-        ->take(50)
+        ->take(30)
         ->get();
 
         $data = [];
