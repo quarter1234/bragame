@@ -125,7 +125,7 @@ class ShopService
         }else{
             $matchBets_amount = $betamount['amount'] ?? 0;
             $baseBets = roundCoin($matchBets_amount * $betamount['bet_mul']);
-            $rate = bcdiv($user['match_bets'],$baseBets);
+            $rate = bcdiv(intval($user['match_bets']),intval($baseBets),2);
             if($rate > 1){
                 $rate = 1;
             }
