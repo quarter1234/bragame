@@ -11,6 +11,7 @@ use App\Repositories\DUserDrawRepository;
 use App\Repositories\SPayCfgDrawcomRepository;
 use App\Repositories\SPayCfgDrawlimitRepository;
 use App\Repositories\DUserTreeRepository;
+use App\Repositories\DUserMatchBetsRepository;
 
 class ShopService
 {
@@ -18,16 +19,20 @@ class ShopService
     private $drawComRepo;
     private $drawRepo;
     private $utRepo;
+    private $mbRep;
 
     public function __construct(DUserBankRepository $bankRepo, 
         SPayCfgDrawcomRepository $drawComRepo,
         DUserDrawRepository $drawRepo,
-        DUserTreeRepository $utRepo)
+        DUserTreeRepository $utRepo,
+        DUserMatchBetsRepository $mbRep
+        )
     {
         $this->bankRepo  = $bankRepo;
         $this->drawComRepo = $drawComRepo;
         $this->drawRepo = $drawRepo;
         $this->utRepo = $utRepo;
+        $this->mbRep = $mbRep;
     }
 
     public function checkDoBind($params)
@@ -114,6 +119,18 @@ class ShopService
         $data['mincoin'] = $mincoin; //最低
         $data['maxcoin'] = $maxcoin; //最高
         $data['totalbet'] = $user['totalbet'];//总打码量
+        $betamount = $this->mbRep->getUserMatchBet($user['uid']);
+        if(!$betamount){
+            $rate = 0;
+        }else{
+            $matchBets_amount = $betamount['amount'] ?? 0;
+            $baseBets = roundCoin($matchBets_amount * $betamount['bet_mul']);
+            $rate = bcdiv($user['match_bets'],$baseBets);
+            if($rate > 1){
+                $rate = 1;
+            }
+        }
+        $data['rate'] = ($rate*100)."%";
         return $data;
     }
 

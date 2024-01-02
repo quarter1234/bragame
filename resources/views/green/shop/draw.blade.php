@@ -83,6 +83,7 @@
                     </div>
                     <p id="postMinValue" min="{{ $user['mincoin'] }}">Valor minimo de retirada :R$ {{ $user['mincoin'] }}</p>
                     <p id="postMaxValue" max="{{ $user['maxcoin'] }}">&maior.:R$ {{ $user['maxcoin'] }} Permitido cada vez</p>
+                    <p>Progresso da retirada:{{$user['rate']}}</p>
                 </div>
 
                 <button id="drawSubmit"  class="braw_b">Retirar agora</button>
