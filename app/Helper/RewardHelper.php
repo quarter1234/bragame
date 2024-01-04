@@ -253,6 +253,12 @@ class RewardHelper
         }else if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['RedPacket']){ // -- 红包奖励
             $title = 'RedPacket';
             $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['REDBAG']; // 红包
+        }else if($actType == GameEnum::PDEFINE['ALTERCOINTAG']['WEEK_BONUS']){ // -- vip升级
+            $title = 'vipbonus_week';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['WEEK_BONUS']; // --VIP奖励
+        }else if($actType == GameEnum::PDEFINE['ALTERCOINTAG']['MONTH_BONUS']){ // -- vip升级
+            $title = 'vipbonus_month';
+            $rewardsType = GameEnum::PDEFINE['ALTERCOINTAG']['MONTH_BONUS']; // --VIP奖励
         }
         else{
             $title = 'other';

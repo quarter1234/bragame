@@ -439,7 +439,7 @@ class UserService
             $start_time = $this->month();
         }
         $info = CoinLog::where(['uid'=>$uid,'type'=>$acctype])->whereBetween('time', [$start_time[0], $start_time[1]])->first();
-        if(!$info) {
+        if(!empty($info)) {
             return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
         }
         RewardHelper::addCoinByRate($uid, 
