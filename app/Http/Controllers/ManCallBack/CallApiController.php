@@ -84,7 +84,7 @@ class CallApiController extends Controller{
             $addcoin = $request->get("addcoin", false);
             $rate = $request->get("rate", false);
             $type = $request->get("type", false);
-            $resVal = User::vipbonus($uid, $addcoin, $rate, $type);
+            $resVal = User::vipreward($uid, $addcoin, $rate, $type);
             if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
                 return 'succ';
             }
