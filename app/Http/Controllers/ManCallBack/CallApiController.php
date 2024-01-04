@@ -79,7 +79,16 @@ class CallApiController extends Controller{
                 return 'succ';
             }
         }
-
+        if($act == 'vipbonus'){ // vip周工资，vip月工资
+            $uid = $request->get("uid", false);
+            $addcoin = $request->get("addcoin", false);
+            $rate = $request->get("rate", false);
+            $type = $request->get("type", false);
+            $resVal = User::vipbonus($uid, $addcoin, $rate, $type);
+            if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+                return 'succ';
+            }
+        }
         return 'error';
     }
 
