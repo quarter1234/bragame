@@ -21,6 +21,8 @@ class GameEnum{
             "DOWNRETURN" => 137, // --拒绝draw，返回
             "BOX_AWARD" => 149, // 宝箱奖励
             "AGENT_AWARD" => 150, // 周工资奖励
+            "WEEK_BONUS" => 181, // VIP周工资
+            "MONTH_BONUS" => 182 // VIP月工资
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",

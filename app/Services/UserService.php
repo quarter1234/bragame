@@ -17,6 +17,7 @@ use App\Repositories\DUserRechargeRepository;
 use App\Common\Enum\GameEnum;
 use App\Helper\SystemConfigHelper;
 use App\Cache\AllUseGameDrawCache;
+use App\Models\CoinLog;
 use App\Models\DUserMailNew;
 use App\Repositories\DUserBindRepository;
 use Illuminate\Support\Facades\Log;
@@ -419,4 +420,63 @@ class UserService
         $info->save();
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
+
+    /**
+     * 后台站内信
+     * @param $awradId
+     * @param $act
+     * @return mixed
+     */
+    public function vipreward($uid,$addcoin,$rate,$type)
+    {
+        if($type == 1){
+            $acctype = GameEnum::PDEFINE['ALTERCOINTAG']['WEEK_BONUS'];
+            $gameId = GameEnum::PDEFINE['ALTERCOINTAG']['WEEK_BONUS'];
+            $start_time = $this->week();
+        }else{
+            $acctype = GameEnum::PDEFINE['ALTERCOINTAG']['MONTH_BONUS'];
+            $gameId = GameEnum::PDEFINE['ALTERCOINTAG']['MONTH_BONUS'];
+            $start_time = $this->month();
+        }
+        $info = CoinLog::where(['uid'=>$uid,'type'=>$acctype])->whereBetween('time', [$start_time[0], $start_time[1]])->first();
+        if(!$info) {
+            return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
+        }
+        RewardHelper::addCoinByRate($uid, 
+                                    $addcoin ?? 0, 
+                                    $rate, 
+                                    $acctype, 
+                                    $gameId, 
+                                    '', 
+                                    false, 
+                                    0);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /** 
+     * 返回本周开始和结束的时间戳 
+     * 
+     * @return array 
+     */  
+    public static function week()  
+    {  
+        $timestamp = time();  
+        return [  
+            strtotime(date('Y-m-d', strtotime("this week Monday", $timestamp))),  
+            strtotime(date('Y-m-d', strtotime("this week Sunday", $timestamp))) + 24 * 3600 - 1  
+        ];  
+    }  
+
+    /** 
+     * 返回本月开始和结束的时间戳 
+     * 
+     * @return array 
+     */  
+    public static function month($everyDay = false)  
+    {  
+        return [  
+            mktime(0, 0, 0, date('m'), 1, date('Y')),  
+            mktime(23, 59, 59, date('m'), date('t'), date('Y'))  
+        ];  
+    }  
 }
