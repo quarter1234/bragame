@@ -81,7 +81,7 @@ class CallApiController extends Controller{
         }
         if($act == 'vipbonus'){ // vip周工资，vip月工资
             $uid = $request->get("uid", false);
-            $addcoin = $request->get("addcoin", false);
+            $addcoin = $request->get("coin", false);
             $rate = $request->get("rate", false);
             $type = $request->get("type", false);
             $resVal = User::vipreward($uid, $addcoin, $rate, $type);

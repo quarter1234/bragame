@@ -209,6 +209,7 @@ class RewardHelper
      */
     public static function addCoinByRate($parentid, $addCoin, $rate, $actType, $gameId = 0, $orderid = '', $optOver = false, $relBetId = 0)
     {
+
         $parentInfo = UserHelper::getUserByUid($parentid); // TODO 可以使用缓存
         if(is_string($rate)){
             $rateArr = self::decodeRate($rate);
@@ -226,6 +227,7 @@ class RewardHelper
             $sendArr[1] = roundCoin($rateArr[1] * $addCoin);
             $sendArr[2] = roundCoin($rateArr[2] * $addCoin);
         }
+
         $rewardsType = 0; // 奖励类型
         $title = '';
         if($actType == GameEnum::PDEFINE['TYPE']['SOURCE']['REG']){ // --下级注册

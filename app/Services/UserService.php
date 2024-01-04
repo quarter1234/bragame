@@ -443,7 +443,7 @@ class UserService
             return GameEnum::PDEFINE['RET']['ERROR']['FUND_NOT_FOUND'];
         }
         RewardHelper::addCoinByRate($uid, 
-                                    $addcoin ?? 0, 
+                                    $addcoin, 
                                     $rate, 
                                     $acctype, 
                                     $gameId, 
