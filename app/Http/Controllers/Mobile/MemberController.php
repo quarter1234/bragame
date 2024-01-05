@@ -52,7 +52,6 @@ class MemberController extends Controller
         $user = Auth::user();
 
         $data = $this->memberService->getVipInfo($user);
-
         return view(ViewHelper::getTemplate('member.vip'), $data);
     }
 

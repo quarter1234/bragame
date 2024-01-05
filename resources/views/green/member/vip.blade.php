@@ -94,19 +94,28 @@
                 </div>
 
             </div>
-            <button onclick="location.href='{{ route("mobile.display", ["act" => "pay"]) }}'" class="vip_button">Atualize agora</button>
-            <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
-              <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
-                <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
-                  <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                 
-
-                   </jx-content-view>
-                </jx-safe-area>
+          </div>
+          <div class="table-box">
+          <div class="v-cell">
+            <div class="header">
+              <div class="h-cell">
+                <div class="item"><span>nível VIP</span></div>
+                <div class="item"><span>Nível de atualização</span></div>
+                <div class="item"><span>salário semanal</span></div>
+                <div class="item"><span>salário mensal</span></div>
               </div>
             </div>
-
-            
+            <div class="content">
+              @foreach($vipList as $key => $item)
+                <div class="h-cell">
+                  <div class="item"><span>vip{{ $item['level']}}</span></div>
+                  <div class="item"><span>{{ $item['rewards_format']}}</span></div>
+                  <div class="item"><span>{{ $item['weeklybonus_format'] }}</span></div>
+                  <div class="item"><span>{{ $item['monthlybonus_foramt']}}</span></div>
+                </div>
+                @endforeach  
+            </div>
+          </div>            
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
@@ -122,6 +131,72 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
+  <style>
+    .table-box {
+  width: 92%;
+  border-left: 1px solid rgba(255, 255, 255, .3);
+  border-top: 1px solid rgba(255, 255, 255, .3);
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 100px;
+}
+
+.table-box .h-cell {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.table-box .v-cell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.table-box .v-colspan {
+  flex: 1;
+  height: auto !important;
+}
+
+.table-box .header {
+  /* flex: 2; */
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.table-box .content {
+  /* flex: 5; */
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* .table-box .content .item {
+  flex: 1;
+} */
+
+.table-box .item {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  border-right: 1px solid rgba(255, 255, 255, .3);
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+.table-box .item span {
+  text-align: center;
+}
+
+.table-box .content img {
+  width: 25px;
+  height: 25px;
+}  
+.h-cell:nth-child(odd) { background-color: rgba(255, 255, 255, .08); } .h-cell:nth-child(even) { background-color: rgba(255, 255, 255, .03); }
+  </style>
   <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/mobile/js/swiper-bundle.min.js"></script>
   <script>
       var vipList = @json($vipList);
