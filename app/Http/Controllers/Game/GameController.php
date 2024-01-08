@@ -90,12 +90,12 @@ class GameController extends Controller
        
         if(!$res){
             $res1 = $this->gameService->getPgProGames()->toArray();
-            $res = $res1;
-            $params = [];
-            $params['platform'] = 'PGS';
-            $res2 = $this->gameService->getGameslimitlast($params)->toArray();
-            $array = array_merge($res1['data'],$res2);
-            $res['data'] = $array;
+            // $res = $res1;
+            // $params = [];
+            // $params['platform'] = 'PGS';
+            // $res2 = $this->gameService->getGameslimitlast($params)->toArray();
+            // $array = array_merge($res1['data'],$res2);
+            $res['data'] = $res1['data'];
         }
 
         return Result::success($res);
