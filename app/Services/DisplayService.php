@@ -5,6 +5,7 @@ use App\Cache\UserCache;
 use App\Exceptions\BadRequestException;
 use App\Helper\GameHelper;
 use GuzzleHttp\Client;
+use App\Helper\SystemConfigHelper;
 
 class DisplayService
 {
@@ -47,11 +48,20 @@ class DisplayService
             return $url;
         }
         elseif($params['act'] == 'pgpro_game_url') {
-            $url = GameHelper::getPgProGameUrl($user, $params['game_code'] ?? '');
-            if(!$url) {
-                throw new BadRequestException(['msg' => 'pgpro game url err:'. $params['game_code']]);
-            }
-            return $url;
+            $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+            if($pgstatus == 1){ //假PG
+                $url = GameHelper::getPgProGameUrl($user, $params['game_code'] ?? '');
+                if(!$url) {
+                    throw new BadRequestException(['msg' => 'pgpro game url err:'. $params['game_code']]);
+                }
+                return $url;
+            }elseif($pgstatus == 2){ //新假PG
+                $url = GameHelper::getPgProOhGameUrl($user, $params['game_code'] ?? '');
+                if(!$url) {
+                    throw new BadRequestException(['msg' => 'pgpro_oh game url err:'. $params['game_code']]);
+                }
+                return $url;
+            } 
         }
         elseif($params['act'] == 'post_pay') {
 

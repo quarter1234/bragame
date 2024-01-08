@@ -7,6 +7,7 @@ use App\Models\DPgGame;
 use App\Repositories\DJlGameRepository;
 use App\Repositories\DPgGameRepository;
 use Illuminate\Support\Facades\Cache;
+use App\Helper\SystemConfigHelper;
 
 class IndexGameCache
 {
@@ -29,7 +30,7 @@ class IndexGameCache
 
     public static function getPGRecommendtc()//剔除假PG
     {
-        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福","Slot_fortunerabbit");
+        $str = self::selectPgprogame();
         return DPgGame::where('platform', 'PGS')
         ->where('game_status', CommonEnum::ENABLE)
         ->whereNotIn('game_name', $str)
@@ -67,13 +68,26 @@ class IndexGameCache
 
     public static function getFavorRecommendtc()//剔除假PG
     {
-        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福","Slot_fortunerabbit");
+        $str = self::selectPgprogame();
         return DPgGame::where('game_status', CommonEnum::ENABLE)
         ->where('platform', 'PGS')
         ->whereNotIn('game_name', $str)
         ->orderBy('sort', 'desc')
         ->limit(6)
         ->get()->toArray();
+    }
+
+    /**
+     * 假PG，新假PG
+     */
+    public static function selectPgprogame(){
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if($pgstatus == 1){ //假PG
+            $str = CommonEnum::PGPRO;
+        }elseif($pgstatus == 2){ //新假PG
+            $str = CommonEnum::PGPROOH;
+        }
+        return $str;
     }
 
     public static function getFavorRecommendTada()

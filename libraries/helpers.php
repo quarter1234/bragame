@@ -632,6 +632,17 @@ if (!function_exists('hitRandom')) {
     }
 }
 
+if (!function_exists('validateIp')) {
+    function validateIp($ip){
+        if(preg_match('/^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/', $ip)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+}
+
 /**
  * 获取当前控制器名
  *

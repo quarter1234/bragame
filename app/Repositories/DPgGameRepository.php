@@ -3,12 +3,18 @@ namespace App\Repositories;
 
 use App\Common\Enum\CommonEnum;
 use App\Models\DPgGame;
+use App\Helper\SystemConfigHelper;
+use App\Models\DPgProOhGame;
 
 class DPgGameRepository extends Repository
 {
     function model()
     {
         return DPgGame::class;
+    }
+
+    function modelProOh(){
+        return DPgProOhGame::class;
     }
 
     public function getGames(array $params)
@@ -22,7 +28,7 @@ class DPgGameRepository extends Repository
     //剔除假PG
     public function getGamestc(array $params)
     {
-        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福","Slot_fortunerabbit");
+        $str = $this->selectPgprogame();
         return $this->model()::where('platform', $params['platform'])
         ->where('game_status', CommonEnum::ENABLE)
         ->whereNotIn('game_name', $str)
@@ -41,13 +47,26 @@ class DPgGameRepository extends Repository
 
     public function getGameslimitlast(array $params)
     {
-        $str = array("虎虎生财","十倍金牛","象财神","鼠鼠福福","Slot_fortunerabbit");
+        $str = $this->selectPgprogame();
         return $this->model()::where('platform', $params['platform'])
         ->where('game_status', CommonEnum::ENABLE)
         ->whereNotIn('game_name', $str)
         ->orderBy('sort', 'desc')
         ->limit(1)
         ->get();
+    }
+
+    /**
+     * 假PG，新假PG
+     */
+    public static function selectPgprogame(){
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if($pgstatus == 1){ //假PG
+            $str = CommonEnum::PGPRO;
+        }elseif($pgstatus == 2){ //新假PG
+            $str = CommonEnum::PGPROOH;
+        }
+        return $str;
     }
     
     public function getGameRecommend(array $params)
@@ -76,5 +95,9 @@ class DPgGameRepository extends Repository
 
     public function insert(array $data){
         return  $this->model()::insertGetId($data);
+    }
+
+    public function findOh(int $id){
+        return $this->modelProOh()::find($id);
     }
 }

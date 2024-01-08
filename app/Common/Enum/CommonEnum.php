@@ -22,6 +22,7 @@ class CommonEnum
     const GAME_PLAT_TADA = 1;
     const GAME_PLAT_PG = 2;
     const GAME_PLAT_PGPRO = 3;
+    const GAME_PLAT_PGPROOH = 4;
 
     const USER_TEAM_BAN_NOR = 1; // 正常
     const USER_TEAM_BAN_BLOCK = 2; // 封禁
@@ -40,5 +41,28 @@ class CommonEnum
         "deep" => '/bx_4/public',
         "lake" => '/bx_4/public',
         "brling" => '/bx_4/public',
+    ];
+
+    const PGPROOH = [ //新假PG
+        "虎虎生财",
+        "十倍金牛",
+        "鼠鼠福福",
+        "金钱兔",
+        "金猪报财",
+        "象财神",
+        "美洲野牛",
+        "双囍临门",
+        "水果丛林",
+        "比基尼天堂",
+        "赏金船长",
+        "欢乐嘉年华",
+    ];
+
+    const PGPRO = [ //假PG
+        "虎虎生财",
+        "十倍金牛",
+        "鼠鼠福福",
+        "象财神",
+        "Slot_fortunerabbit",
     ];
 }

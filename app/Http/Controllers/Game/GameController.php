@@ -152,23 +152,46 @@ class GameController extends Controller
 
     public function pgproUrl()
     {
-        $id = intval(Request::get('id', 0));
-        $gameInfo = $this->gameService->getPgProGameInfo($id);
-        if(!$gameInfo) {
-            return Result::error('not find game');
-        }
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if($pgstatus == 1){ //假PG
+            $id = intval(Request::get('id', 0));
+            $gameInfo = $this->gameService->getPgProGameInfo($id);
+            if(!$gameInfo) {
+                return Result::error('not find game');
+            }
 
-        $user = Auth::user();
-        $params = [];
-        $params['ip'] = Request::getClientIp();
-        $params['game_id'] = $gameInfo['id'];
-        $params['game_plat'] = CommonEnum::GAME_PLAT_PGPRO;
-        
-        event(new UserGameEvent($user, $params));
-        if($user->coin < $gameInfo->en_coin) {
-            return Result::error("Menos de {$gameInfo['en_coin']} moedas");
-        }
+            $user = Auth::user();
+            $params = [];
+            $params['ip'] = Request::getClientIp();
+            $params['game_id'] = $gameInfo['id'];
+            $params['game_plat'] = CommonEnum::GAME_PLAT_PGPRO;
+            
+            event(new UserGameEvent($user, $params));
+            if($user->coin < $gameInfo->en_coin) {
+                return Result::error("Menos de {$gameInfo['en_coin']} moedas");
+            }
 
-        return Result::success(['code' => $gameInfo['game_code'] ?? '']);
+            return Result::success(['code' => $gameInfo['game_code'] ?? '']);
+        }elseif($pgstatus == 2){ //新假PG
+            $id = intval(Request::post('id', 0));
+            $gameInfo = $this->gameService->getPgProOhGameInfo($id);
+            if(!$gameInfo) {
+                return Result::error('not find game');
+            }
+
+            $user = Auth::user();
+            $params = [];
+            $params['ip'] = Request::getClientIp();
+            $params['game_id'] = $gameInfo['id'];
+            $params['game_plat'] = CommonEnum::GAME_PLAT_PGPROOH;
+            
+            event(new UserGameEvent($user, $params));
+            if($user->coin < $gameInfo->en_coin) {
+                return Result::error("Menos de {$gameInfo['en_coin']} moedas");
+            }
+
+            return Result::success(['code' => $gameInfo['game_code'] ?? '']);
+        }
     }
+
 }

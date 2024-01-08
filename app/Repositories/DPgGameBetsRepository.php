@@ -3,12 +3,17 @@ namespace App\Repositories;
 
 use App\Common\Enum\CommonEnum;
 use App\Models\DPgGameBets;
+use App\Models\DPgProOhGameBets;
 
 class DPgGameBetsRepository extends Repository
 {
     function model()
     {
         return DPgGameBets::class;
+    }
+
+    function modelOh(){
+        return DPgProOhGameBets::class;
     }
 
     public function insert(array $data){
@@ -20,6 +25,10 @@ class DPgGameBetsRepository extends Repository
             $this->model()::where("id", $id)
                             ->update($data);
         }
+    }
+
+    public function findOh($id){
+        return  $this->modelOh()::find($id);
     }
 
     public function getPgBets($user, $startTime, $endTime)

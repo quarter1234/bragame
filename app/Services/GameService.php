@@ -80,6 +80,7 @@ class GameService
         "PGS" => 2,
         "PP" => 3,
         "PGPRO" => 4,
+        "PGPROOH" => 5,
     ];
 
     private $commissTb = [
@@ -87,6 +88,7 @@ class GameService
         "PGS" => 3,
         "PP" => 4,
         "PGPRO" => 5,
+        "PGPROOH" => 6,
     ];
 
     public function __construct(DPgGameRepository $pgRepo,
@@ -136,7 +138,12 @@ class GameService
     }
 
     public function getPgProGames(){
-        return $this->pgproRepo->getGames();
+        $pgstatus = SystemConfigHelper::getByKey('pgstatus');
+        if($pgstatus == 1){ //假PG
+            return $this->pgproRepo->getGames();
+        }elseif($pgstatus == 2){ //新假PG
+            return $this->pgproRepo->getGamesoh();
+        }
     }
 
     public function getDPGGameInfo(int $id)
@@ -154,6 +161,11 @@ class GameService
         return $this->pgproRepo->find($id);
     }
 
+    public function getPgProOhGameInfo(int $id)
+    {
+        return $this->pgRepo->findOh($id);
+    }
+    
     public function getDPGameByCode($gameCode){
         if(empty($gameCode)){
             return null;
@@ -190,6 +202,10 @@ class GameService
         return $this->pgprobets->find($id);
     }
 
+    public function getPGProOhGameBet(int $id){
+        return $this->pgbets->findOh($id);
+    }
+    
     /**
      * 获取PG游戏地址
      * @param string $gameCode
@@ -394,6 +410,156 @@ class GameService
          $this->_pgProBetOver($betId, $beforeAmount, $aftercoin, $canDraw);
          $this->pgproRespData['balance'] = $aftercoin;
          return $this->pgproRespData;
+    }
+
+    public function getPgProOhGameUrl($gameCode, $user){
+        $params = [];
+        $appIpConfig = false;
+        if($user['is_test'] == 0){
+            $appIpConfig = SystemConfigHelper::getByKey('plat_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_app_id');
+        }
+        else{
+            $appIpConfig = SystemConfigHelper::getByKey('plat_test_app_ip');
+            $appIdConfig = SystemConfigHelper::getByKey('plat_test_app_id');
+        }
+
+        if(!$appIpConfig){
+            return genJsonRes(CodeMsg::CODE_ERROR, [], 'not find third game ip');
+        }
+
+        $pre = $appIdConfig;
+        $params['user_id'] = $pre . 'x' . $user['uid'];
+        $params['game_code'] = $gameCode;
+        $query = http_build_query($params);
+        $host = $appIpConfig . ':83/';
+        if(!validateIp($appIpConfig)){
+            $host = $appIpConfig . '/';
+        }
+
+        $url = $host . env('PGPRO_OH_GAME_LOGIN_URI', '') . '?' . $query;
+        $client = new Client();
+        $res = $client->get($url);
+        $res = $res->getBody()->getContents();
+        return json_decode($res, true);
+    }
+
+    public function pgproOhBetResult($user, array $betParams){
+        $uid = $user['uid'];
+        if($user['is_test'] == 0){
+            $platConfig = SystemConfigHelper::getByKey('plat_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+                return $this->defauRespData;
+            }
+        }
+        else{
+            $platConfig = SystemConfigHelper::getByKey('plat_test_app_id');
+            if(!$platConfig || $platConfig != $betParams['plat_app']){
+                $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+                return $this->defauRespData;
+            }
+        }
+
+        if(!$user){
+            $this->defauRespData['status'] = 'SC_USER_NOT_EXISTS';
+            return $this->defauRespData;
+        }
+
+        $betParams['is_test'] = $user['is_test'];
+        list($betId, $game) = $this->_addOhBetData($uid, $betParams);
+        if(empty($betId)){
+            $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+            return $this->defauRespData;
+        }
+
+        if(!$game){
+            $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+            return $this->defauRespData;
+        }
+
+        $betTb = $this->getPGProOhGameBet($betId);
+        if(!$betTb){
+            $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS';
+            return $this->defauRespData;
+        }
+
+        $relBetId = $betTb->id;
+        $platApp = $betTb->plat_app ?? "";
+        $betAmount = $betTb->bet_amount ?? 0;
+        $winLoseAmount = $betTb->winlose_amount ?? 0;
+        $settledAmount = $betTb->settled_amount ?? 0;
+        $gameName = $game->game_name ?? "";
+        $gameId = $game->id ?? 0;
+        $betStatus = $betTb->status ?? 0;
+        if($betStatus > 0){
+            $this->defauRespData['status'] = 'SC_WRONG_PARAMETERS6';
+            return $this->defauRespData;
+        }
+
+        $beforecoin = $user->coin;
+        $aftercoin = $beforecoin;
+        $beforeAmount = $beforecoin;
+        $currPlatForm = "PGPROOH";
+        $gamePlat = 2;
+        $commType = 3;
+        foreach($this->gamePlatTb as $gk => $gv){
+            if($gk == $currPlatForm){
+                $gamePlat = $gv;
+                break;
+            }
+        }
+
+        foreach($this->commissTb as $ck => $cv){
+            if($ck == $currPlatForm){
+                $commType = $cv;
+                break;
+            }
+        }
+
+        $tax_amount = 0;//税收
+        $canDraw = 0;
+        $this->_pgproOhBetDoing($relBetId); // 处理中
+        if($betAmount > 0){
+            $reduceRes = $this->_reduceCoin($user, $betAmount, $gameId, $gamePlat, $relBetId);
+            $beforecoin = $reduceRes['beforecoin'];
+            $aftercoin = $reduceRes['aftercoin'];
+            // $effbet = $betAmount - $winLoseAmount;
+            $effbet = $betAmount;
+            if($effbet > 0){ // 按照下注的概念，给上级返利
+                RewardHelper::gameRebate($uid, GameEnum::PDEFINE['TYPE']['SOURCE']['BET'], $effbet, $gameId, $commType);
+            }
+        }
+
+        if($winLoseAmount > 0){
+            //税收
+            $tax_amount_rate = SystemConfigHelper::getByKey('tax_amount_rate');
+            if($tax_amount_rate){
+                if($tax_amount_rate > 0){
+                    $tax_amount = bcmul($winLoseAmount,$tax_amount_rate,2);//税收金额
+                    $winLoseAmount = bcsub($winLoseAmount,$tax_amount,2);//税后金额
+                }
+            }
+            $addCoinRes = $this->_addCoin($user, $winLoseAmount, $gameId, $gamePlat, $relBetId, $betAmount);
+            $beforecoin = $addCoinRes['beforecoin'];
+            $aftercoin = $addCoinRes['aftercoin'];
+        }
+
+        $ispayer = $user['ispayer'] ?? 0;
+        if($ispayer == 0){ // --未充值的会员不得提现
+            $this->_betOhOver($betId, $beforeAmount, $user['coin'], $canDraw ,$tax_amount);
+            $this->defauRespData['data']['balance'] = $aftercoin;
+            return $this->defauRespData;
+        }
+
+        $isAllUseDraw = AllUseGameDrawCache::getIsAllUseDraw($uid);
+        $canDraw = Bets::checkBets($user, $isAllUseDraw);
+        $effbet = $betAmount;
+        AllUseGameDrawCache::removeUserDraw($uid);
+        // -- 完成
+        $this->_betOhOver($betId, $beforeAmount, $aftercoin, $canDraw ,$tax_amount);
+        $this->defauRespData['data']['balance'] = $aftercoin;
+        return $this->defauRespData;
     }
 
     public function jiliBetResult($user, array $betParams){
@@ -761,6 +927,24 @@ class GameService
         $afterAmount = 0;
         $canDraw = 0;
         $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    private function _upPgProOhUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw){
+        $upData = [
+            "status" => $status,
+            "before_amount" => $beforeAmount,
+            "after_amount" => $afterAmount,
+            "can_draw" => $canDraw,
+        ];
+        $this->pgbets->storePgOhGameBet($betId, $upData);
+    }
+
+    private function _pgproOhBetDoing($betId){
+        $status = 4;  // 处理中
+        $beforeAmount = 0;
+        $afterAmount = 0;
+        $canDraw = 0;
+        $this->_upPgProOhUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
     }
 
     private function _upPgProUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw){
