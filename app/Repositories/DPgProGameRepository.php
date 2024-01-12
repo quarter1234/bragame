@@ -21,7 +21,7 @@ class DPgProGameRepository extends Repository
     }
 
     /**
-     * 新假PG
+     * 假PG
      */
     public function getGames()
     {

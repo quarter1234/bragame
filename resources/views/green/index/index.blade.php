@@ -363,7 +363,7 @@
             @include('green.common.slide')
             @include('green.index.notice')
             <style>
-              .other-live-ctn a{margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);}
+              .other-live-ctn a{width:30%; margin-top:15px;object-fit:cover;transition:0.1s;transform:scale(1);margin-left: 3px}
               .other-live-ctn a:active img{transform:scale(0.9);}
             </style>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
@@ -378,13 +378,7 @@
       </jx-main-wrapper>
     </jx-root>
     <style>
-    #tab10_content_pgpro{
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 10px;
-      grid-row-gap: 10px;
-    }
+    
     </style>
     <script type="text/javascript">
     var myclick = function(v) {

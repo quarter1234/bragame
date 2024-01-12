@@ -63,6 +63,6 @@ class CommonEnum
         "十倍金牛",
         "鼠鼠福福",
         "象财神",
-        "Slot_fortunerabbit",
+        "金钱兔",
     ];
 }
