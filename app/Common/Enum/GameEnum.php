@@ -84,6 +84,8 @@ class GameEnum{
             137 => "Retirada recusada", // --拒绝draw，返回
             149 => "prêmio de caixa", // 宝箱奖励
             150 => "Recompensa salarial semanal", // 周工资奖励
+            181 => "Salário semanal VIP", // VIP周工资
+            182 => "Salário mensal VIP", // VIP月工资
         ],
     ];
 }
