@@ -50,7 +50,9 @@ Route::group([
     // 活动
     Route::get('activity', [ActivityController::class, 'index']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
-    
+    // 签到
+    Route::post('signin', [ActivityController::class, 'signIn']);
+    Route::post('signlog', [ActivityController::class, 'signlog']);
     // iframe嵌入  公用
     Route::get('display', [DisplayController::class, 'display'])->name('mobile.display');
     // 登出
