@@ -8,5 +8,5 @@ return [
     'transaction' => config('app.url').":84/#/pages/transaction/transaction",
     'payment' => config('app.url').":84/#/pages/deposit/managepayment/managepayment",
     //'post_pay' => config('app.url').":83/order/pay",
-    'post_pay' => config('app.no_cer_url').":83/order/pay",
+    'post_pay' => env("APP_PAYURL", false)."/order/pay",
 ];
