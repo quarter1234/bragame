@@ -7,6 +7,6 @@ class SConfigPic extends BaseMoel
 
     public function getImgAttribute($value)
     {
-        return config('app.url').':8092'.$value;
+        return env("APP_ADMINURL").$value;
     }
 }
