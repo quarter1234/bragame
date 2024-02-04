@@ -40,7 +40,7 @@ class DPgProGameRepository extends Repository
     public function getGamesoh()
     {
         $res = DPgProOhGame::where('game_status', CommonEnum::ENABLE)
-                    ->where('my_like',1)
+                    // ->where('my_like',1)
                     ->orderBy('sort', 'desc')
                     ->simplePaginate(9);
                     foreach($res as &$val){
