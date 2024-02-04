@@ -22,7 +22,11 @@ class GameEnum{
             "BOX_AWARD" => 149, // 宝箱奖励
             "AGENT_AWARD" => 150, // 周工资奖励
             "WEEK_BONUS" => 181, // VIP周工资
-            "MONTH_BONUS" => 182 // VIP月工资
+            "MONTH_BONUS" => 182, // VIP月工资
+            "SIGNIN_REWARDS" => 153, // 签到奖励
+            "WEEK_VIP" => 154, // -- vip周奖励
+            "MONTH_VIP" => 155, // -- vip月奖励
+            "REG_BONUS" => 156, // -- 注册赠送
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",
@@ -86,6 +90,14 @@ class GameEnum{
             150 => "Recompensa salarial semanal", // 周工资奖励
             181 => "Salário semanal VIP", // VIP周工资
             182 => "Salário mensal VIP", // VIP月工资
+            153 => "Sign-in rewards", // 签到奖励
+            181 => "Recompensas semanales VIP", // VIP周工资
+            182 => "Recompensa mensual VIP", // VIP月工资
+            156 => "Bônus de inscrição", // 注册奖励
+            153 => "Sign-in rewards", // 签到奖励
+            181 => "Recompensas semanales VIP", // VIP周工资
+            182 => "Recompensa mensual VIP", // VIP月工资
+            156 => "Bônus de inscrição", // 注册奖励
         ],
     ];
 }

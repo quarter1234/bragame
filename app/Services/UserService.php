@@ -453,6 +453,33 @@ class UserService
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 
+    /**
+     * 每日签到
+     * @param $uid
+     * @param $id
+     */
+    public function signin($user, $coin){
+        $addCoin = $coin;
+        $gameId = GameEnum::PDEFINE['ALTERCOINTAG']['SIGNIN_REWARDS'];
+        $title = "每日签到奖励:" . $addCoin;
+        RewardHelper::alterCoinLog($user, $addCoin, GameEnum::PDEFINE['ALTERCOINTAG']['SIGNIN_REWARDS'], $gameId, $title, 0);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+
+    /**
+     * 注册赠送
+     * @param $uid
+     * @param $id
+     */
+    public function regbonus($user, $coin)
+    {
+        $addCoin = $coin;
+        $gameId = GameEnum::PDEFINE['ALTERCOINTAG']['REG_BONUS'];
+        $title = "新用户注册奖励:" . $addCoin;
+        RewardHelper::alterCoinLog($user, $addCoin, GameEnum::PDEFINE['ALTERCOINTAG']['REG_BONUS'], $gameId, $title, 0);
+        return GameEnum::PDEFINE['RET']['SUCCESS'];
+    }
+    
     /** 
      * 返回本周开始和结束的时间戳 
      * 
