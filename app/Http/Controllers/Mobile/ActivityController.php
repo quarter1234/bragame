@@ -12,6 +12,9 @@ use Illuminate\Support\Facades\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use App\Facades\User;
+use App\Models\DPgGameBets;
+use App\Models\DUserRecharge;
+
 /**
  * 活动任务相关
  */
@@ -61,10 +64,14 @@ class ActivityController extends Controller
         if(!empty($yesterdaysign)){ //昨天如果没有签到，当前签到视为第一天签到
             $date = $lastSignIn['sort']; 
         }
+        $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
+        $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
         $return = [
             'list' => $signsys::orderBy('date', 'asc')->get(),
             'date' => $date,
             'todaysign' => $todaysign,
+            'today_recharge' => $rechage,
+            'today_pgbet' => $pgbet,
         ];
         return view(ViewHelper::getTemplate('activity.signin'), $return);
     }
