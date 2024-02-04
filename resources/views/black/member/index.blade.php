@@ -1,5 +1,5 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
     @include('mobile.common.common_title')
@@ -46,10 +46,23 @@
     justify-content: flex-start;
     align-items: center
 }
+
+     .sign-icon {
+         width: 25px;
+         height: 25px;
+         display: inline-block;
+         float: right;
+         margin-left: 10px;
+     }
+
+        .sign-icon>img {
+            width: 100%;
+            height: 100%;
+        }
     </style>
     </head>
-  
-   
+
+
 
   <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
@@ -82,8 +95,17 @@
                     <jx-avatar _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c6="">
                       <img _ngcontent-xfs-c6="" alt="" class="avatar-icon" src="{{$avatar}}" style="border-radius: 50%;"></jx-avatar>
                     <div _ngcontent-xfs-c1="" class="ng-tns-c1-1">
-                      <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }} 
-                        <p class="avatar_sub_title"><label class="m_vip"></label>：<span class="avatar_sub_title-span">{{ $user['svip'] }}</span> I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span><label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}"><a></a></label></p> 
+                      <div _ngcontent-xfs-c1="" class="username">{{ $user['playername'] }}
+                        <p class="avatar_sub_title">
+                            <label class="m_vip"></label>：<span class="avatar_sub_title-span">{{ $user['svip'] }}</span>
+                            I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span>
+                            <a class="sign-icon" href="{{url('mobile/signlog')}}">
+                                <img src="/mobile/black/images/sign-icon.png" />
+                            </a>
+                            <label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}">
+                                <a></a>
+                            </label>
+                        </p>
                         <style>
                           .avatar_sub_title{font-size:1rem;line-height: 1.8rem;}
                           .avatar_sub_title-span{margin-left:0.6rem;margin-right:10px;}
@@ -95,18 +117,18 @@
                         clipboard.on('success', function (e) {
                           alert('success')
                         })
-                        
+
                       })
                       </script>
                       <!---->
                       </div>
                   </div>
                   <jx-content-view _ngcontent-xfs-c1="" _nghost-xfs-c7="" class="ng-tns-c1-1">
-                   
+
                     {{--<div _ngcontent-xfs-c1="" class="finance-btn-group ng-tns-c1-1">
                       <button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
                       Recarregar</button>
-                        
+
                         @if(!$bankInfo)
                               <button _ngcontent-xfs-c1="" class="finance-btn withdraw-btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
                           @else
@@ -120,33 +142,33 @@
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/pay/recharge") }}'" tabindex="0">
                         <span class="m_cz"></span>
                         {{--交易记录--}}Recarregar
-                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button> 
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
                         @if(!$bankInfo)
-                          <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">  
+                          <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/guide") }}'" tabindex="0">
                         @else
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{ url("mobile/shop/draw") }}'" tabindex="0">
                         @endif
                         <span class="m_tx"></span>
                         {{--交易记录--}}Reembolso
-                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>     
+                        <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                     <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transaction")}}'" tabindex="0">
                         <span class="jy_ico"></span>
                         {{--交易记录--}}Depósito e saque
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
-                    
-                        
+
+
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/bets")}}'" tabindex="0">
                         <span class="tzjl_ico"></span>
                         {{--投注记录--}}Registro de apostas
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    
+
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/transactions")}}'" tabindex="0">
                         <span class="jy_ico"></span>
                         {{--交易记录--}}Minhas Transações
                         <i class="icon iconfont" style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                     
+
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/email")}}'" tabindex="0">
                       <span class="em_ico"></span>
                         {{--邮件--}}Correio
@@ -156,19 +178,19 @@
                       <span class="vip_ico"></span>
                         {{--VIP等级--}}VIP
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    
 
-                    
+
+
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
                       <span class="kf_ico"></span>
                        {{--客服中心--}}Contact Us
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
-                    
+
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/resetPassword")}}'" tabindex="0">
                       <span class="m_xg"></span>
                        {{--客服中心--}}alterar a senha
-                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>                      
-                        
+                        <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
+
                         <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
                       <span class="m_tc"></span>
                        {{--客服中心--}}Saia da conta
@@ -181,7 +203,7 @@
 
                       {{--<button _ngcontent-xfs-c1="" class="finance-btn deposit-btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
                         <span _ngcontent-xfs-c1="" class="finance-btn-icon deposit-icon"> </span>
-                        
+
                         退出账号Saia da conta
                       </button>--}}
                      </div>
@@ -193,10 +215,10 @@
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                 
-                @include('black.common.footer') 
-                  
-                 
+
+                @include('black.common.footer')
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>

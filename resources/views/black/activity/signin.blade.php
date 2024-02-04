@@ -1,8 +1,8 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
-    @include('green.common.common_title') 
+    @include('green.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,113 +11,231 @@
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/black/css/activity.css">
     <!-- Used in supported Android browsers -->
- 
-    <script>var Webconfigs = {
-        "ROOT": "__ROOT__"
-      }</script>
+
+    <link rel="stylesheet" href="/mobile/black/css/share.css">
+
+    <script>
+        var Webconfigs = {
+            "ROOT": "__ROOT__"
+        }
+    </script>
     <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/static/js/way.min.js"></script>
-   
+    <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/mobile/js/index.js"></script>
 
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     </head>
-    <style>
-            @media screen and (min-width: 1200px){
-                .header-view__content-wrapper__content-container{
-                  display:flex;
-                  justify-content:space-between;
-                }
-                .activity-btn{
-                  width:640px !important;
-                }
-                .header-view__content-wrapper__content-container{
-                  width:36%;
-                  margin:0 auto;
-                }
 
-            }
-    </style>        
+    <style>
+        .sign-frame {
+            display: block;
+        }
+
+        .sign-box {
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+            padding-top: 62px;
+            padding-bottom: 30px;
+            color: #fff;
+        }
+
+        .user-info {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            padding: 0 20px;
+            margin-top: 30px;
+            background: url("/mobile/black/images/vipleaderbar.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .user-icon {
+            width: 107px;
+            position: absolute;
+            top: -50px;
+            right: 5px;
+        }
+
+        .topup-box, .bet-box {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .topup-box>span,
+        .bet-box>span {
+            font-size: 14px;
+        }
+
+        .topup-box>.pg-box,
+        .bet-box>.pg-box {
+            height: 16px;
+            border-radius: 8px;
+            background-color: rgba(54, 54, 54, .8);
+        }
+
+        .topup-box .pg,
+        .bet-box .pg {
+            height: 100%;
+            border-radius: 8px;
+            background-image: linear-gradient(90deg, rgb(176, 79, 0) .16%, rgb(94, 0, 0) 100%);
+        }
+
+        .tip {
+            display: inline-block;
+            margin-top: 25px;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .sign-day {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .sign-day>.item {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0 15px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, .1);
+            font-size: 14px;
+            position: relative;
+        }
+
+        .sign-day .item.actived {
+            background-color: rgba(255, 255, 255, .3);
+        }
+
+        .sign-day .item>.gold-icon {
+            width: 40px;
+        }
+
+        .sign-day .item>.sign-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: 16px;
+        }
+
+        .sign-day .item>.sign-info>.award {
+            font-size: 14px;
+        }
+
+        .sign-day .item>.sign-btn {
+            width: 60px;
+            line-height: 30px;
+            position: absolute;
+            right: 15px;
+            bottom: 10px;
+            border-radius: 15px;
+            background-color: #B04F00;
+            text-align: center;
+            font-size: 12px;
+        }
+
+        .mark-box {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #fff;
+            position: absolute;
+            right: 15px;
+        }
+
+        .mark-box>img {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 
   <body style="color: white; background-color: #0a0e2b;">
-    <jx-root ng-version="8.2.12">
-      <router-outlet></router-outlet>
-      <jx-main-wrapper _nghost-snw-c0="">
-        <router-outlet _ngcontent-snw-c0=""></router-outlet>
-        <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
-          <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
-            <div _ngcontent-snw-c2="" class="app-background"></div>
-            
-          </jx-app-background>
-          <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
-            <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
-              <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
-                <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                  <!---->
-                  <!---->
-                  <!---->
-                  <!---->
-                  <div _ngcontent-snw-c3="" style="font-size:16px;" class="header-view__nav-row-wrapper__container__nav-row__title ng-star-inserted">{{--活动中心--}}</div>
-                  <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row__content">
-                  {{--<jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
-                      <!---->
-                      <!---->
-                      
-                      <button _ngcontent-snw-c1="" onclick="location.href='{{ route("mobile.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
-                      
-                    </jx-header-nav-content>--}}
+  @include('black.common.top_sub')
+  <div class="sign-frame">
+      <div class="sign-box">
+          <div class="user-info">
+{{--              <img class="user-icon" src="/mobile/black/images/0.png" />--}}
+              <div class="topup-box">
+                  <span>Valor de recarga de hoje: R${{$today_recharge}}/R$10</span>
+                  <div class="pg-box">
+                      <div class="pg" style="width: {{$recharge_percent}}%;"></div>
                   </div>
-                  <!---->
-                  <!---->
-                  <!---->
-                  <!----></div>
-              </jx-header-row>
-            </div>
-            <div _ngcontent-snw-c3="" class="header-view__content-wrapper" style="padding-bottom: 50px; padding-top: 64px;">
-              <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
-                <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
-                  <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                    <!---->
-                    <!---->
-                    <!---->
-
-                    @foreach($activity as $item)
-					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => $item['id']])}}'" tabindex="0">
-                      <span _ngcontent-snw-c1="" class="activity-status open"></span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-title">{{ $item['title'] }}</span>
-                      <span _ngcontent-snw-c1="" class="activity-btn-duration">Tempo：A eficácia a Longo prazo</span>
-                     
-                      <div><img style="width:100%;height:auto;margin:1rem 0;" src="{{ $item['img'] }}"></div>
-                    </button>
-                    @endforeach  
-                   </jx-content-view>
-                </jx-safe-area>
               </div>
-            
-            </div>
-
-            
-            <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
-              <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
-                <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                @include('black.common.footer') 
-                  
-                 
-                </jx-tab-bar>
-              </jx-footer-row>
-            </div>
-            <div class="index_bottom">
-                  <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
-                  <p>Este site oferece jogos com experiencia de risco Para ser um usuario do nosso site,voce deve mais de 18 anos.Nao somos responsaveis.
-? 2022 brcrown.com All rights reserved.</p>
-            </div>
-          </jx-header-view>
-        </jx-activity-page>
-      </jx-main-wrapper>
-    </jx-root>
+              <div class="bet-box">
+                  <span>Volume de apostas de hoje: R${{$today_pgbet}}/R$50</span>
+                  <div class="pg-box">
+                      <div class="pg" style="width: {{$bet_percent}}%;"></div>
+                  </div>
+              </div>
+          </div>
+          <span class="tip">Vá e faça login</span>
+          <div class="sign-day">
+              @foreach($list as $idx => $item)
+                  <div class="item @if($date > $idx || ($todaysign && $date == $idx)) actived @endif">
+                      <img class="gold-icon" src="/mobile/black/images/gold-icon.png"/>
+                      <div class="sign-info">
+                          <span>Faça login no dia {{$item['date']}}</span>
+                          <span class="award">prêmio: R${{$item['coin']}}</span>
+                      </div>
+                      @if($todaysign && $date == $idx)
+                          <div class="sign-btn" onclick="userSign({{$idx}})">Entrar</div>
+                      @elseif($date > $idx)
+                          <div class="mark-box">
+                              <img src="/mobile/black/images/duigo.png" />
+                          </div>
+                      @endif
+                  </div>
+              @endforeach
+          </div>
+      </div>
+  </div>
+  @include('black.common.loading')
+  @include('black.common.modal')
   </body>
+
+  <script type="text/javascript">
+      // 用户签到
+      function userSign(idx) {
+          // console.log('ok==>111', idx);
+          showLoading();
+          $.ajax({
+              url : "{{url('mobile/signin')}}",
+              type : 'POST',
+              data : {
+
+              },
+              success : function (data) {
+                  hideLoading();
+                  window.location.reload();
+              },
+              error: function(jqXHR, textStatus, errorThrown) {
+                  hideLoading();
+                  const data = jqXHR.responseJSON;
+                  showModal(data.message);
+              }
+          });
+      }
+
+      $(function(){
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+      });
+  </script>
 
 </html>

@@ -32,12 +32,12 @@ class ActivityController extends Controller
     {
         $data = [];
         $data['activity'] = $this->activityService->getActivity();
-        
+
         return view(ViewHelper::getTemplate('activity.index'), $data);
     }
 
     public function show(int $id)
-    { 
+    {
         $data = [];
         $data['activity'] = $this->activityService->getActivityInfo($id);
 
@@ -63,16 +63,19 @@ class ActivityController extends Controller
         }
         $yesterdaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$yesterday[0]), date('Y-m-d H:i:s',$yesterday[1])])->first();
         if(!empty($yesterdaysign)){ //昨天如果没有签到，当前签到视为第一天签到
-            $date = $lastSignIn['sort']; 
+            $date = $lastSignIn['sort'];
         }
         $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
         $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
         $return = [
+            'user' => $user,
             'list' => $signsys::orderBy('date', 'asc')->get(),
             'date' => $date,
             'todaysign' => $todaysign,
             'today_recharge' => $rechage,
             'today_pgbet' => $pgbet,
+            'recharge_percent' => round($rechage * 100 / 10, 2),
+            'bet_percent' => round($pgbet * 100 / 50, 2)
         ];
         return view(ViewHelper::getTemplate('activity.signin'), $return);
     }
@@ -96,9 +99,9 @@ class ActivityController extends Controller
         if(!empty($todaysign)){
             return Result::error('Already signed in today');
         }
-        
+
         // 获取签到奖励
-        // 检查用户是否有断签  
+        // 检查用户是否有断签
         $yesterdaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$yesterday[0]), date('Y-m-d H:i:s',$yesterday[1])])->first();
         if(!empty($yesterdaysign)){ //昨天如果没有签到，当前签到视为第一天签到
             $sort = ($lastSignIn->sort)+1;
@@ -129,36 +132,36 @@ class ActivityController extends Controller
         return Result::success();
     }
 
-    /** 
-     * 返回今日开始和结束的时间戳 
-     * 
-     * @return array 
-     */  
-    public static function today()  
-    {  
-        return [  
-            mktime(0, 0, 0, date('m'), date('d'), date('Y')),  
-            mktime(23, 59, 59, date('m'), date('d'), date('Y'))  
-        ];  
-    }  
+    /**
+     * 返回今日开始和结束的时间戳
+     *
+     * @return array
+     */
+    public static function today()
+    {
+        return [
+            mktime(0, 0, 0, date('m'), date('d'), date('Y')),
+            mktime(23, 59, 59, date('m'), date('d'), date('Y'))
+        ];
+    }
 
-    /** 
-     * 返回昨日开始和结束的时间戳 
-     * 
-     * @return array 
-     */  
-    public static function yesterday()  
-    {  
-        return [  
-            mktime(0, 0, 0, date('m'), date('d') - 1, date('Y')),  
-            mktime(23, 59, 59, date('m'), date('d') - 1, date('Y'))  
-        ];  
-    }  
+    /**
+     * 返回昨日开始和结束的时间戳
+     *
+     * @return array
+     */
+    public static function yesterday()
+    {
+        return [
+            mktime(0, 0, 0, date('m'), date('d') - 1, date('Y')),
+            mktime(23, 59, 59, date('m'), date('d') - 1, date('Y'))
+        ];
+    }
 
-    /** 
-     * 返回本周开始和结束的时间戳 
-     * 
-     * @return array 
+    /**
+     * 返回本周开始和结束的时间戳
+     *
+     * @return array
      */
     public static function week()
     {
@@ -169,10 +172,10 @@ class ActivityController extends Controller
         ];
     }
 
-    /** 
-     * 返回本月开始和结束的时间戳 
-     * 
-     * @return array 
+    /**
+     * 返回本月开始和结束的时间戳
+     *
+     * @return array
      */
     public static function month($everyDay = false)
     {

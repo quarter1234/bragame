@@ -30,7 +30,7 @@ Route::group([
     Route::get('getJls', [GameController::class, 'getJls']);
     Route::get('getTadas', [GameController::class, 'getTadas']);
     Route::get('getPgPros', [GameController::class, 'getPgPros']);
-    
+
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
 
@@ -46,13 +46,13 @@ Route::group([
     Route::get('notice/info', [NoticeController::class, 'show'])->name('mobile.notice.info');
     // 分享
     Route::get('share', [ShareController::class, 'index']);
-    Route::get('share/invites', [ShareController::class, 'invites']); 
+    Route::get('share/invites', [ShareController::class, 'invites']);
     // 活动
     Route::get('activity', [ActivityController::class, 'index']);
     Route::get('activity/info/{id}', [ActivityController::class, 'show'])->name('mobile.activity.info');
     // 签到
     Route::post('signin', [ActivityController::class, 'signIn']);
-    Route::post('signlog', [ActivityController::class, 'signlog']);
+    Route::get('signlog', [ActivityController::class, 'signlog']);
     // iframe嵌入  公用
     Route::get('display', [DisplayController::class, 'display'])->name('mobile.display');
     // 登出
