@@ -25,6 +25,10 @@ class DPgGameRepository extends Repository
         ->simplePaginate(CommonEnum::DEFAULT_PAGE_NUM);
     }
 
+    public function getPgOhGameByCode($gameCode){
+        return $this->modelProOh()::where('game_code', $gameCode)->first();
+    }
+
     //剔除假PG
     public function getGamestc(array $params)
     {

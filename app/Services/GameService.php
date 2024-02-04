@@ -174,6 +174,14 @@ class GameService
         return $this->pgRepo->getPgGameByCode($gameCode);
     }
 
+    public function getDPOhGameByCode($gameCode){
+        if(empty($gameCode)){
+            return null;
+        }
+
+        return $this->pgRepo->getPgOhGameByCode($gameCode);
+    }
+
     public function getJiliGameByCode($gameCode){
         if(empty($gameCode)){
             return null;
@@ -822,6 +830,44 @@ class GameService
         return [$game, $jlBetId];
     }
 
+    private function _addOhBetData(int $uid, array $betParams){
+        $currency = isset($betParams['currency']) ? $betParams['currency'] : '';
+        $gameCode = isset($betParams['game_code']) ? $betParams['game_code'] : '';
+        $game = $this->getDPOhGameByCode($gameCode);
+        if(!$game){
+            return false;
+        }
+
+        $gameType = $game->game_type ?? 0;
+        $gameName = $game->game_name ?? "";
+        $gameId = $game->id;
+        $betAmount = $betParams['bet_amount'] ?? 0;
+        $winLoseAmount = $betParams['winlose_amount'] ?? 0;
+        $settledAmount = $betParams['settled_amount'] ?? 0;
+        $isTest = $betParams['is_test'] ?? 0;
+        $betStamp = $betParams['bet_stamp'] ?? 0;
+        $platApp = isset($betParams['plat_app']) ? $betParams['plat_app'] : '';
+        $now = time();
+        $addData = [
+            "uid" =>  $uid,
+            "currency"  => $currency,
+            'game_type' => $gameType,
+            "game_name" => $gameName,
+            "game_code" => $gameCode,
+            "game_id" => $gameId,
+            "bet_amount" => $betAmount,
+            "winlose_amount" => $winLoseAmount,
+            "settled_amount" => $settledAmount,
+            "bet_stamp" => $betStamp,
+            "plat_app" => $platApp,
+            "is_test" => $isTest,
+            "create_time" => $now,
+        ];
+
+        $pgOhBetId = $this->pgbets->insertOh($addData);
+        return [$pgOhBetId, $game];
+    }
+
     private function _addBetData(int $uid, array $betParams){
         $transactionId = isset($betParams['transaction_id']) ? $betParams['transaction_id'] : '';
         $betId = isset($betParams['bet_id']) ? $betParams['bet_id'] : '';
@@ -913,6 +959,17 @@ class GameService
         $this->jlbets->storeJlGameBet($betId, $upData);
     }
 
+    private function _upUserOhBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw ,$tax_amount = 0){
+        $upData = [
+            "status" => $status,
+            "before_amount" => $beforeAmount,
+            "after_amount" => $afterAmount,
+            "can_draw" => $canDraw,
+            "tax_amount" => $tax_amount
+        ];
+        $this->pgbets->storePgOhGameBet($betId, $upData);
+    }
+
     private function _betDoing($betId){
         $status = 4;  // 处理中
         $beforeAmount = 0;
@@ -973,6 +1030,11 @@ class GameService
     private function _jlBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
         $status = 1;
         $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    private function _betOhOver($betId, $beforeAmount, $afterAmount, $canDraw ,$tax_amount){
+        $status = 1;
+        $this->_upUserOhBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw ,$tax_amount);
     }
 
     private function _pgProBetOver($betId, $beforeAmount, $afterAmount, $canDraw){

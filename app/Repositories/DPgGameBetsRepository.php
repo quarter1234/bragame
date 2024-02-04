@@ -20,9 +20,20 @@ class DPgGameBetsRepository extends Repository
         return  $this->model()::insertGetId($data);
     }
 
+    public function insertOh(array $data){
+        return  $this->modelOh()::insertGetId($data);
+    }
+
     public function storePgGameBet($id, $data){
         if($id && !empty($data)){
             $this->model()::where("id", $id)
+                            ->update($data);
+        }
+    }
+
+    public function storePgOhGameBet($id, $data){
+        if($id && !empty($data)){
+            $this->modelOh()::where("id", $id)
                             ->update($data);
         }
     }
