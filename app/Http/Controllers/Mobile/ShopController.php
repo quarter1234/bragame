@@ -112,7 +112,7 @@ class ShopController extends Controller
         // 获取当前时间
         $now = Carbon::now();
         // 设置为晚上十点
-        $eveningTenOclock = $now->setTime(22, 0); // 或者直接写成 $now->hour = 22; $now->minute = 0;
+        $eveningTenOclock = $now->setTime(20, 0); // 或者直接写成 $now->hour = 22; $now->minute = 0;
         // 设置为二十四小时制的零点
         $midnight = $now->startOfDay()->addHour(23)->endOfDay();
         if(time() > $eveningTenOclock && time() < $midnight){
