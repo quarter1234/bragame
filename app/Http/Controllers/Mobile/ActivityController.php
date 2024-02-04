@@ -66,7 +66,7 @@ class ActivityController extends Controller
             'date' => $date,
             'todaysign' => $todaysign,
         ];
-        return Result::success($return);
+        return view(ViewHelper::getTemplate('activity.signin'), $return);
     }
 
     /**
