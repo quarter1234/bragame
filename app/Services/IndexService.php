@@ -97,5 +97,8 @@ class IndexService
         return $this->picRepo->find($id);
     }
 
-
+    public function getGiftCard($code)
+    {
+        return IndexGameCache::getGiftCard($code);
+    }
 }

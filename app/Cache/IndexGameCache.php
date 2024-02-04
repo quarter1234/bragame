@@ -8,6 +8,7 @@ use App\Repositories\DJlGameRepository;
 use App\Repositories\DPgGameRepository;
 use Illuminate\Support\Facades\Cache;
 use App\Helper\SystemConfigHelper;
+use App\Repositories\DGiftCardRepository;
 
 class IndexGameCache
 {
@@ -18,6 +19,7 @@ class IndexGameCache
     const FAVOR_RECOMMEND_TADA_KEY = "index:game:tada:favor:recommendes";
     const USER_LOGIN_CACHE = 'user:login:uid_%s';
     const USER_GAME_CLICK_CACHE = 'user:game:click:game_s%:uid_%s:game_plat_%s';
+    const GIFT_CARD = "index:giftcard:info";
 
     public static function getPGRecommend()
     {
@@ -123,5 +125,15 @@ class IndexGameCache
     {
         $cacheKey = sprintf(self::USER_GAME_CLICK_CACHE, $gameId, $userId, $gamePlat);
         return cache::get($cacheKey);
+    }
+
+    public static function getGiftCard($code)
+    {
+        $cacheKey = sprintf(self::GIFT_CARD . $code);
+        return Cache::remember($cacheKey, CommonEnum::CACHE_TIME, function () use ($code) {
+            $pgRepo = app()->make(DGiftCardRepository::class);
+            return $pgRepo->getGiftCardByCode($code);
+        });
+
     }
 }
