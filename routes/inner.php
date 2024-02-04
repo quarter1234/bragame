@@ -5,6 +5,7 @@ use App\Http\Controllers\Inner\PgController;
 use App\Http\Controllers\Inner\JiliController;
 use App\Http\Controllers\ManCallBack\CallApiController;
 use App\Http\Controllers\Inner\PgProController;
+use App\Http\Controllers\Inner\PgProOhController;
 use Illuminate\Support\Facades\Route;
 
 Route::group([
@@ -16,6 +17,10 @@ Route::group([
 
     Route::post('jiliCallBackAuth', [JiliController::class, 'jiliCallBackAuth']); // jili回调获得用户余额
     Route::post('jiliCallBack', [JiliController::class, 'jiliCallBackBet']); // 注单和结算
+
+     // 第三方假PG
+     Route::post('ohCallBackAuth', [PgProOhController::class, 'callBackAuth']); // 回调获得用户余额
+     Route::post('ohBlanceCallBack', [PgProOhController::class, 'callBackBet']); // 注单和结算
 });
 
 Route::group([
