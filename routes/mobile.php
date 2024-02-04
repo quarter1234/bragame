@@ -30,7 +30,8 @@ Route::group([
     Route::get('getJls', [GameController::class, 'getJls']);
     Route::get('getTadas', [GameController::class, 'getTadas']);
     Route::get('getPgPros', [GameController::class, 'getPgPros']);
-
+    Route::post('giftCard', [IndexController::class, 'giftCard']);
+    Route::post('receiveCard', [IndexController::class, 'receiveCard']);
     Route::get('test',[\App\Http\Controllers\TestController::class,'index']);
 });
 

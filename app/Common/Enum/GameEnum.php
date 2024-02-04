@@ -27,6 +27,7 @@ class GameEnum{
             "WEEK_VIP" => 154, // -- vip周奖励
             "MONTH_VIP" => 155, // -- vip月奖励
             "REG_BONUS" => 156, // -- 注册赠送
+            "GIFT_CARD" => 160, // 礼品卡
         ],
         "CACHE_LOG_KEY" => [
             "poolround_log" => "api_poolround",
@@ -98,6 +99,7 @@ class GameEnum{
             181 => "Recompensas semanales VIP", // VIP周工资
             182 => "Recompensa mensual VIP", // VIP月工资
             156 => "Bônus de inscrição", // 注册奖励
+            160 => "Recompensas de presentes", // 礼品卡
         ],
     ];
 }

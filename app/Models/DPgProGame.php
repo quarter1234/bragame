@@ -10,6 +10,6 @@ class DPgProGame extends BaseMoel
     {
        // $pre = env('REMOTE_IMG_URL', 'http://localhost') . CommonEnum::S3_PATH_ARR[config('view.template')];
         // return $pre.$value;
-        return config('app.url').':82' .  $value;
+        return env('APP_ADMINURL') .  $value;
     }
 }
