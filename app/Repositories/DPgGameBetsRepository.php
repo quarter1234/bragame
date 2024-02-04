@@ -31,6 +31,13 @@ class DPgGameBetsRepository extends Repository
         }
     }
 
+    public function storePgOhGameBet($id, $data){
+        if($id && !empty($data)){
+            $this->modelOh()::where("id", $id)
+                            ->update($data);
+        }
+    }
+
     public function findOh($id){
         return  $this->modelOh()::find($id);
     }
