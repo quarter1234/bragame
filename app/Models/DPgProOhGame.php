@@ -9,7 +9,8 @@ class DPgProOhGame extends BaseMoel
     public function getIconAttribute($value)
     {
        // $pre = env('REMOTE_IMG_URL', 'http://localhost') . CommonEnum::S3_PATH_ARR[config('view.template')];
-        return env('APP_ADMINURL') .  $value;
-        //return "https://system.777mbet.com" .  $value;
+        // return env('APP_ADMINURL') .  $value;
+        $pre = env('REMOTE_IMG_URL', 'http://localhost') . CommonEnum::S3_PATH_ARR[config('view.template')];
+        return $pre.$value;
     }
 }
