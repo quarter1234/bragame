@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Enum\CommonEnum;
 use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Services\ActivityService;
