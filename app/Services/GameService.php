@@ -959,6 +959,17 @@ class GameService
         $this->jlbets->storeJlGameBet($betId, $upData);
     }
 
+    private function _upUserOhBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw ,$tax_amount = 0){
+        $upData = [
+            "status" => $status,
+            "before_amount" => $beforeAmount,
+            "after_amount" => $afterAmount,
+            "can_draw" => $canDraw,
+            "tax_amount" => $tax_amount
+        ];
+        $this->pgbets->storePgOhGameBet($betId, $upData);
+    }
+
     private function _betDoing($betId){
         $status = 4;  // 处理中
         $beforeAmount = 0;
@@ -1019,6 +1030,11 @@ class GameService
     private function _jlBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
         $status = 1;
         $this->_upJlUserBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw);
+    }
+
+    private function _betOhOver($betId, $beforeAmount, $afterAmount, $canDraw ,$tax_amount){
+        $status = 1;
+        $this->_upUserOhBetStatus($betId, $status, $beforeAmount, $afterAmount, $canDraw ,$tax_amount);
     }
 
     private function _pgProBetOver($betId, $beforeAmount, $afterAmount, $canDraw){
