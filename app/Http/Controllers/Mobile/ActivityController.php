@@ -58,15 +58,15 @@ class ActivityController extends Controller
         $lastSignIn = $signIn::where(['uid' => $user->uid])->orderBy('timestamps', 'desc')->first();
 
         $todaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$today[0]), date('Y-m-d H:i:s',$today[1])])->first();
-        if(!empty($todaysign)){
-            $todaysign = 1;
-        }
         $yesterdaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$yesterday[0]), date('Y-m-d H:i:s',$yesterday[1])])->first();
         if(!empty($yesterdaysign)){ //昨天如果没有签到，当前签到视为第一天签到
             $date = $lastSignIn['sort'];
         }
         $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
         $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
+        if(!empty($todaysign) && $rechage >= 10 && $pgbet >= 50){
+            $todaysign = 1;
+        }
         $return = [
             'user' => $user,
             'list' => $signsys::orderBy('date', 'asc')->get(),
