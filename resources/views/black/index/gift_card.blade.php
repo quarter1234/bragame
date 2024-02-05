@@ -165,7 +165,9 @@
               success : function (data) {
                   hideLoading();
                   $('#submit-btn').attr('disabled', false);
-                  window.location.reload();
+                  if (data === true)
+                      window.location.href = "{{$url}}}";
+                  // window.location.reload();
               },
               error: function(jqXHR, textStatus, errorThrown) {
                   hideLoading();
