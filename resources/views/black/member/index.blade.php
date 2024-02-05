@@ -59,14 +59,6 @@
             width: 100%;
             height: 100%;
         }
-
-        .sign_ico {
-            width: 30px;
-            height: 30px;
-            background: url(/mobile/black/images/qiandao.png);
-            background-size: 30px 30px;
-            margin-right: 6px;
-        }
     </style>
     </head>
 
@@ -187,7 +179,7 @@
                         {{--VIP等级--}}VIP
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
-                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/vip")}}'" tabindex="0">
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/signlog")}}'" tabindex="0">
                           <span class="sign_ico"></span>
                           {{--签到--}}Check-in
                           <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
