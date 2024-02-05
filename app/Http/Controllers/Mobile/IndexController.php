@@ -46,6 +46,7 @@ class IndexController extends Controller
         //return Result::success($data);
         $return = [
             // 'user' => $user,
+            'url' => env("APP_URL"),
             'card' => $data,
         ];
         return view(ViewHelper::getTemplate('index.gift_card'), $return);
