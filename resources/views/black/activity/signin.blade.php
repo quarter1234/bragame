@@ -46,16 +46,18 @@
         }
 
         .user-info {
-            height: 200px;
+            height: 138px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 15px;
             padding: 0 20px;
-            margin-top: 30px;
-            background: url("/mobile/black/images/vipleaderbar.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
+            margin-top: 20px;
+            /*background: url("/mobile/black/images/vipleaderbar.png");*/
+            /*background-size: 100% 100%;*/
+            /*background-repeat: no-repeat;*/
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, .1);
             position: relative;
         }
 
@@ -148,6 +150,10 @@
             font-size: 12px;
         }
 
+        .sign-day .item>.sign-btn.disable {
+            background-color: #b09a74;
+        }
+
         .mark-box {
             width: 20px;
             height: 20px;
@@ -167,16 +173,17 @@
   @include('black.common.top_sub')
   <div class="sign-frame">
       <div class="sign-box">
+          <span class="tip">condições necessárias:</span>
           <div class="user-info">
 {{--              <img class="user-icon" src="/mobile/black/images/0.png" />--}}
               <div class="topup-box">
-                  <span>Valor de recarga de hoje: R${{$today_recharge}}/R$10</span>
+                  <span>Valor de recarga de hoje: {{$today_recharge}}/10</span>
                   <div class="pg-box">
                       <div class="pg" style="width: {{$recharge_percent}}%;"></div>
                   </div>
               </div>
               <div class="bet-box">
-                  <span>Volume de apostas de hoje: R${{$today_pgbet}}/R$50</span>
+                  <span>Volume de apostas de hoje: {{$today_pgbet}}/50</span>
                   <div class="pg-box">
                       <div class="pg" style="width: {{$bet_percent}}%;"></div>
                   </div>
@@ -185,13 +192,13 @@
           <span class="tip">Check-in</span>
           <div class="sign-day">
               @foreach($list as $idx => $item)
-                  <div class="item @if($date > $idx || ($todaysign && $date == $idx)) actived @endif">
+                  <div class="item @if($date >= $idx) actived @endif">
                       <img class="gold-icon" src="/mobile/black/images/gold-icon.png"/>
                       <div class="sign-info">
                           <span>Dia {{$item['date']}}</span>
                           <span class="award">prêmio: R${{$item['coin']}}</span>
                       </div>
-                      @if($todaysign && $date == $idx)
+                      @if($date == $idx)
                           <div class="sign-btn" onclick="userSign({{$idx}})">Entrar</div>
                       @elseif($date > $idx)
                           <div class="mark-box">

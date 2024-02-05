@@ -40,19 +40,27 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
             /*padding-top: 100px;*/
             background-color: #000;
-            background-image: url("/mobile/black/images/gift_card_bg.jpeg");
-            background-repeat: no-repeat;
-            background-size: 100% auto;
+            /*background-image: url("/mobile/black/images/gift_card_bg.jpeg");*/
+            /*background-repeat: no-repeat;*/
+            /*background-size: 100% auto;*/
+            overflow: hidden;
+        }
+
+        .gift-logo {
+            width: 50%;
         }
 
         .gift-box {
+            width: 100%;
+            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 25px;
-            margin-top: 100px;
+            margin-top: 15px;
             padding: 0 30px;
             color: #fff;
         }
@@ -125,6 +133,7 @@
   <body style="color: white; background-color: #0a0e2b;">
 {{--  @include('black.common.top_sub')--}}
   <div class="gift-frame">
+    <img class="gift-logo" src="/mobile/black/images/gift_card_bg.jpeg" />
     <div class="gift-box">
         <span class="info">Cartão Presente: {{$card['name']}}</span>
         <input id="phone" class="phone"
