@@ -150,7 +150,7 @@
             font-size: 12px;
         }
 
-        .sign-day .item>.sign-btn.disable {
+        .sign-day .item>.sign-btn.disabled {
             background-color: #b09a74;
         }
 
@@ -199,7 +199,7 @@
                           <span class="award">prêmio: R${{$item['coin']}}</span>
                       </div>
                       @if($date == $idx)
-                          <div class="sign-btn" onclick="userSign({{$idx}})">Entrar</div>
+                          <div class="sign-btn @if(!$issign) disabled @endif" onclick="userSign({{$idx}})">Entrar</div>
                       @elseif($date > $idx)
                           <div class="mark-box">
                               <img src="/mobile/black/images/duigo.png" />
@@ -218,6 +218,11 @@
       // 用户签到
       function userSign(idx) {
           // console.log('ok==>111', idx);
+          const isSign = {{$issign}};
+          if (!isSign) {
+              showModal('Condição não atendida');
+              return;
+          }
           showLoading();
           $.ajax({
               url : "{{url('mobile/signin')}}",

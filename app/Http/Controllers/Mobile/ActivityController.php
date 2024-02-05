@@ -53,7 +53,7 @@ class ActivityController extends Controller
         $yesterday = $this->yesterday();
         $signIn = new Dsign();
         $signsys = new Dsignsys();
-        $todaysign = 0; //今日是否签到
+        $issign = 0; //今日是否签到
         $date = 0;
         $lastSignIn = $signIn::where(['uid' => $user->uid])->orderBy('timestamps', 'desc')->first();
 
@@ -65,13 +65,13 @@ class ActivityController extends Controller
         $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
         $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
         if(!empty($todaysign) && $rechage >= 10 && $pgbet >= 50){
-            $todaysign = 1;
+            $issign = 1;
         }
         $return = [
             'user' => $user,
             'list' => $signsys::orderBy('date', 'asc')->get(),
             'date' => $date,
-            'todaysign' => $todaysign,
+            'issign' => $issign,
             'today_recharge' => $rechage,
             'today_pgbet' => $pgbet,
             'recharge_percent' => round($rechage * 100 / 10, 2),
