@@ -90,6 +90,11 @@ class ActivityController extends Controller
         $yesterday = $this->yesterday();
         $signIn = new Dsign();
         $signsys = new Dsignsys();
+        $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
+        $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
+        if($rechage < 10 && $pgbet < 50){
+            return Result::error('Condition not met');
+        }
         // 检查用户是否已经签到
         $lastSignIn = $signIn::where(['uid' => $user->uid])->orderBy('timestamps', 'desc')->first();
         if($lastSignIn && $lastSignIn['sort'] == 7){
