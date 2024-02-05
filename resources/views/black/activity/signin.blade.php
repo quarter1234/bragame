@@ -1,3 +1,4 @@
+{{--用户签到页面--}}
 <html lang="zh-Hans">
 
   <head>
@@ -27,7 +28,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('black.common.csrf_token')
     </head>
 
     <style>
@@ -228,14 +229,6 @@
               }
           });
       }
-
-      $(function(){
-          $.ajaxSetup({
-              headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              }
-          });
-      });
   </script>
 
 </html>
