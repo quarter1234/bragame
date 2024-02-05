@@ -168,9 +168,8 @@
                   if (data.data === true) {
                       showModal(data.message);
                       setTimeout(() => {
-                          window.location.href = "{{$url}}}";
+                          window.location.href = "{{$url}}";
                       }, 1500);
-
                   }
                   // window.location.reload();
               },
