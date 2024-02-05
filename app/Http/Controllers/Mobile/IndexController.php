@@ -8,6 +8,8 @@ use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\IndexService;
 use App\Services\GiftCardService;
 use App\Exceptions\BadRequestException;
+use App\Common\Lib\Result;
+use Illuminate\Support\Facades\Request;
 
 
 class IndexController extends Controller
