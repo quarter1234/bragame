@@ -165,7 +165,13 @@
               success : function (data) {
                   hideLoading();
                   $('#submit-btn').attr('disabled', false);
-                  window.location.reload();
+                  if (data.data === true) {
+                      showModal(data.message);
+                      setTimeout(() => {
+                          window.location.href = "{{$url}}";
+                      }, 1500);
+                  }
+                  // window.location.reload();
               },
               error: function(jqXHR, textStatus, errorThrown) {
                   hideLoading();
