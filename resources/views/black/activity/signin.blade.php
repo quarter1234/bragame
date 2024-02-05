@@ -182,13 +182,13 @@
                   </div>
               </div>
           </div>
-          <span class="tip">Vá e faça login</span>
+          <span class="tip">Check-in</span>
           <div class="sign-day">
               @foreach($list as $idx => $item)
                   <div class="item @if($date > $idx || ($todaysign && $date == $idx)) actived @endif">
                       <img class="gold-icon" src="/mobile/black/images/gold-icon.png"/>
                       <div class="sign-info">
-                          <span>Faça login no dia {{$item['date']}}</span>
+                          <span>Dia {{$item['date']}}</span>
                           <span class="award">prêmio: R${{$item['coin']}}</span>
                       </div>
                       @if($todaysign && $date == $idx)
