@@ -13,7 +13,6 @@ use App\Services\DrawService;
 use App\Services\ShopService;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
-use Carbon\Carbon;
 
 class ShopController extends Controller
 {
@@ -109,13 +108,11 @@ class ShopController extends Controller
      */
     public function doDraw(ShopRequest $shopRequest)
     {
-        // 获取当前时间
-        $now = Carbon::now();
-        // 设置为晚上十点
-        $eveningTenOclock = $now->setTime(20, 0); // 或者直接写成 $now->hour = 22; $now->minute = 0;
-        // 设置为二十四小时制的零点
-        $midnight = $now->startOfDay()->addHour(23)->endOfDay();
-        if(time() > $eveningTenOclock && time() < $midnight){
+        // 设置目标时间（晚上10点）
+        $targetTime1 = strtotime("today +8 hours"); // 将今天加上10小时得到明天的时间
+        // 设置目标时间（次日零点）
+        $targetTime2 = strtotime("tomorrow midnight"); // 获取明天零点的时间戳
+        if(time() > $targetTime1 && time() < $targetTime2){
             return Result::error('Saques são proibidos das 22h00 às 24h00 da noite.');
         }
         $params = $shopRequest->goCheck('doDraw');
