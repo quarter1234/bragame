@@ -109,9 +109,9 @@ class ShopController extends Controller
     public function doDraw(ShopRequest $shopRequest)
     {
         // 设置目标时间（晚上10点）
-        $targetTime1 = strtotime("today +8 hours"); // 将今天加上10小时得到明天的时间
+        $targetTime1 = strtotime(date('Y-m-d')." 20:00:00"); // 将今天加上10小时得到明天的时间
         // 设置目标时间（次日零点）
-        $targetTime2 = strtotime("tomorrow midnight"); // 获取明天零点的时间戳
+        $targetTime2 = strtotime(date('Y-m-d')." 23:59:59"); // 获取明天零点的时间戳
         if(time() > $targetTime1 && time() < $targetTime2){
             return Result::error('Saques são proibidos das 22h00 às 24h00 da noite.');
         }
