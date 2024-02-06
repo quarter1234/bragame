@@ -108,6 +108,13 @@ class ShopController extends Controller
      */
     public function doDraw(ShopRequest $shopRequest)
     {
+        // 设置目标时间（晚上10点）
+        $targetTime1 = strtotime(date('Y-m-d')." 22:00:00"); // 将今天加上10小时得到明天的时间
+        // 设置目标时间（次日零点）
+        $targetTime2 = strtotime(date('Y-m-d')." 23:59:59"); // 获取明天零点的时间戳
+        if(time() > $targetTime1 && time() < $targetTime2){
+            return Result::error('Saques são proibidos das 22h00 às 24h00 da noite.');
+        }
         $params = $shopRequest->goCheck('doDraw');
         $user = Auth::user();
         $dcoin = intval($params['amount']);

@@ -8,6 +8,9 @@ use App\Http\Requests\Mobile\PublicRequest;
 use App\Services\IndexService;
 use App\Services\GiftCardService;
 use App\Exceptions\BadRequestException;
+use App\Common\Lib\Result;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Request;
 
 
 class IndexController extends Controller
@@ -31,15 +34,22 @@ class IndexController extends Controller
     {
         $data = [];
         $data['banner'] = $this->indexService->bannerInfo($id);
-        
+
         return view(ViewHelper::getTemplate('index.banner_info'), $data);
     }
 
     public function giftCard()
     {
-        $code = Request::post('code');
+        // $user = Auth::user();
+        $code = Request::get('code');
         $data = $this->indexService->getGiftCard($code);
-        return Result::success($data);
+        //return Result::success($data);
+        $return = [
+            // 'user' => $user,
+            'url' => env("APP_URL"),
+            'card' => $data,
+        ];
+        return view(ViewHelper::getTemplate('index.gift_card'), $return);
     }
 
     public function receiveCard(GiftCardService $giftCardService)

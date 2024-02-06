@@ -334,7 +334,7 @@
     width: 100%;
     overflow-y:auto;
     height:350px;
-  
+
 }
 
 .yh_table table {
@@ -470,16 +470,16 @@ div.app-background[_ngcontent-way-c2] {
     left: 0;
     right: 0;
     z-index: 999;
-    background-color: rgba(19, 34, 53, 1)
+    /*background-color: rgba(19, 34, 53, 1)*/
 }
 
-@supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {
-    .header-view__footer-row-wrapper[_ngcontent-way-c3] {
-        background-color: rgba(19, 34, 53, .8);
-        -webkit-backdrop-filter: blur(20px);
-        backdrop-filter: blur(20px)
-    }
-}
+/*@supports ((-webkit-backdrop-filter:blur(20px)) or (backdrop-filter:blur(20px))) {*/
+/*    .header-view__footer-row-wrapper[_ngcontent-way-c3] {*/
+/*        background-color: rgba(19, 34, 53, .8);*/
+/*        -webkit-backdrop-filter: blur(20px);*/
+/*        backdrop-filter: blur(20px)*/
+/*    }*/
+/*}*/
 
 .header-view__footer-row-wrapper[_ngcontent-way-c3]:empty {
     display: none
@@ -983,6 +983,8 @@ div.cs-dialog-title[_ngcontent-way-c7] {
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: stretch;
+    background-color: rgba(19, 34, 53, .8);
+    backdrop-filter: blur(20px);
 }
 
 .tab-bar__nav-btn[_ngcontent-way-c10] {

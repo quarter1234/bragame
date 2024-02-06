@@ -99,9 +99,9 @@
                         <p class="avatar_sub_title">
                             <label class="m_vip"></label>：<span class="avatar_sub_title-span">{{ $user['svip'] }}</span>
                             I D :  <span class="avatar_sub_title-span">{{ $user['uid'] }}</span>
-                            <a class="sign-icon" href="{{url('mobile/signlog')}}">
-                                <img src="/mobile/black/images/sign-icon.png" />
-                            </a>
+{{--                            <a class="sign-icon" href="{{url('mobile/signlog')}}">--}}
+{{--                                <img src="/mobile/black/images/sign-icon.png" />--}}
+{{--                            </a>--}}
                             <label class="copy_btn" data-clipboard-text="{{ $user['uid'] }}">
                                 <a></a>
                             </label>
@@ -179,7 +179,10 @@
                         {{--VIP等级--}}VIP
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
-
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/signlog")}}'" tabindex="0">
+                          <span class="sign_ico"></span>
+                          {{--签到--}}Check-in
+                          <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
                       <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="location.href='{{url("mobile/member/customerService")}}'" tabindex="0">
                       <span class="kf_ico"></span>

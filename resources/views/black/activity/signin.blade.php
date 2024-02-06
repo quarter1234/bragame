@@ -1,3 +1,4 @@
+{{--用户签到页面--}}
 <html lang="zh-Hans">
 
   <head>
@@ -27,7 +28,7 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    @include('black.common.csrf_token')
     </head>
 
     <style>
@@ -45,16 +46,18 @@
         }
 
         .user-info {
-            height: 200px;
+            height: 138px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: 15px;
             padding: 0 20px;
-            margin-top: 30px;
-            background: url("/mobile/black/images/vipleaderbar.png");
-            background-size: 100% 100%;
-            background-repeat: no-repeat;
+            margin-top: 20px;
+            /*background: url("/mobile/black/images/vipleaderbar.png");*/
+            /*background-size: 100% 100%;*/
+            /*background-repeat: no-repeat;*/
+            border-radius: 12px;
+            background-color: rgba(255, 255, 255, .1);
             position: relative;
         }
 
@@ -147,6 +150,10 @@
             font-size: 12px;
         }
 
+        .sign-day .item>.sign-btn.disabled {
+            background-color: #b09a74;
+        }
+
         .mark-box {
             width: 20px;
             height: 20px;
@@ -160,38 +167,45 @@
             width: 100%;
             height: 100%;
         }
+
+        @media screen and (min-width: 1200px) {
+            .sign-box {
+                width: 40%;
+            }
+        }
     </style>
 
   <body style="color: white; background-color: #0a0e2b;">
   @include('black.common.top_sub')
   <div class="sign-frame">
       <div class="sign-box">
+          <span class="tip">condições necessárias:</span>
           <div class="user-info">
 {{--              <img class="user-icon" src="/mobile/black/images/0.png" />--}}
               <div class="topup-box">
-                  <span>Valor de recarga de hoje: R${{$today_recharge}}/R$10</span>
+                  <span>Valor de recarga de hoje: {{$today_recharge}}/10</span>
                   <div class="pg-box">
                       <div class="pg" style="width: {{$recharge_percent}}%;"></div>
                   </div>
               </div>
               <div class="bet-box">
-                  <span>Volume de apostas de hoje: R${{$today_pgbet}}/R$50</span>
+                  <span>Volume de apostas de hoje: {{$today_pgbet}}/50</span>
                   <div class="pg-box">
                       <div class="pg" style="width: {{$bet_percent}}%;"></div>
                   </div>
               </div>
           </div>
-          <span class="tip">Vá e faça login</span>
+          <span class="tip">Check-in</span>
           <div class="sign-day">
               @foreach($list as $idx => $item)
-                  <div class="item @if($date > $idx || ($todaysign && $date == $idx)) actived @endif">
+                  <div class="item @if($date >= $idx) actived @endif">
                       <img class="gold-icon" src="/mobile/black/images/gold-icon.png"/>
                       <div class="sign-info">
-                          <span>Faça login no dia {{$item['date']}}</span>
+                          <span>Dia {{$item['date']}}</span>
                           <span class="award">prêmio: R${{$item['coin']}}</span>
                       </div>
-                      @if($todaysign && $date == $idx)
-                          <div class="sign-btn" onclick="userSign({{$idx}})">Entrar</div>
+                      @if($date == $idx)
+                          <div class="sign-btn @if(!$issign) disabled @endif" onclick="userSign({{$idx}})">Entrar</div>
                       @elseif($date > $idx)
                           <div class="mark-box">
                               <img src="/mobile/black/images/duigo.png" />
@@ -210,6 +224,11 @@
       // 用户签到
       function userSign(idx) {
           // console.log('ok==>111', idx);
+          const isSign = {{$issign}};
+          if (!isSign) {
+              showModal('Condição não atendida');
+              return;
+          }
           showLoading();
           $.ajax({
               url : "{{url('mobile/signin')}}",
@@ -228,14 +247,6 @@
               }
           });
       }
-
-      $(function(){
-          $.ajaxSetup({
-              headers: {
-                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-              }
-          });
-      });
   </script>
 
 </html>

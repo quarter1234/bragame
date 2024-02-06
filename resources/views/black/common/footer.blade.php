@@ -15,8 +15,8 @@
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--活动--}}Atividades</span>
     </button>
 
-  
-   
+
+
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
@@ -125,15 +125,18 @@
     .pc_tab{
         width:180px;
         height:100%;
-        position:absolute;
+        /*position:absolute;*/
+        position: fixed;
         left:0;
-        top:-970px;  
+        /*top:-970px;  */
+        top: 64px;
         display:block;
     }
     .pc_nav{
-        margin-top:66px;
+        /*margin-top:66px;*/
+        margin-top: 0px;
         background:rgba(0, 0, 0, .2);
-        padding-bottom:1000;
+        /*padding-bottom:1000px;*/
     }
     .pc_nav ul{
         margin:0;

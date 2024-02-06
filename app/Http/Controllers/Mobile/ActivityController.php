@@ -53,25 +53,25 @@ class ActivityController extends Controller
         $yesterday = $this->yesterday();
         $signIn = new Dsign();
         $signsys = new Dsignsys();
-        $todaysign = 0; //今日是否签到
+        $issign = 0; //今日是否签到
         $date = 0;
         $lastSignIn = $signIn::where(['uid' => $user->uid])->orderBy('timestamps', 'desc')->first();
 
         $todaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$today[0]), date('Y-m-d H:i:s',$today[1])])->first();
-        if(!empty($todaysign)){
-            $todaysign = 1;
-        }
         $yesterdaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$yesterday[0]), date('Y-m-d H:i:s',$yesterday[1])])->first();
         if(!empty($yesterdaysign)){ //昨天如果没有签到，当前签到视为第一天签到
             $date = $lastSignIn['sort'];
         }
         $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
         $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
+        if(!empty($todaysign) && $rechage >= 10 && $pgbet >= 50){
+            $issign = 1;
+        }
         $return = [
             'user' => $user,
             'list' => $signsys::orderBy('date', 'asc')->get(),
             'date' => $date,
-            'todaysign' => $todaysign,
+            'issign' => $issign,
             'today_recharge' => $rechage,
             'today_pgbet' => $pgbet,
             'recharge_percent' => round($rechage * 100 / 10, 2),
@@ -99,7 +99,11 @@ class ActivityController extends Controller
         if(!empty($todaysign)){
             return Result::error('Already signed in today');
         }
-
+        $rechage = DUserRecharge::where(['uid' => $user->uid,'status'=>2])->whereBetween('create_time', [$today[0], $today[1]])->sum('count');
+        $pgbet = DPgGameBets::where(['uid' => $user->uid,'status'=>2])->where('bet_amount', '<>', 0)->whereBetween('bet_stamp', [$today[0], $today[1]])->where('status', CommonEnum::ENABLE)->sum('bet_amount');
+        if($rechage < 10 && $pgbet < 50){
+            return Result::error('Condition not met');
+        }
         // 获取签到奖励
         // 检查用户是否有断签
         $yesterdaysign = $signIn::where(['uid' => $user->uid])->whereBetween('timestamps', [date('Y-m-d H:i:s',$yesterday[0]), date('Y-m-d H:i:s',$yesterday[1])])->first();
