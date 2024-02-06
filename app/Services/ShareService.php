@@ -105,20 +105,23 @@ class ShareService
 
     public function getAgentData($user)
     {
+        $dayStamp = 24 * 60 * 60 - 1;
         $data = [];
         $endTime = time();
         $today = strtotime(date('Y-m-d', time()));
         $yesterday = strtotime(date("Y-m-d",strtotime("-1 day")));
+        // $endYesterday = $yesterday + $dayStamp;
+        $endYesterday = $endTime;
+        $endYesterdays = $yesterday + $dayStamp;
         $week = strtotime(date("Y-m-d",strtotime("-7 day")));
         $month = strtotime(date("Y-m-d",strtotime("-30 day")));
         $year = strtotime(date("Y-m-d",strtotime("-365 day")));
 
         $data['today'] = $this->dataCommon($user->uid, $today, $endTime);
-        $data['yesterday'] = $this->dataCommon($user->uid, $yesterday, $endTime);
-        $data['week'] = $this->dataCommon($user->uid, $week, $endTime);
-        $data['month'] = $this->dataCommon($user->uid, $month, $endTime);
-        $data['year'] = $this->dataCommon($user->uid, $year, $endTime);
-
+        $data['yesterday'] = $this->dataCommon($user->uid, $yesterday, $endYesterdays);
+        $data['week'] = $this->dataCommon($user->uid, $week, $endYesterday);
+        $data['month'] = $this->dataCommon($user->uid, $month, $endYesterday);
+        $data['year'] = $this->dataCommon($user->uid, $year, $endYesterday);
         return $data;
     }
 
