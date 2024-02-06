@@ -133,15 +133,15 @@
            }
            #tab1_content_pps a:hover{
             filter:brightness(70%);
-            
+
            }
-          
+
             </style>
             <div _ngcontent-way-c3="" class="header-view__content-wrapper" style="margin-top:84px;">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-banner-board _ngcontent-way-c1="" _nghost-way-c5="" class="ng-tns-c5-0 ng-star-inserted">
-                   
+
                     <div class="index_banner">
                       <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
@@ -173,15 +173,15 @@
                             <div class="swiper-wrapper">
                               @foreach($tadaRecommend as $item)
                                 <div class="swiper-slide"><a><img gameid="{{ $item['id'] }}" class="tada_game_go" src="{{ $item['icon'] }}" /></a></div>
-                                
+
                                 <div class="swiper-slide"></div>
-                              @endforeach 
+                              @endforeach
                             </div>
                           </div>--}}
                         </div>
                     </div>
-                    <div style="width:100%; height:10px;"></div> 
-                    
+                    <div style="width:100%; height:10px;"></div>
+
                   <script>
                   var windowWidth = $(window).width();
                      if(windowWidth < 640){
@@ -199,7 +199,7 @@
                         autoplay:{
                           delay: 5000,
                         }
-                       }) 
+                       })
                       }
                      if(windowWidth >= 640){
                       var swiper = new Swiper(".mySwiper", {
@@ -215,7 +215,7 @@
                         autoplay:{
                           delay: 5000,
                         }
-                       }) 
+                       })
                       }
 
 
@@ -233,7 +233,7 @@
                         <div _ngcontent-way-c6="" class="bulletin-board ng-tns-c6-1 ng-star-inserted">
 
                           <marquee style="width: 70vw;height: 26px;line-height: 26px;vertical-align: top;display: inline-block;box-sizing: border-box;">
-                         
+
                           </marquee>
                         </div>
 
@@ -273,7 +273,7 @@
                           <!---->
                         <button _ngcontent-way-c8="" id="tab4" onclick="myclick(4)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_qp_ico"></div>
-                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button> 
+                          <span _ngcontent-way-c8="" class="side-menu-item__tag">Xadrez</span></button>
                           <!---->
                         <button _ngcontent-way-c8="" id="tab3" onclick="myclick(3)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_ji "></div>
@@ -287,9 +287,9 @@
                         {{--<button _ngcontent-way-c8="" id="tab10" onclick="myclick(10)" class="side-menu-item ng-star-inserted" style="width: 30%;">
                           <div _ngcontent-way-c8="" class="side-menu-item__icon game_pp "></div>
                           <span _ngcontent-way-c8="" class="side-menu-item__tag">PGPRO</span></button>--}}
-                       
-                             
-                     
+
+
+
                       </div>
                       <div _ngcontent-way-c8="" class="game-board-ctn">
                         <!---->
@@ -360,14 +360,14 @@
             </div>
             <div class="index_bottom">
                   <img src="/mobile/black/images/footer_icon_2-18834dfc.png" />
-                  <p>As informações sobre handicap e probabilidades esportivas contidas neste site são apenas para fins de entretenimento. Favor verificar os regulamentos de apostas em sua jurisdição, pois eles variam de estado para estado, de província para província e de país para país. É proibido usar estas informações para violar qualquer lei ou estatuto. O site não está associado a nenhuma liga, associação ou equipe profissional ou colegiada, nem é endossado por ela. 777hello.com não tem como alvo público menores de 18 anos de idade. 
+                  <p>As informações sobre handicap e probabilidades esportivas contidas neste site são apenas para fins de entretenimento. Favor verificar os regulamentos de apostas em sua jurisdição, pois eles variam de estado para estado, de província para província e de país para país. É proibido usar estas informações para violar qualquer lei ou estatuto. O site não está associado a nenhuma liga, associação ou equipe profissional ou colegiada, nem é endossado por ela. 777hello.com não tem como alvo público menores de 18 anos de idade.
 COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
             </div>
             <div class="menu_body">
                    <div class="black_logo">
-                      
-                   </div> 
-                   <div class="black_gb"></div> 
+
+                   </div>
+                   <div class="black_gb"></div>
                    <div class="black_nav">
                       <ul>
                           <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
@@ -378,22 +378,22 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
                       </ul>
                    </div>
             </div>
-            
-            <div class="pc_tab">
-                   <div class="pc_nav">
-                      <ul>
-                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>
-                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
-                      </ul>
-                   </div>
-            </div>
-            
+
+{{--            <div class="pc_tab">--}}
+{{--                   <div class="pc_nav">--}}
+{{--                      <ul>--}}
+{{--                      <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP Grau</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>--}}
+{{--                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>--}}
+{{--                      </ul>--}}
+{{--                   </div>--}}
+{{--            </div>--}}
+
             {{--loading组件--}}
             @include('black.common.loading')
             @include('black.index.index_login')
@@ -423,7 +423,7 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
     <script type="text/javascript">
     var myclick = function(v) {
         $('#tab' +v).addClass("side-menu-item ng-star-inserted active-side-menu").siblings().removeClass("active-side-menu");
-        
+
 
         var divs = document.getElementsByClassName("tab");
         for (var i = 0; i < divs.length; i++) {

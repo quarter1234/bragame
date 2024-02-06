@@ -36,7 +36,7 @@
             /*padding-top: 62px;*/
             /*padding: 20px 0;*/
             width: 100vw;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -46,7 +46,7 @@
             /*background-image: url("/mobile/black/images/gift_card_bg.jpeg");*/
             /*background-repeat: no-repeat;*/
             /*background-size: 100% auto;*/
-            overflow: hidden;
+            /*overflow: hidden;*/
         }
 
         .gift-logo {
@@ -127,6 +127,16 @@
 
         .money-val {
             font-size: 14px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .gift-logo {
+                width: 20%;
+            }
+
+            .gift-box {
+                width: 25%;
+            }
         }
     </style>
 
