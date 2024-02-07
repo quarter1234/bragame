@@ -64,7 +64,7 @@ Route::group([
 Route::group([
     'prefix' => 'mobile/member', 'middleware' => ['auth']
 ], function ($router) {
-    Route::get('index ', [MemberController::class, 'index']);
+    Route::get('index', [MemberController::class, 'index']);
     Route::get('customerService', [MemberController::class, 'customerService']);
     Route::get('vip', [MemberController::class, 'vip']);
 

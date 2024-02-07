@@ -1,4 +1,4 @@
-<div class="top">
+<div class="top @if (isMobile() && isInRoutes(['mobile/member/index'])) top-off @endif ">
     <div class="logo"><img src="/mobile/black/images/logo11.png"/></div>
     @if (Auth::check())
     <div class="money" style="float:right;margin-right:10px">
@@ -105,6 +105,10 @@ $(function() {
         width: 16px;
         height: 16px;
         margin-top: 7px;
+    }
+
+    .top.top-off {
+        display: none;
     }
 
 

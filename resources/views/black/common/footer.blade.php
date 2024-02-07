@@ -31,14 +31,14 @@
 <div class="pc_tab">
                    <div class="pc_nav">
                       <ul>
-                          <li class="@if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\IndexController') pc_on @endif" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li class="@if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ActivityController') pc_on @endif" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li class="@if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShareController') pc_on @endif" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li class="@if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li class="@if((getCurrentControllerName() . '\\' . getCurrentMethodName()) == 'App\Http\Controllers\Mobile\MemberController\vip') pc_on @endif" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
-                          <li class="@if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\EmailController') pc_on @endif" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li class="@if((getCurrentControllerName() . '\\' . getCurrentMethodName()) == 'App\Http\Controllers\Mobile\MemberController\customerService') pc_on @endif" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li class="@if((getCurrentControllerName() . '\\' . getCurrentMethodName()) == 'App\Http\Controllers\Mobile\MemberController\index') pc_on @endif" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/index') pc_on @endif" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/activity') pc_on @endif" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/share') pc_on @endif" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/shop') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/member/vip') pc_on @endif" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/member/email') pc_on @endif" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/member/customerService') pc_on @endif" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/member/index') pc_on @endif" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
                       </ul>
                    </div>
             </div>
