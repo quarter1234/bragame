@@ -1,8 +1,8 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
-    @include('black.common.common_title') 
+    @include('black.common.common_title')
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/material-icons.css">
@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="/mobile/black/css/activity.css">
     <link rel="stylesheet" href="/mobile/black/css/member.css">
     <!-- Used in supported Android browsers -->
- 
+
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/static/js/way.min.js"></script>
-   
+
 
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,10 +35,11 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
-          
-          @include('black.common.top_sub') 
 
-            <div class="email_h"></div>
+{{--          @include('black.common.top_sub') --}}
+              @include('black.common.top')
+
+              <div class="email_h"></div>
             <div id="email_list_pages">
 
             </div>
@@ -48,7 +49,7 @@
 
           {{--loading组件--}}
           @include('black.common.loading')
-          
+
           {{--
             <div class="e_bottom">
                 <button class="e_b1">Receber Tudo</button>
@@ -69,14 +70,14 @@
               </div>
             </div>
 
-            
+
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                  @include('black.common.footer') 
-                  
-                 
+
+                  @include('black.common.footer')
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -99,15 +100,15 @@
                 if(data == '') {
                   return false;
                 }
-                
+
                 $('#email_load_more').attr('page', parseInt(page) + 1);
                 $('#email_list_pages').append(data)
               }
           })
     }
-    
+
     $(document).ready(function() {
-      loadEmails();  
+      loadEmails();
     })
     </script>
   </body>

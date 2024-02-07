@@ -72,6 +72,10 @@
         <jx-profile-page _nghost-xfs-c1="" class="ng-tns-c1-1 ng-star-inserted">
           <!---->
           <jx-header-view _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c3="">
+
+{{--              @include('black.common.top_sub')--}}
+              @include('black.common.top')
+
             <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container" _nghost-xfs-c11="">
                 <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container__nav-row" style="min-height:0;">

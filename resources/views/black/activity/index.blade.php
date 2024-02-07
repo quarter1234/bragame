@@ -1,8 +1,8 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
-    @include('green.common.common_title') 
+    @include('green.common.common_title')
     <base href="/">
 
     <!-- Material Icons -->
@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/DINAlternate-bold.css">
     <link rel="stylesheet" href="/mobile/black/css/activity.css">
     <!-- Used in supported Android browsers -->
- 
+
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="https://www.betbra.net:8032/bx_1/public/static/js/way.min.js"></script>
-   
+
 
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -30,16 +30,18 @@
                   display:flex;
                   justify-content:space-between;
                 }
-                .activity-btn{
-                  width:640px !important;
+                button.activity-btn[_ngcontent-snw-c1] {
+                  width:640px;
                 }
                 .header-view__content-wrapper__content-container{
                   width:36%;
                   margin:0 auto;
                 }
-
+                button.activity-btn[_ngcontent-snw-c1] {
+                    margin-top: 40px;
+                }
             }
-    </style>        
+    </style>
 
   <body style="color: white; background-color: #0a0e2b;">
     <jx-root ng-version="8.2.12">
@@ -49,9 +51,12 @@
         <jx-activity-page _nghost-snw-c1="" class="ng-star-inserted">
           <jx-app-background _ngcontent-snw-c1="" _nghost-snw-c2="">
             <div _ngcontent-snw-c2="" class="app-background"></div>
-            
+
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
+
+              @include('black.common.top')
+
             <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container" _nghost-snw-c9="">
                 <div _ngcontent-snw-c3="" class="header-view__nav-row-wrapper__container__nav-row">
@@ -64,9 +69,9 @@
                   {{--<jx-header-nav-content _ngcontent-snw-c1="" _nghost-snw-c4="">
                       <!---->
                       <!---->
-                      
+
                       <button _ngcontent-snw-c1="" onclick="location.href='{{ route("mobile.activity.info", ["id" => 2])}}'" class="client-service-btn ng-star-inserted" jxnewwindowbtn=""></button>
-                      
+
                     </jx-header-nav-content>--}}
                   </div>
                   <!---->
@@ -84,28 +89,28 @@
                     <!---->
 
                     @foreach($activity as $item)
-					          <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => $item['id']])}}'" tabindex="0">
+                    <button _ngcontent-snw-c1="" class="activity-btn ng-star-inserted" onclick="location.href='{{ route("mobile.activity.info", ["id" => $item['id']])}}'" tabindex="0">
                       <span _ngcontent-snw-c1="" class="activity-status open"></span>
                       <span _ngcontent-snw-c1="" class="activity-btn-title">{{ $item['title'] }}</span>
                       <span _ngcontent-snw-c1="" class="activity-btn-duration">Tempo：A eficácia a Longo prazo</span>
-                     
+
                       <div><img style="width:100%;height:auto;margin:1rem 0;" src="{{ $item['img'] }}"></div>
                     </button>
-                    @endforeach  
+                    @endforeach
                    </jx-content-view>
                 </jx-safe-area>
               </div>
-            
+
             </div>
 
-            
+
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                @include('black.common.footer') 
-                  
-                 
+
+                @include('black.common.footer')
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>

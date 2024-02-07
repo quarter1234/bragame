@@ -1,8 +1,8 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
-    @include('blue.common.common_title') 
+    @include('blue.common.common_title')
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="/static/css/material-icons.css">
@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="/mobile/black/css/activity.css">
     <link rel="stylesheet" href="/mobile/black/css/member.css">
     <!-- Used in supported Android browsers -->
- 
+
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
     <script type="text/javascript" src="/static/js/way.min.js"></script>
-   
+
 
     <meta name="theme-color" content="#0a0e2b">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -35,10 +35,11 @@
             <div _ngcontent-snw-c2="" class="app-background"></div>
           </jx-app-background>
           <jx-header-view _ngcontent-snw-c1="" title="" _nghost-snw-c3="">
-          
-          @include('black.common.top_sub') 
 
-            <div class="email_h"></div>
+{{--          @include('black.common.top_sub') --}}
+              @include('black.common.top')
+
+              <div class="email_h"></div>
 
             @foreach($list as $item)
             @if ($item['category'] == 6)
@@ -56,7 +57,7 @@
                   </div>
                 </a>
               </div>
-            @else 
+            @else
               <div class="kf">
               <a href="{{ $item['url'] }}">
                 <div class="kf_yq">
@@ -72,7 +73,7 @@
               </a>
             </div>
             @endif
-          @endforeach  
+          @endforeach
            <div class="e_bottom">
                 <button class="e_b2" style="width:350px;height:50px;">Relatorio de ldeias e Bugs Jogos </button>
             </div>
@@ -88,14 +89,14 @@
               </div>
             </div>
 
-            
+
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                  @include('black.common.footer') 
-                  
-                 
+
+                  @include('black.common.footer')
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>

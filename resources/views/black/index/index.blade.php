@@ -25,6 +25,19 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+    <meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”>
+
+      <style>
+          .header-view__content-wrapper {
+              margin-top: 84px;
+          }
+
+          @media screen and (min-width: 1200px) {
+              .header-view__content-wrapper {
+                  margin-top: 100px;
+              }
+          }
+      </style>
 	</head>
 
   <body style="color: white; background-color: #0a0e2b;width: 100%;overflow-x: hidden;">
@@ -41,36 +54,41 @@
           <jx-header-view _ngcontent-way-c1="" _nghost-way-c3="">
           @include('black.common.modal')
           @include('black.common.modal_sub')
-            <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
-              <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">
 
-              <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row">
-                  <!---->
-                  <!---->
-                  <!---->
-                  <div _ngcontent-way-c3="" class="header-icons-ctn ng-star-inserted">
-                    <div _ngcontent-way-c3="" class="header-jx-icon header-icon"></div>
-                  </div>
-                  <!---->
-                  <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>
-                  @if (Auth::check())
-                    <span style="font-size:0.9rem;position: absolute;right:10px;">
-                        <div class="money">
-                            <span>R$</span>
-                            <span>{{ $user['coin'] }}</span>
-                            <div class="sx"><img src="https://www.betbra.net:8032/bx_1/public/mobile/img/sx.png"></div>
-                            <div class="qb"><img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png"></div>
-                        </div>
-                    </span>
-                  @else
-                    <div class="dl show_login">Login</div>
-                    <div class="zc show_login">Registo</div>
-                  @endif
-                </div>
+{{--            <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">--}}
+{{--              <jx-header-row _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container" _nghost-way-c11="">--}}
 
-              </jx-header-row>
-            </div>
-            <style>
+{{--              <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row">--}}
+{{--                  <!---->--}}
+{{--                  <!---->--}}
+{{--                  <!---->--}}
+{{--                  <div _ngcontent-way-c3="" class="header-icons-ctn ng-star-inserted">--}}
+{{--                    <div _ngcontent-way-c3="" class="header-jx-icon header-icon"></div>--}}
+{{--                  </div>--}}
+{{--                  <!---->--}}
+{{--                  <div _ngcontent-way-c3="" class="header-view__nav-row-wrapper__container__nav-row__content" style="position: relative;"></div>--}}
+{{--                  @if (Auth::check())--}}
+{{--                    <span style="font-size:0.9rem;position: absolute;right:10px;">--}}
+{{--                        <div class="money">--}}
+{{--                            <span>R$</span>--}}
+{{--                            <span>{{ $user['coin'] }}</span>--}}
+{{--                            <div class="sx"><img src="https://www.betbra.net:8032/bx_1/public/mobile/img/sx.png"></div>--}}
+{{--                            <div class="qb">--}}
+{{--                                <img onclick="location.href='{{ url("mobile/pay/recharge") }}'" src="/mobile/blue/images/qb.png">--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    </span>--}}
+{{--                  @else--}}
+{{--                    <div class="dl show_login">Login</div>--}}
+{{--                    <div class="zc show_login">Registo</div>--}}
+{{--                  @endif--}}
+{{--                </div>--}}
+
+{{--              </jx-header-row>--}}
+{{--            </div>--}}
+
+              @include('black.common.top')
+          <style>
             .index_banner{
               width:100%;
               height:160px;
@@ -137,7 +155,7 @@
            }
 
             </style>
-            <div _ngcontent-way-c3="" class="header-view__content-wrapper" style="margin-top:84px;">
+            <div _ngcontent-way-c3="" class="header-view__content-wrapper">
               <div _ngcontent-way-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-way-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-banner-board _ngcontent-way-c1="" _nghost-way-c5="" class="ng-tns-c5-0 ng-star-inserted">

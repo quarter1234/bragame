@@ -124,18 +124,23 @@
     }
     .pc_tab{
         width:180px;
-        height:100%;
+        /*height:100%;*/
+        height: calc(100% - 64px);
         /*position:absolute;*/
         position: fixed;
         left:0;
         /*top:-970px;  */
         top: 64px;
         display:block;
+        padding: 12px 0;
+        box-sizing: border-box;
+        background:rgba(0, 0, 0, .2);
     }
     .pc_nav{
+        height: 100%;
         /*margin-top:66px;*/
         margin-top: 0px;
-        background:rgba(0, 0, 0, .2);
+        /*background:rgba(0, 0, 0, .2);*/
         /*padding-bottom:1000px;*/
     }
     .pc_nav ul{
