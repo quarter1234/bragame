@@ -18,7 +18,7 @@ class CrossHttp
         return  $next($request)->header('Access-Control-Allow-Origin', '*')
             ->header('Access-Control-Allow-Headers', 'Origin, Content-Type, Cookie, X-CSRF-TOKEN, Accept, Authorization, X-XSRF-TOKEN, X-REQUEST-WITH, ACCESSTOKEN')
             ->header('Access-Control-Expose-Headers', 'Authorization, authenticated')
-            ->header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
+            ->header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS,PUT, DELETE')
             ->header('Access-Control-Allow-Credentials', 'true');
     }
 }
