@@ -47,6 +47,10 @@
     align-items: center
 }
 
+    div.profile-detail[_ngcontent-xfs-c1] {
+        margin-top: 30px;
+    }
+
      .sign-icon {
          width: 25px;
          height: 25px;

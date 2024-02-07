@@ -28,6 +28,7 @@
     @media screen and (min-width: 1200px){
       .centen_tab{
         width:50% !important;
+          margin-top: 20px;
       }
       .centen_show{
         width:50% !important;

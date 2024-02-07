@@ -23,6 +23,21 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+
+    <style>
+        .more-btn {
+            width: 100%;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .more-btn>button {
+            color: #fff;
+            font-size: 14px;
+            background-image: linear-gradient(to bottom,#ef962f,#b56100);
+            padding: 12px;
+        }
+    </style>
     </head>
 
   <body style="color: white; background-color: #0a0e2b;">
@@ -43,8 +58,8 @@
             <div id="email_list_pages">
 
             </div>
-            <div style="width:100%;text-align:center;margin-top:1rem">
-              <button id="email_load_more" page="0" onclick="loadEmails()"  style="color:#fff; font-size:14px;">{{--点击加载更多--}}Carregue mais</button>
+            <div class="more-btn">
+              <button id="email_load_more" page="0" onclick="loadEmails()">{{--点击加载更多--}}Carregue mais</button>
           </div>
 
           {{--loading组件--}}
