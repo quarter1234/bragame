@@ -12,7 +12,7 @@ class UserHelper
 {
     public static function avatar($usericon)
     {
-        return ' https://www.betbra.net:8032/bx_1/public/static/head/head_'.$usericon.'.png';
+        return 'https://www.betbra.net:8032/bx_1/public/static/head/head_'.$usericon.'.png';
     }
 
     /**
