@@ -1,4 +1,5 @@
-<div class="top @if (isMobile() && isInRoutes(['mobile/member/index'])) top-off @endif ">
+{{--<div class="top @if (isMobile() && isInRoutes(['mobile/member/index'])) top-off @endif ">--}}
+<div class="top">
     <div class="logo"><img src="/mobile/black/images/logo11.png"/></div>
     @if (Auth::check())
     <div class="money" style="float:right;margin-right:10px">
