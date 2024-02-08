@@ -21,21 +21,6 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <style>
-    @media screen and (min-width: 1200px){
-      div.profile-detail[_ngcontent-xfs-c1]>jx-avatar[_ngcontent-xfs-c1]{
-       margin-left:38%;
-      }
-      [_nghost-xfs-c7]{
-        width:38%;
-        margin:0 auto;
-      }
-      .shop_jt{
-        width:38%;
-      }
-      .pc_nav{
-        margin-top:0 !important;
-      }
-    }
     [_nghost-xfs-c4] {
     flex: 1 1 auto;
     box-sizing: border-box;
@@ -46,6 +31,15 @@
     justify-content: flex-start;
     align-items: center
 }
+
+    div.profile-detail[_ngcontent-xfs-c1] {
+        margin-top: 30px;
+    }
+
+    .header-view__content-wrapper[_ngcontent-xfs-c3] {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
 
      .sign-icon {
          width: 25px;
@@ -59,6 +53,26 @@
             width: 100%;
             height: 100%;
         }
+
+    @media screen and (min-width: 1200px) {
+        div.profile-detail[_ngcontent-xfs-c1]>jx-avatar[_ngcontent-xfs-c1]{
+            margin-left:38%;
+        }
+        [_nghost-xfs-c7]{
+            width:38%;
+            margin:0 auto;
+        }
+        .shop_jt{
+            width:38%;
+        }
+        .pc_nav{
+            margin-top:0 !important;
+        }
+        .header-view__content-wrapper[_ngcontent-xfs-c3] {
+            padding-top: 64px;
+            padding-bottom: 50px;
+        }
+    }
     </style>
     </head>
 
@@ -72,6 +86,9 @@
         <jx-profile-page _nghost-xfs-c1="" class="ng-tns-c1-1 ng-star-inserted">
           <!---->
           <jx-header-view _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c3="">
+
+              @include('black.common.top')
+
             <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container" _nghost-xfs-c11="">
                 <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container__nav-row" style="min-height:0;">
@@ -88,7 +105,7 @@
                   <!----></div>
               </jx-header-row>
             </div>
-            <div _ngcontent-xfs-c3="" class="header-view__content-wrapper" style="padding-top: 64px; padding-bottom: 50px;">
+            <div _ngcontent-xfs-c3="" class="header-view__content-wrapper">
               <div _ngcontent-xfs-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-xfs-c1="" class="ng-tns-c1-1 safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <div _ngcontent-xfs-c1="" class="profile-detail ng-tns-c1-1">

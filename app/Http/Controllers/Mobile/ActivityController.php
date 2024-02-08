@@ -30,8 +30,10 @@ class ActivityController extends Controller
 
     public function index()
     {
+        $user = Auth::user();
         $data = [];
         $data['activity'] = $this->activityService->getActivity();
+        $data['user'] = $user;
 
         return view(ViewHelper::getTemplate('activity.index'), $data);
     }

@@ -34,7 +34,8 @@
             "libraries/ip2region/Ip2Region.class.php"
         ],
         "files": [
-            "libraries/helpers.php"
+            "libraries/helpers.php",
+            "app/Common/common.php"
         ]
     },
     "autoload-dev": {

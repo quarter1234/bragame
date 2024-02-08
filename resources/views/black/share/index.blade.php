@@ -1,5 +1,5 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
     @include('mobile.common.common_title')
@@ -28,6 +28,7 @@
     @media screen and (min-width: 1200px){
       .centen_tab{
         width:50% !important;
+          margin-top: 20px;
       }
       .centen_show{
         width:50% !important;
@@ -40,7 +41,7 @@
       <router-outlet></router-outlet>
       <jx-main-wrapper _nghost-way-c0="" class="ng-star-inserted">
 
-        @include('black.common.top') 
+        @include('black.common.top')
 
             <div class="centen"></div>
             <div class="centen_tab">
@@ -58,22 +59,22 @@
                   </div>--}}
             </div>
             <div class="centen_show"  style="display:block;" >
-             @include('black.share.invite') 
+             @include('black.share.invite')
             </div>
             <div class="centen_show" >
-            @include('black.share.agent') 
+            @include('black.share.agent')
             </div>
             {{--<div class="centen_show" >
-            @include('black.share.user') 
+            @include('black.share.user')
             </div>--}}
             <div style="height:200px;"></div>
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                @include('black.common.footer') 
-                  
-                 
+
+                @include('black.common.footer')
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>
@@ -93,5 +94,5 @@
              $('.times_div').hide().eq(index2).show()
           })
         })
-    </script>          
+    </script>
     </body>
