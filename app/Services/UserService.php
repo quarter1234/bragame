@@ -258,6 +258,10 @@ class UserService
         return GameEnum::PDEFINE['RET']['SUCCESS'];
     }
 
+    public function crUserData(array $params){
+        return $this->userRepo->storeUser($params);
+    }
+
     /**
      * 拒绝提现
      * @param $uid
