@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/DINAlternate-bold.css">
     <!-- Used in supported Android browsers -->
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/artDialog.css">
+    <link rel="stylesheet" href="/mobile/black/css/comm.css">
     <link rel="stylesheet" href="/mobile/black/css/share.css">
     <link rel="stylesheet" href="/mobile/black/css/shop.css">
     <script>var Webconfigs = {

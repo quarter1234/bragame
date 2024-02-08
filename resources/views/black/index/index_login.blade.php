@@ -70,14 +70,14 @@
     <!-- End Meta Pixel Code -->
 
   <div class="tc" style="display: none;">
-  <div class="close"><img src="/mobile/black/images/gb_black.png"></div>      
+  <div class="close"><img src="/mobile/black/images/gb_black.png"></div>
       <div class="tc_top">
               <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
               <div class="tc_top_list">{{ trans('auth.register') }}</div>
       </div>
       <div class="list" style="display:block;">
-          
-          
+
+
           <div class="list_b" style="display:block;">
           <form method="post" class="login-form ng-untouched ng-pristine ng-valid" onSubmit="return check_login(this)" id="form1" checkby_ruivalidate url="" action="{{url('Public/login')}}" style="margin-top: 30px;">
           @csrf
@@ -105,17 +105,17 @@
           </div>
       </div>
 
-      
+
       <div class="list">
-          
+
       <div class="list_b2" style="display:block;">
             <form method="post" action="{{url('Public/register')}}"  class="ruivalidate_form_class" onSubmit="return check_register(this)" id="form_register">
-                @csrf  
+                @csrf
                 <div class="pass">
                 <div class="email"><img src="https://www.betbra.net:8032/bx_1/public/static/images/zh.png" /></div>
                 <div class="pass_sr"><input name="playername" id="playernameRegister" placeholder="Nome do usuário" type="text"/></div>
                 <div class="pass_show"><img src="https://www.betbra.net:8032/bx_1/public/static/images/show.png"></div>
-              </div>  
+              </div>
               <div class="entry">
                   <div class="email"><img src="https://www.betbra.net:8032/bx_1/public/static/images/iphone.png" /></div>
                   <div class="xl"><select><option>+55</option></select></div>
@@ -127,6 +127,12 @@
                 <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="Senha" /></div>
                 <div class="pass_show"><img src="https://www.betbra.net:8032/bx_1/public/static/images/show.png"></div>
               </div>
+               @if($inviteCode)
+              <div class="pass">
+                  <div class="email"><img src="https://www.betbra.net:8032/bx_1/public/static/images/zh.png" /></div>
+                  <div class="pass_sr"><input disabled type="text" value="{{$inviteCode}}" /></div>
+              </div>
+              @endif
               {{--<div class="yzm">
                   <div class="yzm_left"><img src="https://www.betbra.net:8032/bx_1/public/static/images/yzm.png" /></div>
                   <div class="yzm_sr"><input type="text" placeholder="验证码" /></div>
@@ -145,7 +151,7 @@
           </div>
       </div>
       </div>
-      
+
 
   <script type="text/javascript">
     function checkContent(obj) {
@@ -228,15 +234,15 @@
 
         var isShowLogin = "{{$showLogin}}";
         if(isShowLogin == 1) {
-          $('.tc').show(); 
+          $('.tc').show();
         }
-        
+
         $('.tc_top_list').click(function(){
           $(this).addClass('tc_on').siblings().removeClass('tc_on')
           var index =$(this).index()
           $('.list').hide().eq(index).show()
         })
-        
+
         $('.list_top_l').click(function(){
           $(this).addClass('list_top_l_on').siblings().removeClass('list_top_l_on')
           var index1 =$(this).index()
@@ -276,7 +282,7 @@
         $('.r6').click(function(){
           $('.r6').css('display','none')
           $('.r5').css('display','block')
-        })  
+        })
         $('.list_top_l2').click(function(){
           $(this).addClass('list_top_l_on2').siblings().removeClass('list_top_l_on2')
           var index1 =$(this).index()

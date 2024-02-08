@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Mobile;
 
+use App\Common\Enum\CommonEnum;
 use App\Helper\ViewHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Mobile\PublicRequest;
@@ -26,6 +27,9 @@ class IndexController extends Controller
     {
         $params = $request->goCheck('index');
         $data = $this->indexService->getIndexData($params);
+
+        $inviteCode = session(CommonEnum::INVITE_CODE_KEY);
+        $data['inviteCode'] = $inviteCode ?: '';
 
         return view(ViewHelper::getTemplate('index.index'), $data);
     }

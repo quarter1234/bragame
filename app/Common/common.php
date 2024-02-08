@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+// 自定义公共函数
+
 /**
  * 获取当前路由路径名称
  * @return string
