@@ -79,14 +79,14 @@ class GameController extends Controller
             return Result::success($res);
         }
 
-        if (Auth::check()) {
-            $user = Auth::user();
-            if($user && $user['is_test'] == 1){ // 测试号使用的真PG
-                $params = [];
-                $params['platform'] = 'PGS';
-                $res['data'] = $this->gameService->getPGGameslimit($params);
-            }
-        }
+        // if (Auth::check()) {
+        //     $user = Auth::user();
+        //     if($user && $user['is_test'] == 1){ // 测试号使用的真PG
+        //         $params = [];
+        //         $params['platform'] = 'PGS';
+        //         $res['data'] = $this->gameService->getPGGameslimit($params);
+        //     }
+        // }
        
         if(!$res){
             $res1 = $this->gameService->getPgProGames()->toArray();
