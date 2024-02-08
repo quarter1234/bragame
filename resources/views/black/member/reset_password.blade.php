@@ -1,8 +1,8 @@
 <html lang="zh-Hans">
-  
+
   <head>
     <meta charset="utf-8">
-    @include('mobile.common.common_title') 
+    @include('mobile.common.common_title')
     <base href="/">
     <!-- Material Icons -->
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/material-icons.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="/mobile/black/css/shop.css">
     <link rel="stylesheet" href="/mobile/black/css/share.css">
     <!-- Used in supported Android browsers -->
- 
+
     <script>var Webconfigs = {
         "ROOT": "__ROOT__"
       }</script>
@@ -21,6 +21,13 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
+
+      <style>
+          .bind_buttom {
+              margin: 10px auto 0 auto;
+              display: block;
+          }
+      </style>
     </head>
 
   <body style="color: white; background-color: #0a0e2b;">
@@ -65,18 +72,18 @@
               <div _ngcontent-snw-c3="" class="header-view__content-wrapper__content-container">
                 <jx-safe-area _ngcontent-snw-c1="" class="safe-area-top safe-area-bottom safe-area-left safe-area-right" style="display: block; box-sizing: border-box;">
                   <jx-content-view _ngcontent-snw-c1="" _nghost-snw-c6="">
-                
+
                    </jx-content-view>
                 </jx-safe-area>
               </div>
             </div>
 
-            
+
             <div _ngcontent-way-c3="" class="header-view__footer-row-wrapper safe-area-bottom safe-area-left safe-area-right" jxsafeareabottom="" jxsafearealeft="" jxsafearearight="">
               <jx-footer-row _ngcontent-way-c1="" _nghost-way-c9="">
                 <jx-tab-bar _ngcontent-way-c1="" _nghost-way-c10="">
-                  
-                 
+
+
                 </jx-tab-bar>
               </jx-footer-row>
             </div>

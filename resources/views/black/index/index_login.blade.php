@@ -130,7 +130,7 @@
                @if($code)
               <div class="pass">
                   <div class="email"><img src="https://www.betbra.net:8032/bx_1/public/static/images/zh.png" /></div>
-                  <div class="pass_sr"><input disabled type="text" value="{{$code}}" /></div>
+                  <div class="pass_sr"><input id="code" disabled type="text" value="{{$code}}" /></div>
               </div>
               @endif
               {{--<div class="yzm">
@@ -166,6 +166,11 @@
         }
     }
     function checkRegisterContent(obj) {
+      const code = $('#code').val();
+      if (!code) {
+          $('#subRegister').attr('disabled', true);
+          return;
+      }
       if($(obj).val() === '' ||$(obj).val() === null){
           if($("#phoneRegister").val() !== '' ||$("#passRegister").val() !== '' || $("#playernameRegister").val() !== ''  ){
             $('#subRegister').attr('disabled',false);
