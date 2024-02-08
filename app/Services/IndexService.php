@@ -23,7 +23,7 @@ class IndexService
     private $noticeRepo;
 
     public function __construct(
-        SConfigPicRepository $picRepo, 
+        SConfigPicRepository $picRepo,
         DRedPacketUserRepository $userRedPack,
         SNoticeIndexRepository $noticeRepo)
     {
@@ -48,6 +48,10 @@ class IndexService
         $data['showLogin'] = $params['showLogin'] ?? 0;
         $data['code'] = $params['code'] ?? '';
 
+        if (!Auth::check() && $data['code']) {
+            $data['showLogin'] = 1;
+        }
+
         if($data['code']) {
             session([CommonEnum::INVITE_CODE_KEY => $data['code']]);
         }
@@ -62,17 +66,17 @@ class IndexService
             $data['favorRecommend'] = IndexGameCache::getFavorRecommend();
         }else{
             $data['favorRecommend'] = IndexGameCache::getFavorRecommendtc();
-        }        
+        }
         $data['tadaRecommend'] = IndexGameCache::getFavorRecommendTada();
         $data['getTadaRecommend'] = IndexGameCache::getTadaRecommend();
 
         $data['showUserRedPakc'] = RedPackageHelper::isShowRedPackage($data['user']);
-        
+
         $data['bnners'] = $this->picRepo->getBanners();
         $data['indexNotice'] = $this->getIndexNotice();
         $data['ranks'] = UserCache::getRankCoin();
         $data['notice'] = $this->noticeRepo->getNoticeIndex(time());
-        
+
         return $data;
     }
 
@@ -81,14 +85,14 @@ class IndexService
         // if(!$user) {
         //     return false;
         // }
-        
+
         // $hadShow = UserCache::getIndexNoticeCache($user);
         // if($hadShow) {
         //     return false;
         // }
 
         // UserCache::setIndexNoticeCache($user);
-        
+
         return $this->picRepo->getIndexNotice();
     }
 

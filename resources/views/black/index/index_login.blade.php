@@ -75,7 +75,7 @@
               <div class="tc_top_list tc_on">{{ trans('auth.login') }}</div>
               <div class="tc_top_list">{{ trans('auth.register') }}</div>
       </div>
-      <div class="list" style="display:block;">
+      <div id="login" class="list" style="display:block;">
 
 
           <div class="list_b" style="display:block;">
@@ -106,7 +106,7 @@
       </div>
 
 
-      <div class="list">
+      <div id="reg" class="list">
 
       <div class="list_b2" style="display:block;">
             <form method="post" action="{{url('Public/register')}}"  class="ruivalidate_form_class" onSubmit="return check_register(this)" id="form_register">
@@ -231,7 +231,19 @@
       $(function(){
         $('.show_login').click(function(){
           $('.tc').show();
+          $('#login').show();
+          $('#reg').hide();
+          $('.tc_top_list').eq(0).addClass('tc_on');
+          $('.tc_top_list').eq(1).removeClass('tc_on');
         });
+
+          $('.show_reg').click(function(){
+              $('.tc').show();
+              $('#login').hide();
+              $('#reg').show();
+              $('.tc_top_list').eq(0).removeClass('tc_on');
+              $('.tc_top_list').eq(1).addClass('tc_on');
+          });
 
         $('.close').click(function(){
           $('.tc').hide()
@@ -240,6 +252,8 @@
         var isShowLogin = "{{$showLogin}}";
         if(isShowLogin == 1) {
           $('.tc').show();
+            $('#login').show();
+            $('#reg').hide();
         }
 
         $('.tc_top_list').click(function(){

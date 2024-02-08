@@ -11,7 +11,7 @@
     @else
     <div>
         <div class="dl show_login">Login</div>
-        <div class="zc show_login">Registo</div>
+        <div class="zc show_reg">Registo</div>
     </div>
     @endif
 </div>
