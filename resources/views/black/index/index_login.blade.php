@@ -127,10 +127,10 @@
                 <div class="pass_sr"><input id="passRegister" name="password" type="password" onkeyup="checkRegisterContent(this)" type="password" placeholder="Senha" /></div>
                 <div class="pass_show"><img src="https://www.betbra.net:8032/bx_1/public/static/images/show.png"></div>
               </div>
-               @if($inviteCode)
+               @if($code)
               <div class="pass">
                   <div class="email"><img src="https://www.betbra.net:8032/bx_1/public/static/images/zh.png" /></div>
-                  <div class="pass_sr"><input disabled type="text" value="{{$inviteCode}}" /></div>
+                  <div class="pass_sr"><input disabled type="text" value="{{$code}}" /></div>
               </div>
               @endif
               {{--<div class="yzm">
