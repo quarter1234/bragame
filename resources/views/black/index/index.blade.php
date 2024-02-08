@@ -11,6 +11,7 @@
      <!-- 分离好的样式开始 -->
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/mobile/css/swipeslider.css">
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/mobile/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/mobile/black/css/comm.css">
     <link rel="stylesheet" href="/mobile/black/css/index.css">
      <!-- 分离好的样式结束 -->
     <!-- Used in supported Android browsers -->

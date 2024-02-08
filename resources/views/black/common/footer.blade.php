@@ -172,7 +172,8 @@
         display:block;
         padding: 12px 0;
         box-sizing: border-box;
-        background:rgba(0, 0, 0, .2);
+        /*background:rgba(0, 0, 0, .2);*/
+        background-color: #00081C;
     }
     .pc_nav{
         height: 100%;

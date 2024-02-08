@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/material-icons.css">
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/styles.4917b6f03b8811030eaf.css">
     <link rel="stylesheet" href="https://www.betbra.net:8032/bx_1/public/static/css/DINAlternate-bold.css">
+    <link rel="stylesheet" href="/mobile/black/css/comm.css">
     <link rel="stylesheet" href="/mobile/black/css/activity.css">
     <!-- Used in supported Android browsers -->
 
