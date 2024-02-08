@@ -25,7 +25,6 @@
     <!-- Fixed position has issue with iOS Safari using black-translucent -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
-    <meta http-equiv=”Content-Security-Policy” content=”upgrade-insecure-requests”>
 
       <style>
           .header-view__content-wrapper {
@@ -705,12 +704,12 @@ COPYRIGHT © 2023 777hello.com Group All Rights Reserved.</p>
       $('.black_nav li').click(function(){
         $(this).addClass('black_on').siblings().removeClass('black_on')
       })
-      $('.pc_nav li').hover(function(){
-        $(this).addClass('pc_on').siblings().removeClass('pc_on')
-      })
-      $('.pc_nav li').mouseout(function(){
-        $(this).removeClass('pc_on')
-      })
+      // $('.pc_nav li').hover(function(){
+      //   $(this).addClass('pc_on').siblings().removeClass('pc_on')
+      // })
+      // $('.pc_nav li').mouseout(function(){
+      //   $(this).removeClass('pc_on')
+      // })
     })
     </script>
 

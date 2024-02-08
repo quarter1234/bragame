@@ -16,8 +16,8 @@ $(function() {
     });
 
     $('.black').click(function() {
-        // window.history.go(-1);
-        window.location.href= "{{url('mobile/index')}}"
+        window.history.go(-1);
+        // window.location.href= "{{url('mobile/index')}}"
     });
 })
 </script>
