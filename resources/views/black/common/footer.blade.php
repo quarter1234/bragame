@@ -19,7 +19,7 @@
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\ShopController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/shop")}}'">
         <span _ngcontent-way-c10="" class="tab-bar__nav-btn__icon tab-bar__nav-btn__icon--brand"></span>
-        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}preferenciais</span>
+        <span _ngcontent-way-c10="" class="tab-bar__nav-btn__title">{{--优惠活动--}}Preferenciais</span>
     </button>
 
     <button _ngcontent-way-c10="" class="tab-bar__nav-btn safe-area-fix-bottom safe-area-fix-right @if(getCurrentControllerName() == 'App\Http\Controllers\Mobile\MemberController')  tab-bar__nav-btn--active @endif" onclick="location.href='{{url("mobile/member/index")}}'" routerlinkactive="tab-bar__nav-btn--active" tabindex="0">
@@ -34,7 +34,7 @@
                           <li class="@if(getCurrentRoutePath() == 'mobile/index') pc_on @endif" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
                           <li class="@if(getCurrentRoutePath() == 'mobile/activity') pc_on @endif" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
                           <li class="@if(getCurrentRoutePath() == 'mobile/share') pc_on @endif" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/shop') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li class="@if(getCurrentRoutePath() == 'mobile/shop') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>Preferenciais</span></li>
                           <li class="@if(getCurrentRoutePath() == 'mobile/member/vip') pc_on @endif" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
                           <li class="@if(getCurrentRoutePath() == 'mobile/member/email') pc_on @endif" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
                           <li class="@if(getCurrentRoutePath() == 'mobile/member/customerService') pc_on @endif" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>

@@ -183,7 +183,7 @@
                     <div class="xh_game">
                         <div class="xh_game_top">
                             <label></label>
-                            <span>juego</span>
+                            <span>Jogos</span>
                         </div>
                         <div class="xh_game_centen">
                           <div _ngcontent-avh-c16="" class="other-live-ctn" id="tab10_content_pgpro"></div>
