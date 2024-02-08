@@ -31,14 +31,23 @@
 <div class="pc_tab">
                    <div class="pc_nav">
                       <ul>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/index') pc_on @endif" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/activity') pc_on @endif" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/share') pc_on @endif" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/shop') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/member/vip') pc_on @endif" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/member/email') pc_on @endif" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/member/customerService') pc_on @endif" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
-                          <li class="@if(getCurrentRoutePath() == 'mobile/member/index') pc_on @endif" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/index') pc_on @endif" onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/activity') pc_on @endif" onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/share') pc_on @endif" onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/shop') pc_on @endif" onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/member/vip') pc_on @endif" onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/member/email') pc_on @endif" onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/member/customerService') pc_on @endif" onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>--}}
+{{--                          <li class="@if(getCurrentRoutePath() == 'mobile/member/index') pc_on @endif" onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>--}}
+
+                          <li onclick="location.href='{{url("mobile/index")}}'"><label class="n1"></label><span>Casa</span></li>
+                          <li onclick="location.href='{{url("mobile/activity")}}'"><label class="n2"></label><span>Atividades</span></li>
+                          <li onclick="location.href='{{url("mobile/share")}}'"><label class="n3"></label><span>Partilhar</span></li>
+                          <li onclick="location.href='{{url("mobile/shop")}}'"><label class="n4"></label><span>preferenciais</span></li>
+                          <li onclick="location.href='{{url("mobile/member/vip")}}'" ><label class="n6"></label><span>VIP</span></li>
+                          <li onclick="location.href='{{url("mobile/member/email")}}'" ><label class="n7"></label><span>Email</span></li>
+                          <li onclick="location.href='{{url("mobile/member/customerService")}}'" ><label class="n8"></label><span>Atendimento</span></li>
+                          <li onclick="location.href='{{url("mobile/member/index")}}'"><label class="n5"></label><span>Meu</span></li>
                       </ul>
                    </div>
             </div>

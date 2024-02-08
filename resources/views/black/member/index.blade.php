@@ -34,7 +34,8 @@
 }
 
     div.profile-detail[_ngcontent-xfs-c1] {
-        margin-top: 30px;
+        /*margin-top: 30px;*/
+        margin-top: 60px;
     }
 
     .header-view__content-wrapper[_ngcontent-xfs-c3] {
