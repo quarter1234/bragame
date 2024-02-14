@@ -9,10 +9,13 @@ use App\Facades\User;
 class CallApiController extends Controller{
     public function index(Request $request){
         $mod = $request->get("mod", '');
-        if($mod == "email"){// 站内信
+        if($mod == "dcoin"){ // 后台上下分 可提现钱包
+            return $this->processRequestdCoin($request);
+        }
+        else if($mod == "email"){// 站内信
             return $this->processRequestEmail($request);
         }
-        if($mod == "coin"){ // 后台上下分
+        else if($mod == "coin"){ // 后台上下分
             return $this->processRequestCoin($request);
         }
         else if($mod == "pay"){ // 支付回调
@@ -47,6 +50,28 @@ class CallApiController extends Controller{
         }
 
         $resVal = User::orderAsynCallback($orderid);
+        if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
+            return 'succ';
+        }
+
+        return 'error';
+    }
+
+    /**
+     * 后台上下分-提现钱包
+     * @param Request $request
+     * @return string
+     */
+    public function processRequestdCoin(Request $request){
+        $mod = $request->get("mod", false);
+        $act = $request->get("act", false);
+        $uid = $request->get("uid", false);
+        $coin = $request->get("coin", false);
+        if($mod != 'dcoin' || $act != 'add' || !$uid || !$coin){
+            return 'error';
+        }
+
+        $resVal = User::apiAdddCoin($uid, $coin);
         if(GameEnum::PDEFINE['RET']['SUCCESS'] == $resVal){
             return 'succ';
         }
