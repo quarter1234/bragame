@@ -28,11 +28,11 @@ class TestController extends Controller
     }
 
     private function crTestUser(){
-        $len = 100;
-        $phone = 10000000000;
+        $len = 500;
+        $phone = 11000001600;
         for($crNum = 1; $crNum <= $len; $crNum++){
             $params = [
-                'playername' => "test" . $crNum,
+                'playername' => "test",
                 'password' => bcrypt('123456'),
                 'usericon' => rand(1,11),
                 'reg_ip' => '127.0.0.1',
@@ -41,7 +41,7 @@ class TestController extends Controller
                 'login_time' => time(),
                 'token' => UserHelper::token(),
                 'isbindphone' => CommonEnum::ENABLE,
-                'coin' => 500,
+                'coin' => 3000,
                 'is_test' => 1,
             ];
             
@@ -81,5 +81,6 @@ class TestController extends Controller
         //     }
         // }
         $this->crTestUser();
+        // dd(11111);
     }
 }
