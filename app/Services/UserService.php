@@ -426,33 +426,6 @@ class UserService
     }
 
     /**
-     * 后台上下分接口-提现钱包
-     * @param $uid
-     * @param $coin
-     * @return mixed
-     */
-    public function apiAdddCoin($uid, $coin)
-    {
-        $user = UserHelper::getUserByUid($uid);
-        if (!$user) {
-            return GameEnum::PDEFINE['RET']['ERROR']['DRAW_ERR_BANKINFO'];
-        }
-
-        $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['UP_COIN'];
-        $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['UP'];
-        $title = "可提现钱包上分:";
-        if ($coin < 0) {
-            $gameId = GameEnum::PDEFINE['GAME_TYPE']['SPECIAL']['DOWN_COIN'];
-            $cointype = GameEnum::PDEFINE['ALTERCOINTAG']['DOWN'];
-            $title = "可提现钱包下分:";
-        }
-        $title = $title . $coin;
-        RewardHelper::alterCoinLog($user, $coin, $cointype, $gameId, $title);
-        $this->updateGameDrawInDraw($user, $coin);
-        return GameEnum::PDEFINE['RET']['SUCCESS'];
-    }
-    
-    /**
      * 后台站内信
      * @param $awradId
      * @param $act
