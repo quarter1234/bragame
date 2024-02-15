@@ -188,7 +188,7 @@ class ShareService
 //        if(empty($userList) || $userList->isEmpty()){
 //            return $result;
 //        }
-        $twoList = $this->inviteRepo->getPayUsers($uids, $startTime, $endTime, false);
+        $twoList = $this->inviteRepo->getPayUsers($uids, $startTime, $endTime, true);
         return $twoList->count();
     }
 
