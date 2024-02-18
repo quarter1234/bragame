@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>game</title>
-  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no, viewport-fit=cover">
+  @include('black.common.common_title')
   <style>
     #game-container {
       position: relative;
