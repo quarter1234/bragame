@@ -90,6 +90,7 @@
           <jx-header-view _ngcontent-xfs-c1="" class="ng-tns-c1-1" _nghost-xfs-c3="">
 
               @include('black.common.top')
+              @include('black.common.dialog')
 
             <div _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper safe-area-top safe-area-left safe-area-right" jxsafearealeft="" jxsafearearight="" jxsafeareatop="">
               <jx-header-row _ngcontent-xfs-c3="" class="header-view__nav-row-wrapper__container" _nghost-xfs-c11="">
@@ -213,7 +214,8 @@
                        {{--客服中心--}}alterar a senha
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
 
-                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">
+{{--                        <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="javascript:if(confirm('{{ trans("auth.login_out") }}')) location='{{url("mobile/logout")}}'" tabindex="0">--}}
+                      <button _ngcontent-xfs-c1="" class="finance-entry-btn-group__btn" onclick="loginOut()" tabindex="0">
                       <span class="m_tc"></span>
                        {{--客服中心--}}Saia da conta
                         <i class="icon iconfont"  style=" position:absolute;right:15px;top:18px;"><img src="https://www.betbra.net:8032/bx_1/public/static/images/right_ico.png" style="width:8px;height:12px;margin-left:10px" /></i></button>
@@ -249,4 +251,21 @@
       </jx-main-wrapper>
     </jx-root>
   </body>
+
+<script>
+    $(function() {
+        $('#comm-dialog-content').html('Tem certeza que deseja sair?');
+        $('#comm-dialog-ok-btn').click(function() {
+            $('#comm-dialog').css('display', 'none');
+            {{--if (confirm('{{ trans("auth.login_out") }}')) {--}}
+            {{--    location = '{{url("mobile/logout")}}';--}}
+            {{--}--}}
+            location = '{{url("mobile/logout")}}';
+        });
+    });
+
+    function loginOut() {
+        $('#comm-dialog').css('display', 'block');
+    }
+</script>
 </html>

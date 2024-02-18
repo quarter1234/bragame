@@ -29,20 +29,35 @@
     }
 
       #return-button>img {
-          width: 100%;
-          height: 100%;
+        width: 100%;
+        height: 100%;
       }
   </style>
 </head>
+
 <body style="margin: 0;padding:0">
   <div id="game-container">
-    <a id="return-button" onclick="goBack()">
+{{--    <a id="return-button" onclick="goBack()">--}}
+    <a id="return-button" onclick="showDlg()">
        <img src="https://www.betbra.net:8032/bx_1/public/static/close/bgt.png" alt="返回按钮">
     </a>
     <iframe id="game-frame" src="{{$url}}"></iframe>
   </div>
+  @include('black.common.dialog')
 
   <script>
+      $(function() {
+          $('#comm-dialog-content').html('Tem certeza de que deseja sair do jogo?');
+          $('#comm-dialog-ok-btn').click(function() {
+              $('#comm-dialog').css('display', 'none');
+              window.goBack();
+          });
+      });
+
+    function showDlg() {
+        $('#comm-dialog').css('display', 'block');
+    }
+
     function goBack() {
       let act = "{{ $act }}";
 
@@ -57,7 +72,6 @@
       } else {
         window.history.back();
       }
-
     }
   </script>
 </body>
